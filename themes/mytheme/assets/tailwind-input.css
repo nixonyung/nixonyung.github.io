@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .myprose {
+    @apply prose
+      prose-headings:scroll-mt-20
+      prose-ul:leading-5
+      prose-quoteless
+      /* gradient text */
+      prose-headings:text-transparent
+      prose-headings:bg-clip-text
+      prose-headings:bg-gradient-to-b
+      prose-headings:from-base-content
+      prose-headings:from-50%
+      prose-headings:to-primary
+      prose-headings:to-80%;
+  }
+}

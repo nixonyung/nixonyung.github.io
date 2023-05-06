@@ -1,0 +1,9 @@
+{{ define "content" }}
+  <article>
+    <h1>{{ .Title }}</h1>
+    <span class="text-base-content opacity-30 select-none">
+      {{ .Lastmod.Format "2006-01-02" }}
+    </span>
+    {{ .Content }}
+  </article>
+{{ end }}

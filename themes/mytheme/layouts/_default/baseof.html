@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}" data-theme="business">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{{ .Site.Title }}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    {{ $css_google_font := resources.GetRemote "https://fonts.googleapis.com/css2?family=Recursive:wght,CASL@300,1;400,1;500,1;600,1;700,1;800,1;900,1&display=swap" }}
+    {{ $css_tailwind := resources.Get "tailwind-output.css" }}
+    {{ $css_all := slice $css_google_font $css_tailwind | resources.Concat "style.css" | minify | fingerprint "sha512" }}
+    <link
+      rel="stylesheet"
+      href="{{ $css_all.RelPermalink }}"
+      integrity="{{ $css_all.Data.Integrity }}"
+    />
+  </head>
+
+  <!-- body: global font, min-height -->
+  <!-- header/main/footer: to divide the screen into 3 horizontal parts (so body need flex + flex-col), centering content (so they need flex + justify-center) -->
+  <!-- nav/section: to adjust width, max-width, padding, ... -->
+  <body class="font-recursive min-h-screen flex flex-col">
+    <header
+      class="sticky top-0 bg-base-300 bg-opacity-70 backdrop-blur-sm flex justify-center"
+    >
+      <nav
+        class="navbar max-w-4xl px-6 sm:px-9 text-xl text-secondary tracking-tighter whitespace-nowrap overflow-auto scrollbar-hide"
+      >
+        {{ if ne .Kind "404" }}
+          {{ range .Ancestors.Reverse }}
+            <a
+              href="{{ .RelPermalink }}"
+              class="opacity-40 hover:opacity-80 transition-opacity duration-200 select-none"
+            >
+              {{ .Title }}&nbsp;/&nbsp;
+            </a>
+          {{ end }}
+          <a href="{{ .RelPermalink }}" class="opacity-80 select-none"
+            >{{ .Title }}</a
+          >
+        {{ else }}
+          {{ with .Site.GetPage "/" }}
+            <a href="{{ .RelPermalink }}" class="opacity-80 select-none"
+              >{{ .Title }}</a
+            >
+          {{ end }}
+        {{ end }}
+      </nav>
+    </header>
+
+    <main class="flex-auto my-12 flex justify-center">
+      <section
+        class="myprose flex-grow max-w-4xl min-w-0 px-6 sm:px-9 break-words hyphens-auto scroll-mt-16"
+      >
+        {{ block "content" . }}{{ end }}
+      </section>
+    </main>
+
+    <footer
+      class="bg-base-300 bg-opacity-70 text-base-content flex justify-center"
+    >
+      <section
+        class="flex flex-col max-w-4xl px-6 sm:px-9 my-6 text-xs sm:text-sm font-light select-none"
+      >
+        <span>
+          © {{ now.Format "2006" }} {{ .Site.Copyright }}. All Rights Reserved.
+        </span>
+      </section>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+---
+title: "Self Help"
+lastmod: 2023-05-07
+---
+
+- [【EngSub】裸辞回国+放弃百万年薪，我疯了吗？ ｜老石谈芯](https://youtube.com/watch?v=b0hyzsUGH14)
+- [【一席】約翰強尼：動不動就動腦洞的動圖人](https://youtube.com/watch?v=pvL1Z6pvTnE)
+- [【年终干货总结】毕业 10 年，我把走过的弯路，全讲给你听](https://youtube.com/watch?v=UDkJosyy6Dg)
+- [8 Intelligences: Are You a Jack of All Trades or a Master of One? | Howard Gardner | Big Think](https://youtube.com/watch?v=oY2C4YgXm7I)
+- [9 Things Every 20 Something Needs to Learn BEFORE IT'S TOO LATE](https://youtube.com/watch?v=46SHTujXsdY)
+- [12 Rules For Life](https://youtube.com/watch?v=Cn_n8GL3XeM)
+- [20 分鐘看透人性的本質！人是天性善良或自私自利？好人是如何變壞人的？最新科學、人類學、歷史研究，揭露人性的真相！ 書來面對 EP31《人慈》Rutger Bregman](https://youtube.com/watch?v=b7AgojHiIhE)
+- [25 Pictures With Deep Meaning Signifying People Nowadays Part 2 by Pictures Speak Louder Than Words](https://youtube.com/watch?v=iFZPU_CcvvA)
+- [Animated story about the meaning of a good life](https://youtube.com/watch?v=AlatCn5cBKg)
+- [Animated story about what truly matters in life](https://youtube.com/watch?v=luMEvvPgZQk)
+- [Are You Living an Insta Lie? Social Media Vs. Reality](https://youtube.com/watch?v=0EFHbruKEmw)
+- [Can Everyone Become Talented? - Story of the Polgar Sisters (animated)](https://youtube.com/watch?v=CZiSxfCmOZY)
+- [COVID19 的病毒流行病學通識課！書來面對 EP15《下一場人類大瘟疫》David Quammen / 說書【微生物/自然科普】](https://youtube.com/watch?v=6jvJo0S1m6I)
+- [Destressing after 110 Hour Work Week ft. LS](https://youtube.com/watch?v=UA4THZ4ahzc)
+- [From Meth To Netflix](https://youtube.com/watch?v=JjHFubUPLV0)
+- [How Logical Thinking Actually Leads to Irrationality](https://youtube.com/watch?v=ByYUd6DESQk)
+- [how social media drastically affects us](https://youtube.com/watch?v=x4Atnti70cM)
+- [How to Have the Best Year Ever! - Personal Development Life Coaching by Jim Rohn](https://youtube.com/watch?v=6QVOBsS6ECY)
+- [How to Take Charge of Your Life - Jim Rohn Personal Development](https://youtube.com/watch?v=DGIjuVbGP_A)
+- [Internet Conflict and Controversy Ft. LS](https://youtube.com/watch?v=0rBs4olVM9k)
+- [Introduction to Nihilism](https://youtube.com/watch?v=0Ajv-RrQs4o)
+- [Learning Languages Ruined My Life](https://youtube.com/watch?v=ZZ_4gzoDDAE)
+- [Life is NOT a Journey - Alan Watts](https://youtube.com/watch?v=rBpaUICxEhk)
+- [Meaning & Happiness ft. Mitch Jones](https://youtube.com/watch?v=XICFqibVbGw)
+- [Nietzsche — The 3 Stages of Life](https://youtube.com/watch?v=Hb_4oQ0fXlw)
+- [Oprah gifting WISDOM that she learned from a Life Coach, Life ALTERING! CarolinaAramburo COACHING](https://youtube.com/watch?v=E6g2Sco4CG0)
+- [Principles For Success by Ray Dalio (In 30 Minutes)](https://youtube.com/watch?v=B9XGUpQZY38)
+- [Should You Specialize or Be a Generalist? | Tim Ferriss](https://youtube.com/watch?v=wCPbPMRNnvk)
+- [Skills Every Child Will Need to Succeed in 21st century | Dr. Laura A. Jana | TEDxChandigarh](https://youtube.com/watch?v=z_1Zv_ECy0g)
+- [Talking with LS | Dr.K Interviews](https://youtube.com/watch?v=dc1vraUb0o0)
+- [TAOISM | The Philosophy Of Flow](https://youtube.com/watch?v=JtGtqmC5wU4)
+- [TED 中英雙語字幕: 二十歲的人生不能等到三十才開始](https://youtube.com/watch?v=EgqQmupSvGk)
+- [The Common Character Trait of Geniuses | James Gleick | Big Think](https://youtube.com/watch?v=Ym6whrAw8wU)
+- [The Most Honest 8 Minutes Of Your Life - Jacque Fresco](https://youtu.be/BLrtvRwc39M)
+- [The Time When Buddha Could Not Forgive - BUDDHA STORY](https://youtube.com/watch?v=VlhFCeM4e10)
+- [This Is Why You're Good at Video Games](https://youtu.be/DFrjtOa18yE)
+- [What is a Thought? How the Brain Creates New Ideas | Henning Beck | TEDxHHL](https://youtube.com/watch?v=oJfFMoAgbv8)
+- [Why "C" Students Are MORE Successful Than "A" Students](https://youtube.com/watch?v=NDTSny32n70)
+- [Why divergent thinkers beat geniuses in the real world | David Epstein](https://youtube.com/watch?v=Js4NiTFq9Pw)
+- [Why I Make Content](https://youtube.com/watch?v=7FsyXTMLPBY)
+- [Why Mindfulness Is a Superpower: An Animation](https://youtube.com/watch?v=w6T02g5hnT4)
+- [Why Most People Will Remain in Mediocrity](https://youtube.com/watch?v=rH94x03Wl-M)
+- [Why You Wasted The Last 5 Years Of Your Life](https://youtube.com/watch?v=j6jrBZQo5fM)
+- [You Should Finally Leave School](https://youtube.com/watch?v=pJhUs1L_RQo)
+- [不要 20 年後才後悔自己不知道這些事 - 出版史上最大卡司《人生勝利聖經》](https://youtube.com/watch?v=w92fGRg3T3I)
+- [世上 40%工作根本沒意義！各行各業內幕大爆料！你的工作是狗屁嗎？工作的意義與價值為何？資本主義創造狗屁工作？書來面對 EP21《狗屁工作》 David Graeber | 說書【人類學/社會學】](https://youtube.com/watch?v=bQUEpQ09pAc)
+- [人如何超越自己？尼采哲學思想解析 Friedrich Nietzsche 哲學爽歪歪 EP1 | 上帝已死 | 悲劇的誕生 | 民主的墮落 | 善惡的起源 | 超人的出現 | 永恆回歸](https://youtube.com/watch?v=1wBD0UPeH88)
+- [人生的意义是什么？读《大问题：简明哲学导论》](https://youtube.com/watch?v=hgnymqrvO0w)
+- [今年最好笑的一本書 ｜《這些話，為什麼這麼有哏？》｜ 文森說書](https://youtube.com/watch?v=_R8UJ42Gb1M)
+- [你到底他媽的需要什麼奇蹟才肯活出自我？ | 一部加里·維納查克原創](https://youtube.com/watch?v=6o9Qkvq0okc)
+- [你看幾遍能看懂？《金剛經》裡隱藏著生命與精神的秘密](https://youtube.com/watch?v=DaKxKLk-E5I)
+- [你這一生花過最好的 8 分鐘 | 一部加里·維納查克的原創](https://youtube.com/watch?v=q99s-LuwzAE)
+- [哈佛的最後一堂課，淬煉一生的故事｜《記得你是誰》｜文森說書](https://youtube.com/watch?v=xkKifaN4hK4)
+- [哲學問題都是語言遊戲？ 維根斯坦生平與哲學思想解析（下集）Wittgenstein《哲學研究》 | 哲學爽歪歪 EP3 | 語言哲學 | 心理學哲學 | 數學哲學 | 家族相似性 | 私人語言](https://youtube.com/watch?v=8-hnkqgvGfc)
+- [成功人士不會給你的建議 | 一部加里·維納查克原創](https://youtube.com/watch?v=ApVWBrUCpaE)
+- [才華要如何展現？ H&T50 #shorts #short](https://youtube.com/watch?v=21w5IrX9NjY)
+- [攻殼機動隊電影解析：什麼是人？/ 賽伯格與哈洛威 Cyborg and Haraway / 意識 & 心靈哲學/ 超級歪電影院 EP7](https://youtube.com/watch?v=6-KYHDAEFW0)
+- [書中的每一句，都讓你想離職、想哭、想下班 ｜《工作垃圾話聖經》｜ 文森說書](https://youtube.com/watch?v=QTj7UvETQKA)
+- [最好的答案通常不是正確解答？用社會學角度看對話中的暗器｜《為什麼？》｜文森說書](https://youtube.com/watch?v=nMv1I5xtX9k)
+- [永遠別批判他人，你不知道他們的故事【中文字幕】Never judge others, you don’t know their story](https://youtube.com/watch?v=op1KCHhTl98)
+- [活著有意義嗎？何謂有價值的人生？蘇格拉底哲學思想解析 Socrates 哲學爽歪歪 EP4 | 哲學的起源 | 蘇格拉底辯證法 | 知識即德性 | 蘇格拉底之死 | 政治哲學 | 柏拉圖的導師](https://youtube.com/watch?v=Bh85YLJGfEk)
+- [為什麼大多數人窮其一生，終究一無所獲... 看教授精闢的分析（啟發）](https://youtube.com/watch?v=TZ79TA8y7Vk)
+- [為什麼我們從未獨立思考? | 知識的假象 | 啾讀。第 34 集 | 啾啾鞋](https://youtube.com/watch?v=awld6_Y6x0A)
+- [為什麼要尋找人生目的？ ► 這是一則意義深遠的故事...Dr. Robert Quinn（中英字幕）](https://youtube.com/watch?v=gPgBGlz-9-0)
+- [美篇：比貧窮更可怕的，是【窮人思維】，4 個選擇，不同人生......](https://youtube.com/watch?v=uJI8MGIbZAA)
+- [這些金錢觀念，會影響你的一生 ► Dr Joe Vitale （中英字幕）](https://youtube.com/watch?v=xevXwR6WVO8)
+- [關於致富的最誠實建議（開眼界演講）](https://youtube.com/watch?v=cbjyMfwRCPA)
+- [The Lie That Every Story Has In Common - Kurt Vonnegut On The Shapes of Stories](https://youtu.be/x3EVh2jhyLM)
+- [How To Find Happiness In Making Choices](https://youtu.be/0T7XH2lb6sQ)
+- [Advice for young people | Jordan B Peterson](https://youtu.be/3Hq49O2VgcU)
+- [Simon Sinek - Trust vs Performance (Must Watch!)](https://youtu.be/PTo9e3ILmms)
+- [Finite Thinking vs. Infinite Mindset | Simon Sinek](https://youtu.be/ohr2fkgrP_U)
+- [OSHO: Tolerance Is an Ugly Word](https://youtu.be/v8ouDk2Mayw)
+- [Toxic Productivity](https://youtu.be/MKLRsigQCCM)
+- [My Advice to Young Men](https://youtu.be/16QlwqB7crc)
+  - focus on yourself, then good things will come to you
+- [Follow Your Passion Is Terrible Advice](https://youtu.be/Tb5ykUF2VJE)
+  - passion will die one day, you should find out what you are "meant" to do
+- [OSHO: A Majority of One](https://youtu.be/0Eq1ZcHaL2Y)
+  - if you, from your heart, envisioned a better world, then you are the majority despite being alone
+- [OSHO: You Have Everything but You Don't Have Yourself](https://youtu.be/Zo_P2rbEtwo)
+  - resouces is not just for enjoyment but also for life fulfillment
+- [OSHO: There Are Only Two Types of People](https://youtu.be/V3ueDBgYjxc)
+  - those who can see risks and those who can't
+- [OSHO: You Can Become Extraordinary](https://youtu.be/uNBu5eSrtnA)
+  - you are who you are
+- [OSHO: Just Be Responsible to Yourself](https://youtu.be/uhCUSCzcLos)
+  - we are taught to be responsible to others / others may be responsible to you, but never to ourselves
+  - we should decide what is good and bad on our own
+- [OSHO: My God! There Is No God!](https://youtu.be/4Pp5mWs8k5I)
+  - god is a psychologic projection of parents
+- [OSHO: Don't Follow the Leaders – They Are Lost Too (Preview)](https://youtu.be/Ikd8soAzyeM)
+  - you should walk your own path and see with your own eyes, but leaders are crippling you
+- [OSHO: The Greatest Courage Is Being Capable of Change](https://youtu.be/HY9aw5cQRDQ)
+  - our ideas are always changing
+- [OSHO: Are You Sure You Are Doing the Right Thing?](https://youtu.be/n8HSCbif4yE)
+  - life is a continuous inquiry
+- [OSHO: Only That Which You Have Experienced Has to Be Trusted](https://youtu.be/6i8bnb4dvvg)
+  - life is always changing
+  - > no belief, no dogma, no creed, no religion, nothing borrowed, but only
+    > that which you have experienced has to be trusted, everything else has to
+    > be doubted.
+  - search inwards to find the "indubitable"
+- [Baby, My Whole Work Is to Confuse You](https://youtu.be/xggTJCCxFss)
+  - > God is a quantity; godliness is a quality
+  - from quantity (tangible objects/examples) we have to see the quality (similarity)
+- [OSHO: I Am Not a Politician](https://youtu.be/hSFFaFkgqWI)
+- [OSHO: Contradictions a Creative Doorway](https://youtu.be/Wn0WTKer7Wc)
+  - language creates contradictions/dualities, we should feel it with our heart
+- [OSHO: Prayer or Meditation?](https://youtu.be/Z4qrBmKTnFY)
+  - we believe in gods only because we want something from him
+  - prayers search outwards, meditations search inwards
+- [Osho: I Have Been Keeping a Secret My Whole Life — Now the Complete Answer](https://youtu.be/TEPCHP9obwk)
+  - without this "secret", the "disciple" is no longer a "disciple", and the "master" becomes the "friend"
+- [OSHO: Marriage and Children](https://youtu.be/5ocbZhRQS9I)

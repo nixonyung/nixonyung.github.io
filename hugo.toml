@@ -1,0 +1,14 @@
+theme = "mytheme"
+title = "Nixon's Notes"
+copyright = "Nixon Yung"
+baseURL = "https://nixonyung.github.io/"
+languageCode = "en-hk"
+
+[markup]
+[markup.highlight]
+# style = 'catppuccin-frappe'
+# style = 'catppuccin-macchiato'
+# style = 'catppuccin-mocha'
+# style = "github-dark"
+# style = 'onedark'
+style = 'vulcan'
