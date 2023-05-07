@@ -1,6 +1,5 @@
 ---
 title: 守破離 (Shuhari)
-lastmod: 2023-05-06
 ---
 
 (守)

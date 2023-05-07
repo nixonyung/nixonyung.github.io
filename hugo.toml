@@ -1,8 +1,9 @@
 theme = "mytheme"
-title = "Nixon's Notes"
+title = "Nixon's Knowledge Base"
 copyright = "Nixon Yung"
 baseURL = "https://nixonyung.github.io/"
 languageCode = "en-hk"
+enableGitInfo = true
 
 [markup]
 [markup.highlight]
