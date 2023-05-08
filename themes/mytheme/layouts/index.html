@@ -1,5 +1,7 @@
 {{ define "content" }}
-  <h1>{{ .Site.Title }}</h1>
+  <div class="mb-4">
+    <h1 class="inline m-0 box-decoration-clone">{{ .Site.Title }}</h1>
+  </div>
   {{ .Content }}
   {{ partial "listing.html" . }}
 {{ end }}

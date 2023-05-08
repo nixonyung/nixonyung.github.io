@@ -8,6 +8,7 @@
       prose-headings:scroll-mt-20
       prose-ul:leading-5
       prose-quoteless
+      prose-blockquote:hyphens-none
       /* gradient text */
       prose-headings:text-transparent
       prose-headings:bg-clip-text

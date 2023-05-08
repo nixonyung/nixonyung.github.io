@@ -1,0 +1,10 @@
+<div class="mb-4">
+    <a href="#{{ .Anchor | safeURL }}" class="flex items-center py-3 no-underline group">
+        <div class="relative -z-10">
+            <span class="absolute -left-4 sm:-left-6 text-base-content opacity-30 invisible group-hover:visible">→</span>
+            <h{{ .Level }} id="{{ .Anchor | safeURL }}" class="inline m-0 box-decoration-clone">
+                {{ .Text | safeHTML }}
+            </h{{ .Level }}>
+        </div>
+    </a>
+</div>
