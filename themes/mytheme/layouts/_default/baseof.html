@@ -8,12 +8,60 @@
 
     <title>{{ .Site.Title }}</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      @font-face {
+        font-family: "Recursive";
+        src: local("Recursive"),
+          url("/fonts/Recursive_Casual-Light.ttf") format("truetype");
+        font-weight: 300;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Recursive";
+        src: local("Recursive"),
+          url("/fonts/Recursive_Casual-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Recursive";
+        src: local("Recursive"),
+          url("/fonts/Recursive_Casual-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Recursive";
+        src: local("Recursive"),
+          url("/fonts/Recursive_Casual-Semibold.ttf") format("truetype");
+        font-weight: 600;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Recursive";
+        src: local("Recursive"),
+          url("/fonts/Recursive_Casual-Bold.ttf") format("truetype");
+        font-weight: 700;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Recursive";
+        src: local("Recursive"),
+          url("/fonts/Recursive_Casual-ExtraBold.ttf") format("truetype");
+        font-weight: 800;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Recursive";
+        src: local("Recursive"),
+          url("/fonts/Recursive_Casual-Black.ttf") format("truetype");
+        font-weight: 900;
+        font-display: swap;
+      }
+    </style>
 
-    {{ $css_google_font := resources.GetRemote "https://fonts.googleapis.com/css2?family=Recursive:wght,CASL@300,1;400,1;500,1;600,1;700,1;800,1;900,1&display=swap" }}
     {{ $css_tailwind := resources.Get "tailwind-output.css" }}
-    {{ $css_all := slice $css_google_font $css_tailwind | resources.Concat "style.css" | minify | fingerprint "sha512" }}
+    {{ $css_all := slice $css_tailwind | resources.Concat "style.css" | minify | fingerprint "sha512" }}
     <link
       rel="stylesheet"
       href="{{ $css_all.RelPermalink }}"
@@ -24,7 +72,7 @@
   <!-- body: global font, min-height -->
   <!-- header/main/footer: to divide the screen into 3 horizontal parts (so body need flex + flex-col), centering content (so they need flex + justify-center) -->
   <!-- nav/section: to adjust width, max-width, padding, ... -->
-  <body class="font-recursive min-h-screen flex flex-col">
+  <body class="font-base min-h-screen flex flex-col">
     <header
       class="sticky top-0 bg-base-300 bg-opacity-70 backdrop-blur-md flex justify-center"
     >

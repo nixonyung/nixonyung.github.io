@@ -994,12 +994,6 @@ html {
   border-color: hsl(var(--p) / var(--tw-border-opacity));
 }
 
-.mockup-phone .display {
-  overflow: hidden;
-  border-radius: 40px;
-  margin-top: -25px;
-}
-
 @keyframes progress-loading {
   50% {
     left: 107%;
@@ -1766,20 +1760,12 @@ html {
   position: sticky;
 }
 
-.-left-6 {
-  left: -1.5rem;
+.-left-4 {
+  left: -1rem;
 }
 
 .top-0 {
   top: 0px;
-}
-
-.-left-3 {
-  left: -0.75rem;
-}
-
-.-left-4 {
-  left: -1rem;
 }
 
 .-z-10 {
@@ -1816,16 +1802,16 @@ html {
   display: flex;
 }
 
-.h-auto {
-  height: auto;
-}
-
 .h-0 {
   height: 0px;
 }
 
 .h-0\.5 {
   height: 0.125rem;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .min-h-screen {
@@ -1840,12 +1826,12 @@ html {
   min-width: 0px;
 }
 
-.max-w-4xl {
-  max-width: 56rem;
-}
-
 .max-w-0 {
   max-width: 0rem;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
 }
 
 .flex-auto {
@@ -1908,11 +1894,6 @@ html {
   background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
 }
 
-.bg-sky-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
-}
-
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--p) / var(--tw-bg-opacity));
@@ -1942,7 +1923,7 @@ html {
   padding-bottom: 0.75rem;
 }
 
-.font-recursive {
+.font-base {
   font-family: Recursive;
 }
 
@@ -1958,14 +1939,6 @@ html {
 
 .font-light {
   font-weight: 300;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.leading-3 {
-  line-height: .75rem;
 }
 
 .tracking-tighter {
@@ -1987,32 +1960,20 @@ html {
   color: hsl(var(--s) / var(--tw-text-opacity));
 }
 
-.underline {
-  text-decoration-line: underline;
-}
-
 .no-underline {
   text-decoration-line: none;
-}
-
-.decoration-secondary\/50 {
-  text-decoration-color: hsl(var(--s) / 0.5);
 }
 
 .decoration-1 {
   text-decoration-thickness: 1px;
 }
 
-.underline-offset-8 {
-  text-underline-offset: 8px;
-}
-
 .underline-offset-4 {
   text-underline-offset: 4px;
 }
 
-.underline-offset-2 {
-  text-underline-offset: 2px;
+.opacity-0 {
+  opacity: 0;
 }
 
 .opacity-30 {
@@ -2025,18 +1986,6 @@ html {
 
 .opacity-80 {
   opacity: 0.8;
-}
-
-.opacity-60 {
-  opacity: 0.6;
-}
-
-.opacity-50 {
-  opacity: 0.5;
-}
-
-.opacity-0 {
-  opacity: 0;
 }
 
 .backdrop-blur-md {
@@ -2069,10 +2018,6 @@ html {
 
 .duration-200 {
   transition-duration: 200ms;
-}
-
-.duration-300 {
-  transition-duration: 300ms;
 }
 
 .duration-500 {
@@ -2109,16 +2054,6 @@ html {
 
 .group:hover .group-hover\:visible {
   visibility: visible;
-}
-
-.group:hover .group-hover\:max-w-max {
-  max-width: -moz-max-content;
-  max-width: max-content;
-}
-
-.group:hover .group-hover\:max-w-fit {
-  max-width: -moz-fit-content;
-  max-width: fit-content;
 }
 
 .group:hover .group-hover\:max-w-full {

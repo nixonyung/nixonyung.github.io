@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        recursive: "Recursive",
+        base: "Recursive",
       },
       typography: {
         quoteless: {
