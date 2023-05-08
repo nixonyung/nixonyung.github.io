@@ -4,7 +4,6 @@
       <li>
         <a
           href="{{ .RelPermalink }}"
-          tabindex="1"
           class="block w-full py-3 px-2 no-underline focus:outline-none hover:bg-base-300 focus:bg-base-300 transition-colors duration-100"
         >
           <span
@@ -13,13 +12,12 @@
             {{ .Title }}
           </span>
         </a>
+        {{ partial "listing.html" . }}
       </li>
-      {{ partial "listing.html" . }}
     {{ else }}
       <li>
         <a
           href="{{ .RelPermalink }}"
-          tabindex="1"
           class="w-full py-3 px-2 flex items-center no-underline focus:outline-none hover:bg-base-300 focus:bg-base-300 transition-colors duration-100 group"
         >
           <div class="flex flex-col">

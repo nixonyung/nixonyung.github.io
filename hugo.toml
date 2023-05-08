@@ -5,6 +5,9 @@ baseURL = "https://nixonyung.github.io/"
 languageCode = "en-hk"
 enableGitInfo = true
 
+[params]
+description = "Nixon Yung's Knowledge Base"
+
 [markup]
 [markup.highlight]
 # style = 'catppuccin-frappe'
