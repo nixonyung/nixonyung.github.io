@@ -1924,7 +1924,7 @@ html {
 }
 
 .font-base {
-  font-family: Recursive;
+  font-family: Recursive, system-ui;
 }
 
 .text-xl {
@@ -2065,14 +2065,18 @@ html {
 }
 
 @media not all and (min-width: 640px) {
-  .max-sm\:invisible {
-    visibility: hidden;
+  .max-sm\:hidden {
+    display: none;
   }
 }
 
 @media (min-width: 640px) {
   .sm\:-left-6 {
     left: -1.5rem;
+  }
+
+  .sm\:hidden {
+    display: none;
   }
 
   .sm\:px-9 {

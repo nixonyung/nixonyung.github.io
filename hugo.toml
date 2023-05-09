@@ -8,6 +8,9 @@ enableGitInfo = true
 [params]
 description = "Nixon Yung's Knowledge Base"
 
+[frontmatter]
+lastmod = ['lastmod', 'date', 'publishDate', ':git']
+
 [markup]
 [markup.highlight]
 # style = 'catppuccin-frappe'

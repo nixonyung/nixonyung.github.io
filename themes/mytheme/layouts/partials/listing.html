@@ -27,8 +27,15 @@
             ></span>
           </div>
           <span class="flex-grow"></span>
-          <span class="text-base-content opacity-30 max-sm:invisible">
+          <span
+            class="text-base-content opacity-30 max-sm:hidden whitespace-nowrap"
+          >
             {{ .Lastmod.Format "2006-01-02" }}
+          </span>
+          <span
+            class="text-base-content opacity-30 sm:hidden whitespace-nowrap"
+          >
+            {{ .Lastmod.Format "01-02" }}
           </span>
         </a>
       </li>

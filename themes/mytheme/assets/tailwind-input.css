@@ -9,7 +9,7 @@
       prose-ul:leading-5
       prose-quoteless
       prose-blockquote:hyphens-none
-      /* gradient text */
+      /* gradient headers */
       prose-headings:text-transparent
       prose-headings:bg-clip-text
       prose-headings:bg-gradient-to-b
