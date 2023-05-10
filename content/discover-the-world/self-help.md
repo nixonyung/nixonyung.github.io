@@ -17,20 +17,41 @@ title: "Self Help"
 - [CLEAN YOUR ROOM - Powerful Life Advice | Jordan Peterson](https://youtu.be/Vp9599kwnhM)
   - > If you want to organize your psyche (your mind), you could start by organizing your room.
 - [Push yourself beyond your limits in your 20s - Jordan Peterson](https://youtu.be/z58Q0DADRGg)
-- [How Jordan Peterson Sorted Himself Out at Age 25](https://youtube.com/watch?v=EwL449AMHMo)
-  - discipline yourself and strive to become hyperproductive
 - [How To BECOME More INDUSTRIOUS | Jordan Peterson](https://youtu.be/uwTMW5FHk9A)
   - have a routine, e.g. scheduled sleep, meals
   - make a plan, e.g. using a calendar
-- [Jordan Peterson - Hard Truths You Have to Accept to Be Successful](https://youtube.com/watch?v=SjRsGDT1x_A)
-  - hierarchy of competence is a must
-  - smart people who work hard get ahead
-- [Why do we want hierarchy of competence - Jordan Peterson](https://youtu.be/MBd1BeoecFQ)
-  - so that we know who is the best and have them contribute the most to the society
+- [How Jordan Peterson Sorted Himself Out at Age 25](https://youtube.com/watch?v=EwL449AMHMo)
+  - discipline yourself and strive to become hyperproductive
+- [Jordan Peterson Tells An Old Story About Gods](https://youtube.com/watch?v=YpqXNgvfa4k)
+  - what we can see in religions across cultures:
+    - polytheism, as an embodiment of ideals competing in the dominance hierarchy
+    - there are major commonalities in the more dominant gods across cultures
+  - e.g. Egypt gods:
+    - Osiris, the old king, great in the past but now willfully blind
+      - as the outdated part of a culture
+    - Seth, the villian, "killed" Osiris
+      - as malevolence, problems
+    - Isis, the queen, looking for Osiris' spirit, give birth to Horus
+      - as the tendency of us to find order in chaos
+    - Horus, the son, in chaos he acquired clear eyes
+      - as those who "pay attention"
+  - > You go down into the chaos, and you find the dead spirit of your
+    > tradition, and you give it vision.
+- [Jordan Peterson | Hierarchy of Competence](https://youtu.be/8twotdRzy3w)
+  - human cannot live alone, we have to live with others
+  - good old rule: be like anyone else so that the society is stable, and we
+    can live together peacefully
+  - but it is wrong to say "Everything should be equal", and we should have
+    hierarchies of competence (i.e. who is the best in each profession) (and
+    perhaps as the only necessary "unequal" thing)
+    - so that everyone knows who solves certain problems the best
+    - it is based on competence, not power or status
+    - it also serves as a life meaning
 - [IQ vs. Hard Work | Triggernometry & Jordan B Peterson #shorts](https://youtu.be/7bqd5vieOpE)
   - IQ is the best predictor of people's success
 - [Jordan Peterson Explains how IQ is Genetic](https://youtu.be/vVTtN6Pepzk)
-  - IQ is not only genetic, giving people access to information can improve their cognitive ability
+  - IQ is not only genetic, giving people access to information and nutrients
+    can improve their cognitive ability
 - [Don't Envy People | JORDAN PETERSON Advice](https://youtu.be/gEcpKyKOOKc)
 - [Jordan Peterson - The Curse of Creativity](https://youtube.com/watch?v=ocDli45faiw)
   - not everyone is creative
@@ -45,7 +66,8 @@ title: "Self Help"
     > you are looking for are not going to be found in your parent's house.
 - [Jordan Peterson: The Mind of Highly (Dis-)Agreeable People](https://youtube.com/watch?v=5WXo1aFb8MY)
   - being agreeable is wired to being prepared to take care of babies
-  - agreeable people should learn to understand and express what they want to not get exploited in other areas
+  - agreeable people should learn to understand and express what they want to
+    not get exploited in other areas
 - [Jordan Peterson - The Best Way To Learn Critical Thinking](https://youtu.be/x0vUsxhMczI)
   - learn to write
     - [Essay writing guide](https://essay.app/guide)
