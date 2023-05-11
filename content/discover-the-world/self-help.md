@@ -2,6 +2,7 @@
 title: "Self Help"
 ---
 
+- [TED 中英雙語字幕: 二十歲的人生不能等到三十才開始](https://youtu.be/EgqQmupSvGk)
 - [Jordan Peterson - Wasting Time and Opportunities](https://youtu.be/xY48e1oDXSU)
   - > If your life isn't everything it could be, you could ask yourself:
     > "Well, what would happen if you just stop wasting the opportunities that
@@ -9,8 +10,14 @@ title: "Self Help"
   - > If people stopped really, really trying just to make things worse, we
     > have no idea how much better they would get just because of that.
   - what you do doesn't just matter to you, but also to those you are networked with
+- [提姆・明欽 (Tim Minchin) - 人生九課 9 Life Lessons (中文字幕)](https://youtu.be/dvBZNK77h9M)
+  - (what life is philosophically)
+- [12 Rules For Life](https://youtu.be/Cn_n8GL3XeM)
+  - (comparing life to a video game)
+- [Advice for young people | Jordan B Peterson](https://youtu.be/3Hq49O2VgcU)
+  - you should not think you are okay the way you are
 - [Reduce suffering through suffering - Jordan Peterson](https://youtu.be/U4ZUb4ZO3fk)
-- [The world shifts itself around your aim : Jordan Peterson #MindsetMatters #Shorts](https://youtu.be/Zr1Y9r6N4OY)
+- [The world shifts itself around your aim : Jordan Peterson](https://youtu.be/Zr1Y9r6N4OY)
 - [Take Aim, Even Badly](https://youtu.be/ZwGDnSWmqhM)
   - just do it, learn from your mistakes
   - at each step you know better what your aim is
@@ -20,16 +27,18 @@ title: "Self Help"
 - [How To BECOME More INDUSTRIOUS | Jordan Peterson](https://youtu.be/uwTMW5FHk9A)
   - have a routine, e.g. scheduled sleep, meals
   - make a plan, e.g. using a calendar
-- [How Jordan Peterson Sorted Himself Out at Age 25](https://youtube.com/watch?v=EwL449AMHMo)
+- [How Jordan Peterson Sorted Himself Out at Age 25](https://youtube.com/EwL449AMHMo)
   - discipline yourself and strive to become hyperproductive
-- [Jordan Peterson Tells An Old Story About Gods](https://youtube.com/watch?v=YpqXNgvfa4k)
+- [Learning Languages Ruined My Life](https://youtu.be/ZZ_4gzoDDAE)
+  - a language is a culture
+- [Jordan Peterson Tells An Old Story About Gods](https://youtube.com/YpqXNgvfa4k)
   - what we can see in religions across cultures:
-    - polytheism, as an embodiment of ideals competing in the dominance hierarchy
+    - polytheism, as an embodiment of ideals competing in the "dominance hierarchy"
     - there are major commonalities in the more dominant gods across cultures
   - e.g. Egypt gods:
-    - Osiris, the old king, great in the past but now willfully blind
+    - Osiris, the old king, great in the past but now "willfully blind"
       - as the outdated part of a culture
-    - Seth, the villian, "killed" Osiris
+    - Seth, the villian, killed Osiris
       - as malevolence, problems
     - Isis, the queen, looking for Osiris' spirit, give birth to Horus
       - as the tendency of us to find order in chaos
@@ -47,24 +56,29 @@ title: "Self Help"
     - so that everyone knows who solves certain problems the best
     - it is based on competence, not power or status
     - it also serves as a life meaning
-- [IQ vs. Hard Work | Triggernometry & Jordan B Peterson #shorts](https://youtu.be/7bqd5vieOpE)
+- [IQ vs. Hard Work | Triggernometry & Jordan B Peterson](https://youtu.be/7bqd5vieOpE)
   - IQ is the best predictor of people's success
 - [Jordan Peterson Explains how IQ is Genetic](https://youtu.be/vVTtN6Pepzk)
   - IQ is not only genetic, giving people access to information and nutrients
     can improve their cognitive ability
 - [Don't Envy People | JORDAN PETERSON Advice](https://youtu.be/gEcpKyKOOKc)
-- [Jordan Peterson - The Curse of Creativity](https://youtube.com/watch?v=ocDli45faiw)
+- [Jordan Peterson - The Curse of Creativity](https://youtu.be/ocDli45faiw)
   - not everyone is creative
   - even if you are, you can't make a living just by being creative
   - > You're probably gonna lose. But if you don't lose, you could win big.
-- [Jordan Peterson - Do You Want To Have A Life? Or Be Exceptional At One Thing?](https://youtube.com/watch?v=cSFSlZwneO4)
-  - > If you concentrate solely on your career, you can get a long way in your career.
-  - being the best vs being good + family + hobbies + friends
-  - > Men went after perfection, women went after wholeness.
 - [Jordan Peterson - Becoming Independent From Your Parents](https://youtu.be/kXi9bwI6cY8)
   - > Once you hit a certain point in your development, ..., the answers that
     > you are looking for are not going to be found in your parent's house.
-- [Jordan Peterson: The Mind of Highly (Dis-)Agreeable People](https://youtube.com/watch?v=5WXo1aFb8MY)
+- [The Common Character Trait of Geniuses | James Gleick | Big Think](https://youtube.com/watch?v=Ym6whrAw8wU)
+  - they are alone
+- [Jordan Peterson - Do You Want To Have A Life? Or Be Exceptional At One Thing?](https://youtu.be/cSFSlZwneO4)
+  - > If you concentrate solely on your career, you can get a long way in your career.
+  - being the best vs being good + family + hobbies + friends
+  - > Men went after perfection, women went after wholeness.
+- [Should You Specialize or Be a Generalist? | Tim Ferriss](https://youtube.com/watch?v=wCPbPMRNnvk)
+  - > You should be a specialized generalist.
+  - > You are choosing a handful of things that combine very very well.
+- [Jordan Peterson: The Mind of Highly (Dis-)Agreeable People](https://youtu.be/5WXo1aFb8MY)
   - being agreeable is wired to being prepared to take care of babies
   - agreeable people should learn to understand and express what they want to
     not get exploited in other areas
@@ -75,9 +89,9 @@ title: "Self Help"
 - [Why men should be Dangerous and capable of violence by Jordan Peterson.](https://youtu.be/sFmbiJtIScA)
   - you need both the capacity for danger and the capacity for control
   - > If you are incapable of violence, not being violent isn't a virtue.
-- [Jordan Peterson - Describes Women's Hottest Sexual Fantasy](https://youtube.com/watch?v=8VznMiVlBwk)
+- [Jordan Peterson - Describes Women's Hottest Sexual Fantasy](https://youtu.be/8VznMiVlBwk)
   - civilized aggressiveness, e.g. vampire, werewolf, billionaire, pirate, surgeon
-- ["I think that's what modern women don't understand about men ..." Jordan Peterson on Rejection](https://youtube.com/watch?v=MqancWncfHk)
+- ["I think that's what modern women don't understand about men ..." Jordan Peterson on Rejection](https://youtu.be/MqancWncfHk)
   - > They don't understand that, at least to the degree that males are
     > uncorrupted and not better because of being rejected. They're doing
     > everything they can to kneel before the eternal image of the feminine
@@ -89,13 +103,13 @@ title: "Self Help"
 - [Jordan Peterson - The Key to Healthy Relationships](https://youtu.be/4sGBOMiR0gc)
   - reinforce good behaviours, e.g. tell your partner what they did well
   - and do not punish the good behaviours
-- [Jordan Peterson - More Than 50% Of Women Are Childless At 30](https://youtube.com/watch?v=BoqjKqt__tI)
+- [Jordan Peterson - More Than 50% Of Women Are Childless At 30](https://youtu.be/BoqjKqt__tI)
   - the society makes women think that career is the most important thing to
     them, and having children is a burden
   - in fact (by observations), women at late 20s will have a psychologically
     transformation to be eager to have a child, even if they are peaking at
     their careers
-- [#JordanPeterson - Progressive Student Was Left SPEECHLESS On Sex || What He Said Was Brilliant](https://youtube.com/watch?v=ni4VljLJFZU)
+- [#JordanPeterson - Progressive Student Was Left SPEECHLESS On Sex || What He Said Was Brilliant](https://youtu.be/ni4VljLJFZU)
   - birth control changed everything, but the society never have a consent of
     when we can have sex
     - e.g. premartial? sex for fun?
@@ -104,6 +118,10 @@ title: "Self Help"
   - > "I am going to make you strong so that any number of things can happen
     > to you. When you need some care, I will be there, but otherwise, out
     > into the world with you."
-- [Jordan Peterson - Train Your Son To Have CHAMPION'S Attitude | Jordan Peterson #Shorts](https://youtu.be/E5UYKnO5E0I)
+- [Jordan Peterson - Train Your Son To Have CHAMPION'S Attitude | Jordan Peterson](https://youtu.be/E5UYKnO5E0I)
   - what matters is not the result (winning or losing), but the development of good character
   - > You don't want to teach him to win, you want to teach him to play well with others.
+- [Skills Every Child Will Need to Succeed in 21st century | Dr. Laura A. Jana | TEDxChandigarh](https://youtu.be/z_1Zv_ECy0g)
+  - (what is considered a good character)
+- [20 分鐘看透人性的本質！人是天性善良或自私自利？好人是如何變壞人的？最新科學、人類學、歷史研究，揭露人性的真相！ 書來面對 EP31《人慈》Rutger Bregman](https://youtu.be/b7AgojHiIhE)
+  - > 人會對自己人和善，但是對圈外人冷血無情。

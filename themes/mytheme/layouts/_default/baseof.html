@@ -74,7 +74,7 @@
   <!-- nav/section: to adjust width, max-width, padding, ... -->
   <body class="font-base min-h-screen flex flex-col">
     <header
-      class="sticky top-0 bg-base-300 bg-opacity-70 backdrop-blur-md flex justify-center"
+      class="sticky top-0 z-10 bg-base-300 bg-opacity-70 backdrop-blur-md flex justify-center"
     >
       <nav
         class="navbar max-w-4xl px-6 sm:px-9 text-xl text-secondary tracking-tighter whitespace-nowrap overflow-auto scrollbar-hide"
@@ -113,10 +113,19 @@
       class="bg-base-300 bg-opacity-70 text-base-content flex justify-center"
     >
       <section
-        class="flex flex-col max-w-4xl px-6 sm:px-9 my-6 text-xs sm:text-sm font-light select-none"
+        class="flex flex-col max-w-4xl px-6 sm:px-9 my-6 text-xs sm:text-sm font-light tracking-tighter sm:tracking-tight select-none"
       >
+        {{ $pages := .Site.RegularPages.ByLastmod }}
+        {{ $l := len $pages }}
+        {{ $oldestYear := (index $pages 0).Lastmod.Year }}
+        {{ $newestYear := (index $pages (sub (len $pages) 1)).Lastmod.Year }}
         <span>
-          © {{ now.Format "2006" }} {{ .Site.Copyright }}. All Rights Reserved.
+          {{ if ne $oldestYear $newestYear }}
+            © {{ $oldestYear }}-{{ $newestYear }} {{ .Site.Copyright }}. All
+            Rights Reserved.
+          {{ else }}
+            © {{ $newestYear }} {{ .Site.Copyright }}. All Rights Reserved.
+          {{ end }}
         </span>
       </section>
     </footer>
