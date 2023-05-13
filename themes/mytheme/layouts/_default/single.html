@@ -3,9 +3,17 @@
     <div class="mb-4">
       <h1 class="inline m-0 box-decoration-clone">{{ .Title }}</h1>
     </div>
-    <span class="text-base-content opacity-30 select-none">
-      {{ .Lastmod.Format "2006 Jan 02" }}
-    </span>
+    <div
+      class="tooltip"
+      data-tip="(published on {{ .PublishDate.Format "2006 Jan 02" }})"
+    >
+      <span
+        class="text-base-content font-normal tracking-tighter sm:tracking-tight opacity-30 select-none"
+      >
+        Last updated on
+        {{ .Lastmod.Format "2006 Jan 02" }}
+      </span>
+    </div>
     {{ .Content }}
   </article>
 {{ end }}

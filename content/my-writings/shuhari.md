@@ -1,6 +1,7 @@
 ---
 title: 守破離 (Shuhari)
-publishDate: "2023-04-26 00:00:00 +08:00"
+publishDate: "2023-04-26"
+lastmod: "2023-04-26"
 ---
 
 (守)

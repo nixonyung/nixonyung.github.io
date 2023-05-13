@@ -1,5 +1,7 @@
 ---
 title: "Self Help"
+publishDate: "2023-05-08"
+lastmod: "2023-05-12"
 ---
 
 - [TED 中英雙語字幕: 二十歲的人生不能等到三十才開始](https://youtu.be/EgqQmupSvGk)

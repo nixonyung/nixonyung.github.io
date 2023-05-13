@@ -3,13 +3,9 @@ title = "An 80% Imitator"
 copyright = "Nixon Yung"
 baseURL = "https://nixonyung.github.io/"
 languageCode = "en-hk"
-enableGitInfo = true
 
 [params]
 description = "Nixon Yung's Knowledge Base"
-
-[frontmatter]
-lastmod = ['lastmod', 'date', 'publishDate', ':git']
 
 [markup]
 [markup.highlight]
