@@ -2120,6 +2120,10 @@ html {
   display: none;
 }
 
+.visited\:text-base-content:visited {
+  color: hsl(var(--bc) );
+}
+
 .hover\:bg-base-300:hover {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));

@@ -1,15 +1,15 @@
 ---
 title: "Self Help"
 publishDate: "2023-05-08"
-lastmod: "2023-05-13"
+lastmod: "2023-05-17"
 ---
 
-- [書中的每一句，都讓你想離職、想哭、想下班 ｜《工作垃圾話聖經》｜ 文森說書](https://youtube.com/watch?v=QTj7UvETQKA)
+- [書中的每一句，都讓你想離職、想哭、想下班 ｜《工作垃圾話聖經》｜ 文森說書](https://youtu.be/QTj7UvETQKA)
+- [Shuzo Matsuoka: Are you just living day to day?](https://youtu.be/iEIqVq7EZqE)
 - [TED 中英雙語字幕: 二十歲的人生不能等到三十才開始](https://youtu.be/EgqQmupSvGk)
-- [OSHO: There Are Only Two Types of People](https://youtu.be/V3ueDBgYjxc)
-  - those who can see risks and those who can't
 - [How To Find Happiness In Making Choices](https://youtu.be/0T7XH2lb6sQ)
 - [用渴求的姿態在抗拒 H&T50](https://youtu.be/t5rsXicPkcw)
+- [Be Anxious for Nothing!](https://youtu.be/kDnCnxCOPHA)
 - [Jordan Peterson - Wasting Time and Opportunities](https://youtu.be/xY48e1oDXSU)
   - > If your life isn't everything it could be, you could ask yourself:
     > "Well, what would happen if you just stop wasting the opportunities that
@@ -19,8 +19,10 @@ lastmod: "2023-05-13"
   - what you do doesn't just matter to you, but also to those you are networked with
 - [才華要如何展現？ H&T50](https://youtu.be/21w5IrX9NjY)
 - [OSHO: You Can Become Extraordinary](https://youtu.be/uNBu5eSrtnA)
-- [不要 20 年後才後悔自己不知道這些事 - 出版史上最大卡司《人生勝利聖經》](https://youtube.com/watch?v=w92fGRg3T3I)
+- [不要 20 年後才後悔自己不知道這些事 - 出版史上最大卡司《人生勝利聖經》](https://youtu.be/w92fGRg3T3I)
   - (life advices so that you don't regret)
+- [OSHO: There Are Only Two Types of People](https://youtu.be/V3ueDBgYjxc)
+  - those who can see risks and those who can't
 - [面對失敗](https://youtu.be/jwulMvT03fA)
 - [OSHO: Are You Sure You Are Doing the Right Thing?](https://youtu.be/n8HSCbif4yE)
   - life is a continuous inquiry
@@ -36,6 +38,9 @@ lastmod: "2023-05-13"
 - [為什麼大多數人窮其一生，終究一無所獲... 看教授精闢的分析（啟發）](https://youtube.com/watch?v=TZ79TA8y7Vk)
   - > (為何 95% 人生早已被程式化？)
 - [📚 你從沒獨立思考過？你沒有想像中的聰明。｜《知識的假象》｜閱說書 #51 ｜說書、書評｜【閱部客】](https://youtu.be/66XEyxtmGKw)
+- [This Man Makes You Think - James Wildman](https://youtu.be/E7JE8j5Ncmw)
+  - > If you are told the lie enough times, it becomes part of your reality.
+  - e.g. meat-eating culture
 - [Advice for young people | Jordan B Peterson](https://youtu.be/3Hq49O2VgcU)
   - you should not think you are okay the way you are
 - [The world shifts itself around your aim : Jordan Peterson](https://youtu.be/Zr1Y9r6N4OY)
@@ -43,6 +48,7 @@ lastmod: "2023-05-13"
 - [Take Aim, Even Badly](https://youtu.be/ZwGDnSWmqhM)
   - just do it, learn from your mistakes
   - at each step you know better what your aim is
+- [Too many choices…? Let’s talk analysis paralysis](https://youtu.be/PcC3LuxvZzI)
 - [When Life Isn't Going Well...](https://youtu.be/TXgWpjoFe1c)
 - [CLEAN YOUR ROOM - Powerful Life Advice | Jordan Peterson](https://youtu.be/Vp9599kwnhM)
   - > If you want to organize your psyche (your mind), you could start by organizing your room.
@@ -51,6 +57,7 @@ lastmod: "2023-05-13"
   - have a routine, e.g. scheduled sleep, meals
   - make a plan, e.g. using a calendar
 - [Reduce suffering through suffering - Jordan Peterson](https://youtu.be/U4ZUb4ZO3fk)
+- [Discipline = Freedom](https://youtu.be/eBmVv2P-v2s)
 - [How Jordan Peterson Sorted Himself Out at Age 25](https://youtube.com/EwL449AMHMo)
   - discipline yourself and strive to become hyperproductive
 - [Learning Languages Ruined My Life](https://youtu.be/ZZ_4gzoDDAE)
@@ -100,24 +107,25 @@ lastmod: "2023-05-13"
 - [You Should Finally Leave School](https://youtu.be/pJhUs1L_RQo)
   - (don't limit your thinking)
 - [OSHO: Don't Follow the Leaders – They Are Lost Too (Preview)](https://youtu.be/Ikd8soAzyeM)
-  - you should walk your own path and see with your own eyes, but leaders are crippling you
+  - leaders are "crippling you", you should walk your own path and see with your
+    own eyes
 - [OSHO: Just Be Responsible to Yourself](https://youtu.be/uhCUSCzcLos)
-  - we are taught not to be responsible to ourselves
-  - we also have others who are responsible to us
+  - we are taught not to be responsible to ourselves, and we are used to having
+    others who are responsible to us
   - > Do whatsoever you feel like doing.
     >
     > If it is wrong, the punishment will follow immediately.
     >
     > If it is right, the reward will follow immediately.
-- [OSHO: A Majority of One](https://youtu.be/0Eq1ZcHaL2Y)
-  - if you, from your heart, envisioned a better world, then you are the
-    "majority" despite being alone
 - [OSHO: Only That Which You Have Experienced Has to Be Trusted](https://youtu.be/6i8bnb4dvvg)
   - life is always changing
   - > No belief, no dogma, no creed, no religion, nothing borrowed, but only
     > that which you have experienced has to be trusted, everything else has to
     > be doubted.
   - search inwards to find the "indubitable"
+- [OSHO: A Majority of One](https://youtu.be/0Eq1ZcHaL2Y)
+  - if you, from your heart, envisioned a better world, then you are the
+    "majority" despite being alone
 - [The Common Character Trait of Geniuses | James Gleick | Big Think](https://youtube.com/watch?v=Ym6whrAw8wU)
   - they are alone
 - [Jordan Peterson - Do You Want To Have A Life? Or Be Exceptional At One Thing?](https://youtu.be/cSFSlZwneO4)
@@ -141,10 +149,8 @@ lastmod: "2023-05-13"
 - [Jordan Peterson - Describes Women's Hottest Sexual Fantasy](https://youtu.be/8VznMiVlBwk)
   - civilized aggressiveness, e.g. vampire, werewolf, billionaire, pirate, surgeon
 - ["I think that's what modern women don't understand about men ..." Jordan Peterson on Rejection](https://youtu.be/MqancWncfHk)
-  - > They don't understand that, at least to the degree that males are
-    > uncorrupted and not better because of being rejected. They're doing
-    > everything they can to kneel before the eternal image of the feminine
-    > and try to make themselves worthy.
+  - > (Males) are doing everything they can to kneel before the eternal image of
+    > the feminine and try to make themselves worthy.
 - [Jordan Peterson - The Relationship Ratio](https://youtu.be/sNxauzPPm3o)
   - the optimal positive-to-negative-interactions ratio is between 5:1 to 11:1
 - [Secret of a Happy Relationship - Jordan Peterson](https://youtu.be/Rm3ZEB6h9_g)
