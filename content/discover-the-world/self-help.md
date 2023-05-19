@@ -8,7 +8,7 @@ lastmod: "2023-05-19"
 - [High-level views of life](#high-level-views-of-life)
 - [Believing you can change the way you are](#believing-you-can-change-the-way-you-are)
 - [Making your first step](#making-your-first-step)
-- [Why you should keep moving forward](#why-you-should-keep-moving-forward)
+- [Why you have to keep moving forward](#why-you-have-to-keep-moving-forward)
 - [Finding your highest aim](#finding-your-highest-aim)
 - [Being disciplined](#being-disciplined)
 - [Working smart](#working-smart)
@@ -41,8 +41,6 @@ lastmod: "2023-05-19"
   > \- 特立獨行的貓（趙星）
 
 - [Push yourself beyond your limits in your 20s - Jordan Peterson](https://youtu.be/z58Q0DADRGg)
-
-- [This is Why You Don't Have Time Anymore](https://youtu.be/jyLXGh_k57Y)
 
 - [Jordan Peterson - Wasting Time and Opportunities](https://youtu.be/xY48e1oDXSU)
 
@@ -93,7 +91,7 @@ lastmod: "2023-05-19"
 
 - [Why I Make Content](https://youtu.be/7FsyXTMLPBY)
 
-- [From Meth To Netflix](https://youtube.com/watch?v=JjHFubUPLV0)
+- [From Meth To Netflix](https://youtu.be/JjHFubUPLV0)
 
 - > If the last 20 years have been about making us more productive—sacrificing
   > efficiency and financial sustainability in the process — perhaps the next 20
@@ -102,26 +100,6 @@ lastmod: "2023-05-19"
   > software omnipresent in our lives.
   >
   > \- [Is software getting worse?](https://stackoverflow.blog/2023/01/30/is-software-getting-worse/)
-
-- > It is better to be a human being dissatisfied than a pig satisfied; better
-  > to be Socrates dissatisfied than a fool satisfied.
-  >
-  > And if the fool, or the pig, are of a different opinion, it is because they
-  > only know their own side of the question.
-  >
-  > \- [John Stuart Mill](https://www.goodreads.com/quotes/79033-it-is-indisputable-that-the-being-whose-capacities-of-enjoyment)
-
-- > Thought constitutes the greatness of man.
-  >
-  > Man is a reed, the feeblest thing in nature, but he is a thinking reed.
-  >
-  > There is no need for the whole universe to take up arms to crush him: a
-  > vapour, a drop of water is enought to kill him. But even if the universe
-  > were to crush him, man would still be nobler than his slayer, because he
-  > knows that he is dying and the advantage the universe has over him. The
-  > universe knows none of this.
-  >
-  > \- [Blaise Pascal](https://www.goodreads.com/quotes/394587-man-is-only-a-reed-the-weakest-in-nature-but)
 
 ## High-level views of life
 
@@ -134,23 +112,17 @@ lastmod: "2023-05-19"
 - [提姆・明欽 (Tim Minchin) - 人生九課 9 Life Lessons (中文字幕)](https://youtu.be/dvBZNK77h9M)
 
   - (what life is philosophically)
-  - (be real and move on)
-
-- > Be Water, My Friend.
-  >
-  > \- [Bruce Lee Philosophy](https://youtu.be/nzQWYHHqvIw)
 
 - [What one skill = an awesome life? | Dr. Shimi Kang | TEDxKelowna](https://youtu.be/1EHZAQmw2JA)
 
   - (the skill: adaptability)
   - (the awesome life: P.O.D., i.e. play, others, downtime)
 
-- > Our main problem is a lack of understanding of what it means to be human and
-  > that we are not separate from nature.
+- > Be Water, My Friend.
   >
-  > \- [Jacque Fresco](https://quotefancy.com/quote/2827341/Jacque-Fresco-Our-main-problem-is-a-lack-of-understanding-of-what-it-means-to-be-human)
+  > \- [Bruce Lee Philosophy](https://youtu.be/nzQWYHHqvIw)
 
-- [The world is poorly designed. But copying nature helps.](https://youtube.com/watch?v=iMtXqTmfta0)
+- [The world is poorly designed. But copying nature helps.](https://youtu.be/iMtXqTmfta0)
 
 - > Design is not just what it looks like and feels like.
   >
@@ -158,9 +130,26 @@ lastmod: "2023-05-19"
   >
   > \- [Steve Jobs](https://www.goodreads.com/quotes/457177-design-is-not-just-what-it-looks-like-and-feels)
 
+- > Our main problem is a lack of understanding of what it means to be human and
+  > that we are not separate from nature.
+  >
+  > \- [Jacque Fresco](https://quotefancy.com/quote/2827341/Jacque-Fresco-Our-main-problem-is-a-lack-of-understanding-of-what-it-means-to-be-human)
+
 - [攻殼機動隊電影解析：什麼是人？/ 賽伯格與哈洛威 Cyborg and Haraway / 意識 & 心靈哲學/ 超級歪電影院 EP7](https://youtu.be/6-KYHDAEFW0)
 
 - [老子【道德經】揭開宇宙、生命、靈魂之謎](https://youtu.be/wCNz1uxj8Fo)
+
+- > Thought constitutes the greatness of man.
+  >
+  > Man is a reed, the feeblest thing in nature, but he is a thinking reed.
+  >
+  > There is no need for the whole universe to take up arms to crush him: a
+  > vapour, a drop of water is enought to kill him. But even if the universe
+  > were to crush him, man would still be nobler than his slayer, because he
+  > knows that he is dying and the advantage the universe has over him. The
+  > universe knows none of this.
+  >
+  > \- [Blaise Pascal](https://www.goodreads.com/quotes/394587-man-is-only-a-reed-the-weakest-in-nature-but)
 
 - > What is the meaning of life?"
   >
@@ -188,13 +177,15 @@ lastmod: "2023-05-19"
   - don't let your status override your behaviours
   - everyone may have burdens to bare and are all respectable
 
-- [這些金錢觀念，會影響你的一生 ► Dr Joe Vitale （中英字幕）](https://youtu.be/xevXwR6WVO8)
-
 ## Believing you can change the way you are
 
 - > Never let the things you can't do, stop you from doing what you can.
   >
   > \- [Ronald Reagan](https://www.goodreads.com/quotes/449866-never-let-the-things-you-can-t-do-stop-you-from)
+
+- > Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.
+  >
+  > \- [Neil Gaiman](https://www.goodreads.com/quotes/17764-fairy-tales-are-more-than-true-not-because-they-tell)
 
 - [Developing a Growth Mindset with Carol Dweck](https://youtu.be/hiiEeMN7vbQ)
 
@@ -209,7 +200,7 @@ lastmod: "2023-05-19"
   >
   > \- [Friedrich Nietzsche](https://www.goodreads.com/quotes/31312-there-are-no-facts-only-interpretations)
 
-- [為什麼大多數人窮其一生，終究一無所獲... 看教授精闢的分析（啟發）](https://youtube.com/watch?v=TZ79TA8y7Vk)
+- [為什麼大多數人窮其一生，終究一無所獲... 看教授精闢的分析（啟發）](https://youtu.be/TZ79TA8y7Vk)
 
   - > (為何 95% 人生早已被程式化？)
 
@@ -235,11 +226,23 @@ lastmod: "2023-05-19"
   >
   > \- [Jacque Fresco](https://quotefancy.com/quote/1196034/Jacque-Fresco-There-are-no-good-or-bad-people-humans-are-shaped-by-culture)
 
+- > Above all, don't lie to yourself. The man who lies to himself and listens to
+  > his own lie comes to a point that he cannot distinguish the truth within
+  > him, or around him, and so loses all respect for himself and for others. And
+  > having no respect he ceases to love.
+  >
+  > \- [Fyodor Dostoevsky](https://www.goodreads.com/quotes/29218-above-all-don-t-lie-to-yourself-the-man-who-lies)
+
 - > The limits of my language mean the limits of my world.
   >
   > \- [Ludwig Wittgenstein](https://www.goodreads.com/quotes/5475578-5-6-the-limits-of-my-language-mean-the-limits-of)
 
 - [Learning Languages Ruined My Life](https://youtu.be/ZZ_4gzoDDAE)
+
+- > A man's mind is stretched by a new idea or sensation, and never shrinks back
+  > to its former dimensions.
+  >
+  > \- [Oliver Wendell Holmes Sr.](https://www.goodreads.com/quotes/612325-a-man-s-mind-is-stretched-by-a-new-idea-or)
 
 - > Life can be much broader, once you discover one simple fact:
   >
@@ -261,7 +264,7 @@ lastmod: "2023-05-19"
 - > Creativity is taking known elements and putting them together in unique
   > ways.
   >
-  > \- [Jacque Fresco](https://quotefancy.com/quote/1196029/Jacque-Fresco-Creativity-is-taking-known-elements-and-putting-them-together-in-unique#:~:text=Jacque%20Fresco%20Quote%3A%20“Creativity%20is,them%20together%20in%20unique%20ways.”)
+  > \- [Jacque Fresco](https://quotefancy.com/quote/1196029/Jacque-Fresco-Creativity-is-taking-known-elements-and-putting-them-together-in-unique)
 
 - [Advice for young people | Jordan B Peterson](https://youtu.be/3Hq49O2VgcU)
 
@@ -301,6 +304,10 @@ lastmod: "2023-05-19"
 
   - > You need to do things that are "not enough".
 
+- > Done is better than perfect.
+  >
+  > \- [Sheryl Sandberg](https://www.goodreads.com/quotes/749769-done-is-better-than-perfect)
+
 - > Any program is only as good as it is useful.
   >
   > \- [Linus Torvalds](https://www.brainyquote.com/quotes/linus_torvalds_367343)
@@ -316,26 +323,28 @@ lastmod: "2023-05-19"
   >
   > \- [Grace Hopper](https://changelog.com/posts/what-admiral-grace-hopper-really-meant)
 
-## Why you should keep moving forward
+- > Take big bites. Anything worth doing is worth overdoing.
+  >
+  > \- [Robert A. Heinlein](https://www.goodreads.com/quotes/183337-take-big-bites-anything-worth-doing-is-worth-overdoing)
+
+## Why you have to keep moving forward
+
+- > Life can only be understood backwards; but it must be lived forwards.
+  >
+  > \- [Søren Kierkegaard](https://www.brainyquote.com/quotes/soren_kierkegaard_105030)
 
 - [How To Find Happiness In Making Choices](https://youtu.be/0T7XH2lb6sQ)
 
   - > It is not the choice that creates the result. It is what you do after the choice.
 
+- [Finite Thinking vs. Infinite Mindset | Simon Sinek](https://youtu.be/ohr2fkgrP_U)
+
+  - life is an "infinite game"
+  - > The only true competitor in an infinite game is ourselves.
+
 - [What's The Difference Between A Decisive Person And An Indecisive Person?](https://youtu.be/KWo0_ttEl34)
 
   - > The decisive person makes whatever choice they pick work.
-
-- > Like a man rowing a boat that floats on the tide, we enter the future facing
-  > the past. Our eyes see only the landscape of the past;
-  >
-  > what tomorrow looks like, nobody knows.
-  >
-  > \- [Paul Valéry](http://www.rowlaughexplore.com/journal//we-enter-the-future-facing-the-past)
-
-- > Life can only be understood backwards; but it must be lived forwards.
-  >
-  > \- [Søren Kierkegaard](https://www.brainyquote.com/quotes/soren_kierkegaard_105030)
 
 - > All men suffer, but not all men pity themselves.
   >
@@ -360,7 +369,12 @@ lastmod: "2023-05-19"
     - it is based on competence, not power or status
     - it also serves as a life meaning
 
-- [Jordan Peterson Tells An Old Story About Gods](https://youtube.com/YpqXNgvfa4k)
+- > The race is not always to the swift nor the battle to the strong, but that's
+  > the way to bet.
+  >
+  > \- [Damon Runyon](https://www.goodreads.com/quotes/123081-the-race-is-not-always-to-the-swift-nor-the)
+
+- [Jordan Peterson Tells An Old Story About Gods](https://youtu.be/YpqXNgvfa4k)
 
   - what we can see in religions across cultures:
     - polytheism, as an embodiment of ideals competing in the "dominance hierarchy"
@@ -380,20 +394,13 @@ lastmod: "2023-05-19"
 - [Jordan Peterson - Do You Want To Have A Life? Or Be Exceptional At One Thing?](https://youtu.be/cSFSlZwneO4)
 
   - > If you concentrate solely on your career, you can get a long way in your career.
-  - being the best vs being good + family + hobbies + friends
+  - being the best vs being decent + family + hobbies + friends
   - > Men went after perfection, women went after wholeness.
 
-- [Should You Specialize or Be a Generalist? | Tim Ferriss](https://youtube.com/watch?v=wCPbPMRNnvk)
+- [Should You Specialize or Be a Generalist? | Tim Ferriss](https://youtu.be/wCPbPMRNnvk)
 
   - > You should be a specialized generalist.
   - > You are choosing a handful of things that combine very very well.
-
-- [Finite Thinking vs. Infinite Mindset | Simon Sinek](https://youtu.be/ohr2fkgrP_U)
-
-- > Compound interest is the eighth wonder of the world.
-  > He who understands it, earns it ... he who doesn't ... pays it.
-  >
-  > \- [Albert Einstein](https://www.goodreads.com/quotes/76863-compound-interest-is-the-eighth-wonder-of-the-world-he)
 
 ## Finding your highest aim
 
@@ -406,9 +413,10 @@ lastmod: "2023-05-19"
   - > When you clarify your purpose, you take back your external locus of
     > control, ..., and you take an internal locus.
 
-- [Follow Your Passion Is Terrible Advice](https://youtu.be/Tb5ykUF2VJE)
+- [這些金錢觀念，會影響你的一生 ► Dr Joe Vitale （中英字幕）](https://youtu.be/xevXwR6WVO8)
 
-  - passion will die one day, you should find out what you are "meant" to do
+  - > The biggest reason to be independently wealthy is for how you can fulfill
+    > your mission.
 
 - [Jordan Peterson - Becoming Independent From Your Parents](https://youtu.be/kXi9bwI6cY8)
 
@@ -424,6 +432,14 @@ lastmod: "2023-05-19"
 - [You Should Finally Leave School](https://youtu.be/pJhUs1L_RQo)
 
   - (don't limit your thinking)
+
+- > It is better to be a human being dissatisfied than a pig satisfied; better
+  > to be Socrates dissatisfied than a fool satisfied.
+  >
+  > And if the fool, or the pig, are of a different opinion, it is because they
+  > only know their own side of the question.
+  >
+  > \- [John Stuart Mill](https://www.goodreads.com/quotes/79033-it-is-indisputable-that-the-being-whose-capacities-of-enjoyment)
 
 - [OSHO: Don't Follow the Leaders – They Are Lost Too (Preview)](https://youtu.be/Ikd8soAzyeM)
 
@@ -476,15 +492,20 @@ lastmod: "2023-05-19"
     > be doubted.
   - search inwards to find the "indubitable"
 
-- > Modern man can't see God because he doesn't look low enough.
+- > And those who were seen dancing were thought to be insane by those who could
+  > not hear the music.
   >
-  > \- [Carl Jung](https://www.goodreads.com/quotes/10363722-modern-man-can-t-see-god-because-he-doesn-t-look-low)
+  > \- [Friedrich Nietzsche](https://www.goodreads.com/quotes/7887-and-those-who-were-seen-dancing-were-thought-to-be)
 
 - > But instinct is something which transcends knowledge. We have, undoubtedly,
   > certain finer fibers that enable us to perceive truths when logical
   > deduction, or any other willful effort of the brain, is futile.
   >
   > \- [Nikola Tesla](https://www.goodreads.com/quotes/1043799-but-instinct-is-something-which-transcends-knowledge-we-have-undoubtedly)
+
+- > Modern man can't see God because he doesn't look low enough.
+  >
+  > \- [Carl Jung](https://www.goodreads.com/quotes/10363722-modern-man-can-t-see-god-because-he-doesn-t-look-low)
 
 - [Some Rough Advice for the "Real World"](https://youtu.be/OCO8eoDWqHQ)
 
@@ -494,10 +515,6 @@ lastmod: "2023-05-19"
 - [Too many choices…? Let’s talk analysis paralysis](https://youtu.be/PcC3LuxvZzI)
 
   - > If overwhelmed, limit your choices.
-
-- > Done is better than perfect.
-  >
-  > \- [Sheryl Sandberg](https://www.goodreads.com/quotes/749769-done-is-better-than-perfect)
 
 - [Take Aim, Even Badly](https://youtu.be/ZwGDnSWmqhM)
 
@@ -534,9 +551,13 @@ lastmod: "2023-05-19"
 
 - > Enthusiasm is common. Endurance is rare.
   >
-  > \- [Angela Duckworth](https://www.goodreads.com/quotes/7752359-enthusiasm-is-common-endurance-is-rare#:~:text=Quote%20by%20Angela%20Duckworth%3A%20“Enthusiasm,Endurance%20is%20rare.”)
+  > \- [Angela Duckworth](https://www.goodreads.com/quotes/7752359-enthusiasm-is-common-endurance-is-rare)
 
-- [史上最強意志力工具書｜《輕鬆駕馭意志力》｜文森說書](https://youtube.com/watch?v=Q4tJXEU8LGA)
+- [Follow Your Passion Is Terrible Advice](https://youtu.be/Tb5ykUF2VJE)
+
+  - passion will die one day, you should find out what you are "meant" to do
+
+- [史上最強意志力工具書｜《輕鬆駕馭意志力》｜文森說書](https://youtu.be/Q4tJXEU8LGA)
 
   - > 若 "道德許可證" 讓你有了放縱的藉口時，就用自己的最終目的來抑制衝動。
   - > 觀察自己在跟著衝動之後，你所感覺到的是滿足，或者你只是消除衝動未被完成所帶給你的焦慮感。
@@ -548,48 +569,33 @@ lastmod: "2023-05-19"
   - > Just change your environment so you don't have to exert so much
     > self-control in the first place.
 
-- > Take all you want, but eat all you take.
-  >
-  > \- (proverb)
+- [This is Why You Don't Have Time Anymore](https://youtu.be/jyLXGh_k57Y)
 
-- [How Jordan Peterson Sorted Himself Out at Age 25](https://youtube.com/EwL449AMHMo)
+- [How Jordan Peterson Sorted Himself Out at Age 25](https://youtu.be/EwL449AMHMo)
 
   - discipline yourself and strive to become hyperproductive
 
 - [Discipline = Freedom](https://youtu.be/eBmVv2P-v2s)
-
-- [Treat The Cause, Not The Symptoms! | James Clear](https://youtu.be/fX1BJT_maWo)
-
-- > The race is not always to the swift nor the battle to the strong, but that's
-  > the way to bet.
-  >
-  > \- [Damon Runyon](https://www.goodreads.com/quotes/123081-the-race-is-not-always-to-the-swift-nor-the)
-
-- > Everyone has a plan until they get punched in the mouth
-  >
-  > \- [Mike Tyson](https://www.goodreads.com/quotes/10093332-everyone-has-a-plan-until-they-get-punched-in-the)
 
 - [How To BECOME More INDUSTRIOUS | Jordan Peterson](https://youtu.be/uwTMW5FHk9A)
 
   - have a routine, e.g. scheduled sleep, meals
   - make a plan, e.g. using a calendar
 
+- > Everyone has a plan until they get punched in the mouth
+  >
+  > \- [Mike Tyson](https://www.goodreads.com/quotes/10093332-everyone-has-a-plan-until-they-get-punched-in-the)
+
+- [Treat The Cause, Not The Symptoms! | James Clear](https://youtu.be/fX1BJT_maWo)
+
 - [Two 2-minute Rules to Beat Procrastination (in 2 minutes)](https://youtu.be/0CmtDk-joT4)
 
-- > Above all, don't lie to yourself. The man who lies to himself and listens to
-  > his own lie comes to a point that he cannot distinguish the truth within
-  > him, or around him, and so loses all respect for himself and for others. And
-  > having no respect he ceases to love.
+- > Compound interest is the eighth wonder of the world.
+  > He who understands it, earns it ... he who doesn't ... pays it.
   >
-  > \- [Fyodor Dostoevsky](https://www.goodreads.com/quotes/29218-above-all-don-t-lie-to-yourself-the-man-who-lies)
+  > \- [Albert Einstein](https://www.goodreads.com/quotes/76863-compound-interest-is-the-eighth-wonder-of-the-world-he)
 
 ## Working smart
-
-- [別再用錯方法讀書了！世界各地頂尖學者的學習方法竟然是...!? / 書來面對 EP7《大腦喜歡這樣學》A Mind for Numbers by Barbara Oakley / 說書【大腦科學】](https://youtu.be/iFSVMuBDMws)
-
-  - (focused mode vs diffused mode)
-  - (relating new stuffs with what you already know / your senses)
-  - (sleep)
 
 - > I choose a lazy person to do a hard job. Because a lazy person will find an
   > easy way to do it.
@@ -598,71 +604,41 @@ lastmod: "2023-05-19"
 
 - > 大樂必易，大禮必簡。
   >
-  > \- [《樂記》](https://ctext.org/pre-qin-and-han/zh?searchu=大樂必易大禮必簡)
+  > \- [《禮記・樂記》](http://edu.hwadzan.com/fabodetail/1071)
+
+- [別再用錯方法讀書了！世界各地頂尖學者的學習方法竟然是...!? / 書來面對 EP7《大腦喜歡這樣學》A Mind for Numbers by Barbara Oakley / 說書【大腦科學】](https://youtu.be/iFSVMuBDMws)
+
+  - (focused mode vs diffused mode)
+  - (relating new stuffs with what you already know / your senses)
+  - (sleep)
+
+- [How to Read Faster](https://youtu.be/cRoaZ3cfX_k)
+
+- [To Improve Comprehension DON'T Try to Understand](https://youtu.be/i8oDLO7GPsk)
 
 - > 大音希聲，大象無形。
   >
-  > \- [老子《道德經》](https://baike.baidu.hk/item/大音希聲，大象無形/4641997)
-
-- [Baby, My Whole Work Is to Confuse You](https://youtu.be/xggTJCCxFss)
-
-  - > God is a quantity; godliness is a quality
-  - from quantity (tangible objects/examples) we have to see the quality (similarities in concepts)
+  > \- [老子《道德經》](https://pedia.cloud.edu.tw/Entry/Detail/?title=大音希聲&search=大音希聲)
 
 - > If you try and take a cat apart to see how it works, the first thing you
   > have on your hands is a non-working cat.
   >
   > \- [Douglas Adams](https://www.goodreads.com/quotes/98939-if-you-try-and-take-a-cat-apart-to-see)
 
-- > There are no bad people, there are people with insufficient information to
-  > make appropriate decisions.
-  >
-  > \- [Jacque Fresco](https://www.goodreads.com/quotes/883493-there-are-no-bad-people-there-are-people-with-insufficient)
+- [Baby, My Whole Work Is to Confuse You](https://youtu.be/xggTJCCxFss)
 
-- > Deficient observation is merely a form of ignorance and responsible for the
-  > many morbid notions and foolish ideas prevailing.
-  >
-  > \- [Nikola Tesla](https://www.goodreads.com/quotes/7518282-deficient-observation-is-merely-a-form-of-ignorance-and-responsible)
+  - > God is a quantity; godliness is a quality
+  - from quantity (tangible objects/examples) we have to see the quality (similarities in concepts)
 
-- > 不聞不若聞之，聞之不若見之，見之不若知之，知之不若行之。學至於行之而止矣。
-  >
-  > \- [荀子《儒效》](https://ctext.org/xunzi/ru-xiao/zh?searchu=不聞不若聞之，聞之不若見之，見之不若知之，知之不若行之。)
+- [OSHO: Contradictions a Creative Doorway](https://youtu.be/Wn0WTKer7Wc)
 
-- > Learn, compare, collect the facts!
-  >
-  > \- [Ivan Pavlov](https://quotefancy.com/quote/1361336/Ivan-Pavlov-Learn-compare-collect-the-facts#:~:text=Ivan%20Pavlov%20Quote%3A%20“Learn%2C,compare%2C%20collect%20the%20facts!”)
+  - in contradictions (while each being valid on its own) we reach our
+    limitations of what we can "explain"
+  - only by "feeling" it we can gain knowledge
 
-- > When you steal from one author, it's plagiarism;
+- > Wiser, never wise. Smarter, never smart.
   >
-  > if you steal from many, it's research.
-  >
-  > \- [Wilson Mizner](https://www.goodreads.com/quotes/7401998-if-you-steal-from-one-author-it-s-plagiarism-if-you)
-
-- [How to Read Faster](https://youtu.be/cRoaZ3cfX_k)
-
-- [To Improve Comprehension DON'T Try to Understand](https://youtu.be/i8oDLO7GPsk)
-
-- > We can not solve our problems with the same level of thinking that created
-  > them.
-  >
-  > \- [Albert Einstein](https://www.goodreads.com/quotes/320600-we-can-not-solve-our-problems-with-the-same-level)
-
-- > The competent programmer is fully aware of the strictly limited size of his
-  > own skull; therefore he approaches the programming task in full humility,
-  > and among other things he avoids clever tricks like the plague.
-  >
-  > \- [The Humble Programmer](https://wiki.c2.com/?TheHumbleProgrammer)
-
-- > The people who are the worst at programming are the people who refuse to
-  > accept the fact that their brains aren't equal to the task. Their egos keep
-  > them from being great programmers.
-  >
-  > The more you learn to compensate for your small brain, the better a
-  > programmer you'll be.
-  >
-  > The more humble you are, the faster you'll improve.
-  >
-  > \- [Why I'm The Best Programmer In The World\*](https://blog.codinghorror.com/why-im-the-best-programmer-in-the-world/)
+  > \- [Jacque Fresco](https://quotefancy.com/quote/1196030/Jacque-Fresco-Wiser-never-wise-Smarter-never-smart)
 
 - > Whenever a theory appears to you as the only possible one, take this as a
   > sign that you have neither understood the theory nor the problem which it
@@ -677,15 +653,50 @@ lastmod: "2023-05-19"
   >
   > \- [Steve Jobs](https://www.goodreads.com/quotes/1306252-stay-hungry-stay-foolish-never-let-go-of-your-appetite)
 
-- [OSHO: Contradictions a Creative Doorway](https://youtu.be/Wn0WTKer7Wc)
-
-  - in contradictions (while each being valid on its own) we reach our
-    limitations of what we can "explain"
-  - only by "feeling" it we can gain knowledge
-
-- > Wiser, never wise. Smarter, never smart.
+- > Wise as a Serpent, and innocent as doves.
   >
-  > \- [Jacque Fresco](https://quotefancy.com/quote/1196030/Jacque-Fresco-Wiser-never-wise-Smarter-never-smart)
+  > \- [Matthew 10:16](https://www.biblegateway.com/verse/en/Matthew%2010%3A16)
+
+- > There are no bad people, there are people with insufficient information to
+  > make appropriate decisions.
+  >
+  > \- [Jacque Fresco](https://www.goodreads.com/quotes/883493-there-are-no-bad-people-there-are-people-with-insufficient)
+
+- > Deficient observation is merely a form of ignorance and responsible for the
+  > many morbid notions and foolish ideas prevailing.
+  >
+  > \- [Nikola Tesla](https://www.goodreads.com/quotes/7518282-deficient-observation-is-merely-a-form-of-ignorance-and-responsible)
+
+- > 不聞不若聞之，聞之不若見之，見之不若知之，知之不若行之。學至於行之而止矣。
+  >
+  > \- [荀子《儒效》](https://www.arteducation.com.tw/mingju/juv_15e34611e665.html)
+
+- > Learn, compare, collect the facts!
+  >
+  > \- [Ivan Pavlov](https://quotefancy.com/quote/1361336/Ivan-Pavlov-Learn-compare-collect-the-facts)
+
+- > When you steal from one author, it's plagiarism;
+  >
+  > if you steal from many, it's research.
+  >
+  > \- [Wilson Mizner](https://www.goodreads.com/quotes/7401998-if-you-steal-from-one-author-it-s-plagiarism-if-you)
+
+- > The people who are the worst at programming are the people who refuse to
+  > accept the fact that their brains aren't equal to the task. Their egos keep
+  > them from being great programmers.
+  >
+  > The more you learn to compensate for your small brain, the better a
+  > programmer you'll be.
+  >
+  > The more humble you are, the faster you'll improve.
+  >
+  > \- [Why I'm The Best Programmer In The World\*](https://blog.codinghorror.com/why-im-the-best-programmer-in-the-world/)
+
+- > The competent programmer is fully aware of the strictly limited size of his
+  > own skull; therefore he approaches the programming task in full humility,
+  > and among other things he avoids clever tricks like the plague.
+  >
+  > \- [The Humble Programmer](https://wiki.c2.com/?TheHumbleProgrammer)
 
 - > As much as talent counts, effort counts twice.
   >
@@ -705,24 +716,24 @@ lastmod: "2023-05-19"
   - > ... to make sure everything is regulated, everything is under control. And
     > it's stressful.
 
+- > We can not solve our problems with the same level of thinking that created
+  > them.
+  >
+  > \- [Albert Einstein](https://www.goodreads.com/quotes/320600-we-can-not-solve-our-problems-with-the-same-level)
+
 - [Jordan Peterson Explains how IQ is Genetic](https://youtu.be/vVTtN6Pepzk)
 
   - IQ is not only genetic, giving people access to information and nutrients
     can improve their cognitive ability
 
-- > A man's mind is stretched by a new idea or sensation, and never shrinks back
-  > to its former dimensions.
-  >
-  > \- [Oliver Wendell Holmes Sr.](https://www.goodreads.com/quotes/612325-a-man-s-mind-is-stretched-by-a-new-idea-or)
-
 - > When education and resources are available to all without a price tag, there
   > will be no limit to the human potential.
   >
-  > \- [Jacque Fresco](https://quotefancy.com/quote/1195950/Jacque-Fresco-When-education-and-resources-are-available-to-all-without-a-price-tag-there#:~:text=Jacque%20Fresco%20Quote%3A%20“When%20education,limit%20to%20the%20human%20potential.”)
+  > \- [Jacque Fresco](https://quotefancy.com/quote/1195950/Jacque-Fresco-When-education-and-resources-are-available-to-all-without-a-price-tag-there)
 
 - > He who opens a school door, closes a prison.
   >
-  > \- [Victor Hugo](https://www.goodreads.com/quotes/18929-he-who-opens-a-school-door-closes-a-prison#:~:text=Quote%20by%20Victor%20Hugo%3A%20“He,door%2C%20closes%20a%20prison.”)
+  > \- [Victor Hugo](https://www.goodreads.com/quotes/18929-he-who-opens-a-school-door-closes-a-prison)
 
 - > Children are educated by what the grown-up is and not by his talk.
   >
@@ -732,7 +743,7 @@ lastmod: "2023-05-19"
   >
   > \- [Ralph Waldo Emerson](https://quotefancy.com/quote/896888/Ralph-Waldo-Emerson-I-pay-the-schoolmaster-but-tis-the-schoolboys-that-educate-my-son)
 
-- [人為何要寫作？ 學校沒告訴你的事 - Dr Jordan B Peterson（中英字幕）](https://youtube.com/watch?v=v5oi8zj0E7g)
+- [人為何要寫作？ 學校沒告訴你的事 - Dr Jordan B Peterson（中英字幕）](https://youtu.be/v5oi8zj0E7g)
 
   - [Essay writing guide](https://essay.app/guide)
   - > Teach people to be articulate! Because that's the most dangerous thing you can possibly be.
@@ -750,20 +761,32 @@ lastmod: "2023-05-19"
   - being articulate is to pull off "words combo" effectively
   - e.g. [OSHO: Tolerance Is an Ugly Word](https://youtu.be/v8ouDk2Mayw)
 
-- > Wise as a Serpent, and innocent as doves.
-  >
-  > \- [Matthew 10:16](https://www.biblegateway.com/verse/en/Matthew%2010%3A16)
+- [3 Ways to Express Your Thoughts So That Everyone Will Understand You | Alan Alda | Big Think](https://youtu.be/rrOnk0JnXW4)
+
+  - 3 rules of 3:
+    - 1. say 3 things
+    - 2. explain complex concepts in 3 perspectives
+    - 3. repeat important message 3 times
+  - you are essentially trying to connect with the listeners
 
 ## Maintaining relationships
-
-- [Simon Sinek - Trust vs Performance (Must Watch!)](https://youtu.be/PTo9e3ILmms)
-
-  - > (The Navy Seals) would rather have a medium performer of high trust, ...,
-    > over (a high performer of low trust).
 
 - [20 分鐘看透人性的本質！人是天性善良或自私自利？好人是如何變壞人的？最新科學、人類學、歷史研究，揭露人性的真相！ 書來面對 EP31《人慈》Rutger Bregman](https://youtu.be/b7AgojHiIhE)
 
   - > 人會對自己人和善，但是對圈外人冷血無情。
+
+- [Secret of a Happy Relationship - Jordan Peterson](https://youtu.be/Rm3ZEB6h9_g)
+
+  - openly tell each other what we want
+
+- [Jordan Peterson - The Relationship Ratio](https://youtu.be/sNxauzPPm3o)
+
+  - the optimal positive-to-negative-interactions ratio is between 5:1 to 11:1
+
+- [Jordan Peterson - The Key to Healthy Relationships](https://youtu.be/4sGBOMiR0gc)
+
+  - reinforce good behaviours, e.g. tell your partner what they did well
+  - and do not punish the good behaviours
 
 - > Good words are worth much, and cost little.
   >
@@ -779,23 +802,49 @@ lastmod: "2023-05-19"
   - agreeable people should learn to understand and express what they want to
     not get exploited in other areas
 
-- ["I think that's what modern women don't understand about men ..." Jordan Peterson on Rejection](https://youtu.be/MqancWncfHk)
+- [Simon Sinek - Trust vs Performance (Must Watch!)](https://youtu.be/PTo9e3ILmms)
 
-  - > (Males) are doing everything they can to kneel before the eternal image of
-    > the feminine and try to make themselves worthy.
+  - > (The Navy Seals) would rather have a medium performer of high trust, ...,
+    > over (a high performer of low trust).
 
-- [Jordan Peterson - The Key to Healthy Relationships](https://youtu.be/4sGBOMiR0gc)
+- [Jordan Peterson - Train Your Son To Have CHAMPION'S Attitude | Jordan Peterson](https://youtu.be/E5UYKnO5E0I)
 
-  - reinforce good behaviours, e.g. tell your partner what they did well
-  - and do not punish the good behaviours
+  - what matters is not the result (winning or losing), but the development of good character
+  - > You don't want to teach him to win, you want to teach him to play well with others.
 
-- [Jordan Peterson - The Relationship Ratio](https://youtu.be/sNxauzPPm3o)
+- [Skills Every Child Will Need to Succeed in 21st century | Dr. Laura A. Jana | TEDxChandigarh](https://youtu.be/z_1Zv_ECy0g)
 
-  - the optimal positive-to-negative-interactions ratio is between 5:1 to 11:1
+  - (what is considered a good character)
 
-- [Secret of a Happy Relationship - Jordan Peterson](https://youtu.be/Rm3ZEB6h9_g)
+- [Jordan Peterson - A Good Father Helps You to Become Your Best Self](https://youtu.be/JA5iEKvHNxk)
 
-  - openly tell each other what we want
+  - > The father should be an encouraging force.
+  - > "I am going to make you strong so that any number of things can happen
+    > to you. When you need some care, I will be there, but otherwise, out
+    > into the world with you."
+
+- [Why Parents Should Let Their Kids Fail](https://youtu.be/67WSktDKn40)
+
+- > Of all forms of caution, caution in love is perhaps the most fatal to true
+  > happiness.
+  >
+  > \- [Bertrand Russell](https://www.goodreads.com/quotes/1227-of-all-forms-of-caution-caution-in-love-is-perhaps)
+
+- > 感情原來是這麼脆弱的。
+  >
+  > 經得起風雨，卻經不起平凡；
+  >
+  > 風雨同船，晴天便各自散了。
+  >
+  > \- [張愛玲《一別一輩子》](https://vaseaquarius.pixnet.net/blog/post/36554440)
+
+- > 世間少見的關係，不代表不會發生；
+  >
+  > 不容於世的戀情，不代表不能是真愛。
+  >
+  > 你相信奇蹟，你相信凡事永遠有例外。
+  >
+  > \- [【鄭梓靈專欄】迷戀一個人是世上最寂寞的事](https://m.orangenews.hk/details?recommendId=96657)
 
 - [Jordan Peterson - Describes Women's Hottest Sexual Fantasy](https://youtu.be/8VznMiVlBwk)
 
@@ -809,22 +858,24 @@ lastmod: "2023-05-19"
     transformation to be eager to have a child, even if they are peaking at
     their careers
 
-- [Jordan Peterson - A Good Father Helps You to Become Your Best Self](https://youtu.be/JA5iEKvHNxk)
+- > 結婚若是為生計，那婚姻就是長期賣淫。
+  >
+  > \- [張愛玲](https://fashion.ettoday.net/news/1963439)
 
-  - > The father should be an encouraging force.
-  - > "I am going to make you strong so that any number of things can happen
-    > to you. When you need some care, I will be there, but otherwise, out
-    > into the world with you."
+- > If you’re a lover, you gotta be a fighter.
+  >
+  > Because, if you don’t fight for your love, what kind of love do you have?
+  >
+  > \- [Keanu Reeves](https://youtu.be/jjKOdoeWhpU)
 
-- [Why Parents Should Let Their Kids Fail](https://youtu.be/67WSktDKn40)
+- > Love is a fog that burns with the first daylight of reality.
+  >
+  > \- [Charles Bukowski](https://www.goodreads.com/quotes/6755832-love-is-kind-of-like-when-you-see-a-fog)
 
-- [Jordan Peterson - Train Your Son To Have CHAMPION'S Attitude | Jordan Peterson](https://youtu.be/E5UYKnO5E0I)
+- ["I think that's what modern women don't understand about men ..." Jordan Peterson on Rejection](https://youtu.be/MqancWncfHk)
 
-  - what matters is not the result (winning or losing), but the development of good character
-  - > You don't want to teach him to win, you want to teach him to play well with others.
-
-- [Skills Every Child Will Need to Succeed in 21st century | Dr. Laura A. Jana | TEDxChandigarh](https://youtu.be/z_1Zv_ECy0g)
-  - (what is considered a good character)
+  - > (Males) are doing everything they can to kneel before the eternal image of
+    > the feminine and try to make themselves worthy.
 
 ## Keeping a good mental
 
@@ -877,13 +928,13 @@ lastmod: "2023-05-19"
 
 - [Be Anxious for Nothing!](https://youtu.be/kDnCnxCOPHA)
 
-- [在他人面前容易感到自卑？建立自信心你可以從這兩種方式開始｜快樂大學](https://youtu.be/WBiEevO__II)
-
-- [童年讓人長不大，記憶使人走向極端｜《以為時間久了我就會沒事》｜文森說書](https://youtube.com/watch?v=MF826Has0oM)
-
 - [This is Why You Don't Feel Anything Anymore](https://youtu.be/R9ykreOVIWE)
 
   - try to understand your feelings
+
+- [用渴求的姿態在抗拒 H&T50](https://youtu.be/t5rsXicPkcw)
+
+- [在他人面前容易感到自卑？建立自信心你可以從這兩種方式開始｜快樂大學](https://youtu.be/WBiEevO__II)
 
 - [才華要如何展現？ H&T50](https://youtu.be/21w5IrX9NjY)
 
@@ -905,24 +956,23 @@ lastmod: "2023-05-19"
   >
   > \- [Samuel Beckett](https://www.goodreads.com/quotes/1017797-ever-tried-ever-failed-no-matter-try-again-fail-again)
 
-- [用渴求的姿態在抗拒 H&T50](https://youtu.be/t5rsXicPkcw)
-
 - [Don't Envy People | JORDAN PETERSON Advice](https://youtu.be/gEcpKyKOOKc)
 
-- [永遠別批判他人，你不知道他們的故事【中文字幕】Never judge others, you don’t know their story](https://youtube.com/watch?v=op1KCHhTl98)
+- [永遠別批判他人，你不知道他們的故事【中文字幕】Never judge others, you don’t know their story](https://youtu.be/op1KCHhTl98)
 
-- > And those who were seen dancing were thought to be insane by those who could
-  > not hear the music.
-  >
-  > \- [Friedrich Nietzsche](https://www.goodreads.com/quotes/7887-and-those-who-were-seen-dancing-were-thought-to-be)
+- [童年讓人長不大，記憶使人走向極端｜《以為時間久了我就會沒事》｜文森說書](https://youtu.be/MF826Has0oM)
 
 - [When Life Isn't Going Well...](https://youtu.be/TXgWpjoFe1c)
 
   - > Acknowledge that not everything in your life is actually your fault.
 
+- [OSHO: I Am Not a Politician](https://youtu.be/hSFFaFkgqWI)
+
+  - > I'm simply responding with my totality to anything that comes in front of me.
+
 - [How Long Does It Take Actually Change Your Life](https://youtu.be/3jXgdKDOfuU)
 
-  - > It is I who has to do the action, ..., but you don't have to do it alone.
+  - > It is "I" who has to do the action, ..., but you don't have to do it alone.
 
 - [OSHO: You Have Everything but You Don't Have Yourself](https://youtu.be/Zo_P2rbEtwo)
 
