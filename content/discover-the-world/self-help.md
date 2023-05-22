@@ -1,21 +1,21 @@
 ---
 title: "Self Help"
 publishDate: "2023-05-08"
-lastmod: "2023-05-19"
+lastmod: "2023-05-22"
 ---
 
-- [Why you should act now](#why-you-should-act-now)
-- [High-level views of life](#high-level-views-of-life)
-- [Believing you can change the way you are](#believing-you-can-change-the-way-you-are)
-- [Making your first step](#making-your-first-step)
-- [Why you have to keep moving forward](#why-you-have-to-keep-moving-forward)
-- [Finding your highest aim](#finding-your-highest-aim)
-- [Being disciplined](#being-disciplined)
-- [Working smart](#working-smart)
-- [Maintaining relationships](#maintaining-relationships)
-- [Keeping a good mental](#keeping-a-good-mental)
+- [Why You Should ACT NOW](#why-you-should-act-now)
+- [High-level Views of Life](#high-level-views-of-life)
+- [BELIEVING You Can Change The Way You Are](#believing-you-can-change-the-way-you-are)
+- [Making Your FIRST STEP](#making-your-first-step)
+- [WHY You Have To Keep Moving Forward](#why-you-have-to-keep-moving-forward)
+- [Finding YOUR Highest Aim](#finding-your-highest-aim)
+- [Being DISCIPLINED](#being-disciplined)
+- [Working SMART](#working-smart)
+- [Maintaining RELATIONSHIPS](#maintaining-relationships)
+- [Keeping a Good MENTAL](#keeping-a-good-mental)
 
-## Why you should act now
+## Why You Should ACT NOW
 
 - [Shuzo Matsuoka: Are you just living day to day?](https://youtu.be/iEIqVq7EZqE)
 
@@ -101,7 +101,7 @@ lastmod: "2023-05-19"
   >
   > \- [Is software getting worse?](https://stackoverflow.blog/2023/01/30/is-software-getting-worse/)
 
-## High-level views of life
+## High-level Views of Life
 
 - [Never, Ever Give Up. Arthur's Inspirational Transformation!](https://youtu.be/qX9FSZJu448)
 
@@ -112,6 +112,16 @@ lastmod: "2023-05-19"
 - [提姆・明欽 (Tim Minchin) - 人生九課 9 Life Lessons (中文字幕)](https://youtu.be/dvBZNK77h9M)
 
   - (what life is philosophically)
+
+- > The meaning of life is just to be alive. It is so plain and so obvious and
+  > so simple. And yet, everybody rushes around in a great panic as if it were
+  > necessary to achieve something beyond themselves.
+  >
+  > \- [Alan Watts](https://www.goodreads.com/quotes/463182-the-meaning-of-life-is-just-to-be-alive-it)
+
+- [Alan Watts - Life Is Not A Journey](https://youtu.be/pV-D2_G9w5c)
+
+  - > You gotta let go, and let it happen.
 
 - [What one skill = an awesome life? | Dr. Shimi Kang | TEDxKelowna](https://youtu.be/1EHZAQmw2JA)
 
@@ -177,7 +187,14 @@ lastmod: "2023-05-19"
   - don't let your status override your behaviours
   - everyone may have burdens to bare and are all respectable
 
-## Believing you can change the way you are
+- [Jim Rohn - If you divided money equally to everybody](https://youtu.be/N0g6AjxvrIk)
+
+- [這些金錢觀念，會影響你的一生 ► Dr Joe Vitale （中英字幕）](https://youtu.be/xevXwR6WVO8)
+
+  - > The biggest reason to be independently wealthy is for how you can fulfill
+    > your mission.
+
+## BELIEVING You Can Change The Way You Are
 
 - > Never let the things you can't do, stop you from doing what you can.
   >
@@ -186,6 +203,10 @@ lastmod: "2023-05-19"
 - > Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.
   >
   > \- [Neil Gaiman](https://www.goodreads.com/quotes/17764-fairy-tales-are-more-than-true-not-because-they-tell)
+
+- > Life is a comedy to those who think, a tragedy to those who feel.
+  >
+  > \- [Jean Racine](https://www.goodreads.com/quotes/163365-life-is-a-comedy-to-those-who-think-a-tragedy)
 
 - [Developing a Growth Mindset with Carol Dweck](https://youtu.be/hiiEeMN7vbQ)
 
@@ -210,6 +231,10 @@ lastmod: "2023-05-19"
   >
   > \- [Jacque Fresco](https://quotefancy.com/quote/1195943/Jacque-Fresco-I-don-t-want-you-to-trust-me-I-want-you-to-question-everything-I-say)
 
+- > Judge a man by his questions rather than by his answers.
+  >
+  > \- [Voltaire](https://www.goodreads.com/quotes/6885-judge-a-man-by-his-questions-rather-than-by-his)
+
 - [This Man Makes You Think - James Wildman](https://youtu.be/E7JE8j5Ncmw)
 
   - > If you are told the lie enough times, it becomes part of your reality.
@@ -221,6 +246,10 @@ lastmod: "2023-05-19"
   > Street.
   >
   > \- [David J. Schwartz](https://www.goodreads.com/quotes/10015343-all-of-us-more-than-we-recognize-are-products-of)
+
+- > You are the average of the five people you spend the most time with.
+  >
+  > \- [Jim Rohn](https://www.goodreads.com/quotes/1798-you-are-the-average-of-the-five-people-you-spend)
 
 - > There are no good or bad people, humans are shaped by culture.
   >
@@ -261,6 +290,10 @@ lastmod: "2023-05-19"
   >
   > \- [Ernst Haas](https://www.brainyquote.com/quotes/ernst_haas_141214)
 
+- [Design Theory: An Introduction to Lateral Thinking](https://youtu.be/bpdnKzdbm58)
+
+  - consider alternatives to your goals, assumptions, solutions
+
 - > Creativity is taking known elements and putting them together in unique
   > ways.
   >
@@ -290,7 +323,7 @@ lastmod: "2023-05-19"
 
 - [OSHO: You Can Become Extraordinary](https://youtu.be/uNBu5eSrtnA)
 
-## Making your first step
+## Making Your FIRST STEP
 
 - > Complaining about a problem without posing a solution is called whining.
   >
@@ -327,11 +360,17 @@ lastmod: "2023-05-19"
   >
   > \- [Robert A. Heinlein](https://www.goodreads.com/quotes/183337-take-big-bites-anything-worth-doing-is-worth-overdoing)
 
-## Why you have to keep moving forward
+## WHY You Have To Keep Moving Forward
 
 - > Life can only be understood backwards; but it must be lived forwards.
   >
   > \- [Søren Kierkegaard](https://www.brainyquote.com/quotes/soren_kierkegaard_105030)
+
+- [Life’s Wicked Problems (and How to Get Past Them)](https://www.scotthyoung.com/blog/2019/02/25/wicked-problems/)
+
+  - > Wicked problems are problems that are, “difficult or impossible to solve
+    > because of incomplete, contradictory, and changing requirements that are
+    > often difficult to recognize.”
 
 - [How To Find Happiness In Making Choices](https://youtu.be/0T7XH2lb6sQ)
 
@@ -342,15 +381,33 @@ lastmod: "2023-05-19"
   - life is an "infinite game"
   - > The only true competitor in an infinite game is ourselves.
 
+- [【我們都想為比自己更遠大的理想而努力！| 無限思維 #1：崇高的信念】](https://youtu.be/c2oRf3w6mQE)
+
 - [What's The Difference Between A Decisive Person And An Indecisive Person?](https://youtu.be/KWo0_ttEl34)
 
   - > The decisive person makes whatever choice they pick work.
+
+- > The greatest gift you can give somebody is your own personal development. I
+  > used to say, "If you will take care of me, I will take care of you. "Now I
+  > say, I will take care of me for you, if you will take care of you for me.
+  >
+  > \- [Jim Rohn](https://www.goodreads.com/quotes/685059-the-greatest-gift-you-can-give-somebody-is-your-own)
 
 - > All men suffer, but not all men pity themselves.
   >
   > \- [Marcus Aurelius](https://www.goodreads.com/quotes/11343037-all-men-suffer-but-not-all-men-pity-themselves)
 
 - [Reduce suffering through suffering - Jordan Peterson](https://youtu.be/U4ZUb4ZO3fk)
+
+- > We must all suffer from one of two pains: the pain of discipline or the pain
+  > of regret. The difference is discipline weighs ounces while regret weighs
+  > tons.
+  >
+  > \- [Jim Rohn](https://www.goodreads.com/quotes/209560-we-must-all-suffer-from-one-of-two-pains-the)
+
+- > Don't wish it were easier. Wish you were better.
+  >
+  > \- [Jim Rohn](https://www.goodreads.com/quotes/357856-don-t-wish-it-were-easier-wish-you-were-better)
 
 - [Why men should be Dangerous and capable of violence by Jordan Peterson.](https://youtu.be/sFmbiJtIScA)
 
@@ -391,6 +448,10 @@ lastmod: "2023-05-19"
   - > You go down into the chaos, and you find the dead spirit of your
     > tradition, and you give it vision.
 
+- > Only those who attempt the absurd can achieve the impossible.
+  >
+  > \- [Albert Einstein](https://www.goodreads.com/quotes/226265-only-those-who-attempt-the-absurd-can-achieve-the-impossible)
+
 - [Jordan Peterson - Do You Want To Have A Life? Or Be Exceptional At One Thing?](https://youtu.be/cSFSlZwneO4)
 
   - > If you concentrate solely on your career, you can get a long way in your career.
@@ -402,21 +463,20 @@ lastmod: "2023-05-19"
   - > You should be a specialized generalist.
   - > You are choosing a handful of things that combine very very well.
 
-## Finding your highest aim
+## Finding YOUR Highest Aim
 
 - > He who has a why to live for can bear almost any how.
   >
   > \- [Friedrich Nietzsche](https://www.goodreads.com/quotes/137-he-who-has-a-why-to-live-for-can-bear)
 
+- > If you really want to do something, you'll find a way. If you don't, you'll find an excuse.
+  >
+  > \- [Jim Rohn](https://www.goodreads.com/quotes/297774-if-you-really-want-to-do-something-you-ll-find-a)
+
 - [為什麼要尋找人生目的？ ► 這是一則意義深遠的故事...Dr. Robert Quinn（中英字幕）](https://youtu.be/gPgBGlz-9-0)
 
   - > When you clarify your purpose, you take back your external locus of
     > control, ..., and you take an internal locus.
-
-- [這些金錢觀念，會影響你的一生 ► Dr Joe Vitale （中英字幕）](https://youtu.be/xevXwR6WVO8)
-
-  - > The biggest reason to be independently wealthy is for how you can fulfill
-    > your mission.
 
 - [Jordan Peterson - Becoming Independent From Your Parents](https://youtu.be/kXi9bwI6cY8)
 
@@ -428,6 +488,10 @@ lastmod: "2023-05-19"
 - [OSHO: My God! There Is No God!](https://youtu.be/4Pp5mWs8k5I)
 
   - god is a psychologic projection of parents
+
+- > Formal education will make you a living; self-education will make you a fortune.
+  >
+  > \- [Jim Rohn](https://www.goodreads.com/quotes/7974-formal-education-will-make-you-a-living-self-education-will-make)
 
 - [You Should Finally Leave School](https://youtu.be/pJhUs1L_RQo)
 
@@ -445,6 +509,17 @@ lastmod: "2023-05-19"
 
   - leaders are "crippling you", you should walk your own path and see with your
     own eyes
+
+- > If you don’t design your own life plan, chances are you’ll fall into someone
+  > else’s plan. And guess what they have planed for you? Not much.
+  >
+  > \- [Jim Rohn](https://www.goodreads.com/quotes/53606-if-you-don-t-design-your-own-life-plan-chances-are)
+
+- > Let others lead small lives, but not you.. Let others argue over small
+  > things, but not you.. Let others cry over small hurts, but not you.. Let
+  > others leave their future in someone else's hands, but not you.
+  >
+  > \- [Jim Rohn](https://www.goodreads.com/quotes/238071-let-others-lead-small-lives-but-not-you-let-others)
 
 - > You are not worth anything if you are not in the right place.
   >
@@ -503,18 +578,9 @@ lastmod: "2023-05-19"
   >
   > \- [Nikola Tesla](https://www.goodreads.com/quotes/1043799-but-instinct-is-something-which-transcends-knowledge-we-have-undoubtedly)
 
-- > Modern man can't see God because he doesn't look low enough.
-  >
-  > \- [Carl Jung](https://www.goodreads.com/quotes/10363722-modern-man-can-t-see-god-because-he-doesn-t-look-low)
+- [Law of Attraction - Explained by Psychology!](https://youtu.be/gjMJURkX3wY)
 
-- [Some Rough Advice for the "Real World"](https://youtu.be/OCO8eoDWqHQ)
-
-  - > You have an infinite number of paths ahead of you, pick!
-  - > We are all lost, sometimes.
-
-- [Too many choices…? Let’s talk analysis paralysis](https://youtu.be/PcC3LuxvZzI)
-
-  - > If overwhelmed, limit your choices.
+- [The world shifts itself around your aim : Jordan Peterson](https://youtu.be/Zr1Y9r6N4OY)
 
 - [Take Aim, Even Badly](https://youtu.be/ZwGDnSWmqhM)
 
@@ -525,9 +591,9 @@ lastmod: "2023-05-19"
   >
   > \- [Jordan B. Peterson](https://www.goodreads.com/quotes/9108708-what-you-aim-at-determines-what-you-see)
 
-- [The world shifts itself around your aim : Jordan Peterson](https://youtu.be/Zr1Y9r6N4OY)
-
-- [Law of Attraction - Explained by Psychology!](https://youtu.be/gjMJURkX3wY)
+- > Modern man can't see God because he doesn't look low enough.
+  >
+  > \- [Carl Jung](https://www.goodreads.com/quotes/10363722-modern-man-can-t-see-god-because-he-doesn-t-look-low)
 
 - [OSHO: The Greatest Courage Is Being Capable of Change](https://youtu.be/HY9aw5cQRDQ)
 
@@ -542,12 +608,21 @@ lastmod: "2023-05-19"
 
   - life is a continuous inquiry
 
+- [Some Rough Advice for the "Real World"](https://youtu.be/OCO8eoDWqHQ)
+
+  - > You have an infinite number of paths ahead of you, pick!
+  - > We are all lost, sometimes.
+
+- [Too many choices…? Let’s talk analysis paralysis](https://youtu.be/PcC3LuxvZzI)
+
+  - > If overwhelmed, limit your choices.
+
 - [OSHO: A Majority of One](https://youtu.be/0Eq1ZcHaL2Y)
 
   - if you, from your heart, envisioned a better world, then you are the
     "majority" despite being alone
 
-## Being disciplined
+## Being DISCIPLINED
 
 - > Enthusiasm is common. Endurance is rare.
   >
@@ -556,6 +631,37 @@ lastmod: "2023-05-19"
 - [Follow Your Passion Is Terrible Advice](https://youtu.be/Tb5ykUF2VJE)
 
   - passion will die one day, you should find out what you are "meant" to do
+
+- > Motivation is what gets you started. Habit is what keeps you going.
+  >
+  > \- [Jim Rohn](https://www.goodreads.com/quotes/42751-motivation-is-what-gets-you-started-habit-is-what-keeps)
+
+- > Goals are good for setting a direction, but systems are best for making progress.
+  >
+  > \- [James Clear](https://www.goodreads.com/quotes/9605388-goals-are-good-for-setting-a-direction-but-systems-are)
+
+- > Everyone has a plan until they get punched in the mouth.
+  >
+  > \- [Mike Tyson](https://www.goodreads.com/quotes/10093332-everyone-has-a-plan-until-they-get-punched-in-the)
+
+- [Treat The Cause, Not The Symptoms! | James Clear](https://youtu.be/fX1BJT_maWo)
+
+- [Discipline = Freedom](https://youtu.be/eBmVv2P-v2s)
+
+- [How To BECOME More INDUSTRIOUS | Jordan Peterson](https://youtu.be/uwTMW5FHk9A)
+
+  - have a routine, e.g. scheduled sleep, meals
+  - make a plan, e.g. using a calendar
+  - [6 Benefits of sleeping 8 hours](https://youtu.be/54_LVsxRYzE)
+
+- [Two 2-minute Rules to Beat Procrastination (in 2 minutes)](https://youtu.be/0CmtDk-joT4)
+
+- > Compound interest is the eighth wonder of the world.
+  > He who understands it, earns it ... he who doesn't ... pays it.
+  >
+  > \- [Albert Einstein](https://www.goodreads.com/quotes/76863-compound-interest-is-the-eighth-wonder-of-the-world-he)
+
+- [This is Why You Don't Have Time Anymore](https://youtu.be/jyLXGh_k57Y)
 
 - [史上最強意志力工具書｜《輕鬆駕馭意志力》｜文森說書](https://youtu.be/Q4tJXEU8LGA)
 
@@ -569,33 +675,15 @@ lastmod: "2023-05-19"
   - > Just change your environment so you don't have to exert so much
     > self-control in the first place.
 
-- [This is Why You Don't Have Time Anymore](https://youtu.be/jyLXGh_k57Y)
-
 - [How Jordan Peterson Sorted Himself Out at Age 25](https://youtu.be/EwL449AMHMo)
 
   - discipline yourself and strive to become hyperproductive
 
-- [Discipline = Freedom](https://youtu.be/eBmVv2P-v2s)
+## Working SMART
 
-- [How To BECOME More INDUSTRIOUS | Jordan Peterson](https://youtu.be/uwTMW5FHk9A)
+- [This Is Why You're Good at Video Games](https://youtu.be/DFrjtOa18yE)
 
-  - have a routine, e.g. scheduled sleep, meals
-  - make a plan, e.g. using a calendar
-
-- > Everyone has a plan until they get punched in the mouth
-  >
-  > \- [Mike Tyson](https://www.goodreads.com/quotes/10093332-everyone-has-a-plan-until-they-get-punched-in-the)
-
-- [Treat The Cause, Not The Symptoms! | James Clear](https://youtu.be/fX1BJT_maWo)
-
-- [Two 2-minute Rules to Beat Procrastination (in 2 minutes)](https://youtu.be/0CmtDk-joT4)
-
-- > Compound interest is the eighth wonder of the world.
-  > He who understands it, earns it ... he who doesn't ... pays it.
-  >
-  > \- [Albert Einstein](https://www.goodreads.com/quotes/76863-compound-interest-is-the-eighth-wonder-of-the-world-he)
-
-## Working smart
+  - > Because you understand.
 
 - > I choose a lazy person to do a hard job. Because a lazy person will find an
   > easy way to do it.
@@ -611,6 +699,17 @@ lastmod: "2023-05-19"
   - (focused mode vs diffused mode)
   - (relating new stuffs with what you already know / your senses)
   - (sleep)
+
+- [How to overcome the illusion of learning](https://psychologycompass.com/blog/how-to-overcome-the-illusion-of-learning/)
+
+  - > going over material multiple times doesn’t necessarily help learning.
+  - thinking that you are good doesn't make you good
+  - > just because you see someone solve it, doesn’t mean you’ll understand it
+  - feeling overwhelmed doesn't mean you never can do it
+
+- > Don't let your learning lead to knowledge. Let your learning lead to action.
+  >
+  > \- [Jim Rohn](https://www.goodreads.com/quotes/213176-don-t-let-your-learning-lead-to-knowledge-let-your-learning)
 
 - [How to Read Faster](https://youtu.be/cRoaZ3cfX_k)
 
@@ -671,6 +770,12 @@ lastmod: "2023-05-19"
   >
   > \- [荀子《儒效》](https://www.arteducation.com.tw/mingju/juv_15e34611e665.html)
 
+- [The illusion of learning](https://youtu.be/ViDMqOeEnas)
+
+  - > There's a sort of deficit in being able to understand it and it makes sense
+    > to being other than apply something to make meaningful changes in your
+    > life.
+
 - > Learn, compare, collect the facts!
   >
   > \- [Ivan Pavlov](https://quotefancy.com/quote/1361336/Ivan-Pavlov-Learn-compare-collect-the-facts)
@@ -726,6 +831,15 @@ lastmod: "2023-05-19"
   - IQ is not only genetic, giving people access to information and nutrients
     can improve their cognitive ability
 
+- > Smart people learn from everything and everyone, average people from their
+  > experiences, stupid people already have all the answers.
+  >
+  > \- [Socrates](https://www.goodreads.com/quotes/10408021-smart-people-learn-from-everything-and-everyone-average-people-from)
+
+- > Successful people have libraries. The rest have big screen TVs.
+  >
+  > \- [Jim Rohn](https://www.goodreads.com/quotes/288849-successful-people-have-libraries-the-rest-have-big-screen-tvs)
+
 - > When education and resources are available to all without a price tag, there
   > will be no limit to the human potential.
   >
@@ -756,10 +870,23 @@ lastmod: "2023-05-19"
   >
   > \- [Desmond Tutu](https://www.goodreads.com/quotes/132841-my-father-always-used-to-say-don-t-raise-your-voice)
 
+- > The person who says he knows what he thinks but cannot express it usually does not know what he thinks.
+  >
+  > \- [Mortimer J. Adler](https://www.goodreads.com/quotes/217711-the-person-who-says-he-knows-what-he-thinks-but)
+
 - [How To Be MORE Articulate](https://youtu.be/VxG_ZbdYrg0)
 
   - being articulate is to pull off "words combo" effectively
   - e.g. [OSHO: Tolerance Is an Ugly Word](https://youtu.be/v8ouDk2Mayw)
+
+- [Happy Talk Must Die](https://blog.codinghorror.com/happy-talk-must-die/)
+
+  - > We all know happy talk when we see it: it's the introductory text that's
+    > supposed to welcome us to the site and tell us how great it is, or to
+    > tell us what we're about to see in the section we just entered.
+
+  - > It conveys no useful information, and focuses on saying how great we
+    > are, as opposed to delineating what makes us great.
 
 - [3 Ways to Express Your Thoughts So That Everyone Will Understand You | Alan Alda | Big Think](https://youtu.be/rrOnk0JnXW4)
 
@@ -769,7 +896,7 @@ lastmod: "2023-05-19"
     - 3. repeat important message 3 times
   - you are essentially trying to connect with the listeners
 
-## Maintaining relationships
+## Maintaining RELATIONSHIPS
 
 - [20 分鐘看透人性的本質！人是天性善良或自私自利？好人是如何變壞人的？最新科學、人類學、歷史研究，揭露人性的真相！ 書來面對 EP31《人慈》Rutger Bregman](https://youtu.be/b7AgojHiIhE)
 
@@ -778,6 +905,10 @@ lastmod: "2023-05-19"
 - [Secret of a Happy Relationship - Jordan Peterson](https://youtu.be/Rm3ZEB6h9_g)
 
   - openly tell each other what we want
+
+- ["What 'being vulnerable' actually means" - Simon Sinek](https://youtu.be/dadg8qE0NgY)
+
+- [Powerful Relationship Tip: Ask, rather than Assume | @ShadeZahrai](https://youtu.be/qSbWR2NcgQI)
 
 - [Jordan Peterson - The Relationship Ratio](https://youtu.be/sNxauzPPm3o)
 
@@ -838,6 +969,10 @@ lastmod: "2023-05-19"
   >
   > \- [張愛玲《一別一輩子》](https://vaseaquarius.pixnet.net/blog/post/36554440)
 
+- > 由儉入奢易，由奢入儉難。
+  >
+  > \- 司馬光
+
 - > 世間少見的關係，不代表不會發生；
   >
   > 不容於世的戀情，不代表不能是真愛。
@@ -877,7 +1012,7 @@ lastmod: "2023-05-19"
   - > (Males) are doing everything they can to kneel before the eternal image of
     > the feminine and try to make themselves worthy.
 
-## Keeping a good mental
+## Keeping a Good MENTAL
 
 - > The truth is, we know so little about life, we don't really know what the
   > good news is and what the bad news is.
@@ -928,17 +1063,7 @@ lastmod: "2023-05-19"
 
 - [Be Anxious for Nothing!](https://youtu.be/kDnCnxCOPHA)
 
-- [This is Why You Don't Feel Anything Anymore](https://youtu.be/R9ykreOVIWE)
-
-  - try to understand your feelings
-
 - [用渴求的姿態在抗拒 H&T50](https://youtu.be/t5rsXicPkcw)
-
-- [在他人面前容易感到自卑？建立自信心你可以從這兩種方式開始｜快樂大學](https://youtu.be/WBiEevO__II)
-
-- [才華要如何展現？ H&T50](https://youtu.be/21w5IrX9NjY)
-
-  - 要有一顆 ”安定的心“
 
 - [面對失敗](https://youtu.be/jwulMvT03fA)
 
@@ -962,13 +1087,32 @@ lastmod: "2023-05-19"
 
 - [童年讓人長不大，記憶使人走向極端｜《以為時間久了我就會沒事》｜文森說書](https://youtu.be/MF826Has0oM)
 
-- [When Life Isn't Going Well...](https://youtu.be/TXgWpjoFe1c)
+- [在他人面前容易感到自卑？建立自信心你可以從這兩種方式開始｜快樂大學](https://youtu.be/WBiEevO__II)
 
-  - > Acknowledge that not everything in your life is actually your fault.
+- [才華要如何展現？ H&T50](https://youtu.be/21w5IrX9NjY)
+
+  - 要有一顆 ”安定的心“
+
+- [This is Why You Don't Feel Anything Anymore](https://youtu.be/R9ykreOVIWE)
+
+  - try to understand your feelings
+
+- [Own Your Behaviours, Master Your Communication, Determine Your Success | Louise Evans | TEDxGenova](https://youtu.be/4BZuWrdC-9Q)
+
+  - > (Five chairs, five choices)
+
+- > Between stimulus and response there is a space. In that space is our power
+  > to choose our response. In our response lies our growth and our freedom.
+  >
+  > \- [Viktor E. Frankl](https://www.goodreads.com/quotes/8144491-between-stimulus-and-response-there-is-a-space-in-that)
 
 - [OSHO: I Am Not a Politician](https://youtu.be/hSFFaFkgqWI)
 
   - > I'm simply responding with my totality to anything that comes in front of me.
+
+- [When Life Isn't Going Well...](https://youtu.be/TXgWpjoFe1c)
+
+  - > Acknowledge that not everything in your life is actually your fault.
 
 - [How Long Does It Take Actually Change Your Life](https://youtu.be/3jXgdKDOfuU)
 
