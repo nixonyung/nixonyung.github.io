@@ -1,11 +1,10 @@
 ---
 title: "Self Help"
 publishDate: "2023-05-08"
-lastmod: "2023-05-22"
+lastmod: "2023-05-24"
 ---
 
 - [Why You Should ACT NOW](#why-you-should-act-now)
-- [High-level Views of Life](#high-level-views-of-life)
 - [BELIEVING You Can Change The Way You Are](#believing-you-can-change-the-way-you-are)
 - [Making Your FIRST STEP](#making-your-first-step)
 - [WHY You Have To Keep Moving Forward](#why-you-have-to-keep-moving-forward)
@@ -62,9 +61,10 @@ lastmod: "2023-05-22"
 
 - > Well, let's say you can shave 10 seconds off of the boot time. Multiply
   > that by five million users and thats 50 million seconds, every single day.
-  > Over a year, that's probably dozens of lifetimes. So if you make it boot ten
-  > seconds faster, you've saved a dozen lives. That's really worth it, don't
-  > you think?
+  > Over a year, that's probably dozens of lifetimes.
+  >
+  > So if you make it boot ten seconds faster, you've saved a dozen lives.
+  > That's really worth it, don't you think?
   >
   > \- [Saving Lives](https://www.folklore.org/StoryView.py?story=Saving_Lives.txt)
 
@@ -101,112 +101,18 @@ lastmod: "2023-05-22"
   >
   > \- [Is software getting worse?](https://stackoverflow.blog/2023/01/30/is-software-getting-worse/)
 
-## High-level Views of Life
+## BELIEVING You Can Change The Way You Are
 
 - [Never, Ever Give Up. Arthur's Inspirational Transformation!](https://youtu.be/qX9FSZJu448)
-
-- [12 Rules For Life](https://youtu.be/Cn_n8GL3XeM)
-
-  - (comparing life to a video game)
-
-- [提姆・明欽 (Tim Minchin) - 人生九課 9 Life Lessons (中文字幕)](https://youtu.be/dvBZNK77h9M)
-
-  - (what life is philosophically)
-
-- > The meaning of life is just to be alive. It is so plain and so obvious and
-  > so simple. And yet, everybody rushes around in a great panic as if it were
-  > necessary to achieve something beyond themselves.
-  >
-  > \- [Alan Watts](https://www.goodreads.com/quotes/463182-the-meaning-of-life-is-just-to-be-alive-it)
-
-- [Alan Watts - Life Is Not A Journey](https://youtu.be/pV-D2_G9w5c)
-
-  - > You gotta let go, and let it happen.
-
-- [What one skill = an awesome life? | Dr. Shimi Kang | TEDxKelowna](https://youtu.be/1EHZAQmw2JA)
-
-  - (the skill: adaptability)
-  - (the awesome life: P.O.D., i.e. play, others, downtime)
-
-- > Be Water, My Friend.
-  >
-  > \- [Bruce Lee Philosophy](https://youtu.be/nzQWYHHqvIw)
-
-- [The world is poorly designed. But copying nature helps.](https://youtu.be/iMtXqTmfta0)
-
-- > Design is not just what it looks like and feels like.
-  >
-  > Design is how it works.
-  >
-  > \- [Steve Jobs](https://www.goodreads.com/quotes/457177-design-is-not-just-what-it-looks-like-and-feels)
-
-- > Our main problem is a lack of understanding of what it means to be human and
-  > that we are not separate from nature.
-  >
-  > \- [Jacque Fresco](https://quotefancy.com/quote/2827341/Jacque-Fresco-Our-main-problem-is-a-lack-of-understanding-of-what-it-means-to-be-human)
-
-- [攻殼機動隊電影解析：什麼是人？/ 賽伯格與哈洛威 Cyborg and Haraway / 意識 & 心靈哲學/ 超級歪電影院 EP7](https://youtu.be/6-KYHDAEFW0)
-
-- [老子【道德經】揭開宇宙、生命、靈魂之謎](https://youtu.be/wCNz1uxj8Fo)
-
-- > Thought constitutes the greatness of man.
-  >
-  > Man is a reed, the feeblest thing in nature, but he is a thinking reed.
-  >
-  > There is no need for the whole universe to take up arms to crush him: a
-  > vapour, a drop of water is enought to kill him. But even if the universe
-  > were to crush him, man would still be nobler than his slayer, because he
-  > knows that he is dying and the advantage the universe has over him. The
-  > universe knows none of this.
-  >
-  > \- [Blaise Pascal](https://www.goodreads.com/quotes/394587-man-is-only-a-reed-the-weakest-in-nature-but)
-
-- > What is the meaning of life?"
-  >
-  > "What is consciousness and the mind?”
-  >
-  > "Why am I here?"
-  >
-  > “What is my relationship to God and the universe?"
-  >
-  > These questions have been asked for centuries, but they are irrelevant to
-  > achieving social progress.
-  >
-  > These are unanswerable questions because they don’t have referents in the
-  > real world. The posing of such ambiguous questions doesn’t express concern
-  > for fellow human beings, or a desire to elevate their condition. Such
-  > musings are gibberish in terms of practicality, and as impotent as wailing
-  > over an injured person instead of seeking medical attention for them.
-  >
-  > \- [Jacque Fresco](https://www.goodreads.com/author/quotes/1080140.Jacque_Fresco)
-
-- [哈佛的最後一堂課，淬煉一生的故事｜《記得你是誰》｜文森說書](https://youtu.be/xkKifaN4hK4)
-
-  - don't compare with others
-  - you didn't "get" what you have
-  - don't let your status override your behaviours
-  - everyone may have burdens to bare and are all respectable
-
-- [Jim Rohn - If you divided money equally to everybody](https://youtu.be/N0g6AjxvrIk)
-
-- [這些金錢觀念，會影響你的一生 ► Dr Joe Vitale （中英字幕）](https://youtu.be/xevXwR6WVO8)
-
-  - > The biggest reason to be independently wealthy is for how you can fulfill
-    > your mission.
-
-## BELIEVING You Can Change The Way You Are
 
 - > Never let the things you can't do, stop you from doing what you can.
   >
   > \- [Ronald Reagan](https://www.goodreads.com/quotes/449866-never-let-the-things-you-can-t-do-stop-you-from)
 
-- > Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.
+- > Fairy tales are more than true: not because they tell us that dragons exist,
+  > but because they tell us that dragons can be beaten.
   >
   > \- [Neil Gaiman](https://www.goodreads.com/quotes/17764-fairy-tales-are-more-than-true-not-because-they-tell)
-
-- > Life is a comedy to those who think, a tragedy to those who feel.
-  >
-  > \- [Jean Racine](https://www.goodreads.com/quotes/163365-life-is-a-comedy-to-those-who-think-a-tragedy)
 
 - [Developing a Growth Mindset with Carol Dweck](https://youtu.be/hiiEeMN7vbQ)
 
@@ -238,7 +144,7 @@ lastmod: "2023-05-22"
 - [This Man Makes You Think - James Wildman](https://youtu.be/E7JE8j5Ncmw)
 
   - > If you are told the lie enough times, it becomes part of your reality.
-  - e.g. meat-eating culture
+  - e.g. the meat-eating culture
 
 - > All of us, more than we recognize, are products of the thinking around us.
   > And much of this thinking is little, not big. All around you is an
@@ -255,13 +161,6 @@ lastmod: "2023-05-22"
   >
   > \- [Jacque Fresco](https://quotefancy.com/quote/1196034/Jacque-Fresco-There-are-no-good-or-bad-people-humans-are-shaped-by-culture)
 
-- > Above all, don't lie to yourself. The man who lies to himself and listens to
-  > his own lie comes to a point that he cannot distinguish the truth within
-  > him, or around him, and so loses all respect for himself and for others. And
-  > having no respect he ceases to love.
-  >
-  > \- [Fyodor Dostoevsky](https://www.goodreads.com/quotes/29218-above-all-don-t-lie-to-yourself-the-man-who-lies)
-
 - > The limits of my language mean the limits of my world.
   >
   > \- [Ludwig Wittgenstein](https://www.goodreads.com/quotes/5475578-5-6-the-limits-of-my-language-mean-the-limits-of)
@@ -273,12 +172,58 @@ lastmod: "2023-05-22"
   >
   > \- [Oliver Wendell Holmes Sr.](https://www.goodreads.com/quotes/612325-a-man-s-mind-is-stretched-by-a-new-idea-or)
 
+- > Thought constitutes the greatness of man.
+  >
+  > Man is a reed, the feeblest thing in nature, but he is a thinking reed.
+  >
+  > There is no need for the whole universe to take up arms to crush him: a
+  > vapour, a drop of water is enought to kill him. But even if the universe
+  > were to crush him, man would still be nobler than his slayer, because he
+  > knows that he is dying and the advantage the universe has over him. The
+  > universe knows none of this.
+  >
+  > \- [Blaise Pascal](https://www.goodreads.com/quotes/394587-man-is-only-a-reed-the-weakest-in-nature-but)
+
+- [攻殼機動隊電影解析：什麼是人？/ 賽伯格與哈洛威 Cyborg and Haraway / 意識 & 心靈哲學/ 超級歪電影院 EP7](https://youtu.be/6-KYHDAEFW0)
+
+- [老子【道德經】揭開宇宙、生命、靈魂之謎](https://youtu.be/wCNz1uxj8Fo)
+
+- > What is the meaning of life?"
+  >
+  > "What is consciousness and the mind?”
+  >
+  > "Why am I here?"
+  >
+  > “What is my relationship to God and the universe?"
+  >
+  > These questions have been asked for centuries, but they are irrelevant to
+  > achieving social progress.
+  >
+  > These are unanswerable questions because they don’t have referents in the
+  > real world. The posing of such ambiguous questions doesn’t express concern
+  > for fellow human beings, or a desire to elevate their condition. Such
+  > musings are gibberish in terms of practicality, and as impotent as wailing
+  > over an injured person instead of seeking medical attention for them.
+  >
+  > \- [Jacque Fresco](https://www.goodreads.com/author/quotes/1080140.Jacque_Fresco)
+
+- [人如何超越自己？尼采哲學思想解析 Friedrich Nietzsche 哲學爽歪歪 EP1 | 上帝已死 | 悲劇的誕生 | 民主的墮落 | 善惡的起源 | 超人的出現 | 永恆回歸](https://youtu.be/1wBD0UPeH88)
+
 - > Life can be much broader, once you discover one simple fact:
   >
   > Everything around you that you call life was made up by people that were no
   > smarter than you.
   >
   > \- [Steve Jobs](https://www.goodreads.com/quotes/9737780-steve-jobs-when-you-grow-up-you-tend-to-get)
+
+- [What one skill = an awesome life? | Dr. Shimi Kang | TEDxKelowna](https://youtu.be/1EHZAQmw2JA)
+
+  - (the skill: adaptability)
+  - (the awesome life: P.O.D., i.e. play, others, downtime)
+
+- [Bruce Lee Philosophy](https://youtu.be/nzQWYHHqvIw)
+
+  - > Be Water, My Friend.
 
 - > For there are no new ideas. There are only new ways of making them felt.
   >
@@ -294,10 +239,16 @@ lastmod: "2023-05-22"
 
   - consider alternatives to your goals, assumptions, solutions
 
+- [How to use the Anchoring Effect (and not have it used against you)](https://youtu.be/ovhuYznC_38)
+
 - > Creativity is taking known elements and putting them together in unique
   > ways.
   >
   > \- [Jacque Fresco](https://quotefancy.com/quote/1196029/Jacque-Fresco-Creativity-is-taking-known-elements-and-putting-them-together-in-unique)
+
+- [The MAYA Principle: How to Make Art For an Audience](https://youtu.be/nwYwsTp5-Oo)
+
+  - > MMost Advanced. Yet Acceptable.
 
 - [Advice for young people | Jordan B Peterson](https://youtu.be/3Hq49O2VgcU)
 
@@ -510,6 +461,13 @@ lastmod: "2023-05-22"
   - leaders are "crippling you", you should walk your own path and see with your
     own eyes
 
+- > Above all, don't lie to yourself. The man who lies to himself and listens to
+  > his own lie comes to a point that he cannot distinguish the truth within
+  > him, or around him, and so loses all respect for himself and for others. And
+  > having no respect he ceases to love.
+  >
+  > \- [Fyodor Dostoevsky](https://www.goodreads.com/quotes/29218-above-all-don-t-lie-to-yourself-the-man-who-lies)
+
 - > If you don’t design your own life plan, chances are you’ll fall into someone
   > else’s plan. And guess what they have planed for you? Not much.
   >
@@ -520,6 +478,10 @@ lastmod: "2023-05-22"
   > others leave their future in someone else's hands, but not you.
   >
   > \- [Jim Rohn](https://www.goodreads.com/quotes/238071-let-others-lead-small-lives-but-not-you-let-others)
+
+- [12 Rules For Life](https://youtu.be/Cn_n8GL3XeM)
+
+  - (life is a sandbox game)
 
 - > You are not worth anything if you are not in the right place.
   >
@@ -613,9 +575,25 @@ lastmod: "2023-05-22"
   - > You have an infinite number of paths ahead of you, pick!
   - > We are all lost, sometimes.
 
+- [What is the Paradox of Choice?](https://youtu.be/FpGgMdDimKY)
+
 - [Too many choices…? Let’s talk analysis paralysis](https://youtu.be/PcC3LuxvZzI)
 
   - > If overwhelmed, limit your choices.
+
+- > The meaning of life is just to be alive. It is so plain and so obvious and
+  > so simple. And yet, everybody rushes around in a great panic as if it were
+  > necessary to achieve something beyond themselves.
+  >
+  > \- [Alan Watts](https://www.goodreads.com/quotes/463182-the-meaning-of-life-is-just-to-be-alive-it)
+
+- [Alan Watts - Life Is Not A Journey](https://youtu.be/pV-D2_G9w5c)
+
+  - > You gotta let go, and let it happen.
+
+- [提姆・明欽 (Tim Minchin) - 人生九課 9 Life Lessons (中文字幕)](https://youtu.be/dvBZNK77h9M)
+
+  - (what life is "philosophically")
 
 - [OSHO: A Majority of One](https://youtu.be/0Eq1ZcHaL2Y)
 
@@ -752,6 +730,13 @@ lastmod: "2023-05-22"
   >
   > \- [Steve Jobs](https://www.goodreads.com/quotes/1306252-stay-hungry-stay-foolish-never-let-go-of-your-appetite)
 
+- > Our main problem is a lack of understanding of what it means to be human and
+  > that we are not separate from nature.
+  >
+  > \- [Jacque Fresco](https://quotefancy.com/quote/2827341/Jacque-Fresco-Our-main-problem-is-a-lack-of-understanding-of-what-it-means-to-be-human)
+
+- [The world is poorly designed. But copying nature helps.](https://youtu.be/iMtXqTmfta0)
+
 - > Wise as a Serpent, and innocent as doves.
   >
   > \- [Matthew 10:16](https://www.biblegateway.com/verse/en/Matthew%2010%3A16)
@@ -857,6 +842,13 @@ lastmod: "2023-05-22"
   >
   > \- [Ralph Waldo Emerson](https://quotefancy.com/quote/896888/Ralph-Waldo-Emerson-I-pay-the-schoolmaster-but-tis-the-schoolboys-that-educate-my-son)
 
+- [Jim Rohn - If you divided money equally to everybody](https://youtu.be/N0g6AjxvrIk)
+
+- [這些金錢觀念，會影響你的一生 ► Dr Joe Vitale （中英字幕）](https://youtu.be/xevXwR6WVO8)
+
+  - > The biggest reason to be independently wealthy is for how you can fulfill
+    > your mission.
+
 - [人為何要寫作？ 學校沒告訴你的事 - Dr Jordan B Peterson（中英字幕）](https://youtu.be/v5oi8zj0E7g)
 
   - [Essay writing guide](https://essay.app/guide)
@@ -879,6 +871,8 @@ lastmod: "2023-05-22"
   - being articulate is to pull off "words combo" effectively
   - e.g. [OSHO: Tolerance Is an Ugly Word](https://youtu.be/v8ouDk2Mayw)
 
+- [Beware of nominalizations (AKA zombie nouns) - Helen Sword](https://youtu.be/dNlkHtMgcPQ)
+
 - [Happy Talk Must Die](https://blog.codinghorror.com/happy-talk-must-die/)
 
   - > We all know happy talk when we see it: it's the introductory text that's
@@ -888,6 +882,12 @@ lastmod: "2023-05-22"
   - > It conveys no useful information, and focuses on saying how great we
     > are, as opposed to delineating what makes us great.
 
+- > Design is not just what it looks like and feels like.
+  >
+  > Design is how it works.
+  >
+  > \- [Steve Jobs](https://www.goodreads.com/quotes/457177-design-is-not-just-what-it-looks-like-and-feels)
+
 - [3 Ways to Express Your Thoughts So That Everyone Will Understand You | Alan Alda | Big Think](https://youtu.be/rrOnk0JnXW4)
 
   - 3 rules of 3:
@@ -896,23 +896,76 @@ lastmod: "2023-05-22"
     - 3. repeat important message 3 times
   - you are essentially trying to connect with the listeners
 
+- [A rant on math education](https://youtu.be/_Yh3z9wqTEw)
+
+- [Simon Sinek: Golden Circle Speech - TED Talk](https://youtu.be/Jeg3lIK8lro)
+
+  - communicate with "why", then "how", then "what"
+
+- [How Five Simple Words Can Get You What You Want | Janine Driver | TEDxHardingU](https://youtu.be/L9UIF852Boo)
+
+  - > Decided-LY because changes what was.
+
 ## Maintaining RELATIONSHIPS
 
 - [20 分鐘看透人性的本質！人是天性善良或自私自利？好人是如何變壞人的？最新科學、人類學、歷史研究，揭露人性的真相！ 書來面對 EP31《人慈》Rutger Bregman](https://youtu.be/b7AgojHiIhE)
 
   - > 人會對自己人和善，但是對圈外人冷血無情。
 
+- [💝 你相信嗎？好關係竟然是麻煩出來的？！｜【閱部客】](https://youtu.be/IVdbCvBBOkg)
+
+- [The power of seduction in our everyday lives | Chen Lizra | TEDxVancouver](https://youtu.be/TBIL2sdfoVc)
+
+- [90%的人都曾踩過的地雷 - 太有禮貌竟然會讓對方願意提供幫助的機率下降 ｜《好好拜託 哥倫比亞大學最受歡迎的社會心理課， 讓人幫你是優勢，連幫你的人都快樂才是本事》｜文森說書](https://youtu.be/aSMTuNrHEBE)
+
+- [The Art of Seduction I Robert Greene](https://youtu.be/Fg7DJmonnBU)
+
 - [Secret of a Happy Relationship - Jordan Peterson](https://youtu.be/Rm3ZEB6h9_g)
 
   - openly tell each other what we want
 
+- ["I think that's what modern women don't understand about men ..." Jordan Peterson on Rejection](https://youtu.be/MqancWncfHk)
+
+  - > (Males) are doing everything they can to kneel before the eternal image of
+    > the feminine and try to make themselves worthy.
+
+- [The big difference between men and women (John Gray) 男女大不同 - 超越火星和金星 (約翰。葛瑞)](https://youtu.be/gKY1myuwoGE)
+
+- [你不爽為何不明說? 談被動式攻擊| 吳若權幸福書房](https://youtu.be/OvCr0jshdyg)
+
 - ["What 'being vulnerable' actually means" - Simon Sinek](https://youtu.be/dadg8qE0NgY)
 
+- [The Ultimate Test of Your Social Skills](https://youtu.be/p9Urng_hGF8)
+
+  - > (the challenge of having a pleasant time with a child we don't know)
+
+- [How being Face-Blind made it easier to see people | Fleassy Malay | TEDxMelbourne](https://youtu.be/q3sZaoPQSc4)
+
+  - (are you wearing masks?)
+
 - [Powerful Relationship Tip: Ask, rather than Assume | @ShadeZahrai](https://youtu.be/qSbWR2NcgQI)
+
+- [Why clear definitions are key to intelligent discussions | Donald Hoffman](https://youtu.be/uTS2M1dJqAo)
 
 - [Jordan Peterson - The Relationship Ratio](https://youtu.be/sNxauzPPm3o)
 
   - the optimal positive-to-negative-interactions ratio is between 5:1 to 11:1
+
+- > 感情原來是這麼脆弱的。
+  >
+  > 經得起風雨，卻經不起平凡；
+  >
+  > 風雨同船，晴天便各自散了。
+  >
+  > \- [張愛玲《一別一輩子》](https://vaseaquarius.pixnet.net/blog/post/36554440)
+
+- > 由儉入奢易，由奢入儉難。
+  >
+  > \- 司馬光
+
+- > Love is a fog that burns with the first daylight of reality.
+  >
+  > \- [Charles Bukowski](https://www.goodreads.com/quotes/6755832-love-is-kind-of-like-when-you-see-a-fog)
 
 - [Jordan Peterson - The Key to Healthy Relationships](https://youtu.be/4sGBOMiR0gc)
 
@@ -927,6 +980,8 @@ lastmod: "2023-05-22"
   >
   > \- [Benjamin Disraeli](https://www.goodreads.com/quotes/753318-talk-to-a-man-about-himself-and-he-will-listen)
 
+- [Criticism isn't Helpful Unless it's Constructive](https://youtu.be/eeInM4o66gw)
+
 - [Jordan Peterson: The Mind of Highly (Dis-)Agreeable People](https://youtu.be/5WXo1aFb8MY)
 
   - being agreeable is wired to being prepared to take care of babies
@@ -937,6 +992,10 @@ lastmod: "2023-05-22"
 
   - > (The Navy Seals) would rather have a medium performer of high trust, ...,
     > over (a high performer of low trust).
+
+- [Elon Musk on His Biggest Mistake](https://youtu.be/6ppM5mx8gu4)
+
+  - > put too much of a weighting on someone's talent and not enough on their personality
 
 - [Jordan Peterson - Train Your Son To Have CHAMPION'S Attitude | Jordan Peterson](https://youtu.be/E5UYKnO5E0I)
 
@@ -961,17 +1020,10 @@ lastmod: "2023-05-22"
   >
   > \- [Bertrand Russell](https://www.goodreads.com/quotes/1227-of-all-forms-of-caution-caution-in-love-is-perhaps)
 
-- > 感情原來是這麼脆弱的。
-  >
-  > 經得起風雨，卻經不起平凡；
-  >
-  > 風雨同船，晴天便各自散了。
-  >
-  > \- [張愛玲《一別一輩子》](https://vaseaquarius.pixnet.net/blog/post/36554440)
+- ["I think that's what modern women don't understand about men ..." Jordan Peterson on Rejection](https://youtu.be/MqancWncfHk)
 
-- > 由儉入奢易，由奢入儉難。
-  >
-  > \- 司馬光
+  - > (Males) are doing everything they can to kneel before the eternal image of
+    > the feminine and try to make themselves worthy.
 
 - > 世間少見的關係，不代表不會發生；
   >
@@ -984,6 +1036,8 @@ lastmod: "2023-05-22"
 - [Jordan Peterson - Describes Women's Hottest Sexual Fantasy](https://youtu.be/8VznMiVlBwk)
 
   - civilized aggressiveness, e.g. vampire, werewolf, billionaire, pirate, surgeon
+
+- [The art of seduction | Seema Anand | TEDxEaling](https://youtu.be/jnS66SszwEs)
 
 - [Jordan Peterson - More Than 50% Of Women Are Childless At 30](https://youtu.be/BoqjKqt__tI)
 
@@ -1002,15 +1056,6 @@ lastmod: "2023-05-22"
   > Because, if you don’t fight for your love, what kind of love do you have?
   >
   > \- [Keanu Reeves](https://youtu.be/jjKOdoeWhpU)
-
-- > Love is a fog that burns with the first daylight of reality.
-  >
-  > \- [Charles Bukowski](https://www.goodreads.com/quotes/6755832-love-is-kind-of-like-when-you-see-a-fog)
-
-- ["I think that's what modern women don't understand about men ..." Jordan Peterson on Rejection](https://youtu.be/MqancWncfHk)
-
-  - > (Males) are doing everything they can to kneel before the eternal image of
-    > the feminine and try to make themselves worthy.
 
 ## Keeping a Good MENTAL
 
@@ -1063,6 +1108,8 @@ lastmod: "2023-05-22"
 
 - [Be Anxious for Nothing!](https://youtu.be/kDnCnxCOPHA)
 
+- [Overcoming Anxiety At Social Events](https://youtu.be/r3Gn07bVFBY)
+
 - [用渴求的姿態在抗拒 H&T50](https://youtu.be/t5rsXicPkcw)
 
 - [面對失敗](https://youtu.be/jwulMvT03fA)
@@ -1085,7 +1132,16 @@ lastmod: "2023-05-22"
 
 - [永遠別批判他人，你不知道他們的故事【中文字幕】Never judge others, you don’t know their story](https://youtu.be/op1KCHhTl98)
 
+- [哈佛的最後一堂課，淬煉一生的故事｜《記得你是誰》｜文森說書](https://youtu.be/xkKifaN4hK4)
+
+  - don't compare with others
+  - you didn't acquire what you have
+  - don't let your status overrides your behaviours
+  - everyone may have burdens to bear and are all respectable
+
 - [童年讓人長不大，記憶使人走向極端｜《以為時間久了我就會沒事》｜文森說書](https://youtu.be/MF826Has0oM)
+
+- [Don't Force People to Talk About Things](https://youtu.be/6zzqQput4CE)
 
 - [在他人面前容易感到自卑？建立自信心你可以從這兩種方式開始｜快樂大學](https://youtu.be/WBiEevO__II)
 
