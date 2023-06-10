@@ -1,0 +1,18 @@
+<a
+  href="{{ .RelPermalink }}"
+  class="w-full py-3 px-2 flex items-center no-underline focus:outline-none hover:bg-base-300 focus:bg-base-300 transition-colors duration-100 group"
+>
+  <div class="flex flex-col">
+    <span>{{ .Title }}</span>
+    <span
+      class="flex-grow max-w-0 h-0.5 bg-primary opacity-0 group-hover:max-w-full group-hover:opacity-50 transition-all duration-500"
+    ></span>
+  </div>
+  <span class="flex-grow"></span>
+  <span class="text-base-content opacity-30 max-sm:hidden whitespace-nowrap">
+    {{ .Lastmod.Format "2006 Jan 02" }}
+  </span>
+  <span class="text-base-content opacity-30 sm:hidden whitespace-nowrap">
+    {{ .Lastmod.Format "Jan 02" }}
+  </span>
+</a>
