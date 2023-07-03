@@ -1,7 +1,7 @@
 ---
 title: "Self Help"
 publishDate: "2023-05-08"
-lastmod: "2023-05-24"
+lastmod: "2023-07-05"
 ---
 
 - [Why You Should ACT NOW](#why-you-should-act-now)
@@ -20,10 +20,14 @@ lastmod: "2023-05-24"
 
 - [書中的每一句，都讓你想離職、想哭、想下班 ｜《工作垃圾話聖經》｜ 文森說書](https://youtu.be/QTj7UvETQKA)
 
-- > You really don’t want a job. What you want is access to those things you’d
+- > You really don't want a job. What you want is access to those things you'd
   > like to have.
   >
   > \- [Jacque Fresco](https://quotefancy.com/quote/1195947/Jacque-Fresco-You-really-don-t-want-a-job-What-you-want-is-access-to-those-things-you-d)
+
+- > Saliva causes cancer, but only if swallowed in small amounts over a long period of time.
+  >
+  > \- [George Carlin](https://www.goodreads.com/quotes/315983-saliva-causes-cancer-but-only-if-swallowed-in-small-amounts)
 
 - [TED 中英雙語字幕: 二十歲的人生不能等到三十才開始](https://youtu.be/EgqQmupSvGk)
 
@@ -58,6 +62,15 @@ lastmod: "2023-05-24"
 - > Every one is really responsible to all men for all men and for everything.
   >
   > \- [Fyodor Dostoyevsky](https://www.goodreads.com/quotes/426886-every-one-is-really-responsible-to-all-men-for-all)
+
+- > The captain goes down with the ship.
+  >
+  > \- [The captain goes down with the ship](https://www.wikiwand.com/en/The_captain_goes_down_with_the_ship)
+
+- > Society grows great when old men plant trees whose shade they know they
+  > shall never sit in.
+  >
+  > \- [(Greek proverb)](https://www.goodreads.com/quotes/666987-society-grows-great-when-old-men-plant-trees-whose-shade)
 
 - > Well, let's say you can shave 10 seconds off of the boot time. Multiply
   > that by five million users and thats 50 million seconds, every single day.
@@ -96,7 +109,7 @@ lastmod: "2023-05-24"
 - > If the last 20 years have been about making us more productive—sacrificing
   > efficiency and financial sustainability in the process — perhaps the next 20
   > will be about tackling our collective technical debt, reclaiming efficiency,
-  > and improving economic exchange without losing the productivity that’s made
+  > and improving economic exchange without losing the productivity that's made
   > software omnipresent in our lives.
   >
   > \- [Is software getting worse?](https://stackoverflow.blog/2023/01/30/is-software-getting-worse/)
@@ -118,7 +131,7 @@ lastmod: "2023-05-24"
 
   - believing that you can learn anything
 
-- > If you think we can’t change the world, it just means you’re not one of
+- > If you think we can't change the world, it just means you're not one of
   > those that will.
   >
   > \- [Jacque Fresco](https://www.goodreads.com/quotes/7622314-if-you-think-we-can-t-change-the-world-it-just)
@@ -133,7 +146,7 @@ lastmod: "2023-05-24"
 
 - [📚 你從沒獨立思考過？你沒有想像中的聰明。｜《知識的假象》｜閱說書 #51 ｜說書、書評｜【閱部客】](https://youtu.be/66XEyxtmGKw)
 
-- > I don’t want you to trust me, I want you to question everything I say.
+- > I don't want you to trust me, I want you to question everything I say.
   >
   > \- [Jacque Fresco](https://quotefancy.com/quote/1195943/Jacque-Fresco-I-don-t-want-you-to-trust-me-I-want-you-to-question-everything-I-say)
 
@@ -146,13 +159,6 @@ lastmod: "2023-05-24"
   - > If you are told the lie enough times, it becomes part of your reality.
   - e.g. the meat-eating culture
 
-- > All of us, more than we recognize, are products of the thinking around us.
-  > And much of this thinking is little, not big. All around you is an
-  > environment that is trying to tug you, trying to pull you down Second Class
-  > Street.
-  >
-  > \- [David J. Schwartz](https://www.goodreads.com/quotes/10015343-all-of-us-more-than-we-recognize-are-products-of)
-
 - > You are the average of the five people you spend the most time with.
   >
   > \- [Jim Rohn](https://www.goodreads.com/quotes/1798-you-are-the-average-of-the-five-people-you-spend)
@@ -160,6 +166,13 @@ lastmod: "2023-05-24"
 - > There are no good or bad people, humans are shaped by culture.
   >
   > \- [Jacque Fresco](https://quotefancy.com/quote/1196034/Jacque-Fresco-There-are-no-good-or-bad-people-humans-are-shaped-by-culture)
+
+- > We are what we remember.
+  >
+  > If we lose our memory, we lose our identity and our identity is the
+  > accumulation of our experiences.
+  >
+  > \- [Erik Pevernagie](https://www.goodreads.com/quotes/7590367-we-are-what-we-remember-if-we-lose-our-memory)
 
 - > The limits of my language mean the limits of my world.
   >
@@ -172,35 +185,23 @@ lastmod: "2023-05-24"
   >
   > \- [Oliver Wendell Holmes Sr.](https://www.goodreads.com/quotes/612325-a-man-s-mind-is-stretched-by-a-new-idea-or)
 
-- > Thought constitutes the greatness of man.
-  >
-  > Man is a reed, the feeblest thing in nature, but he is a thinking reed.
-  >
-  > There is no need for the whole universe to take up arms to crush him: a
-  > vapour, a drop of water is enought to kill him. But even if the universe
-  > were to crush him, man would still be nobler than his slayer, because he
-  > knows that he is dying and the advantage the universe has over him. The
-  > universe knows none of this.
-  >
-  > \- [Blaise Pascal](https://www.goodreads.com/quotes/394587-man-is-only-a-reed-the-weakest-in-nature-but)
-
 - [攻殼機動隊電影解析：什麼是人？/ 賽伯格與哈洛威 Cyborg and Haraway / 意識 & 心靈哲學/ 超級歪電影院 EP7](https://youtu.be/6-KYHDAEFW0)
 
 - [老子【道德經】揭開宇宙、生命、靈魂之謎](https://youtu.be/wCNz1uxj8Fo)
 
 - > What is the meaning of life?"
   >
-  > "What is consciousness and the mind?”
+  > "What is consciousness and the mind?"
   >
   > "Why am I here?"
   >
-  > “What is my relationship to God and the universe?"
+  > "What is my relationship to God and the universe?"
   >
   > These questions have been asked for centuries, but they are irrelevant to
   > achieving social progress.
   >
-  > These are unanswerable questions because they don’t have referents in the
-  > real world. The posing of such ambiguous questions doesn’t express concern
+  > These are unanswerable questions because they don't have referents in the
+  > real world. The posing of such ambiguous questions doesn't express concern
   > for fellow human beings, or a desire to elevate their condition. Such
   > musings are gibberish in terms of practicality, and as impotent as wailing
   > over an injured person instead of seeking medical attention for them.
@@ -225,11 +226,20 @@ lastmod: "2023-05-24"
 
   - > Be Water, My Friend.
 
+- > 兵無常勢，水無常形，能因敵變化而取勝者，謂之神。
+  >
+  > \-《孫子兵法・虛實篇》
+
+- > Antifragility is beyond resilience or robustness. The resilient resists
+  > shocks and stays the same; the antifragile gets better.
+  >
+  > \- [Nassim Nicholas Taleb](https://quotefancy.com/quote/1529271/Nassim-Nicholas-Taleb-Antifragility-is-beyond-resilience-or-robustness-The-resilient)
+
 - > For there are no new ideas. There are only new ways of making them felt.
   >
   > \- [Audre Lorde](https://www.goodreads.com/quotes/10065715-for-there-are-no-new-ideas-there-are-only-new)
 
-- > I’m not interested in shooting new things.
+- > I'’m not interested in shooting new things.
   >
   > I am interested to see things new.
   >
@@ -245,6 +255,10 @@ lastmod: "2023-05-24"
   > ways.
   >
   > \- [Jacque Fresco](https://quotefancy.com/quote/1196029/Jacque-Fresco-Creativity-is-taking-known-elements-and-putting-them-together-in-unique)
+
+- > In the work of a writer of genius, we rediscover our own neglected thoughts.
+  >
+  > \- [Ralph Waldo Emerson](https://www.goodreads.com/quotes/7755503-in-the-work-of-a-writer-of-genius-we-rediscover)
 
 - [The MAYA Principle: How to Make Art For an Audience](https://youtu.be/nwYwsTp5-Oo)
 
@@ -264,10 +278,10 @@ lastmod: "2023-05-24"
   >
   > \- [Jacque Fresco](https://www.goodreads.com/quotes/10090961-unfortunately-we-tend-to-support-basic-values-and-traditions-that)
 
-- > Humans are allergic to change. They love to say, “We’ve always done it this
-  > way.”
+- > Humans are allergic to change. They love to say, "We've always done it this
+  > way."
   >
-  > I try to fight that. That’s why I have a clock on my wall that runs
+  > I try to fight that. That's why I have a clock on my wall that runs
   > counterclockwise.
   >
   > \- [Grace Murray Hopper](https://www.goodreads.com/quotes/1009890-humans-are-allergic-to-change-they-love-to-say-we-ve)
@@ -275,6 +289,10 @@ lastmod: "2023-05-24"
 - [OSHO: You Can Become Extraordinary](https://youtu.be/uNBu5eSrtnA)
 
 ## Making Your FIRST STEP
+
+- > When in doubt, use brute force.
+  >
+  > \- [Ken Thompson](https://www.brainyquote.com/quotes/ken_thompson_185574)
 
 - > Complaining about a problem without posing a solution is called whining.
   >
@@ -287,6 +305,10 @@ lastmod: "2023-05-24"
 - [This is Why You Haven't Started Anything yet](https://youtu.be/thMtsLXDUtg)
 
   - > You need to do things that are "not enough".
+
+- > The first draft of anything is shit.
+  >
+  > \- [Ernest Hemingway](https://www.goodreads.com/quotes/52073-the-first-draft-of-anything-is-shit)
 
 - > Done is better than perfect.
   >
@@ -317,11 +339,11 @@ lastmod: "2023-05-24"
   >
   > \- [Søren Kierkegaard](https://www.brainyquote.com/quotes/soren_kierkegaard_105030)
 
-- [Life’s Wicked Problems (and How to Get Past Them)](https://www.scotthyoung.com/blog/2019/02/25/wicked-problems/)
+- [Life's Wicked Problems (and How to Get Past Them)](https://www.scotthyoung.com/blog/2019/02/25/wicked-problems/)
 
-  - > Wicked problems are problems that are, “difficult or impossible to solve
+  - > Wicked problems are problems that are, "difficult or impossible to solve
     > because of incomplete, contradictory, and changing requirements that are
-    > often difficult to recognize.”
+    > often difficult to recognize."
 
 - [How To Find Happiness In Making Choices](https://youtu.be/0T7XH2lb6sQ)
 
@@ -377,6 +399,10 @@ lastmod: "2023-05-24"
     - it is based on competence, not power or status
     - it also serves as a life meaning
 
+- > Keep your friends for friendship, but work with the skilled and competent
+  >
+  > \- [Robert Greene](https://www.goodreads.com/quotes/199029-keep-your-friends-for-friendship-but-work-with-the-skilled)
+
 - > The race is not always to the swift nor the battle to the strong, but that's
   > the way to bet.
   >
@@ -414,15 +440,25 @@ lastmod: "2023-05-24"
   - > You should be a specialized generalist.
   - > You are choosing a handful of things that combine very very well.
 
+- > Try to learn something about everything and everything about something.
+  >
+  > \- [Thomas Henry Huxley](https://www.goodreads.com/quotes/6880459-try-to-learn-something-about-everything-and-everything-about-something)
+
 ## Finding YOUR Highest Aim
+
+- > If you really want to do something, you'll find a way.
+  >
+  > If you don't, you'll find an excuse.
+  >
+  > \- [Jim Rohn](https://www.goodreads.com/quotes/297774-if-you-really-want-to-do-something-you-ll-find-a)
+
+- > Happiness in intelligent people is the rarest thing I know.
+  >
+  > \- [Ernest Hemingway](https://www.goodreads.com/quotes/2981-happiness-in-intelligent-people-is-the-rarest-thing-i-know)
 
 - > He who has a why to live for can bear almost any how.
   >
   > \- [Friedrich Nietzsche](https://www.goodreads.com/quotes/137-he-who-has-a-why-to-live-for-can-bear)
-
-- > If you really want to do something, you'll find a way. If you don't, you'll find an excuse.
-  >
-  > \- [Jim Rohn](https://www.goodreads.com/quotes/297774-if-you-really-want-to-do-something-you-ll-find-a)
 
 - [為什麼要尋找人生目的？ ► 這是一則意義深遠的故事...Dr. Robert Quinn（中英字幕）](https://youtu.be/gPgBGlz-9-0)
 
@@ -456,7 +492,7 @@ lastmod: "2023-05-24"
   >
   > \- [John Stuart Mill](https://www.goodreads.com/quotes/79033-it-is-indisputable-that-the-being-whose-capacities-of-enjoyment)
 
-- [OSHO: Don't Follow the Leaders – They Are Lost Too (Preview)](https://youtu.be/Ikd8soAzyeM)
+- [OSHO: Don't Follow the Leaders - They Are Lost Too (Preview)](https://youtu.be/Ikd8soAzyeM)
 
   - leaders are "crippling you", you should walk your own path and see with your
     own eyes
@@ -468,16 +504,29 @@ lastmod: "2023-05-24"
   >
   > \- [Fyodor Dostoevsky](https://www.goodreads.com/quotes/29218-above-all-don-t-lie-to-yourself-the-man-who-lies)
 
-- > If you don’t design your own life plan, chances are you’ll fall into someone
-  > else’s plan. And guess what they have planed for you? Not much.
+- > All you have to do is write one true sentence. Write the truest sentence
+  > that you know.
+  >
+  > \- [Ernest Hemingway](https://www.goodreads.com/quotes/30849-all-you-have-to-do-is-write-one-true-sentence)
+
+- > If you don't design your own life plan, chances are you'll fall into someone
+  > else's plan. And guess what they have planed for you? Not much.
   >
   > \- [Jim Rohn](https://www.goodreads.com/quotes/53606-if-you-don-t-design-your-own-life-plan-chances-are)
 
-- > Let others lead small lives, but not you.. Let others argue over small
-  > things, but not you.. Let others cry over small hurts, but not you.. Let
-  > others leave their future in someone else's hands, but not you.
+- > Let others lead small lives, but not you..
+  >
+  > Let others argue over small things, but not you..
+  >
+  > Let others cry over small hurts, but not you..
+  >
+  > Let others leave their future in someone else's hands, but not you.
   >
   > \- [Jim Rohn](https://www.goodreads.com/quotes/238071-let-others-lead-small-lives-but-not-you-let-others)
+
+- > You can't trust code that you did not totally create yourself.
+  >
+  > \- [Ken Thompson](https://www.brainyquote.com/quotes/ken_thompson_254875)
 
 - [12 Rules For Life](https://youtu.be/Cn_n8GL3XeM)
 
@@ -577,7 +626,7 @@ lastmod: "2023-05-24"
 
 - [What is the Paradox of Choice?](https://youtu.be/FpGgMdDimKY)
 
-- [Too many choices…? Let’s talk analysis paralysis](https://youtu.be/PcC3LuxvZzI)
+- [Too many choices…? Let's talk analysis paralysis](https://youtu.be/PcC3LuxvZzI)
 
   - > If overwhelmed, limit your choices.
 
@@ -618,9 +667,29 @@ lastmod: "2023-05-24"
   >
   > \- [James Clear](https://www.goodreads.com/quotes/9605388-goals-are-good-for-setting-a-direction-but-systems-are)
 
+- > Believable fairy stories must be intensely practical.
+  >
+  > You must have a map, no matter how rough. Otherwise you wander all over the place.
+  >
+  > In 'The Lord of the Rings' I never made anyone go farther than he could on a given day.
+  >
+  > \- [John Ronald Reuel Tolkien](https://www.tolkienguide.com/modules/newbb/viewtopic.php?post_id=13462)
+
+- > If you fail to plan, you are planning to fail!
+  >
+  > \- [Benjamin Franklin](https://www.goodreads.com/quotes/460142-if-you-fail-to-plan-you-are-planning-to-fail)
+
 - > Everyone has a plan until they get punched in the mouth.
   >
   > \- [Mike Tyson](https://www.goodreads.com/quotes/10093332-everyone-has-a-plan-until-they-get-punched-in-the)
+
+- > Shallow men believe in luck or in circumstance. Strong men believe in cause and effect.
+  >
+  > \- [Ralph Waldo Emerson](https://www.goodreads.com/quotes/57008-shallow-men-believe-in-luck-or-in-circumstance-strong-men)
+
+- > The best way to make your dreams come true is to wake up.
+  >
+  > \- [Paul Valéry](https://www.goodreads.com/quotes/11502-the-best-way-to-make-your-dreams-come-true-is)
 
 - [Treat The Cause, Not The Symptoms! | James Clear](https://youtu.be/fX1BJT_maWo)
 
@@ -635,6 +704,7 @@ lastmod: "2023-05-24"
 - [Two 2-minute Rules to Beat Procrastination (in 2 minutes)](https://youtu.be/0CmtDk-joT4)
 
 - > Compound interest is the eighth wonder of the world.
+  >
   > He who understands it, earns it ... he who doesn't ... pays it.
   >
   > \- [Albert Einstein](https://www.goodreads.com/quotes/76863-compound-interest-is-the-eighth-wonder-of-the-world-he)
@@ -646,6 +716,10 @@ lastmod: "2023-05-24"
   - > 若 "道德許可證" 讓你有了放縱的藉口時，就用自己的最終目的來抑制衝動。
   - > 觀察自己在跟著衝動之後，你所感覺到的是滿足，或者你只是消除衝動未被完成所帶給你的焦慮感。
   - > 你越是不讓自己去想某件事，那件事就更容易出現在你的大腦。
+
+- > "But man is not made for defeat," he said. "A man can be destroyed but not defeated."
+  >
+  > \- [Ernest Hemingway](https://www.goodreads.com/quotes/111352-but-man-is-not-made-for-defeat-he-said-a)
 
 - [How The Famous "Marshmallow Test" Got Willpower Wrong](https://youtu.be/GLcFCs7_ZKA)
 
@@ -659,10 +733,6 @@ lastmod: "2023-05-24"
 
 ## Working SMART
 
-- [This Is Why You're Good at Video Games](https://youtu.be/DFrjtOa18yE)
-
-  - > Because you understand.
-
 - > I choose a lazy person to do a hard job. Because a lazy person will find an
   > easy way to do it.
   >
@@ -672,24 +742,63 @@ lastmod: "2023-05-24"
   >
   > \- [《禮記・樂記》](http://edu.hwadzan.com/fabodetail/1071)
 
+- > Magicians protect their secrets not because the secrets are large and
+  > important, but because they are so small and trivial.
+  >
+  > The wonderful effects created on stage are often the result of a secret so
+  > absurd that the magician would be embarrassed to admit that that was how it
+  > was done.
+  >
+  > \- [Christopher Priest](https://www.goodreads.com/quotes/391632-magicians-protect-their-secrets-not-because-the-secrets-are-large)
+
 - [別再用錯方法讀書了！世界各地頂尖學者的學習方法竟然是...!? / 書來面對 EP7《大腦喜歡這樣學》A Mind for Numbers by Barbara Oakley / 說書【大腦科學】](https://youtu.be/iFSVMuBDMws)
 
   - (focused mode vs diffused mode)
   - (relating new stuffs with what you already know / your senses)
   - (sleep)
 
+- [The Feynman Technique for Studying](https://youtube.com/shorts/2oqJzaQeusc?feature=share)
+
+  - > If you can't explain it to a six year old, you don't understand it yourself.
+    >
+    > \- [Albert Einstein](https://www.goodreads.com/quotes/19421-if-you-can-t-explain-it-to-a-six-year-old)
+
+- > The first principle is that you must not fool yourself and you are the easiest person to fool.
+  >
+  > \- [Richard P. Feynman](https://www.goodreads.com/quotes/193533-the-first-principle-is-that-you-must-not-fool-yourself)
+
 - [How to overcome the illusion of learning](https://psychologycompass.com/blog/how-to-overcome-the-illusion-of-learning/)
 
-  - > going over material multiple times doesn’t necessarily help learning.
+  - > going over material multiple times doesn't necessarily help learning.
   - thinking that you are good doesn't make you good
-  - > just because you see someone solve it, doesn’t mean you’ll understand it
+  - > just because you see someone solve it, doesn't mean you'll understand it
   - feeling overwhelmed doesn't mean you never can do it
+
+- [The illusion of learning](https://youtu.be/ViDMqOeEnas)
+
+  - > There's a sort of deficit in being able to understand it and it makes
+    > sense to being other than apply something to make meaningful changes in
+    > your life.
+
+- > The key to learning is feedback. It is nearly impossible to learn anything without it.
+  >
+  > \- [Steven D. Levitt](https://www.goodreads.com/quotes/1214269-the-key-to-learning-is-feedback-it-is-nearly-impossible)
 
 - > Don't let your learning lead to knowledge. Let your learning lead to action.
   >
   > \- [Jim Rohn](https://www.goodreads.com/quotes/213176-don-t-let-your-learning-lead-to-knowledge-let-your-learning)
 
-- [How to Read Faster](https://youtu.be/cRoaZ3cfX_k)
+- > 不聞不若聞之，聞之不若見之，見之不若知之，知之不若行之。學至於行之而止矣。
+  >
+  > \- [荀子《儒效》](https://www.arteducation.com.tw/mingju/juv_15e34611e665.html)
+
+- > If you find that you're spending almost all your time on theory, start
+  > turning some attention to practical things; it will improve your theories.
+  >
+  > If you find that you're spending almost all your time on practice, start
+  > turning some attention to theoretical things; it will improve your practice.
+  >
+  > \- [Donald Knuth](https://www.goodreads.com/quotes/11479021-if-you-find-that-you-re-spending-almost-all-your-time)
 
 - [To Improve Comprehension DON'T Try to Understand](https://youtu.be/i8oDLO7GPsk)
 
@@ -702,6 +811,11 @@ lastmod: "2023-05-24"
   >
   > \- [Douglas Adams](https://www.goodreads.com/quotes/98939-if-you-try-and-take-a-cat-apart-to-see)
 
+- > All things by immortal power. Near of far, to each other linked are, that
+  > thou canst not stir a flower without troubling of a star.
+  >
+  > \- [Francis Thompson](https://www.brainyquote.com/quotes/francis_thompson_154829)
+
 - [Baby, My Whole Work Is to Confuse You](https://youtu.be/xggTJCCxFss)
 
   - > God is a quantity; godliness is a quality
@@ -712,6 +826,14 @@ lastmod: "2023-05-24"
   - in contradictions (while each being valid on its own) we reach our
     limitations of what we can "explain"
   - only by "feeling" it we can gain knowledge
+
+- > Experience life in all possible ways -- good-bad, bitter-sweet, dark-light,
+  > summer-winter. Experience all the dualities.
+  >
+  > Don't be afraid of experience, because the more experience you have, the
+  > more mature you become.
+  >
+  > [OSHO](https://www.goodreads.com/quotes/8494-experience-life-in-all-possible-ways----good-bad-bitter-sweet-dark-light)
 
 - > Wiser, never wise. Smarter, never smart.
   >
@@ -751,19 +873,23 @@ lastmod: "2023-05-24"
   >
   > \- [Nikola Tesla](https://www.goodreads.com/quotes/7518282-deficient-observation-is-merely-a-form-of-ignorance-and-responsible)
 
-- > 不聞不若聞之，聞之不若見之，見之不若知之，知之不若行之。學至於行之而止矣。
+- > One has no right to love or hate anything if one has not acquired a thorough
+  > knowledge of its nature.
   >
-  > \- [荀子《儒效》](https://www.arteducation.com.tw/mingju/juv_15e34611e665.html)
+  > Great love springs from great knowledge of the beloved object, and if you
+  > know it but little you will be able to love it only a little or not at all.
+  >
+  > \- [Leonardo DaVinci](https://www.goodreads.com/quotes/25710-one-has-no-right-to-love-or-hate-anything-if)
 
-- [The illusion of learning](https://youtu.be/ViDMqOeEnas)
+- [This Is Why You're Good at Video Games](https://youtu.be/DFrjtOa18yE)
 
-  - > There's a sort of deficit in being able to understand it and it makes sense
-    > to being other than apply something to make meaningful changes in your
-    > life.
+  - > Because you understand.
 
 - > Learn, compare, collect the facts!
   >
   > \- [Ivan Pavlov](https://quotefancy.com/quote/1361336/Ivan-Pavlov-Learn-compare-collect-the-facts)
+
+- [How to Read Faster](https://youtu.be/cRoaZ3cfX_k)
 
 - > When you steal from one author, it's plagiarism;
   >
@@ -787,6 +913,12 @@ lastmod: "2023-05-24"
   > and among other things he avoids clever tricks like the plague.
   >
   > \- [The Humble Programmer](https://wiki.c2.com/?TheHumbleProgrammer)
+
+- > How have we increased memory, thought, and reasoning?
+  >
+  > By the invention of external aids: It is things that make us smart.
+  >
+  > \- [Don Norman](https://www.goodreads.com/quotes/10444097-how-have-we-increased-memory-thought-and-reasoning-by-the)
 
 - > As much as talent counts, effort counts twice.
   >
@@ -838,7 +970,7 @@ lastmod: "2023-05-24"
   >
   > \- [Carl Jung](https://www.goodreads.com/quotes/349525-children-are-educated-by-what-the-grown-up-is-and-not)
 
-- > I pay the schoolmaster, but ’tis the schoolboys that educate my son.
+- > I pay the schoolmaster, but 'tis the schoolboys that educate my son.
   >
   > \- [Ralph Waldo Emerson](https://quotefancy.com/quote/896888/Ralph-Waldo-Emerson-I-pay-the-schoolmaster-but-tis-the-schoolboys-that-educate-my-son)
 
@@ -912,6 +1044,8 @@ lastmod: "2023-05-24"
 
   - > 人會對自己人和善，但是對圈外人冷血無情。
 
+- [為什麼 80, 90 後對工作缺乏熱情？► 因為老闆少做了這件事 - Simon Sinek（中英字幕）](https://youtu.be/1oLdExa62AI)
+
 - [💝 你相信嗎？好關係竟然是麻煩出來的？！｜【閱部客】](https://youtu.be/IVdbCvBBOkg)
 
 - [The power of seduction in our everyday lives | Chen Lizra | TEDxVancouver](https://youtu.be/TBIL2sdfoVc)
@@ -976,9 +1110,19 @@ lastmod: "2023-05-24"
   >
   > \- [George Herbert](https://www.goodreads.com/quotes/7176146-good-words-are-worth-much-and-cost-little)
 
+- > But the human tongue is a beast that few can master. It strains constantly
+  > to break out of its cage, and if it is not tamed, it will tun wild and cause
+  > you grief.
+  >
+  > \- [Robert Greene](https://www.goodreads.com/quotes/634532-but-the-human-tongue-is-a-beast-that-few-can)
+
 - > Talk to a man about himself and he will listen for hours.
   >
   > \- [Benjamin Disraeli](https://www.goodreads.com/quotes/753318-talk-to-a-man-about-himself-and-he-will-listen)
+
+- > 百戰百勝，非善之善者也；不戰而屈人之兵，善之善者也。
+  >
+  > \- 《孫子兵法・謀攻篇》
 
 - [Criticism isn't Helpful Unless it's Constructive](https://youtu.be/eeInM4o66gw)
 
@@ -996,6 +1140,10 @@ lastmod: "2023-05-24"
 - [Elon Musk on His Biggest Mistake](https://youtu.be/6ppM5mx8gu4)
 
   - > put too much of a weighting on someone's talent and not enough on their personality
+
+- > The best way to find out if you can trust somebody is to trust them.
+  >
+  > \- [Ernest Hemingway](https://www.goodreads.com/quotes/217785-the-best-way-to-find-out-if-you-can-trust)
 
 - [Jordan Peterson - Train Your Son To Have CHAMPION'S Attitude | Jordan Peterson](https://youtu.be/E5UYKnO5E0I)
 
@@ -1025,6 +1173,33 @@ lastmod: "2023-05-24"
   - > (Males) are doing everything they can to kneel before the eternal image of
     > the feminine and try to make themselves worthy.
 
+- > The most painful thing is losing yourself in the process of loving someone
+  > too much, and forgetting that you are special too.
+  >
+  > \- [Ernest Hemingway](https://www.goodreads.com/quotes/582647-the-most-painful-thing-is-losing-yourself-in-the-process)
+
+- > I wish I wrote the way I thought
+  >
+  > Obsessively
+  >
+  > Incessantly
+  >
+  > With maddening hunger
+  >
+  > I'd write to the point of suffocation
+  >
+  > I'd write myself into nervous breakdowns
+  >
+  > Manuscripts spiralling out like tentacles into abysmal nothing
+  >
+  > And I'd write about you
+  >
+  > a lot more
+  >
+  > than I should
+  >
+  > \- [Benedict Smith](https://www.goodreads.com/quotes/807692-i-wish-i-wrote-the-way-i-thought-obsessively-incessantly)
+
 - > 世間少見的關係，不代表不會發生；
   >
   > 不容於世的戀情，不代表不能是真愛。
@@ -1051,9 +1226,9 @@ lastmod: "2023-05-24"
   >
   > \- [張愛玲](https://fashion.ettoday.net/news/1963439)
 
-- > If you’re a lover, you gotta be a fighter.
+- > If you're a lover, you gotta be a fighter.
   >
-  > Because, if you don’t fight for your love, what kind of love do you have?
+  > Because, if you don't fight for your love, what kind of love do you have?
   >
   > \- [Keanu Reeves](https://youtu.be/jjKOdoeWhpU)
 
@@ -1083,28 +1258,14 @@ lastmod: "2023-05-24"
   >
   > \- [Ralph Waldo Emerson](https://www.goodreads.com/quotes/8556802-the-essence-of-greatness-is-the-perception-that-virtue-is)
 
-- > It’s your own expectations that hurt you. Not the world you live in.
+- > It's your own expectations that hurt you. Not the world you live in.
   > Whatever happens in the world is real. What you think should happen is
   > unreal.
   >
-  > So people are hurt by their expectations. You know, you’re not disappointed
+  > So people are hurt by their expectations. You know, you're not disappointed
   > by the world, you are disappointed by your own projections.
   >
   > \- [Jacque Fresco](https://quotefancy.com/quote/1195936/Jacque-Fresco-It-s-your-own-expectations-that-hurt-you-Not-the-world-you-live-in-Whatever)
-
-- > All nature is but art, unknown to thee;
-  >
-  > All chance, direction, which thou canst not see;
-  >
-  > All discord, harmony not understood;
-  >
-  > All partial evil, universal good.
-  >
-  > And, spite of pride, in erring reason's spite,
-  >
-  > One truth is clear, 'Whatever is, is right.
-  >
-  > \- [Alexander Pope](https://www.goodreads.com/quotes/579949-all-nature-is-but-art-unknown-to-thee-all-chance)
 
 - [Be Anxious for Nothing!](https://youtu.be/kDnCnxCOPHA)
 
@@ -1130,7 +1291,7 @@ lastmod: "2023-05-24"
 
 - [Don't Envy People | JORDAN PETERSON Advice](https://youtu.be/gEcpKyKOOKc)
 
-- [永遠別批判他人，你不知道他們的故事【中文字幕】Never judge others, you don’t know their story](https://youtu.be/op1KCHhTl98)
+- [永遠別批判他人，你不知道他們的故事【中文字幕】Never judge others, you don't know their story](https://youtu.be/op1KCHhTl98)
 
 - [哈佛的最後一堂課，淬煉一生的故事｜《記得你是誰》｜文森說書](https://youtu.be/xkKifaN4hK4)
 
@@ -1147,7 +1308,7 @@ lastmod: "2023-05-24"
 
 - [才華要如何展現？ H&T50](https://youtu.be/21w5IrX9NjY)
 
-  - 要有一顆 ”安定的心“
+  - 要有一顆 "安定的心"
 
 - [This is Why You Don't Feel Anything Anymore](https://youtu.be/R9ykreOVIWE)
 
@@ -1169,6 +1330,10 @@ lastmod: "2023-05-24"
 - [When Life Isn't Going Well...](https://youtu.be/TXgWpjoFe1c)
 
   - > Acknowledge that not everything in your life is actually your fault.
+
+- > Logic, like whiskey, loses its beneficial effect when taken in too large quantities.
+  >
+  > \- [Lord Dunsany](https://quotefancy.com/quote/1169749/Lord-Dunsany-Logic-like-whiskey-loses-its-beneficial-effect-when-taken-in-too-large)
 
 - [How Long Does It Take Actually Change Your Life](https://youtu.be/3jXgdKDOfuU)
 

@@ -4,21 +4,4 @@
   </div>
   {{ .Content }}
   {{ partial "listing.html" . }}
-
-
-  <ul class="mt-12 list-disc">
-    <li>
-      <span class="select-none">My Projects:</span>
-      <ul class="list-disc">
-        <li>
-          {{ partial "styled-link.html" (dict
-            "Title" "golox-tree-walk"
-            "RelPermalink" "https://github.com/nixonyung/golox-tree-walk"
-            "Lastmod" (time "2023-06-10")
-            )
-          }}
-        </li>
-      </ul>
-    </li>
-  </ul>
 {{ end }}
