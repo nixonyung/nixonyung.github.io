@@ -1,7 +1,7 @@
 ---
 title: "Self Help"
 publishDate: "2023-05-08"
-lastmod: "2023-07-05"
+lastmod: "2023-07-06"
 ---
 
 - [Why You Should ACT NOW](#why-you-should-act-now)
@@ -24,10 +24,6 @@ lastmod: "2023-07-05"
   > like to have.
   >
   > \- [Jacque Fresco](https://quotefancy.com/quote/1195947/Jacque-Fresco-You-really-don-t-want-a-job-What-you-want-is-access-to-those-things-you-d)
-
-- > Saliva causes cancer, but only if swallowed in small amounts over a long period of time.
-  >
-  > \- [George Carlin](https://www.goodreads.com/quotes/315983-saliva-causes-cancer-but-only-if-swallowed-in-small-amounts)
 
 - [TED 中英雙語字幕: 二十歲的人生不能等到三十才開始](https://youtu.be/EgqQmupSvGk)
 
@@ -71,6 +67,10 @@ lastmod: "2023-07-05"
   > shall never sit in.
   >
   > \- [(Greek proverb)](https://www.goodreads.com/quotes/666987-society-grows-great-when-old-men-plant-trees-whose-shade)
+  
+- > 無恆產而有恆心者，惟士為能。
+  >
+  > \- [《孟子・梁惠王》](https://www.arteducation.com.tw/mingju/juv_1dfbd419310c.html)
 
 - > Well, let's say you can shave 10 seconds off of the boot time. Multiply
   > that by five million users and thats 50 million seconds, every single day.
@@ -80,18 +80,6 @@ lastmod: "2023-07-05"
   > That's really worth it, don't you think?
   >
   > \- [Saving Lives](https://www.folklore.org/StoryView.py?story=Saving_Lives.txt)
-
-- > There is only one way to salvation, and that is to make yourself responsible
-  > for all men's sins. As soon as you make yourself responsible in all
-  > sincerity for everything and for everyone, you will see at once that this is
-  > really so, and that you are in fact to blame for everyone and for all
-  > things.
-  >
-  > \- [Fyodor Dostoyevsky](https://www.goodreads.com/quotes/316700-there-is-only-one-way-to-salvation-and-that-is)
-
-- > 無恆產而有恆心者，惟士為能。
-  >
-  > \- [《孟子・梁惠王》](https://www.arteducation.com.tw/mingju/juv_1dfbd419310c.html)
 
 - [OSHO: There Are Only Two Types of People](https://youtu.be/V3ueDBgYjxc)
 
@@ -717,7 +705,9 @@ lastmod: "2023-07-05"
   - > 觀察自己在跟著衝動之後，你所感覺到的是滿足，或者你只是消除衝動未被完成所帶給你的焦慮感。
   - > 你越是不讓自己去想某件事，那件事就更容易出現在你的大腦。
 
-- > "But man is not made for defeat," he said. "A man can be destroyed but not defeated."
+- > "But man is not made for defeat," he said.
+  >
+  > "A man can be destroyed but not defeated."
   >
   > \- [Ernest Hemingway](https://www.goodreads.com/quotes/111352-but-man-is-not-made-for-defeat-he-said-a)
 
@@ -826,6 +816,10 @@ lastmod: "2023-07-05"
   - in contradictions (while each being valid on its own) we reach our
     limitations of what we can "explain"
   - only by "feeling" it we can gain knowledge
+
+- > Logic, like whiskey, loses its beneficial effect when taken in too large quantities.
+  >
+  > \- [Lord Dunsany](https://quotefancy.com/quote/1169749/Lord-Dunsany-Logic-like-whiskey-loses-its-beneficial-effect-when-taken-in-too-large)
 
 - > Experience life in all possible ways -- good-bad, bitter-sweet, dark-light,
   > summer-winter. Experience all the dualities.
@@ -1330,10 +1324,6 @@ lastmod: "2023-07-05"
 - [When Life Isn't Going Well...](https://youtu.be/TXgWpjoFe1c)
 
   - > Acknowledge that not everything in your life is actually your fault.
-
-- > Logic, like whiskey, loses its beneficial effect when taken in too large quantities.
-  >
-  > \- [Lord Dunsany](https://quotefancy.com/quote/1169749/Lord-Dunsany-Logic-like-whiskey-loses-its-beneficial-effect-when-taken-in-too-large)
 
 - [How Long Does It Take Actually Change Your Life](https://youtu.be/3jXgdKDOfuU)
 
