@@ -1,7 +1,7 @@
 ---
 title: "Self Help"
 publishDate: "2023-05-08"
-lastmod: "2023-07-06"
+lastmod: "2023-07-07"
 ---
 
 - [Why You Should ACT NOW](#why-you-should-act-now)
@@ -67,7 +67,6 @@ lastmod: "2023-07-06"
   > shall never sit in.
   >
   > \- [(Greek proverb)](https://www.goodreads.com/quotes/666987-society-grows-great-when-old-men-plant-trees-whose-shade)
-  
 - > 無恆產而有恆心者，惟士為能。
   >
   > \- [《孟子・梁惠王》](https://www.arteducation.com.tw/mingju/juv_1dfbd419310c.html)
@@ -227,7 +226,7 @@ lastmod: "2023-07-06"
   >
   > \- [Audre Lorde](https://www.goodreads.com/quotes/10065715-for-there-are-no-new-ideas-there-are-only-new)
 
-- > I'’m not interested in shooting new things.
+- > I'm not interested in shooting new things.
   >
   > I am interested to see things new.
   >
@@ -387,7 +386,7 @@ lastmod: "2023-07-06"
     - it is based on competence, not power or status
     - it also serves as a life meaning
 
-- > Keep your friends for friendship, but work with the skilled and competent
+- > Keep your friends for friendship, but work with the skilled and competent.
   >
   > \- [Robert Greene](https://www.goodreads.com/quotes/199029-keep-your-friends-for-friendship-but-work-with-the-skilled)
 
@@ -439,10 +438,6 @@ lastmod: "2023-07-06"
   > If you don't, you'll find an excuse.
   >
   > \- [Jim Rohn](https://www.goodreads.com/quotes/297774-if-you-really-want-to-do-something-you-ll-find-a)
-
-- > Happiness in intelligent people is the rarest thing I know.
-  >
-  > \- [Ernest Hemingway](https://www.goodreads.com/quotes/2981-happiness-in-intelligent-people-is-the-rarest-thing-i-know)
 
 - > He who has a why to live for can bear almost any how.
   >
@@ -502,23 +497,23 @@ lastmod: "2023-07-06"
   >
   > \- [Jim Rohn](https://www.goodreads.com/quotes/53606-if-you-don-t-design-your-own-life-plan-chances-are)
 
-- > Let others lead small lives, but not you..
-  >
-  > Let others argue over small things, but not you..
-  >
-  > Let others cry over small hurts, but not you..
-  >
-  > Let others leave their future in someone else's hands, but not you.
-  >
-  > \- [Jim Rohn](https://www.goodreads.com/quotes/238071-let-others-lead-small-lives-but-not-you-let-others)
-
 - > You can't trust code that you did not totally create yourself.
   >
   > \- [Ken Thompson](https://www.brainyquote.com/quotes/ken_thompson_254875)
 
-- [12 Rules For Life](https://youtu.be/Cn_n8GL3XeM)
+- [Stanford neuroscientist reveals something 'puzzling' in extremely successful people](https://youtu.be/bqM25Q0G8-o)
 
-  - (life is a sandbox game)
+  - > ... to make sure everything is regulated, everything is under control.
+
+- > Let others lead small lives, but not you.
+  >
+  > Let others argue over small things, but not you.
+  >
+  > Let others cry over small hurts, but not you.
+  >
+  > Let others leave their future in someone else's hands, but not you.
+  >
+  > \- [Jim Rohn](https://www.goodreads.com/quotes/238071-let-others-lead-small-lives-but-not-you-let-others)
 
 - > You are not worth anything if you are not in the right place.
   >
@@ -577,6 +572,10 @@ lastmod: "2023-07-06"
   >
   > \- [Nikola Tesla](https://www.goodreads.com/quotes/1043799-but-instinct-is-something-which-transcends-knowledge-we-have-undoubtedly)
 
+- > Logic, like whiskey, loses its beneficial effect when taken in too large quantities.
+  >
+  > \- [Lord Dunsany](https://quotefancy.com/quote/1169749/Lord-Dunsany-Logic-like-whiskey-loses-its-beneficial-effect-when-taken-in-too-large)
+
 - [Law of Attraction - Explained by Psychology!](https://youtu.be/gjMJURkX3wY)
 
 - [The world shifts itself around your aim : Jordan Peterson](https://youtu.be/Zr1Y9r6N4OY)
@@ -593,15 +592,6 @@ lastmod: "2023-07-06"
 - > Modern man can't see God because he doesn't look low enough.
   >
   > \- [Carl Jung](https://www.goodreads.com/quotes/10363722-modern-man-can-t-see-god-because-he-doesn-t-look-low)
-
-- [OSHO: The Greatest Courage Is Being Capable of Change](https://youtu.be/HY9aw5cQRDQ)
-
-  - our ideas are always changing
-
-- > No man ever steps in the same river twice, for it's not the same river and
-  > he's not the same man.
-  >
-  > \- [Heraclitus](https://www.goodreads.com/quotes/117526-no-man-ever-steps-in-the-same-river-twice-for)
 
 - [OSHO: Are You Sure You Are Doing the Right Thing?](https://youtu.be/n8HSCbif4yE)
 
@@ -628,6 +618,19 @@ lastmod: "2023-07-06"
 
   - > You gotta let go, and let it happen.
 
+- [OSHO: The Greatest Courage Is Being Capable of Change](https://youtu.be/HY9aw5cQRDQ)
+
+  - our ideas are always changing
+
+- > No man ever steps in the same river twice, for it's not the same river and
+  > he's not the same man.
+  >
+  > \- [Heraclitus](https://www.goodreads.com/quotes/117526-no-man-ever-steps-in-the-same-river-twice-for)
+
+- [12 Rules For Life](https://youtu.be/Cn_n8GL3XeM)
+
+  - (life is a sandbox game)
+
 - [提姆・明欽 (Tim Minchin) - 人生九課 9 Life Lessons (中文字幕)](https://youtu.be/dvBZNK77h9M)
 
   - (what life is "philosophically")
@@ -636,6 +639,14 @@ lastmod: "2023-07-06"
 
   - if you, from your heart, envisioned a better world, then you are the
     "majority" despite being alone
+
+- > Poetry is either something that lives like fire inside you -
+  >
+  > like music to the musician or Marxism to the communist -
+  >
+  > or else it is nothing, an empty, formalized bore around which pedants can endlessly drone their notes and explanations.
+  >
+  > \- [F. Scott Fitzgerald](https://www.goodreads.com/quotes/9250256-poetry-is-either-something-that-lives-like-fire-inside-you)
 
 ## Being DISCIPLINED
 
@@ -646,6 +657,12 @@ lastmod: "2023-07-06"
 - [Follow Your Passion Is Terrible Advice](https://youtu.be/Tb5ykUF2VJE)
 
   - passion will die one day, you should find out what you are "meant" to do
+
+- > Boredom is not an end-product, is comparatively rather an early stage in
+  > life and art. You've got to go by or past or through boredom, as through a
+  > filter, before the clear product emerges.
+  >
+  > \- [F. Scott Fitzgerald](https://quotefancy.com/quote/804139/F-Scott-Fitzgerald-Boredom-is-not-an-end-product-is-comparatively-rather-an-early-stage)
 
 - > Motivation is what gets you started. Habit is what keeps you going.
   >
@@ -764,15 +781,27 @@ lastmod: "2023-07-06"
   - > just because you see someone solve it, doesn't mean you'll understand it
   - feeling overwhelmed doesn't mean you never can do it
 
+- [To Improve Comprehension DON'T Try to Understand](https://youtu.be/i8oDLO7GPsk)
+
+  - > 大音希聲，大象無形。
+    >
+    > \- [老子《道德經》](https://pedia.cloud.edu.tw/Entry/Detail/?title=大音希聲&search=大音希聲)
+
+  - > If you try and take a cat apart to see how it works, the first thing you
+    > have on your hands is a non-working cat.
+    >
+    > \- [Douglas Adams](https://www.goodreads.com/quotes/98939-if-you-try-and-take-a-cat-apart-to-see)
+
+  - > All things by immortal power. Near of far, to each other linked are, that
+    > thou canst not stir a flower without troubling of a star.
+    >
+    > \- [Francis Thompson](https://www.brainyquote.com/quotes/francis_thompson_154829)
+
 - [The illusion of learning](https://youtu.be/ViDMqOeEnas)
 
   - > There's a sort of deficit in being able to understand it and it makes
     > sense to being other than apply something to make meaningful changes in
     > your life.
-
-- > The key to learning is feedback. It is nearly impossible to learn anything without it.
-  >
-  > \- [Steven D. Levitt](https://www.goodreads.com/quotes/1214269-the-key-to-learning-is-feedback-it-is-nearly-impossible)
 
 - > Don't let your learning lead to knowledge. Let your learning lead to action.
   >
@@ -782,6 +811,10 @@ lastmod: "2023-07-06"
   >
   > \- [荀子《儒效》](https://www.arteducation.com.tw/mingju/juv_15e34611e665.html)
 
+- > The key to learning is feedback. It is nearly impossible to learn anything without it.
+  >
+  > \- [Steven D. Levitt](https://www.goodreads.com/quotes/1214269-the-key-to-learning-is-feedback-it-is-nearly-impossible)
+
 - > If you find that you're spending almost all your time on theory, start
   > turning some attention to practical things; it will improve your theories.
   >
@@ -789,22 +822,6 @@ lastmod: "2023-07-06"
   > turning some attention to theoretical things; it will improve your practice.
   >
   > \- [Donald Knuth](https://www.goodreads.com/quotes/11479021-if-you-find-that-you-re-spending-almost-all-your-time)
-
-- [To Improve Comprehension DON'T Try to Understand](https://youtu.be/i8oDLO7GPsk)
-
-- > 大音希聲，大象無形。
-  >
-  > \- [老子《道德經》](https://pedia.cloud.edu.tw/Entry/Detail/?title=大音希聲&search=大音希聲)
-
-- > If you try and take a cat apart to see how it works, the first thing you
-  > have on your hands is a non-working cat.
-  >
-  > \- [Douglas Adams](https://www.goodreads.com/quotes/98939-if-you-try-and-take-a-cat-apart-to-see)
-
-- > All things by immortal power. Near of far, to each other linked are, that
-  > thou canst not stir a flower without troubling of a star.
-  >
-  > \- [Francis Thompson](https://www.brainyquote.com/quotes/francis_thompson_154829)
 
 - [Baby, My Whole Work Is to Confuse You](https://youtu.be/xggTJCCxFss)
 
@@ -817,9 +834,11 @@ lastmod: "2023-07-06"
     limitations of what we can "explain"
   - only by "feeling" it we can gain knowledge
 
-- > Logic, like whiskey, loses its beneficial effect when taken in too large quantities.
+- > Whenever a theory appears to you as the only possible one, take this as a
+  > sign that you have neither understood the theory nor the problem which it
+  > was intended to solve.
   >
-  > \- [Lord Dunsany](https://quotefancy.com/quote/1169749/Lord-Dunsany-Logic-like-whiskey-loses-its-beneficial-effect-when-taken-in-too-large)
+  > \- [Karl Popper](https://www.goodreads.com/quotes/68084-whenever-a-theory-appears-to-you-as-the-only-possible)
 
 - > Experience life in all possible ways -- good-bad, bitter-sweet, dark-light,
   > summer-winter. Experience all the dualities.
@@ -828,44 +847,6 @@ lastmod: "2023-07-06"
   > more mature you become.
   >
   > [OSHO](https://www.goodreads.com/quotes/8494-experience-life-in-all-possible-ways----good-bad-bitter-sweet-dark-light)
-
-- > Wiser, never wise. Smarter, never smart.
-  >
-  > \- [Jacque Fresco](https://quotefancy.com/quote/1196030/Jacque-Fresco-Wiser-never-wise-Smarter-never-smart)
-
-- > Whenever a theory appears to you as the only possible one, take this as a
-  > sign that you have neither understood the theory nor the problem which it
-  > was intended to solve.
-  >
-  > \- [Karl Popper](https://www.goodreads.com/quotes/68084-whenever-a-theory-appears-to-you-as-the-only-possible)
-
-- > Stay hungry. Stay foolish.
-  >
-  > Never let go of your appetite to go after new ideas, new experiences, and
-  > new adventures.
-  >
-  > \- [Steve Jobs](https://www.goodreads.com/quotes/1306252-stay-hungry-stay-foolish-never-let-go-of-your-appetite)
-
-- > Our main problem is a lack of understanding of what it means to be human and
-  > that we are not separate from nature.
-  >
-  > \- [Jacque Fresco](https://quotefancy.com/quote/2827341/Jacque-Fresco-Our-main-problem-is-a-lack-of-understanding-of-what-it-means-to-be-human)
-
-- [The world is poorly designed. But copying nature helps.](https://youtu.be/iMtXqTmfta0)
-
-- > Wise as a Serpent, and innocent as doves.
-  >
-  > \- [Matthew 10:16](https://www.biblegateway.com/verse/en/Matthew%2010%3A16)
-
-- > There are no bad people, there are people with insufficient information to
-  > make appropriate decisions.
-  >
-  > \- [Jacque Fresco](https://www.goodreads.com/quotes/883493-there-are-no-bad-people-there-are-people-with-insufficient)
-
-- > Deficient observation is merely a form of ignorance and responsible for the
-  > many morbid notions and foolish ideas prevailing.
-  >
-  > \- [Nikola Tesla](https://www.goodreads.com/quotes/7518282-deficient-observation-is-merely-a-form-of-ignorance-and-responsible)
 
 - > One has no right to love or hate anything if one has not acquired a thorough
   > knowledge of its nature.
@@ -878,6 +859,31 @@ lastmod: "2023-07-06"
 - [This Is Why You're Good at Video Games](https://youtu.be/DFrjtOa18yE)
 
   - > Because you understand.
+
+- > Wiser, never wise.
+  >
+  > Smarter, never smart.
+  >
+  > \- [Jacque Fresco](https://quotefancy.com/quote/1196030/Jacque-Fresco-Wiser-never-wise-Smarter-never-smart)
+
+- > Stay hungry. Stay foolish.
+  >
+  > Never let go of your appetite to go after new ideas, new experiences, and
+  > new adventures.
+  >
+  > \- [Steve Jobs](https://www.goodreads.com/quotes/1306252-stay-hungry-stay-foolish-never-let-go-of-your-appetite)
+
+- [The world is poorly designed. But copying nature helps.](https://youtu.be/iMtXqTmfta0)
+
+- > Our main problem is a lack of understanding of what it means to be human and
+  > that we are not separate from nature.
+  >
+  > \- [Jacque Fresco](https://quotefancy.com/quote/2827341/Jacque-Fresco-Our-main-problem-is-a-lack-of-understanding-of-what-it-means-to-be-human)
+
+- > There are no bad people, there are people with insufficient information to
+  > make appropriate decisions.
+  >
+  > \- [Jacque Fresco](https://www.goodreads.com/quotes/883493-there-are-no-bad-people-there-are-people-with-insufficient)
 
 - > Learn, compare, collect the facts!
   >
@@ -914,23 +920,13 @@ lastmod: "2023-07-06"
   >
   > \- [Don Norman](https://www.goodreads.com/quotes/10444097-how-have-we-increased-memory-thought-and-reasoning-by-the)
 
+- [IQ vs. Hard Work | Triggernometry & Jordan B Peterson](https://youtu.be/7bqd5vieOpE)
+
+  - actually IQ is the best predictor of people's success
+
 - > As much as talent counts, effort counts twice.
   >
   > \- [Angela Duckworth](https://www.goodreads.com/quotes/7661300-as-much-as-talent-counts-effort-counts-twice)
-
-- > If you try to make such projects, unseen by others, as perfect as any human
-  > could, you'll develop skills that other professionals don't have.
-  >
-  > \- [Steve Wozniak](https://www.brainyquote.com/quotes/steve_wozniak_589502)
-
-- [IQ vs. Hard Work | Triggernometry & Jordan B Peterson](https://youtu.be/7bqd5vieOpE)
-
-  - IQ is the best predictor of people's success
-
-- [Stanford neuroscientist reveals something 'puzzling' in extremely successful people](https://youtu.be/bqM25Q0G8-o)
-
-  - > ... to make sure everything is regulated, everything is under control. And
-    > it's stressful.
 
 - > We can not solve our problems with the same level of thinking that created
   > them.
@@ -942,8 +938,11 @@ lastmod: "2023-07-06"
   - IQ is not only genetic, giving people access to information and nutrients
     can improve their cognitive ability
 
-- > Smart people learn from everything and everyone, average people from their
-  > experiences, stupid people already have all the answers.
+- > Smart people learn from everything and everyone,
+  >
+  > average people from their experiences,
+  >
+  > stupid people already have all the answers.
   >
   > \- [Socrates](https://www.goodreads.com/quotes/10408021-smart-people-learn-from-everything-and-everyone-average-people-from)
 
@@ -1110,6 +1109,10 @@ lastmod: "2023-07-06"
   >
   > \- [Robert Greene](https://www.goodreads.com/quotes/634532-but-the-human-tongue-is-a-beast-that-few-can)
 
+- > Wise as a Serpent, and innocent as doves.
+  >
+  > \- [Matthew 10:16](https://www.biblegateway.com/verse/en/Matthew%2010%3A16)
+
 - > Talk to a man about himself and he will listen for hours.
   >
   > \- [Benjamin Disraeli](https://www.goodreads.com/quotes/753318-talk-to-a-man-about-himself-and-he-will-listen)
@@ -1166,6 +1169,10 @@ lastmod: "2023-07-06"
 
   - > (Males) are doing everything they can to kneel before the eternal image of
     > the feminine and try to make themselves worthy.
+
+- > Men get to be a mixture of the charming mannerisms of the women they have known.
+  >
+  > \- [F. Scott Fitzgerald](https://www.goodreads.com/quotes/63033-men-get-to-be-a-mixture-of-the-charming-mannerisms)
 
 - > The most painful thing is losing yourself in the process of loving someone
   > too much, and forgetting that you are special too.
@@ -1240,6 +1247,10 @@ lastmod: "2023-07-06"
 - [The Biggest Problem In Our Community...](https://youtu.be/G2SqTWNFdyU)
 
   - > We take our "wins" and we turn them into "losses".
+
+- > Happiness in intelligent people is the rarest thing I know.
+  >
+  > \- [Ernest Hemingway](https://www.goodreads.com/quotes/2981-happiness-in-intelligent-people-is-the-rarest-thing-i-know)
 
 - > And I urge you to please notice when you are happy, and exclaim or murmur or
   > think at some point,
