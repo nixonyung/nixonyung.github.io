@@ -1,7 +1,7 @@
 ---
 title: "Self Help"
 publishDate: "2023-05-08"
-lastmod: "2023-07-07"
+lastmod: "2023-07-09"
 ---
 
 - [Why You Should ACT NOW](#why-you-should-act-now)
@@ -18,17 +18,6 @@ lastmod: "2023-07-07"
 
 - [Shuzo Matsuoka: Are you just living day to day?](https://youtu.be/iEIqVq7EZqE)
 
-- [書中的每一句，都讓你想離職、想哭、想下班 ｜《工作垃圾話聖經》｜ 文森說書](https://youtu.be/QTj7UvETQKA)
-
-- > You really don't want a job. What you want is access to those things you'd
-  > like to have.
-  >
-  > \- [Jacque Fresco](https://quotefancy.com/quote/1195947/Jacque-Fresco-You-really-don-t-want-a-job-What-you-want-is-access-to-those-things-you-d)
-
-- [TED 中英雙語字幕: 二十歲的人生不能等到三十才開始](https://youtu.be/EgqQmupSvGk)
-
-- [不要 20 年後才後悔自己不知道這些事 - 出版史上最大卡司《人生勝利聖經》](https://youtu.be/w92fGRg3T3I)
-
 - > \- 人生好貴，請別浪費
   >
   > \- 你自以為的極限，只是別人的起點
@@ -39,16 +28,29 @@ lastmod: "2023-07-07"
   >
   > \- 特立獨行的貓（趙星）
 
-- [Push yourself beyond your limits in your 20s - Jordan Peterson](https://youtu.be/z58Q0DADRGg)
+- [書中的每一句，都讓你想離職、想哭、想下班 ｜《工作垃圾話聖經》｜ 文森說書](https://youtu.be/QTj7UvETQKA)
+
+- > You really don't want a job. What you want is access to those things you'd
+  > like to have.
+  >
+  > \- [Jacque Fresco](https://quotefancy.com/quote/1195947/Jacque-Fresco-You-really-don-t-want-a-job-What-you-want-is-access-to-those-things-you-d)
+
+- [不要 20 年後才後悔自己不知道這些事 - 出版史上最大卡司《人生勝利聖經》](https://youtu.be/w92fGRg3T3I)
+
+- [TED 中英雙語字幕: 二十歲的人生不能等到三十才開始](https://youtu.be/EgqQmupSvGk)
 
 - [Jordan Peterson - Wasting Time and Opportunities](https://youtu.be/xY48e1oDXSU)
 
   - > If your life isn't everything it could be, you could ask yourself:
     > "Well, what would happen if you just stop wasting the opportunities that
     > are in front of you?" You'd be ... who knows how much more efficient!
+
   - > If people stopped really, really trying just to make things worse, we
     > have no idea how much better they would get just because of that.
+
   - what you do doesn't just matter to you, but also to those you are networked with
+
+- [Push yourself beyond your limits in your 20s - Jordan Peterson](https://youtu.be/z58Q0DADRGg)
 
 - > Our lives are not our own. We are bound to others, past and present, and by
   > each crime and every kindness, we birth our future.
@@ -67,6 +69,7 @@ lastmod: "2023-07-07"
   > shall never sit in.
   >
   > \- [(Greek proverb)](https://www.goodreads.com/quotes/666987-society-grows-great-when-old-men-plant-trees-whose-shade)
+
 - > 無恆產而有恆心者，惟士為能。
   >
   > \- [《孟子・梁惠王》](https://www.arteducation.com.tw/mingju/juv_1dfbd419310c.html)
@@ -80,6 +83,14 @@ lastmod: "2023-07-07"
   >
   > \- [Saving Lives](https://www.folklore.org/StoryView.py?story=Saving_Lives.txt)
 
+- > 心正而後身正，身正而後左右正，左右正而後朝廷正，朝廷正而後國家正，國家正而後天下正。
+  >
+  > 故天下不正，修之家；家不正，修之朝廷；朝廷不正，修之左右；左右不正，修之身；身不正，修之心。
+  >
+  > 所修彌近，所濟彌遠。
+  >
+  > \- [《反經・德表》](https://www.arteducation.com.tw/guwen/bookv_5028.html)
+
 - [OSHO: There Are Only Two Types of People](https://youtu.be/V3ueDBgYjxc)
 
   - (those who can see risks and those who can't)
@@ -92,14 +103,6 @@ lastmod: "2023-07-07"
 - [Why I Make Content](https://youtu.be/7FsyXTMLPBY)
 
 - [From Meth To Netflix](https://youtu.be/JjHFubUPLV0)
-
-- > If the last 20 years have been about making us more productive—sacrificing
-  > efficiency and financial sustainability in the process — perhaps the next 20
-  > will be about tackling our collective technical debt, reclaiming efficiency,
-  > and improving economic exchange without losing the productivity that's made
-  > software omnipresent in our lives.
-  >
-  > \- [Is software getting worse?](https://stackoverflow.blog/2023/01/30/is-software-getting-worse/)
 
 ## BELIEVING You Can Change The Way You Are
 
@@ -137,10 +140,6 @@ lastmod: "2023-07-07"
   >
   > \- [Jacque Fresco](https://quotefancy.com/quote/1195943/Jacque-Fresco-I-don-t-want-you-to-trust-me-I-want-you-to-question-everything-I-say)
 
-- > Judge a man by his questions rather than by his answers.
-  >
-  > \- [Voltaire](https://www.goodreads.com/quotes/6885-judge-a-man-by-his-questions-rather-than-by-his)
-
 - [This Man Makes You Think - James Wildman](https://youtu.be/E7JE8j5Ncmw)
 
   - > If you are told the lie enough times, it becomes part of your reality.
@@ -173,8 +172,6 @@ lastmod: "2023-07-07"
   > \- [Oliver Wendell Holmes Sr.](https://www.goodreads.com/quotes/612325-a-man-s-mind-is-stretched-by-a-new-idea-or)
 
 - [攻殼機動隊電影解析：什麼是人？/ 賽伯格與哈洛威 Cyborg and Haraway / 意識 & 心靈哲學/ 超級歪電影院 EP7](https://youtu.be/6-KYHDAEFW0)
-
-- [老子【道德經】揭開宇宙、生命、靈魂之謎](https://youtu.be/wCNz1uxj8Fo)
 
 - > What is the meaning of life?"
   >
@@ -212,6 +209,10 @@ lastmod: "2023-07-07"
 - [Bruce Lee Philosophy](https://youtu.be/nzQWYHHqvIw)
 
   - > Be Water, My Friend.
+
+- > 刻意則行不肆，牽物則其志流。
+  >
+  > \- [《反經・德表》](https://www.arteducation.com.tw/mingju/juv_2591fdac52d0.html)
 
 - > 兵無常勢，水無常形，能因敵變化而取勝者，謂之神。
   >
@@ -301,10 +302,6 @@ lastmod: "2023-07-07"
   >
   > \- [Sheryl Sandberg](https://www.goodreads.com/quotes/749769-done-is-better-than-perfect)
 
-- > Any program is only as good as it is useful.
-  >
-  > \- [Linus Torvalds](https://www.brainyquote.com/quotes/linus_torvalds_367343)
-
 - [CLEAN YOUR ROOM - Powerful Life Advice | Jordan Peterson](https://youtu.be/Vp9599kwnhM)
 
   - > If you want to organize your psyche (your mind), you could start by organizing your room.
@@ -335,6 +332,10 @@ lastmod: "2023-07-07"
 - [How To Find Happiness In Making Choices](https://youtu.be/0T7XH2lb6sQ)
 
   - > It is not the choice that creates the result. It is what you do after the choice.
+
+  - > Happiness is a direction, not a place.
+    >
+    > \- [Sydney J. Harris](https://www.goodreads.com/quotes/20295-happiness-is-a-direction-not-a-place)
 
 - [Finite Thinking vs. Infinite Mindset | Simon Sinek](https://youtu.be/ohr2fkgrP_U)
 
@@ -519,6 +520,12 @@ lastmod: "2023-07-07"
   >
   > \- <https://www.linkedin.com/pulse/you-worth-anything-right-place-mridul-rastogi>
 
+- > It doesn't make sense to hire smart people and then tell them what to do.
+  >
+  > We hire smart people so they can tell us what to do.
+  >
+  > \- [Steve Jobs](https://www.goodreads.com/quotes/8586131-it-doesn-t-make-sense-to-hire-smart-people-and-then)
+
 - > You enter the forest
   >
   > at the darkest point,
@@ -561,6 +568,10 @@ lastmod: "2023-07-07"
     > be doubted.
   - search inwards to find the "indubitable"
 
+- > It infuriates me to be wrong when I know I'm right.
+  >
+  > \- [Molière](https://www.goodreads.com/quotes/81668-it-infuriates-me-to-be-wrong-when-i-know-i-m)
+
 - > And those who were seen dancing were thought to be insane by those who could
   > not hear the music.
   >
@@ -596,6 +607,10 @@ lastmod: "2023-07-07"
 - [OSHO: Are You Sure You Are Doing the Right Thing?](https://youtu.be/n8HSCbif4yE)
 
   - life is a continuous inquiry
+
+- > Judge a man by his questions rather than by his answers.
+  >
+  > \- [Voltaire](https://www.goodreads.com/quotes/6885-judge-a-man-by-his-questions-rather-than-by-his)
 
 - [Some Rough Advice for the "Real World"](https://youtu.be/OCO8eoDWqHQ)
 
@@ -640,6 +655,10 @@ lastmod: "2023-07-07"
   - if you, from your heart, envisioned a better world, then you are the
     "majority" despite being alone
 
+- > Real talent is a mystery, and people who've got it, know it.
+  >
+  > \- [George Cukor](https://quotefancy.com/quote/1653735/George-Cukor-Real-talent-is-a-mystery-and-people-who-ve-got-it-know-it)
+
 - > Poetry is either something that lives like fire inside you -
   >
   > like music to the musician or Marxism to the communist -
@@ -657,6 +676,18 @@ lastmod: "2023-07-07"
 - [Follow Your Passion Is Terrible Advice](https://youtu.be/Tb5ykUF2VJE)
 
   - passion will die one day, you should find out what you are "meant" to do
+
+- > If you pursue good with labor, the labor passes away but the good remains;
+  >
+  > if you pursue evil with pleasure, the pleasure passes away and the evil remains.
+  >
+  > \- [Marcus Tullius Cicero](https://www.brainyquote.com/quotes/marcus_tullius_cicero_118468)
+
+- > Yet he who reigns within himself, and rules
+  >
+  > Passions, desires, and fears, is more a king.
+  >
+  > \- [John Milton](https://www.goodreads.com/quotes/79846-yet-he-who-reigns-within-himself-and-rules-passions-desires)
 
 - > Boredom is not an end-product, is comparatively rather an early stage in
   > life and art. You've got to go by or past or through boredom, as through a
@@ -748,6 +779,10 @@ lastmod: "2023-07-07"
 - > 大樂必易，大禮必簡。
   >
   > \- [《禮記・樂記》](http://edu.hwadzan.com/fabodetail/1071)
+
+- > Any program is only as good as it is useful.
+  >
+  > \- [Linus Torvalds](https://www.brainyquote.com/quotes/linus_torvalds_367343)
 
 - > Magicians protect their secrets not because the secrets are large and
   > important, but because they are so small and trivial.
@@ -1060,6 +1095,12 @@ lastmod: "2023-07-07"
 
 - [你不爽為何不明說? 談被動式攻擊| 吳若權幸福書房](https://youtu.be/OvCr0jshdyg)
 
+- > The childhood shows the man,
+  >
+  > As morning shows the day.
+  >
+  > \- [John Milton](https://www.goodreads.com/quotes/789366-the-childhood-shows-the-man-as-morning-shows-the-day)
+
 - ["What 'being vulnerable' actually means" - Simon Sinek](https://youtu.be/dadg8qE0NgY)
 
 - [The Ultimate Test of Your Social Skills](https://youtu.be/p9Urng_hGF8)
@@ -1078,6 +1119,18 @@ lastmod: "2023-07-07"
 
   - the optimal positive-to-negative-interactions ratio is between 5:1 to 11:1
 
+- > 同一條路的只不過是旅伴，能夠在不同道路上同甘共苦的才是朋友。
+  >
+  > \- [蒙面超人 Kabuto](https://baike.baidu.com/item/天道總司/3386619)
+
+- > 由儉入奢易，由奢入儉難。
+  >
+  > \- 司馬光
+
+- > 亡國之主似智，亡國之臣似忠
+  >
+  > \- [《反經・知人》](https://m.shiwens.com/details_51588.html)
+
 - > 感情原來是這麼脆弱的。
   >
   > 經得起風雨，卻經不起平凡；
@@ -1085,10 +1138,6 @@ lastmod: "2023-07-07"
   > 風雨同船，晴天便各自散了。
   >
   > \- [張愛玲《一別一輩子》](https://vaseaquarius.pixnet.net/blog/post/36554440)
-
-- > 由儉入奢易，由奢入儉難。
-  >
-  > \- 司馬光
 
 - > Love is a fog that burns with the first daylight of reality.
   >
@@ -1293,6 +1342,10 @@ lastmod: "2023-07-07"
   > Fail better.
   >
   > \- [Samuel Beckett](https://www.goodreads.com/quotes/1017797-ever-tried-ever-failed-no-matter-try-again-fail-again)
+
+- > If you focus on what you left behind, you will never see what lies ahead.
+  >
+  > \- [Gusteau, Ratatouille](https://www.goodreads.com/quotes/8052550-if-you-focus-on-what-you-left-behind-you-will)
 
 - [Don't Envy People | JORDAN PETERSON Advice](https://youtu.be/gEcpKyKOOKc)
 
