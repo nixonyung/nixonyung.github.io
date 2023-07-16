@@ -1,7 +1,7 @@
 ---
 title: "Self Help"
 publishDate: "2023-05-08"
-lastmod: "2023-07-15"
+lastmod: "2023-07-20"
 ---
 
 - [Recognizing Your Problems](#recognizing-your-problems)
@@ -66,6 +66,16 @@ lastmod: "2023-07-15"
   - what you do doesn't just matter to you, but also to those you are networked with
 
 - [Push yourself beyond your limits in your 20s - Jordan Peterson](https://youtu.be/z58Q0DADRGg)
+
+- [Viktor Frankl on Why Idealists Are Real Realists](https://youtu.be/loay2imHq5E)
+
+  - > When we treat man as he is we make him worse than he is.
+    >
+    > When we treat him as if he already was what he potentially could be
+    >
+    > We make him what he should be.
+    >
+    > \- [Goethe](https://www.goodreads.com/quotes/403820-when-we-treat-man-as-he-is-we-make-him)
 
 - [人如何超越自己？尼采哲學思想解析 Friedrich Nietzsche 哲學爽歪歪 EP1 | 上帝已死 | 悲劇的誕生 | 民主的墮落 | 善惡的起源 | 超人的出現 | 永恆回歸](https://youtu.be/1wBD0UPeH88)
 
@@ -302,6 +312,13 @@ lastmod: "2023-07-15"
   >
   > \- [Napoleon Hill](https://www.goodreads.com/quotes/856837-you-become-what-you-think-about)
 
+- > First comes thought; then organization of that thought, into ideas and
+  > plans; then transformation of those plans into reality.
+  >
+  > The beginning, as you will observe, is in your imagination.
+  >
+  > \- [Napoleon Hill](https://www.goodreads.com/quotes/458242-first-comes-thought-then-organization-of-that-thought-into-ideas)
+
 - [Law of Attraction - Explained by Psychology!](https://youtu.be/gjMJURkX3wY)
 
 - [The world shifts itself around your aim : Jordan Peterson](https://youtu.be/Zr1Y9r6N4OY)
@@ -325,10 +342,20 @@ lastmod: "2023-07-15"
 
 - [Jim Rohn - If you divided money equally to everybody](https://youtu.be/N0g6AjxvrIk)
 
+- > I don't care that they stole my idea . . I care that they don't have any of their own.
+  >
+  > \- [Nikola Tesla](https://www.goodreads.com/author/quotes/278.Nikola_Tesla)
+
 - > If you think we can't change the world, it just means you're not one of
   > those that will.
   >
   > \- [Jacque Fresco](https://www.goodreads.com/quotes/7622314-if-you-think-we-can-t-change-the-world-it-just)
+
+- > The reasonable man adapts himself to the world: the unreasonable one
+  > persists in trying to adapt the world to himself. Therefore all progress
+  > depends on the unreasonable man.
+  >
+  > \- [George Bernard Shaw](https://www.goodreads.com/quotes/536961-the-reasonable-man-adapts-himself-to-the-world-the-unreasonable)
 
 - > It doesn't make sense to hire smart people and then tell them what to do.
   >
@@ -436,7 +463,7 @@ lastmod: "2023-07-15"
 
 - > 兵無常勢，水無常形，能因敵變化而取勝者，謂之神。
   >
-  > \-《孫子兵法・虛實篇》
+  > \-[《孫子兵法・虛實篇》](https://web.nutn.edu.tw/gac370/teaching/chapter/sun_Z.htm#6)
 
 - > Antifragility is beyond resilience or robustness. The resilient resists
   > shocks and stays the same; the antifragile gets better.
@@ -464,6 +491,12 @@ lastmod: "2023-07-15"
   > know it but little you will be able to love it only a little or not at all.
   >
   > \- [Leonardo DaVinci](https://www.goodreads.com/quotes/25710-one-has-no-right-to-love-or-hate-anything-if)
+
+- > Whenever a theory appears to you as the only possible one, take this as a
+  > sign that you have neither understood the theory nor the problem which it
+  > was intended to solve.
+  >
+  > \- [Karl Popper](https://www.goodreads.com/quotes/68084-whenever-a-theory-appears-to-you-as-the-only-possible)
 
 - > Stay hungry. Stay foolish.
   >
@@ -634,11 +667,6 @@ lastmod: "2023-07-15"
   >
   > \- [老子《道德經》](https://pedia.cloud.edu.tw/Entry/Detail/?title=大音希聲&search=大音希聲)
 
-- > No man ever steps in the same river twice, for it's not the same river and
-  > he's not the same man.
-  >
-  > \- [Heraclitus](https://www.goodreads.com/quotes/117526-no-man-ever-steps-in-the-same-river-twice-for)
-
 - > All things by immortal power. Near of far, to each other linked are, that
   > thou canst not stir a flower without troubling of a star.
   >
@@ -649,11 +677,15 @@ lastmod: "2023-07-15"
   >
   > \- [Douglas Adams](https://www.goodreads.com/quotes/98939-if-you-try-and-take-a-cat-apart-to-see)
 
-- > Whenever a theory appears to you as the only possible one, take this as a
-  > sign that you have neither understood the theory nor the problem which it
-  > was intended to solve.
+- > When a system is taken apart it loses its essential properties.
   >
-  > \- [Karl Popper](https://www.goodreads.com/quotes/68084-whenever-a-theory-appears-to-you-as-the-only-possible)
+  > A system is not the sum of the behavior of its parts, it's a product of their interactions.
+  >
+  > \- [Russell L. Ackoff](https://www.ufried.com/blog/systems_thinking_and_quality/)
+
+- > To manage a system effectively, you might focus on the interactions of the parts rather than their behavior taken separately.
+  >
+  > \- [Russell L. Ackoff](https://quotefancy.com/quote/1697668/Russell-L-Ackoff-To-manage-a-system-effectively-you-might-focus-on-the-interactions-of)
 
 ### Being Simple
 
@@ -895,7 +927,11 @@ lastmod: "2023-07-15"
   > He who understands it, earns it ... he who doesn't ... pays it.
   >
   > \- [Albert Einstein](https://www.goodreads.com/quotes/76863-compound-interest-is-the-eighth-wonder-of-the-world-he)
+
+- > Let the future tell the truth, and evaluate each one according to his work and accomplishments. The present is theirs; the future, for which I have really worked, is mine
   >
+  > \- [Nikola Tesla](https://www.goodreads.com/quotes/189978-let-the-future-tell-the-truth-and-evaluate-each-one)
+
 ### Being Prepared
 
 - > Everyone has a plan until they get punched in the mouth.
@@ -983,6 +1019,10 @@ lastmod: "2023-07-15"
 
 ### Understanding Your Emotions
 
+- [This is Why You Don't Feel Anything Anymore](https://youtu.be/R9ykreOVIWE)
+
+  - try to understand your feelings
+
 - [童年讓人長不大，記憶使人走向極端｜《以為時間久了我就會沒事》｜文森說書](https://youtu.be/MF826Has0oM)
 
 - > The childhood shows the man,
@@ -1001,9 +1041,9 @@ lastmod: "2023-07-15"
 
   - 要有一顆 "安定的心"
 
-- [This is Why You Don't Feel Anything Anymore](https://youtu.be/R9ykreOVIWE)
-
-  - try to understand your feelings
+- > Worrying does not take away tomorrow's troubles. It takes away today's peace.
+  >
+  > \- [Randy Armstrong](https://www.goodreads.com/quotes/612549-worrying-does-not-take-away-tomorrow-s-troubles-it-takes-away)
 
 - [OSHO: You Have Everything but You Don't Have Yourself](https://youtu.be/Zo_P2rbEtwo)
 
@@ -1074,7 +1114,7 @@ lastmod: "2023-07-15"
 
 - > 百戰百勝，非善之善者也；不戰而屈人之兵，善之善者也。
   >
-  > \- 《孫子兵法・謀攻篇》
+  > \- [《孫子兵法・謀攻篇》](https://web.nutn.edu.tw/gac370/teaching/chapter/sun_Z.htm#3)
 
 - [Simon Sinek - Trust vs Performance (Must Watch!)](https://youtu.be/PTo9e3ILmms)
 
@@ -1310,7 +1350,7 @@ lastmod: "2023-07-15"
 
 - > 由儉入奢易，由奢入儉難。
   >
-  > \- 司馬光
+  > \- [司馬光](https://zh.wiktionary.org/zh-hant/由儉入奢易，由奢入儉難)
 
 - [提姆・明欽 (Tim Minchin) - 人生九課 9 Life Lessons (中文字幕)](https://youtu.be/dvBZNK77h9M)
 
