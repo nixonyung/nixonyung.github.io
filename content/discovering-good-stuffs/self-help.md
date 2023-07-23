@@ -1,7 +1,7 @@
 ---
 title: "Self Help"
 publishDate: "2023-05-08"
-lastmod: "2023-07-20"
+lastmod: "2023-07-24"
 ---
 
 - [Recognizing Your Problems](#recognizing-your-problems)
@@ -64,6 +64,14 @@ lastmod: "2023-07-20"
     > have no idea how much better they would get just because of that.
 
   - what you do doesn't just matter to you, but also to those you are networked with
+
+- > Unless you change how you are, you will always have what you've got.
+  >
+  > \- [Jim Rohn](https://www.goodreads.com/quotes/364884-unless-you-change-how-you-are-you-will-always-have)
+
+- > Life begins at the end of your comfort zone.
+  >
+  > \- [Neale Donald Walsh](https://www.goodreads.com/quotes/367691-life-begins-at-the-end-of-your-comfort-zone)
 
 - [Push yourself beyond your limits in your 20s - Jordan Peterson](https://youtu.be/z58Q0DADRGg)
 
@@ -342,6 +350,10 @@ lastmod: "2023-07-20"
 
 - [Jim Rohn - If you divided money equally to everybody](https://youtu.be/N0g6AjxvrIk)
 
+- > Set a beggar on horseback and he'll ride to the Devil.
+  >
+  > \- [(proverb)](https://en.wiktionary.org/wiki/set_a_beggar_on_horseback_and_he%27ll_ride_to_the_Devil)
+
 - > I don't care that they stole my idea . . I care that they don't have any of their own.
   >
   > \- [Nikola Tesla](https://www.goodreads.com/author/quotes/278.Nikola_Tesla)
@@ -368,6 +380,17 @@ lastmod: "2023-07-20"
   - you need both the capacity for danger and the capacity for control
 
   - > If you are incapable of violence, not being violent isn't a virtue.
+
+- > 忠厚是無用的別名
+  >
+  > \- [魯迅](https://zh.wikisource.org/wiki/論「費厄潑賴」應該緩行)
+
+- > But it is the same with man as with the tree.
+  >
+  > The more he seeks to rise into the height and light, the more vigorously do
+  > his roots struggle earthword, downword, into the dark, the deep - into evil.
+  >
+  > \- [Friedrich Nietzsche](https://www.goodreads.com/quotes/489498-but-it-is-the-same-with-man-as-with-the)
 
 - [Jordan Peterson | Hierarchy of Competence](https://youtu.be/8twotdRzy3w)
 
@@ -446,7 +469,7 @@ lastmod: "2023-07-20"
   > Don't be afraid of experience, because the more experience you have, the
   > more mature you become.
   >
-  > [OSHO](https://www.goodreads.com/quotes/8494-experience-life-in-all-possible-ways----good-bad-bitter-sweet-dark-light)
+  > \- [OSHO](https://www.goodreads.com/quotes/8494-experience-life-in-all-possible-ways----good-bad-bitter-sweet-dark-light)
 
 - [What one skill = an awesome life? | Dr. Shimi Kang | TEDxKelowna](https://youtu.be/1EHZAQmw2JA)
 
@@ -479,6 +502,14 @@ lastmod: "2023-07-20"
   > stupid people already have all the answers.
   >
   > \- [Socrates](https://www.goodreads.com/quotes/10408021-smart-people-learn-from-everything-and-everyone-average-people-from)
+
+- > If you want to be healthy study health...
+  >
+  > if you want to be wealthy, study wealth...
+  >
+  > if you want to be happy, study happiness.
+  >
+  > \- [Jim Rohn](https://www.azquotes.com/quote/876889)
 
 - > Successful people have libraries. The rest have big screen TVs.
   >
@@ -565,6 +596,10 @@ lastmod: "2023-07-20"
 
 ### Being Independent
 
+- > Doubt everything.
+  >
+  > \- [René Descartes](https://www.goodreads.com/quotes/952616-de-omnibus-dubitandum-doubt-everything)
+
 - [Jordan Peterson - Becoming Independent From Your Parents](https://youtu.be/kXi9bwI6cY8)
 
   - > Once you hit a certain point in your development, ..., the answers that
@@ -583,6 +618,10 @@ lastmod: "2023-07-20"
 - [You Should Finally Leave School](https://youtu.be/pJhUs1L_RQo)
 
   - (don't limit your thinking)
+
+- > One repays a teacher badly if one always remains nothing but a pupil.
+  >
+  > \- [Friedrich Nietzsche](https://www.goodreads.com/quotes/279256-one-repays-a-teacher-badly-if-one-always-remains-nothing)
 
 - [OSHO: Don't Follow the Leaders - They Are Lost Too (Preview)](https://youtu.be/Ikd8soAzyeM)
 
@@ -650,10 +689,20 @@ lastmod: "2023-07-20"
 
 ### Being Ineffable
 
+- > The test of a first-rate intelligence is the ability to hold two opposed
+  > ideas in the mind at the same time, and still retain the ability to
+  > function.
+  >
+  > \- [F. Scott Fitzgerald](https://www.goodreads.com/quotes/64918-the-test-of-a-first-rate-intelligence-is-the-ability-to)
+
 - [Baby, My Whole Work Is to Confuse You](https://youtu.be/xggTJCCxFss)
 
   - > God is a quantity; godliness is a quality
   - from quantity (tangible objects/examples) we have to see the quality (similarities in concepts)
+
+- > I am a rare species, not a stereotype.
+  >
+  > \- [Ivan Coyote](https://www.goodreads.com/quotes/248993-i-am-a-rare-species-not-a-stereotype)
 
 - [OSHO: Contradictions a Creative Doorway](https://youtu.be/Wn0WTKer7Wc)
 
@@ -766,7 +815,6 @@ lastmod: "2023-07-20"
 - [The MAYA Principle: How to Make Art For an Audience](https://youtu.be/nwYwsTp5-Oo)
 
   - > Most Advanced. Yet Acceptable.
-    > k
 
 - [Design Theory: An Introduction to Lateral Thinking](https://youtu.be/bpdnKzdbm58)
 
@@ -826,6 +874,10 @@ lastmod: "2023-07-20"
   >
   > \- [Ralph Waldo Emerson](https://www.goodreads.com/quotes/57008-shallow-men-believe-in-luck-or-in-circumstance-strong-men)
 
+- > A good player is always lucky.
+  >
+  > \- [José Raul Capablanca](https://quotefancy.com/quote/1570756/Jos-Raul-Capablanca-A-good-player-is-always-lucky)
+
 - [Why The Law of Attraction is Fake](https://youtu.be/9krY-VuFZ3w)
 
   - you need a vision but also actions
@@ -866,6 +918,12 @@ lastmod: "2023-07-20"
   >
   > \- [Samuel Beckett](https://www.goodreads.com/quotes/1017797-ever-tried-ever-failed-no-matter-try-again-fail-again)
 
+- > Don't be afraid to make mistakes.
+  >
+  > But if you do, make new ones. Life is too short to make the wrong choice twice.
+  >
+  > \- [Joyce Rachelle](https://www.goodreads.com/quotes/8080814-don-t-be-afraid-to-make-mistakes-but-if-you-do)
+
 - [Reduce suffering through suffering - Jordan Peterson](https://youtu.be/U4ZUb4ZO3fk)
 
 - > If you pursue good with labor, the labor passes away but the good remains;
@@ -874,11 +932,20 @@ lastmod: "2023-07-20"
   >
   > \- [Marcus Tullius Cicero](https://www.brainyquote.com/quotes/marcus_tullius_cicero_118468)
 
+- > 路漫漫其修遠兮，吾將上下而求索。
+  >
+  >  \- [屈原《離騷》](https://baike.baidu.hk/item/路漫漫其修遠兮，吾將上下而求索/2614472)
+
 - > Boredom is not an end-product, is comparatively rather an early stage in
   > life and art. You've got to go by or past or through boredom, as through a
   > filter, before the clear product emerges.
   >
   > \- [F. Scott Fitzgerald](https://quotefancy.com/quote/804139/F-Scott-Fitzgerald-Boredom-is-not-an-end-product-is-comparatively-rather-an-early-stage)
+
+- > The mark of the immature man is that he wants to die nobly for a cause,
+  > while the mark of the mature man is that is wants to live humbly for one.
+  >
+  > \- [Wilhelm Stekel](https://www.goodreads.com/quotes/520-the-mark-of-the-immature-man-is-that-he-wants)
 
 - [How To Find Happiness In Making Choices](https://youtu.be/0T7XH2lb6sQ)
 
@@ -922,13 +989,17 @@ lastmod: "2023-07-20"
   - what matters is not the result (winning or losing), but the development of good character
   - > You don't want to teach him to win, you want to teach him to play well with others.
 
+- > You can't see the forest for the trees.
+  >
+  > \- [Nicholas Sparks](https://www.goodreads.com/quotes/403325-you-can-t-see-the-forest-for-the-trees)
+
 - > Compound interest is the eighth wonder of the world.
   >
   > He who understands it, earns it ... he who doesn't ... pays it.
   >
   > \- [Albert Einstein](https://www.goodreads.com/quotes/76863-compound-interest-is-the-eighth-wonder-of-the-world-he)
 
-- > Let the future tell the truth, and evaluate each one according to his work and accomplishments. The present is theirs; the future, for which I have really worked, is mine
+- > Let the future tell the truth, and evaluate each one according to his work and accomplishments. The present is theirs; the future, for which I have really worked, is mine.
   >
   > \- [Nikola Tesla](https://www.goodreads.com/quotes/189978-let-the-future-tell-the-truth-and-evaluate-each-one)
 
@@ -949,6 +1020,11 @@ lastmod: "2023-07-20"
   > In 'The Lord of the Rings' I never made anyone go farther than he could on a given day.
   >
   > \- [John Ronald Reuel Tolkien](https://www.tolkienguide.com/modules/newbb/viewtopic.php?post_id=13462)
+
+- > Most people overestimate what they can do in one year and underestimate what
+  > they can do in ten years.
+  >
+  > \- [Bill Gates](https://www.goodreads.com/quotes/302999-most-people-overestimate-what-they-can-do-in-one-year)
   >
 ## Taking Actions
 
@@ -1082,6 +1158,10 @@ lastmod: "2023-07-20"
   >
   > \- [Matthew 10:16](https://www.biblegateway.com/verse/en/Matthew%2010%3A16)
 
+- > Scratch an altruist and watch a hypocrite bleed.
+  >
+  > \- [John Burnett](https://www.goodreads.com/quotes/8882214-scratch-an-altruist-and-watch-a-hypocrite-bleed)
+
 - > You are not worth anything if you are not in the right place.
   >
   > \- <https://www.linkedin.com/pulse/you-worth-anything-right-place-mridul-rastogi>
@@ -1095,8 +1175,13 @@ lastmod: "2023-07-20"
 - [Jordan Peterson: The Mind of Highly (Dis-)Agreeable People](https://youtu.be/5WXo1aFb8MY)
 
   - being agreeable is wired to being prepared to take care of babies
+
   - agreeable people should learn to understand and express what they want to
     not get exploited in other areas
+
+- > Humility is not thinking less of yourself, it's thinking of yourself less.
+  >
+  > \- [CS Lewis](https://www.goodreads.com/quotes/7288468-humility-is-not-thinking-less-of-yourself-it-s-thinking-of)
 
 - [Criticism isn't Helpful Unless it's Constructive](https://youtu.be/eeInM4o66gw)
 
@@ -1128,6 +1213,10 @@ lastmod: "2023-07-20"
 - > The best way to find out if you can trust somebody is to trust them.
   >
   > \- [Ernest Hemingway](https://www.goodreads.com/quotes/217785-the-best-way-to-find-out-if-you-can-trust)
+
+- > 疑人勿用，用人勿疑。
+  >
+  > \- [(成語)](https://baike.baidu.hk/item/疑人勿用，用人勿疑/1724240)
 
 - [Powerful Relationship Tip: Ask, rather than Assume | @ShadeZahrai](https://youtu.be/qSbWR2NcgQI)
 
@@ -1189,6 +1278,16 @@ lastmod: "2023-07-20"
   > than I should
   >
   > \- [Benedict Smith](https://www.goodreads.com/quotes/807692-i-wish-i-wrote-the-way-i-thought-obsessively-incessantly)
+
+- > How is it
+  >
+  > that there was never you
+  >
+  > until there was
+  >
+  > and then all was you?
+  >
+  > \- [Kamand Kojouri](https://www.goodreads.com/quotes/8031410-how-is-it-that-there-was-never-you-until-there)
 
 - > Love is a fog that burns with the first daylight of reality.
   >
@@ -1311,6 +1410,10 @@ lastmod: "2023-07-20"
 
 ### Seeing Things As They Are
 
+- > We don't see things as they are, we see them as we are.
+  >
+  > \- [Anaïs Nin](https://www.goodreads.com/quotes/5030-we-don-t-see-things-as-they-are-we-see-them)
+
 - [The Lie That Every Story Has In Common - Kurt Vonnegut On The Shapes of Stories](https://youtu.be/x3EVh2jhyLM)
 
   - > A more honest, realistic story shape is simply a straight line.
@@ -1327,6 +1430,12 @@ lastmod: "2023-07-20"
   >
   > \- [Kurt Vonnegut](https://www.goodreads.com/quotes/3172-and-i-urge-you-to-please-notice-when-you-are)
 
+- > 文章做到極處，無有他奇，只是恰好；
+  >
+  > 人品做到極處，無有他異，只是本然。
+  >
+  > \- [《菜根譚・概論》](https://so.gushiwen.cn/mingju/juv_f2329d9b20ad.aspx)
+
 - > The essence of greatness is the perception that virtue is enough.
   >
   > \- [Ralph Waldo Emerson](https://www.goodreads.com/quotes/8556802-the-essence-of-greatness-is-the-perception-that-virtue-is)
@@ -1334,6 +1443,14 @@ lastmod: "2023-07-20"
 - [The Biggest Problem In Our Community...](https://youtu.be/G2SqTWNFdyU)
 
   - > We take our "wins" and we turn them into "losses".
+
+- > The road to hell is paved with good intentions.
+  >
+  > \- [Bernard of Clairvaux](https://www.goodreads.com/quotes/552300-the-road-to-hell-is-paved-with-good-intentions)
+
+- > O Liberty! What crimes are committed in thy name!
+  >
+  > \- [Madame Roland](https://www.goodreads.com/quotes/8611630-o-libert-que-de-crimes-on-commet-en-ton-nom)
 
 - > It's your own expectations that hurt you. Not the world you live in.
   > Whatever happens in the world is real. What you think should happen is
@@ -1343,6 +1460,10 @@ lastmod: "2023-07-20"
   > by the world, you are disappointed by your own projections.
   >
   > \- [Jacque Fresco](https://quotefancy.com/quote/1195936/Jacque-Fresco-It-s-your-own-expectations-that-hurt-you-Not-the-world-you-live-in-Whatever)
+
+- > To a man with a hammer, everything looks like a nail.
+  >
+  > \- [Mark Twain](https://www.goodreads.com/quotes/545616-to-a-man-with-a-hammer-everything-looks-like-a)
 
 - > Modern man can't see God because he doesn't look low enough.
   >
