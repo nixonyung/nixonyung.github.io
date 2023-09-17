@@ -1,7 +1,7 @@
 ---
 title: "Self Help"
 publishDate: "2023-05-08"
-lastmod: "2023-07-26"
+lastmod: "2023-09-17"
 ---
 
 - [Recognizing Your Problems](#recognizing-your-problems)
@@ -16,16 +16,16 @@ lastmod: "2023-07-26"
   - [Taking Aim](#taking-aim)
 - [Developing Competence](#developing-competence)
   - [Understanding The Importance Of Competence](#understanding-the-importance-of-competence)
-  - [Becoming A Camel](#becoming-a-camel)
+  - [Becoming A "Camel"](#becoming-a-camel)
     - [Being Knowledgeable](#being-knowledgeable)
     - [Being Endurable](#being-endurable)
     - [Being Pragmatic](#being-pragmatic)
-  - [Becoming A Lion](#becoming-a-lion)
+  - [Becoming A "Lion"](#becoming-a-lion)
     - [Being Independent](#being-independent)
     - [Being Articulate](#being-articulate)
     - [Being Foresighted](#being-foresighted)
     - [Being Adaptable](#being-adaptable)
-  - [Becoming A Child](#becoming-a-child)
+  - [Becoming A "Child"](#becoming-a-child)
     - [Being Simple](#being-simple)
     - [Being Ineffable](#being-ineffable)
     - [Being Creative](#being-creative)
@@ -472,7 +472,7 @@ lastmod: "2023-07-26"
   >
   > \- [Jim Rohn](https://www.goodreads.com/quotes/238071-let-others-lead-small-lives-but-not-you-let-others)
 
-### Becoming A Camel
+### Becoming A "Camel"
 
 #### Being Knowledgeable
 
@@ -544,6 +544,10 @@ lastmod: "2023-07-26"
   > if you steal from many, it's research.
   >
   > \- [Wilson Mizner](https://www.goodreads.com/quotes/7401998-if-you-steal-from-one-author-it-s-plagiarism-if-you)
+
+- > The ability to observe without evaluating is the highest form of intelligence.
+  >
+  > \- [J. Krishnamurti](https://www.goodreads.com/quotes/148155-the-ability-to-observe-without-evaluating-is-the-highest-form)
 
 - [How to Read Faster](https://youtu.be/cRoaZ3cfX_k)
 
@@ -643,7 +647,7 @@ lastmod: "2023-07-26"
 
 - > 路漫漫其修遠兮，吾將上下而求索。
   >
-  >  \- [屈原《離騷》](https://baike.baidu.hk/item/路漫漫其修遠兮，吾將上下而求索/2614472)
+  > \- [屈原《離騷》](https://baike.baidu.hk/item/路漫漫其修遠兮，吾將上下而求索/2614472)
 
 - > Boredom is not an end-product, is comparatively rather an early stage in
   > life and art. You've got to go by or past or through boredom, as through a
@@ -732,7 +736,7 @@ lastmod: "2023-07-26"
   >
   > \- [Steven D. Levitt](https://www.goodreads.com/quotes/1214269-the-key-to-learning-is-feedback-it-is-nearly-impossible)
 
-### Becoming A Lion
+### Becoming A "Lion"
 
 #### Being Independent
 
@@ -908,7 +912,7 @@ lastmod: "2023-07-26"
   >
   > \- [Georg Wilhelm Friedrich Hegel](https://www.goodreads.com/quotes/130931-truth-is-found-neither-in-the-thesis-nor-the-antithesis)
 
-### Becoming A Child
+### Becoming A "Child"
 
 #### Being Simple
 
@@ -1198,6 +1202,10 @@ lastmod: "2023-07-26"
 
 - [為什麼 80, 90 後對工作缺乏熱情？► 因為老闆少做了這件事 - Simon Sinek（中英字幕）](https://youtu.be/1oLdExa62AI)
 
+- > To be interesting, be interested.
+  >
+  > \- [Dale Carnegie](https://www.goodreads.com/quotes/868021-to-be-interesting-be-interested)
+
 - [💝 你相信嗎？好關係竟然是麻煩出來的？！｜【閱部客】](https://youtu.be/IVdbCvBBOkg)
 
 - [90%的人都曾踩過的地雷 - 太有禮貌竟然會讓對方願意提供幫助的機率下降 ｜《好好拜託 哥倫比亞大學最受歡迎的社會心理課， 讓人幫你是優勢，連幫你的人都快樂才是本事》｜文森說書](https://youtu.be/aSMTuNrHEBE)
@@ -1236,6 +1244,12 @@ lastmod: "2023-07-26"
 
   - reinforce good behaviours, e.g. tell your partner what they did well
   - and do not punish the good behaviours
+
+- > You can make more friends in two months by becoming interested in other
+  > people than you can in two years by trying to get other people interested in
+  > you.
+  >
+  > \- [Dale Carnegie](https://www.goodreads.com/quotes/1962-you-can-make-more-friends-in-two-months-by-becoming)
 
 - [The power of seduction in our everyday lives | Chen Lizra | TEDxVancouver](https://youtu.be/TBIL2sdfoVc)
 
@@ -1376,6 +1390,10 @@ lastmod: "2023-07-26"
 
 - [Criticism isn't Helpful Unless it's Constructive](https://youtu.be/eeInM4o66gw)
 
+- > Before you heal someone, ask him if he's willing to give up the things that make him sick.
+  >
+  > \- [Hippocrates](https://www.goodreads.com/quotes/9576619-before-you-heal-someone-ask-him-if-he-s-willing-to)
+
 - [你不爽為何不明說? 談被動式攻擊| 吳若權幸福書房](https://youtu.be/OvCr0jshdyg)
 
 - > Humility is not thinking less of yourself, it's thinking of yourself less.
@@ -1435,7 +1453,7 @@ lastmod: "2023-07-26"
   >
   > \- [Søren Kierkegaard](https://www.brainyquote.com/quotes/soren_kierkegaard_105030)
 
-- > What is the meaning of life?"
+- > "What is the meaning of life?"
   >
   > "What is consciousness and the mind?"
   >
