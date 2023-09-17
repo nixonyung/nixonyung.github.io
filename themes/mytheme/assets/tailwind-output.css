@@ -438,9 +438,8 @@ html {
   --sf: 173.42 75.258% 64.784%;
   --af: 339.08 97.321% 44.863%;
   --nf: 214.29 11.667% 18.824%;
-  --b2: 215 14.286% 14.824%;
-  --b3: 215 14.286% 13.341%;
-  --bc: 215 30.986% 83.294%;
+  --b2: 212.73 18.033% 10.765%;
+  --bc: 212.73 26.949% 82.392%;
   --pc: 173.11 100% 9.3725%;
   --sc: 173.42 100% 16.196%;
   --ac: 339.08 100% 91.216%;
@@ -462,7 +461,8 @@ html {
   --s: 173.42 75.258% 80.98%;
   --a: 339.08 97.321% 56.078%;
   --n: 214.29 11.667% 23.529%;
-  --b1: 215 14.286% 16.471%;
+  --b1: 212.73 18.033% 11.961%;
+  --b3: 215 14.286% 16.471%;
   --in: 206.04 89.216% 60%;
   --su: 134.73 91.257% 64.118%;
   --wa: 36.29 63.918% 61.961%;
@@ -645,15 +645,6 @@ html {
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
-}
-
-.menu.horizontal {
-  display: inline-flex;
-  flex-direction: row;
-}
-
-.menu.horizontal :where(li) {
-  flex-direction: row;
 }
 
 .navbar {
@@ -1044,15 +1035,6 @@ html {
   outline-offset: 2px;
 }
 
-.menu.horizontal > li.bordered > a,
-        .menu.horizontal > li.bordered > button,
-        .menu.horizontal > li.bordered > span {
-  border-left-width: 0px;
-  border-bottom-width: 4px;
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--p) / var(--tw-border-opacity));
-}
-
 .progress::-moz-progress-bar {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--n) / var(--tw-bg-opacity));
@@ -1266,42 +1248,6 @@ html {
   left: 50%;
   right: auto;
   bottom: var(--tooltip-tail-offset);
-}
-
-.artboard.phone-1.horizontal,
-      .artboard.phone-1.artboard-horizontal {
-  width: 568px;
-  height: 320px;
-}
-
-.artboard.phone-2.horizontal,
-      .artboard.phone-2.artboard-horizontal {
-  width: 667px;
-  height: 375px;
-}
-
-.artboard.phone-3.horizontal,
-      .artboard.phone-3.artboard-horizontal {
-  width: 736px;
-  height: 414px;
-}
-
-.artboard.phone-4.horizontal,
-      .artboard.phone-4.artboard-horizontal {
-  width: 812px;
-  height: 375px;
-}
-
-.artboard.phone-5.horizontal,
-      .artboard.phone-5.artboard-horizontal {
-  width: 896px;
-  height: 414px;
-}
-
-.artboard.phone-6.horizontal,
-      .artboard.phone-6.artboard-horizontal {
-  width: 1024px;
-  height: 320px;
 }
 
 .steps-horizontal .step {

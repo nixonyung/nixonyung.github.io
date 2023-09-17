@@ -1,5 +1,6 @@
 <a
   href="{{ .RelPermalink }}"
+  {{ if and (isset . "IsExternal") .IsExternal }}target="_blank"{{ end }}
   class="w-full py-3 px-2 flex items-center no-underline focus:outline-none hover:bg-base-300 focus:bg-base-300 transition-colors duration-100 group"
 >
   <div class="flex flex-col">
