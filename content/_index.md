@@ -2,7 +2,13 @@
 title: "Home"
 ---
 
-> Watch and learn.
+> 80% copied, 20% new.
+>
+> 80% others, 100% you.
+>
+> 80% result, 20% time.
+>
+> 80% hardwork, 100% shine.
 
 ---
 
