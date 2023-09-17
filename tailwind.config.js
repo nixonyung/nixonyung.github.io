@@ -21,9 +21,9 @@ module.exports = {
     },
   },
   plugins: [
-    require("tailwind-scrollbar-hide"),
-    require("@tailwindcss/typography"),
     require("daisyui"),
+    require("@tailwindcss/typography"),
+    require("tailwind-scrollbar-hide"),
   ],
   daisyui: {
     themes: [
