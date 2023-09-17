@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "daisyui": "^3.7.4",
-    "tailwind-scrollbar-hide": "^1.1.7"
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "tailwindcss-animated": "^1.0.1"
   }
 }

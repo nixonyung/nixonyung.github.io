@@ -6,7 +6,7 @@ title: "Home"
 
 ---
 
-- You may want to use [Video Speed Controller](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk?hl=en).
+- You may want to use [Video Speed Controller](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk?hl=en)
 
   1. install the extension (only available on desktop browsers)
   2. watch any YouTube video, verify that a panel appears at top-left

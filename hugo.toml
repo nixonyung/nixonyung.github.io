@@ -5,7 +5,7 @@ baseURL = "https://nixonyung.github.io/"
 languageCode = "en-hk"
 
 [params]
-description = "Nixon Yung's Knowledge Base"
+description = "Nixon Yung's Blog"
 
 [markup]
 [markup.highlight]

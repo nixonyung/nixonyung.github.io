@@ -11,6 +11,9 @@ dependencies:
   tailwind-scrollbar-hide:
     specifier: ^1.1.7
     version: 1.1.7
+  tailwindcss-animated:
+    specifier: ^1.0.1
+    version: 1.0.1(tailwindcss@3.3.3)
 
 devDependencies:
   '@tailwindcss/typography':
@@ -1092,6 +1095,14 @@ packages:
 
   /tailwind-scrollbar-hide@1.1.7:
     resolution: {integrity: sha512-X324n9OtpTmOMqEgDUEA/RgLrNfBF/jwJdctaPZDzB3mppxJk7TLIDmOreEDm1Bq4R9LSPu4Epf8VSdovNU+iA==}
+    dev: false
+
+  /tailwindcss-animated@1.0.1(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-u5wusj89ZwP8I+s8WZlaAd7aZTWBN/XEG6QgMKpkIKmAf3xP1A6WYf7oYIKmGaB10UAQaSqWopi/i1ozzZEs8Q==}
+    peerDependencies:
+      tailwindcss: '>=3.1.0'
+    dependencies:
+      tailwindcss: 3.3.3
     dev: false
 
   /tailwindcss@3.3.3:

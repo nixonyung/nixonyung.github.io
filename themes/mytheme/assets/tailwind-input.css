@@ -6,7 +6,9 @@
   .myprose {
     @apply prose
       prose-headings:scroll-mt-20
+      prose-ul:my-2
       prose-ul:leading-5
+      prose-ul:list-circle
       prose-quoteless
       prose-blockquote:hyphens-none
       /* gradient headers */

@@ -1,10 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["content/**/*.md", "themes/mytheme/layouts/**/*.html"],
+  content: ["themes/mytheme/layouts/**/*.html", "layouts/**/*.html"],
   theme: {
     extend: {
       fontFamily: {
         base: "Recursive, system-ui",
+      },
+      listStyleType: {
+        circle: "circle",
       },
       typography: {
         quoteless: {
@@ -24,6 +27,7 @@ module.exports = {
     require("daisyui"),
     require("@tailwindcss/typography"),
     require("tailwind-scrollbar-hide"),
+    require("tailwindcss-animated"),
   ],
   daisyui: {
     themes: [

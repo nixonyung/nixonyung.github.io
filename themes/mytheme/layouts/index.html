@@ -1,7 +1,47 @@
 {{ define "content" }}
   <div class="mb-4">
-    <h1 class="inline m-0 box-decoration-clone">{{ .Site.Title }}</h1>
+    <h1 class="m-0 box-decoration-clone animate-rotate-x">
+      {{ .Site.Title }}
+    </h1>
   </div>
+
+  <!-- extra markdown content in content/_index.md -->
   {{ .Content }}
+
   {{ partial "listing.html" . }}
+
+
+  <ul>
+    <li>
+      <span class="block w-full py-3 px-2 select-none">My Projects:</span>
+      <ul>
+        <li>
+          {{ partial "styled-link.html" (dict
+            "Title" "An 80% Imitator (GitHub link)"
+            "RelPermalink" "https://github.com/nixonyung/nixonyung.github.io"
+            "Params" (dict "IsExternal" true)
+            )
+          }}
+        </li>
+        <li>
+          {{ partial "styled-link.html" (dict
+            "Title" "golox-tree-walk"
+            "RelPermalink" "https://github.com/nixonyung/golox-tree-walk"
+            "Lastmod" (time "2023-06-24")
+            "Params" (dict "IsExternal" true)
+            )
+          }}
+        </li>
+        <li>
+          {{ partial "styled-link.html" (dict
+            "Title" "LoL ARAM Montage - OH DEAR ITS UDYR"
+            "RelPermalink" "https://youtu.be/iySV-wmcWJE?si=ISReuyIjY4t500RX"
+            "Lastmod" (time "2023-09-17")
+            "Params" (dict "IsExternal" true)
+            )
+          }}
+        </li>
+      </ul>
+    </li>
+  </ul>
 {{ end }}
