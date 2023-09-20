@@ -732,6 +732,10 @@ lastmod: "2023-09-17"
   >
   > \- [Ralph Waldo Emerson](https://quotefancy.com/quote/896888/Ralph-Waldo-Emerson-I-pay-the-schoolmaster-but-tis-the-schoolboys-that-educate-my-son)
 
+- > 盡信書，不如無書。
+  >
+  > \- [(成語)](https://baike.baidu.hk/item/盡信書，不如無書/556876)
+
 - > The key to learning is feedback. It is nearly impossible to learn anything without it.
   >
   > \- [Steven D. Levitt](https://www.goodreads.com/quotes/1214269-the-key-to-learning-is-feedback-it-is-nearly-impossible)

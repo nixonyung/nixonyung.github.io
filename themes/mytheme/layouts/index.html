@@ -1,7 +1,9 @@
 {{ define "content" }}
   <div class="mb-4">
     <a href="/" class="no-underline">
-      <h1 class="m-0 box-decoration-clone animate-rotate-x">
+      <h1
+        class="inline m-0 box-decoration-clone animate-in fade-in duration-1000"
+      >
         {{ .Site.Title }}
       </h1>
     </a>
@@ -15,7 +17,13 @@
 
   <ul>
     <li>
-      <span class="block w-full py-3 px-2 select-none">My Projects:</span>
+      <div class="block w-full py-3 px-2 cursor-default">
+        <span
+          class="badge badge-primary badge-outline rounded-sm h-auto opacity-80"
+        >
+          My Projects
+        </span>
+      </div>
       <ul>
         <li>
           {{ partial "styled-link.html" (dict

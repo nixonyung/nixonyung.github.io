@@ -1618,6 +1618,16 @@ html {
   color: transparent;
 }
 
+.myprose :is(:where(h2):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.myprose :is(:where(h3):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .myprose :is(:where(blockquote):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   -webkit-hyphens: none;
           hyphens: none;
@@ -1626,7 +1636,6 @@ html {
 .myprose :is(:where(ul):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  list-style-type: circle;
   line-height: 1.25rem;
 }
 
@@ -1676,8 +1685,8 @@ html {
   margin-bottom: 1rem;
 }
 
-.mt-12 {
-  margin-top: 3rem;
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .block {
@@ -1732,18 +1741,8 @@ html {
   flex-grow: 1;
 }
 
-@keyframes rotate-x {
-  0% {
-    transform: rotateX(360deg);
-  }
-
-  100% {
-    transform: rotateX(0);
-  }
-}
-
-.animate-rotate-x {
-  animation: rotate-x 1s both;
+.cursor-default {
+  cursor: default;
 }
 
 .select-none {
@@ -1768,6 +1767,10 @@ html {
   justify-content: center;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .overflow-auto {
   overflow: auto;
 }
@@ -1785,8 +1788,8 @@ html {
   overflow-wrap: break-word;
 }
 
-.rounded-none {
-  border-radius: 0px;
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 
 .bg-base-300 {
@@ -1854,11 +1857,6 @@ html {
   color: hsl(var(--bc) / var(--tw-text-opacity));
 }
 
-.text-primary-content {
-  --tw-text-opacity: 1;
-  color: hsl(var(--pc) / var(--tw-text-opacity));
-}
-
 .text-secondary {
   --tw-text-opacity: 1;
   color: hsl(var(--s) / var(--tw-text-opacity));
@@ -1920,6 +1918,10 @@ html {
   transition-duration: 100ms;
 }
 
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
 .duration-200 {
   transition-duration: 200ms;
 }
@@ -1935,6 +1937,50 @@ html {
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+@keyframes enter {
+  from {
+    opacity: var(--tw-enter-opacity, 1);
+    transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0));
+  }
+}
+
+@keyframes exit {
+  to {
+    opacity: var(--tw-exit-opacity, 1);
+    transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
+  }
+}
+
+.animate-in {
+  animation-name: enter;
+  animation-duration: 150ms;
+  --tw-enter-opacity: initial;
+  --tw-enter-scale: initial;
+  --tw-enter-rotate: initial;
+  --tw-enter-translate-x: initial;
+  --tw-enter-translate-y: initial;
+}
+
+.fade-in {
+  --tw-enter-opacity: 0;
+}
+
+.duration-100 {
+  animation-duration: 100ms;
+}
+
+.duration-1000 {
+  animation-duration: 1000ms;
+}
+
+.duration-200 {
+  animation-duration: 200ms;
+}
+
+.duration-500 {
+  animation-duration: 500ms;
 }
 
 .visited\:text-base-content:visited {
@@ -1981,6 +2027,10 @@ html {
 @media (min-width: 640px) {
   .sm\:-left-6 {
     left: -1.5rem;
+  }
+
+  .sm\:mt-12 {
+    margin-top: 3rem;
   }
 
   .sm\:hidden {
