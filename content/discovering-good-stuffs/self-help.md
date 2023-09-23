@@ -1,7 +1,7 @@
 ---
 title: "Self Help"
 publishDate: "2023-05-08"
-lastmod: "2023-09-17"
+lastmod: "2023-09-23"
 ---
 
 - [Recognizing Your Problems](#recognizing-your-problems)
@@ -115,6 +115,12 @@ lastmod: "2023-09-17"
 
 ### You Are Not Aware Of The Flaws In Your Thinking
 
+- [How to use the Anchoring Effect (and not have it used against you)](https://youtu.be/ovhuYznC_38)
+
+- > It's easier to fool people than to convince them that they have been fooled.
+  >
+  > \- [Mark Twain](https://www.goodreads.com/quotes/584507-it-s-easier-to-fool-people-than-to-convince-them-that)
+
 - > There are no facts, only interpretations.
   >
   > \- [Friedrich Nietzsche](https://www.goodreads.com/quotes/31312-there-are-no-facts-only-interpretations)
@@ -140,8 +146,6 @@ lastmod: "2023-09-17"
   > accumulation of our experiences.
   >
   > \- [Erik Pevernagie](https://www.goodreads.com/quotes/7590367-we-are-what-we-remember-if-we-lose-our-memory)
-
-- [How to use the Anchoring Effect (and not have it used against you)](https://youtu.be/ovhuYznC_38)
 
 - > You are the average of the five people you spend the most time with.
   >
@@ -906,10 +910,17 @@ lastmod: "2023-09-17"
   - (the skill: adaptability)
   - (the awesome life: P.O.D., i.e. play, others, downtime)
 
-- > Antifragility is beyond resilience or robustness. The resilient resists
-  > shocks and stays the same; the antifragile gets better.
+- > Antifragility is beyond resilience or robustness.
+  >
+  > The resilient resists shocks and stays the same;
+  >
+  > the antifragile gets better.
   >
   > \- [Nassim Nicholas Taleb](https://quotefancy.com/quote/1529271/Nassim-Nicholas-Taleb-Antifragility-is-beyond-resilience-or-robustness-The-resilient)
+
+- > That which does not kill us makes us stronger.
+  >
+  > \- [Friedrich Nietzsche](https://www.goodreads.com/quotes/30-that-which-does-not-kill-us-makes-us-stronger)
 
 - > Truth is found neither in the thesis nor the antithesis, but in an emergent
   > synthesis which reconciles the two.
@@ -1136,15 +1147,14 @@ lastmod: "2023-09-17"
 
   - try to understand your feelings
 
-- [童年讓人長不大，記憶使人走向極端｜《以為時間久了我就會沒事》｜文森說書](https://youtu.be/MF826Has0oM)
+- [How Insecurities Work | Healthy Gamer GG](https://youtu.be/3TdzuQys07U)
 
-- > The childhood shows the man,
-  >
-  > As morning shows the day.
-  >
-  > \- [John Milton](https://www.goodreads.com/quotes/789366-the-childhood-shows-the-man-as-morning-shows-the-day)
-
-- [Don't Force People to Talk About Things](https://youtu.be/6zzqQput4CE)
+  - > You are saying that you feel afraid or anxious because you don't have
+    > something to contribute. I'm gonna toss a hypothesis to you that is the
+    > other way around:
+    >
+    > it is your fear and anxiety and insecurity that causes you to conclude
+    > that you don't have anything to contribute.
 
 - [在他人面前容易感到自卑？建立自信心你可以從這兩種方式開始｜快樂大學](https://youtu.be/WBiEevO__II)
 
@@ -1153,6 +1163,14 @@ lastmod: "2023-09-17"
 - [才華要如何展現？ H&T50](https://youtu.be/21w5IrX9NjY)
 
   - 要有一顆 "安定的心"
+
+- [童年讓人長不大，記憶使人走向極端｜《以為時間久了我就會沒事》｜文森說書](https://youtu.be/MF826Has0oM)
+
+- > The childhood shows the man,
+  >
+  > As morning shows the day.
+  >
+  > \- [John Milton](https://www.goodreads.com/quotes/789366-the-childhood-shows-the-man-as-morning-shows-the-day)
 
 - > Worrying does not take away tomorrow's troubles. It takes away today's peace.
   >
@@ -1228,6 +1246,8 @@ lastmod: "2023-09-17"
 
 - ["What 'being vulnerable' actually means" - Simon Sinek](https://youtu.be/dadg8qE0NgY)
 
+- [Don't Force People to Talk About Things](https://youtu.be/6zzqQput4CE)
+
 - > Good words are worth much, and cost little.
   >
   > \- [George Herbert](https://www.goodreads.com/quotes/7176146-good-words-are-worth-much-and-cost-little)
@@ -1260,6 +1280,13 @@ lastmod: "2023-09-17"
 - [The Art of Seduction I Robert Greene](https://youtu.be/Fg7DJmonnBU)
 
 - [The art of seduction | Seema Anand | TEDxEaling](https://youtu.be/jnS66SszwEs)
+
+- [Dating advice for Lex Fridman](https://youtu.be/VlE5Vi1ByNI)
+
+  - 3 common traits in happy spouses
+    1. conscientiousness (intelligence + awareness + attunement)
+    2. emotionally stable
+    3. moderate adventurousness
 
 - [The big difference between men and women (John Gray) 男女大不同 - 超越火星和金星 (約翰。葛瑞)](https://youtu.be/gKY1myuwoGE)
 
@@ -1496,6 +1523,17 @@ lastmod: "2023-09-17"
   >
   > \- [Anaïs Nin](https://www.goodreads.com/quotes/5030-we-don-t-see-things-as-they-are-we-see-them)
 
+- > What you see in other people is a reflection of yourself. A person of
+  > goodness sees goodness in others and a person of evil sees evil in others.
+  >
+  > \- [Omar Suleiman](https://quotefancy.com/quote/879360/Omar-Suleiman-What-you-see-in-other-people-is-a-reflection-of-yourself-A-person-of)
+
+- > To see ourselves as others see us is a most salutary gift.
+  >
+  > Hardly less important is the capacity to see others as they see themselves.
+  >
+  > \- [Aldous Huxley](https://www.goodreads.com/quotes/484219-to-see-ourselves-as-others-see-us-is-a-most)
+
 - [The Lie That Every Story Has In Common - Kurt Vonnegut On The Shapes of Stories](https://youtu.be/x3EVh2jhyLM)
 
   - > A more honest, realistic story shape is simply a straight line.
@@ -1517,10 +1555,6 @@ lastmod: "2023-09-17"
   > 人品做到極處，無有他異，只是本然。
   >
   > \- [《菜根譚・概論》](https://so.gushiwen.cn/mingju/juv_f2329d9b20ad.aspx)
-
-- > The essence of greatness is the perception that virtue is enough.
-  >
-  > \- [Ralph Waldo Emerson](https://www.goodreads.com/quotes/8556802-the-essence-of-greatness-is-the-perception-that-virtue-is)
 
 - [The Biggest Problem In Our Community...](https://youtu.be/G2SqTWNFdyU)
 
