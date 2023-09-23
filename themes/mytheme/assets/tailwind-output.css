@@ -1636,7 +1636,7 @@ html {
 .myprose :is(:where(ul):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .invisible {
