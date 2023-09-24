@@ -19,14 +19,12 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
     "concurrently": "^8.2.1",
+    "daisyui": "^3.7.4",
     "prettier": "^2.8.8",
     "prettier-plugin-go-template": "^0.0.13",
     "serve": "^14.2.1",
-    "tailwindcss": "^3.3.3"
-  },
-  "dependencies": {
-    "daisyui": "^3.7.4",
     "tailwind-scrollbar-hide": "^1.1.7",
+    "tailwindcss": "^3.3.3",
     "tailwindcss-animate": "^1.0.7"
   }
 }
