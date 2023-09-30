@@ -1,5 +1,5 @@
 ---
-title: 模仿缺乏個性?
+title: "模仿缺乏個性?"
 publishDate: "2023-04-26"
 lastmod: "2023-04-26"
 weight: 1

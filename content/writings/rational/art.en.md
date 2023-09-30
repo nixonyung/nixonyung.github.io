@@ -1,5 +1,5 @@
 ---
-title: 任何行為皆可稱為藝術
+title: "任何行為皆可稱為藝術"
 publishDate: "2023-09-24"
 lastmod: "2023-09-24"
 weight: 3

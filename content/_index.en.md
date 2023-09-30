@@ -1,5 +1,5 @@
 ---
-title: "我"
+title: "My"
 ---
 
 > 80% copied, 20% new.
@@ -12,7 +12,7 @@ title: "我"
 
 ---
 
-- 推薦 [Video Speed Controller](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk?hl=en)
+- Recommending [Video Speed Controller](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk?hl=en)
 
   1. install the extension (only available on desktop browsers)
   2. watch any YouTube video, verify that a panel appears at top-left

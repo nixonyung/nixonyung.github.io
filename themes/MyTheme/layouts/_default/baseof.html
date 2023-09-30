@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}" data-theme="business">
+<html
+  lang="{{ .Site.Language.Lang }}"
+  data-theme="business"
+>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ .Site.Params.description }}" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="{{ .Site.Params.description }}"
+    />
 
     <title>{{ .Site.Title }}</title>
 
@@ -77,26 +89,68 @@
       class="sticky top-0 z-10 bg-base-300 bg-opacity-70 backdrop-blur-md flex justify-center"
     >
       <nav
-        class="navbar max-w-4xl px-6 sm:px-9 text-xl text-secondary tracking-tighter whitespace-nowrap overflow-auto scrollbar-hide"
+        class="navbar max-w-4xl pl-6 sm:pl-9 text-xl text-secondary tracking-tighter"
       >
-        {{ if ne .Kind "404" }}
-          {{ range .Ancestors.Reverse }}
+        <div class="whitespace-nowrap overflow-x-auto scrollbar-hide">
+          {{ if ne .Kind "404" }}
+            {{ range .Ancestors.Reverse }}
+              <a
+                href="{{ .RelPermalink }}"
+                class="opacity-40 hover:opacity-80 transition-opacity duration-200 select-none"
+              >
+                {{ .Title }}&nbsp;/&nbsp;
+              </a>
+            {{ end }}
             <a
               href="{{ .RelPermalink }}"
-              class="opacity-40 hover:opacity-80 transition-opacity duration-200 select-none"
-            >
-              {{ .Title }}&nbsp;/&nbsp;
-            </a>
-          {{ end }}
-          <a href="{{ .RelPermalink }}" class="opacity-80 select-none"
-            >{{ .Title }}</a
-          >
-        {{ else }}
-          {{ with .Site.GetPage "/" }}
-            <a href="{{ .RelPermalink }}" class="opacity-80 select-none"
+              class="opacity-80 select-none"
               >{{ .Title }}</a
             >
+          {{ else }}
+            {{ with .Site.GetPage "/" }}
+              <a
+                href="{{ .RelPermalink }}"
+                class="opacity-80 select-none"
+                >{{ .Title }}</a
+              >
+            {{ end }}
           {{ end }}
+        </div>
+        {{ if .Site.IsMultiLingual }}
+          <div class="flex-1"></div>
+          <div>
+            <details class="dropdown dropdown-end">
+              <summary
+                class="btn btn-ghost btn-circle text-2xl cursor-pointer opacity-75"
+              >
+                {{ partial "icons/icon" (dict
+                  "vendor" "mdi"
+                  "name" "web"
+                  )
+                }}
+              </summary>
+              <ul
+                class="dropdown-content p-2 w-max menu text-base-content bg-base-300 border border-secondary border-opacity-50 rounded-box shadow"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="text-secondary hover:text-secondary"
+                    >{{ .Site.Language.LanguageName }}</a
+                  >
+                </li>
+                {{ range .Translations }}
+                  <li>
+                    <a
+                      href="{{ .RelPermalink }}"
+                      class="hover:text-secondary"
+                      >{{ .Language.LanguageName }}</a
+                    >
+                  </li>
+                {{ end }}
+              </ul>
+            </details>
+          </div>
         {{ end }}
       </nav>
     </header>

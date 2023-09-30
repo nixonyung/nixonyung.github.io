@@ -1,7 +1,8 @@
 ---
-title: "Self Help"
+title: "自我增值"
 publishDate: "2023-05-08"
 lastmod: "2023-09-23"
+weight: 1
 ---
 
 - [Recognizing Your Problems](#recognizing-your-problems)

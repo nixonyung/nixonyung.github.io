@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-tw": "tailwindcss -i ./themes/mytheme/assets/tailwind-input.css -o ./themes/mytheme/assets/tailwind-output.css --watch",
+    "dev-tw": "tailwindcss -i ./themes/MyTheme/assets/tailwind-input.css -o ./themes/MyTheme/assets/tailwind-output.css --watch",
     "dev-hugo": "hugo server --bind=0.0.0.0 --port 3000 --buildDrafts --disableFastRender --noHTTPCache --navigateToChanged",
     "dev": "pnpm run build-tw && concurrently \"pnpm:dev-tw\" \"pnpm:dev-hugo\"",
-    "build-tw": "tailwindcss -i ./themes/mytheme/assets/tailwind-input.css -o ./themes/mytheme/assets/tailwind-output.css",
+    "build-tw": "tailwindcss -i ./themes/MyTheme/assets/tailwind-input.css -o ./themes/MyTheme/assets/tailwind-output.css",
     "build-hugo": "hugo --minify",
     "build": "pnpm build-tw && pnpm build-hugo",
     "serve": "pnpm build && serve --no-clipboard public"
