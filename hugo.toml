@@ -6,7 +6,6 @@ timeZone = "Asia/Hong_Kong"
 [params]
 description = "Nixon Yung's Blog"
 
-[languages]
 [languages.zh]
 languageCode = 'zh-HK'
 languageDirection = 'ltr'
@@ -20,7 +19,8 @@ languageName = 'Chinglish (WIP)'
 title = "An 80% Imitator"
 weight = 2
 
-[markup]
+[markup.goldmark.renderer]
+unsafe = true
 [markup.highlight]
 # style = 'catppuccin-frappe'
 # style = 'catppuccin-macchiato'
