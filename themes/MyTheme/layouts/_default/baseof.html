@@ -98,21 +98,23 @@
                 href="{{ .RelPermalink }}"
                 class="opacity-40 hover:opacity-80 transition-opacity duration-200 select-none"
               >
-                {{ .Title }}&nbsp;/&nbsp;
+                &nbsp;/&nbsp;{{ .Title }}
               </a>
             {{ end }}
             <a
               href="{{ .RelPermalink }}"
               class="opacity-80 select-none"
-              >{{ .Title }}</a
             >
+              &nbsp;/&nbsp;{{ .Title }}
+            </a>
           {{ else }}
             {{ with .Site.GetPage "/" }}
               <a
                 href="{{ .RelPermalink }}"
                 class="opacity-80 select-none"
-                >{{ .Title }}</a
               >
+                &nbsp;/&nbsp;{{ .Title }}
+              </a>
             {{ end }}
           {{ end }}
         </div>
