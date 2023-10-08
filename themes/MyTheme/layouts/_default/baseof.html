@@ -89,33 +89,27 @@
       class="sticky top-0 z-10 bg-base-300 bg-opacity-70 backdrop-blur-md flex justify-center"
     >
       <nav
-        class="navbar max-w-4xl pl-6 sm:pl-9 text-xl text-secondary tracking-tighter"
+        class="navbar max-w-4xl pl-6 pr-4 sm:pl-9 text-xl text-secondary tracking-tighter"
       >
         <div class="whitespace-nowrap overflow-x-auto scrollbar-hide">
           {{ if ne .Kind "404" }}
             {{ range .Ancestors.Reverse }}
-              <a
-                href="{{ .RelPermalink }}"
-                class="opacity-40 hover:opacity-80 transition-opacity duration-200 select-none"
-              >
-                &nbsp;/&nbsp;{{ .Title }}
-              </a>
+              {{ partial "nav-item.html" (dict
+                "context" .
+                )
+              }}
             {{ end }}
-            <a
-              href="{{ .RelPermalink }}"
-              class="opacity-80 select-none"
-            >
-              &nbsp;/&nbsp;{{ .Title }}
-            </a>
+            {{ partial "nav-item.html" (dict
+              "context" .
+              "IsActive" true
+              )
+            }}
           {{ else }}
-            {{ with .Site.GetPage "/" }}
-              <a
-                href="{{ .RelPermalink }}"
-                class="opacity-80 select-none"
-              >
-                &nbsp;/&nbsp;{{ .Title }}
-              </a>
-            {{ end }}
+            {{ partial "nav-item.html" (dict
+              "context" .
+              "Is404" true
+              )
+            }}
           {{ end }}
         </div>
         {{ if .Site.IsMultiLingual }}
@@ -123,7 +117,7 @@
           <div>
             <details class="dropdown dropdown-end">
               <summary
-                class="btn btn-ghost btn-circle text-2xl cursor-pointer opacity-75"
+                class="btn btn-ghost btn-circle text-2xl cursor-pointer opacity-75 focus:border focus:border-secondary focus:border-opacity-50"
               >
                 {{ partial "icons/icon" (dict
                   "vendor" "mdi"
@@ -135,19 +129,18 @@
                 class="dropdown-content p-2 w-max menu text-base-content bg-base-300 border border-secondary border-opacity-50 rounded-box shadow"
               >
                 <li>
-                  <a
-                    href=""
-                    class="text-secondary hover:text-secondary"
-                    >{{ .Site.Language.LanguageName }}</a
-                  >
+                  <a class="text-secondary hover:text-secondary">
+                    {{ .Site.Language.LanguageName }}
+                  </a>
                 </li>
                 {{ range .Translations }}
                   <li>
                     <a
                       href="{{ .RelPermalink }}"
                       class="hover:text-secondary"
-                      >{{ .Language.LanguageName }}</a
                     >
+                      {{ .Language.LanguageName }}
+                    </a>
                   </li>
                 {{ end }}
               </ul>

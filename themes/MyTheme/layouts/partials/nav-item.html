@@ -1,0 +1,22 @@
+<a
+  href="
+  {{ if .Is404 }}
+    /
+  {{ else }}
+    {{ .context.RelPermalink }}
+  {{ end }}
+  "
+  class="
+  {{ if or .IsActive .Is404 }}
+    opacity-80 select-none
+  {{ else }}
+    opacity-40 hover:opacity-80 transition-opacity duration-200 select-none
+  {{ end }}
+  "
+>
+  {{ if .Is404 }}
+    {{ i18n "404_nav" }}
+  {{ else }}
+    &nbsp;/&nbsp;{{ .context.Title }}
+  {{ end }}
+</a>

@@ -1,60 +1,16 @@
 {{ define "content" }}
-  <div class="mb-4">
-    <a
-      href="/"
-      class="no-underline"
-    >
-      <h1
-        class="inline m-0 box-decoration-clone animate-in fade-in duration-1000"
-      >
-        {{ .Site.Title }}
-      </h1>
-    </a>
-  </div>
-
-  <!-- extra markdown content in content/_index.md -->
+  {{ partial "title.html" (dict "Title" .Site.Title) }}
   {{ .Content }}
-
   {{ partial "listing.html" . }}
-
-
-  <ul>
-    <li>
-      <div class="block w-full py-3 px-2 cursor-default">
-        <span
-          class="badge badge-primary badge-outline rounded-sm h-auto opacity-80"
-        >
-          {{ i18n "projects" }}
-        </span>
-      </div>
-      <ul>
-        <li>
-          {{ partial "styled-link.html" (dict
-            "Title" "An 80% Imitator (GitHub link)"
-            "RelPermalink" "https://github.com/nixonyung/nixonyung.github.io"
-            "Params" (dict "IsExternal" true)
-            )
-          }}
-        </li>
-        <li>
-          {{ partial "styled-link.html" (dict
-            "Title" "golox-tree-walk"
-            "RelPermalink" "https://github.com/nixonyung/golox-tree-walk"
-            "Lastmod" (time "2023-06-24")
-            "Params" (dict "IsExternal" true)
-            )
-          }}
-        </li>
-        <li>
-          {{ partial "styled-link.html" (dict
-            "Title" "LoL ARAM Montage - OH DEAR ITS UDYR"
-            "RelPermalink" "https://youtu.be/iySV-wmcWJE?si=ISReuyIjY4t500RX"
-            "Lastmod" (time "2023-09-17")
-            "Params" (dict "IsExternal" true)
-            )
-          }}
-        </li>
-      </ul>
-    </li>
-  </ul>
+  {{ with (dict
+    "Title" (i18n "title_projects")
+    "Pages" (dict "ByWeight" (index .Site.Data "externalLinks" "links"))
+    "Params" (dict "IsExternal" true)
+    )
+  }}
+    {{ partial "listing.html" (dict
+      "Pages" (dict "ByWeight" (slice .))
+      )
+    }}
+  {{ end }}
 {{ end }}

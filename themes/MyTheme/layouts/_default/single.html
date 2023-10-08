@@ -1,10 +1,8 @@
 {{ define "content" }}
   <article>
-    <div class="mb-4">
-      <h1 class="inline m-0 box-decoration-clone">{{ .Title }}</h1>
-    </div>
+    {{ partial "title.html" . }}
     <div
-      class="tooltip"
+      class="tooltip tooltip-right mb-4 pr-2"
       data-tip="(published on {{ .PublishDate.Format "2006 Jan 02" }})"
     >
       <span

@@ -1,23 +1,56 @@
-<ul>
+{{ $IsExternal := .Params.IsExternal }}
+
+
+<ul class="m-0">
   {{ range .Pages.ByWeight }}
-    {{ if .Pages }}
-      <li>
-        <a
-          href="{{ .RelPermalink }}"
-          class="block w-full py-3 px-2 no-underline focus:outline-none hover:bg-base-300 focus:bg-base-300 transition-colors duration-100"
-        >
-          <span
-            class="badge badge-primary badge-outline rounded-sm h-auto opacity-80"
-          >
-            {{ .Title }}
-          </span>
-        </a>
+    <li class="m-0">
+      <a
+        class="block w-full my-1 py-2 px-2 no-underline focus:outline-none group
+        {{ if .RelPermalink }}
+          hover:bg-base-300 focus:bg-base-300 transition-colors duration-100
+        {{ end }}
+        "
+        {{ with .RelPermalink }}
+          href="{{ . }}"
+          {{ if $IsExternal }}
+            target="_blank" rel="noopener"
+          {{ end }}
+        {{ end }}
+      >
+        <div class="flex items-center gap-2">
+          {{ if .Pages }}
+            <span
+              class="badge badge-primary badge-outline rounded-sm h-auto opacity-80"
+            >
+              {{ .Title }}
+            </span>
+          {{ else }}
+            <div class="flex flex-col">
+              <span>{{ .Title }}</span>
+              <span
+                class="flex-grow max-w-0 h-0.5 bg-primary opacity-0 group-hover:max-w-full group-hover:opacity-50 transition-all duration-500"
+              ></span>
+            </div>
+            {{ with .Lastmod }}
+              <span class="flex-grow"></span>
+              <span
+                class="text-base-content opacity-30 max-sm:hidden whitespace-nowrap"
+              >
+                {{ .Format "2006 Jan 02" }}
+              </span>
+              <span
+                class="text-base-content opacity-30 sm:hidden whitespace-nowrap"
+              >
+                {{ .Format "Jan 02" }}
+              </span>
+            {{ end }}
+          {{ end }}
+        </div>
+      </a>
+
+      {{ if .Pages }}
         {{ partial "listing.html" . }}
-      </li>
-    {{ else }}
-      <li>
-        {{ partial "styled-link.html" . }}
-      </li>
-    {{ end }}
+      {{ end }}
+    </li>
   {{ end }}
 </ul>
