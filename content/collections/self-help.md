@@ -1,5 +1,5 @@
 ---
-title: "自我增值"
+title: "好有道理"
 publishDate: "2023-05-08"
 lastmod: "2023-09-23"
 weight: 1
