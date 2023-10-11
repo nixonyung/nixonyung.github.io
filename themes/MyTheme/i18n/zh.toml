@@ -1,2 +1,4 @@
-title_projects = '所做'
-404_nav = '回到首頁'
+title_projects = "所做"
+404_nav = "回到首頁"
+last_updated_on = "最後更新於"
+published_on = "上載於"

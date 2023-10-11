@@ -1,2 +1,4 @@
-title_projects = 'Projects'
-404_nav = 'Back to Home'
+title_projects = "Projects"
+404_nav = "Back to Home"
+last_updated_on = "Last updated on"
+published_on = "Published on"

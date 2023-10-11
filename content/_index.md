@@ -2,20 +2,18 @@
 title: "我"
 ---
 
-> 80% copied, 20% new.
+> 80% 臨摹，20% 原創。
 >
-> 80% others, 100% you.
+> 80% 別人，100% 自己。
 >
-> 80% result, 20% time.
+> 80% 結果，20% 時間。
 >
-> 80% hardwork, 100% shine.
+> 80% 努力，100% 風采。
 
 ---
 
 - 推薦 [Video Speed Controller](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk?hl=en)
 
-  1. install the extension (only available on desktop browsers)
-  2. watch any YouTube video, verify that a panel appears at top-left
-  3. now you can press `s` to slow down the video, `d` to speed up
-
----
+  1. 裝左佢 (得 desktop 版瀏覽器有得用)
+  2. 睇片嗰陣會開始見到左上角有舊嘢 show 宜家嘅速度，見到有就得
+  3. 撳 `s` 減速, 撳 `d` 加速

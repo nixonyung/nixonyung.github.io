@@ -1,6 +1,6 @@
 {{ define "content" }}
-  {{ partial "title.html" (dict "Title" .Site.Title) }}
-  {{ .Content }}
+  {{ partial "content.html" . }}
+  <hr />
   {{ partial "listing.html" . }}
   {{ with (dict
     "Title" (i18n "title_projects")
