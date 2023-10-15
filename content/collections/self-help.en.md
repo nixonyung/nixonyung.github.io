@@ -1,7 +1,7 @@
 ---
 title: "Self Help"
 publishDate: "2023-05-08"
-lastmod: "2023-09-23"
+lastmod: "2023-10-15"
 weight: 1
 ---
 
@@ -1523,6 +1523,14 @@ weight: 1
 - > We don't see things as they are, we see them as we are.
   >
   > \- [Anaïs Nin](https://www.goodreads.com/quotes/5030-we-don-t-see-things-as-they-are-we-see-them)
+
+- > 見山是山，
+  >
+  > 見山不是山，
+  >
+  > 見山還是山。
+  >
+  > (禪語)
 
 - > What you see in other people is a reflection of yourself. A person of
   > goodness sees goodness in others and a person of evil sees evil in others.

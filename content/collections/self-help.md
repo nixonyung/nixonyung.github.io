@@ -1,48 +1,48 @@
 ---
 title: "好有道理"
-publishDate: "2023-05-08"
-lastmod: "2023-09-23"
+publishDate: "2023-10-15"
+lastmod: "2023-10-15"
 weight: 1
 ---
 
-- [Recognizing Your Problems](#recognizing-your-problems)
-  - [You Are Not Satisfied](#you-are-not-satisfied)
-  - [You Are Not Living Your Life To Its Fullest](#you-are-not-living-your-life-to-its-fullest)
-  - [You Are Not Taking Full Responsibility Of Your Life](#you-are-not-taking-full-responsibility-of-your-life)
-  - [You Are Not Aware Of The Flaws In Your Thinking](#you-are-not-aware-of-the-flaws-in-your-thinking)
-  - [You Are Not Contributing](#you-are-not-contributing)
-  - [You Are Not Prepared For The Unknown](#you-are-not-prepared-for-the-unknown)
-- [Focusing Your Energy](#focusing-your-energy)
-  - [Listening To Your Inner Voice](#listening-to-your-inner-voice)
-  - [Taking Aim](#taking-aim)
-- [Developing Competence](#developing-competence)
-  - [Understanding The Importance Of Competence](#understanding-the-importance-of-competence)
-  - [Becoming A "Camel"](#becoming-a-camel)
-    - [Being Knowledgeable](#being-knowledgeable)
-    - [Being Endurable](#being-endurable)
-    - [Being Pragmatic](#being-pragmatic)
-  - [Becoming A "Lion"](#becoming-a-lion)
-    - [Being Independent](#being-independent)
-    - [Being Articulate](#being-articulate)
-    - [Being Foresighted](#being-foresighted)
-    - [Being Adaptable](#being-adaptable)
-  - [Becoming A "Child"](#becoming-a-child)
-    - [Being Simple](#being-simple)
-    - [Being Ineffable](#being-ineffable)
-    - [Being Creative](#being-creative)
-- [Taking Actions](#taking-actions)
-  - [Starting Small](#starting-small)
-  - [Building Habits](#building-habits)
-- [Maintaining Good Mental Health](#maintaining-good-mental-health)
-  - [Understanding Your Emotions](#understanding-your-emotions)
-  - [Maintaining Relationships](#maintaining-relationships)
-  - [Identifying Toxic People](#identifying-toxic-people)
-  - [Recovering From Being Lost](#recovering-from-being-lost)
-  - [Seeing Things As They Are](#seeing-things-as-they-are)
+- [承認自己有啲問題](#承認自己有啲問題)
+  - [你對生活現況唔滿意](#你對生活現況唔滿意)
+  - [你未瞭解自己嘅潛能](#你未瞭解自己嘅潛能)
+  - [你唔係對自己嘅人生承擔 100% 責任](#你唔係對自己嘅人生承擔-100-責任)
+  - [你未知道自己思考上有漏洞](#你未知道自己思考上有漏洞)
+  - [你冇回報社會](#你冇回報社會)
+  - [你未見識過人生嘅不確定性](#你未見識過人生嘅不確定性)
+- [集中你嘅能量](#集中你嘅能量)
+  - [聆聽你嘅聲音](#聆聽你嘅聲音)
+  - [訂下目標](#訂下目標)
+- [提升實力](#提升實力)
+  - [點解要提升實力？](#點解要提升實力)
+  - [成為 "駱駝"](#成為-駱駝)
+    - [變得博學多才](#變得博學多才)
+    - [變得有韌性](#變得有韌性)
+    - [變得務實](#變得務實)
+  - [成為 "獅子"](#成為-獅子)
+    - [變得獨立](#變得獨立)
+    - [變得能言善道](#變得能言善道)
+    - [變得有遠見](#變得有遠見)
+    - [變得能隨機應變](#變得能隨機應變)
+  - [成為 "小孩"](#成為-小孩)
+    - [變得樸素](#變得樸素)
+    - [變得不可理喻](#變得不可理喻)
+    - [變得有創意](#變得有創意)
+- [作出行動](#作出行動)
+  - [由小事開始](#由小事開始)
+  - [養成習慣](#養成習慣)
+- [保持心理健康](#保持心理健康)
+  - [學會解讀你嘅情緒](#學會解讀你嘅情緒)
+  - [學會處理人際關係](#學會處理人際關係)
+  - [遠離壞人](#遠離壞人)
+  - [不再迷茫](#不再迷茫)
+  - [看見事物實際嘅模樣](#看見事物實際嘅模樣)
 
-## Recognizing Your Problems
+## 承認自己有啲問題
 
-### You Are Not Satisfied
+### 你對生活現況唔滿意
 
 - [Shuzo Matsuoka: Are you just living day to day?](https://youtu.be/iEIqVq7EZqE)
 
@@ -53,7 +53,7 @@ weight: 1
   >
   > \- [Jacque Fresco](https://quotefancy.com/quote/1195947/Jacque-Fresco-You-really-don-t-want-a-job-What-you-want-is-access-to-those-things-you-d)
 
-### You Are Not Living Your Life To Its Fullest
+### 你未瞭解自己嘅潛能
 
 - [不要 20 年後才後悔自己不知道這些事 - 出版史上最大卡司《人生勝利聖經》](https://youtu.be/w92fGRg3T3I)
 
@@ -97,7 +97,7 @@ weight: 1
   >
   > \- [Neil Gaiman](https://www.goodreads.com/quotes/17764-fairy-tales-are-more-than-true-not-because-they-tell)
 
-### You Are Not Taking Full Responsibility Of Your Life
+### 你唔係對自己嘅人生承擔 100% 責任
 
 - > If you don't design your own life plan, chances are you'll fall into someone
   > else's plan.
@@ -114,7 +114,7 @@ weight: 1
 
   - > ... to make sure everything is regulated, everything is under control.
 
-### You Are Not Aware Of The Flaws In Your Thinking
+### 你未知道自己思考上有漏洞
 
 - [How to use the Anchoring Effect (and not have it used against you)](https://youtu.be/ovhuYznC_38)
 
@@ -158,7 +158,7 @@ weight: 1
 
 - [Learning Languages Ruined My Life](https://youtu.be/ZZ_4gzoDDAE)
 
-### You Are Not Contributing
+### 你冇回報社會
 
 - > Our lives are not our own. We are bound to others, past and present, and by
   > each crime and every kindness, we birth our future.
@@ -222,7 +222,7 @@ weight: 1
   >
   > \- [Jacque Fresco](https://quotefancy.com/quote/1195950/Jacque-Fresco-When-education-and-resources-are-available-to-all-without-a-price-tag-there)
 
-### You Are Not Prepared For The Unknown
+### 你未見識過人生嘅不確定性
 
 - [OSHO: There Are Only Two Types of People](https://youtu.be/V3ueDBgYjxc)
 
@@ -253,9 +253,9 @@ weight: 1
 
 - [From Meth To Netflix](https://youtu.be/JjHFubUPLV0)
 
-## Focusing Your Energy
+## 集中你嘅能量
 
-### Listening To Your Inner Voice
+### 聆聽你嘅聲音
 
 - > First comes thought; then organization of that thought, into ideas and
   > plans; then transformation of those plans into reality.
@@ -343,7 +343,7 @@ weight: 1
   - if you, from your heart, envisioned a better world, then you are the
     "majority" despite being alone
 
-### Taking Aim
+### 訂下目標
 
 - > You become what you think about.
   >
@@ -373,9 +373,9 @@ weight: 1
   >
   > \- [Friedrich Nietzsche](https://www.goodreads.com/quotes/137-he-who-has-a-why-to-live-for-can-bear)
 
-## Developing Competence
+## 提升實力
 
-### Understanding The Importance Of Competence
+### 點解要提升實力？
 
 - [Jim Rohn - If you divided money equally to everybody](https://youtu.be/N0g6AjxvrIk)
 
@@ -477,9 +477,9 @@ weight: 1
   >
   > \- [Jim Rohn](https://www.goodreads.com/quotes/238071-let-others-lead-small-lives-but-not-you-let-others)
 
-### Becoming A "Camel"
+### 成為 "駱駝"
 
-#### Being Knowledgeable
+#### 變得博學多才
 
 - > Smart people learn from everything and everyone,
   >
@@ -596,7 +596,7 @@ weight: 1
 
 - [The world is poorly designed. But copying nature helps.](https://youtu.be/iMtXqTmfta0)
 
-#### Being Endurable
+#### 變得有韌性
 
 - > Enthusiasm is common. Endurance is rare.
   >
@@ -691,7 +691,7 @@ weight: 1
 
 - [Discipline = Freedom](https://youtu.be/eBmVv2P-v2s)
 
-#### Being Pragmatic
+#### 變得務實
 
 - > Follow your heart but take your brain with you.
   >
@@ -745,9 +745,9 @@ weight: 1
   >
   > \- [Steven D. Levitt](https://www.goodreads.com/quotes/1214269-the-key-to-learning-is-feedback-it-is-nearly-impossible)
 
-### Becoming A "Lion"
+### 成為 "獅子"
 
-#### Being Independent
+#### 變得獨立
 
 - > I don't want you to trust me, I want you to question everything I say.
   >
@@ -791,7 +791,7 @@ weight: 1
   - leaders are "crippling you", you should walk your own path and see with your
     own eyes
 
-#### Being Articulate
+#### 變得能言善道
 
 - [人為何要寫作？ 學校沒告訴你的事 - Dr Jordan B Peterson（中英字幕）](https://youtu.be/v5oi8zj0E7g)
 
@@ -850,7 +850,7 @@ weight: 1
 
   - > Decided-LY because changes what was.
 
-#### Being Foresighted
+#### 變得有遠見
 
 - [Finite Thinking vs. Infinite Mindset | Simon Sinek](https://youtu.be/ohr2fkgrP_U)
 
@@ -884,7 +884,7 @@ weight: 1
   >
   > \- [Nikola Tesla](https://www.goodreads.com/quotes/189978-let-the-future-tell-the-truth-and-evaluate-each-one)
 
-#### Being Adaptable
+#### 變得能隨機應變
 
 - [Bruce Lee Philosophy](https://youtu.be/nzQWYHHqvIw)
 
@@ -928,9 +928,9 @@ weight: 1
   >
   > \- [Georg Wilhelm Friedrich Hegel](https://www.goodreads.com/quotes/130931-truth-is-found-neither-in-the-thesis-nor-the-antithesis)
 
-### Becoming A "Child"
+### 成為 "小孩"
 
-#### Being Simple
+#### 變得樸素
 
 - > I choose a lazy person to do a hard job. Because a lazy person will find an
   > easy way to do it.
@@ -989,7 +989,7 @@ weight: 1
   >
   > \- [Don Norman](https://www.goodreads.com/quotes/10444097-how-have-we-increased-memory-thought-and-reasoning-by-the)
 
-#### Being Ineffable
+#### 變得不可理喻
 
 - > The test of a first-rate intelligence is the ability to hold two opposed
   > ideas in the mind at the same time, and still retain the ability to
@@ -1039,7 +1039,7 @@ weight: 1
   >
   > \- [Russell L. Ackoff](https://quotefancy.com/quote/1697668/Russell-L-Ackoff-To-manage-a-system-effectively-you-might-focus-on-the-interactions-of)
 
-#### Being Creative
+#### 變得有創意
 
 - > Life can be much broader, once you discover one simple fact:
   >
@@ -1075,9 +1075,9 @@ weight: 1
   >
   > \- [Ralph Waldo Emerson](https://www.goodreads.com/quotes/7755503-in-the-work-of-a-writer-of-genius-we-rediscover)
 
-## Taking Actions
+## 作出行動
 
-### Starting Small
+### 由小事開始
 
 - [This is Why You Haven't Started Anything yet](https://youtu.be/thMtsLXDUtg)
 
@@ -1108,7 +1108,7 @@ weight: 1
 
 - [Two 2-minute Rules to Beat Procrastination (in 2 minutes)](https://youtu.be/0CmtDk-joT4)
 
-### Building Habits
+### 養成習慣
 
 - > Motivation is what gets you started. Habit is what keeps you going.
   >
@@ -1140,9 +1140,9 @@ weight: 1
   >
   > \- [Robert A. Heinlein](https://www.goodreads.com/quotes/183337-take-big-bites-anything-worth-doing-is-worth-overdoing)
 
-## Maintaining Good Mental Health
+## 保持心理健康
 
-### Understanding Your Emotions
+### 學會解讀你嘅情緒
 
 - [This is Why You Don't Feel Anything Anymore](https://youtu.be/R9ykreOVIWE)
 
@@ -1196,7 +1196,7 @@ weight: 1
   >
   > \- [John Milton](https://www.goodreads.com/quotes/79846-yet-he-who-reigns-within-himself-and-rules-passions-desires)
 
-### Maintaining Relationships
+### 學會處理人際關係
 
 - > 百戰百勝，非善之善者也；不戰而屈人之兵，善之善者也。
   >
@@ -1390,7 +1390,7 @@ weight: 1
   >
   > \- [【鄭梓靈專欄】迷戀一個人是世上最寂寞的事](https://m.orangenews.hk/details?recommendId=96657)
 
-### Identifying Toxic People
+### 遠離壞人
 
 - [Simon Sinek - Trust vs Performance (Must Watch!)](https://youtu.be/PTo9e3ILmms)
 
@@ -1452,7 +1452,7 @@ weight: 1
   >
   > \- [Stephen King](https://www.goodreads.com/quotes/1011024-fool-me-once-shame-on-you-fool-me-twice-shame)
 
-### Recovering From Being Lost
+### 不再迷茫
 
 - [What is the Paradox of Choice?](https://youtu.be/FpGgMdDimKY)
 
@@ -1518,11 +1518,19 @@ weight: 1
 
   - (life is a sandbox game)
 
-### Seeing Things As They Are
+### 看見事物實際嘅模樣
 
 - > We don't see things as they are, we see them as we are.
   >
   > \- [Anaïs Nin](https://www.goodreads.com/quotes/5030-we-don-t-see-things-as-they-are-we-see-them)
+
+- > 見山是山，
+  >
+  > 見山不是山，
+  >
+  > 見山還是山。
+  >
+  > (禪語)
 
 - > What you see in other people is a reflection of yourself. A person of
   > goodness sees goodness in others and a person of evil sees evil in others.
