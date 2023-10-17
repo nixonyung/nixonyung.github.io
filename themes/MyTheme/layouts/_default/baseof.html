@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html
   lang="{{ .Site.Language.Lang }}"
   data-theme="business"
@@ -23,49 +23,56 @@
     <style>
       @font-face {
         font-family: "Recursive";
-        src: local("Recursive"),
+        src:
+          local("Recursive"),
           url("/fonts/Recursive_Casual-Light.ttf") format("truetype");
         font-weight: 300;
         font-display: swap;
       }
       @font-face {
         font-family: "Recursive";
-        src: local("Recursive"),
+        src:
+          local("Recursive"),
           url("/fonts/Recursive_Casual-Regular.ttf") format("truetype");
         font-weight: 400;
         font-display: swap;
       }
       @font-face {
         font-family: "Recursive";
-        src: local("Recursive"),
+        src:
+          local("Recursive"),
           url("/fonts/Recursive_Casual-Medium.ttf") format("truetype");
         font-weight: 500;
         font-display: swap;
       }
       @font-face {
         font-family: "Recursive";
-        src: local("Recursive"),
+        src:
+          local("Recursive"),
           url("/fonts/Recursive_Casual-SemiBold.ttf") format("truetype");
         font-weight: 600;
         font-display: swap;
       }
       @font-face {
         font-family: "Recursive";
-        src: local("Recursive"),
+        src:
+          local("Recursive"),
           url("/fonts/Recursive_Casual-Bold.ttf") format("truetype");
         font-weight: 700;
         font-display: swap;
       }
       @font-face {
         font-family: "Recursive";
-        src: local("Recursive"),
+        src:
+          local("Recursive"),
           url("/fonts/Recursive_Casual-ExtraBold.ttf") format("truetype");
         font-weight: 800;
         font-display: swap;
       }
       @font-face {
         font-family: "Recursive";
-        src: local("Recursive"),
+        src:
+          local("Recursive"),
           url("/fonts/Recursive_Casual-Black.ttf") format("truetype");
         font-weight: 900;
         font-display: swap;
@@ -84,14 +91,12 @@
   <!-- body: full-width column-flexbox with min-height -->
   <!-- header/main/footer: vertical components in body, each being a row-flexbox and with background color -->
   <!-- nav/section: containers with max-width, padding, overflow, ... -->
-  <body class="font-base min-h-screen flex flex-col">
+  <body class="flex min-h-screen flex-col font-base">
     <header
-      class="sticky top-0 z-10 bg-base-300 bg-opacity-70 backdrop-blur-md flex justify-center"
+      class="sticky top-0 z-10 flex justify-center bg-base-300 bg-opacity-70 backdrop-blur-md"
     >
-      <nav
-        class="navbar max-w-4xl pl-6 pr-4 sm:pl-9 text-xl text-secondary tracking-tighter"
-      >
-        <div class="whitespace-nowrap overflow-x-auto scrollbar-hide">
+      <nav class="navbar max-w-4xl pl-6 pr-4 text-xl tracking-tighter text-secondary sm:pl-9">
+        <div class="overflow-x-auto whitespace-nowrap scrollbar-hide">
           {{ if ne .Kind "404" }}
             {{ range .Ancestors.Reverse }}
               {{ partial "nav-item.html" (dict
@@ -115,9 +120,9 @@
         {{ if .Site.IsMultiLingual }}
           <div class="flex-1"></div>
           <div>
-            <details class="dropdown dropdown-end">
+            <details class="dropdown-end dropdown">
               <summary
-                class="btn btn-ghost btn-circle text-2xl cursor-pointer opacity-75 focus:border focus:border-secondary focus:border-opacity-50"
+                class="btn btn-circle btn-ghost cursor-pointer text-2xl opacity-75 focus:border focus:border-secondary focus:border-opacity-50"
               >
                 {{ partial "icons/icon" (dict
                   "vendor" "mdi"
@@ -126,7 +131,7 @@
                 }}
               </summary>
               <ul
-                class="dropdown-content p-2 w-max menu text-base-content bg-base-300 border border-secondary border-opacity-50 rounded-box shadow"
+                class="menu dropdown-content rounded-box w-max border border-secondary border-opacity-50 bg-base-300 p-2 text-base-content shadow"
               >
                 <li>
                   <a class="text-secondary hover:text-secondary">
@@ -150,19 +155,17 @@
       </nav>
     </header>
 
-    <main class="flex-auto my-12 flex justify-center">
+    <main class="my-12 flex flex-auto justify-center">
       <section
-        class="myprose flex-grow max-w-4xl min-w-0 px-6 sm:px-9 break-words hyphens-auto scroll-mt-16"
+        class="myprose min-w-0 max-w-4xl flex-grow scroll-mt-16 hyphens-auto break-words px-6 sm:px-9"
       >
         {{ block "content" . }}{{ end }}
       </section>
     </main>
 
-    <footer
-      class="bg-base-300 bg-opacity-70 text-base-content flex justify-center"
-    >
+    <footer class="flex justify-center bg-base-300 bg-opacity-70 text-base-content">
       <section
-        class="flex flex-col max-w-4xl px-6 sm:px-9 my-6 text-xs sm:text-sm font-light tracking-tighter sm:tracking-tight select-none"
+        class="my-6 flex max-w-4xl select-none flex-col px-6 text-xs font-light tracking-tighter sm:px-9 sm:text-sm sm:tracking-tight"
       >
         {{ $pages := .Site.RegularPages.ByLastmod }}
         {{ $l := len $pages }}
@@ -170,8 +173,7 @@
         {{ $newestYear := (index $pages (sub (len $pages) 1)).Lastmod.Year }}
         <span>
           {{ if ne $oldestYear $newestYear }}
-            © {{ $oldestYear }}-{{ $newestYear }} {{ .Site.Copyright }}. All
-            Rights Reserved.
+            © {{ $oldestYear }}-{{ $newestYear }} {{ .Site.Copyright }}. All Rights Reserved.
           {{ else }}
             © {{ $newestYear }} {{ .Site.Copyright }}. All Rights Reserved.
           {{ end }}

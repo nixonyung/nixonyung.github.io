@@ -5,11 +5,9 @@ root = true
 
 [*]
 indent_size = 2
-[*.{c,h,go,py,js,ts,php,fish,sh,lua}] # programming languages
+[*.{c,h,go,py,php,fish,sh,lua}] # programming languages
 indent_size = 4
-[.*.{js,ts}] # config files
-indent_size = 2
-[*config.{js,ts}] # config files
+[*.{js,ts}]
 indent_size = 2
 
 # prefer keeping these unchanged
