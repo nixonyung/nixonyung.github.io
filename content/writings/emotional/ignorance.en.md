@@ -6,9 +6,9 @@ weight: 2
 ---
 
 Ignorance is the key to transcendence.<br/>
-Not worrying about being incompetent,<br/>
-delegating responsibilities to others,<br/>
-and be free to persue happiness.<br/>
+No need to worry about being incompetent,<br/>
+delegate responsibilities to others,<br/>
+and be free to pursue happiness.<br/>
 
 Those who dare to realize the truth,<br/>
 will bare the pain for not being understood,<br/>
