@@ -1,13 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["themes/MyTheme/layouts/**/*.html", "layouts/**/*.html"],
+  // (ref.) [Force Tailwind to include some classes in build phase](https://stackoverflow.com/questions/71186718/force-tailwind-to-include-some-classes-in-build-phase)
+  // e.g. classes used in assets/breadcrumbs.js
+  safelist: ["text-transparent"],
   theme: {
     extend: {
       fontFamily: {
         base: "Recursive, system-ui",
       },
-      listStyleType: {
-        circle: "circle",
+      letterSpacing: {
+        tightest: "-0.125em",
       },
       typography: {
         quoteless: {

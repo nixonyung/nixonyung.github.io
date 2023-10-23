@@ -80,12 +80,28 @@
     </style>
 
     {{ $css_tailwind := resources.Get "tailwind-output.css" }}
-    {{ $css_all := slice $css_tailwind | resources.Concat "style.css" | minify | fingerprint "sha512" }}
+    {{ $css_all := (slice $css_tailwind)
+      | resources.Concat "styles.css"
+      | resources.Minify
+      | resources.Fingerprint "sha512"
+    }}
     <link
       rel="stylesheet"
       href="{{ $css_all.RelPermalink }}"
       integrity="{{ $css_all.Data.Integrity }}"
     />
+
+    {{ $js_breadcrumbs := resources.Get "breadcrumbs.js" }}
+    {{ $js_all := (slice $js_breadcrumbs)
+      | resources.Concat "scripts.js"
+      | js.Build (dict "minify" true)
+      | resources.Minify
+      | resources.Fingerprint "sha512"
+    }}
+    <script
+      src="{{ $js_all.RelPermalink }}"
+      defer
+    ></script>
   </head>
 
   <!-- body: full-width column-flexbox with min-height -->
@@ -95,28 +111,8 @@
     <header
       class="sticky top-0 z-10 flex justify-center bg-base-300 bg-opacity-70 backdrop-blur-md"
     >
-      <nav class="navbar max-w-4xl pl-6 pr-4 text-xl tracking-tighter text-secondary sm:pl-9">
-        <div class="overflow-x-auto whitespace-nowrap scrollbar-hide">
-          {{ if ne .Kind "404" }}
-            {{ range .Ancestors.Reverse }}
-              {{ partial "nav-item.html" (dict
-                "context" .
-                )
-              }}
-            {{ end }}
-            {{ partial "nav-item.html" (dict
-              "context" .
-              "IsActive" true
-              )
-            }}
-          {{ else }}
-            {{ partial "nav-item.html" (dict
-              "context" .
-              "Is404" true
-              )
-            }}
-          {{ end }}
-        </div>
+      <nav class="navbar max-w-4xl select-none gap-1 text-xl tracking-tighter text-secondary">
+        {{ partial "breadcrumbs.html" . }}
         {{ if .Site.IsMultiLingual }}
           <div class="flex-1"></div>
           <div>
@@ -167,17 +163,7 @@
       <section
         class="my-6 flex max-w-4xl select-none flex-col px-6 text-xs font-light tracking-tighter sm:px-9 sm:text-sm sm:tracking-tight"
       >
-        {{ $pages := .Site.RegularPages.ByLastmod }}
-        {{ $l := len $pages }}
-        {{ $oldestYear := (index $pages 0).Lastmod.Year }}
-        {{ $newestYear := (index $pages (sub (len $pages) 1)).Lastmod.Year }}
-        <span>
-          {{ if ne $oldestYear $newestYear }}
-            © {{ $oldestYear }}-{{ $newestYear }} {{ .Site.Copyright }}. All Rights Reserved.
-          {{ else }}
-            © {{ $newestYear }} {{ .Site.Copyright }}. All Rights Reserved.
-          {{ end }}
-        </span>
+        <span>© 2023 {{ .Site.Copyright }}. All Rights Reserved.</span>
       </section>
     </footer>
   </body>

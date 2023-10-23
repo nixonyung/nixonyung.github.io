@@ -1,0 +1,36 @@
+<span
+  id="breadcrumbs-prefix"
+  class="tracking-tightest text-md text-transparent opacity-40"
+>
+  ...
+</span>
+<div
+  id="breadcrumbs-content"
+  class="h-full overflow-x-auto whitespace-nowrap scrollbar-hide"
+>
+  {{ if ne .Kind "404" }}
+    {{ range .Ancestors.Reverse }}
+      {{ partial "breadcrumbs-item.html" (dict
+        "context" .
+        )
+      }}
+    {{ end }}
+    {{ partial "breadcrumbs-item.html" (dict
+      "context" .
+      "IsActive" true
+      )
+    }}
+  {{ else }}
+    {{ partial "breadcrumbs-item.html" (dict
+      "context" .
+      "Is404" true
+      )
+    }}
+  {{ end }}
+</div>
+<span
+  id="breadcrumbs-postfix"
+  class="tracking-tightest text-md text-transparent opacity-40"
+>
+  ...
+</span>
