@@ -1,7 +1,7 @@
 ---
 title: "好有道理"
 publishDate: "2023-10-15"
-lastmod: "2023-10-15"
+lastmod: "2023-10-24"
 weight: 1
 ---
 
@@ -189,6 +189,10 @@ weight: 1
   > shall never sit in.
   >
   > \- [(Greek proverb)](https://www.goodreads.com/quotes/666987-society-grows-great-when-old-men-plant-trees-whose-shade)
+
+- > Leave this world a little better than you found it.
+  >
+  > \- [Robert Baden-Powell](https://www.goodreads.com/quotes/8830618-leave-this-world-a-little-better-than-you-found-it)
 
 - > Well, let's say you can shave 10 seconds off of the boot time. Multiply
   > that by five million users and thats 50 million seconds, every single day.
@@ -1185,6 +1189,10 @@ weight: 1
   - > All material needs are fulfilled. Then what you are going to do? There is
     > nothing else than meditation.
 
+- > Happiness in intelligent people is the rarest thing I know.
+  >
+  > \- [Ernest Hemingway](https://www.goodreads.com/quotes/2981-happiness-in-intelligent-people-is-the-rarest-thing-i-know)
+
 - [OSHO: Prayer or Meditation?](https://youtu.be/Z4qrBmKTnFY)
 
   - we believe in gods only because we want something from him
@@ -1405,6 +1413,10 @@ weight: 1
   >
   > \- [《反經・知人》](https://m.shiwens.com/details_51588.html)
 
+- > A lie can travel half way around the world while the truth is putting on its shoes.
+  >
+  > \- [Mark Twain](https://www.goodreads.com/quotes/76-a-lie-can-travel-half-way-around-the-world-while)
+
 - > Scratch an altruist and watch a hypocrite bleed.
   >
   > \- [John Burnett](https://www.goodreads.com/quotes/8882214-scratch-an-altruist-and-watch-a-hypocrite-bleed)
@@ -1503,10 +1515,6 @@ weight: 1
   > over an injured person instead of seeking medical attention for them.
   >
   > \- [Jacque Fresco](https://www.goodreads.com/author/quotes/1080140.Jacque_Fresco)
-
-- > Happiness in intelligent people is the rarest thing I know.
-  >
-  > \- [Ernest Hemingway](https://www.goodreads.com/quotes/2981-happiness-in-intelligent-people-is-the-rarest-thing-i-know)
 
 - [Jordan Peterson - Do You Want To Have A Life? Or Be Exceptional At One Thing?](https://youtu.be/cSFSlZwneO4)
 
