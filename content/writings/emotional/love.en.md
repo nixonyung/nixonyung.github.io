@@ -52,5 +52,5 @@ Selfless?
 Sacrifices?
 Doing favours?
 
-Reasons do not lead to love.<br/>
-Reasons are only for losers.<br/>
+No reasons are needed for love.<br/>
+Only losers need reasons.<br/>
