@@ -2,7 +2,7 @@
 title: "Arrogance"
 publishDate: "2023-10-24"
 lastmod: "2023-10-24"
-weight: 6
+weight: 5
 ---
 
 Follow me.<br/>

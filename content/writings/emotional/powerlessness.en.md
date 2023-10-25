@@ -2,7 +2,7 @@
 title: "Powerlessness"
 publishDate: "2023-10-17"
 lastmod: "2023-10-17"
-weight: 5
+weight: 4
 ---
 
 People wish "not to regret things you haven't done".<br/>

@@ -2,7 +2,7 @@
 title: "好人"
 publishDate: "2023-10-02"
 lastmod: "2023-10-16"
-weight: 3
+weight: 2
 ---
 
 每個人心底裡都想成為 "好人"。<br/>

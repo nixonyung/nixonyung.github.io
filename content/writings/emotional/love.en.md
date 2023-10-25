@@ -2,7 +2,7 @@
 title: "Love"
 publishDate: "2023-10-17"
 lastmod: "2023-10-17"
-weight: 4
+weight: 2
 ---
 
 What is love?<br/>

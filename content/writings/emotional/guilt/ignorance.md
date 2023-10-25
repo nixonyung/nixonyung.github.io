@@ -2,7 +2,7 @@
 title: "無知"
 publishDate: "2023-10-02"
 lastmod: "2023-10-02"
-weight: 2
+weight: 1
 ---
 
 無知使人類成為萬物之靈。<br/>

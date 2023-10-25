@@ -2,7 +2,7 @@
 title: "狂妄"
 publishDate: "2023-10-24"
 lastmod: "2023-10-24"
-weight: 6
+weight: 5
 ---
 
 模仿我吧。<br/>

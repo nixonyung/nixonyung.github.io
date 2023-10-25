@@ -2,7 +2,7 @@
 title: "Being Good"
 publishDate: "2023-10-16"
 lastmod: "2023-10-16"
-weight: 3
+weight: 2
 ---
 
 We all long to be good.<br/>
