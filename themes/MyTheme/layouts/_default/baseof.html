@@ -4,6 +4,18 @@
   data-theme="business"
 >
   <head>
+    <meta
+      name="author"
+      content="{{ .Site.Params.author }}"
+    />
+    <meta
+      name="description"
+      content="{{ .Site.Params.description }}"
+    />
+    <meta
+      name="google-site-verification"
+      content="aMe-4fFPNYVsoK3TKSMGpH1Wb2BrBCVWpYbrN7rJoMA"
+    />
     <meta charset="UTF-8" />
     <meta
       http-equiv="X-UA-Compatible"
@@ -13,12 +25,13 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <meta
-      name="description"
-      content="{{ .Site.Params.description }}"
-    />
 
     <title>{{ .Site.Title }}</title>
+
+    <link
+      rel="canonical"
+      href="{{ .Permalink }}"
+    />
 
     <style>
       @font-face {
@@ -130,9 +143,9 @@
                 class="menu dropdown-content rounded-box w-max border border-secondary border-opacity-50 bg-base-300 p-2 text-base-content shadow"
               >
                 <li>
-                  <a class="text-secondary hover:text-secondary">
+                  <span class="text-secondary hover:text-secondary">
                     {{ .Site.Language.LanguageName }}
-                  </a>
+                  </span>
                 </li>
                 {{ range .Translations }}
                   <li>

@@ -3,7 +3,9 @@ copyright = "Nixon Yung"
 baseURL = "https://nixonyung.github.io/"
 defaultContentLanguage = 'zh'
 timeZone = "Asia/Hong_Kong"
+enableRobotsTXT = true
 [params]
+author = "Nixon Yung"
 description = "Nixon Yung's Blog"
 
 [languages.zh]
