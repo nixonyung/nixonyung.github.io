@@ -6,40 +6,16 @@
     <li class="m-0">
       {{ if .RelPermalink }}
         <a
-          class="hover:bg-base-300 focus:bg-base-300 transition-colors duration-100 group my-1 block w-full px-2 py-2 no-underline focus:outline-none"
+          class="group my-1 block w-full px-2 py-2 no-underline transition-colors duration-100 hover:bg-base-300 focus:bg-base-300 focus:outline-none"
           href="{{ .RelPermalink }}"
           {{ if $IsExternal }}target="_blank" rel="noopener"{{ end }}
         >
+          {{ partial "listing-item.html" . }}
+        </a>
       {{ else }}
         <span class="group my-1 block w-full px-2 py-2 no-underline focus:outline-none">
-      {{ end }}
-
-        <div class="flex items-center gap-2">
-          {{ if and .Pages (not .Content) }}
-            <span class="badge badge-primary badge-outline h-auto rounded-sm opacity-80">
-              {{ .Title }}
-            </span>
-          {{ else }}
-            <div class="flex flex-col">
-              <span>{{ .Title }}</span>
-              <span
-                class="h-0.5 max-w-0 flex-grow bg-primary opacity-0 transition-all duration-500 group-hover:max-w-full group-hover:opacity-50"
-              ></span>
-            </div>
-            {{ with .Lastmod }}
-              <span class="flex-grow"></span>
-              <div class="whitespace-nowrap text-base-content opacity-30">
-                <span class="max-sm:hidden">{{ .Format "2006 Jan 02" }}</span>
-                <span class="sm:hidden">{{ .Format "Jan 02" }}</span>
-              </div>
-            {{ end }}
-          {{ end }}
-        </div>
-
-      {{ if not .RelPermalink }}
+          {{ partial "listing-item.html" . }}
         </span>
-      {{ else }}
-        </a>
       {{ end }}
 
       {{ if .Pages }}

@@ -26,7 +26,12 @@
       content="width=device-width, initial-scale=1.0"
     />
 
-    <title>{{ .Site.Title }}</title>
+    {{ if .IsHome }}
+      <title>{{ .Site.Title }}</title>
+    {{ else }}
+      <title>{{ .Title }} - {{ .Site.Title }}</title>
+    {{ end }}
+
 
     <link
       rel="canonical"
@@ -129,7 +134,7 @@
         {{ if .Site.IsMultiLingual }}
           <div class="flex-1"></div>
           <div>
-            <details class="dropdown-end dropdown">
+            <details class="dropdown dropdown-end">
               <summary
                 class="btn btn-circle btn-ghost cursor-pointer text-2xl opacity-75 focus:border focus:border-secondary focus:border-opacity-50"
               >
