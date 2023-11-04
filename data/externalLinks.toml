@@ -3,6 +3,10 @@ Title = "An 80% Imitator (GitHub link)"
 RelPermalink = "https://github.com/nixonyung/nixonyung.github.io"
 
 [[links]]
+Title = "arch-install"
+RelPermalink = "https://github.com/nixonyung/arch-install"
+
+[[links]]
 Title = "golox-tree-walk"
 RelPermalink = "https://github.com/nixonyung/golox-tree-walk"
 Lastmod = 2023-06-24T00:00:00+08:00
