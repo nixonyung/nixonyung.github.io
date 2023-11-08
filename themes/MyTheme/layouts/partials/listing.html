@@ -8,7 +8,7 @@
         <a
           class="group my-1 block w-full px-2 py-2 no-underline transition-colors duration-100 hover:bg-base-300 focus:bg-base-300 focus:outline-none"
           href="{{ .RelPermalink }}"
-          {{ if $IsExternal }}target="_blank" rel="noopener"{{ end }}
+          {{ if $IsExternal }}target="_blank" rel="nofollow noopener"{{ end }}
         >
           {{ partial "listing-item.html" . }}
         </a>
