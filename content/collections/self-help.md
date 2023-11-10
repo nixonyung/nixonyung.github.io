@@ -1,7 +1,7 @@
 ---
 title: "好有道理"
 publishDate: "2023-10-15"
-lastmod: "2023-10-24"
+lastmod: "2023-11-11"
 weight: 1
 ---
 
@@ -33,7 +33,7 @@ weight: 1
 - [作出行動](#作出行動)
   - [由小事開始](#由小事開始)
   - [養成習慣](#養成習慣)
-- [保持心理健康](#保持心理健康)
+- [保持心境健康](#保持心境健康)
   - [學會解讀你嘅情緒](#學會解讀你嘅情緒)
   - [學會處理人際關係](#學會處理人際關係)
   - [遠離壞人](#遠離壞人)
@@ -1144,7 +1144,7 @@ weight: 1
   >
   > \- [Robert A. Heinlein](https://www.goodreads.com/quotes/183337-take-big-bites-anything-worth-doing-is-worth-overdoing)
 
-## 保持心理健康
+## 保持心境健康
 
 ### 學會解讀你嘅情緒
 
@@ -1217,6 +1217,8 @@ weight: 1
 - [Own Your Behaviours, Master Your Communication, Determine Your Success | Louise Evans | TEDxGenova](https://youtu.be/4BZuWrdC-9Q)
 
   - > (Five chairs, five choices)
+
+- [Improve Your Personality (1951)](https://youtu.be/VvFF9NlRlxQ)
 
 - > Between stimulus and response there is a space. In that space is our power
   > to choose our response. In our response lies our growth and our freedom.

@@ -1,7 +1,7 @@
 ---
 title: "Monologue"
 publishDate: "2023-11-05"
-lastmod: "2023-11-05"
+lastmod: "2023-11-11"
 weight: 6
 ---
 
@@ -10,11 +10,9 @@ We simply want to express ourselves.<br/>
 Those who are good at expressing themselves can see each other easily and become "extroverts".<br/>
 Those who are not good at expressing themselves have no means to find resonance and become "introverts".<br/>
 
-> I listened for the echo, and I heard only praise.
->
-> \- [Friedrich Nietzsche](https://quotefancy.com/quote/810046/Friedrich-Nietzsche-I-listened-for-the-echo-and-I-heard-only-praise)
-
-Birds of a feather flock together.<br/>
-Me, alone, walking my own path.<br/>
-Do I look like I am living in my own world?<br/>
-I am waiting for my guests.<br/>
+I see my friends doing interesting things,<br/>
+but I can only wait for them to invite me.<br/>
+I understand the power of words,<br/>
+but I can only speak with actions.<br/>
+I can see whatever hints you give to me,<br/>
+but I can only respond with the sound of silence.<br/>

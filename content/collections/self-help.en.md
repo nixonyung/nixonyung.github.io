@@ -1,7 +1,7 @@
 ---
 title: "Self Help"
 publishDate: "2023-05-08"
-lastmod: "2023-10-24"
+lastmod: "2023-11-11"
 weight: 1
 ---
 
@@ -1217,6 +1217,8 @@ weight: 1
 - [Own Your Behaviours, Master Your Communication, Determine Your Success | Louise Evans | TEDxGenova](https://youtu.be/4BZuWrdC-9Q)
 
   - > (Five chairs, five choices)
+
+- [Improve Your Personality (1951)](https://youtu.be/VvFF9NlRlxQ)
 
 - > Between stimulus and response there is a space. In that space is our power
   > to choose our response. In our response lies our growth and our freedom.
