@@ -1,6 +1,6 @@
 <div class="flex items-center gap-2">
   {{ if and .Pages (not .Content) }}
-    <span class="badge badge-secondary h-auto rounded-md px-2 py-1 font-bold opacity-80">
+    <span class="badge badge-primary h-auto rounded-md px-2 py-1 font-bold opacity-80">
       {{ .Title }}
     </span>
   {{ else }}
@@ -9,7 +9,7 @@
         {{ .Title }}
       </span>
       <span
-        class="h-0.5 max-w-0 flex-grow bg-primary opacity-0 transition-all duration-500 group-hover:max-w-full group-hover:opacity-50"
+        class="h-0.5 max-w-0 flex-grow bg-accent/80 opacity-0 transition-all duration-500 group-hover:max-w-full group-hover:opacity-100"
       ></span>
     </div>
     {{ with .Lastmod }}

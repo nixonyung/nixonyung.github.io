@@ -445,15 +445,15 @@ html {
 }
 
 :root {
-  --p: 173 98% 47%;
-  --pf: 173 98% 40%;
-  --sf: 173 75% 74%;
-  --af: 339 97% 49%;
+  --p: 173 75% 81%;
+  --pf: 173 75% 74%;
+  --sf: 0 0% 0%;
+  --af: 173 98% 40%;
   --nf: 214 12% 17%;
   --b2: 213 18% 5%;
-  --pc: 169 35% 13%;
-  --sc: 173 13% 16%;
-  --ac: 352 100% 93%;
+  --pc: 173 13% 16%;
+  --sc: 145 0% 78%;
+  --ac: 169 35% 13%;
   --nc: 216 4% 83%;
   --inc: 211 33% 14%;
   --suc: 127 29% 14%;
@@ -469,8 +469,7 @@ html {
   --border-btn: 1px;
   --tab-border: 1px;
   --tab-radius: 0.5rem;
-  --s: 173 75% 81%;
-  --a: 339 97% 56%;
+  --a: 173 98% 47%;
   --n: 214 12% 24%;
   --b1: 213 18% 12%;
   --b3: 215 14% 16%;
@@ -1029,18 +1028,18 @@ html {
   opacity: 1;
 }
 
-.badge-secondary {
+.badge-primary {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--s) / var(--tw-border-opacity));
+  border-color: hsl(var(--p) / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--s) / var(--tw-bg-opacity));
+  background-color: hsl(var(--p) / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: hsl(var(--sc) / var(--tw-text-opacity));
+  color: hsl(var(--pc) / var(--tw-text-opacity));
 }
 
-.badge-outline.badge-secondary {
+.badge-outline.badge-primary {
   --tw-text-opacity: 1;
-  color: hsl(var(--s) / var(--tw-text-opacity));
+  color: hsl(var(--p) / var(--tw-text-opacity));
 }
 
 .breadcrumbs > ul > li > a:focus, .breadcrumbs > ol > li > a:focus {
@@ -2159,7 +2158,7 @@ html {
   --tw-gradient-to: hsl(var(--bc) / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-from-position: 40%;
-  --tw-gradient-to: hsl(var(--p) / 1) var(--tw-gradient-to-position);
+  --tw-gradient-to: hsl(var(--a) / 1) var(--tw-gradient-to-position);
   --tw-gradient-to-position: 80%;
   -webkit-background-clip: text;
           background-clip: text;
@@ -2364,23 +2363,22 @@ html {
   border-width: 1px;
 }
 
-.border-secondary {
+.border-primary {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--s) / var(--tw-border-opacity));
+  border-color: hsl(var(--p) / var(--tw-border-opacity));
 }
 
 .border-opacity-50 {
   --tw-border-opacity: 0.5;
 }
 
+.bg-accent\/80 {
+  background-color: hsl(var(--a) / 0.8);
+}
+
 .bg-base-300 {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b3) / var(--tw-bg-opacity));
-}
-
-.bg-primary {
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--p) / var(--tw-bg-opacity));
 }
 
 .bg-opacity-70 {
@@ -2469,9 +2467,9 @@ html {
   color: hsl(var(--bc) / var(--tw-text-opacity));
 }
 
-.text-secondary {
+.text-primary {
   --tw-text-opacity: 1;
-  color: hsl(var(--s) / var(--tw-text-opacity));
+  color: hsl(var(--p) / var(--tw-text-opacity));
 }
 
 .text-transparent {
@@ -2596,9 +2594,9 @@ html {
   background-color: hsl(var(--b3) / var(--tw-bg-opacity));
 }
 
-.hover\:text-secondary:hover {
+.hover\:text-primary:hover {
   --tw-text-opacity: 1;
-  color: hsl(var(--s) / var(--tw-text-opacity));
+  color: hsl(var(--p) / var(--tw-text-opacity));
 }
 
 .hover\:opacity-70:hover {
@@ -2609,9 +2607,9 @@ html {
   border-width: 1px;
 }
 
-.focus\:border-secondary:focus {
+.focus\:border-primary:focus {
   --tw-border-opacity: 1;
-  border-color: hsl(var(--s) / var(--tw-border-opacity));
+  border-color: hsl(var(--p) / var(--tw-border-opacity));
 }
 
 .focus\:border-opacity-50:focus {
@@ -2636,8 +2634,8 @@ html {
   max-width: 100%;
 }
 
-.group:hover .group-hover\:opacity-50 {
-  opacity: 0.5;
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
 }
 
 @media not all and (min-width: 640px) {
