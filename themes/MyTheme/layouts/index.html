@@ -2,6 +2,7 @@
   {{ partial "content.html" . }}
   <hr />
   {{ partial "listing.html" . }}
+
   {{ with (dict
     "Title" (i18n "title_projects")
     "Pages" (dict "ByWeight" (index .Site.Data "externalLinks" "links"))

@@ -17,6 +17,8 @@
       prose-h2:text-3xl
       prose-h3:text-2xl
       prose-blockquote:hyphens-none
-      prose-ul:leading-6;
+      prose-ul:leading-6
+      prose-ul:max-sm:pl-4
+      prose-li:max-sm:pl-1;
   }
 }

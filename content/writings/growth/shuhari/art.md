@@ -1,8 +1,8 @@
 ---
-title: "藝術是在挑逗五感"
+title: "藝術"
 publishDate: "2023-09-24"
 lastmod: "2023-10-15"
-weight: 2
+weight: 3
 ---
 
 人嘅意識由情感和思想構成。<br/>

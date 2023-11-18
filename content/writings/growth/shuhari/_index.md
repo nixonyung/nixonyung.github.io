@@ -1,8 +1,8 @@
 ---
-title: "變強之路是不斷的守破離"
+title: "守破離"
 publishDate: "2023-09-23"
 lastmod: "2023-09-24"
-weight: 2
+weight: 7
 ---
 
 "守破離" 源於日本劍道：

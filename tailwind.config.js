@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        base: "Recursive, system-ui",
+        "recursive-sans-casual": "Recursive Sans Casual, system-ui",
+        "recursive-mono-casual": "Recursive Mono Casual, system-ui",
       },
       letterSpacing: {
         tightest: "-0.125em",

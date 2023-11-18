@@ -2,7 +2,7 @@
 title: "自我實現"
 publishDate: "2023-10-15"
 lastmod: "2023-10-15"
-weight: 1
+weight: 2
 ---
 
 ## 吸引力法則

@@ -14,9 +14,19 @@
     </div>
     {{ with .Lastmod }}
       <span class="flex-grow"></span>
-      <div class="whitespace-nowrap text-base-content opacity-30">
-        <span class="max-sm:hidden">{{ .Format "2006 Jan 02" }}</span>
-        <span class="sm:hidden">{{ .Format "Jan 02" }}</span>
+      <div
+        class="font-recursive-mono-casual whitespace-nowrap tracking-tight text-base-content opacity-30"
+      >
+        <span class="max-sm:hidden">
+          {{ .Format "2006 Jan 02" }}
+        </span>
+        <span class="sm:hidden">
+          {{ if eq .Year time.Now.Year }}
+            {{ .Format "Jan 02" }}
+          {{ else }}
+            {{ .Format "2006 Jan" }}
+          {{ end }}
+        </span>
       </div>
     {{ end }}
   {{ end }}

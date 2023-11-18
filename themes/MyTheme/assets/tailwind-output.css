@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -2184,6 +2184,16 @@ html {
   line-height: 1.5rem;
 }
 
+@media not all and (min-width: 640px) {
+  .myprose :is(:where(ul):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+    padding-left: 1rem;
+  }
+
+  .myprose :is(:where(li):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+    padding-left: 0.25rem;
+  }
+}
+
 .invisible {
   visibility: hidden;
 }
@@ -2423,8 +2433,12 @@ html {
   padding-right: 0.5rem;
 }
 
-.font-base {
-  font-family: Recursive, system-ui;
+.font-recursive-mono-casual {
+  font-family: Recursive Mono Casual, system-ui;
+}
+
+.font-recursive-sans-casual {
+  font-family: Recursive Sans Casual, system-ui;
 }
 
 .text-2xl {
@@ -2452,6 +2466,10 @@ html {
 
 .font-normal {
   font-weight: 400;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
 }
 
 .tracking-tighter {

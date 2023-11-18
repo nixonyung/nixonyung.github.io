@@ -40,58 +40,115 @@
 
     <style>
       @font-face {
-        font-family: "Recursive";
+        font-family: "Recursive Sans Casual";
         src:
-          local("Recursive"),
+          local("Recursive Sans Casual"),
           url("/fonts/Recursive_Casual-Light.ttf") format("truetype");
         font-weight: 300;
         font-display: swap;
       }
       @font-face {
-        font-family: "Recursive";
+        font-family: "Recursive Sans Casual";
         src:
-          local("Recursive"),
+          local("Recursive Sans Casual"),
           url("/fonts/Recursive_Casual-Regular.ttf") format("truetype");
         font-weight: 400;
         font-display: swap;
       }
       @font-face {
-        font-family: "Recursive";
+        font-family: "Recursive Sans Casual";
         src:
-          local("Recursive"),
+          local("RecursRecursive Sans Casualive"),
           url("/fonts/Recursive_Casual-Medium.ttf") format("truetype");
         font-weight: 500;
         font-display: swap;
       }
       @font-face {
-        font-family: "Recursive";
+        font-family: "Recursive Sans Casual";
         src:
-          local("Recursive"),
+          local("Recursive Sans Casual"),
           url("/fonts/Recursive_Casual-SemiBold.ttf") format("truetype");
         font-weight: 600;
         font-display: swap;
       }
       @font-face {
-        font-family: "Recursive";
+        font-family: "Recursive Sans Casual";
         src:
-          local("Recursive"),
+          local("Recursive Sans Casual"),
           url("/fonts/Recursive_Casual-Bold.ttf") format("truetype");
         font-weight: 700;
         font-display: swap;
       }
       @font-face {
-        font-family: "Recursive";
+        font-family: "Recursive Sans Casual";
         src:
-          local("Recursive"),
+          local("Recursive Sans Casual"),
           url("/fonts/Recursive_Casual-ExtraBold.ttf") format("truetype");
         font-weight: 800;
         font-display: swap;
       }
       @font-face {
-        font-family: "Recursive";
+        font-family: "Recursive Sans Casual";
         src:
-          local("Recursive"),
+          local("Recursive Sans Casual"),
           url("/fonts/Recursive_Casual-Black.ttf") format("truetype");
+        font-weight: 900;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Recursive Mono Casual";
+        src:
+          local("Recursive Mono Casual"),
+          url("/fonts/Recursive_Monospace_Casual-Light.ttf") format("truetype");
+        font-weight: 300;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Recursive Mono Casual";
+        src:
+          local("Recursive Mono Casual"),
+          url("/fonts/Recursive_Monospace_Casual-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Recursive Mono Casual";
+        src:
+          local("RecursRecursive Mono Casualive"),
+          url("/fonts/Recursive_Monospace_Casual-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Recursive Mono Casual";
+        src:
+          local("Recursive Mono Casual"),
+          url("/fonts/Recursive_Monospace_Casual-SemiBold.ttf") format("truetype");
+        font-weight: 600;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Recursive Mono Casual";
+        src:
+          local("Recursive Mono Casual"),
+          url("/fonts/Recursive_Monospace_Casual-Bold.ttf") format("truetype");
+        font-weight: 700;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Recursive Mono Casual";
+        src:
+          local("Recursive Mono Casual"),
+          url("/fonts/Recursive_Monospace_Casual-ExtraBold.ttf") format("truetype");
+        font-weight: 800;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Recursive Mono Casual";
+        src:
+          local("Recursive Mono Casual"),
+          url("/fonts/Recursive_Monospace_Casual-Black.ttf") format("truetype");
         font-weight: 900;
         font-display: swap;
       }
@@ -125,7 +182,7 @@
   <!-- body: full-width column-flexbox with min-height -->
   <!-- header/main/footer: vertical components in body, each being a row-flexbox and with background color -->
   <!-- nav/section: containers with max-width, padding, overflow, ... -->
-  <body class="flex min-h-screen flex-col font-base">
+  <body class="font-recursive-sans-casual flex min-h-screen flex-col">
     <header
       class="sticky top-0 z-10 flex justify-center bg-base-300 bg-opacity-70 backdrop-blur-md"
     >
@@ -134,7 +191,7 @@
         {{ if .Site.IsMultiLingual }}
           <div class="flex-1"></div>
           <div>
-            <details class="dropdown-end dropdown">
+            <details class="dropdown dropdown-end">
               <summary
                 class="btn btn-circle btn-ghost cursor-pointer text-2xl opacity-75 focus:border focus:border-primary focus:border-opacity-50"
               >
