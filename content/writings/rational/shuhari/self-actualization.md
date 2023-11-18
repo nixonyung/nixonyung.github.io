@@ -1,5 +1,5 @@
 ---
-title: "吸引力法則 & 自我實現"
+title: "自我實現"
 publishDate: "2023-10-15"
 lastmod: "2023-10-15"
 weight: 1

@@ -15,4 +15,4 @@ I will help you move forward.<br/>
 
 The meticulous will become god.<br/>
 What I don't like will be gone.<br/>
-Who I like will stay with me.<br/>
+Who I like will serve me well.<br/>

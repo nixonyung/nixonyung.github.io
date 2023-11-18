@@ -14,5 +14,5 @@ I see my friends doing interesting things,<br/>
 but I can only wait for them to invite me.<br/>
 I understand the power of words,<br/>
 but I can only speak with actions.<br/>
-I can see whatever hints you give to me,<br/>
+I get whatever hints you give to me,<br/>
 but I can only respond with the sound of silence.<br/>

@@ -1,5 +1,5 @@
 ---
-title: "Being Good"
+title: "Virtuousness"
 publishDate: "2023-10-16"
 lastmod: "2023-10-16"
 weight: 2

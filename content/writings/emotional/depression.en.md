@@ -12,7 +12,7 @@ weight: 7
 > You have been trying but failing to get what you have assumed to be essential for your survival.
 
 - e.g. you believe your exam results will determine your life, but you are underperforming
-- e.g. lack of parental love
+- e.g. you neeed your parents, but you lack parental love
 - e.g. you value relationships, but you got abandoned
 - e.g. you have to make money for your family, but you are stuck in your career
 - e.g. perinatal depression, afraid of your kids' health
@@ -41,13 +41,12 @@ weight: 7
 
 - the accumulated negative emotions form a new personality as a defence mechanism
 
-  - e.g. lack of energy and motivation
   - e.g. a feeling of hearing a voice persecuting you
   - e.g. recalling your mistakes
-  - e.g. thoughts of self-harm / thoughts of bloody scenes
+  - e.g. thoughts of self-harm / thoughts of bloody scenes, even though you really want to survive
   - e.g. tendency for aggressive behaviours
 
-- constant irritating headache
+- lack of energy and motivation, constant irritating headache
 
 ## Resolution
 
