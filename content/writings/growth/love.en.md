@@ -10,6 +10,6 @@ What is love?<br/>
 No reasons are required for love.<br/>
 Only those who lack love need reasons.<br/>
 
-And they are disabled to read love.<br/>
+And they are left not being able to understand love.<br/>
 They may break the chain of hatred.<br/>
 But scratch an altruist and watch a "hypocrite" bleed.<br/>

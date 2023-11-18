@@ -1,5 +1,5 @@
 ---
-title: "Virtuousness"
+title: "Virtue"
 publishDate: "2023-10-16"
 lastmod: "2023-10-16"
 weight: 2
