@@ -1,72 +1,89 @@
 ---
-title: "守破離"
-publishDate: "2023-09-23"
-lastmod: "2023-09-24"
+title: "Shuhari"
+publishDate: "2023-12-02"
+lastmod: "2023-12-02"
 weight: 7
 ---
 
-"守破離" 源於日本劍道：
+"Shuhari" originated from Japanese Kendo:
 
-- "守"：嚴從老師的教導
-- "破"：嘗試突破原有規範
-- "離"：自創新流派
+- "Shu" (守): to obey the tradition (i.e. the mainstream ideas, the masters' teachings)
+- "Ha" (破): to break the tradition and try new ideas
+- "Ri" (離): to discard the tradition and do what we want
 
-亦有其他類似嘅概念，可當作 "守破離" 嘅另類理解：
+---
 
-- 黑格爾："正反合"：
+Similar concepts:
 
-  - "正"：現有的理解
-  - "反"：新的發現，合理卻跟現有理解矛盾
-  - "合"：新的理解，同時包括 "正" 和 "反" 並不再矛盾
+- Hegel's Dialectics:
 
-- 史蒂芬·柯维："第三選擇"
+  - "Thesis": the current view of what is true
+  - "Antithesis": new discoveries that contradict the "thesis"
+  - "Synthesis": the common truth of the "thesis" and the "antithesis"
+
+- Stephen Covey's "The 3rd Alternative":
 
   - "I See Myself"
   - "I See You"
-  - 第三選擇 - "I Synergize With You"
+  - The 3rd Alternative: "I Synergize With You"
 
-- 尼采："駱駝"、"獅子"、"嬰兒"
+- Nietzsche's "Three Metamorphoses":
 
-  - "駱駝：背負傳統的束縛
-  - "獅子：破壞傳統規範
-  - "嬰兒：創造新價值
+  - "Camel": to bear the weight of the current interpretations on "value"
+  - "Lion": to be rebilious and try to be free
+  - "Child": to create new "value"
 
-### 守
+### Shu (守)
 
-> 重現你見過嘅嘢，越多越好，越精準越好。
+> To replicate what you see.
 
-- "重現"：
-  - 只需模仿，不求甚解
-- "見過"：
-  - 見過先會認知到目標係咩
-- "越多越好"：
-  - 快速學習，揾到屬於自己嘅學習方法
-    - e.g. 文字 vs 圖像?
-    - e.g. 與自己嘅已知聯想
-  - 整理出規律 (呢種能力可能就係所謂嘅 IQ)
-- "越精準越好"：
-  - 多練習
-  - 觀察入微，揾出自己同模仿對象嘅差異
+- "what you see":
 
-### 破
+  - you have to first know what you are trying to achieve
 
-亦即 "離開舒適圈"，有兩種模式 (交替使用):
+- "replicate":
 
-- "試新嘢"："靈感到"，貴多不貴精。
+  - to imitate without thinking
 
-  - 可能係天才特別多靈感
-  - 可能係喺人地身上學到
-  - 可能係撞彩諗到
+    - the more "accurate" the better
 
-- "執舊嘢"："集大成"，貴精不貴多，淨喺留低自己認為 make sense 嘅。
+      - you have to observe the details of your target
 
-  - 可能係天才對 "咩叫好嘢" 嘅觸覺特別敏鋭
-  - 可能係透過其他人/機緣巧合下見到自己嘅不足之處
-  - 增廣見聞 + 有可以整理大量資訊嘅能力（呢種能力可能就係所謂嘅 IQ）
+      - you have to practice and deliberately comparing yourself with the ideal image
 
-### 離
+    - the more "diverse" the better
 
-"離" 唔係一個階段，只係一個 moment："得咗了"，好似打機煉成左武器嗰下咁。<br/>
-但人嘅記憶係有限嘅，最好寫返筆記 / 拍片留念 / ...，第日冇咗把武器都可以 load 返存檔。<br/>
-"離" 接着回歸到 "守"，生生不息，跟住係下一把勁啲嘅武器。<br/>
-Ah shit, here we go again.<br/>
+      - you have to know how we learn
+
+        - e.g. associating new concepts with what you already know
+          - e.g. when learning a new language you should use a dictionary in that language
+          - e.g. visualization
+        - e.g. taking notes so that the future you can regain the knowledge
+          - e.g. by developing your own vocabulary and structure
+        - e.g. spaced repetition
+
+      - you have to expand your horizon
+
+        - Google and YouTube whatever you can think of
+
+### Ha (破)
+
+1. > To expand your comfort zone.
+
+   - to try things you haven't seen
+
+     - e.g. via inspiration (a.k.a. being genius)
+     - e.g. via random experiments
+
+2. > To reconstruct your comfort zone.
+
+   - try to be as simple as possible
+
+     - then you better understand what you have
+     - then you can spend less effort to use what you have
+
+### Ri (離)
+
+> You do what you think, and you can explain what you do.
+
+And returns to [Shu](#shu-守).
