@@ -1,5 +1,5 @@
 ---
-title: "Guilt"
+title: "Sins"
 publishDate: "2023-10-26"
 lastmod: "2023-10-26"
 weight: 2

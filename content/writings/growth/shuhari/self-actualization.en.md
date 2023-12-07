@@ -29,10 +29,10 @@ Commonly known as:
 
 But I would rather interpret it as:
 
-> A training for your mind to observe only your present thoughts.
+> A training for your mind to observe only your present feelings and thoughts.
 
-- no need to force yourself to have absolutely no thoughts, just remind yourself
-  to observe only your present thoughts
+- no need to force yourself to have absolutely empty your mind, just remind yourself
+  to only observe your present feelings and thoughts
   - our minds requires some deliberate training to do so (you may search "guided meditation")
 
 ## Law of Attraction

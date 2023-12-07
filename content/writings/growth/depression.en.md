@@ -1,7 +1,7 @@
 ---
 title: "Depression"
 publishDate: "2023-11-11"
-lastmod: "2023-11-11"
+lastmod: "2023-12-07"
 weight: 5
 ---
 
@@ -12,7 +12,7 @@ weight: 5
 > You have been trying but failing to get what you have assumed to be essential for your survival.
 
 - e.g. you believe your exam results will determine your life, but you are underperforming
-- e.g. you neeed your parents, but you lack parental love
+- e.g. you are still young, but you lack the parental love you need
 - e.g. you value relationships, but you got abandoned
 - e.g. you have to make money for your family, but you are stuck in your career
 - e.g. perinatal depression, afraid of your kids' health
@@ -37,14 +37,21 @@ weight: 5
 
 ## Symptoms
 
-- being hopeless and negative, but you are telling others "I'm fine"
+- being hopeless
 
-- the accumulated negative emotions form a new personality as a defence mechanism
+- giving yourself negative tags
+
+  - e.g. always thinking negatively
+  - e.g. not being able to accomplish anything
+
+- you feel painful, but you are telling others "I'm fine", thinking that they can never understand your situation
+
+- the accumulated negative emotions form a new personality as a defense mechanism
 
   - e.g. a feeling of hearing a voice persecuting you
   - e.g. recalling your mistakes
   - e.g. thoughts of self-harm / thoughts of bloody scenes, even though you really want to survive
-  - e.g. tendency for aggressive behaviours
+  - e.g. tendency for aggressive behaviors
 
 - lack of energy and motivation, constant irritating headache
 
@@ -52,9 +59,19 @@ weight: 5
 
 - bear in mind that depression consist of both negative emotions and problems in real life
 
-  - do not deny your negative emotions and you should find appropriate ways to release them
-    - e.g. develop interests
-    - e.g. see your friends more
+  - do not deny your negative emotions
+    - find appropriate ways to release them
+      - e.g. develop interests
+      - e.g. see your friends more
+    - review the reasons behind you putting negative tags on yourself
+      - e.g. why do you consider yourself as "not being able to accomplish
+        anything"?<br/>
+        --> because you are getting bad grades at school<br/>
+        --> realize that in fact "getting bad grades at school" does not mean "you are not
+        able to accomplish anything"
+        - e.g. in fact you are just constantly scolded by your parents
+        - e.g. in fact your grades are not good enough for you to choose your
+          favorite subject, and so you think that your life is destined to fail
   - consider other ways to solve your problems
     - e.g. give up things that are not suitable for you, ignore people who do not suit you
     - e.g. when you get stuck in life, discuss your assumptions about life with others to see if you are wrong

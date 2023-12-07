@@ -1,7 +1,7 @@
 ---
 title: "Shuhari"
 publishDate: "2023-12-02"
-lastmod: "2023-12-02"
+lastmod: "2023-12-07"
 weight: 7
 ---
 
@@ -30,7 +30,7 @@ Similar concepts:
 - Nietzsche's "Three Metamorphoses":
 
   - "Camel": to bear the weight of the current interpretations on "value"
-  - "Lion": to be rebilious and try to be free
+  - "Lion": to be rebellious and try to be free
   - "Child": to create new "value"
 
 ### Shu (守)
@@ -55,12 +55,23 @@ Similar concepts:
 
       - you have to know how we learn
 
-        - e.g. associating new concepts with what you already know
+        - practicing individual aspects, then combining them together
+          - e.g. when learning a new language, you should first learn the
+            pronunciations, then the words (e.g. everyday words, synonyms), and
+            then the grammar to form sentences, and then how to apply contexts
+            when grouping sentences into paragraphs / dialogues
+          - e.g. when learning a piece of music, you should first learn the
+            individual notes, then a group of notes, then a few measures, then
+            finally the whole piece
+          - e.g. when learning an instrument, you should first practice the
+            fundamentals (e.g. volume control, scales, coordination), then the
+            rudiments, then a few songs, then improvisation
+        - associating new concepts with what you already know
           - e.g. when learning a new language you should use a dictionary in that language
           - e.g. visualization
-        - e.g. taking notes so that the future you can regain the knowledge
+        - spaced repetition
+        - taking notes so that the future you can regain the knowledge
           - e.g. by developing your own vocabulary and structure
-        - e.g. spaced repetition
 
       - you have to expand your horizon
 
