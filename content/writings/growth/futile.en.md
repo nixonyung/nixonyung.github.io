@@ -1,5 +1,5 @@
 ---
-title: "Powerlessness"
+title: "Futile"
 publishDate: "2023-10-17"
 lastmod: "2023-10-17"
 weight: 4

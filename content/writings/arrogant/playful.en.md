@@ -1,5 +1,5 @@
 ---
-title: "Playfulness"
+title: "Playful"
 publishDate: "2023-12-02"
 lastmod: "2023-12-04"
 weight: 1

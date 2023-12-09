@@ -1,5 +1,5 @@
 ---
-title: "Ignorance"
+title: "Ignorant"
 publishDate: "2023-10-16"
 lastmod: "2023-10-16"
 weight: 1

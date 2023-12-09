@@ -1,5 +1,5 @@
 ---
-title: "Numbness"
+title: "Numb"
 publishDate: "2023-12-09"
 lastmod: "2023-12-09"
 weight: 1
