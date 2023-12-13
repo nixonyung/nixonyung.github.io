@@ -2,7 +2,7 @@
 title: "Art"
 publishDate: "2023-12-02"
 lastmod: "2023-12-02"
-weight: 3
+weight: 1
 ---
 
 The human mind is composed of feelings and thoughts.<br/>

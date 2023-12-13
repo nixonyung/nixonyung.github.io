@@ -2,7 +2,7 @@
 title: "Self-actualization"
 publishDate: "2023-12-02"
 lastmod: "2023-12-02"
-weight: 2
+weight: 1
 ---
 
 Commonly known as:
