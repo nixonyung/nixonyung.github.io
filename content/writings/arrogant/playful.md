@@ -1,7 +1,7 @@
 ---
 title: "花心"
 publishDate: "2023-12-02"
-lastmod: "2023-12-04"
+lastmod: "2023-12-17"
 weight: 2
 ---
 
@@ -18,3 +18,7 @@ weight: 2
 又只懂細數無窮個被拋棄嘅理由嘅自己？<br/>
 
 也許是吧。<br/>
+
+> We all wear masks, and the time comes when we cannot remove them without removing some of our own skin.
+>
+> \- [André Berthiaume](https://www.goodreads.com/quotes/27394-we-all-wear-masks-and-the-time-comes-when-we)

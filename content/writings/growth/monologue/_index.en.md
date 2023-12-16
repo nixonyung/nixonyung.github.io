@@ -1,7 +1,7 @@
 ---
 title: "Monologue"
 publishDate: "2023-11-05"
-lastmod: "2023-11-11"
+lastmod: "2023-12-17"
 weight: 2
 ---
 
@@ -16,3 +16,7 @@ I understand the power of words,<br/>
 but I can only speak with actions.<br/>
 I get whatever hints you give to me,<br/>
 but I can only respond with the sound of silence.<br/>
+
+> It is a joy to be hidden, and disaster not to be found.
+>
+> \- [D.W. Winnicott](https://www.goodreads.com/quotes/400884-it-is-a-joy-to-be-hidden-and-disaster-not)

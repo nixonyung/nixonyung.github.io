@@ -1,7 +1,7 @@
 ---
 title: "好人"
 publishDate: "2023-10-02"
-lastmod: "2023-10-16"
+lastmod: "2023-12-17"
 weight: 2
 ---
 
@@ -33,3 +33,7 @@ weight: 2
 如果最後讓喜歡嘅人喺你眼前流淚，<br/>
 如果最後一切被時代洪流淹沒，<br/>
 最差勁了。<br/>
+
+> Modern man can't see God because he doesn't look low enough.
+>
+> \- [Carl Jung](https://www.goodreads.com/quotes/10363722-modern-man-can-t-see-god-because-he-doesn-t-look-low)

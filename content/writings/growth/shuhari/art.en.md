@@ -1,7 +1,7 @@
 ---
 title: "Art"
 publishDate: "2023-12-02"
-lastmod: "2023-12-02"
+lastmod: "2023-12-17"
 weight: 1
 ---
 
@@ -86,3 +86,12 @@ Examples:
   - your works are entertaining
   - your works depict your emotions
   - your works teach something
+
+> Poetry is either something that lives like fire inside you -
+>
+> like music to the musician or Marxism to the communist -
+>
+> or else it is nothing, an empty, formalized bore around which pedants can
+> endlessly drone their notes and explanations.
+>
+> \- [F. Scott Fitzgerald](https://www.goodreads.com/quotes/9250256-poetry-is-either-something-that-lives-like-fire-inside-you)

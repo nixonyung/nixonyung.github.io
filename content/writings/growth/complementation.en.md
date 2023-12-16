@@ -1,7 +1,7 @@
 ---
 title: "Complementation"
 publishDate: "2023-11-18"
-lastmod: "2023-11-18"
+lastmod: "2023-12-17"
 weight: 6
 ---
 
@@ -23,3 +23,13 @@ as each is merely a different perspective on the world.<br/>
 Let the gone be gone. Let the unspeakable be unspeakable.<br/>
 Feelings are real. Theorems are true.<br/>
 But what happened happened. But what is here is here.<br/>
+
+> To develop a complete mind:
+>
+> Study the science of art;
+>
+> Study the art of science.
+>
+> Learn how to see. Realize that everything connects to everything else.
+>
+> \- [Leonardo da Vinci](https://www.goodreads.com/quotes/1423493-to-develop-a-complete-mind-study-the-science-of-art)

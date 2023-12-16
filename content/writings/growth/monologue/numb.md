@@ -1,7 +1,7 @@
 ---
 title: "冷感"
 publishDate: "2023-12-09"
-lastmod: "2023-12-09"
+lastmod: "2023-12-17"
 weight: 1
 ---
 
@@ -19,3 +19,7 @@ weight: 1
 也許只是想確認眼前嘅人或物可以符合期望。<br/>
 也許只是天生抗拒改變。<br/>
 也許只是這個世界真的太無聊了。<br/>
+
+> Happiness in intelligent people is the rarest thing I know.
+>
+> \- [Ernest Hemingway](https://www.goodreads.com/quotes/2981-happiness-in-intelligent-people-is-the-rarest-thing-i-know)

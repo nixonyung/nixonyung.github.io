@@ -1,7 +1,7 @@
 ---
 title: "愛"
 publishDate: "2023-10-03"
-lastmod: "2023-12-12"
+lastmod: "2023-12-17"
 weight: 1
 ---
 
@@ -18,3 +18,9 @@ weight: 1
 只有被愛的人有能力接受保持距離。<br/>
 只因冇嘢可以失去才能變得勇敢。<br/>
 只因沒有價值才需要證明自己。<br/>
+
+> The childhood shows the man,
+>
+> As morning shows the day.
+>
+> \- [John Milton](https://www.goodreads.com/quotes/789366-the-childhood-shows-the-man-as-morning-shows-the-day)

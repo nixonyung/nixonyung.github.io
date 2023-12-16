@@ -1,7 +1,7 @@
 ---
 title: "藝術"
 publishDate: "2023-09-24"
-lastmod: "2023-12-02"
+lastmod: "2023-12-17"
 weight: 1
 ---
 
@@ -81,3 +81,12 @@ weight: 1
   - 作品有娛樂性
   - 刻畫出自己當下嘅情感
   - 使觀眾有所得着
+
+> Poetry is either something that lives like fire inside you -
+>
+> like music to the musician or Marxism to the communist -
+>
+> or else it is nothing, an empty, formalized bore around which pedants can
+> endlessly drone their notes and explanations.
+>
+> \- [F. Scott Fitzgerald](https://www.goodreads.com/quotes/9250256-poetry-is-either-something-that-lives-like-fire-inside-you)

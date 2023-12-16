@@ -1,7 +1,7 @@
 ---
 title: "Futile"
 publishDate: "2023-10-17"
-lastmod: "2023-12-15"
+lastmod: "2023-12-17"
 weight: 4
 ---
 
@@ -24,3 +24,7 @@ Am I not as good as those who have got their chances?<br/>
 
 A flower cannot blossom without sunshine.<br/>
 An unchosen one is doomed to achieve nothing.<br/>
+
+> You are not worth anything if you are not in the right place.
+>
+> \- <https://www.linkedin.com/pulse/you-worth-anything-right-place-mridul-rastogi>

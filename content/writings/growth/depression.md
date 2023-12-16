@@ -1,7 +1,7 @@
 ---
 title: "抑鬱"
 publishDate: "2023-11-11"
-lastmod: "2023-12-07"
+lastmod: "2023-12-17"
 weight: 5
 ---
 
@@ -75,3 +75,9 @@ weight: 5
     - e.g. "內向" 嘅人要學習語言藝術
 
 - 唔好喪失自我，要面對自己嘅 "黑暗面"，接受佢其實同為自己嘅一部份
+
+> Yet he who reigns within himself, and rules
+>
+> Passions, desires, and fears, is more a king.
+>
+> \- [John Milton](https://www.goodreads.com/quotes/79846-yet-he-who-reigns-within-himself-and-rules-passions-desires)

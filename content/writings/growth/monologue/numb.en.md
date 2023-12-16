@@ -1,7 +1,7 @@
 ---
 title: "Numb"
 publishDate: "2023-12-09"
-lastmod: "2023-12-09"
+lastmod: "2023-12-17"
 weight: 1
 ---
 
@@ -19,3 +19,7 @@ Maybe it's because my enthusiasm I once had was denied.<br/>
 Maybe it's because I want to make sure that the person or object meet my expectation.<br/>
 Maybe it's because I am born reluctant to changes.<br/>
 Maybe it's because the world is indeed dull.<br/>
+
+> Happiness in intelligent people is the rarest thing I know.
+>
+> \- [Ernest Hemingway](https://www.goodreads.com/quotes/2981-happiness-in-intelligent-people-is-the-rarest-thing-i-know)

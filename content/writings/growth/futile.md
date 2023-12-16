@@ -1,7 +1,7 @@
 ---
 title: "無力感"
 publishDate: "2023-10-02"
-lastmod: "2023-12-15"
+lastmod: "2023-12-17"
 weight: 4
 ---
 
@@ -24,3 +24,7 @@ weight: 4
 
 花無光照綻放無期；<br/>
 人非天選一事無成。<br/>
+
+> You are not worth anything if you are not in the right place.
+>
+> \- <https://www.linkedin.com/pulse/you-worth-anything-right-place-mridul-rastogi>

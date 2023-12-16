@@ -1,7 +1,7 @@
 ---
 title: "Virtue"
 publishDate: "2023-10-16"
-lastmod: "2023-10-16"
+lastmod: "2023-12-17"
 weight: 2
 ---
 
@@ -33,3 +33,7 @@ if you end up losing yourselves,<br/>
 if you make your loved ones cry,<br/>
 if you get held back by piles of faulty stuffs,<br/>
 it is just bad.<br/>
+
+> Modern man can't see God because he doesn't look low enough.
+>
+> \- [Carl Jung](https://www.goodreads.com/quotes/10363722-modern-man-can-t-see-god-because-he-doesn-t-look-low)

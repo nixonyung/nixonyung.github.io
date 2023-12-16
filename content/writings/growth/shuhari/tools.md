@@ -1,7 +1,7 @@
 ---
 title: "工具"
 publishDate: "2023-10-15"
-lastmod: "2023-12-02"
+lastmod: "2023-12-17"
 weight: 2
 ---
 
@@ -46,6 +46,12 @@ weight: 2
     - e.g. 福利主義：人人平等
     - e.g. 無政府主義：等人們從自由之中自己揾出規律
 
+> How have we increased memory, thought, and reasoning?
+>
+> By the invention of external aids: It is things that make us smart.
+>
+> \- [Don Norman](https://www.goodreads.com/quotes/10444097-how-have-we-increased-memory-thought-and-reasoning-by-the)
+
 ---
 
 製造工具，就唔使花時間精神做重覆嘅工作；<br/>
@@ -53,6 +59,13 @@ weight: 2
 工具喺物質世界長存，承載住設計師嘅思想。<br/>
 但物質會損耗；承載嘅思想會過時。<br/>
 睇唔順眼嘅工具就嘗試將佢變成自己想要嘅模樣吧。<br/>
+
+> Life can be much broader, once you discover one simple fact:
+>
+> Everything around you that you call life was made up by people that were no
+> smarter than you.
+>
+> \- [Steve Jobs](https://www.goodreads.com/quotes/9737780-steve-jobs-when-you-grow-up-you-tend-to-get)
 
 ## 守破離之於工具
 
@@ -71,3 +84,10 @@ weight: 2
 - "離"：
 
   - 創造之物實現意識所嚮往之景象
+
+> First comes thought; then organization of that thought, into ideas and
+> plans; then transformation of those plans into reality.
+>
+> The beginning, as you will observe, is in your imagination.
+>
+> \- [Napoleon Hill](https://www.goodreads.com/quotes/458242-first-comes-thought-then-organization-of-that-thought-into-ideas)

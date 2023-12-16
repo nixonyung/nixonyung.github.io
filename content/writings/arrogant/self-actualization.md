@@ -1,7 +1,7 @@
 ---
 title: "自我實現"
 publishDate: "2023-10-15"
-lastmod: "2023-12-02"
+lastmod: "2023-12-17"
 weight: 1
 ---
 
@@ -18,6 +18,11 @@ weight: 1
 1. [冥想](#冥想) - 留意自己想點。
 2. [吸引力法則](#吸引力法則) - 相信自己。
 3. [守破離](..) - 付諸實行。
+
+> All you have to do is write one true sentence. Write the truest sentence
+> that you know.
+>
+> \- [Ernest Hemingway](https://www.goodreads.com/quotes/30849-all-you-have-to-do-is-write-one-true-sentence)
 
 ## 冥想
 
@@ -43,5 +48,14 @@ weight: 1
 > 潛移默化地改變自己嘅潛意識，令佢幫你做到你想做嘅嘢。
 
 - 你需要能夠具體地想像到你想成為嘅模樣，然後你嘅大腦就會令你更加察覺到相關嘅資訊
-  - 你嘅潛意識只能夠理解 "正面" 嘅思想
-    - e.g. 你越叫自己唔好怕黑就越會驚，反而你唔去諗怕唔怕黑先做到唔怕黑
+
+  > What you aim at determines what you see.
+  >
+  > \- [Jordan B. Peterson](https://www.goodreads.com/quotes/9108708-what-you-aim-at-determines-what-you-see)
+
+- 你嘅潛意識只能夠理解 "正面" 嘅思想
+  - e.g. 你越叫自己唔好怕黑就越會驚，反而你唔去諗怕唔怕黑先做到唔怕黑
+
+> As you think, so shall you become.
+>
+> \- [Bruce Lee](https://www.goodreads.com/quotes/381647-as-you-think-so-shall-you-become)

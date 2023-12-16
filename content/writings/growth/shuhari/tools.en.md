@@ -1,7 +1,7 @@
 ---
 title: "Tools"
 publishDate: "2023-12-02"
-lastmod: "2023-12-02"
+lastmod: "2023-12-17"
 weight: 2
 ---
 
@@ -50,6 +50,12 @@ Examples：
     - e.g. Welfarism: we are all equal
     - e.g. Anarchism: to let people to find their own paths from absolute freedom
 
+> How have we increased memory, thought, and reasoning?
+>
+> By the invention of external aids: It is things that make us smart.
+>
+> \- [Don Norman](https://www.goodreads.com/quotes/10444097-how-have-we-increased-memory-thought-and-reasoning-by-the)
+
 ---
 
 We make tools to save time and effort on repetitive work.<br/>
@@ -57,6 +63,13 @@ We use tools from our predecessors to save time and effort on making tools.<br/>
 Tools persist in the material world, carrying its creators' thoughts.<br/>
 But the tools will wear out; the ideas it carries will become obsolete.<br/>
 If you don't like something, just try to make it what you want it to be.<br/>
+
+> Life can be much broader, once you discover one simple fact:
+>
+> Everything around you that you call life was made up by people that were no
+> smarter than you.
+>
+> \- [Steve Jobs](https://www.goodreads.com/quotes/9737780-steve-jobs-when-you-grow-up-you-tend-to-get)
 
 ## Shuhari in Tools
 
@@ -75,3 +88,10 @@ If you don't like something, just try to make it what you want it to be.<br/>
 - "Ri"：
 
   - what you creates realize your vision
+
+> First comes thought; then organization of that thought, into ideas and
+> plans; then transformation of those plans into reality.
+>
+> The beginning, as you will observe, is in your imagination.
+>
+> \- [Napoleon Hill](https://www.goodreads.com/quotes/458242-first-comes-thought-then-organization-of-that-thought-into-ideas)

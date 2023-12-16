@@ -1,7 +1,7 @@
 ---
 title: "Depression"
 publishDate: "2023-11-11"
-lastmod: "2023-12-07"
+lastmod: "2023-12-17"
 weight: 5
 ---
 
@@ -78,3 +78,9 @@ weight: 5
     - e.g. practice the art of communication
 
 - do not abandon who you are, you must eventually face your "dark side" and realize it is a part of you
+
+> Yet he who reigns within himself, and rules
+>
+> Passions, desires, and fears, is more a king.
+>
+> \- [John Milton](https://www.goodreads.com/quotes/79846-yet-he-who-reigns-within-himself-and-rules-passions-desires)

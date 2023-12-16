@@ -1,7 +1,7 @@
 ---
 title: "補完"
 publishDate: "2023-11-18"
-lastmod: "2023-11-18"
+lastmod: "2023-12-17"
 weight: 6
 ---
 
@@ -23,3 +23,13 @@ weight: 6
 人不應執念於過去；也不能只相信理論。<br/>
 感覺固然真實不虛；道理也是永垂不朽。<br/>
 發生了便是發生了；在眼前就是在眼前。<br/>
+
+> To develop a complete mind:
+>
+> Study the science of art;
+>
+> Study the art of science.
+>
+> Learn how to see. Realize that everything connects to everything else.
+>
+> \- [Leonardo da Vinci](https://www.goodreads.com/quotes/1423493-to-develop-a-complete-mind-study-the-science-of-art)
