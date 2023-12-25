@@ -1,7 +1,7 @@
 ---
 title: "補完"
 publishDate: "2023-11-18"
-lastmod: "2023-12-17"
+lastmod: "2023-12-25"
 weight: 6
 ---
 
@@ -20,10 +20,6 @@ weight: 6
 互相排斥卻也同時存在，<br/>
 其實只係從不同角度解讀世界罷了。<br/>
 
-人不應執念於過去；也不能只相信理論。<br/>
-感覺固然真實不虛；道理也是永垂不朽。<br/>
-發生了便是發生了；在眼前就是在眼前。<br/>
-
 > To develop a complete mind:
 >
 > Study the science of art;
@@ -33,3 +29,11 @@ weight: 6
 > Learn how to see. Realize that everything connects to everything else.
 >
 > \- [Leonardo da Vinci](https://www.goodreads.com/quotes/1423493-to-develop-a-complete-mind-study-the-science-of-art)
+
+人不應執念於過去；也不能只相信理論。<br/>
+感覺固然真實不虛；道理也是永垂不朽。<br/>
+發生了便是發生了；在眼前就是在眼前。<br/>
+
+> 刻意則行不肆，牽物則其志流。
+>
+> \- [《反經・德表》](https://www.arteducation.com.tw/mingju/juv_2591fdac52d0.html)

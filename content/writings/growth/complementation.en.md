@@ -1,7 +1,7 @@
 ---
 title: "Complementation"
 publishDate: "2023-11-18"
-lastmod: "2023-12-17"
+lastmod: "2023-12-25"
 weight: 6
 ---
 
@@ -20,10 +20,6 @@ Each valid on their own,<br/>
 the contradicting claims are yet coexisting,<br/>
 as each is merely a different perspective on the world.<br/>
 
-Let the gone be gone. Let the unspeakable be unspeakable.<br/>
-Feelings are real. Theorems are true.<br/>
-But what happened happened. But what is here is here.<br/>
-
 > To develop a complete mind:
 >
 > Study the science of art;
@@ -33,3 +29,11 @@ But what happened happened. But what is here is here.<br/>
 > Learn how to see. Realize that everything connects to everything else.
 >
 > \- [Leonardo da Vinci](https://www.goodreads.com/quotes/1423493-to-develop-a-complete-mind-study-the-science-of-art)
+
+Let the gone be gone. Let the unspeakable be unspeakable.<br/>
+Feelings are real. Theorems are true.<br/>
+But what happened happened. But what is here is here.<br/>
+
+> 刻意則行不肆，牽物則其志流。
+>
+> \- [《反經・德表》](https://www.arteducation.com.tw/mingju/juv_2591fdac52d0.html)
