@@ -27,11 +27,3 @@ feelings are erased like they don't matter.<br/>
 
 Ignorance is bliss.<br/>
 Realizing is misery.<br/>
-
-> 心正而後身正，身正而後左右正，左右正而後朝廷正，朝廷正而後國家正，國家正而後天下正。
->
-> 故天下不正，修之家；家不正，修之朝廷；朝廷不正，修之左右；左右不正，修之身；身不正，修之心。
->
-> 所修彌近，所濟彌遠。
->
-> \- [《反經・德表》](https://www.arteducation.com.tw/guwen/bookv_5028.html)
