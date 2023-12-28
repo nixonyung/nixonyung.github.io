@@ -2,7 +2,7 @@
 title: "孤鳴"
 publishDate: "2023-11-05"
 lastmod: "2023-12-17"
-weight: 2
+weight: 1
 ---
 
 人冇分 "外向" 同 "內向"。<br/>

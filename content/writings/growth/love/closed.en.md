@@ -2,7 +2,7 @@
 title: "Closed"
 publishDate: "2023-12-25"
 lastmod: "2023-12-25"
-weight: 1
+weight: 2
 ---
 
 I won't be alone if I just follow others,<br/>
