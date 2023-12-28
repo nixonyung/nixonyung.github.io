@@ -14,10 +14,6 @@ weight: 3
 妳温柔的縫好傷口，<br/>
 無人能走進我的心。<br/>
 
-> 世間少見的關係，不代表不會發生；
+> Men get to be a mixture of the charming mannerisms of the women they have known.
 >
-> 不容於世的戀情，不代表不能是真愛。
->
-> 你相信奇蹟，你相信凡事永遠有例外。
->
-> \- [【鄭梓靈專欄】迷戀一個人是世上最寂寞的事](https://m.orangenews.hk/details?recommendId=96657)
+> \- [F. Scott Fitzgerald](https://www.goodreads.com/quotes/63033-men-get-to-be-a-mixture-of-the-charming-mannerisms)

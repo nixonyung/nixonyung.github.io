@@ -30,6 +30,8 @@ as each is merely a different perspective on the world.<br/>
 >
 > \- [Leonardo da Vinci](https://www.goodreads.com/quotes/1423493-to-develop-a-complete-mind-study-the-science-of-art)
 
+---
+
 Let the gone be gone. Let the unspeakable be unspeakable.<br/>
 Feelings are real. Theorems are true.<br/>
 But what happened happened. But what is here is here.<br/>

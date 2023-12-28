@@ -2,7 +2,7 @@
 title: "Shuhari"
 publishDate: "2023-12-02"
 lastmod: "2023-12-17"
-weight: 7
+weight: 2
 ---
 
 "Shuhari" originated from Japanese Kendo:
@@ -75,7 +75,7 @@ Similar concepts:
 
 ### Ha (破)
 
-1. to expand your comfort zone
+1. you can expand your comfort zone
 
    - to try things you haven't seen
 
@@ -86,7 +86,7 @@ Similar concepts:
      >
      > \- [Jim Rohn](https://www.goodreads.com/quotes/364884-unless-you-change-how-you-are-you-will-always-have)
 
-2. to reconstruct your comfort zone
+2. you can reconstruct your comfort zone
 
    - try to be as simple as possible
 
@@ -106,9 +106,9 @@ Similar concepts:
 
 ### Ri (離)
 
-> You do what you think, and you can explain what you do.
+You do what you think, and you can explain what you do.
 
-And returns to [Shu](#shu-守).
+And you return to [Shu](#shu-守).
 
 > 兵無常勢，水無常形，能因敵變化而取勝者，謂之神。
 >

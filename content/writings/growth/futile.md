@@ -22,7 +22,7 @@ weight: 4
 我仲未足夠好嗎？<br/>
 我比攞到機會嘅人差嗎？<br/>
 
-花無光照綻放無期；<br/>
+花乏光照綻放無期；<br/>
 人非天選一事無成。<br/>
 
 > You are not worth anything if you are not in the right place.

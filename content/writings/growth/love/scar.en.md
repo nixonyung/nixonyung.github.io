@@ -14,10 +14,6 @@ The boy walks in, alone in the world.<br/>
 You gently stitched up the wounds.<br/>
 No one can enter my heart.<br/>
 
-> 世間少見的關係，不代表不會發生；
+> Men get to be a mixture of the charming mannerisms of the women they have known.
 >
-> 不容於世的戀情，不代表不能是真愛。
->
-> 你相信奇蹟，你相信凡事永遠有例外。
->
-> \- [【鄭梓靈專欄】迷戀一個人是世上最寂寞的事](https://m.orangenews.hk/details?recommendId=96657)
+> \- [F. Scott Fitzgerald](https://www.goodreads.com/quotes/63033-men-get-to-be-a-mixture-of-the-charming-mannerisms)
