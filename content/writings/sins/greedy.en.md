@@ -1,5 +1,5 @@
 ---
-title: "Deficient"
+title: "Greedy"
 publishDate: "2023-12-31"
 lastmod: "2023-12-31"
 weight: 3
