@@ -2,7 +2,7 @@
 title: "抑鬱"
 publishDate: "2023-11-11"
 lastmod: "2023-12-17"
-weight: 5
+weight: 2
 ---
 
 (免責聲明: 部分係根據我嘅實際經驗但冇科學根據)

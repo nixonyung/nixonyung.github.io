@@ -2,7 +2,7 @@
 title: "無力感"
 publishDate: "2023-10-02"
 lastmod: "2023-12-17"
-weight: 4
+weight: 1
 ---
 
 人們高呼 "搏盡無悔"，<br/>
