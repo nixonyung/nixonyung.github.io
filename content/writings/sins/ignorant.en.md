@@ -2,7 +2,7 @@
 title: "Ignorant"
 publishDate: "2023-10-16"
 lastmod: "2023-12-17"
-weight: 1
+weight: 2
 ---
 
 Ignorance is the key to transcendence.<br/>
