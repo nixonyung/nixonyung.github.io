@@ -1,5 +1,5 @@
 ---
-title: "Greedy"
+title: "Greed"
 publishDate: "2023-12-31"
 lastmod: "2023-12-31"
 weight: 3
@@ -34,8 +34,8 @@ Or this?<br/>
 Or both?<br/>
 
 Perhaps the root of all evil is people's superstition about money.<br/>
-People believe that simply holding money will fulfill their wishes.<br/>
-But even though money can buy things, it is us who create value.<br/>
+People believe that simply holding money will fulfill their never-ending wishes.<br/>
+Although it is true that money can be exchanged for things of the same value, it is us who create value.<br/>
 
 > Set a beggar on horseback and he'll ride to the Devil.
 >

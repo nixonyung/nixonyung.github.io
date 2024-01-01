@@ -22,7 +22,7 @@ Infinite despair only composed of finite tests.<br/>
 Allies' sacrifices will break the boundaries for us.<br/>
 The spirit of never giving up will let us no longer be confused.<br/>
 It's time to show the kids what's possible.<br/>
-It's time to show the world who we are.<br/>
+It's time to show the world who we are!<br/>
 
 > 人必須在正確的墮落之道上墮落到底。
 >
