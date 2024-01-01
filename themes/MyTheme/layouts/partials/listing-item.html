@@ -15,7 +15,13 @@
     {{ with .Lastmod }}
       <span class="flex-grow"></span>
       <div
-        class="font-recursive-mono-casual whitespace-nowrap tracking-tight text-base-content opacity-30"
+        class="
+        {{ if le (time.Now.Sub .) (time.Duration "hour" 48) }}
+          text-primary opacity-75
+        {{ else }}
+          text-base-content opacity-30
+        {{ end }}
+        whitespace-nowrap font-recursive-mono-casual tracking-tight"
       >
         <span class="max-sm:hidden">
           {{ .Format "2006 Jan 02" }}
