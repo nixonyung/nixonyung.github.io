@@ -27,3 +27,7 @@ weight: 2
 
 無知的人是幸福的。<br/>
 其他人都身處地獄。<br/>
+
+> Leave this world a little better than you found it.
+>
+> \- [Robert Baden-Powell](https://www.goodreads.com/quotes/8830618-leave-this-world-a-little-better-than-you-found-it)

@@ -27,3 +27,7 @@ feelings are erased like they don't matter.<br/>
 
 Ignorance is bliss.<br/>
 Realizing is misery.<br/>
+
+> Leave this world a little better than you found it.
+>
+> \- [Robert Baden-Powell](https://www.goodreads.com/quotes/8830618-leave-this-world-a-little-better-than-you-found-it)

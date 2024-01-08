@@ -27,9 +27,12 @@ Befriending loneliness.<br/>
 Reconciling with myself.<br/>
 And I will bring myself light.<br/>
 
-> If you don't design your own life plan, chances are you'll fall into someone
-> else's plan.
+> Let others lead small lives, but not you.
 >
-> And guess what they have planed for you? Not much.
+> Let others argue over small things, but not you.
 >
-> \- [Jim Rohn](https://www.goodreads.com/quotes/53606-if-you-don-t-design-your-own-life-plan-chances-are)
+> Let others cry over small hurts, but not you.
+>
+> Let others leave their future in someone else's hands, but not you.
+>
+> \- [Jim Rohn](https://www.goodreads.com/quotes/238071-let-others-lead-small-lives-but-not-you-let-others)

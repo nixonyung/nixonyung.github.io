@@ -16,3 +16,7 @@ weight: 3
 一絲不苟的人將成為神。<br/>
 妨礙我之物會消失殆盡，<br/>
 我喜歡嘅人亦會心甘情願侍奉我。<br/>
+
+> It's easier to fool people than to convince them that they have been fooled.
+>
+> [Mark Twain](https://www.goodreads.com/quotes/584507-it-s-easier-to-fool-people-than-to-convince-them-that)

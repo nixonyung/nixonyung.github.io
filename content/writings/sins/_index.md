@@ -8,3 +8,7 @@ weight: 2
 不知者不罪，<br/>
 何以使心碎？<br/>
 懊悔永不去。<br/>
+
+> Every one is really responsible to all men for all men and for everything.
+>
+> \- [Fyodor Dostoyevsky](https://www.goodreads.com/quotes/426886-every-one-is-really-responsible-to-all-men-for-all)

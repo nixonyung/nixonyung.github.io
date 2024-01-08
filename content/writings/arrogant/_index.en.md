@@ -16,3 +16,7 @@ I will help you move forward.<br/>
 The meticulous will become god.<br/>
 What I don't like will be gone.<br/>
 Who I like will serve me well.<br/>
+
+> It's easier to fool people than to convince them that they have been fooled.
+>
+> [Mark Twain](https://www.goodreads.com/quotes/584507-it-s-easier-to-fool-people-than-to-convince-them-that)
