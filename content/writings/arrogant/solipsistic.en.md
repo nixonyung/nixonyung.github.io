@@ -1,7 +1,7 @@
 ---
 title: "Solipsistic"
 publishDate: "2024-01-10"
-lastmod: "2024-01-10"
+lastmod: "2024-01-12"
 weight: 1
 ---
 
@@ -29,17 +29,16 @@ The winner takes it all:<br/>
 The strong shed blood and tears to define the right way.<br/>
 The weak beg for food and humbly survive.<br/>
 
-Why do we always have to sacrifice good people?<br/>
+Why do we always sacrifice the good?<br/>
 
-In Utopia, there are only good people and good things.<br/>
-I can make use of everything in the world.<br/>
+From what I see, the strong know their strengths come from built roads.<br/>
+Therefore, they accept that they have the responsibility to pave the way for future generations.<br/>
+The weak are always afraid of losing what they have, cursing passerby for not giving them food.<br/>
 
-A chain is only as strong as its weakest link.<br/>
-A cup of clean water cannot hold a drop of ink.<br/>
-Isn't there a saying "the discerning have no friends"?<br/>
-It's just that God is mysophobic.<br/>
+That's why the rebel should be eaten.<br/>
 
-I am God.<br/>
+The ghost, just as when it is alive, become Death.<br/>
+Wherever it isn't, whatever dies.<br/>
 
 > The reasonable man adapts himself to the world;
 >
@@ -48,3 +47,14 @@ I am God.<br/>
 > Therefore all progress depends on the unreasonable man.
 >
 > \- [George Bernard Shaw](https://quotefancy.com/quote/811991/George-Bernard-Shaw-The-reasonable-man-adapts-himself-to-the-world-the-unreasonable-one)
+
+---
+
+Only my existence cannot be doubted.<br/>
+Only what I observed is true.<br/>
+God is dead.<br/>
+I will become the God of the new world.<br/>
+
+> You can't trust code that you did not totally create yourself.
+>
+> \- [Ken Thompson](https://www.brainyquote.com/quotes/ken_thompson_254875)

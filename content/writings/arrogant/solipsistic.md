@@ -1,7 +1,7 @@
 ---
 title: "唯我"
 publishDate: "2024-01-10"
-lastmod: "2024-01-10"
+lastmod: "2024-01-12"
 weight: 1
 ---
 
@@ -29,17 +29,16 @@ weight: 1
 強者耗鮮血奮不顧身，所行之路謂之正義。<br/>
 弱者死剩把口，張口要飯苟延殘喘。<br/>
 
-點解總係要犧牲好人？<br/>
+為何從來都是犧牲好人？<br/>
 
-理想鄉只有好人配好物。<br/>
-世間萬物皆為我所用。<br/>
+依我所見，厲害嘅人都知道自己嘅力量源於前人行過嘅路，<br/>
+所以會心知自己有責任為後人鋪路。<br/>
+軟弱嘅人總係驚自己蝕底左，食少啖飯都要嘈。<br/>
 
-羣體有幾強取決於最弱嘅個體。<br/>
-清水容不下一滴墨。<br/>
-人至察則無徒？<br/>
-係神有潔癖罷了。<br/>
+所以要吃了那作反的人。<br/>
 
-唯有我能成為神。<br/>
+厲鬼猶如在世化身死神：<br/>
+非所到之處，寸草不生。<br/>
 
 > The reasonable man adapts himself to the world;
 >
@@ -48,3 +47,14 @@ weight: 1
 > Therefore all progress depends on the unreasonable man.
 >
 > \- [George Bernard Shaw](https://quotefancy.com/quote/811991/George-Bernard-Shaw-The-reasonable-man-adapts-himself-to-the-world-the-unreasonable-one)
+
+---
+
+唯有我嘅存在不能被質疑，<br/>
+唯有我所觀察嘅確實存在。<br/>
+上帝已死。<br/>
+我將成為新世界的神。<br/>
+
+> You can't trust code that you did not totally create yourself.
+>
+> \- [Ken Thompson](https://www.brainyquote.com/quotes/ken_thompson_254875)
