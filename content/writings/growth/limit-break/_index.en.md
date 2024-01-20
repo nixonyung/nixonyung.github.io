@@ -16,9 +16,9 @@ But when the enemy is too strong and there is no way back,<br/>
 we should awaken the "spiral power" and break the unbreakable.<br/>
 
 Befriend former enemies and obtain an indispensable power.<br/>
-Transform ancient spirits into knowledge and have it guides the way.<br/>
+Transform ancient spirits into knowledge and have them guide the way.<br/>
 Slim probabilities only represent the limits of the assumptions.<br/>
-Infinite despair only composed of finite tests.<br/>
+Infinite despair is just composed of finite tests.<br/>
 Allies' sacrifices will break the boundaries for us.<br/>
 The spirit of never giving up will let us no longer be confused.<br/>
 It's time to show the kids what's possible.<br/>

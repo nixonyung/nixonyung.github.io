@@ -5,7 +5,7 @@ lastmod: "2020-02-27"
 weight: 3
 ---
 
-The boy like the girl,<br/>
+The boy likes the girl,<br/>
 "You are the only one in my heart."<br/>
 The girl pretends to hear nothing.<br/>
 "You should be mature."<br/>

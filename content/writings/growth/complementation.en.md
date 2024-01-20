@@ -16,7 +16,7 @@ Isn't it true that any object can be analyzed?<br/>
 Observe matters and we can answer what spirit is.<br/>
 Your existence means nothing.<br/>
 
-Each valid on their own,<br/>
+Each valid on its own,<br/>
 the contradicting claims are yet coexisting,<br/>
 as each is merely a different perspective on the world.<br/>
 
@@ -34,7 +34,7 @@ as each is merely a different perspective on the world.<br/>
 
 Let the gone be gone. Let the unspeakable be unspeakable.<br/>
 Feelings are real. Theorems are true.<br/>
-But what happened happened. But what is here is here.<br/>
+But what happened is happened. But what is here is here.<br/>
 
 > 刻意則行不肆，牽物則其志流。
 >

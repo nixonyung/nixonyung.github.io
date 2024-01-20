@@ -19,7 +19,7 @@ Required steps:
    own voice says.
 2. [Law of Attraction](#law-of-attraction) - hacking your brain by believing you
    can achieve what you want.
-3. [Shuhari](..) - taking actions.
+3. [Shuhari](..) - taking action.
 
 > All you have to do is write one true sentence. Write the truest sentence
 > that you know.
@@ -36,9 +36,9 @@ But I would rather interpret it as:
 
 > A training for your mind to observe only your present feelings and thoughts.
 
-- no need to force yourself to have absolutely empty your mind, just remind yourself
+- no need to force yourself to empty your mind, just remind yourself
   to only observe your present feelings and thoughts
-  - our minds requires some deliberate training to do so (you may search "guided meditation")
+  - our minds require some deliberate training to do so (you may search "guided meditation")
 
 ## Law of Attraction
 
@@ -59,7 +59,7 @@ But I would rather interpret it as:
 
 - note that your subconscious can only understand "positive" thoughts
 
-  - e.g. If you tell yourself "you ain't afraid of ghosts" you will be more
+  - e.g. If you tell yourself "You ain't afraid of ghosts" you will be more
     afraid. To be not afraid you should not think about ghosts at all.
 
 > As you think, so shall you become.

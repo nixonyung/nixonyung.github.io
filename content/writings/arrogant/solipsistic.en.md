@@ -6,7 +6,7 @@ weight: 1
 ---
 
 Good times breed corruption.<br/>
-The weak assimilate the strong with number advantage.<br/>
+The weak assimilate the strong with a number advantage.<br/>
 But you are still not me.<br/>
 
 > I am a rare species, not a stereotype.
@@ -33,11 +33,11 @@ Why do we always sacrifice the good?<br/>
 
 From what I see, the strong know their strengths come from built roads.<br/>
 Therefore, they accept that they have the responsibility to pave the way for future generations.<br/>
-The weak are always afraid of losing what they have, cursing passerby for not giving them food.<br/>
+The weak are always afraid of losing what they have, cursing passersby for not giving them food.<br/>
 
 That's why the rebel should be eaten.<br/>
 
-The ghost, just as when it is alive, become Death.<br/>
+The ghost, just as when it is alive, becomes Death.<br/>
 Wherever it isn't, whatever dies.<br/>
 
 > The reasonable man adapts himself to the world;

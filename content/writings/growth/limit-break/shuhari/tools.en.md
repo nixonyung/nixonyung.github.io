@@ -15,8 +15,8 @@ Examples：
 
 - our bodies
 
-  - to move ourselves in the world
-  - to interact with things / tools in the world
+  - to have us move in the world
+  - to interact with things/tools in the world
 
 - human inventions
 
@@ -31,9 +31,9 @@ Examples：
 
 - art tools
 
-  - e.g. in photography (art form) we may use a digital camera (tool) to create
-    a digital file (tool) which can be viewed on a computer (tool) to show what
-    you photographed
+  - e.g. for photography (art form), we may use a digital camera (tool) to create
+    a digital file (tool) that can be viewed on a computer (tool) to show what
+    we photographed
 
 - companies
 
@@ -44,11 +44,11 @@ Examples：
   - to reallocate resources via political systems so that as many people as
     possible can survive
   - we all have different definitions of "how to ensure as many people as possible can survive"
-    - e.g. Confucianism: everyone has their own duties
+    - e.g. Confucianism: everyone has their duties
     - e.g. Elitism: the most capable should take over
     - e.g. Legalism: ruling the country by law
     - e.g. Welfarism: we are all equal
-    - e.g. Anarchism: to let people to find their own paths from absolute freedom
+    - e.g. Anarchism: to let people find their paths from absolute freedom
 
 > How have we increased memory, thought, and reasoning?
 >
@@ -59,8 +59,8 @@ Examples：
 ---
 
 We make tools to save time and effort on repetitive work.<br/>
-We use tools from our predecessors to save time and effort on making tools.<br/>
-Tools persist in the material world, carrying its creators' thoughts.<br/>
+We use tools from our predecessors to save time and effort in making tools.<br/>
+Tools persist in the material world, carrying their creators' thoughts.<br/>
 But the tools will wear out; the ideas it carries will become obsolete.<br/>
 If you don't like something, just try to make it what you want it to be.<br/>
 
@@ -76,7 +76,7 @@ If you don't like something, just try to make it what you want it to be.<br/>
 - "Shu"：
 
   - to imitate the thought processes and details of excellent designers
-  - to imitate craftsmanship of excellent craftsmen
+  - to imitate the craftsmanship of excellent craftsmen
   - to imitate the nature
   - to keep trying and gain experience
 
@@ -87,7 +87,7 @@ If you don't like something, just try to make it what you want it to be.<br/>
 
 - "Ri"：
 
-  - what you creates realize your vision
+  - what you creates realizes your vision
 
 > First comes thought; then organization of that thought, into ideas and
 > plans; then transformation of those plans into reality.

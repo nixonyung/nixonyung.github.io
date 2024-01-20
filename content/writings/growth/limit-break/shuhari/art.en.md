@@ -71,14 +71,14 @@ Examples:
 
 - "Shu"：
 
-  - to imitate mainstream artists and learn the rules in the art
+  - to imitate mainstream artists and learn the rules of the art
   - to imitate lesser-known artists and think outside the box
 
 - "Ha"
 
-  - to study and deconstruct existing works / facts
+  - to study and deconstruct existing works/facts
   - to experiment
-  - to add your own ideas / what you like
+  - to add your ideas / what you like
   - to refine and control
 
 - "Ri"：

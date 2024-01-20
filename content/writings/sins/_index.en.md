@@ -5,7 +5,7 @@ lastmod: "2023-10-26"
 weight: 2
 ---
 
-Anything you do is correct,<br/>
+Anything you do is correct<br/>
 until you make someone cry,<br/>
 and then your existence is a mistake.<br/>
 

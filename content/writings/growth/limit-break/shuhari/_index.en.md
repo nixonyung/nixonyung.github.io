@@ -18,7 +18,7 @@ Similar concepts:
 - Hegel's Dialectics:
 
   - "Thesis": the current view of what is true
-  - "Antithesis": new discoveries that contradict the "thesis"
+  - "Antithesis": discoveries that contradict the "thesis"
   - "Synthesis": the common truth of the "thesis" and the "antithesis"
 
     > Truth is found neither in the thesis nor the antithesis, but in an emergent
@@ -58,11 +58,11 @@ Similar concepts:
   - associating new concepts with what you already know
     - e.g. when learning a new language you should use a dictionary in that language
     - e.g. visualization
-  - practicing individual aspects, then combining them together
+  - practicing individual aspects, then combining them
     - e.g. when learning a new language, you should first learn the
-      pronunciations, then the words (e.g. everyday words, synonyms), and
+      pronunciations, then the words (e.g. everyday words, synonyms),
       then the grammar to form sentences, and then how to apply contexts
-      when grouping sentences into paragraphs / dialogues
+      when grouping sentences into paragraphs/dialogues
     - e.g. when learning a piece of music, you should first learn the
       individual notes, then a group of notes, then a few measures, then
       finally the whole piece
@@ -70,8 +70,8 @@ Similar concepts:
       fundamentals (e.g. volume control, scales, coordination), then the
       rudiments, then a few songs, then improvisation
   - "spaced repetition"
-  - taking notes so that the future you can regain the knowledge
-    - e.g. by developing your own vocabulary and structure
+  - taking notes so that you can regain the knowledge in the future
+    - e.g. by developing your vocabulary and structure
 
 ### Ha (破)
 

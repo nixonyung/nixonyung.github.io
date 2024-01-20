@@ -10,14 +10,14 @@ but I have found my Polaris.<br/>
 I want to be myself,<br/>
 but then I will deviate from others' tracks.<br/>
 I want someone to witness my light,<br/>
-but how can a star steals the sun's spotlight?<br/>
+but how can a star steal the sun's spotlight?<br/>
 
 I put on a good show with all I have.<br/>
 Heaven knows. Earth knows. I know.<br/>
 No one knows.<br/>
 
 The show is over, left with a glimpse of my light.<br/>
-My dream is over, left with ashes of a lonely star.<br/>
+My dream is over, left with the ashes of a lonely star.<br/>
 
 > I ought to have ... become a star in the sky.
 >

@@ -6,14 +6,14 @@ weight: 3
 ---
 
 Follow me.<br/>
-I have done all the trial-and-error.<br/>
+I have done all the trial and error.<br/>
 You shall copy my success.<br/>
 
 Look up to me.<br/>
-With me you are never alone.<br/>
+With me, you are never alone.<br/>
 I will help you move forward.<br/>
 
-The meticulous will become god.<br/>
+The meticulous will become God.<br/>
 What I don't like will be gone.<br/>
 Who I like will serve me well.<br/>
 

@@ -9,13 +9,13 @@ People wish "not to regret things you haven't done".<br/>
 I have already done all I can.<br/>
 Leaving no regrets, but also not getting anything.<br/>
 
-People reassure others, saying "failure leads to success".<br/>
+People reassure others, saying "Failure leads to success".<br/>
 I have already done all I can.<br/>
 Yet persistence leads me to nowhere.<br/>
 
 People believe "we can change the world by changing ourselves".<br/>
 I have already done all I can.<br/>
-Still I haven't replaced all the obsolete stuffs.<br/>
+Still I haven't replaced all the obsolete stuff.<br/>
 
 It is said that "Chance favors the prepared mind."<br/>
 Then where are my chances?<br/>
