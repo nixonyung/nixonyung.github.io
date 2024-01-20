@@ -2,7 +2,7 @@
 title: "藝術"
 publishDate: "2023-09-24"
 lastmod: "2023-12-17"
-weight: 1
+weight: 15
 ---
 
 人嘅意識由情感和思想構成。<br/>

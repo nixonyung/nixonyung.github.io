@@ -2,7 +2,7 @@
 title: "Depression"
 publishDate: "2023-11-11"
 lastmod: "2023-12-17"
-weight: 2
+weight: 10
 ---
 
 (Disclaimer: loosely based on my personal experience but lack scientific evidence)

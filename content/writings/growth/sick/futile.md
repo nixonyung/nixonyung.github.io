@@ -2,7 +2,7 @@
 title: "徒勞"
 publishDate: "2023-10-02"
 lastmod: "2023-12-17"
-weight: 1
+weight: 9
 ---
 
 人們高呼 "搏盡無悔"，<br/>

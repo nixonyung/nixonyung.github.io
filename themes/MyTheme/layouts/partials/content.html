@@ -26,4 +26,35 @@
   </header>
 
   {{ .Content }}
+
+
+  <div class="flex opacity-60">
+    <a
+      id="navigation-prev"
+      class="mt-9 hidden text-primary no-underline sm:mt-12"
+    >
+      <div class="flex items-center gap-3">
+        {{ partial "icons/icon" (dict
+          "vendor" "mdi"
+          "name" "arrow-left"
+          )
+        }}
+        {{ i18n "navigation_prev" }}
+      </div>
+    </a>
+    <span class="flex-1"></span>
+    <a
+      id="navigation-next"
+      class="mt-9 hidden text-primary no-underline sm:mt-12"
+    >
+      <div class="flex items-center gap-3">
+        {{ i18n "navigation_next" }}
+        {{ partial "icons/icon" (dict
+          "vendor" "mdi"
+          "name" "arrow-right"
+          )
+        }}
+      </div>
+    </a>
+  </div>
 </article>

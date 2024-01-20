@@ -2,7 +2,7 @@
 title: "所寫"
 publishDate: "2024-01-08"
 lastmod: "2024-01-08"
-weight: 2
+weight: 1
 ---
 
 > In the work of a writer of genius, we rediscover our own neglected thoughts.

@@ -167,7 +167,8 @@
     />
 
     {{ $js_breadcrumbs := resources.Get "breadcrumbs.js" }}
-    {{ $js_all := (slice $js_breadcrumbs)
+    {{ $js_navigation := resources.Get "navigation.js" }}
+    {{ $js_all := (slice $js_breadcrumbs $js_navigation)
       | resources.Concat "scripts.js"
       | js.Build (dict "minify" true)
       | resources.Minify
@@ -182,7 +183,7 @@
   <!-- body: full-width column-flexbox with min-height -->
   <!-- header/main/footer: vertical components in body, each being a row-flexbox and with background color -->
   <!-- nav/section: containers with max-width, padding, overflow, ... -->
-  <body class="font-recursive-sans-casual flex min-h-screen flex-col">
+  <body class="flex min-h-screen flex-col font-recursive-sans-casual">
     <header
       class="sticky top-0 z-10 flex justify-center bg-base-300 bg-opacity-70 backdrop-blur-md"
     >

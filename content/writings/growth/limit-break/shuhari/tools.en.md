@@ -2,7 +2,7 @@
 title: "Tools"
 publishDate: "2023-12-02"
 lastmod: "2023-12-17"
-weight: 2
+weight: 16
 ---
 
 The human mind is composed of feelings and thoughts.<br/>

@@ -2,7 +2,7 @@
 title: "Virtue"
 publishDate: "2023-10-16"
 lastmod: "2023-12-17"
-weight: 1
+weight: 18
 ---
 
 We all long to be good.<br/>

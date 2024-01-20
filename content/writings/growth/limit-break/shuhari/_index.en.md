@@ -2,7 +2,7 @@
 title: "Shuhari"
 publishDate: "2023-12-02"
 lastmod: "2023-12-17"
-weight: 2
+weight: 14
 ---
 
 "Shuhari" originated from Japanese Kendo:

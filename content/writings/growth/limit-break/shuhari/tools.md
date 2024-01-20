@@ -2,7 +2,7 @@
 title: "工具"
 publishDate: "2023-10-15"
 lastmod: "2023-12-17"
-weight: 2
+weight: 16
 ---
 
 人嘅意識由情感和思想構成。<br/>

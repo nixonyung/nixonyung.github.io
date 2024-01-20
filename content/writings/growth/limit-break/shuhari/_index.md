@@ -2,7 +2,7 @@
 title: "守破離"
 publishDate: "2023-09-23"
 lastmod: "2023-12-17"
-weight: 2
+weight: 14
 ---
 
 "守破離" 源於日本劍道：
