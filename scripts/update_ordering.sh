@@ -11,35 +11,29 @@ set -Eeuo pipefail
 IFS=$'\n\t'
 
 pathnames_ordered=(
-    "/writings/"
-    "/writings/growth/"
-    "/writings/growth/love/"
-    "/writings/growth/love/monologue/"
-    "/writings/growth/love/over/"
-    "/writings/growth/love/scar/"
-    "/writings/growth/love/numb/"
-    "/writings/growth/sick/"
-    "/writings/growth/sick/futile/"
-    "/writings/growth/sick/depression/"
-    "/writings/growth/complementation/"
-    "/writings/growth/limit-break/"
-    "/writings/growth/limit-break/self-actualization/"
-    "/writings/growth/limit-break/shuhari/"
-    "/writings/growth/limit-break/shuhari/art/"
-    "/writings/growth/limit-break/shuhari/tools/"
-    "/writings/sins/"
-    "/writings/sins/virtue/"
-    "/writings/sins/ignorance/"
-    "/writings/sins/greed/"
-    "/writings/arrogant/"
-    "/writings/arrogant/solipsistic/"
-    "/writings/arrogant/playful/"
-    "/writings/incapable/"
+    "/writings/limit-break/_index"
+    "/writings/limit-break/self-actualization"
+    "/writings/limit-break/shuhari/_index"
+    "/writings/limit-break/shuhari/art"
+    "/writings/limit-break/shuhari/tools"
+    "/writings/limit-break/truth-seeking/_index"
+    "/writings/limit-break/truth-seeking/complementation"
+    "/writings/limit-break/truth-seeking/greed"
+    "/writings/sick/_index"
+    "/writings/sick/monologue"
+    "/writings/sick/numb"
+    "/writings/sick/scar"
+    "/writings/sick/futile"
+    "/writings/sick/over"
+    "/writings/sick/depression"
+    "/writings/sick/incapable"
+    "/writings/solipsistic/_index"
+    "/writings/solipsistic/solitude"
 )
 
 function pathname {
     # (ref.) [Using sed get substring between two double quotes](https://superuser.com/questions/515421/using-sed-get-substring-between-two-double-quotes)
-    echo "$(echo "$1" | gnucut -d'.' -f 1)/"
+    echo "$(echo "$1" | gnucut -d'.' -f 1)"
 }
 
 function weight {
@@ -55,7 +49,7 @@ function weight {
 # (ref.) [Minimal safe Bash script template](https://betterdev.blog/minimal-safe-bash-script-template/)
 pushd "$(dirname "$0")/.." >/dev/null
 {
-    # update articles' weights
+    # update articles' weights:
     # (ref.) [Globbing for only files in Bash](https://stackoverflow.com/questions/20745656/globbing-for-only-files-in-bash)
     for file in $(gfind ./content -name '*.md' -printf '/%P\n'); do
         weight="$(weight "$file")"
@@ -66,10 +60,12 @@ pushd "$(dirname "$0")/.." >/dev/null
         fi
     done
 
-    # update navigation_pathnames_ordered.js
+    # update navigation_pathnames_ordered.js:
     echo "const pathnames_ordered = [" >./themes/MyTheme/assets/navigation_pathnames_ordered.js
-    for i in "${!pathnames_ordered[@]}"; do
-        echo "  \"${pathnames_ordered["$i"]}\"," >>./themes/MyTheme/assets/navigation_pathnames_ordered.js
+    # (ref.) [Bash For Loop Array: Iterate Through Array Values](https://www.cyberciti.biz/faq/bash-for-loop-array/)
+    for pathname in "${pathnames_ordered[@]}"; do
+        # (ref.) [Remove a fixed prefix/suffix from a string in Bash](https://stackoverflow.com/questions/16623835/remove-a-fixed-prefix-suffix-from-a-string-in-bash)
+        echo "  \"${pathname%"/_index"}/\"," >>./themes/MyTheme/assets/navigation_pathnames_ordered.js
     done
     echo "];" >>./themes/MyTheme/assets/navigation_pathnames_ordered.js
 }

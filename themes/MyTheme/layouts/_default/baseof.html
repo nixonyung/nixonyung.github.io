@@ -155,7 +155,9 @@
     </style>
 
     {{ $css_tailwind := resources.Get "tailwind-output.css" }}
-    {{ $css_all := (slice $css_tailwind)
+    {{ $css_all := (slice
+      $css_tailwind
+      )
       | resources.Concat "styles.css"
       | resources.Minify
       | resources.Fingerprint "sha512"
@@ -167,8 +169,13 @@
     />
 
     {{ $js_breadcrumbs := resources.Get "breadcrumbs.js" }}
+    {{ $js_navigation_pathnames_ordered := resources.Get "navigation_pathnames_ordered.js" }}
     {{ $js_navigation := resources.Get "navigation.js" }}
-    {{ $js_all := (slice $js_breadcrumbs $js_navigation)
+    {{ $js_all := (slice
+      $js_breadcrumbs
+      $js_navigation_pathnames_ordered
+      $js_navigation
+      )
       | resources.Concat "scripts.js"
       | js.Build (dict "minify" true)
       | resources.Minify

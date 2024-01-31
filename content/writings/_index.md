@@ -1,8 +1,6 @@
 ---
 title: "所寫"
-publishDate: "2024-01-08"
-lastmod: "2024-01-08"
-weight: 1
+isGroup: true
 ---
 
 > In the work of a writer of genius, we rediscover our own neglected thoughts.

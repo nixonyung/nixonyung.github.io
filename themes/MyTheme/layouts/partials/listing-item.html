@@ -1,5 +1,5 @@
 <div class="flex items-center gap-2">
-  {{ if and .Pages (not .Content) }}
+  {{ if .Params.IsGroup }}
     <span class="badge badge-primary h-auto rounded-md px-2 py-1 font-bold opacity-80">
       {{ .Title }}
     </span>

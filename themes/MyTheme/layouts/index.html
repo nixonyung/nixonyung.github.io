@@ -3,15 +3,16 @@
   <hr />
   {{ partial "listing.html" . }}
 
-  {{ with (dict
+  {{ $projects_page := (dict
     "Title" (i18n "title_projects")
     "Pages" (dict "ByWeight" (index .Site.Data "externalLinks" "links"))
-    "Params" (dict "IsExternal" true)
+    "Params" (dict "IsExternal" true "IsGroup" true)
     )
   }}
-    {{ partial "listing.html" (dict
-      "Pages" (dict "ByWeight" (slice .))
-      )
+  {{ partial "listing.html" (dict
+    "Pages" (dict
+    "ByWeight" (slice $projects_page)
+    )
+    )
     }}
-  {{ end }}
 {{ end }}
