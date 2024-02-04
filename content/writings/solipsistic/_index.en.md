@@ -2,7 +2,7 @@
 title: "Solipsistic"
 publishDate: "2024-01-10"
 lastmod: "2024-01-12"
-weight: 17
+weight: 18
 ---
 
 Good times breed corruption.<br/>

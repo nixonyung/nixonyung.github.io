@@ -27,6 +27,7 @@ pathnames_ordered=(
     "/writings/sick/over"
     "/writings/sick/depression"
     "/writings/sick/incapable"
+    "/writings/sick/plastic-love"
     "/writings/solipsistic/_index"
     "/writings/solipsistic/solitude"
 )
