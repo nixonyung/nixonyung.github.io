@@ -1,67 +1,42 @@
 ---
 title: "Self-actualization"
 publishDate: "2023-12-02"
-lastmod: "2023-12-17"
+lastmod: "2024-02-10"
 weight: 2
 ---
 
-Commonly known as:
+Self-actualization = being able to do whatever you can think of
 
-> To fully realize your potential.
-
-But I would rather interpret it as:
-
-> Being able to do whatever you can think of.
+> Everything you can imagine is real.
+>
+> \- [Pablo Picasso](https://www.goodreads.com/quotes/5521-everything-you-can-imagine-is-real)
 
 Required steps:
 
-1. [Meditation](#meditation) - knowing what you want by acknowledging what your
-   own voice says.
-2. [Law of Attraction](#law-of-attraction) - hacking your brain by believing you
-   can achieve what you want.
-3. [Shuhari](..) - taking action.
+1. learning meditation
 
-> All you have to do is write one true sentence. Write the truest sentence
-> that you know.
->
-> \- [Ernest Hemingway](https://www.goodreads.com/quotes/30849-all-you-have-to-do-is-write-one-true-sentence)
+   - to observe your feelings and thoughts at the moment
+     - look up "guided meditation"
 
-## Meditation
+2. finding your goal (a.k.a. Law of Attraction)
 
-Commonly known as:
+   - imagining yourself becoming the person you want to become, and by doing so
+     you will subconsciously pay attention to relevant information
 
-> To clear your mind.
+     > What you aim at determines what you see.
+     >
+     > \- [Jordan B. Peterson](https://www.goodreads.com/quotes/9108708-what-you-aim-at-determines-what-you-see)
 
-But I would rather interpret it as:
+3. taking actions
 
-> A training for your mind to observe only your present feelings and thoughts.
+   - putting yourself in an environment that encourages you to take actions
 
-- no need to force yourself to empty your mind, just remind yourself
-  to only observe your present feelings and thoughts
-  - our minds require some deliberate training to do so (you may search "guided meditation")
+     > You should be far more concerned with your current trajectory than with your current results.
+     >
+     > \- [James Clear](https://www.goodreads.com/quotes/9548184-you-should-be-far-more-concerned-with-your-current-trajectory)
 
-## Law of Attraction
+   - not being afraid of failures
 
-Commonly known as:
-
-> Positive thoughts attract positive events to your lives.
-
-But I would rather interpret it as:
-
-> To reprogram your subconscious so that it knows how to help you to get what you want.
-
-- have a clear image of who you want to be, then your mind will make you more
-  aware of relevant information
-
-  > What you aim at determines what you see.
-  >
-  > \- [Jordan B. Peterson](https://www.goodreads.com/quotes/9108708-what-you-aim-at-determines-what-you-see)
-
-- note that your subconscious can only understand "positive" thoughts
-
-  - e.g. If you tell yourself "You ain't afraid of ghosts" you will be more
-    afraid. To be not afraid you should not think about ghosts at all.
-
-> As you think, so shall you become.
->
-> \- [Bruce Lee](https://www.goodreads.com/quotes/381647-as-you-think-so-shall-you-become)
+     > The first draft of anything is shit.
+     >
+     > \- [Ernest Hemingway](https://www.goodreads.com/quotes/52073-the-first-draft-of-anything-is-shit)
