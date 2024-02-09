@@ -5,18 +5,34 @@ const locale = () => {
   return "";
 };
 
-pathnames_ordered.forEach((pathname, idx) => {
-  // (ref.) [Get relative URL from absolute URL](https://stackoverflow.com/a/34020750)
-  if (window.location.pathname.endsWith(pathname)) {
-    if (idx != 0) {
-      const a = document.getElementById("navigation-prev");
-      a.href = locale() + pathnames_ordered[idx - 1];
-      a.classList.remove("hidden");
-    }
-    if (idx != pathnames_ordered.length - 1) {
-      const a = document.getElementById("navigation-next");
-      a.href = locale() + pathnames_ordered[idx + 1];
-      a.classList.remove("hidden");
-    }
+const prevLinkElm = document.getElementById("navigation-prev");
+const nextLinkElm = document.getElementById("navigation-next");
+
+// (ref.) [Get relative URL from absolute URL](https://stackoverflow.com/a/34020750)
+const idx = pathnames_ordered.findIndex((pathname) => window.location.pathname.endsWith(pathname));
+if (idx !== -1) {
+  if (idx !== 0) {
+    prevLinkElm.href = locale() + pathnames_ordered[idx - 1];
+    prevLinkElm.classList.remove("hidden");
+  }
+  if (idx !== pathnames_ordered.length - 1) {
+    nextLinkElm.href = locale() + pathnames_ordered[idx + 1];
+    nextLinkElm.classList.remove("hidden");
+  }
+}
+// (ref.) [Detecting arrow key presses in JavaScript](https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript)
+document.addEventListener("keydown", (ev) => {
+  switch (ev.key) {
+    case "ArrowLeft":
+      prevLinkElm.click();
+      break;
+    case "ArrowRight":
+      nextLinkElm.click();
+      break;
+    default:
+      break;
   }
 });
+// (ref.) [Detect a finger swipe through JavaScript on the iPhone and Android](https://stackoverflow.com/a/48255811)
+document.addEventListener("swiped-right", () => prevLinkElm.click());
+document.addEventListener("swiped-left", () => nextLinkElm.click());
