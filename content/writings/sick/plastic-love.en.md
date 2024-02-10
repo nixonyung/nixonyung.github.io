@@ -5,10 +5,6 @@ lastmod: "2024-02-04"
 weight: 17
 ---
 
-> 變化無窮，各有所歸。
->
-> \- [鬼谷子](https://so.gushiwen.cn/mingju/juv_e962ca55f711.aspx)
-
 Countless people look at me seductively.<br/>
 Why do you like me?<br/>
 
