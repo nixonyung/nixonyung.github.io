@@ -2,7 +2,7 @@
 title: "Art"
 publishDate: "2023-12-02"
 lastmod: "2024-02-01"
-weight: 4
+weight: 5
 ---
 
 - Art = an arrangement of stimulations to our five senses

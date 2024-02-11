@@ -2,7 +2,7 @@
 title: "Complementation"
 publishDate: "2023-11-18"
 lastmod: "2023-12-25"
-weight: 7
+weight: 8
 ---
 
 The naive are trapped by their minds.<br/>

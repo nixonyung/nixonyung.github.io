@@ -2,7 +2,7 @@
 title: "Plastic Love"
 publishDate: "2024-02-04"
 lastmod: "2024-02-04"
-weight: 17
+weight: 18
 ---
 
 Countless people look at me seductively.<br/>

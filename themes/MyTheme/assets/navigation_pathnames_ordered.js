@@ -1,6 +1,7 @@
 const pathnames_ordered = [
   "/writings/limit-break/",
   "/writings/limit-break/self-actualization/",
+  "/writings/limit-break/self-awareness/",
   "/writings/limit-break/shuhari/",
   "/writings/limit-break/shuhari/art/",
   "/writings/limit-break/shuhari/tools/",

@@ -2,7 +2,7 @@
 title: "Tools"
 publishDate: "2023-12-02"
 lastmod: "2024-02-01"
-weight: 5
+weight: 6
 ---
 
 - > How have we increased memory, thought, and reasoning?

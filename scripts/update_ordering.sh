@@ -13,6 +13,7 @@ IFS=$'\n\t'
 pathnames_ordered=(
     "/writings/limit-break/_index"
     "/writings/limit-break/self-actualization"
+    "/writings/limit-break/self-awareness"
     "/writings/limit-break/shuhari/_index"
     "/writings/limit-break/shuhari/art"
     "/writings/limit-break/shuhari/tools"

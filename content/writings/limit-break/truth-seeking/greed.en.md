@@ -2,7 +2,7 @@
 title: "Greed"
 publishDate: "2023-12-31"
 lastmod: "2023-12-31"
-weight: 8
+weight: 9
 ---
 
 It seems to say "Money is the root of all evil".<br/>

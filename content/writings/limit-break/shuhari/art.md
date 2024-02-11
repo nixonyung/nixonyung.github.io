@@ -2,7 +2,7 @@
 title: "藝術"
 publishDate: "2023-09-24"
 lastmod: "2024-02-01"
-weight: 4
+weight: 5
 ---
 
 - 藝術 = 編排點樣刺激五感

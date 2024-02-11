@@ -2,7 +2,7 @@
 title: "Truth-seeking"
 publishDate: "2024-02-01"
 lastmod: "2024-02-01"
-weight: 6
+weight: 7
 ---
 
 > The limits of my language mean the limits of my world.

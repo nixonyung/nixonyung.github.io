@@ -2,7 +2,7 @@
 title: "Monologue"
 publishDate: "2023-11-05"
 lastmod: "2023-12-17"
-weight: 10
+weight: 11
 ---
 
 There are no introverts and extroverts.<br/>
