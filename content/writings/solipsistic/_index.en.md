@@ -55,6 +55,6 @@ Only what I observed is true.<br/>
 God is dead.<br/>
 I will become the God of the new world.<br/>
 
-> You can't trust code that you did not totally create yourself.
+> And those who were seen dancing were thought to be insane by those who could not hear the music.
 >
-> \- [Ken Thompson](https://www.brainyquote.com/quotes/ken_thompson_254875)
+> \- [Friedrich Nietzsche](https://www.goodreads.com/quotes/7887-and-those-who-were-seen-dancing-were-thought-to-be)

@@ -55,6 +55,6 @@ weight: 20
 上帝已死。<br/>
 我將成為新世界的神。<br/>
 
-> You can't trust code that you did not totally create yourself.
+> And those who were seen dancing were thought to be insane by those who could not hear the music.
 >
-> \- [Ken Thompson](https://www.brainyquote.com/quotes/ken_thompson_254875)
+> \- [Friedrich Nietzsche](https://www.goodreads.com/quotes/7887-and-those-who-were-seen-dancing-were-thought-to-be)
