@@ -20,6 +20,7 @@ pathnames_ordered=(
     "/writings/limit-break/truth-seeking/_index"
     "/writings/limit-break/truth-seeking/complementation"
     "/writings/limit-break/truth-seeking/greed"
+    "/writings/limit-break/truth-seeking/love"
     "/writings/sick/_index"
     "/writings/sick/monologue"
     "/writings/sick/numb"

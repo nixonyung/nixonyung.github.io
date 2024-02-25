@@ -1,7 +1,7 @@
 ---
 title: "自我實現"
 publishDate: "2023-10-15"
-lastmod: "2024-02-10"
+lastmod: "2024-02-25"
 weight: 2
 ---
 
@@ -15,8 +15,16 @@ weight: 2
 
 1. 學習冥想
 
-   - 觀察自己當下嘅情感和思想
-     - 可以揾下 "冥想訓練"
+   - 專心於現實世界發生緊嘅嘢，刻意忽略你對事物前因後果嘅猜想
+
+     > It's your own expectations that hurt you. Not the world you live in.
+     > Whatever happens in the world is real. What you think should happen is
+     > unreal.
+     >
+     > So people are hurt by their expectations. You know, you're not disappointed
+     > by the world, you are disappointed by your own projections.
+     >
+     > \- [Jacque Fresco](https://quotefancy.com/quote/1195936/Jacque-Fresco-It-s-your-own-expectations-that-hurt-you-Not-the-world-you-live-in-Whatever)
 
 2. 認清目標 (a.k.a. 吸引力法則)
 
@@ -34,8 +42,14 @@ weight: 2
      >
      > \- [James Clear](https://www.goodreads.com/quotes/9548184-you-should-be-far-more-concerned-with-your-current-trajectory)
 
-   - 毋須害怕失敗
+   - 要向前走先會知道條路要點行
 
      > The first draft of anything is shit.
      >
      > \- [Ernest Hemingway](https://www.goodreads.com/quotes/52073-the-first-draft-of-anything-is-shit)
+
+   - 從經驗學習
+
+     > The key to learning is feedback. It is nearly impossible to learn anything without it.
+     >
+     > \- [Steven D. Levitt](https://www.goodreads.com/quotes/1214269-the-key-to-learning-is-feedback-it-is-nearly-impossible)

@@ -2,7 +2,7 @@
 title: "Sick"
 publishDate: "2023-12-31"
 lastmod: "2023-12-31"
-weight: 10
+weight: 11
 ---
 
 When your body is sick,<br/>

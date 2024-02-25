@@ -8,6 +8,7 @@ const pathnames_ordered = [
   "/writings/limit-break/truth-seeking/",
   "/writings/limit-break/truth-seeking/complementation/",
   "/writings/limit-break/truth-seeking/greed/",
+  "/writings/limit-break/truth-seeking/love/",
   "/writings/sick/",
   "/writings/sick/monologue/",
   "/writings/sick/numb/",

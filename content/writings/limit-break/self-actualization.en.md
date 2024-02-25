@@ -1,7 +1,7 @@
 ---
 title: "Self-actualization"
 publishDate: "2023-12-02"
-lastmod: "2024-02-10"
+lastmod: "2024-02-25"
 weight: 2
 ---
 
@@ -15,8 +15,16 @@ Required steps:
 
 1. learning meditation
 
-   - to observe your feelings and thoughts at the moment
-     - look up "guided meditation"
+   - only consider what is happening and ignore your interpretations of causal relationships
+
+     > It's your own expectations that hurt you. Not the world you live in.
+     > Whatever happens in the world is real. What you think should happen is
+     > unreal.
+     >
+     > So people are hurt by their expectations. You know, you're not disappointed
+     > by the world, you are disappointed by your own projections.
+     >
+     > \- [Jacque Fresco](https://quotefancy.com/quote/1195936/Jacque-Fresco-It-s-your-own-expectations-that-hurt-you-Not-the-world-you-live-in-Whatever)
 
 2. finding your goal (a.k.a. Law of Attraction)
 
@@ -35,8 +43,14 @@ Required steps:
      >
      > \- [James Clear](https://www.goodreads.com/quotes/9548184-you-should-be-far-more-concerned-with-your-current-trajectory)
 
-   - not being afraid of failures
+   - you have to move forward to see the road ahead
 
      > The first draft of anything is shit.
      >
      > \- [Ernest Hemingway](https://www.goodreads.com/quotes/52073-the-first-draft-of-anything-is-shit)
+
+   - learn from experiences
+
+     > The key to learning is feedback. It is nearly impossible to learn anything without it.
+     >
+     > \- [Steven D. Levitt](https://www.goodreads.com/quotes/1214269-the-key-to-learning-is-feedback-it-is-nearly-impossible)
