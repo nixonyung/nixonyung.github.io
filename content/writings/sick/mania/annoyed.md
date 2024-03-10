@@ -2,7 +2,7 @@
 title: "礙眼"
 publishDate: "2024-02-12"
 lastmod: "2024-02-25"
-weight: 20
+weight: 14
 ---
 
 我討厭不似預期，身處喺冇想像過嘅情況下我會 hang 機；<br/>
@@ -23,6 +23,6 @@ weight: 20
 我討厭我嘅世界裡只有我；<br/>
 我討厭我。<br/>
 
-> It infuriates me to be wrong when I know I'm right.
+> You can't trust code that you did not totally create yourself.
 >
-> \- [Molière](https://www.goodreads.com/quotes/81668-it-infuriates-me-to-be-wrong-when-i-know-i-m)
+> \- [Ken Thompson](https://www.brainyquote.com/quotes/ken_thompson_254875)

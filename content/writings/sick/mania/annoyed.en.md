@@ -2,7 +2,7 @@
 title: "Annoyed"
 publishDate: "2024-02-12"
 lastmod: "2024-02-25"
-weight: 20
+weight: 14
 ---
 
 I hate when things are out of my expectations because it leaves me clueless about what to do next;<br/>
@@ -23,6 +23,6 @@ I hate that people I don't hate always end up being people I hate;<br/>
 I hate being alone in my world;<br/>
 I hate myself.<br/>
 
-> It infuriates me to be wrong when I know I'm right.
+> You can't trust code that you did not totally create yourself.
 >
-> \- [Molière](https://www.goodreads.com/quotes/81668-it-infuriates-me-to-be-wrong-when-i-know-i-m)
+> \- [Ken Thompson](https://www.brainyquote.com/quotes/ken_thompson_254875)

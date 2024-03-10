@@ -22,16 +22,17 @@ pathnames_ordered=(
     "/writings/limit-break/truth-seeking/greed"
     "/writings/limit-break/truth-seeking/love"
     "/writings/sick/_index"
-    "/writings/sick/monologue"
-    "/writings/sick/numb"
-    "/writings/sick/scar"
-    "/writings/sick/futile"
-    "/writings/sick/over"
-    "/writings/sick/depression"
-    "/writings/sick/incapable"
-    "/writings/sick/plastic-love"
-    "/writings/sick/annoyed"
+    "/writings/sick/mania/_index"
+    "/writings/sick/mania/futile"
+    "/writings/sick/mania/annoyed"
+    "/writings/sick/depression/_index"
+    "/writings/sick/depression/numb"
+    "/writings/sick/depression/over"
+    "/writings/scar/_index"
+    "/writings/scar/incapable"
+    "/writings/scar/plastic-love"
     "/writings/solipsistic/_index"
+    "/writings/solipsistic/monologue"
     "/writings/solipsistic/solitude"
 )
 
@@ -58,9 +59,9 @@ pushd "$(dirname "$0")/.." >/dev/null
     for file in $(gfind ./content -name '*.md' -printf '/%P\n'); do
         weight="$(weight "$file")"
         if [[ -n $weight ]]; then
-            # (ref.) [How to replace an entire line in a text file by line number](https://stackoverflow.com/questions/11145270/how-to-replace-an-entire-line-in-a-text-file-by-line-number)
+            # (ref.) [Replace whole line containing a string using Sed](https://stackoverflow.com/questions/11245144/replace-whole-line-containing-a-string-using-sed)
             # (ref.) [Environment variable substitution in sed](https://stackoverflow.com/questions/584894/environment-variable-substitution-in-sed)
-            gsed -i '5s/.*/weight: '"$weight"'/' "./content""$file"
+            gsed -i 's/weight:.*/weight: '"$weight"'/' "./content""$file"
         fi
     done
 

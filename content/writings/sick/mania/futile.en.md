@@ -2,7 +2,7 @@
 title: "Futile"
 publishDate: "2023-10-17"
 lastmod: "2023-12-17"
-weight: 15
+weight: 13
 ---
 
 People wish "not to regret things you haven't done".<br/>
