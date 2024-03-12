@@ -16,6 +16,7 @@ const pathnames_ordered = [
   "/writings/sick/depression/",
   "/writings/sick/depression/numb/",
   "/writings/sick/depression/over/",
+  "/writings/sick/depression/moving-forward/",
   "/writings/scar/",
   "/writings/scar/incapable/",
   "/writings/scar/plastic-love/",

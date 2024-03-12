@@ -2,7 +2,7 @@
 title: "Solitude"
 publishDate: "2023-10-16"
 lastmod: "2023-12-17"
-weight: 23
+weight: 24
 ---
 
 Home<br/>

@@ -5,20 +5,20 @@ lastmod: "2023-12-17"
 weight: 16
 ---
 
-Not feeling happy for having.<br/>
-Not feeling sad about losing.<br/>
+What if you are not feeling happy about receiving something valuable?<br/>
+What if you are not feeling sad about losing something valuable?<br/>
 
-If I can't recall the last time I was happy or sad,<br/>
-am I more strange than a stranger?<br/>
-If we all have emotions<br/>
-but I am having none, what am I?<br/>
-If I am not feeling my heartbeat,<br/>
-how do I know I am alive?<br/>
+If you can't recall the last time you were happy or sad,<br/>
+are you then a stranger to yourself?<br/>
+If we all have emotions but you have none,<br/>
+can you be considered as a human?<br/>
+If you are not feeling your heartbeat,<br/>
+how can you tell if you are alive?<br/>
 
-Maybe it's because the enthusiasm I once had was denied.<br/>
-Maybe it's because I want to make sure that the person or object meets my expectations.<br/>
-Maybe it's because I was born reluctant to change.<br/>
-Maybe it's because the world is indeed dull.<br/>
+Or maybe it's because the enthusiasm you once had was denied.<br/>
+Or maybe it's because you want to make sure that the person or object meets your expectations.<br/>
+Or maybe it's because you were born reluctant to change.<br/>
+Or maybe it's because the world is indeed dull.<br/>
 
 > Happiness in intelligent people is the rarest thing I know.
 >
