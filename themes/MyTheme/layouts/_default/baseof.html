@@ -154,9 +154,8 @@
       }
     </style>
 
-    {{ $css_tailwind := resources.Get "tailwind-output.css" }}
     {{ $css_all := (slice
-      $css_tailwind
+      (resources.Get "tailwind-output.css")
       )
       | resources.Concat "styles.css"
       | resources.Minify
@@ -168,15 +167,10 @@
       integrity="{{ $css_all.Data.Integrity }}"
     />
 
-    {{ $js_breadcrumbs := resources.Get "breadcrumbs.js" }}
-    {{ $js_swiped_events := resources.Get "swiped-events.min.js" }}
-    {{ $js_navigation_pathnames_ordered := resources.Get "navigation_pathnames_ordered.js" }}
-    {{ $js_navigation := resources.Get "navigation.js" }}
     {{ $js_all := (slice
-      $js_breadcrumbs
-      $js_swiped_events
-      $js_navigation_pathnames_ordered
-      $js_navigation
+      (resources.Get "breadcrumbs.js")
+      (resources.Get "navigation_pathnames_ordered.js")
+      (resources.Get "navigation.js")
       )
       | resources.Concat "scripts.js"
       | js.Build (dict "minify" true)

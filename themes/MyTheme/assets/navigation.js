@@ -33,6 +33,3 @@ document.addEventListener("keydown", (ev) => {
       break;
   }
 });
-// (ref.) [Detect a finger swipe through JavaScript on the iPhone and Android](https://stackoverflow.com/a/48255811)
-document.addEventListener("swiped-right", () => prevLinkElm.click());
-document.addEventListener("swiped-left", () => nextLinkElm.click());
