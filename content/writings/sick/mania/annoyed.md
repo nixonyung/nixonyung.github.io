@@ -2,7 +2,7 @@
 title: "礙眼"
 publishDate: "2024-02-12"
 lastmod: "2024-02-25"
-weight: 14
+weight: 12
 ---
 
 我討厭不似預期，身處喺冇想像過嘅情況下我會 hang 機；<br/>

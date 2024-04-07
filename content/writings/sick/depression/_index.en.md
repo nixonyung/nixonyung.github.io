@@ -1,7 +1,7 @@
 ---
 title: "Depression"
 isGroup: true
-weight: 15
+weight: 13
 ---
 
 > Depression is the inability to construct a future.

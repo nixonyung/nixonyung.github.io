@@ -1,7 +1,7 @@
 ---
 title: "躁狂"
 isGroup: true
-weight: 12
+weight: 10
 ---
 
 > It infuriates me to be wrong when I know I'm right.

@@ -2,7 +2,7 @@
 title: "生病"
 publishDate: "2023-12-31"
 lastmod: "2023-12-31"
-weight: 11
+weight: 9
 ---
 
 病了，<br/>

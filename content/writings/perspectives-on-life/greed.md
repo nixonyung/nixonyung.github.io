@@ -2,7 +2,7 @@
 title: "嗜財"
 publishDate: "2023-12-31"
 lastmod: "2023-12-31"
-weight: 9
+weight: 21
 ---
 
 好像是説 "錢乃萬惡之源"。<br/>
