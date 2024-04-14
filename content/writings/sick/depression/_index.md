@@ -1,7 +1,7 @@
 ---
 title: "抑鬱"
 isGroup: true
-weight: 13
+weight: 25
 ---
 
 > Depression is the inability to construct a future.

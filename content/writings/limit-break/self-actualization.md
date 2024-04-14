@@ -2,7 +2,7 @@
 title: "自我實現"
 publishDate: "2023-10-15"
 lastmod: "2024-02-25"
-weight: 2
+weight: 3
 ---
 
 自我實現 = 你做到你諗到嘅嘢

@@ -2,7 +2,7 @@
 title: "Self-actualization"
 publishDate: "2023-12-02"
 lastmod: "2024-02-25"
-weight: 2
+weight: 3
 ---
 
 Self-actualization = being able to do whatever you can think of

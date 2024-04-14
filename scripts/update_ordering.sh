@@ -11,6 +11,7 @@ set -Eeuo pipefail
 IFS=$'\n\t'
 
 pathnames_ordered=(
+    "/writings/_index"
     "/writings/limit-break/_index"
     "/writings/limit-break/self-actualization"
     "/writings/limit-break/self-awareness"
@@ -19,17 +20,6 @@ pathnames_ordered=(
     "/writings/limit-break/shuhari/tools"
     "/writings/limit-break/truth-seeking/_index"
     "/writings/limit-break/truth-seeking/complementation"
-    "/writings/sick/_index"
-    "/writings/sick/mania/_index"
-    "/writings/sick/mania/futile"
-    "/writings/sick/mania/annoyed"
-    "/writings/sick/depression/_index"
-    "/writings/sick/depression/numb"
-    "/writings/sick/depression/over"
-    "/writings/sick/depression/moving-forward"
-    "/writings/scar/_index"
-    "/writings/scar/incapable"
-    "/writings/scar/plastic-love"
     "/writings/perspectives-on-life/_index"
     "/writings/perspectives-on-life/greed"
     "/writings/perspectives-on-life/relationships"
@@ -37,6 +27,18 @@ pathnames_ordered=(
     "/writings/solipsistic/_index"
     "/writings/solipsistic/monologue"
     "/writings/solipsistic/solitude"
+    "/writings/scar/_index"
+    "/writings/scar/incapable"
+    "/writings/scar/plastic-love"
+    "/writings/scar/what-is-love"
+    "/writings/sick/_index"
+    "/writings/sick/mania/_index"
+    "/writings/sick/mania/futile"
+    "/writings/sick/mania/annoyed"
+    "/writings/sick/depression/_index"
+    "/writings/sick/depression/numb"
+    "/writings/sick/depression/over"
+    "/writings/sick/depression/hollow"
 )
 
 function pathname {

@@ -1,8 +1,8 @@
 ---
-title: "Moving Forward"
+title: "Hollow"
 publishDate: "2024-03-13"
 lastmod: "2024-03-13"
-weight: 16
+weight: 28
 ---
 
 When children fall, they get back up on their own,<br/>
@@ -20,7 +20,8 @@ Will we consider working as meaningful?<br/>
 No, as working is to make a living:<br/>
 Working serves the purpose of supporting themselves and their families.<br/>
 
-Children run around because of excitement and curiosity;<br/>
+Children run around because of excitement and curiosity.<br/>
+
 We move forward to see the harvest day.<br/>
 
 > He who has a why to live for can bear almost any how.

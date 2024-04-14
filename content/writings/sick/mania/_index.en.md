@@ -1,7 +1,7 @@
 ---
 title: "Mania"
 isGroup: true
-weight: 10
+weight: 22
 ---
 
 > It infuriates me to be wrong when I know I'm right.

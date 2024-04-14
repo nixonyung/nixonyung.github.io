@@ -1,8 +1,8 @@
 ---
-title: "前行"
+title: "空洞"
 publishDate: "2024-03-13"
 lastmod: "2024-03-13"
-weight: 16
+weight: 28
 ---
 
 細路仔學行路跌低左，自己會爬返起身，<br/>
@@ -20,8 +20,9 @@ weight: 16
 並不會，人返工只係為左賺錢：<br/>
 返工嘅意義在於養活自己，養活親人。<br/>
 
-細路仔周圍走都只係因為刺激、好奇心；<br/>
-人向前行只係為左走向收成嘅日子。<br/>
+細路仔周圍走都只係因為刺激、好奇心。<br/>
+
+人向前行係為左走向收成嘅日子。<br/>
 
 > He who has a why to live for can bear almost any how.
 >

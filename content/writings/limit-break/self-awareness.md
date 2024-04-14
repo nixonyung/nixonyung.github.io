@@ -2,7 +2,7 @@
 title: "知己知彼"
 publishDate: "2024-02-11"
 lastmod: "2024-02-11"
-weight: 3
+weight: 4
 ---
 
 > Mirrors should think longer before they reflect.

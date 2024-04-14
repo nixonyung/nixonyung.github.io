@@ -1,6 +1,7 @@
 ---
 title: "Writings"
 isGroup: true
+weight: 1
 ---
 
 > In the work of a writer of genius, we rediscover our own neglected thoughts.

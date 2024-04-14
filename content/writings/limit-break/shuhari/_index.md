@@ -2,7 +2,7 @@
 title: "守破離"
 publishDate: "2023-09-23"
 lastmod: "2024-02-10"
-weight: 4
+weight: 5
 ---
 
 > It is not the strongest or the most intelligent who will survive but those who can best manage change.
