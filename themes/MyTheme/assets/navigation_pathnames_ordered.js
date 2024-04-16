@@ -18,7 +18,7 @@ const pathnames_ordered = [
   "/writings/scar/",
   "/writings/scar/incapable/",
   "/writings/scar/plastic-love/",
-  "/writings/scar/what-is-love/",
+  "/writings/scar/the-furthest-distance/",
   "/writings/sick/",
   "/writings/sick/mania/",
   "/writings/sick/mania/futile/",

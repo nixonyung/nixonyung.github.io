@@ -30,7 +30,7 @@ pathnames_ordered=(
     "/writings/scar/_index"
     "/writings/scar/incapable"
     "/writings/scar/plastic-love"
-    "/writings/scar/what-is-love"
+    "/writings/scar/the-furthest-distance"
     "/writings/sick/_index"
     "/writings/sick/mania/_index"
     "/writings/sick/mania/futile"
