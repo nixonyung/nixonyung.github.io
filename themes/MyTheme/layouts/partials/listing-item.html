@@ -9,19 +9,17 @@
         {{ .Title }}
       </span>
       <span
-        class="h-0.5 max-w-0 flex-grow bg-accent/80 opacity-0 transition-all duration-500 group-hover:max-w-full group-hover:opacity-100"
+        class="bg-accent/80 h-0.5 max-w-0 grow opacity-0 transition-all duration-500 group-hover:max-w-full group-hover:opacity-100"
       ></span>
     </div>
     {{ with .Lastmod }}
-      <span class="flex-grow"></span>
+      <span class="grow"></span>
       <div
-        class="
-        {{ if le (time.Now.Sub .) (time.Duration "hour" 48) }}
+        class="{{ if le (time.Now.Sub .) (time.Duration "hour" 48) }}
           text-primary opacity-75
         {{ else }}
           text-base-content opacity-30
-        {{ end }}
-        whitespace-nowrap font-recursive-mono-casual tracking-tight"
+        {{ end }} font-recursive-mono-casual tracking-tight whitespace-nowrap"
       >
         <span class="max-sm:hidden">
           {{ .Format "2006 Jan 02" }}

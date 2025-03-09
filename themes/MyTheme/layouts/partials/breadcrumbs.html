@@ -1,12 +1,7 @@
-<span
-  id="breadcrumbs-prefix"
-  class="tracking-tightest text-md text-transparent opacity-40"
->
-  ...
-</span>
+<span id="breadcrumbs-prefix" class="tracking-tightest text-transparent opacity-40"> ... </span>
 <div
   id="breadcrumbs-content"
-  class="h-full overflow-x-auto whitespace-nowrap scrollbar-hide"
+  class="scrollbar-hide flex h-full items-center overflow-x-auto whitespace-nowrap"
 >
   {{ if ne .Kind "404" }}
     {{ range .Ancestors.Reverse }}
@@ -28,9 +23,4 @@
     }}
   {{ end }}
 </div>
-<span
-  id="breadcrumbs-postfix"
-  class="tracking-tightest text-md text-transparent opacity-40"
->
-  ...
-</span>
+<span id="breadcrumbs-postfix" class="tracking-tightest text-transparent opacity-40"> ... </span>

@@ -3,17 +3,17 @@
 
 <ul class="m-0">
   {{ range .Pages.ByWeight }}
-    <li class="m-0 font-medium text-base-content">
+    <li class="text-base-content m-0 font-medium">
       {{ if .RelPermalink }}
         <a
-          class="group my-1 block w-full px-2 py-2 no-underline transition-colors duration-100 hover:bg-base-300 focus:bg-base-300 focus:outline-none"
+          class="group hover:bg-base-300 focus:bg-base-300 my-1 block w-full px-2 py-2 no-underline transition-colors duration-100 focus:outline-hidden"
           href="{{ .RelPermalink }}"
           {{ if $IsExternal }}target="_blank" rel="nofollow noopener"{{ end }}
         >
           {{ partial "listing-item.html" . }}
         </a>
       {{ else }}
-        <span class="group my-1 block w-full px-2 py-2 no-underline focus:outline-none">
+        <span class="group my-1 block w-full px-2 py-2 no-underline focus:outline-hidden">
           {{ partial "listing-item.html" . }}
         </span>
       {{ end }}

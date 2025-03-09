@@ -6,7 +6,7 @@
   {{ if strings.HasPrefix .Destination "http" }}
     target="_blank" rel="nofollow noopener"
   {{ end }}
-  class="text-primary decoration-1 underline-offset-4 visited:text-base-content"
+  class="text-primary decoration-1 underline-offset-4"
 >
   {{ .Text | safeHTML }}
 </a>

@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght,CASL,MONO@300..1000,0..1,0..1&display=swap");
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "tailwind-scrollbar-hide";
+@plugin "tailwindcss-animate";
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "mytheme";
+  default: true;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-primary: "#aaf3eb";
+  --color-accent: "#02edd2";
+  --color-base-100: "#191e24";
+  --color-base-300: "#303840";
+  --color-base-content: "#eeeeee";
+  --color-info: "#3ea5f4";
+  --color-success: "#50f779";
+  --color-warning: "#dcab60";
+  --color-error: "#e86969";
+}
+
+@theme {
+  --font-recursive-sans-casual: "Recursive", sans-serif;
+  --font-recursive-sans-casual--font-variation-settings: "CASL" 1;
+  --font-recursive-mono-casual: "Recursive", sans-serif;
+  --font-recursive-mono-casual--font-variation-settings: "MONO" 0.7;
+  --tracking-tightest: -0.125rem;
+}
+
+@utility myprose {
+  @apply prose;
+  @apply prose-headings:bg-linear-to-b prose-headings:from-base-content prose-headings:from-40% prose-headings:to-accent prose-headings:to-70%;
+  @apply prose-headings:scroll-mt-20 prose-headings:bg-clip-text prose-headings:text-transparent;
+  @apply prose-ul:my-0 prose-ul:leading-6 prose-li:my-2;
+  @apply max-sm:prose-ul:pl-4 max-sm:prose-li:pl-1;
+
+  /* Disable adding quote marks to block-quotes: https://github.com/tailwindlabs/tailwindcss-typography/issues/66 */
+  blockquote {
+    p {
+      &:first-of-type::before,
+      &:last-of-type::after {
+        content: none;
+      }
+    }
+  }
+}

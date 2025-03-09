@@ -1,31 +1,24 @@
 {
-  "name": "testing-site",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "nixonyung.github.io",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-tw": "tailwindcss -i ./themes/MyTheme/assets/tailwind-input.css -o ./themes/MyTheme/assets/tailwind-output.css --watch",
-    "dev-hugo": "hugo server --bind=0.0.0.0 --port 3000 --buildDrafts --buildFuture --disableFastRender --noHTTPCache --navigateToChanged",
-    "dev": "pnpm run build-tw && concurrently \"pnpm:dev-tw\" \"pnpm:dev-hugo\"",
-    "build-tw": "tailwindcss -i ./themes/MyTheme/assets/tailwind-input.css -o ./themes/MyTheme/assets/tailwind-output.css",
-    "build-hugo": "hugo --minify",
-    "build": "pnpm build-tw && pnpm build-hugo",
-    "serve": "pnpm build && serve --no-clipboard public"
+    "dev": "hugo server --bind=0.0.0.0 --buildDrafts --buildFuture --disableFastRender --noHTTPCache --navigateToChanged",
+    "build": "hugo --minify",
+    "serve": "pnpm build && http-server"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.10",
-    "concurrently": "^8.2.2",
-    "daisyui": "^3.9.4",
-    "prettier": "^3.1.0",
-    "prettier-plugin-go-template": "^0.0.15",
-    "prettier-plugin-tailwindcss": "^0.5.7",
-    "serve": "^14.2.1",
-    "tailwind-scrollbar-hide": "^1.1.7",
-    "tailwindcss": "^3.3.5",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.12",
+    "@tailwindcss/typography": "^0.5.16",
+    "daisyui": "^5.0.0",
+    "tailwind-scrollbar-hide": "^2.0.0",
+    "tailwindcss": "^4.0.12",
     "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "prettier": "^3.5.3",
+    "prettier-plugin-go-template": "^0.0.15",
+    "prettier-plugin-tailwindcss": "^0.6.11"
   }
 }
