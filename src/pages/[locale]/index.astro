@@ -1,0 +1,110 @@
+---
+import Prose from "@/components/Prose.astro";
+import { slugsOrdered } from "@/content.config";
+import { defaultLocale, getLocalizedMessage, locales } from "@/i18n";
+import Layout from "@/layouts/Layout.astro";
+import { getEntry } from "astro:content";
+import dayjs from "dayjs";
+import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
+
+export const getStaticPaths = async () =>
+  locales.map((locale) => ({
+    params: { locale },
+  }));
+
+dayjs.extend(isSameOrAfter);
+---
+
+<Layout>
+  <Prose>
+    <h1>{getLocalizedMessage("siteTitle", Astro.currentLocale)}</h1>
+
+    <blockquote>
+      <p>{getLocalizedMessage("indexSection1Part1", Astro.currentLocale)}</p>
+      <p>{getLocalizedMessage("indexSection1Part2", Astro.currentLocale)}</p>
+      <p>{getLocalizedMessage("indexSection1Part3", Astro.currentLocale)}</p>
+      <p>{getLocalizedMessage("indexSection1Part4", Astro.currentLocale)}</p>
+    </blockquote>
+
+    <hr />
+
+    <ul>
+      <li>
+        <p>
+          {getLocalizedMessage("indexSection2Part1", Astro.currentLocale)}
+          <a
+            href="https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk?hl=en"
+          >
+            Video Speed Controller
+          </a>
+        </p>
+        <ol>
+          <li>{getLocalizedMessage("indexSection2Item1", Astro.currentLocale)}</li>
+          <li>{getLocalizedMessage("indexSection2Item2", Astro.currentLocale)}</li>
+          <li set:html={getLocalizedMessage("indexSection2Item3", Astro.currentLocale)} />
+        </ol>
+      </li>
+    </ul>
+
+    <hr />
+
+    <blockquote>
+      <p>In the work of a writer of genius, we rediscover our own neglected thoughts.</p>
+      <p>
+        - <a
+          href="https://www.goodreads.com/quotes/7755503-in-the-work-of-a-writer-of-genius-we-rediscover"
+          >Ralph Waldo Emerson</a
+        >
+      </p>
+    </blockquote>
+
+    <hr />
+
+    <ul class="not-prose max-w-content text-white-content mx-auto leading-6">
+      {
+        slugsOrdered.map(async (slug) => {
+          const post = await getEntry("posts", Astro.currentLocale + "/" + slug)!;
+          const lastmod = post.data.lastmod && dayjs(post.data.lastmod);
+
+          return (
+            <li class="flex items-center">
+              {Array(slug.split("/").length - 1).fill(
+                <div class="border-primary-content/20 ml-2 h-12 w-2 shrink-0 border-l-1 sm:ml-8" />,
+              )}
+              <a
+                href={"/" + (Astro.currentLocale ?? defaultLocale) + "/" + slug + "/"}
+                class="group hover:bg-primary-lighter active:bg-primary-lighter flex grow px-2 py-3 transition-all duration-300 ease-in-out sm:px-6"
+              >
+                <div class="relative">
+                  <span>{post.data.title}</span>
+                  {/* (ref.) [Using CSS Transitions on Auto Dimensions](https://css-tricks.com/using-css-transitions-auto-dimensions/) */}
+                  <span class="bg-primary-content/80 absolute bottom-0 left-0 z-30 h-0.5 w-full max-w-0 translate-y-0.5 opacity-0 transition-all duration-700 ease-in-out group-hover:max-w-full group-hover:opacity-100 group-active:max-w-full group-active:opacity-100" />
+                </div>
+
+                <div class="grow" />
+
+                {lastmod && (
+                  <div
+                    class:list={[
+                      "ml-3 font-mono text-sm whitespace-nowrap sm:tracking-wider",
+                      lastmod.isSameOrAfter(dayjs().subtract(1, "day"))
+                        ? "text-primary-content font-semibold"
+                        : "text-primary-content/40 font-light",
+                    ]}
+                  >
+                    <span class="max-sm:hidden">{lastmod.format("YYYY MMM DD")}</span>
+                    <span class="sm:hidden">
+                      {lastmod.isSame(dayjs(), "year")
+                        ? lastmod.format("MMM DD")
+                        : lastmod.format("YYYY MMM")}
+                    </span>
+                  </div>
+                )}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </Prose>
+</Layout>

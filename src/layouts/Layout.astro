@@ -1,0 +1,84 @@
+---
+import HtmlHead from "@/components/HtmlHead.astro";
+import WithIcon from "@/components/WithIcon.astro";
+import { getLocalizedMessage } from "@/i18n";
+import "@/styles.css";
+
+interface Props {
+  title?: string;
+}
+const { title } = Astro.props;
+
+const currSlug = Astro.url.pathname.split("/").slice(2).join("/");
+---
+
+<!doctype html>
+<html lang={Astro.currentLocale}>
+  <head>
+    <HtmlHead {title} />
+  </head>
+
+  <body class="font-text bg-primary flex min-h-dvh flex-col">
+    <header class="bg-primary-lighter/40 sticky top-0 z-50 backdrop-blur-md select-none">
+      <div
+        class="max-w-content text-primary-content/50 mx-auto flex min-h-14 items-center justify-center px-4 tracking-tighter"
+      >
+        <nav class="hover:text-primary-content active:text-primary-content/90 text-xl">
+          <WithIcon
+            as="a"
+            iconName="heroicons:home-solid"
+            href={"/" + Astro.currentLocale + "/"}
+            class="p-3"
+          >
+            {getLocalizedMessage("home", Astro.currentLocale)}
+          </WithIcon>
+        </nav>
+        <div class="grow"></div>
+        <div class="relative">
+          <WithIcon
+            as="button"
+            iconName="heroicons:language-solid"
+            iconSize="1.75rem"
+            class="peer hover:text-primary-content active:text-primary-content cursor-pointer rounded-full p-3"
+          />
+          <ul
+            class="bg-primary border-primary-lighter divide-primary-lighter absolute right-0 hidden -translate-y-2 divide-y-1 rounded-md border-2 backdrop-blur-lg peer-focus:block hover:block active:block"
+          >
+            {
+              (
+                [
+                  { locale: "zh", icon: "icon-park-outline:chinese" },
+                  { locale: "en", icon: "icon-park-outline:english" },
+                ] as const
+              ).map(({ locale, icon }) => (
+                <li>
+                  <WithIcon
+                    as="a"
+                    iconName={icon}
+                    iconSize="1.5rem"
+                    href={"/" + locale + "/" + currSlug}
+                    class="text-primary-content/60 hover:text-primary-content active:bg-primary-lighter active:text-primary-content gap-4 py-3 pr-4 pl-5"
+                  >
+                    <span>{getLocalizedMessage("languageName", locale)}</span>
+                  </WithIcon>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="grow">
+      <slot />
+    </main>
+
+    <footer class="select-none">
+      <div
+        class="text-primary-content/40 max-w-content mx-auto my-2 w-fit px-6 text-xs font-light tracking-tighter sm:px-9 sm:text-sm sm:tracking-tight"
+      >
+        © 2023-{new Date().getFullYear()} Nixon Yung. All Rights Reserved.
+      </div>
+    </footer>
+  </body>
+</html>

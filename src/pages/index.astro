@@ -1,0 +1,15 @@
+---
+import HtmlHead from "@/components/HtmlHead.astro";
+import { defaultLocale } from "@/i18n";
+import "@/styles.css";
+---
+
+<!doctype html>
+<html>
+  <head>
+    <HtmlHead />
+    <meta http-equiv="refresh" content=`0; url=/${defaultLocale}/` />
+  </head>
+
+  <body class="bg-primary"></body>
+</html>

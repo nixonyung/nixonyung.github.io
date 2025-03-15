@@ -1,0 +1,84 @@
+---
+import Prose from "@/components/Prose.astro";
+import WithIcon from "@/components/WithIcon.astro";
+import { slugsOrdered } from "@/content.config";
+import { getLocalizedMessage, locales } from "@/i18n";
+import Layout from "@/layouts/Layout.astro";
+import { getEntry, render } from "astro:content";
+import dayjs from "dayjs";
+
+export const getStaticPaths = async () =>
+  (
+    await Promise.all(
+      locales.flatMap((locale) =>
+        slugsOrdered.map(async (slug, i) => ({
+          params: { locale, slug },
+          props: {
+            slug,
+            prevSlug: i !== 0 ? slugsOrdered![i - 1] : undefined,
+            nextSlug: i !== slugsOrdered!.length - 1 ? slugsOrdered![i + 1] : undefined,
+          },
+        })),
+      ),
+    )
+  ).flat();
+
+const { slug, prevSlug, nextSlug } = Astro.props; // get the collection entry directly from the prop
+const post = await getEntry("posts", Astro.currentLocale + "/" + slug)!;
+const { Content } = await render(post);
+const publishDate = post.data.publishDate && dayjs(post.data.publishDate);
+const lastmod = post.data.lastmod && dayjs(post.data.lastmod);
+---
+
+<Layout title={post.data.title}>
+  <Prose>
+    <h1>{post.data.title ?? getLocalizedMessage("siteTitle", Astro.currentLocale)}</h1>
+    {
+      publishDate && lastmod && (
+        <div class="text-primary-content/20 mt-6 mb-12 select-none">
+          <span class="peer">
+            {getLocalizedMessage("lastmod", Astro.currentLocale)}
+            {lastmod.format("YYYY MMM DD")}
+          </span>
+          <span class="ml-3 hidden peer-hover:inline">
+            ({getLocalizedMessage("publishDate", Astro.currentLocale)}
+            {publishDate.format("YYYY MMM DD")})
+          </span>
+        </div>
+      )
+    }
+
+    <Content />
+  </Prose>
+
+  <div class="text-primary-content/60 mx-auto my-8 flex max-w-xl px-6">
+    {
+      prevSlug && (
+        <WithIcon
+          as="a"
+          iconName="heroicons:arrow-left-16-solid"
+          href={"/" + Astro.currentLocale + "/" + prevSlug + "/"}
+          class="hover:text-primary-content/80 active:text-primary-content/80 p-3 no-underline"
+        >
+          {getLocalizedMessage("prevPost", Astro.currentLocale)}
+        </WithIcon>
+      )
+    }
+
+    <div class="grow"></div>
+
+    {
+      nextSlug && (
+        <WithIcon
+          as="a"
+          iconName="heroicons:arrow-right-16-solid"
+          iconPosition="right"
+          href={"/" + Astro.currentLocale + "/" + nextSlug + "/"}
+          class="hover:text-primary-content/80 active:text-primary-content/80 p-3 no-underline"
+        >
+          {getLocalizedMessage("nextPost", Astro.currentLocale)}
+        </WithIcon>
+      )
+    }
+  </div>
+</Layout>

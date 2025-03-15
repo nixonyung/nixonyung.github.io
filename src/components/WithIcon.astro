@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon/components";
+import type { HTMLTag } from "astro/types";
+
+interface Props {
+  as: HTMLTag;
+  iconName: string;
+  iconSize?: string | number;
+  iconPosition: "left" | "right";
+  class?: string;
+}
+const {
+  as: As = "div",
+  class: classList,
+  iconName,
+  iconSize,
+  iconPosition = "left",
+  ...props
+} = Astro.props;
+---
+
+<As class:list={["flex items-center gap-2", classList]} {...props}>
+  {iconPosition === "left" && <Icon name={iconName} size={iconSize} />}
+  <slot />
+  {iconPosition === "right" && <Icon name={iconName} size={iconSize} />}
+</As>

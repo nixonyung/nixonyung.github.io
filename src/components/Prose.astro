@@ -1,0 +1,22 @@
+<article
+  class:list={[
+    "max-w-content text-white-content mx-auto my-12 px-6 break-words hyphens-auto sm:px-9",
+    "prose",
+    // "prose-headings:mt-12 prose-headings:sm:mt-20 prose-h1:mt-0 prose-headings:scroll-mt-20",
+    // (ref.) [How to do gradient text with Tailwind CSS](https://design2tailwind.com/blog/tailwindcss-gradient-text/)
+    "prose-h1:text-transparent prose-h1:bg-clip-text prose-h1:bg-linear-to-b prose-h1:from-secondary-content prose-h1:from-0% prose-h1:to-primary-content prose-h1:to-90%",
+    // make the background gradient to have the same height with the texts so that the gradient breaks together with the text
+    // "prose-h1:bg-[auto_2.5rem] prose-h2:bg-[auto_2rem] prose-h3:bg-[auto_1.5rem]",
+    "prose-h1:bg-[auto_2.5rem]",
+    "prose-headings:text-primary-content",
+    "prose-a:text-white-content prose-a:underline-offset-3 prose-a:decoration-white-content/50",
+    "prose-blockquote:bg-primary-lighter/30 prose-blockquote:text-white-content prose-blockquote:border-primary-content/30 prose-blockquote:font-light prose-blockquote:prose-a:font-light",
+    "prose-blockquote:pr-1 prose-blockquote:prose-p:my-1 prose-blockquote:prose-p:py-2",
+    // (ref.) [Not always helpful to include " quotation marks for block-quote](https://github.com/tailwindlabs/tailwindcss-typography/issues/66)
+    "prose-blockquote:prose-p:first-of-type:before:content-none prose-blockquote:prose-p:last-of-type:after:content-none",
+    "prose-code:text-white-content",
+    "prose-hr:border-primary-content/40",
+  ]}
+>
+  <slot />
+</article>
