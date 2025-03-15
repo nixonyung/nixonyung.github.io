@@ -1,0 +1,74 @@
+---
+import Prose from "@/components/Prose.astro";
+import { locales } from "@/i18n";
+import Layout from "@/layouts/Layout.astro";
+import { getCollection, getEntry } from "astro:content";
+import dayjs from "dayjs";
+import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
+
+dayjs.extend(isSameOrAfter);
+
+export async function getStaticPaths() {
+  return locales.map((locale) => ({
+    params: { locale },
+  }));
+}
+
+const innerPosts = (await getCollection("posts"))
+  .filter((post) => {
+    const tokens = post.id.split("/");
+    return tokens.length > 1 && tokens[0] === Astro.currentLocale;
+  })
+  .sort((lhs, rhs) => (lhs.data.order ?? 9999) - (rhs.data.order ?? 9999));
+---
+
+<Layout>
+  <!-- diplay site title with styles -->
+  <Prose post={await getEntry("posts", Astro.currentLocale!)} />
+
+  <ul class="max-w-content text-white-content mx-auto mb-9 px-6 sm:mb-15 sm:px-9">
+    {
+      innerPosts.map((post) => {
+        const lastmod = post.data.lastmod && dayjs(post.data.lastmod);
+
+        return (
+          <li class="flex items-center">
+            {Array(post.id.split("/").length - 2).fill(
+              <div class="border-primary-content/20 ml-2 h-12 w-2 shrink-0 border-l-1 sm:ml-8" />,
+            )}
+            <a
+              href={`/${post.id}`}
+              class="group hover:bg-primary-lighter active:bg-primary-lighter flex grow px-2 py-3 transition-all duration-300 ease-in-out sm:px-6"
+            >
+              <div class="relative">
+                <span>{post.data.title}</span>
+                {/* (ref.) [Using CSS Transitions on Auto Dimensions](https://css-tricks.com/using-css-transitions-auto-dimensions/) */}
+                <span class="bg-primary-content/80 absolute bottom-0 left-0 z-30 h-0.5 w-full max-w-0 translate-y-0.5 opacity-0 transition-all duration-700 ease-in-out group-hover:max-w-full group-hover:opacity-100 group-active:max-w-full group-active:opacity-100" />
+              </div>
+
+              <div class="grow" />
+
+              {lastmod && (
+                <div
+                  class:list={[
+                    "ml-3 font-mono text-sm whitespace-nowrap sm:tracking-wider",
+                    lastmod.isSameOrAfter(dayjs().subtract(1, "day"))
+                      ? "text-primary-content font-semibold"
+                      : "text-primary-content/40 font-light",
+                  ]}
+                >
+                  <span class="max-sm:hidden">{lastmod.format("YYYY MMM DD")}</span>
+                  <span class="sm:hidden">
+                    {lastmod.isSame(dayjs(), "year")
+                      ? lastmod.format("MMM DD")
+                      : lastmod.format("YYYY MMM")}
+                  </span>
+                </div>
+              )}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Layout>

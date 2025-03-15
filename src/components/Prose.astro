@@ -1,0 +1,61 @@
+---
+import { getMessage } from "@/i18n";
+import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
+import dayjs from "dayjs";
+
+interface Props {
+  post?: CollectionEntry<"posts">;
+}
+
+const { post } = Astro.props;
+---
+
+<article
+  class:list={[
+    "max-w-content text-white-content mx-auto px-6 py-12 break-words hyphens-auto sm:px-9",
+    "prose",
+    "prose-headings:mt-12 prose-headings:sm:mt-20 prose-h1:mt-0 prose-headings:scroll-mt-20",
+    // (ref.) [How to do gradient text with Tailwind CSS](https://design2tailwind.com/blog/tailwindcss-gradient-text/)
+    "prose-headings:text-transparent prose-headings:bg-clip-text prose-headings:bg-linear-to-b prose-headings:from-secondary-content prose-headings:from-0% prose-headings:to-primary-content prose-headings:to-90%",
+    // make the background gradient to have the same height with the texts so that the gradient breaks together with the text
+    "prose-h1:bg-[auto_2.5rem] prose-h2:bg-[auto_2rem] prose-h3:bg-[auto_1.5rem]",
+    "prose-a:text-white-content prose-a:underline-offset-3 prose-a:decoration-white-content/50",
+    "prose-blockquote:bg-primary-lighter/30 prose-blockquote:text-white-content prose-blockquote:border-primary-content/30 prose-blockquote:font-light prose-blockquote:prose-a:font-light",
+    "prose-blockquote:pr-1 prose-blockquote:prose-p:my-1 prose-blockquote:prose-p:py-2",
+    // (ref.) [Not always helpful to include " quotation marks for block-quote](https://github.com/tailwindlabs/tailwindcss-typography/issues/66)
+    "prose-blockquote:prose-p:first-of-type:before:content-none prose-blockquote:prose-p:last-of-type:after:content-none",
+    "prose-code:text-white-content",
+    "prose-hr:border-primary-content/30",
+  ]}
+>
+  <h1>{post?.data.title ?? getMessage("siteTitle", Astro.currentLocale)}</h1>
+
+  {
+    post &&
+      (async () => {
+        const { Content } = await render(post);
+        const publishDate = post.data.publishDate && dayjs(post.data.publishDate);
+        const lastmod = post.data.lastmod && dayjs(post.data.lastmod);
+
+        return (
+          <>
+            {publishDate && lastmod && (
+              <div class="text-primary-content/20 mt-6 mb-12 select-none">
+                <span class="peer">
+                  {getMessage("lastmod", Astro.currentLocale)}
+                  {lastmod.format("YYYY MMM DD")}
+                </span>
+                <span class="ml-3 hidden peer-hover:inline">
+                  ({getMessage("publishDate", Astro.currentLocale)}
+                  {publishDate.format("YYYY MMM DD")})
+                </span>
+              </div>
+            )}
+
+            <Content />
+          </>
+        );
+      })()
+  }
+</article>

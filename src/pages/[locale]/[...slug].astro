@@ -1,0 +1,72 @@
+---
+import Prose from "@/components/Prose.astro";
+import WithIcon from "@/components/WithIcon.astro";
+import { getHref, getMessage } from "@/i18n";
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import groupBy from "lodash.groupby";
+
+export async function getStaticPaths() {
+  return Object.values(
+    groupBy(
+      (await getCollection("posts"))
+        .sort((lhs, rhs) => (lhs.data.order ?? 9999) - (rhs.data.order ?? 9999))
+        .map((post) => {
+          const [locale, ...rest] = post.id.split("/");
+          return { post, locale, slug: rest.join("/") };
+        })
+        .filter(({ slug }) => !!slug),
+      ({ locale }) => locale, // group by locale
+    ),
+  )
+    .map((posts) =>
+      posts!.map(({ post, locale, slug }, i) => ({
+        params: { locale, slug },
+        props: {
+          post,
+          slug,
+          prevSlug: i !== 0 ? posts![i - 1].slug : undefined,
+          nextSlug: i !== posts!.length - 1 ? posts![i + 1].slug : undefined,
+        },
+      })),
+    )
+    .flat();
+}
+
+const { post, slug, prevSlug: prevId, nextSlug: nextId } = Astro.props; // get the collection entry directly from the prop
+---
+
+<Layout title={post.data.title} slug={slug}>
+  <Prose post={post} />
+
+  <div class="text-primary-content/60 mx-auto my-8 flex max-w-xl px-6">
+    {
+      prevId && (
+        <WithIcon
+          as="a"
+          iconName="heroicons:arrow-left-16-solid"
+          href={getHref(Astro.currentLocale, prevId)}
+          class="hover:text-primary-content/80 active:text-primary-content/80 p-3 no-underline"
+        >
+          {getMessage("prevPost", Astro.currentLocale)}
+        </WithIcon>
+      )
+    }
+
+    <div class="grow"></div>
+
+    {
+      nextId && (
+        <WithIcon
+          as="a"
+          iconName="heroicons:arrow-right-16-solid"
+          iconPosition="right"
+          href={getHref(Astro.currentLocale, nextId)}
+          class="hover:text-primary-content/80 active:text-primary-content/80 p-3 no-underline"
+        >
+          {getMessage("nextPost", Astro.currentLocale)}
+        </WithIcon>
+      )
+    }
+  </div>
+</Layout>
