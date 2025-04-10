@@ -1,0 +1,24 @@
+<!-- ---
+import { getLocalizedMessage, type messages } from "@/i18n";
+
+interface Props {
+  key: keyof typeof messages;
+}
+const { key } = Astro.props;
+---
+
+{
+  getLocalizedMessage(key, Astro.currentLocale)
+    .trimEnd()
+    .split("\n\n")
+    .map((section) => (
+      <p>
+        {section.split("\n").map((line, i) => (
+          <>
+            {i !== 0 && <br />}
+            {line}
+          </>
+        ))}
+      </p>
+    ))
+} -->

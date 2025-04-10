@@ -1,0 +1,27 @@
+---
+import Links from "@/components/Links.astro";
+import { defaultLocale } from "@/i18n";
+import { getEntry } from "astro:content";
+import dayjs from "dayjs";
+import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
+dayjs.extend(isSameOrAfter);
+
+interface Props {
+  slugs: string[];
+}
+const { slugs } = Astro.props;
+---
+
+<Links
+  links={await Promise.all(
+    slugs.map(async (slug) => {
+      const post = await getEntry("posts", Astro.currentLocale + "/" + slug)!;
+
+      return {
+        title: post.data.title,
+        lastmod: post.data.lastmod,
+        href: "/" + (Astro.currentLocale ?? defaultLocale) + "/" + slug + "/",
+      };
+    }),
+  )}
+/>
