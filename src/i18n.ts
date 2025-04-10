@@ -4,56 +4,76 @@ export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "zh";
 
 export const messages = {
-  languageName: {
-    zh: "粵語",
-    en: "English",
-  },
   siteTitle: {
-    zh: "坐享其成抄八成",
-    en: "An 80% Imitator",
+    zh: "見・文",
+    en: "I came. I saw. I wrote.",
   },
   home: {
     zh: "首頁",
     en: "Home",
   },
-  indexSection1Part1: {
-    zh: "80% 臨摹，20% 原創。",
-    en: "80% copied, 20% new.",
+  languageName: {
+    zh: "最地道",
+    en: "Reinterpreted",
   },
-  indexSection1Part2: {
-    zh: "80% 別人，100% 自己。",
-    en: "80% others, 100% you.",
+  indexIntro: {
+    zh: "喺度讕高深、講八卦、發老脾、作故仔、揸流灘",
+    en: "Featuring life hacks, human observations, negative energy, random imaginations and unpolished works.",
   },
-  indexSection1Part3: {
-    zh: "80% 結果，20% 時間。",
-    en: "80% result, 20% time.",
+  indexMetacognitionTitle: {
+    zh: "點諗樣",
+    en: "Metacognition",
   },
-  indexSection1Part4: {
-    zh: "80% 努力，100% 風采。",
-    en: "80% hardwork, 100% shine.",
+  indexMetacognitionIntro: {
+    zh: "醒你兩招，等你行少啲歪路",
+    en: "Some mindsets to help you make good life decisions consistently and rapidly.",
   },
-  indexSection2Part1: {
-    zh: "推薦",
-    en: "Recommending",
+  indexHumanityTitle: {
+    zh: "眾生相",
+    en: "Humanity",
   },
-  indexSection2Item1: {
-    zh: "裝左佢 (得 desktop 版瀏覽器有得用)",
-    en: "install the extension (only available on desktop browsers)",
+  indexHumanityIntro: {
+    zh: "人性嘅規律，多數時候適用",
+    en: "Patterns of human nature, which I've found applicable most of the time.",
   },
-  indexSection2Item2: {
-    zh: "睇片嗰陣會開始見到左上角有舊嘢 show 宜家嘅速度，見到有就得",
-    en: "watch any YouTube video, and verify that a panel appears at the top-left",
+  indexMelancholyTitle: {
+    zh: "病呻吟",
+    en: "Melancholy",
   },
-  indexSection2Item3: {
-    zh: "撳 <code>s</code> 減速, 撳 <code>d</code> 加速",
-    en: "now you can press <code>s</code> to slow down the video, <code>d</code> to speed up",
+  indexMelancholyIntro: {
+    zh: "唔記得左點樣流淚，唯有以淚水作墨水吐苦水",
+    en: "Mournings of a man who has forgotten how to cry.",
+  },
+  indexDreamscapesTitle: {
+    zh: "大影院",
+    en: "Dreamscapes",
+  },
+  indexDreamscapesIntro: {
+    zh: "埋嚟睇我啲奇思妙想",
+    en: "My whimsical thoughts, presented as short stories.",
+  },
+  indexPortfolioTitle: {
+    zh: "搞搞震",
+    en: "Portfolio",
+  },
+  indexPortfolioIntro: {
+    zh: "未必屬精品",
+    en: "Other shits I've made.",
+  },
+  indexBlogLinkTitle: {
+    zh: "呢壇嘢嘅 source code",
+    en: "Source code of this thing",
+  },
+  indexLoLLinkTitle: {
+    zh: "LoL ARAM Montage - OH DEAR ITS UDYR",
+    en: "LoL ARAM Montage - OH DEAR ITS UDYR",
   },
   lastmod: {
     zh: "最後更新於",
     en: "Last updated on",
   },
   publishDate: {
-    zh: "上載於",
+    zh: "最初上載於",
     en: "First published on",
   },
   prevPost: {

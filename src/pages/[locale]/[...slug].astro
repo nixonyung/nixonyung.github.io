@@ -1,6 +1,6 @@
 ---
-import Prose from "@/components/Prose.astro";
 import WithIcon from "@/components/WithIcon.astro";
+import WithProse from "@/components/WithProse.astro";
 import { slugsOrdered } from "@/content.config";
 import { getLocalizedMessage, locales } from "@/i18n";
 import Layout from "@/layouts/Layout.astro";
@@ -31,7 +31,7 @@ const lastmod = post.data.lastmod && dayjs(post.data.lastmod);
 ---
 
 <Layout title={post.data.title}>
-  <Prose>
+  <WithProse>
     <h1>{post.data.title ?? getLocalizedMessage("siteTitle", Astro.currentLocale)}</h1>
     {
       publishDate && lastmod && (
@@ -40,7 +40,7 @@ const lastmod = post.data.lastmod && dayjs(post.data.lastmod);
             {getLocalizedMessage("lastmod", Astro.currentLocale)}
             {lastmod.format("YYYY MMM DD")}
           </span>
-          <span class="ml-3 hidden peer-hover:inline">
+          <span class="ml-3 hidden peer-hover:inline peer-active:inline">
             ({getLocalizedMessage("publishDate", Astro.currentLocale)}
             {publishDate.format("YYYY MMM DD")})
           </span>
@@ -49,9 +49,9 @@ const lastmod = post.data.lastmod && dayjs(post.data.lastmod);
     }
 
     <Content />
-  </Prose>
+  </WithProse>
 
-  <div class="text-primary-content/60 mx-auto my-8 flex max-w-xl px-6">
+  <div class="text-primary-content/60 mx-auto my-8 flex max-w-xl px-6 select-none">
     {
       prevSlug && (
         <WithIcon

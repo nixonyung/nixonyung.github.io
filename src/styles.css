@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Recursive:wght,CASL,MONO@300..1000,0..1,0..1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@300;400;700&family=Noto+Sans+HK:wght@100..900&family=Recursive:wght,CASL@300..1000,0..1&display=swap");
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
@@ -12,10 +12,11 @@
   --color-primary-content: oklch(80% 0.175 265);
   --color-secondary-content: oklch(80% 0.4 160);
 
-  --font-text: "Recursive", sans-serif;
-  --font-text--font-variation-settings: "CASL" 1;
+  --font-heading: "Recursive", "LXGW WenKai TC", sans-serif;
+  --font-heading--font-variation-settings: "CASL" 1;
+  --font-content: "Recursive", "Noto Sans HK", sans-serif;
   --font-mono: "Recursive", sans-serif;
-  --font-mono--font-variation-settings: "MONO" 0.8;
+  --font-mono--font-variation-settings: "MONO" 0.7;
 
   --container-content: 56rem; /* 4xl */
 }
