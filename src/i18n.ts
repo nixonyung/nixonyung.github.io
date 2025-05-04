@@ -64,9 +64,13 @@ export const messages = {
     zh: "呢壇嘢嘅 source code",
     en: "Source code of this thing",
   },
-  indexLoLLinkTitle: {
+  indexLoLMontageLinkTitle: {
     zh: "LoL ARAM Montage - OH DEAR ITS UDYR",
     en: "LoL ARAM Montage - OH DEAR ITS UDYR",
+  },
+  indexLoLHighlightsLinkTitle: {
+    zh: "LoL ARAM 精華片段",
+    en: "LoL ARAM Highlights",
   },
   lastmod: {
     zh: "最後更新於",
