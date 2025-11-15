@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@300;400;700&family=Noto+Sans+HK:wght@100..900&family=Recursive:wght,CASL@300..1000,0..1&display=swap");
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@plugin "@iconify/tailwind4";
 
 @theme {
   /* (ref.) [Default theme variable reference](https://tailwindcss.com/docs/theme#default-theme-variable-reference) */
@@ -19,4 +20,12 @@
   --font-mono--font-variation-settings: "MONO" 0.7;
 
   --container-content: 56rem; /* 4xl */
+}
+
+/* (ref.) [appearance-none utility does not hide input number arrows](https://github.com/tailwindlabs/tailwindcss/discussions/2173) */
+@layer utilities {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    @apply appearance-none;
+  }
 }

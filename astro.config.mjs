@@ -7,6 +7,8 @@ import icon from "astro-icon";
 
 import { defaultLocale, locales } from "./src/i18n";
 
+import svelte from "@astrojs/svelte";
+
 // https://astro.build/config
 export default defineConfig({
   // required by the sitemap integration
@@ -19,5 +21,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [icon(), sitemap()],
+  integrations: [icon(), sitemap(), svelte()],
 });

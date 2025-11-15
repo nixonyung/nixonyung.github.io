@@ -1,0 +1,15 @@
+export type Keymap = Record<string, string>;
+
+export type Dictionary = Record<
+  string,
+  {
+    input: string;
+    romanization?: string;
+    pronunciation?: string;
+  }
+>;
+
+export class Locale {
+  keymap: Keymap;
+  dictionary: Dictionary;
+}

@@ -1,0 +1,15 @@
+---
+import HtmlHead from "@/components/HtmlHead.astro";
+import TouchTypingPracticeComponent from "@/components/touch_typing_practice/index.svelte";
+---
+
+<!doctype html>
+<html lang={Astro.currentLocale}>
+  <head>
+    <HtmlHead title="Touch Typing Practice" />
+  </head>
+
+  <body class="bg-primary text-primary-content min-w-content touch-manipulation select-none">
+    <TouchTypingPracticeComponent client:only="svelte" />
+  </body>
+</html>
