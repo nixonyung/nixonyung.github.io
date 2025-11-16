@@ -1,11 +1,10 @@
 <script lang="ts">
-  //   import { goto } from "$app/navigation";
   import "@/styles.css";
+  import CheckboxInput from "./CheckboxInput.svelte";
+  import { globals } from "./globals.svelte";
+  import Gojuon from "./Gojuon.svelte";
   import KeyboardKey from "./KeyboardKey.svelte";
   import Question from "./Question.svelte";
-  import { globals } from "./globals.svelte";
-
-  globals.init();
 </script>
 
 <svelte:body
@@ -30,7 +29,47 @@
         bind:value={globals.lang}
         class="rounded ring bg-primary"
         onchange={async () => {
-          window.history.replaceState(null, "", `?lang=${globals.lang}`);
+          globals.searchParams = new URLSearchParams();
+          globals.searchParams.set("lang", globals.lang);
+          // set language-specific states
+          switch (globals.lang) {
+            case "en-US":
+              break;
+            case "ja-JP":
+              globals.jpUseHiragana = true;
+              globals.jpUseKatakana = true;
+              globals.jpUseRowA = true;
+              globals.jpUseRowKa = true;
+              globals.jpUseRowSa = true;
+              globals.jpUseRowTa = true;
+              globals.jpUseRowNa = true;
+              globals.jpUseRowHa = true;
+              globals.jpUseRowMa = true;
+              globals.jpUseRowYa = true;
+              globals.jpUseRowRa = true;
+              globals.jpUseRowWa = true;
+              globals.jpUseRowN = true;
+
+              if (globals.jpUseHiragana) globals.searchParams.append("jpSystem", "hiragana");
+              if (globals.jpUseKatakana) globals.searchParams.append("jpSystem", "katakana");
+              if (globals.jpShowOrigins) globals.searchParams.set("jpShowOrigins", "true");
+              if (globals.jpUseRowA) globals.searchParams.append("jpRows", "a");
+              if (globals.jpUseRowKa) globals.searchParams.append("jpRows", "ka");
+              if (globals.jpUseRowSa) globals.searchParams.append("jpRows", "sa");
+              if (globals.jpUseRowTa) globals.searchParams.append("jpRows", "ta");
+              if (globals.jpUseRowNa) globals.searchParams.append("jpRows", "na");
+              if (globals.jpUseRowHa) globals.searchParams.append("jpRows", "ha");
+              if (globals.jpUseRowMa) globals.searchParams.append("jpRows", "ma");
+              if (globals.jpUseRowYa) globals.searchParams.append("jpRows", "ya");
+              if (globals.jpUseRowRa) globals.searchParams.append("jpRows", "ra");
+              if (globals.jpUseRowWa) globals.searchParams.append("jpRows", "wa");
+              if (globals.jpUseRowN) globals.searchParams.append("jpRows", "n");
+
+              break;
+            case "ko-KR":
+              break;
+          }
+          globals.saveSearchParams();
           globals.nextQuestion();
         }}
       >
@@ -66,15 +105,7 @@
       </button>
     </div>
 
-    <label>
-      show romanization:
-      <input
-        bind:checked={globals.showRomanization}
-        type="checkbox"
-        class="align-middle"
-        onclick={({ currentTarget }) => currentTarget.blur()}
-      />
-    </label>
+    <CheckboxInput bind:checked={globals.showRomanizations} label="show romanizations:" />
   </div>
 
   <!-- notifications -->
@@ -98,6 +129,9 @@
   </div>
 
   <!-- keyboard -->
+  {#if globals.lang === "ja-JP"}
+    <Gojuon />
+  {/if}
   <div class="w-fit p-2 ring ring-primary-lighter">
     <div class="flex flex-col gap-2">
       <!-- row 1 -->

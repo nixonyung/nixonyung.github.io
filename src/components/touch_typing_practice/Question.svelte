@@ -36,7 +36,7 @@
     <span class="text-xl">{letter}</span>
   </div>
   <!-- romanization -->
-  {#if globals.showRomanization}
+  {#if globals.showRomanizations}
     <span class="h-6">{romanization && `(${romanization})`}</span>
   {/if}
   <!-- input -->
