@@ -2,9 +2,11 @@
   import "@/styles.css";
   import CheckboxInput from "./CheckboxInput.svelte";
   import { globals } from "./globals.svelte";
-  import Gojuon from "./Gojuon.svelte";
-  import KeyboardKey from "./KeyboardKey.svelte";
-  import Question from "./Question.svelte";
+  import Keyboard from "./Keyboard.svelte";
+  import EN from "./locales/en/EN.svelte";
+  import JP from "./locales/jp/JP.svelte";
+  import KR from "./locales/kr/KR.svelte";
+  import Questions from "./Questions.svelte";
 </script>
 
 <svelte:body
@@ -29,47 +31,10 @@
         bind:value={globals.lang}
         class="rounded ring bg-primary"
         onchange={async () => {
-          globals.searchParams = new URLSearchParams();
-          globals.searchParams.set("lang", globals.lang);
-          // set language-specific states
-          switch (globals.lang) {
-            case "en-US":
-              break;
-            case "ja-JP":
-              globals.jpUseHiragana = true;
-              globals.jpUseKatakana = true;
-              globals.jpUseRowA = true;
-              globals.jpUseRowKa = true;
-              globals.jpUseRowSa = true;
-              globals.jpUseRowTa = true;
-              globals.jpUseRowNa = true;
-              globals.jpUseRowHa = true;
-              globals.jpUseRowMa = true;
-              globals.jpUseRowYa = true;
-              globals.jpUseRowRa = true;
-              globals.jpUseRowWa = true;
-              globals.jpUseRowN = true;
-
-              if (globals.jpUseHiragana) globals.searchParams.append("jpSystem", "hiragana");
-              if (globals.jpUseKatakana) globals.searchParams.append("jpSystem", "katakana");
-              if (globals.jpShowOrigins) globals.searchParams.set("jpShowOrigins", "true");
-              if (globals.jpUseRowA) globals.searchParams.append("jpRows", "a");
-              if (globals.jpUseRowKa) globals.searchParams.append("jpRows", "ka");
-              if (globals.jpUseRowSa) globals.searchParams.append("jpRows", "sa");
-              if (globals.jpUseRowTa) globals.searchParams.append("jpRows", "ta");
-              if (globals.jpUseRowNa) globals.searchParams.append("jpRows", "na");
-              if (globals.jpUseRowHa) globals.searchParams.append("jpRows", "ha");
-              if (globals.jpUseRowMa) globals.searchParams.append("jpRows", "ma");
-              if (globals.jpUseRowYa) globals.searchParams.append("jpRows", "ya");
-              if (globals.jpUseRowRa) globals.searchParams.append("jpRows", "ra");
-              if (globals.jpUseRowWa) globals.searchParams.append("jpRows", "wa");
-              if (globals.jpUseRowN) globals.searchParams.append("jpRows", "n");
-
-              break;
-            case "ko-KR":
-              break;
-          }
-          globals.saveSearchParams();
+          globals.resetSearchParams();
+          globals.saveSetting("lang", globals.lang);
+          globals.saveSetting("questionLength", globals.questionLength, 3);
+          globals.saveSetting("showRomanizations", globals.showRomanizations, false);
           globals.nextQuestion();
         }}
       >
@@ -87,7 +52,8 @@
         title="decrement questionLength"
         class="cursor-pointer"
         onclick={() => {
-          globals.questionLength = Math.max(1, globals.questionLength - 1);
+          if (globals.questionLength > 1) globals.questionLength -= 1;
+          globals.saveSetting("questionLength", globals.questionLength, 3);
           globals.nextQuestion();
         }}
       >
@@ -98,6 +64,7 @@
         class="cursor-pointer"
         onclick={() => {
           globals.questionLength += 1;
+          globals.saveSetting("questionLength", globals.questionLength, 3);
           globals.nextQuestion();
         }}
       >
@@ -105,10 +72,14 @@
       </button>
     </div>
 
-    <CheckboxInput bind:checked={globals.showRomanizations} label="show romanizations:" />
+    <CheckboxInput
+      bind:checked={globals.showRomanizations}
+      label="show romanizations:"
+      onchange={() => globals.saveSetting("showRomanizations", globals.showRomanizations, false)}
+    />
   </div>
 
-  <!-- notifications -->
+  <!-- SpeechSynthesis indicator -->
   <div class="flex items-center-safe gap-9">
     <div
       class={[
@@ -128,111 +99,15 @@
     {/if}
   </div>
 
-  <!-- keyboard -->
-  {#if globals.lang === "ja-JP"}
-    <Gojuon />
+  {#if globals.lang === "en-US"}
+    <EN />
+  {:else if globals.lang === "ja-JP"}
+    <JP />
+  {:else if globals.lang === "ko-KR"}
+    <KR />
   {/if}
-  <div class="w-fit p-2 ring ring-primary-lighter">
-    <div class="flex flex-col gap-2">
-      <!-- row 1 -->
-      <div class="flex gap-1">
-        <div class="w-6"></div>
-        <KeyboardKey key="q" />
-        <KeyboardKey key="w" />
-        <KeyboardKey key="e" />
-        <KeyboardKey key="r" />
-        <KeyboardKey key="t" />
-        <KeyboardKey key="y" />
-        <KeyboardKey key="u" />
-        <KeyboardKey key="i" />
-        <KeyboardKey key="o" />
-        <KeyboardKey key="p" />
-        <!-- Backspace -->
-        <button
-          class="ml-4 w-24 border-dashed border rounded opacity-50"
-          onclick={() => globals.onKeyDown({ key: "Backspace" })}
-        >
-          Backspace
-        </button>
-      </div>
 
-      <!-- row 2 -->
-      <div class="flex gap-1">
-        <div class="w-12"></div>
-        <KeyboardKey key="a" />
-        <KeyboardKey key="s" />
-        <KeyboardKey key="d" />
-        <KeyboardKey key="f" />
-        <KeyboardKey key="g" />
-        <KeyboardKey key="h" />
-        <KeyboardKey key="j" />
-        <KeyboardKey key="k" />
-        <KeyboardKey key="l" />
-        <!-- Enter -->
-        <button
-          class="ml-4 w-24 border-dashed border rounded opacity-50"
-          onclick={() => globals.onKeyDown({ key: "Enter" })}
-        >
-          Enter
-        </button>
-      </div>
+  <Keyboard />
 
-      <!-- row 3 -->
-      <div class="flex gap-1">
-        <!-- Shift -->
-        <button
-          class={[
-            "mr-3 w-16 border-dashed border rounded opacity-50",
-            globals.isHoldingShift && "bg-primary-lighter",
-          ]}
-          onclick={() => {
-            if (!globals.allCorrect) {
-              globals.isHoldingShift = !globals.isHoldingShift;
-            }
-          }}
-        >
-          Shift
-        </button>
-        <KeyboardKey key="z" />
-        <KeyboardKey key="x" />
-        <KeyboardKey key="c" />
-        <KeyboardKey key="v" />
-        <KeyboardKey key="b" />
-        <KeyboardKey key="n" />
-        <KeyboardKey key="m" />
-      </div>
-
-      <!-- Space -->
-      <button
-        title="Space"
-        class="ml-30 w-72 h-12 border-dashed border rounded opacity-50"
-        onclick={() => globals.onKeyDown({ key: " " })}
-      >
-      </button>
-    </div>
-  </div>
-
-  <!-- question -->
-  <div class="flex items-center-safe gap-2">
-    <span>question: </span>
-    {#each globals.questions, index}
-      <Question {index} />
-    {/each}
-  </div>
-
-  <!-- congratulation -->
-  <!-- svelte-ignore a11y_click_events_have_key_events -->
-  <!-- svelte-ignore a11y_no_static_element_interactions -->
-  <div class={!globals.allCorrect ? "invisible" : ""}>
-    <div>All correct!</div>
-    {#if globals.voice}
-      <div onclick={() => globals.onKeyDown({ key: "r" })}>
-        <code class="rounded px-1 ring">r</code>
-        to read all words
-      </div>
-    {/if}
-    <div onclick={() => globals.onKeyDown({ key: "Enter" })}>
-      <code class="rounded px-1 ring"> Enter </code> to continue ...
-    </div>
-  </div>
+  <Questions />
 </div>

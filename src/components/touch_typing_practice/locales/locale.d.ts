@@ -8,8 +8,3 @@ export type Dictionary = Record<
     pronunciation?: string;
   }
 >;
-
-export class Locale {
-  keymap: Keymap;
-  dictionary: Dictionary;
-}
