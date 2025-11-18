@@ -20,7 +20,8 @@
 
   let enableHiragana = $state(!globals.searchParams.has("hiragana", "false"));
   let enableKatakana = $state(!globals.searchParams.has("katakana", "false"));
-  let showOrigins = $state(globals.searchParams.has("showOrigins", "true"));
+  let enableMarks = $state(!globals.searchParams.has("marks", "false"));
+  let enableYoon = $state(!globals.searchParams.has("yoon", "false"));
   let enableRowA = $state(!globals.searchParams.has("rowA", "false"));
   let enableRowKa = $state(!globals.searchParams.has("rowKa", "false"));
   let enableRowSa = $state(!globals.searchParams.has("rowSa", "false"));
@@ -32,9 +33,11 @@
   let enableRowRa = $state(!globals.searchParams.has("rowRa", "false"));
   let enableRowWa = $state(!globals.searchParams.has("rowWa", "false"));
   let enableRowN = $state(!globals.searchParams.has("rowN", "false"));
+  let showOrigins = $state(globals.searchParams.has("showOrigins", "true"));
   $effect(() => globals.saveSetting("hiragana", enableHiragana, true));
   $effect(() => globals.saveSetting("katakana", enableKatakana, true));
-  $effect(() => globals.saveSetting("showOrigins", showOrigins, false));
+  $effect(() => globals.saveSetting("marks", enableMarks, true));
+  $effect(() => globals.saveSetting("yoon", enableYoon, true));
   $effect(() => globals.saveSetting("rowA", enableRowA, true));
   $effect(() => globals.saveSetting("rowKa", enableRowKa, true));
   $effect(() => globals.saveSetting("rowSa", enableRowSa, true));
@@ -46,6 +49,7 @@
   $effect(() => globals.saveSetting("rowRa", enableRowRa, true));
   $effect(() => globals.saveSetting("rowWa", enableRowWa, true));
   $effect(() => globals.saveSetting("rowN", enableRowN, true));
+  $effect(() => globals.saveSetting("showOrigins", showOrigins, false));
 
   let isSelecting = $state(false);
   $effect(() => {
@@ -67,19 +71,21 @@
   globals.localeKeymap = keymap;
   $effect(() => {
     globals.localeDictionary = dictionary({
-      enableHiragana: enableHiragana,
-      enableKatakana: enableKatakana,
-      enableRowA: enableRowA,
-      enableRowKa: enableRowKa,
-      enableRowSa: enableRowSa,
-      enableRowTa: enableRowTa,
-      enableRowNa: enableRowNa,
-      enableRowHa: enableRowHa,
-      enableRowMa: enableRowMa,
-      enableRowYa: enableRowYa,
-      enableRowRa: enableRowRa,
-      enableRowWa: enableRowWa,
-      enableRowN: enableRowN,
+      enableHiragana,
+      enableKatakana,
+      enableMarks,
+      enableYoon,
+      enableRowA,
+      enableRowKa,
+      enableRowSa,
+      enableRowTa,
+      enableRowNa,
+      enableRowHa,
+      enableRowMa,
+      enableRowYa,
+      enableRowRa,
+      enableRowWa,
+      enableRowN,
     });
     untrack(() => globals.nextQuestion());
   });
@@ -157,6 +163,10 @@
   <CheckboxInput bind:checked={enableKatakana} label="enable Katakana 片假名" />
   <CheckboxInput bind:checked={showOrigins} label="show origins:" />
 </div>
+<div class="flex gap-9">
+  <CheckboxInput bind:checked={enableMarks} label="enable Dakuten and Handakuten" />
+  <CheckboxInput bind:checked={enableYoon} label="enable Yoon" />
+</div>
 
 <!-- Gojuon 五十音 -->
 <!-- (ref.) [平假名](https://www.wikiwand.com/zh-hk/articles/平假名) -->
@@ -168,11 +178,31 @@
     <GojuonHeader bind:this={rowRa} bind:enabled={enableRowRa} bind:isSelecting label="r" />
     <GojuonHeader bind:this={rowYa} bind:enabled={enableRowYa} bind:isSelecting label="y" />
     <GojuonHeader bind:this={rowMa} bind:enabled={enableRowMa} bind:isSelecting label="m" />
-    <GojuonHeader bind:this={rowHa} bind:enabled={enableRowHa} bind:isSelecting label="h" />
+    <GojuonHeader
+      bind:this={rowHa}
+      bind:enabled={enableRowHa}
+      bind:isSelecting
+      label={enableMarks ? "h/b/p" : "h"}
+    />
     <GojuonHeader bind:this={rowNa} bind:enabled={enableRowNa} bind:isSelecting label="n" />
-    <GojuonHeader bind:this={rowTa} bind:enabled={enableRowTa} bind:isSelecting label="t" />
-    <GojuonHeader bind:this={rowSa} bind:enabled={enableRowSa} bind:isSelecting label="s" />
-    <GojuonHeader bind:this={rowKa} bind:enabled={enableRowKa} bind:isSelecting label="k" />
+    <GojuonHeader
+      bind:this={rowTa}
+      bind:enabled={enableRowTa}
+      bind:isSelecting
+      label={enableMarks ? "t/d" : "t"}
+    />
+    <GojuonHeader
+      bind:this={rowSa}
+      bind:enabled={enableRowSa}
+      bind:isSelecting
+      label={enableMarks ? "s/z" : "s"}
+    />
+    <GojuonHeader
+      bind:this={rowKa}
+      bind:enabled={enableRowKa}
+      bind:isSelecting
+      label={enableMarks ? "k/g" : "k"}
+    />
     <GojuonHeader bind:this={rowA} bind:enabled={enableRowA} bind:isSelecting label="" />
   </div>
 
