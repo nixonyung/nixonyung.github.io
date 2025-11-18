@@ -164,8 +164,18 @@
   <CheckboxInput bind:checked={showOrigins} label="show origins:" />
 </div>
 <div class="flex gap-9">
-  <CheckboxInput bind:checked={enableMarks} label="enable Dakuten and Handakuten" />
-  <CheckboxInput bind:checked={enableYoon} label="enable Yoon" />
+  <CheckboxInput bind:checked={enableMarks} label="enable Dakuten 濁音 and Handakuten 半濁音" />
+  <CheckboxInput bind:checked={enableYoon} label="enable Yoon 拗音" />
+</div>
+<div>
+  <a
+    href="https://www.wikiwand.com/zh-hk/articles/平文式罗马字#罗马字表"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="underline"
+  >
+    (ref.) 平文式羅馬字
+  </a>
 </div>
 
 <!-- Gojuon 五十音 -->
@@ -213,7 +223,7 @@
       katakana: string;
       katakanaOrigin: string;
     })}
-      <div class="w-18 h-12 px-2 flex gap-2 ring">
+      <div class="w-18 h-12 px-2 flex gap-2 ring cursor-pointer">
         <div
           class={[
             "inline-flex flex-col w-6 items-center-safe",
