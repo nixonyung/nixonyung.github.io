@@ -139,7 +139,7 @@ export function dictionary({
       enableRowHa && {
         は: { input: "ha", romanization: "ha", pronunciation: "は" },
         ひ: { input: "hi", romanization: "hi", pronunciation: "ひ" },
-        ふ: { input: "hu", romanization: "hu", pronunciation: "ふ" },
+        ふ: { input: "fu", romanization: "fu", pronunciation: "ふ" },
         へ: { input: "he", romanization: "he", pronunciation: "へ" },
         ほ: { input: "ho", romanization: "ho", pronunciation: "ほ" },
       }),
@@ -343,7 +343,7 @@ export function dictionary({
       enableRowN && {
         ン: { input: "n", romanization: "n", pronunciation: "ン" },
       }),
-    ...(enableHiragana &&
+    ...(enableKatakana &&
       enableRowYa &&
       enableYoon && {
         キャ: { input: "kya", romanization: "kya", pronunciation: "キャ" },
