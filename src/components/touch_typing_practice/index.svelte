@@ -24,12 +24,12 @@
   <h1 class="mt-3 mb-6 text-xl underline underline-offset-4">Touch Typing Practice</h1>
 
   <!-- settings -->
-  <div class="flex gap-9 items-center-safe">
+  <div class="flex items-center-safe gap-9">
     <label>
       lang:
       <select
         bind:value={globals.lang}
-        class="rounded ring bg-primary"
+        class="rounded bg-primary ring"
         onchange={async () => {
           globals.resetSearchParams();
           globals.saveSetting("lang", globals.lang);
@@ -38,7 +38,7 @@
           globals.nextQuestion();
         }}
       >
-        {#each globals.langs as lang}
+        {#each globals.langs as lang (lang)}
           <option value={lang}>{lang}</option>
         {/each}
       </select>
@@ -57,7 +57,7 @@
           globals.nextQuestion();
         }}
       >
-        <span class="icon-[heroicons--minus-circle] text-2xl align-middle"></span>
+        <span class="icon-[heroicons--minus-circle] align-middle text-2xl"></span>
       </button>
       <button
         title="increment questionLength"
@@ -68,7 +68,7 @@
           globals.nextQuestion();
         }}
       >
-        <span class="icon-[heroicons--plus-circle] text-2xl align-middle"></span>
+        <span class="icon-[heroicons--plus-circle] align-middle text-2xl"></span>
       </button>
     </div>
 

@@ -21,7 +21,7 @@
 <button
   bind:this={ref}
   class={[
-    "w-18 px-2 text-end hover:bg-primary-lighter active:bg-primary-content/50 cursor-ew-resize",
+    "w-18 cursor-ew-resize px-2 text-end hover:bg-primary-lighter active:bg-primary-content/50",
     isSelecting && enabled && "bg-primary-content/50",
   ]}
   onmousedown={async () => {

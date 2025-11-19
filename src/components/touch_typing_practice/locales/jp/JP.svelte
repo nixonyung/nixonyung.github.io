@@ -223,10 +223,10 @@
       katakana: string;
       katakanaOrigin: string;
     })}
-      <div class="w-18 h-12 px-2 flex gap-2 ring cursor-pointer">
+      <div class="flex h-12 w-18 cursor-pointer gap-2 px-2 ring">
         <div
           class={[
-            "inline-flex flex-col w-6 items-center-safe",
+            "inline-flex w-6 flex-col items-center-safe",
             enableHiragana ? "visible" : "invisible",
           ]}
         >
@@ -238,7 +238,7 @@
 
         <div
           class={[
-            "inline-flex flex-col w-6 items-center-safe",
+            "inline-flex w-6 flex-col items-center-safe",
             enableKatakana ? "visible" : "invisible",
           ]}
         >
@@ -329,8 +329,8 @@
     </GojuonRow>
 
     <div class="flex flex-col">
-      {#each ["a", "i", "u", "e", "o"] as colLabel}
-        <div class="pl-2 h-12">{colLabel}</div>
+      {#each ["a", "i", "u", "e", "o"] as colLabel (colLabel)}
+        <div class="h-12 pl-2">{colLabel}</div>
       {/each}
     </div>
   </div>

@@ -19,7 +19,7 @@ const { links } = Astro.props;
 ---
 
 <ul
-  class="not-prose max-w-content text-white-content border-primary-lighter mx-auto rounded-xl border-l-2"
+  class="not-prose mx-auto max-w-content rounded-xl border-l-2 border-primary-lighter text-white-content"
 >
   {
     links.map(({ title, lastmod: lastmodStr, href }, i) => {
@@ -31,7 +31,7 @@ const { links } = Astro.props;
             {href}
             {...(!href.startsWith("/") && { target: "_blank", rel: "nofollow noopener" })}
             class:list={[
-              "font-heading group hover:bg-primary-lighter active:bg-primary-lighter sm-pr-4 flex items-center py-3 pr-3 pl-4 no-underline transition-all duration-0 ease-in-out sm:pl-6 sm:duration-300",
+              "group sm-pr-4 flex items-center py-3 pr-3 pl-4 font-heading no-underline transition-all duration-0 ease-in-out hover:bg-primary-lighter active:bg-primary-lighter sm:pl-6 sm:duration-300",
               i === 0 ? "rounded-tl-lg" : "",
               i === links.length - 1 ? "rounded-bl-lg" : "",
             ]}
@@ -39,7 +39,7 @@ const { links } = Astro.props;
             <div class="relative">
               <span>{title}</span>
               {/* (ref.) [Using CSS Transitions on Auto Dimensions](https://css-tricks.com/using-css-transitions-auto-dimensions/) */}
-              <span class="bg-primary-content/80 absolute bottom-0 left-0 z-30 h-0.5 w-full max-w-0 translate-y-0.5 opacity-0 transition-all duration-300 ease-in-out group-hover:max-w-full group-hover:opacity-100 group-active:max-w-full group-active:opacity-100 sm:duration-700" />
+              <span class="absolute bottom-0 left-0 z-30 h-0.5 w-full max-w-0 translate-y-0.5 bg-primary-content/80 opacity-0 transition-all duration-300 ease-in-out group-hover:max-w-full group-hover:opacity-100 group-active:max-w-full group-active:opacity-100 sm:duration-700" />
             </div>
 
             <div class="grow" />
@@ -49,8 +49,8 @@ const { links } = Astro.props;
                 class:list={[
                   "ml-3 font-mono text-sm whitespace-nowrap sm:tracking-wider",
                   lastmod.add(1, "day").isSameOrAfter(new Date(), "day")
-                    ? "text-primary-content font-semibold"
-                    : "text-primary-content/40 font-light",
+                    ? "font-semibold text-primary-content"
+                    : "font-light text-primary-content/40",
                 ]}
               >
                 <span class="max-sm:hidden">{lastmod.format("YYYY MMM DD")}</span>

@@ -40,7 +40,7 @@
       {@render key("p", globals.localeKeymap["p"], globals.localeKeymap["P"])}
       <!-- Backspace -->
       <button
-        class="ml-4 w-24 border-dashed border rounded opacity-50"
+        class="ml-4 w-24 rounded border border-dashed opacity-50"
         onclick={() => globals.onKeyDown({ key: "Backspace" })}
       >
         Backspace
@@ -61,7 +61,7 @@
       {@render key("l", globals.localeKeymap["l"], globals.localeKeymap["L"])}
       <!-- Enter -->
       <button
-        class="ml-4 w-24 border-dashed border rounded opacity-50"
+        class="ml-4 w-24 rounded border border-dashed opacity-50"
         onclick={() => globals.onKeyDown({ key: "Enter" })}
       >
         Enter
@@ -73,7 +73,7 @@
       <!-- Shift -->
       <button
         class={[
-          "mr-3 w-16 border-dashed border rounded opacity-50",
+          "mr-3 w-16 rounded border border-dashed opacity-50",
           globals.isHoldingShift && "bg-primary-lighter",
         ]}
         onclick={() => {
@@ -96,7 +96,7 @@
     <!-- Space -->
     <button
       title="Space"
-      class="ml-30 w-72 h-12 border-dashed border rounded opacity-50"
+      class="ml-30 h-12 w-72 rounded border border-dashed opacity-50"
       onclick={() => globals.onKeyDown({ key: " " })}
     >
     </button>
