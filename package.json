@@ -11,11 +11,18 @@
   },
   "prettier": {
     "printWidth": 100,
-    "singleAttributePerLine": false,
     "plugins": [
       "prettier-plugin-astro",
       "prettier-plugin-svelte",
       "prettier-plugin-tailwindcss"
+    ],
+    "overrides": [
+      {
+        "files": "locale.ts",
+        "options": {
+          "printWidth": 200
+        }
+      }
     ],
     "tailwindStylesheet": "./src/styles.css"
   },
@@ -26,10 +33,11 @@
     "@iconify-json/icon-park-outline": "^1.2.4",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.17",
-    "astro": "^5.15.9",
+    "astro": "^5.16.0",
     "astro-icon": "^1.1.5",
     "dayjs": "^1.11.19",
-    "svelte": "^5.43.12",
+    "lodash": "^4.17.21",
+    "svelte": "^5.43.14",
     "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3"
   },
@@ -37,7 +45,7 @@
     "@eslint/compat": "^2.0.0",
     "@eslint/js": "^9.39.1",
     "@iconify/tailwind4": "^1.1.0",
-    "@types/lodash.groupby": "^4.6.9",
+    "@types/lodash": "^4.17.20",
     "@typescript-eslint/parser": "^8.47.0",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",

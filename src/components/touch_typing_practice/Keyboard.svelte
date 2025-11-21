@@ -1,20 +1,34 @@
 <script lang="ts">
   import { globals } from "./globals.svelte";
+
+  let isShiftDown = $state(false);
 </script>
+
+<svelte:window
+  onkeydown={({ key }) => {
+    if (key === "Shift") isShiftDown = true;
+  }}
+  onkeyup={({ key }) => {
+    if (key === "Shift") isShiftDown = false;
+  }}
+/>
 
 <div class="w-fit p-2 ring ring-primary-lighter">
   <div class="flex flex-col gap-2">
     {#snippet key(key: string, mappedKey?: string, mappedShiftKey?: string)}
       <button
         class="relative grid size-12 place-items-center-safe rounded ring ring-primary-content"
-        onclick={() => globals.onKeyDown({ key: globals.isHoldingShift ? key.toUpperCase() : key })}
+        onclick={() => {
+          globals.emitKeydown({ key: isShiftDown ? key.toUpperCase() : key });
+          isShiftDown = false;
+        }}
       >
-        <span class="text-xl">{globals.isHoldingShift ? mappedShiftKey : mappedKey}</span>
+        <span class="text-xl">{isShiftDown ? mappedShiftKey : mappedKey}</span>
 
         <!-- key hint -->
-        {#if globals.isHoldingShift && mappedShiftKey !== key.toUpperCase()}
+        {#if isShiftDown && mappedShiftKey !== key.toUpperCase()}
           <span class="absolute top-0 left-1 text-xs font-light">{key.toUpperCase()}</span>
-        {:else if !globals.isHoldingShift && mappedKey !== key}
+        {:else if !isShiftDown && mappedKey !== key}
           <span class="absolute top-0 left-1 text-xs font-light">{key}</span>
         {/if}
 
@@ -41,7 +55,7 @@
       <!-- Backspace -->
       <button
         class="ml-4 w-24 rounded border border-dashed opacity-50"
-        onclick={() => globals.onKeyDown({ key: "Backspace" })}
+        onclick={() => globals.emitKeydown({ key: "Backspace" })}
       >
         Backspace
       </button>
@@ -62,7 +76,7 @@
       <!-- Enter -->
       <button
         class="ml-4 w-24 rounded border border-dashed opacity-50"
-        onclick={() => globals.onKeyDown({ key: "Enter" })}
+        onclick={() => globals.emitKeydown({ key: "Enter" })}
       >
         Enter
       </button>
@@ -74,13 +88,9 @@
       <button
         class={[
           "mr-3 w-16 rounded border border-dashed opacity-50",
-          globals.isHoldingShift && "bg-primary-lighter",
+          isShiftDown && "bg-primary-lighter",
         ]}
-        onclick={() => {
-          if (!globals.allCorrect) {
-            globals.isHoldingShift = !globals.isHoldingShift;
-          }
-        }}
+        onclick={() => (isShiftDown = !isShiftDown)}
       >
         Shift
       </button>
@@ -97,7 +107,7 @@
     <button
       title="Space"
       class="ml-30 h-12 w-72 rounded border border-dashed opacity-50"
-      onclick={() => globals.onKeyDown({ key: " " })}
+      onclick={() => globals.emitKeydown({ key: " " })}
     >
     </button>
   </div>

@@ -34,22 +34,70 @@
   let enableRowWa = $state(!globals.searchParams.has("rowWa", "false"));
   let enableRowN = $state(!globals.searchParams.has("rowN", "false"));
   let showOrigins = $state(globals.searchParams.has("showOrigins", "true"));
-  $effect(() => globals.saveSetting("hiragana", enableHiragana, true));
-  $effect(() => globals.saveSetting("katakana", enableKatakana, true));
-  $effect(() => globals.saveSetting("marks", enableMarks, true));
-  $effect(() => globals.saveSetting("yoon", enableYoon, true));
-  $effect(() => globals.saveSetting("rowA", enableRowA, true));
-  $effect(() => globals.saveSetting("rowKa", enableRowKa, true));
-  $effect(() => globals.saveSetting("rowSa", enableRowSa, true));
-  $effect(() => globals.saveSetting("rowTa", enableRowTa, true));
-  $effect(() => globals.saveSetting("rowNa", enableRowNa, true));
-  $effect(() => globals.saveSetting("rowHa", enableRowHa, true));
-  $effect(() => globals.saveSetting("rowMa", enableRowMa, true));
-  $effect(() => globals.saveSetting("rowYa", enableRowYa, true));
-  $effect(() => globals.saveSetting("rowRa", enableRowRa, true));
-  $effect(() => globals.saveSetting("rowWa", enableRowWa, true));
-  $effect(() => globals.saveSetting("rowN", enableRowN, true));
-  $effect(() => globals.saveSetting("showOrigins", showOrigins, false));
+  $effect(() => {
+    enableHiragana;
+    untrack(() => globals.saveSetting("hiragana", enableHiragana, true));
+  });
+  $effect(() => {
+    enableKatakana;
+    untrack(() => globals.saveSetting("katakana", enableKatakana, true));
+  });
+  $effect(() => {
+    enableMarks;
+    untrack(() => globals.saveSetting("marks", enableMarks, true));
+  });
+  $effect(() => {
+    enableYoon;
+    untrack(() => globals.saveSetting("yoon", enableYoon, true));
+  });
+  $effect(() => {
+    enableRowA;
+    untrack(() => globals.saveSetting("rowA", enableRowA, true));
+  });
+  $effect(() => {
+    enableRowKa;
+    untrack(() => globals.saveSetting("rowKa", enableRowKa, true));
+  });
+  $effect(() => {
+    enableRowSa;
+    untrack(() => globals.saveSetting("rowSa", enableRowSa, true));
+  });
+  $effect(() => {
+    enableRowTa;
+    untrack(() => globals.saveSetting("rowTa", enableRowTa, true));
+  });
+  $effect(() => {
+    enableRowNa;
+    untrack(() => globals.saveSetting("rowNa", enableRowNa, true));
+  });
+  $effect(() => {
+    enableRowHa;
+    untrack(() => globals.saveSetting("rowHa", enableRowHa, true));
+  });
+  $effect(() => {
+    enableRowMa;
+    untrack(() => globals.saveSetting("rowMa", enableRowMa, true));
+  });
+  $effect(() => {
+    enableRowYa;
+    untrack(() => globals.saveSetting("rowYa", enableRowYa, true));
+  });
+  $effect(() => {
+    enableRowRa;
+    untrack(() => globals.saveSetting("rowRa", enableRowRa, true));
+  });
+  $effect(() => {
+    enableRowWa;
+    untrack(() => globals.saveSetting("rowWa", enableRowWa, true));
+  });
+  $effect(() => {
+    enableRowN;
+    untrack(() => globals.saveSetting("rowN", enableRowN, true));
+  });
+  $effect(() => {
+    showOrigins;
+    untrack(() => globals.saveSetting("showOrigins", showOrigins, false));
+  });
 
   let isSelecting = $state(false);
   $effect(() => {
@@ -87,11 +135,10 @@
       enableRowWa,
       enableRowN,
     });
-    untrack(() => globals.nextQuestion());
   });
 </script>
 
-<svelte:body
+<svelte:window
   onmousemove={(ev) => {
     if (isSelecting) {
       let rect;
@@ -154,28 +201,29 @@
     }
   }}
   onmouseup={() => (isSelecting = false)}
-  onmouseleave={() => (isSelecting = false)}
 />
 
 <!-- settings -->
-<div class="flex gap-9">
-  <CheckboxInput bind:checked={enableHiragana} label="enable Hiragana 平假名" />
-  <CheckboxInput bind:checked={enableKatakana} label="enable Katakana 片假名" />
-  <CheckboxInput bind:checked={showOrigins} label="show origins:" />
-</div>
-<div class="flex gap-9">
-  <CheckboxInput bind:checked={enableMarks} label="enable Dakuten 濁音 and Handakuten 半濁音" />
-  <CheckboxInput bind:checked={enableYoon} label="enable Yoon 拗音" />
-</div>
 <div>
-  <a
-    href="https://www.wikiwand.com/zh-hk/articles/平文式罗马字#罗马字表"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="underline"
-  >
-    (ref.) 平文式羅馬字
-  </a>
+  <div class="flex gap-9">
+    <CheckboxInput bind:checked={enableHiragana} label="enable Hiragana 平假名" />
+    <CheckboxInput bind:checked={enableKatakana} label="enable Katakana 片假名" />
+    <CheckboxInput bind:checked={showOrigins} label="show origins:" />
+  </div>
+  <div class="flex gap-9">
+    <CheckboxInput bind:checked={enableMarks} label="enable Dakuten 濁音 and Handakuten 半濁音" />
+    <CheckboxInput bind:checked={enableYoon} label="enable Yoon 拗音" />
+  </div>
+  <div>
+    <a
+      href="https://www.wikiwand.com/zh-hk/articles/平文式罗马字#罗马字表"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="underline"
+    >
+      (ref.) 平文式羅馬字
+    </a>
+  </div>
 </div>
 
 <!-- Gojuon 五十音 -->

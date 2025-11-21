@@ -1,4 +1,6 @@
-export const keymap = {
+import type { Dictionary, Keymap } from "../locale";
+
+export const keymap: Keymap = {
   // row 1
   q: "q",
   w: "w",
@@ -64,25 +66,25 @@ export function dictionary({
   enableRowRa: boolean;
   enableRowWa: boolean;
   enableRowN: boolean;
-}) {
+}): Dictionary {
   // (ref.) [平文式羅馬字](https://www.wikiwand.com/zh-hk/articles/平文式罗马字#罗马字表)
   return {
     // 平假名 Hiragana
     ...(enableHiragana &&
       enableRowA && {
-        あ: { input: "a", romanization: "a", pronunciation: "あ" },
-        い: { input: "i", romanization: "i", pronunciation: "い" },
-        う: { input: "u", romanization: "u", pronunciation: "う" },
-        え: { input: "e", romanization: "e", pronunciation: "え" },
-        お: { input: "o", romanization: "o", pronunciation: "お" },
+        あ: { input: "a", romanization: "a", pronunciation: "あ", gojuonPosition: { row: 0, col: 0 } },
+        い: { input: "i", romanization: "i", pronunciation: "い", gojuonPosition: { row: 0, col: 1 } },
+        う: { input: "u", romanization: "u", pronunciation: "う", gojuonPosition: { row: 0, col: 2 } },
+        え: { input: "e", romanization: "e", pronunciation: "え", gojuonPosition: { row: 0, col: 3 } },
+        お: { input: "o", romanization: "o", pronunciation: "お", gojuonPosition: { row: 0, col: 4 } },
       }),
     ...(enableHiragana &&
       enableRowKa && {
-        か: { input: "ka", romanization: "ka", pronunciation: "か" },
-        き: { input: "ki", romanization: "ki", pronunciation: "き" },
-        く: { input: "ku", romanization: "ku", pronunciation: "く" },
-        け: { input: "ke", romanization: "ke", pronunciation: "け" },
-        こ: { input: "ko", romanization: "ko", pronunciation: "こ" },
+        か: { input: "ka", romanization: "ka", pronunciation: "か", gojuonPosition: { row: 1, col: 0 } },
+        き: { input: "ki", romanization: "ki", pronunciation: "き", gojuonPosition: { row: 1, col: 1 } },
+        く: { input: "ku", romanization: "ku", pronunciation: "く", gojuonPosition: { row: 1, col: 2 } },
+        け: { input: "ke", romanization: "ke", pronunciation: "け", gojuonPosition: { row: 1, col: 3 } },
+        こ: { input: "ko", romanization: "ko", pronunciation: "こ", gojuonPosition: { row: 1, col: 4 } },
       }),
     ...(enableHiragana &&
       enableMarks &&
@@ -95,11 +97,11 @@ export function dictionary({
       }),
     ...(enableHiragana &&
       enableRowSa && {
-        さ: { input: "sa", romanization: "sa", pronunciation: "さ" },
-        し: { input: "shi", romanization: "shi", pronunciation: "し" },
-        す: { input: "su", romanization: "su", pronunciation: "す" },
-        せ: { input: "se", romanization: "se", pronunciation: "せ" },
-        そ: { input: "so", romanization: "so", pronunciation: "そ" },
+        さ: { input: "sa", romanization: "sa", pronunciation: "さ", gojuonPosition: { row: 2, col: 0 } },
+        し: { input: "shi", romanization: "shi", pronunciation: "し", gojuonPosition: { row: 2, col: 1 } },
+        す: { input: "su", romanization: "su", pronunciation: "す", gojuonPosition: { row: 2, col: 2 } },
+        せ: { input: "se", romanization: "se", pronunciation: "せ", gojuonPosition: { row: 2, col: 3 } },
+        そ: { input: "so", romanization: "so", pronunciation: "そ", gojuonPosition: { row: 2, col: 4 } },
       }),
     ...(enableHiragana &&
       enableMarks &&
@@ -112,11 +114,11 @@ export function dictionary({
       }),
     ...(enableHiragana &&
       enableRowTa && {
-        た: { input: "ta", romanization: "ta", pronunciation: "た" },
-        ち: { input: "chi", romanization: "chi", pronunciation: "ち" },
-        つ: { input: "tsu", romanization: "tsu", pronunciation: "つ" },
-        て: { input: "te", romanization: "te", pronunciation: "て" },
-        と: { input: "to", romanization: "to", pronunciation: "と" },
+        た: { input: "ta", romanization: "ta", pronunciation: "た", gojuonPosition: { row: 3, col: 0 } },
+        ち: { input: "chi", romanization: "chi", pronunciation: "ち", gojuonPosition: { row: 3, col: 1 } },
+        つ: { input: "tsu", romanization: "tsu", pronunciation: "つ", gojuonPosition: { row: 3, col: 2 } },
+        て: { input: "te", romanization: "te", pronunciation: "て", gojuonPosition: { row: 3, col: 3 } },
+        と: { input: "to", romanization: "to", pronunciation: "と", gojuonPosition: { row: 3, col: 4 } },
       }),
     ...(enableHiragana &&
       enableMarks &&
@@ -129,19 +131,19 @@ export function dictionary({
       }),
     ...(enableHiragana &&
       enableRowNa && {
-        な: { input: "na", romanization: "na", pronunciation: "な" },
-        に: { input: "ni", romanization: "ni", pronunciation: "に" },
-        ぬ: { input: "nu", romanization: "nu", pronunciation: "ぬ" },
-        ね: { input: "ne", romanization: "ne", pronunciation: "ね" },
-        の: { input: "no", romanization: "no", pronunciation: "の" },
+        な: { input: "na", romanization: "na", pronunciation: "な", gojuonPosition: { row: 4, col: 0 } },
+        に: { input: "ni", romanization: "ni", pronunciation: "に", gojuonPosition: { row: 4, col: 1 } },
+        ぬ: { input: "nu", romanization: "nu", pronunciation: "ぬ", gojuonPosition: { row: 4, col: 2 } },
+        ね: { input: "ne", romanization: "ne", pronunciation: "ね", gojuonPosition: { row: 4, col: 3 } },
+        の: { input: "no", romanization: "no", pronunciation: "の", gojuonPosition: { row: 4, col: 4 } },
       }),
     ...(enableHiragana &&
       enableRowHa && {
-        は: { input: "ha", romanization: "ha", pronunciation: "は" },
-        ひ: { input: "hi", romanization: "hi", pronunciation: "ひ" },
-        ふ: { input: "fu", romanization: "fu", pronunciation: "ふ" },
-        へ: { input: "he", romanization: "he", pronunciation: "へ" },
-        ほ: { input: "ho", romanization: "ho", pronunciation: "ほ" },
+        は: { input: "ha", romanization: "ha", pronunciation: "は", gojuonPosition: { row: 5, col: 0 } },
+        ひ: { input: "hi", romanization: "hi", pronunciation: "ひ", gojuonPosition: { row: 5, col: 1 } },
+        ふ: { input: "fu", romanization: "fu", pronunciation: "ふ", gojuonPosition: { row: 5, col: 2 } },
+        へ: { input: "he", romanization: "he", pronunciation: "へ", gojuonPosition: { row: 5, col: 3 } },
+        ほ: { input: "ho", romanization: "ho", pronunciation: "ほ", gojuonPosition: { row: 5, col: 4 } },
       }),
     ...(enableHiragana &&
       enableMarks &&
@@ -163,34 +165,34 @@ export function dictionary({
       }),
     ...(enableHiragana &&
       enableRowMa && {
-        ま: { input: "ma", romanization: "ma", pronunciation: "ま" },
-        み: { input: "mi", romanization: "mi", pronunciation: "み" },
-        む: { input: "mu", romanization: "mu", pronunciation: "む" },
-        め: { input: "me", romanization: "me", pronunciation: "め" },
-        も: { input: "mo", romanization: "mo", pronunciation: "も" },
+        ま: { input: "ma", romanization: "ma", pronunciation: "ま", gojuonPosition: { row: 6, col: 0 } },
+        み: { input: "mi", romanization: "mi", pronunciation: "み", gojuonPosition: { row: 6, col: 1 } },
+        む: { input: "mu", romanization: "mu", pronunciation: "む", gojuonPosition: { row: 6, col: 2 } },
+        め: { input: "me", romanization: "me", pronunciation: "め", gojuonPosition: { row: 6, col: 3 } },
+        も: { input: "mo", romanization: "mo", pronunciation: "も", gojuonPosition: { row: 6, col: 4 } },
       }),
     ...(enableHiragana &&
       enableRowYa && {
-        や: { input: "ya", romanization: "ya", pronunciation: "や" },
-        ゆ: { input: "yu", romanization: "yu", pronunciation: "ゆ" },
-        よ: { input: "yo", romanization: "yo", pronunciation: "よ" },
+        や: { input: "ya", romanization: "ya", pronunciation: "や", gojuonPosition: { row: 7, col: 0 } },
+        ゆ: { input: "yu", romanization: "yu", pronunciation: "ゆ", gojuonPosition: { row: 7, col: 2 } },
+        よ: { input: "yo", romanization: "yo", pronunciation: "よ", gojuonPosition: { row: 7, col: 4 } },
       }),
     ...(enableHiragana &&
       enableRowRa && {
-        ら: { input: "ra", romanization: "ra", pronunciation: "ら" },
-        り: { input: "ri", romanization: "ri", pronunciation: "り" },
-        る: { input: "ru", romanization: "ru", pronunciation: "る" },
-        れ: { input: "re", romanization: "re", pronunciation: "れ" },
-        ろ: { input: "ro", romanization: "ro", pronunciation: "ろ" },
+        ら: { input: "ra", romanization: "ra", pronunciation: "ら", gojuonPosition: { row: 8, col: 0 } },
+        り: { input: "ri", romanization: "ri", pronunciation: "り", gojuonPosition: { row: 8, col: 1 } },
+        る: { input: "ru", romanization: "ru", pronunciation: "る", gojuonPosition: { row: 8, col: 2 } },
+        れ: { input: "re", romanization: "re", pronunciation: "れ", gojuonPosition: { row: 8, col: 3 } },
+        ろ: { input: "ro", romanization: "ro", pronunciation: "ろ", gojuonPosition: { row: 8, col: 4 } },
       }),
     ...(enableHiragana &&
       enableRowWa && {
-        わ: { input: "wa", romanization: "wa", pronunciation: "わ" },
-        を: { input: "o", romanization: "wo", pronunciation: "を" },
+        わ: { input: "wa", romanization: "wa", pronunciation: "わ", gojuonPosition: { row: 9, col: 0 } },
+        を: { input: "o", romanization: "wo", pronunciation: "を", gojuonPosition: { row: 9, col: 4 } },
       }),
     ...(enableHiragana &&
       enableRowN && {
-        ん: { input: "n", romanization: "n", pronunciation: "ん" },
+        ん: { input: "n", romanization: "n", pronunciation: "ん", gojuonPosition: { row: 10, col: 0 } },
       }),
     ...(enableHiragana &&
       enableRowYa &&
@@ -221,19 +223,19 @@ export function dictionary({
     // 片假名 Katakana
     ...(enableKatakana &&
       enableRowA && {
-        ア: { input: "a", romanization: "a", pronunciation: "ア" },
-        イ: { input: "i", romanization: "i", pronunciation: "イ" },
-        ウ: { input: "u", romanization: "u", pronunciation: "ウ" },
-        エ: { input: "e", romanization: "e", pronunciation: "エ" },
-        オ: { input: "o", romanization: "o", pronunciation: "オ" },
+        ア: { input: "a", romanization: "a", pronunciation: "ア", gojuonPosition: { row: 0, col: 0 } },
+        イ: { input: "i", romanization: "i", pronunciation: "イ", gojuonPosition: { row: 0, col: 1 } },
+        ウ: { input: "u", romanization: "u", pronunciation: "ウ", gojuonPosition: { row: 0, col: 2 } },
+        エ: { input: "e", romanization: "e", pronunciation: "エ", gojuonPosition: { row: 0, col: 3 } },
+        オ: { input: "o", romanization: "o", pronunciation: "オ", gojuonPosition: { row: 0, col: 4 } },
       }),
     ...(enableKatakana &&
       enableRowKa && {
-        カ: { input: "ka", romanization: "ka", pronunciation: "カ" },
-        キ: { input: "ki", romanization: "ki", pronunciation: "キ" },
-        ク: { input: "ku", romanization: "ku", pronunciation: "ク" },
-        ケ: { input: "ke", romanization: "ke", pronunciation: "ケ" },
-        コ: { input: "ko", romanization: "ko", pronunciation: "コ" },
+        カ: { input: "ka", romanization: "ka", pronunciation: "カ", gojuonPosition: { row: 1, col: 0 } },
+        キ: { input: "ki", romanization: "ki", pronunciation: "キ", gojuonPosition: { row: 1, col: 1 } },
+        ク: { input: "ku", romanization: "ku", pronunciation: "ク", gojuonPosition: { row: 1, col: 2 } },
+        ケ: { input: "ke", romanization: "ke", pronunciation: "ケ", gojuonPosition: { row: 1, col: 3 } },
+        コ: { input: "ko", romanization: "ko", pronunciation: "コ", gojuonPosition: { row: 1, col: 4 } },
       }),
     ...(enableKatakana &&
       enableMarks &&
@@ -246,11 +248,11 @@ export function dictionary({
       }),
     ...(enableKatakana &&
       enableRowSa && {
-        サ: { input: "sa", romanization: "sa", pronunciation: "サ" },
-        シ: { input: "shi", romanization: "shi", pronunciation: "シ" },
-        ス: { input: "su", romanization: "su", pronunciation: "ス" },
-        セ: { input: "se", romanization: "se", pronunciation: "セ" },
-        ソ: { input: "so", romanization: "so", pronunciation: "ソ" },
+        サ: { input: "sa", romanization: "sa", pronunciation: "サ", gojuonPosition: { row: 2, col: 0 } },
+        シ: { input: "shi", romanization: "shi", pronunciation: "シ", gojuonPosition: { row: 2, col: 1 } },
+        ス: { input: "su", romanization: "su", pronunciation: "ス", gojuonPosition: { row: 2, col: 2 } },
+        セ: { input: "se", romanization: "se", pronunciation: "セ", gojuonPosition: { row: 2, col: 3 } },
+        ソ: { input: "so", romanization: "so", pronunciation: "ソ", gojuonPosition: { row: 2, col: 4 } },
       }),
     ...(enableKatakana &&
       enableMarks &&
@@ -263,11 +265,11 @@ export function dictionary({
       }),
     ...(enableKatakana &&
       enableRowTa && {
-        タ: { input: "ta", romanization: "ta", pronunciation: "タ" },
-        チ: { input: "chi", romanization: "chi", pronunciation: "チ" },
-        ツ: { input: "tsu", romanization: "tsu", pronunciation: "ツ" },
-        テ: { input: "te", romanization: "te", pronunciation: "テ" },
-        ト: { input: "to", romanization: "to", pronunciation: "ト" },
+        タ: { input: "ta", romanization: "ta", pronunciation: "タ", gojuonPosition: { row: 3, col: 0 } },
+        チ: { input: "chi", romanization: "chi", pronunciation: "チ", gojuonPosition: { row: 3, col: 1 } },
+        ツ: { input: "tsu", romanization: "tsu", pronunciation: "ツ", gojuonPosition: { row: 3, col: 2 } },
+        テ: { input: "te", romanization: "te", pronunciation: "テ", gojuonPosition: { row: 3, col: 3 } },
+        ト: { input: "to", romanization: "to", pronunciation: "ト", gojuonPosition: { row: 3, col: 4 } },
       }),
     ...(enableKatakana &&
       enableMarks &&
@@ -280,19 +282,19 @@ export function dictionary({
       }),
     ...(enableKatakana &&
       enableRowNa && {
-        ナ: { input: "na", romanization: "na", pronunciation: "ナ" },
-        ニ: { input: "ni", romanization: "ni", pronunciation: "ニ" },
-        ヌ: { input: "nu", romanization: "nu", pronunciation: "ヌ" },
-        ネ: { input: "ne", romanization: "ne", pronunciation: "ネ" },
-        ノ: { input: "no", romanization: "no", pronunciation: "ノ" },
+        ナ: { input: "na", romanization: "na", pronunciation: "ナ", gojuonPosition: { row: 4, col: 0 } },
+        ニ: { input: "ni", romanization: "ni", pronunciation: "ニ", gojuonPosition: { row: 4, col: 1 } },
+        ヌ: { input: "nu", romanization: "nu", pronunciation: "ヌ", gojuonPosition: { row: 4, col: 2 } },
+        ネ: { input: "ne", romanization: "ne", pronunciation: "ネ", gojuonPosition: { row: 4, col: 3 } },
+        ノ: { input: "no", romanization: "no", pronunciation: "ノ", gojuonPosition: { row: 4, col: 4 } },
       }),
     ...(enableKatakana &&
       enableRowHa && {
-        ハ: { input: "ha", romanization: "ha", pronunciation: "ハ" },
-        ヒ: { input: "hi", romanization: "hi", pronunciation: "ヒ" },
-        フ: { input: "fu", romanization: "fu", pronunciation: "フ" },
-        ヘ: { input: "he", romanization: "he", pronunciation: "ヘ" },
-        ホ: { input: "ho", romanization: "ho", pronunciation: "ホ" },
+        ハ: { input: "ha", romanization: "ha", pronunciation: "ハ", gojuonPosition: { row: 5, col: 0 } },
+        ヒ: { input: "hi", romanization: "hi", pronunciation: "ヒ", gojuonPosition: { row: 5, col: 1 } },
+        フ: { input: "fu", romanization: "fu", pronunciation: "フ", gojuonPosition: { row: 5, col: 2 } },
+        ヘ: { input: "he", romanization: "he", pronunciation: "ヘ", gojuonPosition: { row: 5, col: 3 } },
+        ホ: { input: "ho", romanization: "ho", pronunciation: "ホ", gojuonPosition: { row: 5, col: 4 } },
       }),
     ...(enableKatakana &&
       enableMarks &&
@@ -314,34 +316,34 @@ export function dictionary({
       }),
     ...(enableKatakana &&
       enableRowMa && {
-        マ: { input: "ma", romanization: "ma", pronunciation: "マ" },
-        ミ: { input: "mi", romanization: "mi", pronunciation: "ミ" },
-        ム: { input: "mu", romanization: "mu", pronunciation: "ム" },
-        メ: { input: "me", romanization: "me", pronunciation: "メ" },
-        モ: { input: "mo", romanization: "mo", pronunciation: "モ" },
+        マ: { input: "ma", romanization: "ma", pronunciation: "マ", gojuonPosition: { row: 6, col: 0 } },
+        ミ: { input: "mi", romanization: "mi", pronunciation: "ミ", gojuonPosition: { row: 6, col: 1 } },
+        ム: { input: "mu", romanization: "mu", pronunciation: "ム", gojuonPosition: { row: 6, col: 2 } },
+        メ: { input: "me", romanization: "me", pronunciation: "メ", gojuonPosition: { row: 6, col: 3 } },
+        モ: { input: "mo", romanization: "mo", pronunciation: "モ", gojuonPosition: { row: 6, col: 4 } },
       }),
     ...(enableKatakana &&
       enableRowYa && {
-        ヤ: { input: "ya", romanization: "ya", pronunciation: "ヤ" },
-        ユ: { input: "yu", romanization: "yu", pronunciation: "ユ" },
-        ヨ: { input: "yo", romanization: "yo", pronunciation: "ヨ" },
+        ヤ: { input: "ya", romanization: "ya", pronunciation: "ヤ", gojuonPosition: { row: 7, col: 0 } },
+        ユ: { input: "yu", romanization: "yu", pronunciation: "ユ", gojuonPosition: { row: 7, col: 2 } },
+        ヨ: { input: "yo", romanization: "yo", pronunciation: "ヨ", gojuonPosition: { row: 7, col: 4 } },
       }),
     ...(enableKatakana &&
       enableRowRa && {
-        ラ: { input: "ra", romanization: "ra", pronunciation: "ラ" },
-        リ: { input: "ri", romanization: "ri", pronunciation: "リ" },
-        ル: { input: "ru", romanization: "ru", pronunciation: "ル" },
-        レ: { input: "re", romanization: "re", pronunciation: "レ" },
-        ロ: { input: "ro", romanization: "ro", pronunciation: "ロ" },
+        ラ: { input: "ra", romanization: "ra", pronunciation: "ラ", gojuonPosition: { row: 8, col: 0 } },
+        リ: { input: "ri", romanization: "ri", pronunciation: "リ", gojuonPosition: { row: 8, col: 1 } },
+        ル: { input: "ru", romanization: "ru", pronunciation: "ル", gojuonPosition: { row: 8, col: 2 } },
+        レ: { input: "re", romanization: "re", pronunciation: "レ", gojuonPosition: { row: 8, col: 3 } },
+        ロ: { input: "ro", romanization: "ro", pronunciation: "ロ", gojuonPosition: { row: 8, col: 4 } },
       }),
     ...(enableKatakana &&
       enableRowWa && {
-        ワ: { input: "wa", romanization: "wa", pronunciation: "ワ" },
-        ヲ: { input: "o", romanization: "wo", pronunciation: "ヲ" },
+        ワ: { input: "wa", romanization: "wa", pronunciation: "ワ", gojuonPosition: { row: 9, col: 0 } },
+        ヲ: { input: "o", romanization: "wo", pronunciation: "ヲ", gojuonPosition: { row: 9, col: 4 } },
       }),
     ...(enableKatakana &&
       enableRowN && {
-        ン: { input: "n", romanization: "n", pronunciation: "ン" },
+        ン: { input: "n", romanization: "n", pronunciation: "ン", gojuonPosition: { row: 10, col: 0 } },
       }),
     ...(enableKatakana &&
       enableRowYa &&

@@ -4,5 +4,4 @@
 
   globals.localeKeymap = keymap;
   globals.localeDictionary = dictionary;
-  globals.nextQuestion();
 </script>

@@ -1,3 +1,4 @@
+import { SvelteURLSearchParams } from "svelte/reactivity";
 import type { Dictionary, Keymap } from "./locales/locale";
 
 // should match codes from SpeechSynthesis
@@ -10,7 +11,7 @@ function isLang(lang: string | null | undefined): lang is Lang {
 export const globals = new (class {
   DEV = import.meta.env.MODE === "development";
 
-  searchParams = $state(new URLSearchParams(window.location.search));
+  searchParams = new SvelteURLSearchParams(window.location.search);
 
   // locale
   langs = LANGS;
@@ -30,22 +31,9 @@ export const globals = new (class {
     this.availableVoices.find(({ lang, name }) => lang === this.lang && name.startsWith("Google")),
   );
   speechSynthesisErr = $state(<SpeechSynthesisErrorEvent | undefined>undefined);
-
-  // question
-  questionLength = $state(parseInt(this.searchParams.get("questionLength") ?? "3"));
-  questions: ({ letter: string } & Dictionary[string])[] = $state([]);
-  showRomanizations = $state(this.searchParams.has("showRomanizations", "true"));
-  inputs: string[] = $state([""]);
-  isCorrects = $derived(this.questions.map(({ input }, i) => input && this.inputs[i] === input));
-  allCorrect = $derived(this.isCorrects.every((is) => is));
-
-  // miscellaneous states
-  isHoldingShift = $state(false);
   isSpeaking = $state(false);
 
   constructor() {
-    this.nextQuestion();
-
     speechSynthesis.addEventListener("voiceschanged", () => {
       this.availableVoices = speechSynthesis.getVoices();
       if (this.DEV) {
@@ -58,7 +46,9 @@ export const globals = new (class {
   }
 
   resetSearchParams() {
-    this.searchParams = new URLSearchParams();
+    for (const key of this.searchParams.keys()) {
+      this.searchParams.delete(key);
+    }
   }
 
   saveSetting(key: string, value: string, defaultValue?: string): void;
@@ -82,79 +72,14 @@ export const globals = new (class {
     window.history.replaceState(null, "", `?${this.searchParams.toString()}`);
   }
 
-  onKeyDown({ key, ctrlKey = false }: { key: string; ctrlKey?: boolean }) {
-    if (
-      // ignore refresh (Ctrl-r)
-      (ctrlKey && (key === "r" || key === "R")) ||
-      // ignore when modifying settings
-      document.activeElement instanceof HTMLInputElement
-    ) {
-      return;
-    }
-
-    if (this.DEV) {
-      console.log("onInput", key, "ctrl", ctrlKey);
-    }
-
-    if (document.activeElement instanceof HTMLElement) {
-      document.activeElement.blur();
-    }
-
-    if (this.allCorrect) {
-      switch (key) {
-        case "r":
-          this.speak(this.questions.map(({ pronunciation }) => pronunciation));
-          break;
-        case "Enter":
-          this.nextQuestion();
-          break;
-      }
-    } else {
-      if (key.match(/^[a-zA-Z]$/)) {
-        this.inputs[this.inputs.length - 1] += key;
-        this.isHoldingShift = false;
-      } else {
-        switch (key) {
-          case "Shift":
-            this.isHoldingShift = true;
-            break;
-          case " ":
-            if (
-              this.inputs[this.inputs.length - 1] !== "" &&
-              this.inputs.length < this.questionLength
-            ) {
-              this.inputs.push("");
-            }
-            break;
-          case "Backspace":
-            if (ctrlKey) {
-              this.inputs[this.inputs.length - 1] = "";
-            } else {
-              const lastInput = this.inputs[this.inputs.length - 1];
-
-              if (lastInput === "" && this.inputs.length > 1) {
-                this.inputs.pop();
-              } else {
-                this.inputs[this.inputs.length - 1] = lastInput.slice(0, -1);
-              }
-
-              break;
-            }
-        }
-      }
-    }
-  }
-
-  nextQuestion() {
-    this.questions = Array.from({ length: this.questionLength }, () => {
-      const letter =
-        this.localeDictionaryKeys[Math.floor(Math.random() * this.localeDictionaryKeys.length)];
-      return {
-        letter,
-        ...this.localeDictionary[letter],
-      };
-    });
-    this.inputs = [""];
+  emitKeydown({ key, ctrlKey = false }: { key: string; ctrlKey?: boolean }) {
+    dispatchEvent(
+      new KeyboardEvent("keydown", {
+        key,
+        ctrlKey,
+        bubbles: true,
+      }),
+    );
   }
 
   speak(letters: undefined | string | (undefined | string)[], onend?: () => void) {

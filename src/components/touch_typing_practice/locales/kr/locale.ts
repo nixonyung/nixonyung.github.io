@@ -1,5 +1,7 @@
+import type { Dictionary, Keymap } from "../locale";
+
 // (ref.) [Dubeolsik](https://www.wikiwand.com/en/articles/Keyboard_layout#Dubeolsik)
-export const keymap = {
+export const keymap: Keymap = {
   // row 1
   q: "ㅂ",
   w: "ㅈ",
@@ -43,7 +45,7 @@ export const keymap = {
 };
 
 // (ref.) [Hangul - Letters](https://www.wikiwand.com/en/articles/Hangul#Letters)
-export const dictionary = {
+export const dictionary: Dictionary = {
   // consonants
   ㄱ: { input: "r", romanization: "g", pronunciation: "가" },
   ㄲ: { input: "R", romanization: "kk", pronunciation: "까" },

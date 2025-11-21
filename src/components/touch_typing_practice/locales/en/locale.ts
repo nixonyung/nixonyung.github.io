@@ -1,4 +1,6 @@
-export const keymap = {
+import type { Dictionary, Keymap } from "../locale";
+
+export const keymap: Keymap = {
   // row 1
   q: "q",
   w: "w",
@@ -64,7 +66,7 @@ export const keymap = {
   M: "M",
 };
 
-export const dictionary = {
+export const dictionary: Dictionary = {
   a: { input: "a", pronunciation: "a" },
   A: { input: "A", pronunciation: "A" },
   b: { input: "b", pronunciation: "b" },

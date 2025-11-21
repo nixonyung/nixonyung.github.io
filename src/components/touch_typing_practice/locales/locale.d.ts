@@ -6,5 +6,10 @@ export type Dictionary = Record<
     input: string;
     romanization?: string;
     pronunciation?: string;
+
+    gojuonPosition?: {
+      row: number;
+      col: number;
+    };
   }
 >;
