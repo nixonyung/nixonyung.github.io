@@ -1,5 +1,6 @@
 <script lang="ts">
   import sampleSize from "lodash/sampleSize";
+  import shuffle from "lodash/shuffle";
   import { untrack } from "svelte";
   import { globals } from "../../globals.svelte";
   import NumericInput from "../../inputs/NumericInput.svelte";
@@ -30,7 +31,7 @@
         break;
       }
 
-      options = [
+      options = shuffle([
         question.letter,
         ...sampleSize(
           lettersPool.filter((letter) => {
@@ -42,7 +43,7 @@
           }),
           numOptions - 1,
         ),
-      ];
+      ]);
       isCorrect = false;
     });
   }
