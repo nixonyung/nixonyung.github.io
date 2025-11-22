@@ -1,11 +1,9 @@
 <script lang="ts">
   import "@/styles.css";
   import { globals } from "./globals.svelte";
-  import Keyboard from "./Keyboard.svelte";
   import EN from "./locales/en/EN.svelte";
   import JP from "./locales/jp/JP.svelte";
   import KR from "./locales/kr/KR.svelte";
-  import Questions from "./Questions.svelte";
 </script>
 
 <div class="flex min-h-dvh flex-col gap-3 px-4 pt-2 pb-6">
@@ -18,10 +16,7 @@
       <select
         bind:value={globals.lang}
         class="rounded bg-primary ring"
-        onchange={async () => {
-          globals.resetSearchParams();
-          globals.saveSetting("lang", globals.lang);
-        }}
+        onchange={() => globals.saveSetting("lang", globals.lang)}
       >
         {#each globals.langs as lang (lang)}
           <option value={lang}>{lang}</option>
@@ -37,7 +32,4 @@
   {:else if globals.lang === "ko-KR"}
     <KR />
   {/if}
-
-  <Questions />
-  <Keyboard />
 </div>

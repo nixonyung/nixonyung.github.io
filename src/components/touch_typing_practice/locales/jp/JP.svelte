@@ -1,23 +1,14 @@
 <script lang="ts">
-  import { untrack } from "svelte";
-  import CheckboxInput from "../../CheckboxInput.svelte";
+  import { onDestroy, untrack } from "svelte";
   import { globals } from "../../globals.svelte";
+  import CheckboxInput from "../../inputs/CheckboxInput.svelte";
+  import TabsInput from "../../inputs/TabsInput.svelte";
+  import Keyboard from "../../Keyboard.svelte";
+  import Questions from "../../Questions.svelte";
   import GojuonHeader from "./GojuonHeader.svelte";
   import GojuonQuestions from "./GojuonQuestions.svelte";
   import GojuonRow from "./GojuonRow.svelte";
   import { dictionary, keymap } from "./locale";
-
-  let rowA: GojuonHeader | undefined = $state();
-  let rowKa: GojuonHeader | undefined = $state();
-  let rowSa: GojuonHeader | undefined = $state();
-  let rowTa: GojuonHeader | undefined = $state();
-  let rowNa: GojuonHeader | undefined = $state();
-  let rowHa: GojuonHeader | undefined = $state();
-  let rowMa: GojuonHeader | undefined = $state();
-  let rowYa: GojuonHeader | undefined = $state();
-  let rowRa: GojuonHeader | undefined = $state();
-  let rowWa: GojuonHeader | undefined = $state();
-  let rowN: GojuonHeader | undefined = $state();
 
   let enableHiragana = $state(!globals.searchParams.has("hiragana", "false"));
   let enableKatakana = $state(!globals.searchParams.has("katakana", "false"));
@@ -99,6 +90,40 @@
     showOrigins;
     untrack(() => globals.saveSetting("showOrigins", showOrigins, false));
   });
+  onDestroy(() => {
+    globals.searchParams.delete("hiragana");
+    globals.searchParams.delete("katakana");
+    globals.searchParams.delete("marks");
+    globals.searchParams.delete("yoon");
+    globals.searchParams.delete("rowA");
+    globals.searchParams.delete("rowKa");
+    globals.searchParams.delete("rowSa");
+    globals.searchParams.delete("rowTa");
+    globals.searchParams.delete("rowNa");
+    globals.searchParams.delete("rowHa");
+    globals.searchParams.delete("rowMa");
+    globals.searchParams.delete("rowYa");
+    globals.searchParams.delete("rowRa");
+    globals.searchParams.delete("rowWa");
+    globals.searchParams.delete("rowN");
+    globals.searchParams.delete("showOrigins");
+
+    globals.saveSearchParams();
+  });
+
+  let rowA: GojuonHeader | undefined = $state();
+  let rowKa: GojuonHeader | undefined = $state();
+  let rowSa: GojuonHeader | undefined = $state();
+  let rowTa: GojuonHeader | undefined = $state();
+  let rowNa: GojuonHeader | undefined = $state();
+  let rowHa: GojuonHeader | undefined = $state();
+  let rowMa: GojuonHeader | undefined = $state();
+  let rowYa: GojuonHeader | undefined = $state();
+  let rowRa: GojuonHeader | undefined = $state();
+  let rowWa: GojuonHeader | undefined = $state();
+  let rowN: GojuonHeader | undefined = $state();
+
+  let currentTab: "questions" | "gojuonQuestions" = $state("questions");
 
   let isSelecting = $state(false);
   $effect(() => {
@@ -385,4 +410,21 @@
   </div>
 </div>
 
-<GojuonQuestions />
+<TabsInput
+  bind:value={currentTab}
+  label="Select Mode:"
+  options={["questions", "gojuonQuestions"]}
+  onchange={() => {
+    globals.searchParams.delete("questionLength");
+    globals.searchParams.delete("showRomanizations");
+    globals.searchParams.delete("numOptions");
+
+    globals.saveSearchParams();
+  }}
+/>
+{#if currentTab === "questions"}
+  <Questions />
+  <Keyboard />
+{:else if currentTab === "gojuonQuestions"}
+  <GojuonQuestions />
+{/if}

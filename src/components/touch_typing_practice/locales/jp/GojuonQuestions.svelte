@@ -2,7 +2,7 @@
   import sampleSize from "lodash/sampleSize";
   import { untrack } from "svelte";
   import { globals } from "../../globals.svelte";
-  import NumericInput from "../../NumericInput.svelte";
+  import NumericInput from "../../inputs/NumericInput.svelte";
 
   let numOptions = $state(parseInt(globals.searchParams.get("numOptions") ?? "4"));
 

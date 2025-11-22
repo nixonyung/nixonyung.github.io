@@ -1,10 +1,10 @@
 <script lang="ts">
   import shuffle from "lodash/shuffle";
   import { untrack } from "svelte";
-  import CheckboxInput from "./CheckboxInput.svelte";
   import { globals } from "./globals.svelte";
+  import CheckboxInput from "./inputs/CheckboxInput.svelte";
+  import NumericInput from "./inputs/NumericInput.svelte";
   import type { Dictionary } from "./locales/locale";
-  import NumericInput from "./NumericInput.svelte";
 
   let questionLength = $state(parseInt(globals.searchParams.get("questionLength") ?? "3"));
   let showRomanizations = $state(globals.searchParams.has("showRomanizations", "true"));

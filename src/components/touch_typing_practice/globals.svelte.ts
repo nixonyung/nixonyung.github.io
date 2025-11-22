@@ -45,10 +45,15 @@ export const globals = new (class {
     });
   }
 
+  saveSearchParams() {
+    window.history.replaceState(null, "", `?${this.searchParams.toString()}`);
+  }
+
   resetSearchParams() {
     for (const key of this.searchParams.keys()) {
       this.searchParams.delete(key);
     }
+    this.saveSearchParams();
   }
 
   saveSetting(key: string, value: string, defaultValue?: string): void;
@@ -69,7 +74,12 @@ export const globals = new (class {
       this.searchParams.set(key, value ? "true" : "false");
     }
 
-    window.history.replaceState(null, "", `?${this.searchParams.toString()}`);
+    this.saveSearchParams();
+  }
+
+  deleteSetting(key: string) {
+    this.searchParams.delete(key);
+    this.saveSearchParams();
   }
 
   emitKeydown({ key, ctrlKey = false }: { key: string; ctrlKey?: boolean }) {
