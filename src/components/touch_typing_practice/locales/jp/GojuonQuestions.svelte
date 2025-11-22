@@ -7,44 +7,39 @@
 
   let numOptions = $state(parseInt(globals.searchParams.get("numOptions") ?? "4"));
 
-  let lettersPool = $derived(
-    globals.localeDictionaryKeys.filter((key) => !!globals.localeDictionary[key].gojuonPosition),
+  let lettersWithGojuonPosition = $derived(
+    globals.localeDictionaryKeys.filter(
+      (key) => globals.localeDictionary[key].gojuonPosition !== undefined,
+    ),
   );
+  let lettersPool: string[] = $state([]);
+  let lettersPoolIdx = $state(0);
 
-  let question: { letter: string; gojuonPosition: { row: number; col: number } } | undefined =
+  let question: { letter: string; gojuonPosition?: { row: number; col: number } } | undefined =
     $state();
   let options: string[] = $state([]);
-  let isCorrect = $state(false);
 
-  function genQuestion() {
+  function genQuestion(force: boolean = false) {
     untrack(() => {
-      question = undefined;
-      options = [];
-
-      if (!lettersPool.length) return;
-      while (true) {
-        const letter = lettersPool[Math.floor(Math.random() * lettersPool.length)];
-        const { gojuonPosition } = globals.localeDictionary[letter];
-        if (!gojuonPosition) continue;
-
-        question = { letter, gojuonPosition };
-        break;
+      lettersPoolIdx += 1;
+      if (force || lettersPoolIdx >= lettersPool.length) {
+        lettersPool = shuffle(lettersWithGojuonPosition);
+        lettersPoolIdx = 0;
       }
 
+      const letter = lettersPool[lettersPoolIdx];
+      const gojuonPosition = globals.localeDictionary[letter]?.gojuonPosition;
+      question = { letter, gojuonPosition };
       options = shuffle([
-        question.letter,
+        letter,
         ...sampleSize(
-          lettersPool.filter((letter) => {
-            const pos = globals.localeDictionary[letter].gojuonPosition;
-            if (!pos) return false;
-
-            const { row, col } = pos;
-            return row !== question?.gojuonPosition.row || col !== question?.gojuonPosition.col;
+          lettersWithGojuonPosition.filter((letter) => {
+            const { row, col } = globals.localeDictionary[letter].gojuonPosition!;
+            return row !== gojuonPosition?.row || col !== gojuonPosition?.col;
           }),
           numOptions - 1,
         ),
       ]);
-      isCorrect = false;
     });
   }
 
@@ -52,7 +47,7 @@
     globals.localeDictionary;
     numOptions;
 
-    genQuestion();
+    genQuestion(true);
   });
 </script>
 
@@ -74,12 +69,12 @@
         <div
           class={[
             "relative size-12 ring",
-            10 - rowIdx === question?.gojuonPosition.row &&
+            10 - rowIdx === question?.gojuonPosition?.row &&
               colIdx === question?.gojuonPosition.col &&
               "bg-primary-lighter",
           ]}
         >
-          {#if 10 - rowIdx === question?.gojuonPosition.row && colIdx === question?.gojuonPosition.col}
+          {#if 10 - rowIdx === question?.gojuonPosition?.row && colIdx === question?.gojuonPosition?.col}
             <span
               class="absolute -right-1 -bottom-3 icon-[heroicons--arrow-up-16-solid] -scale-x-75 scale-y-150 -rotate-30 text-3xl text-red-600"
             ></span>
