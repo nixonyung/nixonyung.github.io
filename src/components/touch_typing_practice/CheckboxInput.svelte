@@ -3,7 +3,9 @@
 
   let {
     checked = $bindable(),
-    ...props
+    label,
+    class: classVal,
+    onchange,
   }: {
     checked: boolean;
     label: string;
@@ -12,13 +14,13 @@
   } = $props();
 </script>
 
-<label class={props.class}>
-  {props.label}
+<label class={classVal}>
   <input
     bind:checked
     type="checkbox"
     class="align-middle"
     onclick={({ currentTarget }) => currentTarget.blur()}
-    onchange={(ev) => props.onchange?.(ev)}
+    onchange={(ev) => onchange?.(ev)}
   />
+  {label}
 </label>

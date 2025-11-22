@@ -4,6 +4,7 @@
   import CheckboxInput from "./CheckboxInput.svelte";
   import { globals } from "./globals.svelte";
   import type { Dictionary } from "./locales/locale";
+  import NumericInput from "./NumericInput.svelte";
 
   let questionLength = $state(parseInt(globals.searchParams.get("questionLength") ?? "3"));
   let showRomanizations = $state(globals.searchParams.has("showRomanizations", "true"));
@@ -110,32 +111,12 @@
 
 <!-- settings -->
 <div class="flex items-center-safe gap-9">
-  <div class="flex gap-1">
-    <span class="min-w-[16ch]">
-      question length: {questionLength}
-    </span>
-    <button
-      title="decrement questionLength"
-      class="cursor-pointer"
-      onclick={() => {
-        if (questionLength > 1) questionLength -= 1;
-        globals.saveSetting("questionLength", questionLength, 3);
-      }}
-    >
-      <span class="icon-[heroicons--minus-circle] align-middle text-2xl"></span>
-    </button>
-    <button
-      title="increment questionLength"
-      class="cursor-pointer"
-      onclick={() => {
-        questionLength += 1;
-        globals.saveSetting("questionLength", questionLength, 3);
-      }}
-    >
-      <span class="icon-[heroicons--plus-circle] align-middle text-2xl"></span>
-    </button>
-  </div>
-
+  <NumericInput
+    bind:value={questionLength}
+    label="question length:"
+    min={1}
+    onchange={() => globals.saveSetting("questionLength", questionLength, 3)}
+  />
   <CheckboxInput
     bind:checked={showRomanizations}
     label="show romanizations:"
