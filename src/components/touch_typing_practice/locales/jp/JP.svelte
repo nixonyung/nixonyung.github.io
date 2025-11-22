@@ -3,6 +3,7 @@
   import CheckboxInput from "../../CheckboxInput.svelte";
   import { globals } from "../../globals.svelte";
   import GojuonHeader from "./GojuonHeader.svelte";
+  import GojuonQuestions from "./GojuonQuestions.svelte";
   import GojuonRow from "./GojuonRow.svelte";
   import { dictionary, keymap } from "./locale";
 
@@ -383,3 +384,5 @@
     </div>
   </div>
 </div>
+
+<GojuonQuestions />
