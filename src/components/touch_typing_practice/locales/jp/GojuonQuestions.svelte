@@ -102,3 +102,6 @@
     </button>
   {/each}
 </div>
+
+<!-- padding -->
+<div class="h-dvh"></div>
