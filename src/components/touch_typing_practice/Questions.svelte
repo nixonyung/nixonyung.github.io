@@ -1,13 +1,17 @@
 <script lang="ts">
   import shuffle from "lodash/shuffle";
   import { untrack } from "svelte";
-  import { globals } from "./globals.svelte";
+  import { app, emitKeydown, initSettings, speak, useSyncSettings } from "./app.svelte";
   import CheckboxInput from "./inputs/CheckboxInput.svelte";
   import NumericInput from "./inputs/NumericInput.svelte";
-  import type { Dictionary } from "./locales/locale";
+  import type { Dictionary } from "./types";
 
-  let questionLength = $state(parseInt(globals.searchParams.get("questionLength") ?? "3"));
-  let showRomanizations = $state(globals.searchParams.has("showRomanizations", "true"));
+  let SETTINGS_SCHEMA = {
+    questionLength: { paramKey: "length", defaultValue: 3 },
+    showRomanizations: { paramKey: "romanizations", defaultValue: false },
+  };
+  let settings = $state(initSettings(SETTINGS_SCHEMA));
+  useSyncSettings(SETTINGS_SCHEMA, settings);
 
   let lettersPool: string[] = $state([]);
   let lettersPoolIdx = $state(0);
@@ -19,17 +23,17 @@
 
   function genQuestion(force: boolean = false) {
     untrack(() => {
-      questions = Array.from({ length: questionLength }, () => {
+      questions = Array.from({ length: settings.questionLength }, () => {
         lettersPoolIdx += 1;
         if (force || lettersPoolIdx >= lettersPool.length) {
-          lettersPool = shuffle(globals.localeDictionaryKeys);
+          lettersPool = shuffle(app.localeDictionaryKeys);
           lettersPoolIdx = 0;
         }
 
         const letter = lettersPool[lettersPoolIdx];
         return {
           letter,
-          ...globals.localeDictionary[letter],
+          ...app.localeDictionary[letter],
         };
       });
       inputs = [""];
@@ -37,8 +41,8 @@
   }
 
   $effect(() => {
-    globals.localeDictionary;
-    questionLength;
+    app.localeDictionary;
+    settings.questionLength;
 
     genQuestion(true);
   });
@@ -46,18 +50,18 @@
 
 <svelte:window
   onkeydown={(ev) => {
-    const { key, ctrlKey } = ev;
+    const { key, ctrlKey, metaKey } = ev;
 
     if (
-      // ignore refresh (Ctrl-r)
-      (ctrlKey && (key === "r" || key === "R")) ||
+      // ignore refresh (Ctrl-r / Cmd-r)
+      ((ctrlKey || metaKey) && (key === "r" || key === "R")) ||
       // use default behaviour when modifying settings
       document.activeElement instanceof HTMLInputElement
     ) {
       return;
     }
 
-    if (globals.DEV) {
+    if (app.DEV) {
       console.log("onInput", key, "ctrl", ctrlKey);
     }
 
@@ -73,7 +77,7 @@
       switch (key) {
         case "r":
         case "R":
-          globals.speak(questions.map(({ pronunciation }) => pronunciation));
+          speak(questions.map(({ pronunciation }) => pronunciation));
           break;
         case "Enter":
           genQuestion();
@@ -85,7 +89,7 @@
       } else {
         switch (key) {
           case " ":
-            if (inputs[inputs.length - 1] !== "" && inputs.length < questionLength) {
+            if (inputs[inputs.length - 1] !== "" && inputs.length < settings.questionLength) {
               inputs.push("");
             }
             break;
@@ -111,17 +115,8 @@
 
 <!-- settings -->
 <div class="flex items-center-safe gap-9">
-  <NumericInput
-    bind:value={questionLength}
-    label="question length:"
-    min={1}
-    onchange={() => globals.saveSetting("questionLength", questionLength, 3)}
-  />
-  <CheckboxInput
-    bind:checked={showRomanizations}
-    label="show romanizations:"
-    onchange={() => globals.saveSetting("showRomanizations", showRomanizations, false)}
-  />
+  <NumericInput bind:value={settings.questionLength} label="question length:" min={1} />
+  <CheckboxInput bind:checked={settings.showRomanizations} label="show romanizations:" />
 </div>
 
 <!-- SpeechSynthesis indicator -->
@@ -129,17 +124,16 @@
   <div
     class={[
       "flex items-center-safe gap-1 bg-primary-lighter/50 px-2",
-      globals.voice === undefined ? "text-red-700" : "text-green-700",
+      app.voice === undefined ? "text-red-700" : "text-green-700",
     ]}
   >
     <span>SpeechSynthesis:</span>
-    <span
-      class={globals.voice === undefined ? "icon-[heroicons--x-mark]" : "icon-[heroicons--check]"}
+    <span class={app.voice === undefined ? "icon-[heroicons--x-mark]" : "icon-[heroicons--check]"}
     ></span>
   </div>
-  {#if globals.speechSynthesisErr}
+  {#if app.speechSynthesisErr}
     <span class="text-red-700">
-      SpeechSynthesis: ({globals.speechSynthesisErr.error}) {globals.speechSynthesisErr}
+      SpeechSynthesis: ({app.speechSynthesisErr.error}) {app.speechSynthesisErr}
     </span>
   {/if}
 </div>
@@ -154,13 +148,9 @@
         "relative flex w-16 flex-col items-center-safe rounded ring",
         isCorrects[index] ? "ring-green-600" : !!inputs[index] && "ring-red-600",
         allCorrect || index + 1 === inputs.length ? "opacity-100" : "opacity-50",
-        !questions[index].pronunciation
-          ? ""
-          : globals.isSpeaking
-            ? "cursor-wait"
-            : "cursor-pointer",
+        !questions[index].pronunciation ? "" : app.isSpeaking ? "cursor-wait" : "cursor-pointer",
       ]}
-      onclick={() => globals.speak(questions[index].pronunciation)}
+      onclick={() => speak(questions[index].pronunciation)}
     >
       <!-- letter -->
       <div class="grid h-12 place-items-center-safe">
@@ -168,7 +158,7 @@
       </div>
       <!-- romanization -->
       <div class="h-6">
-        {#if questions[index].romanization && showRomanizations}
+        {#if questions[index].romanization && settings.showRomanizations}
           ({questions[index].romanization})
         {/if}
       </div>
@@ -176,7 +166,7 @@
       <div class="h-6 w-full border-t border-primary-lighter">{inputs[index]}</div>
 
       <!-- pronunciation indicator -->
-      {#if questions[index].pronunciation && globals.voice}
+      {#if questions[index].pronunciation && app.voice}
         <span class="absolute top-0.5 right-0.5 icon-[heroicons--speaker-wave-solid] text-xs"
         ></span>
       {/if}
@@ -195,12 +185,12 @@
     <kbd class="rounded px-1 ring">{text}</kbd>
   {/snippet}
 
-  {#if globals.voice}
-    <button class="block" onclick={() => globals.emitKeydown({ key: "r" })}>
+  {#if app.voice}
+    <button class="block" onclick={() => emitKeydown({ key: "r" })}>
       {@render kbd("r")} to read all words
     </button>
   {/if}
-  <button class="block" onclick={() => globals.emitKeydown({ key: "Enter" })}>
+  <button class="block" onclick={() => emitKeydown({ key: "Enter" })}>
     {@render kbd("Enter")} to continue ...
   </button>
 </div>

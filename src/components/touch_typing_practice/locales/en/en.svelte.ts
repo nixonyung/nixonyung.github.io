@@ -1,4 +1,4 @@
-import type { Dictionary, Keymap } from "../locale";
+import type { Dictionary, Keymap } from "../../types";
 
 export const keymap: Keymap = {
   // row 1

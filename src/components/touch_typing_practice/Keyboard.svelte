@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { globals } from "./globals.svelte";
+  import { app, emitKeydown } from "./app.svelte";
 
   let isShiftDown = $state(false);
 </script>
@@ -19,7 +19,7 @@
       <button
         class="relative grid size-12 place-items-center-safe rounded ring ring-primary-content"
         onclick={() => {
-          globals.emitKeydown({ key: isShiftDown ? key.toUpperCase() : key });
+          emitKeydown({ key: isShiftDown ? key.toUpperCase() : key });
           isShiftDown = false;
         }}
       >
@@ -42,20 +42,20 @@
     <!-- row 1 -->
     <div class="flex gap-1">
       <div class="w-6"></div>
-      {@render key("q", globals.localeKeymap["q"], globals.localeKeymap["Q"])}
-      {@render key("w", globals.localeKeymap["w"], globals.localeKeymap["W"])}
-      {@render key("e", globals.localeKeymap["e"], globals.localeKeymap["E"])}
-      {@render key("r", globals.localeKeymap["r"], globals.localeKeymap["R"])}
-      {@render key("t", globals.localeKeymap["t"], globals.localeKeymap["T"])}
-      {@render key("y", globals.localeKeymap["y"], globals.localeKeymap["Y"])}
-      {@render key("u", globals.localeKeymap["u"], globals.localeKeymap["U"])}
-      {@render key("i", globals.localeKeymap["i"], globals.localeKeymap["I"])}
-      {@render key("o", globals.localeKeymap["o"], globals.localeKeymap["O"])}
-      {@render key("p", globals.localeKeymap["p"], globals.localeKeymap["P"])}
+      {@render key("q", app.localeKeymap["q"], app.localeKeymap["Q"])}
+      {@render key("w", app.localeKeymap["w"], app.localeKeymap["W"])}
+      {@render key("e", app.localeKeymap["e"], app.localeKeymap["E"])}
+      {@render key("r", app.localeKeymap["r"], app.localeKeymap["R"])}
+      {@render key("t", app.localeKeymap["t"], app.localeKeymap["T"])}
+      {@render key("y", app.localeKeymap["y"], app.localeKeymap["Y"])}
+      {@render key("u", app.localeKeymap["u"], app.localeKeymap["U"])}
+      {@render key("i", app.localeKeymap["i"], app.localeKeymap["I"])}
+      {@render key("o", app.localeKeymap["o"], app.localeKeymap["O"])}
+      {@render key("p", app.localeKeymap["p"], app.localeKeymap["P"])}
       <!-- Backspace -->
       <button
         class="ml-4 w-24 rounded border border-dashed opacity-50"
-        onclick={() => globals.emitKeydown({ key: "Backspace" })}
+        onclick={() => emitKeydown({ key: "Backspace" })}
       >
         Backspace
       </button>
@@ -64,19 +64,19 @@
     <!-- row 2 -->
     <div class="flex gap-1">
       <div class="w-12"></div>
-      {@render key("a", globals.localeKeymap["a"], globals.localeKeymap["A"])}
-      {@render key("s", globals.localeKeymap["s"], globals.localeKeymap["S"])}
-      {@render key("d", globals.localeKeymap["d"], globals.localeKeymap["D"])}
-      {@render key("f", globals.localeKeymap["f"], globals.localeKeymap["F"])}
-      {@render key("g", globals.localeKeymap["g"], globals.localeKeymap["G"])}
-      {@render key("h", globals.localeKeymap["h"], globals.localeKeymap["H"])}
-      {@render key("j", globals.localeKeymap["j"], globals.localeKeymap["J"])}
-      {@render key("k", globals.localeKeymap["k"], globals.localeKeymap["K"])}
-      {@render key("l", globals.localeKeymap["l"], globals.localeKeymap["L"])}
+      {@render key("a", app.localeKeymap["a"], app.localeKeymap["A"])}
+      {@render key("s", app.localeKeymap["s"], app.localeKeymap["S"])}
+      {@render key("d", app.localeKeymap["d"], app.localeKeymap["D"])}
+      {@render key("f", app.localeKeymap["f"], app.localeKeymap["F"])}
+      {@render key("g", app.localeKeymap["g"], app.localeKeymap["G"])}
+      {@render key("h", app.localeKeymap["h"], app.localeKeymap["H"])}
+      {@render key("j", app.localeKeymap["j"], app.localeKeymap["J"])}
+      {@render key("k", app.localeKeymap["k"], app.localeKeymap["K"])}
+      {@render key("l", app.localeKeymap["l"], app.localeKeymap["L"])}
       <!-- Enter -->
       <button
         class="ml-4 w-24 rounded border border-dashed opacity-50"
-        onclick={() => globals.emitKeydown({ key: "Enter" })}
+        onclick={() => emitKeydown({ key: "Enter" })}
       >
         Enter
       </button>
@@ -94,20 +94,20 @@
       >
         Shift
       </button>
-      {@render key("z", globals.localeKeymap["z"], globals.localeKeymap["Z"])}
-      {@render key("x", globals.localeKeymap["x"], globals.localeKeymap["X"])}
-      {@render key("c", globals.localeKeymap["c"], globals.localeKeymap["C"])}
-      {@render key("v", globals.localeKeymap["v"], globals.localeKeymap["V"])}
-      {@render key("b", globals.localeKeymap["b"], globals.localeKeymap["B"])}
-      {@render key("n", globals.localeKeymap["n"], globals.localeKeymap["N"])}
-      {@render key("m", globals.localeKeymap["m"], globals.localeKeymap["M"])}
+      {@render key("z", app.localeKeymap["z"], app.localeKeymap["Z"])}
+      {@render key("x", app.localeKeymap["x"], app.localeKeymap["X"])}
+      {@render key("c", app.localeKeymap["c"], app.localeKeymap["C"])}
+      {@render key("v", app.localeKeymap["v"], app.localeKeymap["V"])}
+      {@render key("b", app.localeKeymap["b"], app.localeKeymap["B"])}
+      {@render key("n", app.localeKeymap["n"], app.localeKeymap["N"])}
+      {@render key("m", app.localeKeymap["m"], app.localeKeymap["M"])}
     </div>
 
     <!-- Space -->
     <button
       title="Space"
       class="ml-30 h-12 w-72 rounded border border-dashed opacity-50"
-      onclick={() => globals.emitKeydown({ key: " " })}
+      onclick={() => emitKeydown({ key: " " })}
     >
     </button>
   </div>

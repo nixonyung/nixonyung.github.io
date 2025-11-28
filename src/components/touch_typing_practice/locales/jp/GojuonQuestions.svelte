@@ -2,14 +2,18 @@
   import sampleSize from "lodash/sampleSize";
   import shuffle from "lodash/shuffle";
   import { untrack } from "svelte";
-  import { globals } from "../../globals.svelte";
+  import { app, initSettings, useSyncSettings } from "../../app.svelte";
   import NumericInput from "../../inputs/NumericInput.svelte";
 
-  let numOptions = $state(parseInt(globals.searchParams.get("numOptions") ?? "4"));
+  let SETTINGS_SCHEMA = {
+    numOptions: { paramKey: "numOptions", defaultValue: 4 },
+  };
+  let settings = $state(initSettings(SETTINGS_SCHEMA));
+  useSyncSettings(SETTINGS_SCHEMA, settings);
 
   let lettersWithGojuonPosition = $derived(
-    globals.localeDictionaryKeys.filter(
-      (key) => globals.localeDictionary[key].gojuonPosition !== undefined,
+    app.localeDictionaryKeys.filter(
+      (key) => app.localeDictionary[key].gojuonPosition !== undefined,
     ),
   );
   let lettersPool: string[] = $state([]);
@@ -28,24 +32,24 @@
       }
 
       const letter = lettersPool[lettersPoolIdx];
-      const gojuonPosition = globals.localeDictionary[letter]?.gojuonPosition;
+      const gojuonPosition = app.localeDictionary[letter]?.gojuonPosition;
       question = { letter, gojuonPosition };
       options = shuffle([
         letter,
         ...sampleSize(
           lettersWithGojuonPosition.filter((letter) => {
-            const { row, col } = globals.localeDictionary[letter].gojuonPosition!;
+            const { row, col } = app.localeDictionary[letter].gojuonPosition!;
             return row !== gojuonPosition?.row || col !== gojuonPosition?.col;
           }),
-          numOptions - 1,
+          settings.numOptions - 1,
         ),
       ]);
     });
   }
 
   $effect(() => {
-    globals.localeDictionary;
-    numOptions;
+    app.localeDictionary;
+    settings.numOptions;
 
     genQuestion(true);
   });
@@ -53,12 +57,7 @@
 
 <!-- settings -->
 <div class="flex items-center-safe gap-9">
-  <NumericInput
-    bind:value={numOptions}
-    label="number of options:"
-    min={1}
-    onchange={() => globals.saveSetting("numOptions", numOptions, 4)}
-  />
+  <NumericInput bind:value={settings.numOptions} label="number of options:" min={1} />
 </div>
 
 <!-- question -->
@@ -89,7 +88,7 @@
 <div class="flex items-center-safe gap-3">
   <span>What is here?</span>
 
-  {#each options as option}
+  {#each options as option (option)}
     <button
       class="cursor-pointer p-2 ring hover:bg-primary-lighter"
       onclick={() => {

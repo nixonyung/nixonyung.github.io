@@ -1,4 +1,4 @@
-import type { Dictionary, Keymap } from "../locale";
+import type { Dictionary, Keymap } from "../../types";
 
 // (ref.) [Dubeolsik](https://www.wikiwand.com/en/articles/Keyboard_layout#Dubeolsik)
 export const keymap: Keymap = {

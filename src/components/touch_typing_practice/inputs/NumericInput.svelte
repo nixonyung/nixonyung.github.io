@@ -5,14 +5,12 @@
     min,
     max,
     step = 1,
-    onchange,
   }: {
     value: number;
     label: string;
     min?: number;
     max?: number;
     step?: number;
-    onchange?: (event: Event & { currentTarget: EventTarget & HTMLButtonElement }) => void;
   } = $props();
 </script>
 
@@ -22,9 +20,8 @@
   <button
     title="decrement questionLength"
     class="cursor-pointer"
-    onclick={(ev) => {
+    onclick={() => {
       if (min === undefined || value - step >= min) value -= step;
-      onchange?.(ev);
     }}
   >
     <span class="icon-[heroicons--minus-circle] align-middle text-2xl"></span>
@@ -32,9 +29,8 @@
   <button
     title="increment questionLength"
     class="cursor-pointer"
-    onclick={(ev) => {
+    onclick={() => {
       if (max === undefined || value + step <= max) value += step;
-      onchange?.(ev);
     }}
   >
     <span class="icon-[heroicons--plus-circle] align-middle text-2xl"></span>

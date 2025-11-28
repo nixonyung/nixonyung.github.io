@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { globals } from "../../globals.svelte";
   import Keyboard from "../../Keyboard.svelte";
   import Questions from "../../Questions.svelte";
-  import { dictionary, keymap } from "./locale";
+  import { app } from "../../app.svelte";
+  import { dictionary, keymap } from "./kr.svelte";
 
-  globals.localeKeymap = keymap;
-  globals.localeDictionary = dictionary;
+  app.localeKeymap = keymap;
+  app.localeDictionary = dictionary;
 </script>
 
 <Questions />

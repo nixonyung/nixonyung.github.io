@@ -2,11 +2,9 @@
   let {
     checked = $bindable(),
     label,
-    onchange,
   }: {
     checked: boolean;
     label: string;
-    onchange?: (event: Event & { currentTarget: EventTarget & HTMLInputElement }) => void;
   } = $props();
 </script>
 
@@ -17,7 +15,6 @@
       type="checkbox"
       class="align-middle"
       onclick={({ currentTarget }) => currentTarget.blur()}
-      onchange={(ev) => onchange?.(ev)}
     />
 
     <span>{label}</span>

@@ -1,27 +1,22 @@
-<script lang="ts" generics="const Options extends string[]">
+<script lang="ts">
   let {
     value = $bindable(),
     label,
     options,
-    onchange,
   }: {
-    value: Options[number];
+    value: string;
     label: string;
-    options: Options;
-    onchange?: (event: Event & { currentTarget: EventTarget & HTMLButtonElement }) => void;
+    options: string[];
   } = $props();
 </script>
 
 <div class="flex items-center-safe">
   <span class="mr-3">{label}</span>
 
-  {#each options as option}
+  {#each options as option (option)}
     <button
       class={["cursor-pointer px-2 py-1 ring", option !== value && "opacity-50"]}
-      onclick={(ev) => {
-        value = option;
-        onchange?.(ev);
-      }}
+      onclick={() => (value = option)}
     >
       {option}
     </button>
