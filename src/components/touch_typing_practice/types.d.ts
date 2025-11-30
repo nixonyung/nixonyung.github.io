@@ -11,7 +11,7 @@ export type Settings<const Sc extends SettingsSchema> = {
 
 export type Keymap = Record<string, string>;
 
-export type Dictionary = Record<
+export type LettersDict = Record<
   string,
   {
     input: string;
@@ -22,5 +22,15 @@ export type Dictionary = Record<
       row: number;
       col: number;
     };
+  }
+>;
+
+export type WordsDict = Record<
+  string,
+  {
+    input: string;
+    aliases?: string[];
+    romanization?: string;
+    meaning: string;
   }
 >;

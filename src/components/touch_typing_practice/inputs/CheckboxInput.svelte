@@ -2,21 +2,22 @@
   let {
     checked = $bindable(),
     label,
+    disabled,
   }: {
     checked: boolean;
     label: string;
+    disabled?: boolean;
   } = $props();
 </script>
 
-<div>
-  <label>
-    <input
-      bind:checked
-      type="checkbox"
-      class="align-middle"
-      onclick={({ currentTarget }) => currentTarget.blur()}
-    />
+<label>
+  <input
+    bind:checked
+    type="checkbox"
+    class="align-middle"
+    onclick={({ currentTarget }) => currentTarget.blur()}
+    {disabled}
+  />
 
-    <span>{label}</span>
-  </label>
-</div>
+  <span class={disabled ? "line-through opacity-50" : ""}>{label}</span>
+</label>

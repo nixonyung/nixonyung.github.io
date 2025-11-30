@@ -12,9 +12,7 @@
   useSyncSettings(SETTINGS_SCHEMA, settings);
 
   let lettersWithGojuonPosition = $derived(
-    app.localeDictionaryKeys.filter(
-      (key) => app.localeDictionary[key].gojuonPosition !== undefined,
-    ),
+    app.localeLetters.filter((key) => app.localeLettersDict[key].gojuonPosition !== undefined),
   );
   let lettersPool: string[] = $state([]);
   let lettersPoolIdx = $state(0);
@@ -32,13 +30,13 @@
       }
 
       const letter = lettersPool[lettersPoolIdx];
-      const gojuonPosition = app.localeDictionary[letter]?.gojuonPosition;
+      const gojuonPosition = app.localeLettersDict[letter]?.gojuonPosition;
       question = { letter, gojuonPosition };
       options = shuffle([
         letter,
         ...sampleSize(
           lettersWithGojuonPosition.filter((letter) => {
-            const { row, col } = app.localeDictionary[letter].gojuonPosition!;
+            const { row, col } = app.localeLettersDict[letter].gojuonPosition!;
             return row !== gojuonPosition?.row || col !== gojuonPosition?.col;
           }),
           settings.numOptions - 1,
@@ -48,7 +46,7 @@
   }
 
   $effect(() => {
-    app.localeDictionary;
+    app.localeLettersDict;
     settings.numOptions;
 
     genQuestion(true);

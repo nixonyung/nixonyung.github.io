@@ -1,5 +1,5 @@
 import { onDestroy, onMount, untrack } from "svelte";
-import type { Settings, SettingsSchema } from "./types";
+import type { LettersDict, Settings, SettingsSchema, WordsDict } from "./types";
 
 // searchParams should be initialized before app, as initSettings depends on searchParams
 // caveat: SvelteURLSearchParams performs worse
@@ -16,20 +16,10 @@ export const app = new (class {
 
   // locale
   localeKeymap: Record<string, string> = $state({});
-  localeDictionary: Record<
-    string,
-    {
-      input: string;
-      romanization?: string;
-      pronunciation?: string;
-
-      gojuonPosition?: {
-        row: number;
-        col: number;
-      };
-    }
-  > = $state({});
-  localeDictionaryKeys = $derived(Object.keys(this.localeDictionary));
+  localeLettersDict: LettersDict = $state({});
+  localeLetters = $derived(Object.keys(this.localeLettersDict));
+  localeWordsDict: WordsDict = $state({});
+  localeWords = $derived(Object.keys(this.localeWordsDict));
 
   // voice
   availableVoices: SpeechSynthesisVoice[] = $state([]);

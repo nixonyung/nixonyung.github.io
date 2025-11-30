@@ -5,12 +5,14 @@
     min,
     max,
     step = 1,
+    disabled,
   }: {
     value: number;
     label: string;
     min?: number;
     max?: number;
     step?: number;
+    disabled?: boolean;
   } = $props();
 </script>
 
@@ -23,6 +25,7 @@
     onclick={() => {
       if (min === undefined || value - step >= min) value -= step;
     }}
+    {disabled}
   >
     <span class="icon-[heroicons--minus-circle] align-middle text-2xl"></span>
   </button>
@@ -32,6 +35,7 @@
     onclick={() => {
       if (max === undefined || value + step <= max) value += step;
     }}
+    {disabled}
   >
     <span class="icon-[heroicons--plus-circle] align-middle text-2xl"></span>
   </button>

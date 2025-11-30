@@ -1,4 +1,4 @@
-import type { Dictionary, Keymap } from "../../types";
+import type { Keymap, LettersDict } from "../../types";
 
 export const keymap: Keymap = {
   // row 1
@@ -66,7 +66,7 @@ export const keymap: Keymap = {
   M: "M",
 };
 
-export const dictionary: Dictionary = {
+export const lettersDict: LettersDict = {
   a: { input: "a", pronunciation: "a" },
   A: { input: "A", pronunciation: "A" },
   b: { input: "b", pronunciation: "b" },

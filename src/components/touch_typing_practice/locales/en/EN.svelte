@@ -2,10 +2,10 @@
   import Keyboard from "../../Keyboard.svelte";
   import Questions from "../../Questions.svelte";
   import { app } from "../../app.svelte";
-  import { dictionary, keymap } from "./en.svelte";
+  import { keymap, lettersDict } from "./en.svelte";
 
   app.localeKeymap = keymap;
-  app.localeDictionary = dictionary;
+  app.localeLettersDict = lettersDict;
 </script>
 
 <Questions />

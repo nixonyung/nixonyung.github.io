@@ -1,6 +1,7 @@
 <script lang="ts">
   import "@/styles.css";
   import { app, useSyncSettings } from "./app.svelte";
+  import SelectInput from "./inputs/SelectInput.svelte";
   import EN from "./locales/en/EN.svelte";
   import JP from "./locales/jp/JP.svelte";
   import KR from "./locales/kr/KR.svelte";
@@ -34,14 +35,11 @@
 
   <!-- settings -->
   <div class="flex items-center-safe gap-9">
-    <label>
-      lang:
-      <select bind:value={app.settings.lang} class="rounded bg-primary ring">
-        {#each Object.keys(langToComponent) as lang (lang)}
-          <option value={lang}>{lang}</option>
-        {/each}
-      </select>
-    </label>
+    <SelectInput
+      bind:value={app.settings.lang}
+      label="lang:"
+      options={Object.keys(langToComponent)}
+    />
   </div>
 
   <LangComponent />

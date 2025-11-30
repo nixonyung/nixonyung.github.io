@@ -1,5 +1,5 @@
 import { initSettings } from "../../app.svelte";
-import type { Dictionary, Keymap } from "../../types";
+import type { Keymap, LettersDict, WordsDict } from "../../types";
 
 export const jp = new (class {
   SETTINGS_SCHEMA = {
@@ -19,7 +19,7 @@ export const jp = new (class {
     enableRowWa: { paramKey: "rowWa", defaultValue: true },
     enableRowN: { paramKey: "rowN", defaultValue: true },
     showOrigins: { paramKey: "origins", defaultValue: false },
-    mode: { paramKey: "mode", defaultValue: "questions" },
+    mode: { paramKey: "mode", defaultValue: <"questions" | "gojuonQuestions" | "flashcards">"questions" },
   };
 
   settings = $state(initSettings(this.SETTINGS_SCHEMA));
@@ -58,7 +58,7 @@ export const jp = new (class {
     m: "m",
   };
 
-  dictionary(): Dictionary {
+  lettersDict(): LettersDict {
     // (ref.) [平文式羅馬字](https://www.wikiwand.com/zh-hk/articles/平文式罗马字#罗马字表)
     return {
       // 平假名 Hiragana
@@ -822,6 +822,105 @@ export const jp = new (class {
           リュ: { input: "ryu", romanization: "ryu", pronunciation: "リュ" },
           リョ: { input: "ryo", romanization: "ryo", pronunciation: "リョ" },
         }),
+    };
+  }
+
+  wordsDict(): WordsDict {
+    return {
+      // pronouns
+
+      私: { aliases: ["わたし"], input: "watashi", romanization: "watashi", meaning: "I" },
+      僕: { aliases: ["ぼく", "ボク"], input: "boku", romanization: "boku", meaning: "I (male)" },
+      俺: { aliases: ["おれ", "オレ"], input: "ore", romanization: "ore", meaning: "I (male, arrogantly)" },
+
+      君: { aliases: ["きみ"], input: "kimi", romanization: "kimi", meaning: "you (similar status)" },
+      貴方: { aliases: ["貴女", "貴男", "あなた"], input: "anata", romanization: "anata", meaning: "you (similar status, informal)" },
+
+      彼氏: { aliases: ["かれし"], input: "kareshi", romanization: "kareshi", meaning: "he / boyfriend" },
+      彼女: { aliases: ["かのじょ"], input: "kanojo", romanization: "kanojo", meaning: "she / girlfriend" },
+      // TODO: he, she, it, we, they, what
+
+      何: { aliases: ["なに", "ナニ"], input: "nani", romanization: "nani", meaning: "what / that thing" },
+
+      自分: { aliases: ["じぶん"], input: "jibun", romanization: "jibun", meaning: "myself, yourself, oneself, himself, herself" },
+
+      // nouns - people - generic
+
+      成人: { aliases: ["せいじん"], input: "seijin", romanization: "seijin", meaning: "adult" },
+      大人: { aliases: ["おとな"], input: "otona", romanization: "otona", meaning: "grown-up" },
+      子供: { aliases: ["子ども", "こども"], input: "kodomo", romanization: "kodomo", meaning: "child / children" },
+
+      男性: { aliases: ["だんせい"], input: "dansei", romanization: "dansei", meaning: "male" },
+      男: { aliases: ["おとこ"], input: "otoko", romanization: "otoko", meaning: "man" },
+      少年: { aliases: ["しょうねん"], input: "shounen", romanization: "shounen", meaning: "young man" },
+
+      女性: { aliases: ["じょせい"], input: "josei", romanization: "josei", meaning: "female" },
+      女子: { aliases: ["じょし"], input: "joshi", romanization: "joshi", meaning: "woman" },
+      乙女: { aliases: ["少女", "おとめ"], input: "otome", romanization: "otome", meaning: "young lady" },
+
+      // nouns - people - family members
+
+      父さん: { aliases: ["とうさん"], input: "tousan", romanization: "tousan", meaning: "father (calling him)" },
+      お父さん: { aliases: ["おとうさん"], input: "otousan", romanization: "otousan", meaning: "father (referring to him or someone else's)" },
+      父: { aliases: ["ちち"], input: "chichi", romanization: "chichi", meaning: "my father (referring to him)" },
+      老爺: { aliases: ["おやじ"], input: "oyaji", romanization: "oyaji", meaning: "father (calling him, used by old-fashioned men)" },
+
+      母さん: { aliases: ["かあさん"], input: "kaasan", romanization: "kaasan", meaning: "mother (calling her)" },
+      お母さん: { aliases: ["おかあさん"], input: "okaasan", romanization: "okaasan", meaning: "mother (referring to her or someone else's)" },
+      母: { aliases: ["はは"], input: "haha", romanization: "haha", meaning: "my mother (referring to her)" },
+      お袋: { aliases: ["おふくろ"], input: "ofukuro", romanization: "ofukuro", meaning: "mother (calling her, used by old-fashioned men)" },
+
+      兄さん: { aliases: ["にいさん"], input: "niisan", romanization: "niisan", meaning: "elder brother (calling him)" },
+      お兄さん: { aliases: ["おにいさん"], input: "oniisan", romanization: "oniisan", meaning: "elder brother (referring to him or someone else's)" },
+      兄: { aliases: ["あに"], input: "ani", romanization: "ani", meaning: "my elder brother (referring to him)" },
+
+      姉さん: { aliases: ["ねえさん"], input: "neesan", romanization: "neesan", meaning: "elder sister (calling her)" },
+      お姉さん: { aliases: ["おねえさん"], input: "oneesan", romanization: "oneesan", meaning: "elder sister (referring to her or someone else's" },
+      姉: { aliases: ["あね"], input: "ane", romanization: "ane", meaning: "my elder sister (referring to her)" },
+
+      弟さん: { aliases: ["おとうとさん"], input: "otoutosan", romanization: "otoutosan", meaning: "younger brother (referring to him or someone else's" },
+      弟: { aliases: ["おとうと"], input: "otouto", romanization: "otouto", meaning: "my younger brother (referring to him)" },
+
+      妹さん: { aliases: ["いもうとさん"], input: "imoutosan", romanization: "imoutosan", meaning: "younger sister (referring to her or someone else's)" },
+      妹: { aliases: ["いもうと"], input: "imouto", romanization: "imouto", meaning: "my younger sister (referring to her)" },
+
+      // TODO: child, son, daughter
+
+      // nouns - people - close ones
+
+      友人: { aliases: ["ゆうじん"], input: "yuujin", romanization: "yuujin", meaning: "friend" },
+      朋友: { aliases: ["ほうゆう"], input: "houyuu", romanization: "houyuu", meaning: "friend" },
+      友達: { aliases: ["ともだち"], input: "tomodachi", romanization: "tomodachi", meaning: "friends (informal)" },
+      // TODO: aniki
+
+      // nouns - people - fellows
+
+      仲間: { aliases: ["なかま"], input: "nakama", romanization: "nakama", meaning: "fellow / companion (informal)" },
+      同僚: { aliases: ["どうりょう"], input: "douryou", romanization: "douryou", meaning: "colleague (in similar position with you)" },
+      主管: { aliases: ["しゅかん"], input: "shukan", romanization: "shukan", meaning: "manager" },
+      主任: { aliases: ["しゅにん"], input: "shunin", romanization: "shunin", meaning: "director" },
+      監督: { aliases: ["かんとく"], input: "kantoku", romanization: "kantoku", meaning: "supervisor" },
+      部長: { aliases: ["ぶちょう"], input: "buchou", romanization: "buchou", meaning: "boss" },
+      社長: { aliases: ["しゃちょう"], input: "shachou", romanization: "shachou", meaning: "president" },
+
+      // TODO: directions
+
+      // TODO: places
+
+      // TODO: colors
+
+      // TODO: numbers
+
+      // TODO: time
+
+      // intangible nouns
+      名前: { aliases: ["なまえ"], input: "namae", romanization: "namae", meaning: "name" },
+      家族: { aliases: ["かぞく"], input: "kazoku", romanization: "kazoku", meaning: "extended family" },
+
+      // verbs
+      食べる: { aliases: ["たべる"], input: "taberu", romanization: "taberu", meaning: "eat" },
+      飲む: { aliases: ["呑む", "のむ"], input: "nomu", romanization: "nomu", meaning: "drink" },
+      行く: { aliases: ["いく"], input: "iku", romanization: "iku", meaning: "go" },
     };
   }
 })();

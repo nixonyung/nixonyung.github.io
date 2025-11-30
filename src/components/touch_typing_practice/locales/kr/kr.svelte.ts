@@ -1,4 +1,4 @@
-import type { Dictionary, Keymap } from "../../types";
+import type { Keymap, LettersDict } from "../../types";
 
 // (ref.) [Dubeolsik](https://www.wikiwand.com/en/articles/Keyboard_layout#Dubeolsik)
 export const keymap: Keymap = {
@@ -45,7 +45,7 @@ export const keymap: Keymap = {
 };
 
 // (ref.) [Hangul - Letters](https://www.wikiwand.com/en/articles/Hangul#Letters)
-export const dictionary: Dictionary = {
+export const lettersDict: LettersDict = {
   // consonants
   ㄱ: { input: "r", romanization: "g", pronunciation: "가" },
   ㄲ: { input: "R", romanization: "kk", pronunciation: "까" },

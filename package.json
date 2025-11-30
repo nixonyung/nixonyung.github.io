@@ -10,17 +10,23 @@
     "lint": "eslint ."
   },
   "prettier": {
-    "printWidth": 100,
     "plugins": [
       "prettier-plugin-astro",
       "prettier-plugin-svelte",
       "prettier-plugin-tailwindcss"
     ],
+
+    "printWidth": 100,
+
     "overrides": [
       {
-        "files": "locale.ts",
+        "files": [
+          "en.svelte.ts",
+          "jp.svelte.ts",
+          "kr.svelte.ts"
+        ],
         "options": {
-          "printWidth": 200
+          "printWidth": 999
         }
       }
     ],
