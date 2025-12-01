@@ -1,50 +1,65 @@
 <script lang="ts">
-  import shuffle from "lodash/shuffle";
+  import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
+  import Highlighted from "@/components/svelte/Highlighted.svelte";
+  import KBD from "@/components/svelte/KBD.svelte";
+  import NumericInput from "@/components/svelte/NumericInput.svelte";
+  import { ShufflingCircularQueue } from "@/lib/shuffling-circular-queue";
   import { untrack } from "svelte";
-  import { app, emitKeydown, initSettings, speak, useSyncSettings } from "./app.svelte";
-  import CheckboxInput from "./inputs/CheckboxInput.svelte";
-  import NumericInput from "./inputs/NumericInput.svelte";
-  import type { LettersDict } from "./types";
+  import { app, emitKeydown, initSettings, speak, useSyncSettings } from "../app.svelte";
+  import type { Keymap, Letter } from "../types";
+  import TypingKeyboard from "./TypingKeyboard.svelte";
 
-  let SETTINGS_SCHEMA = {
-    questionLength: { paramKey: "length", defaultValue: 3 },
+  const {
+    letters,
+    keymap,
+  }: {
+    letters: Letter[];
+    keymap?: Keymap;
+  } = $props();
+
+  const SETTINGS_SCHEMA = {
+    numQuestions: { paramKey: "numQuestions", defaultValue: 3 },
     showRomanizations: { paramKey: "romanizations", defaultValue: false },
   };
-  let settings = $state(initSettings(SETTINGS_SCHEMA));
+  const settings = $state(initSettings(SETTINGS_SCHEMA));
   useSyncSettings(SETTINGS_SCHEMA, settings);
 
-  let lettersPool: string[] = $state([]);
-  let lettersPoolIdx = $state(0);
+  type Question = {
+    letter: string;
+    pronunciation: string;
+    romanization?: string;
+    input: string;
+  };
+  let questionsQueue = $derived(
+    new ShufflingCircularQueue<Question>(
+      letters.map(({ letter, actualPronunciation, romanization, actualInput }) => ({
+        letter,
+        pronunciation: actualPronunciation ?? letter,
+        romanization: romanization,
+        input: actualInput ?? romanization ?? letter,
+      })),
+    ),
+  );
+  let questions: (Question | undefined)[] = $state([]);
 
-  let questions: ({ letter: string } & LettersDict[string])[] = $state([]);
   let inputs = $state([""]);
-  const isCorrects = $derived(questions.map(({ input }, i) => input && inputs[i] === input));
+  const isCorrects = $derived(
+    questions.map((question, i) => question && inputs[i] === question.input),
+  );
   const allCorrect = $derived(isCorrects.every((is) => is));
 
-  function genQuestion(force: boolean = false) {
+  function nextQuestion() {
     untrack(() => {
-      questions = Array.from({ length: settings.questionLength }, () => {
-        lettersPoolIdx += 1;
-        if (force || lettersPoolIdx >= lettersPool.length) {
-          lettersPool = shuffle(app.localeLetters);
-          lettersPoolIdx = 0;
-        }
-
-        const letter = lettersPool[lettersPoolIdx];
-        return {
-          letter,
-          ...app.localeLettersDict[letter],
-        };
-      });
+      questions = Array.from({ length: settings.numQuestions }, () => questionsQueue.next());
       inputs = [""];
     });
   }
 
   $effect(() => {
-    app.localeLettersDict;
-    settings.questionLength;
+    letters;
+    settings.numQuestions;
 
-    genQuestion(true);
+    nextQuestion();
   });
 </script>
 
@@ -77,10 +92,10 @@
       switch (key) {
         case "r":
         case "R":
-          speak(questions.map(({ pronunciation }) => pronunciation));
+          speak(questions.map((question) => question?.pronunciation));
           break;
         case "Enter":
-          genQuestion();
+          nextQuestion();
           break;
       }
     } else {
@@ -89,7 +104,7 @@
       } else {
         switch (key) {
           case " ":
-            if (inputs[inputs.length - 1] !== "" && inputs.length < settings.questionLength) {
+            if (inputs[inputs.length - 1] !== "" && inputs.length < settings.numQuestions) {
               inputs.push("");
             }
             break;
@@ -116,22 +131,18 @@
 <div class="flex flex-col gap-3">
   <!-- settings -->
   <div class="flex items-center-safe gap-9">
-    <NumericInput bind:value={settings.questionLength} label="question length:" min={1} />
+    <NumericInput bind:value={settings.numQuestions} min={1} label="number of questions:" />
     <CheckboxInput bind:checked={settings.showRomanizations} label="show romanizations" />
   </div>
 
-  <!-- SpeechSynthesis indicator -->
+  <!-- SpeechSynthesis status -->
   <div class="flex items-center-safe gap-9">
-    <div
-      class={[
-        "flex items-center-safe gap-1 bg-primary-lighter/50 px-2",
-        app.voice === undefined ? "text-red-700" : "text-green-700",
-      ]}
-    >
+    <Highlighted class={app.voice === undefined ? "text-red-700" : "text-green-700"}>
       <span>SpeechSynthesis:</span>
       <span class={app.voice === undefined ? "icon-[heroicons--x-mark]" : "icon-[heroicons--check]"}
       ></span>
-    </div>
+    </Highlighted>
+
     {#if app.speechSynthesisErr}
       <span class="text-red-700">
         SpeechSynthesis: ({app.speechSynthesisErr.error}) {app.speechSynthesisErr}
@@ -141,58 +152,64 @@
 
   <!-- questions -->
   <div class="flex items-center-safe gap-3">
-    <span>questions: </span>
+    <span class="underline">Questions:</span>
 
     {#snippet question(index: number)}
+      {@const question = questions[index]}
+      {@const input = inputs[index]}
+      {@const isCorrect = isCorrects[index]}
+
       <button
         class={[
           "relative flex w-16 flex-col items-center-safe rounded ring",
-          isCorrects[index] ? "ring-green-600" : !!inputs[index] && "ring-red-600",
+          isCorrect ? "ring-green-400" : !!input && "ring-red-400",
           allCorrect || index + 1 === inputs.length ? "opacity-100" : "opacity-50",
-          !questions[index].pronunciation ? "" : app.isSpeaking ? "cursor-wait" : "cursor-pointer",
+          question?.pronunciation &&
+            app.voice &&
+            (app.isSpeaking ? "cursor-wait" : "cursor-pointer"),
         ]}
-        onclick={() => speak(questions[index].pronunciation)}
+        onclick={() => speak(question?.pronunciation)}
       >
         <!-- letter -->
         <div class="grid h-12 place-items-center-safe">
-          <span class="text-xl">{questions[index].letter}</span>
+          <span class="text-xl">{question?.letter}</span>
         </div>
         <!-- romanization -->
         <div class="h-6">
-          {#if questions[index].romanization && settings.showRomanizations}
-            ({questions[index].romanization})
+          {#if question?.romanization && settings.showRomanizations}
+            ({question.romanization})
           {/if}
         </div>
         <!-- input -->
-        <div class="h-6 w-full border-t border-primary-lighter">{inputs[index]}</div>
+        <div class="h-6 w-full border-t border-primary-lighter">{input}</div>
 
         <!-- pronunciation indicator -->
-        {#if questions[index].pronunciation && app.voice}
+        {#if question?.pronunciation && app.voice}
           <span class="absolute top-0.5 right-0.5 icon-[heroicons--speaker-wave-solid] text-xs"
           ></span>
         {/if}
       </button>
     {/snippet}
+
     {#each questions, index}
-      <!-- <Question {index} /> -->
       {@render question(index)}
     {/each}
   </div>
 
+  <!-- congratulations -->
   <div class={!allCorrect ? "invisible" : ""}>
     <div>All correct!</div>
 
-    {#snippet kbd(text: string)}
-      <kbd class="rounded px-1 ring">{text}</kbd>
-    {/snippet}
-
     {#if app.voice}
       <button class="block" onclick={() => emitKeydown({ key: "r" })}>
-        {@render kbd("r")} to read all words
+        <KBD label="r" /> to read all words
       </button>
     {/if}
+
     <button class="block" onclick={() => emitKeydown({ key: "Enter" })}>
-      {@render kbd("Enter")} to continue ...
+      <KBD label="Enter" /> to continue ...
     </button>
   </div>
+
+  <TypingKeyboard {keymap} />
 </div>

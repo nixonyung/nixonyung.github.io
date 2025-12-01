@@ -1,7 +1,7 @@
 <script lang="ts">
+  import SelectInput from "@/components/svelte/SelectInput.svelte";
   import "@/styles.css";
   import { app, useSyncSettings } from "./app.svelte";
-  import SelectInput from "./inputs/SelectInput.svelte";
   import EN from "./locales/en/EN.svelte";
   import JP from "./locales/jp/JP.svelte";
   import KR from "./locales/kr/KR.svelte";

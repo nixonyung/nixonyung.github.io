@@ -1,8 +1,8 @@
 import { onDestroy, onMount, untrack } from "svelte";
-import type { LettersDict, Settings, SettingsSchema, WordsDict } from "./types";
+import type { Settings, SettingsSchema } from "./types";
 
 // searchParams should be initialized before app, as initSettings depends on searchParams
-// caveat: SvelteURLSearchParams performs worse
+// caveat: native URLSearchParams has better performance over SvelteURLSearchParams
 const searchParams = new URLSearchParams(window.location.search);
 
 export const app = new (class {
@@ -13,13 +13,6 @@ export const app = new (class {
     lang: { paramKey: "lang", defaultValue: "en-US" },
   };
   settings = $state(initSettings(this.SETTINGS_SCHEMA));
-
-  // locale
-  localeKeymap: Record<string, string> = $state({});
-  localeLettersDict: LettersDict = $state({});
-  localeLetters = $derived(Object.keys(this.localeLettersDict));
-  localeWordsDict: WordsDict = $state({});
-  localeWords = $derived(Object.keys(this.localeWordsDict));
 
   // voice
   availableVoices: SpeechSynthesisVoice[] = $state([]);
@@ -96,8 +89,6 @@ export function useSyncSettings<Sc extends SettingsSchema>(schema: Sc, settings:
 
     updateURL();
   });
-
-  return settings;
 }
 
 export function emitKeydown({ key, ctrlKey = false }: { key: string; ctrlKey?: boolean }) {
@@ -110,7 +101,7 @@ export function emitKeydown({ key, ctrlKey = false }: { key: string; ctrlKey?: b
   );
 }
 
-export function speak(letters: undefined | string | (undefined | string)[]) {
+export function speak(letters: (string | undefined)[] | string | undefined) {
   if (letters === undefined || app.voice === undefined || app.isSpeaking) return false;
 
   if (typeof letters === "string") {

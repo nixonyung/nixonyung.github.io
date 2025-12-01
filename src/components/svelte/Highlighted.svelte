@@ -1,11 +1,13 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import type { MouseEventHandler } from "svelte/elements";
+  import type { ClassValue, MouseEventHandler } from "svelte/elements";
 
   const {
+    class: classList,
     onclick,
     children,
   }: {
+    class?: ClassValue;
     onclick?: MouseEventHandler<HTMLButtonElement>;
     children: Snippet;
   } = $props();
@@ -13,8 +15,9 @@
 
 <button
   class={[
-    "w-fit bg-primary-lighter/50 px-3 py-1",
+    "flex w-fit items-center-safe gap-1 bg-primary-lighter/50 px-3 py-1",
     onclick && "cursor-pointer hover:bg-primary-lighter",
+    classList,
   ]}
   {onclick}
 >

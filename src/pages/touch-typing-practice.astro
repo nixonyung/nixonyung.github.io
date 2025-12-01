@@ -1,6 +1,6 @@
 ---
 import HtmlHead from "@/components/HtmlHead.astro";
-import TouchTypingPracticeComponent from "@/components/touch_typing_practice/index.svelte";
+import TouchTypingPracticeComponent from "./_touch-typing-practice/index.svelte";
 ---
 
 <!doctype html>
@@ -9,7 +9,7 @@ import TouchTypingPracticeComponent from "@/components/touch_typing_practice/ind
     <HtmlHead title="Touch Typing Practice" />
   </head>
 
-  <body class="bg-primary text-primary-content min-w-content touch-manipulation select-none">
+  <body class="min-w-content touch-manipulation bg-primary text-primary-content select-none">
     <TouchTypingPracticeComponent client:only="svelte" />
   </body>
 </html>
