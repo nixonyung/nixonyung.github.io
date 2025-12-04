@@ -10,7 +10,7 @@
   } = $props();
 </script>
 
-<label>
+<label class="whitespace-nowrap">
   <input
     bind:checked
     type="checkbox"

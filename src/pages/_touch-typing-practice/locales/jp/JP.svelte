@@ -2,8 +2,9 @@
   import TabsInput from "@/components/svelte/TabsInput.svelte";
   import { useSyncSettings } from "../../app.svelte";
   import FlashcardQuestions from "../../components/FlashcardQuestions.svelte";
-  import GojuonQuestions from "../../components/GojuonQuestions.svelte";
   import TypingQuestions from "../../components/TypingQuestions.svelte";
+  import FlashcardSettings from "./FlashcardSettings.svelte";
+  import GojuonQuestions from "./GojuonQuestions.svelte";
   import GojuonTable from "./GojuonTable.svelte";
   import { jp } from "./jp.svelte";
 
@@ -23,6 +24,7 @@
     <GojuonTable />
     <GojuonQuestions gojuons={jp.gojuons} />
   {:else if jp.settings.mode === "Flashcards"}
+    <FlashcardSettings />
     <FlashcardQuestions
       words={jp.words}
       schema={[

@@ -4,10 +4,12 @@
 
   const {
     class: classList,
+    vertical = false,
     onclick,
     children,
   }: {
     class?: ClassValue;
+    vertical?: boolean;
     onclick?: MouseEventHandler<HTMLButtonElement>;
     children: Snippet;
   } = $props();
@@ -15,7 +17,8 @@
 
 <button
   class={[
-    "flex w-fit items-center-safe gap-1 bg-primary-lighter/50 px-3 py-1",
+    "relative flex w-fit gap-1 bg-primary-lighter/50 px-3 py-1",
+    vertical ? "flex-col items-start" : "items-center-safe",
     onclick && "cursor-pointer hover:bg-primary-lighter",
     classList,
   ]}

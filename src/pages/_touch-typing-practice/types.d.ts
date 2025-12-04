@@ -28,6 +28,7 @@ export type Gojuon = Letter & {
 
 export type Word = {
   word: string;
+  actualPronunciation?: string;
   aliases?: string[];
 
   meaning: string;

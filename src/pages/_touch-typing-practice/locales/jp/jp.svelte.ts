@@ -25,8 +25,20 @@ export const jp = new (class {
 
     showOrigins: { paramKey: "gojuonOrigins", defaultValue: false },
   };
+  FLASHCARD_SETTINGS_SCHEMA = {
+    enablePronouns: { paramKey: "pronouns", defaultValue: true },
+    enableNounsPeopleGeneric: { paramKey: "genericPeople", defaultValue: true },
+    enableNounsPeopleFamily: { paramKey: "family", defaultValue: true },
+    enableNounsPeopleFellows: { paramKey: "fellows", defaultValue: true },
+    enableNounsIntangible: { paramKey: "intangible", defaultValue: true },
+    enableVerbsActions: { paramKey: "actions", defaultValue: true },
+
+    enableGodanVerbs: { paramKey: "godan", defaultValue: true },
+    enableIchidanVerbs: { paramKey: "ichidan", defaultValue: true },
+  };
   settings = $state(initSettings(this.SETTINGS_SCHEMA));
   gojuonSettings = $state(initSettings(this.GOJUON_SETTINGS_SCHEMA));
+  flashcardSettings = $state(initSettings(this.FLASHCARD_SETTINGS_SCHEMA));
 
   keymap: Keymap = {
     // row 1
@@ -403,81 +415,87 @@ export const jp = new (class {
 
   words = $derived.by((): JapaneseWord[] => {
     return [
-      // pronouns
+      ...(this.flashcardSettings.enablePronouns
+        ? [
+            { word: "私", hiraganaForm: "わたし", romanization: "watashi", meaning: "I" },
+            { word: "僕", hiraganaForm: "ぼく", katakanaForm: "ボク", romanization: "boku", meaning: "I (male)" },
+            { word: "俺", hiraganaForm: "おれ", katakanaForm: "オレ", romanization: "ore", meaning: "I (male, arrogantly)" },
 
-      { word: "私", hiraganaForm: "わたし", romanization: "watashi", meaning: "I" },
-      { word: "僕", hiraganaForm: "ぼく", katakanaForm: "ボク", romanization: "boku", meaning: "I (male)" },
-      { word: "俺", hiraganaForm: "おれ", katakanaForm: "オレ", romanization: "ore", meaning: "I (male, arrogantly)" },
+            { word: "君", hiraganaForm: "きみ", romanization: "kimi", meaning: "you (similar status)" },
+            { word: "貴方", aliases: ["貴女", "貴男"], hiraganaForm: "あなた", romanization: "anata", meaning: "you (similar status, informal)" },
 
-      { word: "君", hiraganaForm: "きみ", romanization: "kimi", meaning: "you (similar status)" },
-      { word: "貴方", aliases: ["貴女", "貴男"], hiraganaForm: "あなた", romanization: "anata", meaning: "you (similar status, informal)" },
+            { word: "彼氏", hiraganaForm: "かれし", romanization: "kareshi", meaning: "he / boyfriend" },
+            { word: "彼女", hiraganaForm: "かのじょ", romanization: "kanojo", meaning: "she / girlfriend" },
+            // TODO: he, she, it, we, they, what
 
-      { word: "彼氏", hiraganaForm: "かれし", romanization: "kareshi", meaning: "he / boyfriend" },
-      { word: "彼女", hiraganaForm: "かのじょ", romanization: "kanojo", meaning: "she / girlfriend" },
-      // TODO: he, she, it, we, they, what
+            { word: "何", hiraganaForm: "なに", katakanaForm: "ナニ", romanization: "nani", meaning: "what / that thing" },
 
-      { word: "何", hiraganaForm: "なに", katakanaForm: "ナニ", romanization: "nani", meaning: "what / that thing" },
+            { word: "自分", hiraganaForm: "じぶん", romanization: "jibun", meaning: "myself, yourself, oneself, himself, herself" },
+          ]
+        : []),
 
-      { word: "自分", hiraganaForm: "じぶん", romanization: "jibun", meaning: "myself, yourself, oneself, himself, herself" },
+      ...(this.flashcardSettings.enableNounsPeopleGeneric
+        ? [
+            { word: "成人", hiraganaForm: "せいじん", romanization: "seijin", meaning: "adult" },
+            { word: "大人", hiraganaForm: "おとな", romanization: "otona", meaning: "grown-up" },
+            { word: "子供", aliases: ["子ども"], hiraganaForm: "こども", romanization: "kodomo", meaning: "child / children" },
 
-      // nouns - people - generic
+            { word: "男性", hiraganaForm: "だんせい", romanization: "dansei", meaning: "male" },
+            { word: "男", hiraganaForm: "おとこ", romanization: "otoko", meaning: "man" },
+            { word: "少年", hiraganaForm: "しょうねん", romanization: "shounen", meaning: "young man" },
 
-      { word: "成人", hiraganaForm: "せいじん", romanization: "seijin", meaning: "adult" },
-      { word: "大人", hiraganaForm: "おとな", romanization: "otona", meaning: "grown-up" },
-      { word: "子供", aliases: ["子ども"], hiraganaForm: "こども", romanization: "kodomo", meaning: "child / children" },
+            { word: "女性", hiraganaForm: "じょせい", romanization: "josei", meaning: "female" },
+            { word: "女子", hiraganaForm: "じょし", romanization: "joshi", meaning: "woman" },
+            { word: "乙女", aliases: ["少女"], hiraganaForm: "おとめ", romanization: "otome", meaning: "young lady" },
+          ]
+        : []),
 
-      { word: "男性", hiraganaForm: "だんせい", romanization: "dansei", meaning: "male" },
-      { word: "男", hiraganaForm: "おとこ", romanization: "otoko", meaning: "man" },
-      { word: "少年", hiraganaForm: "しょうねん", romanization: "shounen", meaning: "young man" },
+      ...(this.flashcardSettings.enableNounsPeopleFamily
+        ? [
+            { word: "父さん", hiraganaForm: "とうさん", romanization: "tousan", meaning: "father (calling him)" },
+            { word: "お父さん", hiraganaForm: "おとうさん", romanization: "otousan", meaning: "father (referring to him or someone else's)" },
+            { word: "父", hiraganaForm: "ちち", romanization: "chichi", meaning: "my father (referring to him)" },
+            { word: "老爺", hiraganaForm: "おやじ", actualPronunciation: "おやじ", romanization: "oyaji", meaning: "father (calling him, used by old-fashioned men)" },
 
-      { word: "女性", hiraganaForm: "じょせい", romanization: "josei", meaning: "female" },
-      { word: "女子", hiraganaForm: "じょし", romanization: "joshi", meaning: "woman" },
-      { word: "乙女", aliases: ["少女"], hiraganaForm: "おとめ", romanization: "otome", meaning: "young lady" },
+            { word: "母さん", hiraganaForm: "かあさん", romanization: "kaasan", meaning: "mother (calling her)" },
+            { word: "お母さん", hiraganaForm: "おかあさん", romanization: "okaasan", meaning: "mother (referring to her or someone else's)" },
+            { word: "母", hiraganaForm: "はは", romanization: "haha", meaning: "my mother (referring to her)" },
+            { word: "お袋", hiraganaForm: "おふくろ", romanization: "ofukuro", meaning: "mother (calling her, used by old-fashioned men)" },
 
-      // nouns - people - family members
+            { word: "兄さん", hiraganaForm: "にいさん", romanization: "niisan", meaning: "elder brother (calling him)" },
+            { word: "お兄さん", hiraganaForm: "おにいさん", romanization: "oniisan", meaning: "elder brother (referring to him or someone else's)" },
+            { word: "兄", hiraganaForm: "あに", romanization: "ani", meaning: "my elder brother (referring to him)" },
 
-      { word: "父さん", hiraganaForm: "とうさん", romanization: "tousan", meaning: "father (calling him)" },
-      { word: "お父さん", hiraganaForm: "おとうさん", romanization: "otousan", meaning: "father (referring to him or someone else's)" },
-      { word: "父", hiraganaForm: "ちち", romanization: "chichi", meaning: "my father (referring to him)" },
-      { word: "老爺", hiraganaForm: "おやじ", romanization: "oyaji", meaning: "father (calling him, used by old-fashioned men)" },
+            { word: "姉さん", hiraganaForm: "ねえさん", romanization: "neesan", meaning: "elder sister (calling her)" },
+            { word: "お姉さん", hiraganaForm: "おねえさん", romanization: "oneesan", meaning: "elder sister (referring to her or someone else's" },
+            { word: "姉", hiraganaForm: "あね", romanization: "ane", meaning: "my elder sister (referring to her)" },
 
-      { word: "母さん", hiraganaForm: "かあさん", romanization: "kaasan", meaning: "mother (calling her)" },
-      { word: "お母さん", hiraganaForm: "おかあさん", romanization: "okaasan", meaning: "mother (referring to her or someone else's)" },
-      { word: "母", hiraganaForm: "はは", romanization: "haha", meaning: "my mother (referring to her)" },
-      { word: "お袋", hiraganaForm: "おふくろ", romanization: "ofukuro", meaning: "mother (calling her, used by old-fashioned men)" },
+            { word: "弟さん", hiraganaForm: "おとうとさん", romanization: "otoutosan", meaning: "younger brother (referring to him or someone else's" },
+            { word: "弟", hiraganaForm: "おとうと", romanization: "otouto", meaning: "my younger brother (referring to him)" },
 
-      { word: "兄さん", hiraganaForm: "にいさん", romanization: "niisan", meaning: "elder brother (calling him)" },
-      { word: "お兄さん", hiraganaForm: "おにいさん", romanization: "oniisan", meaning: "elder brother (referring to him or someone else's)" },
-      { word: "兄", hiraganaForm: "あに", romanization: "ani", meaning: "my elder brother (referring to him)" },
+            { word: "妹さん", hiraganaForm: "いもうとさん", romanization: "imoutosan", meaning: "younger sister (referring to her or someone else's)" },
+            { word: "妹", hiraganaForm: "いもうと", romanization: "imouto", meaning: "my younger sister (referring to her)" },
 
-      { word: "姉さん", hiraganaForm: "ねえさん", romanization: "neesan", meaning: "elder sister (calling her)" },
-      { word: "お姉さん", hiraganaForm: "おねえさん", romanization: "oneesan", meaning: "elder sister (referring to her or someone else's" },
-      { word: "姉", hiraganaForm: "あね", romanization: "ane", meaning: "my elder sister (referring to her)" },
+            // TODO: child, son, daughter
+          ]
+        : []),
 
-      { word: "弟さん", hiraganaForm: "おとうとさん", romanization: "otoutosan", meaning: "younger brother (referring to him or someone else's" },
-      { word: "弟", hiraganaForm: "おとうと", romanization: "otouto", meaning: "my younger brother (referring to him)" },
+      ...(this.flashcardSettings.enableNounsPeopleFellows
+        ? [
+            { word: "友人", hiraganaForm: "ゆうじん", romanization: "yuujin", meaning: "friend" },
+            { word: "朋友", hiraganaForm: "ほうゆう", romanization: "houyuu", meaning: "friend" },
+            { word: "友達", hiraganaForm: "ともだち", romanization: "tomodachi", meaning: "friends (informal)" },
+            // TODO: aniki
 
-      { word: "妹さん", hiraganaForm: "いもうとさん", romanization: "imoutosan", meaning: "younger sister (referring to her or someone else's)" },
-      { word: "妹", hiraganaForm: "いもうと", romanization: "imouto", meaning: "my younger sister (referring to her)" },
-
-      // TODO: child, son, daughter
-
-      // nouns - people - close ones
-
-      { word: "友人", hiraganaForm: "ゆうじん", romanization: "yuujin", meaning: "friend" },
-      { word: "朋友", hiraganaForm: "ほうゆう", romanization: "houyuu", meaning: "friend" },
-      { word: "友達", hiraganaForm: "ともだち", romanization: "tomodachi", meaning: "friends (informal)" },
-      // TODO: aniki
-
-      // nouns - people - fellows
-
-      { word: "仲間", hiraganaForm: "なかま", romanization: "nakama", meaning: "fellow / companion (informal)" },
-      { word: "同僚", hiraganaForm: "どうりょう", romanization: "douryou", meaning: "colleague (in similar gojuonPosition with you)" },
-      { word: "主管", hiraganaForm: "しゅかん", romanization: "shukan", meaning: "manager" },
-      { word: "主任", hiraganaForm: "しゅにん", romanization: "shunin", meaning: "director" },
-      { word: "監督", hiraganaForm: "かんとく", romanization: "kantoku", meaning: "supervisor" },
-      { word: "部長", hiraganaForm: "ぶちょう", romanization: "buchou", meaning: "boss" },
-      { word: "社長", hiraganaForm: "しゃちょう", romanization: "shachou", meaning: "president" },
+            { word: "仲間", hiraganaForm: "なかま", romanization: "nakama", meaning: "fellow / companion (informal)" },
+            { word: "同僚", hiraganaForm: "どうりょう", romanization: "douryou", meaning: "colleague (in similar gojuonPosition with you)" },
+            { word: "主管", hiraganaForm: "しゅかん", romanization: "shukan", meaning: "manager" },
+            { word: "主任", hiraganaForm: "しゅにん", romanization: "shunin", meaning: "director" },
+            { word: "監督", hiraganaForm: "かんとく", romanization: "kantoku", meaning: "supervisor" },
+            { word: "部長", hiraganaForm: "ぶちょう", romanization: "buchou", meaning: "boss" },
+            { word: "社長", hiraganaForm: "しゃちょう", romanization: "shachou", meaning: "president" },
+          ]
+        : []),
 
       // TODO: directions
 
@@ -489,17 +507,38 @@ export const jp = new (class {
 
       // TODO: time
 
-      // intangible nouns
+      ...(this.flashcardSettings.enableNounsIntangible
+        ? [
+            { word: "名前", hiraganaForm: "なまえ", romanization: "namae", meaning: "name" },
+            { word: "家族", hiraganaForm: "かぞく", romanization: "kazoku", meaning: "extended family" },
+          ]
+        : []),
 
-      { word: "名前", hiraganaForm: "なまえ", romanization: "namae", meaning: "name" },
-      { word: "家族", hiraganaForm: "かぞく", romanization: "kazoku", meaning: "extended family" },
+      ...(this.flashcardSettings.enableVerbsActions && this.flashcardSettings.enableGodanVerbs
+        ? [
+            { word: "聞く", aliases: ["聴く"], hiraganaForm: "きく", romanization: "kiku", meaning: "hear / listen" },
+            { word: "飲む", aliases: ["呑む"], hiraganaForm: "のむ", romanization: "nomu", meaning: "drink / swallow" },
+            { word: "言う", aliases: ["云う", "謂う"], hiraganaForm: "いう", romanization: "iu", meaning: "say" },
+            { word: "行く", aliases: ["往く"], hiraganaForm: "いく", romanization: "iku", meaning: "go" },
+            { word: "嗅ぐ", hiraganaForm: "かぐ", romanization: "kagu", meaning: "smell" },
+            { word: "取る", hiraganaForm: "とる", romanization: "toru", meaning: "take / grab" },
+            { word: "持つ", hiraganaForm: "もつ", romanization: "motsu", meaning: "hold / carry" },
+            { word: "歩く", hiraganaForm: "あるく", romanization: "aruku", meaning: "walk" },
+            { word: "走る", aliases: ["奔る", "疾る", "趨る"], hiraganaForm: "はしる", romanization: "hashiru", meaning: "run / rush" },
 
-      // verbs
-      // TODO: godan vs ichidan
+            { word: "使う", aliases: ["遣う"], hiraganaForm: "つかう", romanization: "tsukau", meaning: "use / employ / utilize" },
+            { word: "動く", hiraganaForm: "うごく", romanization: "ugoku", meaning: "move / act / shift" },
+          ]
+        : []),
+      ...(this.flashcardSettings.enableVerbsActions && this.flashcardSettings.enableIchidanVerbs
+        ? [
+            { word: "見る", aliases: ["観る", "視る"], hiraganaForm: "みる", romanization: "miru", meaning: "see / look" },
+            { word: "食べる", hiraganaForm: "たべる", romanization: "taberu", meaning: "eat" },
+          ]
+        : []),
 
-      { word: "食", hiraganaForm: "たべる", romanization: "taberu", meaning: "eat" },
-      { word: "飲", aliases: ["呑む"], hiraganaForm: "のむ", romanization: "nomu", meaning: "drink" },
-      { word: "行", hiraganaForm: "いく", romanization: "iku", meaning: "go" },
+      // verbs - Irregular verbs
+      // TODO
     ];
   });
 })();
