@@ -30,8 +30,10 @@ export const jp = new (class {
     enableNounsPeopleGeneric: { paramKey: "genericPeople", defaultValue: true },
     enableNounsPeopleFamily: { paramKey: "family", defaultValue: true },
     enableNounsPeopleFellows: { paramKey: "fellows", defaultValue: true },
+    enableNounsTime: { paramKey: "time", defaultValue: true },
     enableNounsIntangible: { paramKey: "intangible", defaultValue: true },
     enableVerbsActions: { paramKey: "actions", defaultValue: true },
+    enableInterjections: { paramKey: "interjections", defaultValue: true },
 
     enableGodanVerbs: { paramKey: "godan", defaultValue: true },
     enableIchidanVerbs: { paramKey: "ichidan", defaultValue: true },
@@ -424,8 +426,21 @@ export const jp = new (class {
             { word: "君", hiraganaForm: "きみ", romanization: "kimi", meaning: "you (similar status)" },
             { word: "貴方", aliases: ["貴女", "貴男"], hiraganaForm: "あなた", romanization: "anata", meaning: "you (similar status, informal)" },
 
+            { word: "彼", hiraganaForm: "かれ", romanization: "kare", meaning: "he" },
             { word: "彼氏", hiraganaForm: "かれし", romanization: "kareshi", meaning: "he / boyfriend" },
             { word: "彼女", hiraganaForm: "かのじょ", romanization: "kanojo", meaning: "she / girlfriend" },
+            { word: "彼ら", aliases: ["彼等"], hiraganaForm: "かれら", romanization: "karera", meaning: "they" },
+            { word: "彼方", hiraganaForm: "かなた", romanization: "kanata", meaning: "that other side" },
+            { word: "彼の", aliases: ["彼"], hiraganaForm: "かの", romanization: "kano", meaning: "the / that person / that thing" },
+            { word: "こちら", aliases: ["此方"], romanization: "kochira", meaning: "this way" },
+            { word: "こいつ", aliases: ["此奴"], romanization: "koitsu", meaning: "this bastard" },
+            { word: "こっち", romanization: "kocchi", meaning: "this way (informal)" },
+            { word: "これ", aliases: ["此れ"], romanization: "kono", meaning: "this" },
+            { word: "ここ", aliases: ["此処", "此所"], romanization: "koko", meaning: "here" },
+            { word: "そこ", aliases: ["其処", "其所"], romanization: "soko", meaning: "there / that place" },
+            { word: "それ", aliases: ["其れ"], romanization: "sore", meaning: "there" },
+            { word: "あの人", aliases: ["彼の人"], hiraganaForm: "あのひと", romanization: "anohito", meaning: "that person" },
+            { word: "あの方", aliases: ["彼の方"], hiraganaForm: "あのかた", romanization: "anokata", meaning: "that person (politely)" },
             // TODO: he, she, it, we, they, what
 
             { word: "何", hiraganaForm: "なに", katakanaForm: "ナニ", romanization: "nani", meaning: "what / that thing" },
@@ -505,7 +520,13 @@ export const jp = new (class {
 
       // TODO: numbers
 
-      // TODO: time
+      ...(this.flashcardSettings.enableNounsTime
+        ? [
+            { word: "今回", hiraganaForm: "こんかい", romanization: "konkai", meaning: "this time" },
+            { word: "今年", hiraganaForm: "ことし", romanization: "kotoshi", meaning: "this year" },
+            { word: "今日", hiraganaForm: "きょう", romanization: "kyou", meaning: "today" },
+          ]
+        : []),
 
       ...(this.flashcardSettings.enableNounsIntangible
         ? [
@@ -539,6 +560,17 @@ export const jp = new (class {
 
       // verbs - Irregular verbs
       // TODO
+
+      ...(this.flashcardSettings.enableInterjections
+        ? [
+            { word: "この", aliases: ["此の"], romanization: "kono", meaning: "you are such a xxx" },
+            { word: "ほら", romanization: "hora", meaning: "look!" },
+          ]
+        : []),
     ];
+
+    // TODO:
+    // letter: { letter, romanization, actualInput? } (no need to support speaking)
+    // word: { kanjis?, kana, preferKana?, romanization, meaning }
   });
 })();

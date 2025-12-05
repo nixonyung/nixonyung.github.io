@@ -29,7 +29,7 @@
       words={jp.words}
       schema={[
         { label: "word", valueFn: ({ word, aliases = [] }) => [word, ...aliases].join(" / ") },
-        { label: "hiragana", valueFn: ({ hiraganaForm }) => hiraganaForm },
+        { label: "hiragana", valueFn: ({ word, hiraganaForm }) => hiraganaForm ?? word },
         { label: "romanization", valueFn: ({ romanization }) => romanization },
         { label: "meaning", valueFn: ({ meaning }) => meaning },
       ]}

@@ -73,4 +73,18 @@
     </Highlighted>
     <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsActions} label="actions" />
   </div>
+  <div class="flex items-center-safe gap-9">
+    <Highlighted
+      onclick={() => {
+        if (!jp.flashcardSettings.enableInterjections) {
+          jp.flashcardSettings.enableInterjections = true;
+        } else {
+          jp.flashcardSettings.enableInterjections = false;
+        }
+      }}
+    >
+      interjections:
+    </Highlighted>
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableInterjections} label="interjections" />
+  </div>
 </div>
