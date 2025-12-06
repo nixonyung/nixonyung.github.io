@@ -79,20 +79,20 @@ importers:
         specifier: ^16.5.0
         version: 16.5.0
       prettier:
-        specifier: ^3.7.4
-        version: 3.7.4
+        specifier: 3.6.2
+        version: 3.6.2
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
       prettier-plugin-multiline-arrays:
-        specifier: ^4.0.4
-        version: 4.0.4(prettier@3.7.4)
+        specifier: 4.0.5
+        version: 4.0.5(prettier@3.6.2)
       prettier-plugin-svelte:
         specifier: ^3.4.0
-        version: 3.4.0(prettier@3.7.4)(svelte@5.45.4)
+        version: 3.4.0(prettier@3.6.2)(svelte@5.45.4)
       prettier-plugin-tailwindcss:
         specifier: ^0.7.2
-        version: 0.7.2(prettier-plugin-astro@0.14.1)(prettier-plugin-multiline-arrays@4.0.4(prettier@3.7.4))(prettier-plugin-svelte@3.4.0(prettier@3.7.4)(svelte@5.45.4))(prettier@3.7.4)
+        version: 0.7.2(prettier-plugin-astro@0.14.1)(prettier-plugin-multiline-arrays@4.0.5(prettier@3.6.2))(prettier-plugin-svelte@3.4.0(prettier@3.6.2)(svelte@5.45.4))(prettier@3.6.2)
       typescript-eslint:
         specifier: ^8.48.1
         version: 8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
@@ -2447,11 +2447,11 @@ packages:
     resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
     engines: {node: ^14.15.0 || >=16.0.0}
 
-  prettier-plugin-multiline-arrays@4.0.4:
-    resolution: {integrity: sha512-a1sMInP3pSkBPPs3M6WwdBISiNUSw3xMoT4ccWqdf/zrEvIUHvG+i+oShyLdjRORIk60zU4y9u71qgLjHZb82g==}
+  prettier-plugin-multiline-arrays@4.0.5:
+    resolution: {integrity: sha512-P6S+yUWrGv7LHIL3p+sQVdeNdP2nTocyVTe0ta9UwmJGHTbDpQas8rAayxjIN61ujxPXydW6ObHPmSyv98gMdQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      prettier: '>=3.0.0 <3.6.0'
+      prettier: '>=3.0.0 <3.7.0'
 
   prettier-plugin-svelte@3.4.0:
     resolution: {integrity: sha512-pn1ra/0mPObzqoIQn/vUTR3ZZI6UuZ0sHqMK5x2jMLGrs53h0sXhkVuDcrlssHwIMk7FYrMjHBPoUSyyEEDlBQ==}
@@ -2514,8 +2514,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.7.4:
-    resolution: {integrity: sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==}
+  prettier@3.6.2:
+    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -5952,29 +5952,29 @@ snapshots:
   prettier-plugin-astro@0.14.1:
     dependencies:
       '@astrojs/compiler': 2.13.0
-      prettier: 3.7.4
+      prettier: 3.6.2
       sass-formatter: 0.7.9
 
-  prettier-plugin-multiline-arrays@4.0.4(prettier@3.7.4):
+  prettier-plugin-multiline-arrays@4.0.5(prettier@3.6.2):
     dependencies:
       '@augment-vir/common': 31.54.3
-      prettier: 3.7.4
+      prettier: 3.6.2
       proxy-vir: 2.0.1
 
-  prettier-plugin-svelte@3.4.0(prettier@3.7.4)(svelte@5.45.4):
+  prettier-plugin-svelte@3.4.0(prettier@3.6.2)(svelte@5.45.4):
     dependencies:
-      prettier: 3.7.4
+      prettier: 3.6.2
       svelte: 5.45.4
 
-  prettier-plugin-tailwindcss@0.7.2(prettier-plugin-astro@0.14.1)(prettier-plugin-multiline-arrays@4.0.4(prettier@3.7.4))(prettier-plugin-svelte@3.4.0(prettier@3.7.4)(svelte@5.45.4))(prettier@3.7.4):
+  prettier-plugin-tailwindcss@0.7.2(prettier-plugin-astro@0.14.1)(prettier-plugin-multiline-arrays@4.0.5(prettier@3.6.2))(prettier-plugin-svelte@3.4.0(prettier@3.6.2)(svelte@5.45.4))(prettier@3.6.2):
     dependencies:
-      prettier: 3.7.4
+      prettier: 3.6.2
     optionalDependencies:
       prettier-plugin-astro: 0.14.1
-      prettier-plugin-multiline-arrays: 4.0.4(prettier@3.7.4)
-      prettier-plugin-svelte: 3.4.0(prettier@3.7.4)(svelte@5.45.4)
+      prettier-plugin-multiline-arrays: 4.0.5(prettier@3.6.2)
+      prettier-plugin-svelte: 3.4.0(prettier@3.6.2)(svelte@5.45.4)
 
-  prettier@3.7.4: {}
+  prettier@3.6.2: {}
 
   prismjs@1.30.0: {}
 

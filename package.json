@@ -13,7 +13,8 @@
     "plugins": [
       "prettier-plugin-astro",
       "prettier-plugin-svelte",
-      "prettier-plugin-tailwindcss"
+      "prettier-plugin-tailwindcss",
+      "prettier-plugin-multiline-arrays"
     ],
     "printWidth": 100,
     "overrides": [
@@ -52,9 +53,9 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-svelte": "^3.13.0",
     "globals": "^16.5.0",
-    "prettier": "^3.7.4",
+    "prettier": "3.6.2",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-multiline-arrays": "^4.0.4",
+    "prettier-plugin-multiline-arrays": "4.0.5",
     "prettier-plugin-svelte": "^3.4.0",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "typescript-eslint": "^8.48.1"
