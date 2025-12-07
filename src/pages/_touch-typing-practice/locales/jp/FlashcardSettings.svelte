@@ -1,7 +1,7 @@
 <script lang="ts" generics="TWord extends Word">
   import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
   import Highlighted from "@/components/svelte/Highlighted.svelte";
-  import { useSyncSettings } from "../../app.svelte";
+  import { useSyncSettings } from "../../../../lib/settings.svelte";
   import type { Word } from "../../types";
   import { jp } from "./jp.svelte";
 

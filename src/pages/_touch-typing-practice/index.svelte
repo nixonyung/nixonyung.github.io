@@ -1,12 +1,19 @@
 <script lang="ts">
   import SelectInput from "@/components/svelte/SelectInput.svelte";
   import "@/styles.css";
-  import { app, useSyncSettings } from "./app.svelte";
+  import { initSettings, useSyncSettings } from "../../lib/settings.svelte";
+  import { app } from "./app.svelte";
   import EN from "./locales/en/EN.svelte";
   import JP from "./locales/jp/JP.svelte";
   import KR from "./locales/kr/KR.svelte";
 
-  useSyncSettings(app.SETTINGS_SCHEMA, app.settings);
+  // settings
+  const SETTINGS_SCHEMA = {
+    // values of lang should match codes from SpeechSynthesis
+    lang: { paramKey: "lang", defaultValue: <"en-US" | "ja-JP" | "ko-KR">"en-US" },
+  };
+  const settings = $state(initSettings(SETTINGS_SCHEMA));
+  useSyncSettings(SETTINGS_SCHEMA, settings);
 
   speechSynthesis.addEventListener("voiceschanged", () => {
     app.availableVoices = speechSynthesis.getVoices();
@@ -18,16 +25,11 @@
       );
     }
   });
-
-  // langs should match codes from SpeechSynthesis
-  const langToComponent = {
-    "en-US": EN,
-    "ja-JP": JP,
-    "ko-KR": KR,
-  } as const;
-  const LangComponent = $derived(
-    langToComponent[app.settings.lang as keyof typeof langToComponent],
-  );
+  $effect(() => {
+    app.voice = app.availableVoices.find(
+      ({ lang, name }) => lang === settings?.lang && name.startsWith("Google"),
+    );
+  });
 </script>
 
 <div class="flex min-h-dvh flex-col gap-3 px-4 pt-2 pb-6">
@@ -35,12 +37,14 @@
 
   <!-- settings -->
   <div class="flex items-center-safe gap-9">
-    <SelectInput
-      bind:value={app.settings.lang}
-      label="lang:"
-      options={Object.keys(langToComponent)}
-    />
+    <SelectInput bind:value={settings.lang} label="lang:" options={["en-US", "ja-JP", "ko-KR"]} />
   </div>
 
-  <LangComponent />
+  {#if settings.lang === "en-US"}
+    <EN />
+  {:else if settings.lang === "ja-JP"}
+    <JP />
+  {:else if settings.lang === "ko-KR"}
+    <KR />
+  {/if}
 </div>

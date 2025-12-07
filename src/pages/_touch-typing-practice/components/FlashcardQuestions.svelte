@@ -5,7 +5,8 @@
   import { ShufflingCircularQueue } from "@/lib/shuffling-circular-queue";
   import { isEqual, randomInt, sampleSize } from "es-toolkit";
   import { untrack } from "svelte";
-  import { app, initSettings, speak, useSyncSettings } from "../app.svelte";
+  import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
+  import { app, speak } from "../app.svelte";
 
   const {
     words,

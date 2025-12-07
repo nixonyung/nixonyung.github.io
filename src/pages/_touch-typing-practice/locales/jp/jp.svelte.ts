@@ -1,4 +1,4 @@
-import { initSettings } from "../../app.svelte";
+import { initSettings } from "../../../../lib/settings.svelte";
 import type { Gojuon, JapaneseWord, Keymap, Letter } from "../../types";
 
 export const jp = new (class {

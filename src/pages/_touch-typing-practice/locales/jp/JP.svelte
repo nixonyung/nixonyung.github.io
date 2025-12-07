@@ -1,6 +1,6 @@
 <script lang="ts">
   import TabsInput from "@/components/svelte/TabsInput.svelte";
-  import { useSyncSettings } from "../../app.svelte";
+  import { useSyncSettings } from "../../../../lib/settings.svelte";
   import FlashcardQuestions from "../../components/FlashcardQuestions.svelte";
   import TypingQuestions from "../../components/TypingQuestions.svelte";
   import FlashcardSettings from "./FlashcardSettings.svelte";

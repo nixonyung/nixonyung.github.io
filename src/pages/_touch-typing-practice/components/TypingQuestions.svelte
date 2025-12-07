@@ -5,7 +5,8 @@
   import NumericInput from "@/components/svelte/NumericInput.svelte";
   import { ShufflingCircularQueue } from "@/lib/shuffling-circular-queue";
   import { untrack } from "svelte";
-  import { app, emitKeydown, initSettings, speak, useSyncSettings } from "../app.svelte";
+  import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
+  import { app, emitKeydown, speak } from "../app.svelte";
   import type { Keymap, Letter } from "../types";
   import TypingKeyboard from "./TypingKeyboard.svelte";
 

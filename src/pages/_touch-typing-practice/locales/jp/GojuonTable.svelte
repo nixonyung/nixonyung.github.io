@@ -1,7 +1,7 @@
 <script lang="ts">
   import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
   import ReferenceLink from "@/components/svelte/ReferenceLink.svelte";
-  import { useSyncSettings } from "../../app.svelte";
+  import { useSyncSettings } from "../../../../lib/settings.svelte";
   import GojuonRow from "./GojuonRow.svelte";
   import { jp } from "./jp.svelte";
 

@@ -4,7 +4,7 @@
   import { ShufflingCircularQueue } from "@/lib/shuffling-circular-queue";
   import { randomInt, sampleSize } from "es-toolkit";
   import { untrack } from "svelte";
-  import { initSettings, useSyncSettings } from "../../app.svelte";
+  import { initSettings, useSyncSettings } from "../../../../lib/settings.svelte";
   import type { Gojuon } from "../../types";
 
   const {
