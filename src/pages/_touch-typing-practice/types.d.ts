@@ -1,12 +1,26 @@
 export type SettingsSchema = {
   [T: string]: {
     paramKey: string;
-    defaultValue: string | number | boolean;
+    defaultValue: string | number | boolean | (string | number | boolean)[] | never[];
+    arrayType?: "string[]" | "number[]" | "boolean[]";
   };
 };
 
+type SettingValue<
+  Sc extends SettingsSchema,
+  K extends keyof Sc,
+> = Sc[K]["defaultValue"] extends never[]
+  ? Sc[K]["arrayType"] extends "string[]"
+    ? string[]
+    : Sc[K]["arrayType"] extends "number[]"
+      ? number[]
+      : Sc[K]["arrayType"] extends "boolean[]"
+        ? boolean[]
+        : never
+  : Sc[K]["defaultValue"];
+
 export type Settings<Sc extends SettingsSchema> = {
-  [K in keyof Sc]: Sc[K]["defaultValue"];
+  [K in keyof Sc]: SettingValue<Sc, K>;
 };
 
 export type Keymap = Record<string, string>;
@@ -37,7 +51,12 @@ export type Word = {
   actualInput?: string;
 };
 
-export type JapaneseWord = Word & {
-  hiraganaForm?: string;
-  katakanaForm?: string;
+export type JapaneseWord = {
+  kanjis?: string[];
+  hiragana: string;
+  katakana?: string;
+  preferredForm?: "kanji" | "hiragana" | "katakana";
+  romanization?: string;
+
+  meaning: string;
 };

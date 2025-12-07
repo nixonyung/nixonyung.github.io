@@ -1,5 +1,6 @@
-import { onDestroy, onMount, untrack } from "svelte";
-import type { Settings, SettingsSchema } from "./types";
+import { cloneDeep, isEqual } from "es-toolkit";
+import { onDestroy, onMount } from "svelte";
+import type { Settings, SettingsSchema, SettingValue } from "./types";
 
 // searchParams should be initialized before app, as initSettings depends on searchParams
 // caveat: native URLSearchParams has better performance over SvelteURLSearchParams
@@ -25,16 +26,74 @@ export const app = new (class {
   isSpeaking = $state(false);
 })();
 
-function readSetting(paramKey: string, defaultValue?: string | number | boolean) {
-  if (defaultValue === undefined || typeof defaultValue === "string") {
-    return searchParams.get(paramKey) ?? defaultValue ?? "";
-  } else if (typeof defaultValue === "number") {
-    const value = searchParams.get(paramKey);
-    return value !== null ? parseInt(value) : defaultValue;
-  } else if (defaultValue) {
-    return !searchParams.has(paramKey, "false");
+function decodeSetting(encoded: string, type: "string"): string;
+function decodeSetting(encoded: string, type: "number"): number;
+function decodeSetting(encoded: string, type: "boolean"): boolean;
+function decodeSetting(
+  encoded: string,
+  type: "string" | "number" | "boolean",
+): string | number | boolean;
+function decodeSetting(encoded: string, type: "string[]"): string[];
+function decodeSetting(encoded: string, type: "number[]"): number[];
+function decodeSetting(encoded: string, type: "boolean[]"): boolean[];
+function decodeSetting(
+  encoded: string,
+  type: "string[]" | "number[]" | "boolean[]",
+): (string | number | boolean)[];
+function decodeSetting(
+  encoded: string,
+  type: "string" | "number" | "boolean" | "string[]" | "number[]" | "boolean[]" = "string",
+): string | number | boolean | (string | number | boolean)[] {
+  switch (type) {
+    case "string":
+      return encoded;
+    case "number":
+      return parseInt(encoded);
+    case "boolean":
+      return encoded === "1";
+    case "string[]":
+      return encoded.split("-").map((token) => decodeSetting(token, "string"));
+    case "number[]":
+      return encoded.split("-").map((token) => decodeSetting(token, "number"));
+    case "boolean[]":
+      return encoded.split("-").map((token) => decodeSetting(token, "boolean"));
+  }
+}
+
+function encodeSetting(value: string | number | boolean): string;
+function encodeSetting(value: string | number | boolean | (string | number | boolean)[]): string;
+function encodeSetting(value: string | number | boolean | (string | number | boolean)[]) {
+  if (Array.isArray(value)) {
+    return value.map(encodeSetting).join("-");
   } else {
-    return searchParams.has(paramKey, "true");
+    switch (typeof value) {
+      case "string":
+        return value;
+      case "number":
+        return value.toString();
+      case "boolean":
+        return value ? "1" : "0";
+    }
+  }
+}
+
+function readSetting(
+  paramKey: string,
+  defaultValue: string | number | boolean | (string | number | boolean)[] = "",
+  arrayType: "string[]" | "number[]" | "boolean[]" = "string[]",
+): string | number | boolean | (string | number | boolean)[] {
+  const encoded = searchParams.get(paramKey);
+  if (encoded === null) return cloneDeep(defaultValue);
+
+  switch (typeof defaultValue) {
+    case "string":
+      return decodeSetting(encoded, "string");
+    case "number":
+      return decodeSetting(encoded, "number");
+    case "boolean":
+      return decodeSetting(encoded, "boolean");
+    default:
+      return decodeSetting(encoded, arrayType);
   }
 }
 
@@ -55,8 +114,11 @@ function updateURL() {
 export function useSyncSettings<Sc extends SettingsSchema>(schema: Sc, settings: Settings<Sc>) {
   // read settings from URL onMount
   onMount(() => {
-    for (const [key, { paramKey, defaultValue }] of Object.entries(schema)) {
-      settings[key as keyof Sc] = readSetting(paramKey, defaultValue);
+    for (const [key, { paramKey, defaultValue, arrayType }] of Object.entries(schema)) {
+      settings[key as keyof Sc] = readSetting(paramKey, defaultValue, arrayType) as SettingValue<
+        Sc,
+        typeof key
+      >;
     }
   });
 
@@ -64,20 +126,13 @@ export function useSyncSettings<Sc extends SettingsSchema>(schema: Sc, settings:
   for (const [key, { paramKey, defaultValue }] of Object.entries(schema)) {
     $effect(() => {
       const value = settings[key as keyof Sc];
+      if (isEqual(value, defaultValue)) {
+        searchParams.delete(paramKey);
+      } else {
+        searchParams.set(paramKey, encodeSetting(value));
+      }
 
-      untrack(() => {
-        if (value === defaultValue) {
-          searchParams.delete(paramKey);
-        } else if (typeof value === "string") {
-          searchParams.set(paramKey, value);
-        } else if (typeof value === "number") {
-          searchParams.set(paramKey, value.toString());
-        } else {
-          searchParams.set(paramKey, value ? "true" : "false");
-        }
-
-        updateURL();
-      });
+      updateURL();
     });
   }
 

@@ -415,81 +415,81 @@ export const jp = new (class {
     ];
   });
 
-  words = $derived.by((): JapaneseWord[] => {
+  words = $derived.by(() => {
     return [
       ...(this.flashcardSettings.enablePronouns
         ? [
-            { word: "私", hiraganaForm: "わたし", romanization: "watashi", meaning: "I" },
-            { word: "僕", hiraganaForm: "ぼく", katakanaForm: "ボク", romanization: "boku", meaning: "I (male)" },
-            { word: "俺", hiraganaForm: "おれ", katakanaForm: "オレ", romanization: "ore", meaning: "I (male, arrogantly)" },
+            <JapaneseWord>{ kanjis: ["私"], hiragana: "わたし", romanization: "watashi", meaning: "I" },
+            <JapaneseWord>{ kanjis: ["僕"], hiragana: "ぼく", katakana: "ボク", romanization: "boku", meaning: "I (male)" },
+            <JapaneseWord>{ kanjis: ["俺"], hiragana: "おれ", katakana: "オレ", romanization: "ore", meaning: "I (male, arrogantly)" },
 
-            { word: "君", hiraganaForm: "きみ", romanization: "kimi", meaning: "you (similar status)" },
-            { word: "貴方", aliases: ["貴女", "貴男"], hiraganaForm: "あなた", romanization: "anata", meaning: "you (similar status, informal)" },
+            <JapaneseWord>{ kanjis: ["君"], hiragana: "きみ", romanization: "kimi", meaning: "you (similar status)" },
+            <JapaneseWord>{ kanjis: ["貴方", "貴女", "貴男"], hiragana: "あなた", romanization: "anata", meaning: "you (similar status, informal)" },
 
-            { word: "彼", hiraganaForm: "かれ", romanization: "kare", meaning: "he" },
-            { word: "彼氏", hiraganaForm: "かれし", romanization: "kareshi", meaning: "he / boyfriend" },
-            { word: "彼女", hiraganaForm: "かのじょ", romanization: "kanojo", meaning: "she / girlfriend" },
-            { word: "彼ら", aliases: ["彼等"], hiraganaForm: "かれら", romanization: "karera", meaning: "they" },
-            { word: "彼方", hiraganaForm: "かなた", romanization: "kanata", meaning: "that other side" },
-            { word: "彼の", aliases: ["彼"], hiraganaForm: "かの", romanization: "kano", meaning: "the / that person / that thing" },
-            { word: "こちら", aliases: ["此方"], romanization: "kochira", meaning: "this way" },
-            { word: "こいつ", aliases: ["此奴"], romanization: "koitsu", meaning: "this bastard" },
-            { word: "こっち", romanization: "kocchi", meaning: "this way (informal)" },
-            { word: "これ", aliases: ["此れ"], romanization: "kono", meaning: "this" },
-            { word: "ここ", aliases: ["此処", "此所"], romanization: "koko", meaning: "here" },
-            { word: "そこ", aliases: ["其処", "其所"], romanization: "soko", meaning: "there / that place" },
-            { word: "それ", aliases: ["其れ"], romanization: "sore", meaning: "there" },
-            { word: "あの人", aliases: ["彼の人"], hiraganaForm: "あのひと", romanization: "anohito", meaning: "that person" },
-            { word: "あの方", aliases: ["彼の方"], hiraganaForm: "あのかた", romanization: "anokata", meaning: "that person (politely)" },
+            <JapaneseWord>{ kanjis: ["彼"], hiragana: "かれ", romanization: "kare", meaning: "he" },
+            <JapaneseWord>{ kanjis: ["彼氏"], hiragana: "かれし", romanization: "kareshi", meaning: "he / boyfriend" },
+            <JapaneseWord>{ kanjis: ["彼女"], hiragana: "かのじょ", romanization: "kanojo", meaning: "she / girlfriend" },
+            <JapaneseWord>{ kanjis: ["彼ら", "彼等"], hiragana: "かれら", romanization: "karera", meaning: "they" },
+            <JapaneseWord>{ kanjis: ["彼方"], hiragana: "かなた", romanization: "kanata", meaning: "that other side" },
+            <JapaneseWord>{ kanjis: ["彼の", "彼"], hiragana: "かの", romanization: "kano", meaning: "the / that person / that thing" },
+            <JapaneseWord>{ kanjis: ["此方"], hiragana: "こちら", preferredForm: "hiragana", romanization: "kochira", meaning: "this way" },
+            <JapaneseWord>{ kanjis: ["此奴"], hiragana: "こいつ", preferredForm: "hiragana", romanization: "koitsu", meaning: "this bastard" },
+            <JapaneseWord>{ hiragana: "こっち", romanization: "kocchi", meaning: "this way (informal)" },
+            <JapaneseWord>{ kanjis: ["此れ"], hiragana: "これ", preferredForm: "hiragana", romanization: "kono", meaning: "this" },
+            <JapaneseWord>{ kanjis: ["此処", "此所"], hiragana: "ここ", preferredForm: "hiragana", romanization: "koko", meaning: "here" },
+            <JapaneseWord>{ kanjis: ["其処", "其所"], hiragana: "そこ", preferredForm: "hiragana", romanization: "soko", meaning: "there / that place" },
+            <JapaneseWord>{ kanjis: ["其れ"], hiragana: "それ", preferredForm: "hiragana", romanization: "sore", meaning: "there" },
+            <JapaneseWord>{ kanjis: ["あの人", "彼の人"], hiragana: "あのひと", romanization: "anohito", meaning: "that person" },
+            <JapaneseWord>{ kanjis: ["あの方", "彼の方"], hiragana: "あのかた", romanization: "anokata", meaning: "that person (politely)" },
             // TODO: he, she, it, we, they, what
 
-            { word: "何", hiraganaForm: "なに", katakanaForm: "ナニ", romanization: "nani", meaning: "what / that thing" },
+            <JapaneseWord>{ kanjis: ["何"], hiragana: "なに", katakana: "ナニ", romanization: "nani", meaning: "what / that thing" },
 
-            { word: "自分", hiraganaForm: "じぶん", romanization: "jibun", meaning: "myself, yourself, oneself, himself, herself" },
+            <JapaneseWord>{ kanjis: ["自分"], hiragana: "じぶん", romanization: "jibun", meaning: "myself, yourself, oneself, himself, herself" },
           ]
         : []),
 
       ...(this.flashcardSettings.enableNounsPeopleGeneric
         ? [
-            { word: "成人", hiraganaForm: "せいじん", romanization: "seijin", meaning: "adult" },
-            { word: "大人", hiraganaForm: "おとな", romanization: "otona", meaning: "grown-up" },
-            { word: "子供", aliases: ["子ども"], hiraganaForm: "こども", romanization: "kodomo", meaning: "child / children" },
+            <JapaneseWord>{ kanjis: ["成人"], hiragana: "せいじん", romanization: "seijin", meaning: "adult" },
+            <JapaneseWord>{ kanjis: ["大人"], hiragana: "おとな", romanization: "otona", meaning: "grown-up" },
+            <JapaneseWord>{ kanjis: ["子供", "子ども"], hiragana: "こども", romanization: "kodomo", meaning: "child / children" },
 
-            { word: "男性", hiraganaForm: "だんせい", romanization: "dansei", meaning: "male" },
-            { word: "男", hiraganaForm: "おとこ", romanization: "otoko", meaning: "man" },
-            { word: "少年", hiraganaForm: "しょうねん", romanization: "shounen", meaning: "young man" },
+            <JapaneseWord>{ kanjis: ["男性"], hiragana: "だんせい", romanization: "dansei", meaning: "male" },
+            <JapaneseWord>{ kanjis: ["男"], hiragana: "おとこ", romanization: "otoko", meaning: "man" },
+            <JapaneseWord>{ kanjis: ["少年"], hiragana: "しょうねん", romanization: "shounen", meaning: "young man" },
 
-            { word: "女性", hiraganaForm: "じょせい", romanization: "josei", meaning: "female" },
-            { word: "女子", hiraganaForm: "じょし", romanization: "joshi", meaning: "woman" },
-            { word: "乙女", aliases: ["少女"], hiraganaForm: "おとめ", romanization: "otome", meaning: "young lady" },
+            <JapaneseWord>{ kanjis: ["女性"], hiragana: "じょせい", romanization: "josei", meaning: "female" },
+            <JapaneseWord>{ kanjis: ["女子"], hiragana: "じょし", romanization: "joshi", meaning: "woman" },
+            <JapaneseWord>{ kanjis: ["乙女", "少女"], hiragana: "おとめ", romanization: "otome", meaning: "young lady" },
           ]
         : []),
 
       ...(this.flashcardSettings.enableNounsPeopleFamily
         ? [
-            { word: "父さん", hiraganaForm: "とうさん", romanization: "tousan", meaning: "father (calling him)" },
-            { word: "お父さん", hiraganaForm: "おとうさん", romanization: "otousan", meaning: "father (referring to him or someone else's)" },
-            { word: "父", hiraganaForm: "ちち", romanization: "chichi", meaning: "my father (referring to him)" },
-            { word: "老爺", hiraganaForm: "おやじ", actualPronunciation: "おやじ", romanization: "oyaji", meaning: "father (calling him, used by old-fashioned men)" },
+            <JapaneseWord>{ kanjis: ["父さん"], hiragana: "とうさん", romanization: "tousan", meaning: "father (calling him)" },
+            <JapaneseWord>{ kanjis: ["お父さん"], hiragana: "おとうさん", romanization: "otousan", meaning: "father (referring to him or someone else's)" },
+            <JapaneseWord>{ kanjis: ["父"], hiragana: "ちち", romanization: "chichi", meaning: "my father (referring to him)" },
+            <JapaneseWord>{ kanjis: ["老爺"], hiragana: "おやじ", romanization: "oyaji", meaning: "father (calling him, used by old-fashioned men)" },
 
-            { word: "母さん", hiraganaForm: "かあさん", romanization: "kaasan", meaning: "mother (calling her)" },
-            { word: "お母さん", hiraganaForm: "おかあさん", romanization: "okaasan", meaning: "mother (referring to her or someone else's)" },
-            { word: "母", hiraganaForm: "はは", romanization: "haha", meaning: "my mother (referring to her)" },
-            { word: "お袋", hiraganaForm: "おふくろ", romanization: "ofukuro", meaning: "mother (calling her, used by old-fashioned men)" },
+            <JapaneseWord>{ kanjis: ["母さん"], hiragana: "かあさん", romanization: "kaasan", meaning: "mother (calling her)" },
+            <JapaneseWord>{ kanjis: ["お母さん"], hiragana: "おかあさん", romanization: "okaasan", meaning: "mother (referring to her or someone else's)" },
+            <JapaneseWord>{ kanjis: ["母"], hiragana: "はは", romanization: "haha", meaning: "my mother (referring to her)" },
+            <JapaneseWord>{ kanjis: ["お袋"], hiragana: "おふくろ", romanization: "ofukuro", meaning: "mother (calling her, used by old-fashioned men)" },
 
-            { word: "兄さん", hiraganaForm: "にいさん", romanization: "niisan", meaning: "elder brother (calling him)" },
-            { word: "お兄さん", hiraganaForm: "おにいさん", romanization: "oniisan", meaning: "elder brother (referring to him or someone else's)" },
-            { word: "兄", hiraganaForm: "あに", romanization: "ani", meaning: "my elder brother (referring to him)" },
+            <JapaneseWord>{ kanjis: ["兄さん"], hiragana: "にいさん", romanization: "niisan", meaning: "elder brother (calling him)" },
+            <JapaneseWord>{ kanjis: ["お兄さん"], hiragana: "おにいさん", romanization: "oniisan", meaning: "elder brother (referring to him or someone else's)" },
+            <JapaneseWord>{ kanjis: ["兄"], hiragana: "あに", romanization: "ani", meaning: "my elder brother (referring to him)" },
 
-            { word: "姉さん", hiraganaForm: "ねえさん", romanization: "neesan", meaning: "elder sister (calling her)" },
-            { word: "お姉さん", hiraganaForm: "おねえさん", romanization: "oneesan", meaning: "elder sister (referring to her or someone else's" },
-            { word: "姉", hiraganaForm: "あね", romanization: "ane", meaning: "my elder sister (referring to her)" },
+            <JapaneseWord>{ kanjis: ["姉さん"], hiragana: "ねえさん", romanization: "neesan", meaning: "elder sister (calling her)" },
+            <JapaneseWord>{ kanjis: ["お姉さん"], hiragana: "おねえさん", romanization: "oneesan", meaning: "elder sister (referring to her or someone else's" },
+            <JapaneseWord>{ kanjis: ["姉"], hiragana: "あね", romanization: "ane", meaning: "my elder sister (referring to her)" },
 
-            { word: "弟さん", hiraganaForm: "おとうとさん", romanization: "otoutosan", meaning: "younger brother (referring to him or someone else's" },
-            { word: "弟", hiraganaForm: "おとうと", romanization: "otouto", meaning: "my younger brother (referring to him)" },
+            <JapaneseWord>{ kanjis: ["弟さん"], hiragana: "おとうとさん", romanization: "otoutosan", meaning: "younger brother (referring to him or someone else's" },
+            <JapaneseWord>{ kanjis: ["弟"], hiragana: "おとうと", romanization: "otouto", meaning: "my younger brother (referring to him)" },
 
-            { word: "妹さん", hiraganaForm: "いもうとさん", romanization: "imoutosan", meaning: "younger sister (referring to her or someone else's)" },
-            { word: "妹", hiraganaForm: "いもうと", romanization: "imouto", meaning: "my younger sister (referring to her)" },
+            <JapaneseWord>{ kanjis: ["妹さん"], hiragana: "いもうとさん", romanization: "imoutosan", meaning: "younger sister (referring to her or someone else's)" },
+            <JapaneseWord>{ kanjis: ["妹"], hiragana: "いもうと", romanization: "imouto", meaning: "my younger sister (referring to her)" },
 
             // TODO: child, son, daughter
           ]
@@ -497,18 +497,18 @@ export const jp = new (class {
 
       ...(this.flashcardSettings.enableNounsPeopleFellows
         ? [
-            { word: "友人", hiraganaForm: "ゆうじん", romanization: "yuujin", meaning: "friend" },
-            { word: "朋友", hiraganaForm: "ほうゆう", romanization: "houyuu", meaning: "friend" },
-            { word: "友達", hiraganaForm: "ともだち", romanization: "tomodachi", meaning: "friends (informal)" },
+            <JapaneseWord>{ kanjis: ["友人"], hiragana: "ゆうじん", romanization: "yuujin", meaning: "friend" },
+            <JapaneseWord>{ kanjis: ["朋友"], hiragana: "ほうゆう", romanization: "houyuu", meaning: "friend" },
+            <JapaneseWord>{ kanjis: ["友達"], hiragana: "ともだち", romanization: "tomodachi", meaning: "friends (informal)" },
             // TODO: aniki
 
-            { word: "仲間", hiraganaForm: "なかま", romanization: "nakama", meaning: "fellow / companion (informal)" },
-            { word: "同僚", hiraganaForm: "どうりょう", romanization: "douryou", meaning: "colleague (in similar gojuonPosition with you)" },
-            { word: "主管", hiraganaForm: "しゅかん", romanization: "shukan", meaning: "manager" },
-            { word: "主任", hiraganaForm: "しゅにん", romanization: "shunin", meaning: "director" },
-            { word: "監督", hiraganaForm: "かんとく", romanization: "kantoku", meaning: "supervisor" },
-            { word: "部長", hiraganaForm: "ぶちょう", romanization: "buchou", meaning: "boss" },
-            { word: "社長", hiraganaForm: "しゃちょう", romanization: "shachou", meaning: "president" },
+            <JapaneseWord>{ kanjis: ["仲間"], hiragana: "なかま", romanization: "nakama", meaning: "fellow / companion (informal)" },
+            <JapaneseWord>{ kanjis: ["同僚"], hiragana: "どうりょう", romanization: "douryou", meaning: "colleague (in similar gojuonPosition with you)" },
+            <JapaneseWord>{ kanjis: ["主管"], hiragana: "しゅかん", romanization: "shukan", meaning: "manager" },
+            <JapaneseWord>{ kanjis: ["主任"], hiragana: "しゅにん", romanization: "shunin", meaning: "director" },
+            <JapaneseWord>{ kanjis: ["監督"], hiragana: "かんとく", romanization: "kantoku", meaning: "supervisor" },
+            <JapaneseWord>{ kanjis: ["部長"], hiragana: "ぶちょう", romanization: "buchou", meaning: "boss" },
+            <JapaneseWord>{ kanjis: ["社長"], hiragana: "しゃちょう", romanization: "shachou", meaning: "president" },
           ]
         : []),
 
@@ -522,39 +522,39 @@ export const jp = new (class {
 
       ...(this.flashcardSettings.enableNounsTime
         ? [
-            { word: "今回", hiraganaForm: "こんかい", romanization: "konkai", meaning: "this time" },
-            { word: "今年", hiraganaForm: "ことし", romanization: "kotoshi", meaning: "this year" },
-            { word: "今日", hiraganaForm: "きょう", romanization: "kyou", meaning: "today" },
+            <JapaneseWord>{ kanjis: ["今回"], hiragana: "こんかい", romanization: "konkai", meaning: "this time" },
+            <JapaneseWord>{ kanjis: ["今年"], hiragana: "ことし", romanization: "kotoshi", meaning: "this year" },
+            <JapaneseWord>{ kanjis: ["今日"], hiragana: "きょう", romanization: "kyou", meaning: "today" },
           ]
         : []),
 
       ...(this.flashcardSettings.enableNounsIntangible
         ? [
-            { word: "名前", hiraganaForm: "なまえ", romanization: "namae", meaning: "name" },
-            { word: "家族", hiraganaForm: "かぞく", romanization: "kazoku", meaning: "extended family" },
+            <JapaneseWord>{ kanjis: ["名前"], hiragana: "なまえ", romanization: "namae", meaning: "name" },
+            <JapaneseWord>{ kanjis: ["家族"], hiragana: "かぞく", romanization: "kazoku", meaning: "extended family" },
           ]
         : []),
 
       ...(this.flashcardSettings.enableVerbsActions && this.flashcardSettings.enableGodanVerbs
         ? [
-            { word: "聞く", aliases: ["聴く"], hiraganaForm: "きく", romanization: "kiku", meaning: "hear / listen" },
-            { word: "飲む", aliases: ["呑む"], hiraganaForm: "のむ", romanization: "nomu", meaning: "drink / swallow" },
-            { word: "言う", aliases: ["云う", "謂う"], hiraganaForm: "いう", romanization: "iu", meaning: "say" },
-            { word: "行く", aliases: ["往く"], hiraganaForm: "いく", romanization: "iku", meaning: "go" },
-            { word: "嗅ぐ", hiraganaForm: "かぐ", romanization: "kagu", meaning: "smell" },
-            { word: "取る", hiraganaForm: "とる", romanization: "toru", meaning: "take / grab" },
-            { word: "持つ", hiraganaForm: "もつ", romanization: "motsu", meaning: "hold / carry" },
-            { word: "歩く", hiraganaForm: "あるく", romanization: "aruku", meaning: "walk" },
-            { word: "走る", aliases: ["奔る", "疾る", "趨る"], hiraganaForm: "はしる", romanization: "hashiru", meaning: "run / rush" },
+            <JapaneseWord>{ kanjis: ["聞く", "聴く"], hiragana: "きく", romanization: "kiku", meaning: "hear / listen" },
+            <JapaneseWord>{ kanjis: ["飲む", "呑む"], hiragana: "のむ", romanization: "nomu", meaning: "drink / swallow" },
+            <JapaneseWord>{ kanjis: ["言う", "云う", "謂う"], hiragana: "いう", romanization: "iu", meaning: "say" },
+            <JapaneseWord>{ kanjis: ["行く", "往く"], hiragana: "いく", romanization: "iku", meaning: "go" },
+            <JapaneseWord>{ kanjis: ["嗅ぐ"], hiragana: "かぐ", romanization: "kagu", meaning: "smell" },
+            <JapaneseWord>{ kanjis: ["取る"], hiragana: "とる", romanization: "toru", meaning: "take / grab" },
+            <JapaneseWord>{ kanjis: ["持つ"], hiragana: "もつ", romanization: "motsu", meaning: "hold / carry" },
+            <JapaneseWord>{ kanjis: ["歩く"], hiragana: "あるく", romanization: "aruku", meaning: "walk" },
+            <JapaneseWord>{ kanjis: ["走る", "奔る", "疾る", "趨る"], hiragana: "はしる", romanization: "hashiru", meaning: "run / rush" },
 
-            { word: "使う", aliases: ["遣う"], hiraganaForm: "つかう", romanization: "tsukau", meaning: "use / employ / utilize" },
-            { word: "動く", hiraganaForm: "うごく", romanization: "ugoku", meaning: "move / act / shift" },
+            <JapaneseWord>{ kanjis: ["使う", "遣う"], hiragana: "つかう", romanization: "tsukau", meaning: "use / employ / utilize" },
+            <JapaneseWord>{ kanjis: ["動く"], hiragana: "うごく", romanization: "ugoku", meaning: "move / act / shift" },
           ]
         : []),
       ...(this.flashcardSettings.enableVerbsActions && this.flashcardSettings.enableIchidanVerbs
         ? [
-            { word: "見る", aliases: ["観る", "視る"], hiraganaForm: "みる", romanization: "miru", meaning: "see / look" },
-            { word: "食べる", hiraganaForm: "たべる", romanization: "taberu", meaning: "eat" },
+            <JapaneseWord>{ kanjis: ["見る", "観る", "視る"], hiragana: "みる", romanization: "miru", meaning: "see / look" },
+            <JapaneseWord>{ kanjis: ["食べる"], hiragana: "たべる", romanization: "taberu", meaning: "eat" },
           ]
         : []),
 
@@ -563,14 +563,10 @@ export const jp = new (class {
 
       ...(this.flashcardSettings.enableInterjections
         ? [
-            { word: "この", aliases: ["此の"], romanization: "kono", meaning: "you are such a xxx" },
-            { word: "ほら", romanization: "hora", meaning: "look!" },
+            <JapaneseWord>{ kanjis: ["此の"], hiragana: "この", preferredForm: "hiragana", romanization: "kono", meaning: "you are such a xxx" },
+            <JapaneseWord>{ hiragana: "ほら", romanization: "hora", meaning: "look!" },
           ]
         : []),
     ];
-
-    // TODO:
-    // letter: { letter, romanization, actualInput? } (no need to support speaking)
-    // word: { kanjis?, kana, preferKana?, romanization, meaning }
   });
 })();
