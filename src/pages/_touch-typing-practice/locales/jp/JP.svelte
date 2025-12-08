@@ -27,29 +27,32 @@
     <FlashcardSettings />
     <FlashcardQuestions
       words={jp.words}
-      pronunciationFn={({ hiragana }) => hiragana}
+      wordToPronunciationFn={({ hiragana }) => hiragana}
       schema={[
         {
           label: "kanji",
-          valueFn: ({ kanjis }) => kanjis?.join(" / "),
+          valueFn: ({ kanjis, rareKanjis }) =>
+            [...(kanjis ?? []), ...(rareKanjis ?? [])].join(" / "),
           defaultPosition: "question",
         },
         {
           label: "kana",
-          valueFn: ({ hiragana, katakana }) => (katakana ? `${hiragana} / ${katakana}` : hiragana),
+          valueFn: ({ hiragana, katakana }) =>
+            [hiragana, katakana].filter((kana) => kana !== undefined).join(" / "),
           defaultPosition: "option",
         },
         {
           label: "preferred written form",
-          valueFn: ({ hiragana, katakana, kanjis, preferredForm }) => {
+          valueFn: ({ kanjis, hiragana, katakana, preferredForm }) => {
             switch (preferredForm) {
-              case undefined:
               case "kanji":
                 return kanjis?.join(" / ");
               case "hiragana":
                 return hiragana;
               case "katakana":
                 return katakana;
+              case undefined:
+                return kanjis?.join(" / ") ?? hiragana ?? katakana;
             }
           },
         },

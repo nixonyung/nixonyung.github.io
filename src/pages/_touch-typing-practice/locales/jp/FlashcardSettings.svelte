@@ -30,17 +30,26 @@
           !jp.flashcardSettings.enableNounsPeopleGeneric ||
           !jp.flashcardSettings.enableNounsPeopleFamily ||
           !jp.flashcardSettings.enableNounsPeopleFellows ||
-          !jp.flashcardSettings.enableNounsIntangible
+          !jp.flashcardSettings.enableNounsPlacesGeneric ||
+          !jp.flashcardSettings.enableNounsTime ||
+          !jp.flashcardSettings.enableNounsIntangible ||
+          !jp.flashcardSettings.enableNounsMiscellaneous
         ) {
           jp.flashcardSettings.enableNounsPeopleGeneric = true;
           jp.flashcardSettings.enableNounsPeopleFamily = true;
           jp.flashcardSettings.enableNounsPeopleFellows = true;
+          jp.flashcardSettings.enableNounsPlacesGeneric = true;
+          jp.flashcardSettings.enableNounsTime = true;
           jp.flashcardSettings.enableNounsIntangible = true;
+          jp.flashcardSettings.enableNounsMiscellaneous = true;
         } else {
           jp.flashcardSettings.enableNounsPeopleGeneric = false;
           jp.flashcardSettings.enableNounsPeopleFamily = false;
           jp.flashcardSettings.enableNounsPeopleFellows = false;
+          jp.flashcardSettings.enableNounsPlacesGeneric = false;
+          jp.flashcardSettings.enableNounsTime = false;
           jp.flashcardSettings.enableNounsIntangible = false;
+          jp.flashcardSettings.enableNounsMiscellaneous = false;
         }
       }}
     >
@@ -52,7 +61,16 @@
     />
     <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsPeopleFamily} label="family" />
     <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsPeopleFellows} label="fellows" />
+    <CheckboxInput
+      bind:checked={jp.flashcardSettings.enableNounsPlacesGeneric}
+      label="generic places"
+    />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsTime} label="time" />
     <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIntangible} label="intangible" />
+    <CheckboxInput
+      bind:checked={jp.flashcardSettings.enableNounsMiscellaneous}
+      label="miscellaneous"
+    />
   </div>
   <div class="flex items-center-safe gap-9">
     <Highlighted
@@ -76,15 +94,55 @@
   <div class="flex items-center-safe gap-9">
     <Highlighted
       onclick={() => {
-        if (!jp.flashcardSettings.enableInterjections) {
-          jp.flashcardSettings.enableInterjections = true;
+        if (!jp.flashcardSettings.enableAdjectives) {
+          jp.flashcardSettings.enableAdjectives = true;
         } else {
-          jp.flashcardSettings.enableInterjections = false;
+          jp.flashcardSettings.enableAdjectives = false;
         }
       }}
     >
-      interjections:
+      adjectives:
     </Highlighted>
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableInterjections} label="interjections" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableAdjectives} label="adjectives" />
+  </div>
+  <div class="flex items-center-safe gap-9">
+    <Highlighted
+      onclick={() => {
+        if (!jp.flashcardSettings.enableAdverbs) {
+          jp.flashcardSettings.enableAdverbs = true;
+        } else {
+          jp.flashcardSettings.enableAdverbs = false;
+        }
+      }}
+    >
+      adverbs:
+    </Highlighted>
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableAdverbs} label="adverbs" />
+  </div>
+  <div class="flex items-center-safe gap-9">
+    <Highlighted
+      onclick={() => {
+        if (
+          !jp.flashcardSettings.enablePhrasesInterjections ||
+          !jp.flashcardSettings.enablePhrasesMiscellaneous
+        ) {
+          jp.flashcardSettings.enablePhrasesInterjections = true;
+          jp.flashcardSettings.enablePhrasesMiscellaneous = true;
+        } else {
+          jp.flashcardSettings.enablePhrasesInterjections = false;
+          jp.flashcardSettings.enablePhrasesMiscellaneous = false;
+        }
+      }}
+    >
+      phrases:
+    </Highlighted>
+    <CheckboxInput
+      bind:checked={jp.flashcardSettings.enablePhrasesInterjections}
+      label="interjections"
+    />
+    <CheckboxInput
+      bind:checked={jp.flashcardSettings.enablePhrasesMiscellaneous}
+      label="miscellaneous"
+    />
   </div>
 </div>

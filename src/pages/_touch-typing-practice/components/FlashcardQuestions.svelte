@@ -10,14 +10,14 @@
 
   const {
     words,
-    pronunciationFn,
+    wordToPronunciationFn: pronunciationFn,
     schema,
   }: {
     words: TWord[];
-    pronunciationFn?: (word: TWord) => string | undefined;
+    wordToPronunciationFn?: (word: TWord) => string | undefined;
     schema: {
       label: string;
-      valueFn: (word: TWord) => string | number | boolean | undefined;
+      valueFn: (word: TWord) => string | undefined;
       defaultPosition?: "question" | "option";
     }[];
   } = $props();
@@ -33,7 +33,10 @@
       defaultValue: [],
       arrayType: "boolean[]" as const,
     },
-    numOptions: { paramKey: "numOptions", defaultValue: 4 },
+    numOptions: {
+      paramKey: "numOptions",
+      defaultValue: 4,
+    },
   };
   let settings = $state(initSettings(SETTINGS_SCHEMA));
   useSyncSettings(SETTINGS_SCHEMA, settings);

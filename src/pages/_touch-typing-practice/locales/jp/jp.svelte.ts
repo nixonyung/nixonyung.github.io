@@ -31,10 +31,15 @@ export const jp = new (class {
     enableNounsPeopleGeneric: { paramKey: "genericPeople", defaultValue: true },
     enableNounsPeopleFamily: { paramKey: "family", defaultValue: true },
     enableNounsPeopleFellows: { paramKey: "fellows", defaultValue: true },
+    enableNounsPlacesGeneric: { paramKey: "genericPlaces", defaultValue: true },
     enableNounsTime: { paramKey: "time", defaultValue: true },
     enableNounsIntangible: { paramKey: "intangible", defaultValue: true },
+    enableNounsMiscellaneous: { paramKey: "miscellaneousNouns", defaultValue: true },
     enableVerbsActions: { paramKey: "actions", defaultValue: true },
-    enableInterjections: { paramKey: "interjections", defaultValue: true },
+    enableAdjectives: { paramKey: "adjectives", defaultValue: true },
+    enableAdverbs: { paramKey: "adverbs", defaultValue: true },
+    enablePhrasesInterjections: { paramKey: "interjections", defaultValue: true },
+    enablePhrasesMiscellaneous: { paramKey: "miscellaneousPhrases", defaultValue: true },
 
     enableGodanVerbs: { paramKey: "godan", defaultValue: true },
     enableIchidanVerbs: { paramKey: "ichidan", defaultValue: true },
@@ -500,33 +505,84 @@ export const jp = new (class {
       words.splice(
         words.length,
         0, //
+        // I:
         { kanjis: ["私"], hiragana: "わたし", romanization: "watashi", meaning: "I" },
-        { kanjis: ["僕"], hiragana: "ぼく", katakana: "ボク", romanization: "boku", meaning: "I (male)" },
+        { kanjis: ["僕"], hiragana: "ぼく", katakana: "ボク", romanization: "boku", meaning: "I (young male, informally)" },
         { kanjis: ["俺"], hiragana: "おれ", katakana: "オレ", romanization: "ore", meaning: "I (male, arrogantly)" },
+        // TODO: ore-sama (male, arrogantly)
+        // TODO: ware (formally in speeches)
+        // TODO: atashi: females (informally)
+        // TODO: watakushi (very formally)
+        // TODO: washi (old male)
+        // TODO: Sessha (拙者)
 
-        { kanjis: ["君"], hiragana: "きみ", romanization: "kimi", meaning: "you (similar status)" },
-        { kanjis: ["貴方", "貴女", "貴男"], hiragana: "あなた", romanization: "anata", meaning: "you (similar status, informal)" },
+        // you:
+        // TODO: https://nihonshock.com/2012/07/saying-you-in-japanese/
+        { kanjis: ["君"], rareKanjis: ["公"], hiragana: "きみ", romanization: "kimi", meaning: "you (similar status)" },
+        { kanjis: ["貴方", "貴女", "貴男"], hiragana: "あなた", romanization: "anata", meaning: "you (similar status, informal) / my dear" },
+        { hiragana: "こいつ", preferredForm: "hiragana", kanjis: ["此奴"], romanization: "koitsu", meaning: "this bastard" },
+        { hiragana: "こやつ", preferredForm: "hiragana", kanjis: ["此奴"], romanization: "koyatsu", meaning: "this bastard" },
+        // TODO: omae (casual / arrogantly?)
+        // TODO: kisama (arrogantly)
+        // TODO: senpai
+        // TODO: name + honorifics: -san / -chan / -kun / -sama
+        // TODO: (omitted)
 
+        // we:
+        { kanjis: ["我々", "吾々", "我我", "吾吾"], hiragana: "われわれ", romanization: "wareware", meaning: "we" },
+        { kanjis: ["私たち", "私達"], hiragana: "わたしたち", romanization: "watashitachi", meaning: "we" },
+
+        // he / she:
         { kanjis: ["彼"], hiragana: "かれ", romanization: "kare", meaning: "he" },
         { kanjis: ["彼氏"], hiragana: "かれし", romanization: "kareshi", meaning: "he / boyfriend" },
         { kanjis: ["彼女"], hiragana: "かのじょ", romanization: "kanojo", meaning: "she / girlfriend" },
-        { kanjis: ["彼ら", "彼等"], hiragana: "かれら", romanization: "karera", meaning: "they" },
-        { kanjis: ["彼方"], hiragana: "かなた", romanization: "kanata", meaning: "that other side" },
-        { kanjis: ["彼の", "彼"], hiragana: "かの", romanization: "kano", meaning: "the / that person / that thing" },
-        { kanjis: ["此方"], hiragana: "こちら", preferredForm: "hiragana", romanization: "kochira", meaning: "this way" },
-        { kanjis: ["此奴"], hiragana: "こいつ", preferredForm: "hiragana", romanization: "koitsu", meaning: "this bastard" },
-        { hiragana: "こっち", romanization: "kocchi", meaning: "this way (informal)" },
-        { kanjis: ["此れ"], hiragana: "これ", preferredForm: "hiragana", romanization: "kono", meaning: "this" },
-        { kanjis: ["此処", "此所"], hiragana: "ここ", preferredForm: "hiragana", romanization: "koko", meaning: "here" },
-        { kanjis: ["其処", "其所"], hiragana: "そこ", preferredForm: "hiragana", romanization: "soko", meaning: "there / that place" },
-        { kanjis: ["其れ"], hiragana: "それ", preferredForm: "hiragana", romanization: "sore", meaning: "there" },
-        { kanjis: ["あの人", "彼の人"], hiragana: "あのひと", romanization: "anohito", meaning: "that person" },
-        { kanjis: ["あの方", "彼の方"], hiragana: "あのかた", romanization: "anokata", meaning: "that person (politely)" },
-        // TODO: he, she, it, we, they, what
+        { kanjis: ["あの人", "彼の人"], hiragana: "あのひと", romanization: "anohito", meaning: "that person / one's spouse" },
+        { kanjis: ["あの方", "彼の方"], hiragana: "あのかた", romanization: "anokata", meaning: "that gentleman / that lady (politely)" },
 
-        { kanjis: ["何"], hiragana: "なに", katakana: "ナニ", romanization: "nani", meaning: "what / that thing" },
+        // it / this / that:
+        { hiragana: "これ", preferredForm: "hiragana", rareKanjis: ["此れ", "是", "之", "維", "惟"], romanization: "kono", meaning: "this (close to speaker)" },
+        { hiragana: "それ", preferredForm: "hiragana", rareKanjis: ["其れ"], romanization: "sore", meaning: "that (distant from speaker, close to listener)" },
+        { hiragana: "あれ", preferredForm: "hiragana", rareKanjis: ["彼", "彼れ"], romanization: "are", meaning: "that (distant from both speaker and listener)" },
+        { hiragana: "どれ", preferredForm: "hiragana", rareKanjis: ["何れ"], romanization: "dore", meaning: "which" },
 
+        // oneself:
         { kanjis: ["自分"], hiragana: "じぶん", romanization: "jibun", meaning: "myself, yourself, oneself, himself, herself" },
+
+        // they:
+        { kanjis: ["彼ら", "彼等"], hiragana: "かれら", romanization: "karera", meaning: "they" },
+        { kanjis: ["彼女ら", "彼女等"], hiragana: "かのじょら", romanization: "kanojora", meaning: "they (females)" },
+        { hiragana: "こいつら", preferredForm: "hiragana", kanjis: ["こいつ等"], rareKanjis: ["此奴ら", "此奴等"], romanization: "koitsura", meaning: "these bastards" },
+
+        // here / there:
+        { hiragana: "ここ", preferredForm: "hiragana", kanjis: ["此処"], rareKanjis: ["此所", "是", "茲", "爰"], romanization: "koko", meaning: "here / this place (close to speaker)" },
+        { hiragana: "そこ", preferredForm: "hiragana", kanjis: ["其処"], rareKanjis: ["其所"], romanization: "soko", meaning: "there / that place (distant from speaker, close to listener)" },
+        { hiragana: "あそこ", preferredForm: "hiragana", kanjis: ["彼処"], rareKanjis: ["彼所"], katakana: "アソコ", romanization: "asoko", meaning: "there / that place (distant from both speaker and listener)" },
+        { hiragana: "あすこ", preferredForm: "hiragana", kanjis: ["彼処"], rareKanjis: ["彼所"], romanization: "asuko", meaning: "there / that place (distant from both speaker and listener)" },
+        { hiragana: "かしこ", preferredForm: "hiragana", kanjis: ["彼処"], rareKanjis: ["彼所"], romanization: "kashiko", meaning: "there / that place (distant from both speaker and listener)" },
+
+        { hiragana: "こちら", preferredForm: "hiragana", kanjis: ["此方"], romanization: "kochira", meaning: "here / this way (close to speaker) (politely)" },
+        { hiragana: "こっち", preferredForm: "hiragana", kanjis: ["此方"], romanization: "kocchi", meaning: "here / this way (close to speaker)" },
+        { hiragana: "そちら", preferredForm: "hiragana", kanjis: ["其方"], romanization: "sochira", meaning: "that way (distant from speaker, close to listener) (politely)" },
+        { hiragana: "そっち", preferredForm: "hiragana", kanjis: ["其方"], romanization: "socchi", meaning: "that way (distant from speaker, close to listener)" },
+        { hiragana: "そなた", preferredForm: "hiragana", kanjis: ["其方"], romanization: "sonata", meaning: "that way (distant from speaker, close to listener)" },
+        { hiragana: "そち", preferredForm: "hiragana", kanjis: ["其方"], romanization: "sochi", meaning: "that way (distant from speaker, close to listener)" },
+        { hiragana: "かなた", preferredForm: "hiragana", kanjis: ["彼方"], romanization: "kanata", meaning: "that other side (distant from both speaker and listener)" },
+        { hiragana: "あなた", preferredForm: "hiragana", kanjis: ["彼方"], romanization: "anata", meaning: "that other side (distant from both speaker and listener)" },
+
+        // question words:
+        { hiragana: "なに", preferredForm: "hiragana", kanjis: ["何"], katakana: "ナニ", romanization: "nani", meaning: "what" },
+        { kanjis: ["何者", "何もの"], hiragana: "なにもの", romanization: "nanimono", meaning: "who / what kind of person" },
+        { kanjis: ["何物", "何もの"], hiragana: "なにもの", romanization: "nanimono", meaning: "what kind of thing" },
+
+        { hiragana: "どこ", preferredForm: "hiragana", kanjis: ["何処"], rareKanjis: ["何所"], romanization: "doko", meaning: "where / what place" },
+        { hiragana: "いずこ", preferredForm: "hiragana", kanjis: ["何処"], romanization: "izuko", meaning: "where / what place" },
+        { hiragana: "どちら", preferredForm: "hiragana", kanjis: ["何方"], romanization: "dochira", meaning: "which direction (politely)" },
+        { hiragana: "どっち", preferredForm: "hiragana", kanjis: ["何方"], romanization: "docchi", meaning: "which direction" },
+
+        { kanjis: ["何事", "何ごと"], hiragana: "なにごと", romanization: "nanigoto", meaning: "what event" },
+        { kanjis: ["何で"], hiragana: "なんで", romanization: "nande", meaning: "why / how" },
+        { hiragana: "なにか", preferredForm: "hiragana", kanjis: ["何か"], romanization: "nanika", meaning: "if anything (used in questions)" },
+        { hiragana: "なんか", preferredForm: "hiragana", kanjis: ["何か"], romanization: "nanka", meaning: "if anything (used in questions)" },
       );
     }
 
@@ -599,13 +655,19 @@ export const jp = new (class {
       );
     }
 
-    // TODO: directions
-
     // TODO: places
-
-    // TODO: colors
+    if (this.flashcardSettings.enableNounsPlacesGeneric) {
+      words.splice(
+        words.length,
+        0, //
+      );
+    }
+    // TODO: directions
+    // TODO: countries
 
     // TODO: numbers
+
+    // TODO: colors
 
     if (this.flashcardSettings.enableNounsTime) {
       words.splice(
@@ -621,6 +683,35 @@ export const jp = new (class {
       words.splice(
         words.length,
         0, //
+        { kanjis: ["名前"], hiragana: "なまえ", romanization: "namae", meaning: "name" },
+
+        { kanjis: ["家族"], hiragana: "かぞく", romanization: "kazoku", meaning: "extended family" },
+
+        { kanjis: ["地方"], hiragana: "ちほう", romanization: "chihou", meaning: "area / region" },
+
+        { kanjis: ["方"], hiragana: "ほう", romanization: "hou", meaning: "direction" },
+        { kanjis: ["方"], hiragana: "かた", romanization: "kata", meaning: "direction" },
+        { kanjis: ["方向"], hiragana: "ほうこう", romanization: "houkou", meaning: "direction" },
+
+        { kanjis: ["方法"], hiragana: "ほうほう", romanization: "houhou", meaning: "method / procedures" },
+        { kanjis: ["方式"], hiragana: "ほうしき", romanization: "houshiki", meaning: "method / way of doing" },
+        { kanjis: ["見方"], hiragana: "みかた", romanization: "mikata", meaning: "point of view" },
+      );
+    }
+
+    if (this.flashcardSettings.enableNounsMiscellaneous) {
+      words.splice(
+        words.length,
+        0, //
+        { kanjis: ["食通"], hiragana: "しょくつう", romanization: "shokutsuu", meaning: "gourmet" },
+        { katakana: "グルメ", romanization: "gurume", meaning: "gourmet / fine food" },
+      );
+    }
+
+    if (this.flashcardSettings.enableVerbsActions && this.flashcardSettings.enableGodanVerbs) {
+      words.splice(
+        words.length,
+        0, //
         { kanjis: ["聞く", "聴く"], hiragana: "きく", romanization: "kiku", meaning: "hear / listen" },
         { kanjis: ["飲む", "呑む"], hiragana: "のむ", romanization: "nomu", meaning: "drink / swallow" },
         { kanjis: ["言う", "云う", "謂う"], hiragana: "いう", romanization: "iu", meaning: "say" },
@@ -633,6 +724,9 @@ export const jp = new (class {
 
         { kanjis: ["使う", "遣う"], hiragana: "つかう", romanization: "tsukau", meaning: "use / employ / utilize" },
         { kanjis: ["動く"], hiragana: "うごく", romanization: "ugoku", meaning: "move / act / shift" },
+
+        // TODO: use
+        // TODO: come
       );
     }
 
@@ -645,15 +739,59 @@ export const jp = new (class {
       );
     }
 
-    // verbs - Irregular verbs
-    // TODO
+    // TODO: verbs - Irregular verbs
 
-    if (this.flashcardSettings.enableInterjections) {
+    // TODO: adjectives
+    if (this.flashcardSettings.enableAdjectives) {
       words.splice(
         words.length,
         0, //
-        { kanjis: ["此の"], hiragana: "この", preferredForm: "hiragana", romanization: "kono", meaning: "you are such a xxx" },
+        { hiragana: "この", preferredForm: "hiragana", rareKanjis: ["此の", "斯の"], romanization: "kono", meaning: "this xxx (close to listener)" },
+        { hiragana: "その", preferredForm: "hiragana", rareKanjis: ["其の"], romanization: "sono", meaning: "that xxx (distant from speaker, close to listener)" },
+        { hiragana: "かの", preferredForm: "hiragana", kanjis: ["彼の", "彼"], romanization: "kano", meaning: "that xxx (distant from both speaker and listener)" },
+        { hiragana: "どの", preferredForm: "hiragana", kanjis: ["何の"], romanization: "dono", meaning: "which xxx" },
+      );
+    }
+
+    // TODO: adverbs
+    if (this.flashcardSettings.enableAdverbs) {
+      words.splice(
+        words.length,
+        0, //
+        { hiragana: "なんでも", preferredForm: "hiragana", kanjis: ["何でも"], romanization: "nandemo", meaning: "anything (in positive sentence)" },
+        { kanjis: ["何にも"], hiragana: "なににも", romanization: "naninimo", meaning: "everything (in negative sentence)" },
+        { kanjis: ["何やら"], hiragana: "なにやら", romanization: "naniyara", meaning: "something" },
+        { kanjis: ["何かと", "何彼と"], hiragana: "なにかと", romanization: "nanikato", meaning: "in many ways" },
+        { kanjis: ["何しろ"], hiragana: "なにしろ", romanization: "nanishiro", meaning: "anyhow" },
+        { kanjis: ["何せ"], hiragana: "なにせ", romanization: "nanise", meaning: "anyhow" },
+        { kanjis: ["何せ"], hiragana: "なんせ", romanization: "nanse", meaning: "anyhow" },
+        { kanjis: ["何事も", "何ごとも"], hiragana: "なにごとも", romanization: "nanigotomo", meaning: "everything" },
+        { kanjis: ["何より"], hiragana: "なにより", romanization: "naniyori", meaning: "above anything else" },
+        { kanjis: ["何も"], hiragana: "なにも", romanization: "nanimo", meaning: "not at all" },
+        { kanjis: ["何も"], hiragana: "なんも", romanization: "nanmo", meaning: "not at all" },
+        // TODO: 何せ
+
+        { kanjis: ["内", "中"], hiragana: "うち", romanization: "uchi", meaning: "inside / between" },
+      );
+    }
+
+    if (this.flashcardSettings.enablePhrasesInterjections) {
+      words.splice(
+        words.length,
+        0, //
+        { hiragana: "あれっ？", romanization: "are", meaning: "eh?" },
+        { hiragana: "その…", romanization: "sono", meaning: "um..." },
         { hiragana: "ほら", romanization: "hora", meaning: "look!" },
+      );
+    }
+
+    if (this.flashcardSettings.enablePhrasesMiscellaneous) {
+      words.splice(
+        words.length,
+        0, //
+        // TODO: nani?
+        { kanjis: ["何なのか？"], hiragana: "なんなのか？", romanization: "nannanoka", meaning: "what is this about?" },
+        { kanjis: ["何なのか？"], hiragana: "なになのか？", romanization: "naninanoka", meaning: "what is this about?" },
       );
     }
 

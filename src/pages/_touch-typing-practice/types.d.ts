@@ -53,7 +53,8 @@ export type Word = {
 
 export type JapaneseWord = {
   kanjis?: string[];
-  hiragana: string;
+  rareKanjis?: string[];
+  hiragana?: string;
   katakana?: string;
   preferredForm?: "kanji" | "hiragana" | "katakana";
   romanization?: string;
