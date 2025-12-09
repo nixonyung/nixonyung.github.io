@@ -30,6 +30,7 @@
           !jp.flashcardSettings.enableNounsPeopleGeneric ||
           !jp.flashcardSettings.enableNounsPeopleFamily ||
           !jp.flashcardSettings.enableNounsPeopleFellows ||
+          !jp.flashcardSettings.enableNounsDirections ||
           !jp.flashcardSettings.enableNounsPlacesGeneric ||
           !jp.flashcardSettings.enableNounsTime ||
           !jp.flashcardSettings.enableNounsIntangible ||
@@ -38,6 +39,7 @@
           jp.flashcardSettings.enableNounsPeopleGeneric = true;
           jp.flashcardSettings.enableNounsPeopleFamily = true;
           jp.flashcardSettings.enableNounsPeopleFellows = true;
+          jp.flashcardSettings.enableNounsDirections = true;
           jp.flashcardSettings.enableNounsPlacesGeneric = true;
           jp.flashcardSettings.enableNounsTime = true;
           jp.flashcardSettings.enableNounsIntangible = true;
@@ -46,6 +48,7 @@
           jp.flashcardSettings.enableNounsPeopleGeneric = false;
           jp.flashcardSettings.enableNounsPeopleFamily = false;
           jp.flashcardSettings.enableNounsPeopleFellows = false;
+          jp.flashcardSettings.enableNounsDirections = false;
           jp.flashcardSettings.enableNounsPlacesGeneric = false;
           jp.flashcardSettings.enableNounsTime = false;
           jp.flashcardSettings.enableNounsIntangible = false;
@@ -61,6 +64,7 @@
     />
     <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsPeopleFamily} label="family" />
     <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsPeopleFellows} label="fellows" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsDirections} label="directions" />
     <CheckboxInput
       bind:checked={jp.flashcardSettings.enableNounsPlacesGeneric}
       label="generic places"
@@ -78,18 +82,31 @@
       onclick={(ev) => {
         if (ev.target !== ev.currentTarget) return;
 
-        if (!jp.flashcardSettings.enableVerbsActions) {
+        if (
+          !jp.flashcardSettings.enableVerbsActions ||
+          !jp.flashcardSettings.enableVerbsIntransitive
+        ) {
           jp.flashcardSettings.enableVerbsActions = true;
+          jp.flashcardSettings.enableVerbsIntransitive = true;
         } else {
           jp.flashcardSettings.enableVerbsActions = false;
+          jp.flashcardSettings.enableVerbsIntransitive = false;
         }
       }}
     >
       <span>verbs:</span>
       <CheckboxInput bind:checked={jp.flashcardSettings.enableGodanVerbs} label="Godan verbs" />
       <CheckboxInput bind:checked={jp.flashcardSettings.enableIchidanVerbs} label="Ichidan verbs" />
+      <CheckboxInput
+        bind:checked={jp.flashcardSettings.enableIrregularVerbs}
+        label="Irregular verbs"
+      />
     </Highlighted>
     <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsActions} label="actions" />
+    <CheckboxInput
+      bind:checked={jp.flashcardSettings.enableVerbsIntransitive}
+      label="intransitive"
+    />
   </div>
   <div class="flex items-center-safe gap-9">
     <Highlighted
@@ -123,23 +140,31 @@
     <Highlighted
       onclick={() => {
         if (
+          !jp.flashcardSettings.enablePhrasesParticles ||
           !jp.flashcardSettings.enablePhrasesInterjections ||
+          !jp.flashcardSettings.enablePhrasesGreetings ||
           !jp.flashcardSettings.enablePhrasesMiscellaneous
         ) {
+          jp.flashcardSettings.enablePhrasesParticles = true;
           jp.flashcardSettings.enablePhrasesInterjections = true;
+          jp.flashcardSettings.enablePhrasesGreetings = true;
           jp.flashcardSettings.enablePhrasesMiscellaneous = true;
         } else {
+          jp.flashcardSettings.enablePhrasesParticles = false;
           jp.flashcardSettings.enablePhrasesInterjections = false;
+          jp.flashcardSettings.enablePhrasesGreetings = false;
           jp.flashcardSettings.enablePhrasesMiscellaneous = false;
         }
       }}
     >
       phrases:
     </Highlighted>
+    <CheckboxInput bind:checked={jp.flashcardSettings.enablePhrasesParticles} label="particles" />
     <CheckboxInput
       bind:checked={jp.flashcardSettings.enablePhrasesInterjections}
       label="interjections"
     />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enablePhrasesGreetings} label="greetings" />
     <CheckboxInput
       bind:checked={jp.flashcardSettings.enablePhrasesMiscellaneous}
       label="miscellaneous"
