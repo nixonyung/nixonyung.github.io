@@ -56,7 +56,8 @@ export type JapaneseWord = {
   rareKanjis?: string[];
   hiragana?: string;
   katakana?: string;
-  preferredForm?: "kanji" | "hiragana" | "katakana";
+  exampleUsage?: string;
+  preferredForm?: "kanji" | "hiragana" | "katakana" | "example";
   romanization?: string;
 
   meaning: string;

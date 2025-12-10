@@ -43,7 +43,7 @@
         },
         {
           label: "preferred written form",
-          valueFn: ({ kanjis, hiragana, katakana, preferredForm }) => {
+          valueFn: ({ kanjis, hiragana, katakana, exampleUsage, preferredForm }) => {
             switch (preferredForm) {
               case "kanji":
                 return kanjis?.join(" / ");
@@ -51,8 +51,10 @@
                 return hiragana;
               case "katakana":
                 return katakana;
+              case "example":
+                return exampleUsage;
               case undefined:
-                return kanjis?.join(" / ") ?? hiragana ?? katakana;
+                return exampleUsage ?? kanjis?.join(" / ") ?? hiragana ?? katakana;
             }
           },
         },

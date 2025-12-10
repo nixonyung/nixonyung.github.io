@@ -1,8 +1,7 @@
-<script lang="ts" generics="TWord extends Word">
+<script lang="ts">
   import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
   import Highlighted from "@/components/svelte/Highlighted.svelte";
   import { useSyncSettings } from "../../../../lib/settings.svelte";
-  import type { Word } from "../../types";
   import { jp } from "./jp.svelte";
 
   useSyncSettings(jp.FLASHCARD_SETTINGS_SCHEMA, jp.flashcardSettings);
@@ -12,16 +11,33 @@
   <div class="flex items-center-safe gap-9">
     <Highlighted
       onclick={() => {
-        if (!jp.flashcardSettings.enablePronouns) {
-          jp.flashcardSettings.enablePronouns = true;
+        if (
+          !jp.flashcardSettings.enablePronounsPeople ||
+          !jp.flashcardSettings.enablePronounsThings ||
+          !jp.flashcardSettings.enablePronounsGeneral ||
+          !jp.flashcardSettings.enablePronounsQuestionWords
+        ) {
+          jp.flashcardSettings.enablePronounsPeople = true;
+          jp.flashcardSettings.enablePronounsThings = true;
+          jp.flashcardSettings.enablePronounsGeneral = true;
+          jp.flashcardSettings.enablePronounsQuestionWords = true;
         } else {
-          jp.flashcardSettings.enablePronouns = false;
+          jp.flashcardSettings.enablePronounsPeople = false;
+          jp.flashcardSettings.enablePronounsThings = false;
+          jp.flashcardSettings.enablePronounsGeneral = false;
+          jp.flashcardSettings.enablePronounsQuestionWords = false;
         }
       }}
     >
       pronouns:
     </Highlighted>
-    <CheckboxInput bind:checked={jp.flashcardSettings.enablePronouns} label="all" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enablePronounsPeople} label="people" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enablePronounsThings} label="things" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enablePronounsGeneral} label="generic" />
+    <CheckboxInput
+      bind:checked={jp.flashcardSettings.enablePronounsQuestionWords}
+      label="question words"
+    />
   </div>
   <div class="flex items-center-safe gap-9">
     <Highlighted
@@ -30,7 +46,7 @@
           !jp.flashcardSettings.enableNounsPeopleGeneric ||
           !jp.flashcardSettings.enableNounsPeopleFamily ||
           !jp.flashcardSettings.enableNounsPeopleFellows ||
-          !jp.flashcardSettings.enableNounsDirections ||
+          !jp.flashcardSettings.enableNounsNavigation ||
           !jp.flashcardSettings.enableNounsPlacesGeneric ||
           !jp.flashcardSettings.enableNounsTime ||
           !jp.flashcardSettings.enableNounsIntangible ||
@@ -39,7 +55,7 @@
           jp.flashcardSettings.enableNounsPeopleGeneric = true;
           jp.flashcardSettings.enableNounsPeopleFamily = true;
           jp.flashcardSettings.enableNounsPeopleFellows = true;
-          jp.flashcardSettings.enableNounsDirections = true;
+          jp.flashcardSettings.enableNounsNavigation = true;
           jp.flashcardSettings.enableNounsPlacesGeneric = true;
           jp.flashcardSettings.enableNounsTime = true;
           jp.flashcardSettings.enableNounsIntangible = true;
@@ -48,7 +64,7 @@
           jp.flashcardSettings.enableNounsPeopleGeneric = false;
           jp.flashcardSettings.enableNounsPeopleFamily = false;
           jp.flashcardSettings.enableNounsPeopleFellows = false;
-          jp.flashcardSettings.enableNounsDirections = false;
+          jp.flashcardSettings.enableNounsNavigation = false;
           jp.flashcardSettings.enableNounsPlacesGeneric = false;
           jp.flashcardSettings.enableNounsTime = false;
           jp.flashcardSettings.enableNounsIntangible = false;
@@ -64,7 +80,7 @@
     />
     <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsPeopleFamily} label="family" />
     <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsPeopleFellows} label="fellows" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsDirections} label="directions" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsNavigation} label="navigation" />
     <CheckboxInput
       bind:checked={jp.flashcardSettings.enableNounsPlacesGeneric}
       label="generic places"

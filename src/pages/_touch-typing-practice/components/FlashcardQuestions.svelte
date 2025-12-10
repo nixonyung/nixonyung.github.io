@@ -1,4 +1,4 @@
-<script lang="ts" generics="TWord">
+<script lang="ts" generics="TWord extends object">
   import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
   import Highlighted from "@/components/svelte/Highlighted.svelte";
   import NumericInput from "@/components/svelte/NumericInput.svelte";
