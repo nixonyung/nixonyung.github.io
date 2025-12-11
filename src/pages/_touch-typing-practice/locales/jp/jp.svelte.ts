@@ -532,7 +532,7 @@ export const jp = new (class {
         { kanjis: ["xx 君"], hiragana: "くん", romanization: "kun", meaning: "xxx (speaking to younger males)" },
         { hiragana: "ちゃん", romanization: "chan", meaning: "xxx (cutely, speaking to girls / children / pets)" },
         { kanjis: ["君"], rareKanjis: ["公"], hiragana: "きみ", romanization: "kimi", meaning: "you (male to female / among close friends)" },
-        { kanjis: ["お前"], rareKanjis: ["御前"], hiragana: "おまえ", romanization: "omae", meaning: "you (male speaking to lovers or close friends / arrogantly)" },
+        { kanjis: ["お前"], rareKanjis: ["御前"], hiragana: "おまえ", romanization: "omae", meaning: "you (man speaking to lovers or close friends / arrogantly)" },
         { kanjis: ["貴方", "貴女", "貴男"], hiragana: "あなた", romanization: "anata", meaning: "you (politely, a bit impersonal)" },
         { kanjis: ["貴方", "貴男"], hiragana: "あなた", romanization: "anata", meaning: "my dear husband" },
         { kanjis: ["貴様"], hiragana: "きさま", romanization: "kisama", meaning: "you bastard" },
@@ -562,14 +562,21 @@ export const jp = new (class {
         { kanjis: ["あの方", "彼の方"], hiragana: "あのかた", romanization: "anokata", meaning: "that gentleman / lady (politely)" },
         { hiragana: "あいつ", preferredForm: "hiragana", rareKanjis: ["彼奴"], romanization: "aitsu", meaning: "that bastard" },
 
+        { kanjis: ["何人", "何びと"], hiragana: "なにびと", romanization: "nanibito", meaning: "whoever" },
+
         // they:
         { kanjis: ["彼ら", "彼等"], hiragana: "かれら", romanization: "karera", meaning: "they" },
         { kanjis: ["彼女ら", "彼女等"], hiragana: "かのじょら", romanization: "kanojora", meaning: "they (females)" },
         { hiragana: "こいつら", preferredForm: "hiragana", kanjis: ["こいつ等"], rareKanjis: ["此奴ら", "此奴等"], romanization: "koitsura", meaning: "these bastards" },
 
+        { kanjis: ["何人か"], hiragana: "なんにんか", romanization: "nanninka", meaning: "some people" },
+
         // oneself:
         { kanjis: ["自分"], hiragana: "じぶん", romanization: "jibun", meaning: "myself / yourself / oneself / himself / herself" },
         { kanjis: ["自分たち", "自分達"], hiragana: "じぶんたち", romanization: "jibuntachi", meaning: "ourselves / themselves" },
+
+        // TODO: placeholders
+        // (ref.) [Are there placeholders in spoken Japanese?](https://japanese.stackexchange.com/questions/80870/are-there-placeholders-in-spoken-japanese)
       );
     }
 
@@ -581,7 +588,6 @@ export const jp = new (class {
         { hiragana: "これ", preferredForm: "hiragana", rareKanjis: ["此れ", "是", "之", "維", "惟"], romanization: "kore", meaning: "this (close to speaker)" },
         { hiragana: "それ", preferredForm: "hiragana", rareKanjis: ["其れ"], romanization: "sore", meaning: "that (distant from speaker, close to listener)" },
         { hiragana: "あれ", preferredForm: "hiragana", rareKanjis: ["彼", "彼れ"], romanization: "are", meaning: "that (distant from both speaker and listener)" },
-        { hiragana: "どれ", preferredForm: "hiragana", rareKanjis: ["何れ"], romanization: "dore", meaning: "which" },
 
         // here / there
         { hiragana: "ここ", preferredForm: "hiragana", kanjis: ["此処"], rareKanjis: ["此所", "是", "茲", "爰"], romanization: "koko", meaning: "here / this place (close to speaker)" },
@@ -613,20 +619,33 @@ export const jp = new (class {
       words.splice(
         words.length,
         0, //
-        { kanjis: ["誰"], hiragana: "だれ", romanization: "dare", meaning: "who" },
-        { kanjis: ["何者", "何もの"], hiragana: "なにもの", romanization: "nanimono", meaning: "who / what kind of person" },
+        { kanjis: ["何"], hiragana: "なん", romanization: "nan", meaning: "what xxx" },
 
-        { hiragana: "なに", preferredForm: "hiragana", kanjis: ["何"], katakana: "ナニ", romanization: "nani", meaning: "what" },
-        { kanjis: ["何物", "何もの"], hiragana: "なにもの", romanization: "nanimono", meaning: "what kind of thing" },
-        { kanjis: ["何事", "何ごと"], hiragana: "なにごと", romanization: "nanigoto", meaning: "what event" },
-        { kanjis: ["何か"], hiragana: "なにか", romanization: "nanika", meaning: "if anything (used in questions) / 有咩嘢" },
-        { kanjis: ["何か"], hiragana: "なんか", romanization: "nanka", meaning: "if anything (used in questions) / 有咩嘢" },
-        { hiragana: "どこ", preferredForm: "hiragana", kanjis: ["何処"], rareKanjis: ["何所"], romanization: "doko", meaning: "where / what place" },
-        { hiragana: "いずこ", preferredForm: "hiragana", kanjis: ["何処"], romanization: "izuko", meaning: "where / what place" },
-        { hiragana: "どちら", preferredForm: "hiragana", kanjis: ["何方"], romanization: "dochira", meaning: "which direction (politely)" },
+        { kanjis: ["誰"], hiragana: "だれ", romanization: "dare", meaning: "who / 邊位" },
+        { kanjis: ["何者", "何もの"], hiragana: "なにもの", romanization: "nanimono", meaning: "what kind of person / 乜水" },
+        { kanjis: ["何人"], hiragana: "なんにん", romanization: "nannin", meaning: "how many people" },
+
+        { hiragana: "なに", preferredForm: "hiragana", kanjis: ["何"], katakana: "ナニ", romanization: "nani", meaning: "what / 咩" },
+        { kanjis: ["何物", "何もの"], hiragana: "なにもの", romanization: "nanimono", meaning: "what kind of thing / 咩料" },
+        { kanjis: ["何事", "何ごと"], hiragana: "なにごと", romanization: "nanigoto", meaning: "what event / 咩事" },
+        { kanjis: ["何か"], hiragana: "なにか", romanization: "nanika", meaning: "if anything (used in questions) / 有冇野" },
+        { kanjis: ["何か"], hiragana: "なんか", romanization: "nanka", meaning: "if anything (used in questions, casually) / 有冇野" },
+        { hiragana: "どれ", preferredForm: "hiragana", rareKanjis: ["何れ"], romanization: "dore", meaning: "which" },
+
+        { hiragana: "どこ", preferredForm: "hiragana", kanjis: ["何処", "何所"], romanization: "doko", meaning: "where" },
+        { hiragana: "どこら", preferredForm: "hiragana", kanjis: ["何処ら"], romanization: "dokora", meaning: "whereabouts (casually)" },
+        { hiragana: "いずこ", preferredForm: "hiragana", kanjis: ["何処"], romanization: "izuko", meaning: "where / what place (very politely)" },
         { hiragana: "どっち", preferredForm: "hiragana", kanjis: ["何方"], romanization: "docchi", meaning: "which direction" },
+        { hiragana: "どちら", preferredForm: "hiragana", kanjis: ["何方"], romanization: "dochira", meaning: "which direction (politely)" },
 
-        { kanjis: ["何で"], hiragana: "なんで", romanization: "nande", meaning: "why / how" },
+        { hiragana: "いつ", preferredForm: "hiragana", kanjis: ["何時"], romanization: "itsu", meaning: "when" },
+        { kanjis: ["何時"], hiragana: "なんじ", romanization: "nanji", meaning: "which hour" },
+
+        { hiragana: "なんで", preferredForm: "hiragana", kanjis: ["何で"], romanization: "nande", meaning: "why / how (informal) / 點解" },
+        { hiragana: "なぜ", preferredForm: "hiragana", kanjis: ["何故"], romanization: "naze", meaning: "why (logically) / 何解" },
+        { hiragana: "どうして", preferredForm: "hiragana", rareKanjis: ["如何して"], romanization: "doushite", meaning: "why (purpose) / how / 點解會咁" },
+
+        // TODO: counters
         { kanjis: ["何度"], hiragana: "なんど", romanization: "nando", meaning: "how many times / how many degrees" },
       );
     }
@@ -639,20 +658,34 @@ export const jp = new (class {
         { kanjis: ["人々", "人びと", "人人"], hiragana: "ひとびと", romanization: "hitobito", meaning: "people" },
         { kanjis: ["他人"], hiragana: "たにん", romanization: "tanin", meaning: "others" },
         { katakana: "グループ", romanization: "guruupu", meaning: "group" },
+        { kanjis: ["人物"], hiragana: "じんぶつ", romanization: "jinbutsu", meaning: "character" },
 
         { kanjis: ["成人"], hiragana: "せいじん", romanization: "seijin", meaning: "adult" },
         { kanjis: ["大人"], hiragana: "おとな", romanization: "otona", meaning: "grown-up" },
-        { kanjis: ["子供", "子ども"], hiragana: "こども", romanization: "kodomo", meaning: "child / children" },
 
-        { kanjis: ["男性"], hiragana: "だんせい", romanization: "dansei", meaning: "male" },
+        { kanjis: ["子供", "子ども"], hiragana: "こども", romanization: "kodomo", meaning: "child / children" },
+        { kanjis: ["赤ちゃん"], hiragana: "あかちゃん", romanization: "akachan", meaning: "infant" },
+        { kanjis: ["幼童"], hiragana: "ようどう", romanization: "youdou", meaning: "young child" },
+        { kanjis: ["１０代", "十代"], hiragana: "じゅうだい", romanization: "juudai", meaning: "teenagers" },
+        { kanjis: ["若年", "弱年"], hiragana: "じゃくねん", romanization: "jakunen", meaning: "youth (age-wise)" },
+        { kanjis: ["若者"], hiragana: "わかもの", romanization: "wakamono", meaning: "young person / 年輕人 / 後生仔/女" },
+        { kanjis: ["青年"], hiragana: "せいねん", romanization: "seinen", meaning: "young adulthood (age-wise)" },
+        { kanjis: ["中年"], hiragana: "ちゅうねん", romanization: "chuunen", meaning: "middle-aged" },
+        { kanjis: ["高齢者"], hiragana: "こうれいしゃ", romanization: "koureisha", meaning: "elderly" },
+
         { kanjis: ["男"], hiragana: "おとこ", romanization: "otoko", meaning: "man" },
         { kanjis: ["少年"], hiragana: "しょうねん", romanization: "shounen", meaning: "young man" },
         { kanjis: ["公子"], hiragana: "こうし", romanization: "koushi", meaning: "young nobleman" },
-        { kanjis: ["殿方"], hiragana: "とのがた", romanization: "tonogata", meaning: "gentlemen" },
+        { kanjis: ["紳士"], hiragana: "しんし", romanization: "shinshi", meaning: "gentleman" },
+        { kanjis: ["殿方"], hiragana: "とのがた", romanization: "tonogata", meaning: "gentlemen (woman speaking to a group of men)" },
 
-        { kanjis: ["女性"], hiragana: "じょせい", romanization: "josei", meaning: "female" },
+        { kanjis: ["女"], hiragana: "おんな", romanization: "onna", meaning: "woman (objectified)" },
+        { kanjis: ["少女"], rareKanjis: ["小女"], hiragana: "しょうじょ", romanization: "shoujo", meaning: "young lady" },
         { kanjis: ["女子"], hiragana: "じょし", romanization: "joshi", meaning: "woman" },
-        { kanjis: ["乙女", "少女"], hiragana: "おとめ", romanization: "otome", meaning: "young lady" },
+        { kanjis: ["乙女", "少女"], hiragana: "おとめ", romanization: "otome", meaning: "young lady (idealized) / 淑女" },
+        { kanjis: ["婦人"], hiragana: "ふじん", romanization: "fujin", meaning: "lady" },
+
+        { kanjis: ["〇〇"], hiragana: "まるまる", romanization: "marumaru", meaning: "(placeholder)" },
       );
     }
 
@@ -660,15 +693,42 @@ export const jp = new (class {
       words.splice(
         words.length,
         0, //
+        // parents
+        { kanjis: ["父母"], hiragana: "ふぼ", romanization: "fubo", meaning: "parents" },
+        { kanjis: ["父母"], hiragana: "ちちはは", romanization: "chichihaha", meaning: "parents" },
+        { kanjis: ["親"], hiragana: "おや", romanization: "oya", meaning: "parent / parents" },
+        { kanjis: ["両親"], hiragana: "りょうしん", romanization: "ryoushin", meaning: "parents" },
+
         { kanjis: ["父さん"], hiragana: "とうさん", romanization: "tousan", meaning: "father (calling him)" },
+        { kanjis: ["老爺"], hiragana: "おやじ", romanization: "oyaji", meaning: "father (calling him, used by old-fashioned men)" },
         { kanjis: ["お父さん"], hiragana: "おとうさん", romanization: "otousan", meaning: "father (referring to him or someone else's)" },
         { kanjis: ["父"], hiragana: "ちち", romanization: "chichi", meaning: "my father (referring to him)" },
-        { kanjis: ["老爺"], hiragana: "おやじ", romanization: "oyaji", meaning: "father (calling him, used by old-fashioned men)" },
+        { kanjis: ["父親"], hiragana: "ちちおや", romanization: "chichioya", meaning: "father (objectified)" },
 
         { kanjis: ["母さん"], hiragana: "かあさん", romanization: "kaasan", meaning: "mother (calling her)" },
+        { kanjis: ["お袋"], hiragana: "おふくろ", romanization: "ofukuro", meaning: "mother (calling her, used by old-fashioned men)" },
         { kanjis: ["お母さん"], hiragana: "おかあさん", romanization: "okaasan", meaning: "mother (referring to her or someone else's)" },
         { kanjis: ["母"], hiragana: "はは", romanization: "haha", meaning: "my mother (referring to her)" },
-        { kanjis: ["お袋"], hiragana: "おふくろ", romanization: "ofukuro", meaning: "mother (calling her, used by old-fashioned men)" },
+        { kanjis: ["母親"], hiragana: "ははおや", romanization: "hahaoya", meaning: "mother (objectified)" },
+
+        // children
+        { kanjis: ["親子"], hiragana: "おやこ", romanization: "oyako", meaning: "parent and child" },
+        { kanjis: ["親子"], hiragana: "しんし", romanization: "shinshi", meaning: "parent and child" },
+
+        { kanjis: ["息子", "息"], hiragana: "むすこ", romanization: "musuko", meaning: "son" },
+        { kanjis: ["お子さん"], hiragana: "おこさん", romanization: "okosan", meaning: "son" },
+        { kanjis: ["男の子"], hiragana: "おとこのこ", romanization: "otokonoko", meaning: "baby boy" },
+
+        { kanjis: ["娘"], hiragana: "むすめ", romanization: "musume", meaning: "daughter" },
+        { kanjis: ["お嬢さん"], hiragana: "おじょうさん", romanization: "ojousan", meaning: "daughter" },
+        { kanjis: ["女の子"], hiragana: "おんなのこ", romanization: "onnanoko", meaning: "baby girl" },
+        // TODO: child
+        // TODO: offspring
+
+        // siblings
+        { kanjis: ["兄弟姉妹"], hiragana: "きょうだいしまい", romanization: "kyoudaishimai", meaning: "siblings" },
+        { kanjis: ["兄弟"], hiragana: "きょうだい", romanization: "kyoudai", meaning: "brothers" },
+        { kanjis: ["姉妹"], hiragana: "しまい", romanization: "shimai", meaning: "sisters" },
 
         { kanjis: ["兄さん"], hiragana: "にいさん", romanization: "niisan", meaning: "elder brother (calling him)" },
         { kanjis: ["お兄さん"], hiragana: "おにいさん", romanization: "oniisan", meaning: "elder brother (referring to him or someone else's)" },
@@ -684,7 +744,38 @@ export const jp = new (class {
         { kanjis: ["妹さん"], hiragana: "いもうとさん", romanization: "imoutosan", meaning: "younger sister (referring to her or someone else's)" },
         { kanjis: ["妹"], hiragana: "いもうと", romanization: "imouto", meaning: "my younger sister (referring to her)" },
 
+        // grandparents
+        { kanjis: ["祖父母"], hiragana: "そふぼ", romanization: "sofubo", meaning: "grandparents" },
+        { hiragana: "じじばば", preferredForm: "hiragana", kanjis: ["祖父祖母", "爺婆"], katakana: "ジジババ", romanization: "jijibaba", meaning: "elderly" },
+
+        { kanjis: ["爺さん"], rareKanjis: ["祖父さん"], hiragana: "じいさん", romanization: "jiisan", meaning: "grandfather (calling him)" },
+        { kanjis: ["お祖父さん"], hiragana: "おじいさん", romanization: "ojiisan", meaning: "grandfather / old man (referring to him or someone else's)" },
+        { kanjis: ["お爺ちゃま", "お祖父ちゃま"], hiragana: "おじいちゃま", romanization: "ojiichama", meaning: "grandfather (child referring to him or someone else's)" },
+        { kanjis: ["祖父"], hiragana: "そふ", romanization: "sofu", meaning: "my grandfather (referring to her)" },
+        { kanjis: ["祖父"], hiragana: "じじ", romanization: "jiji", meaning: "my grandfather (referring to her)" },
+        { katakana: "グランパ", romanization: "gulanpa", meaning: "grandpa" },
+
+        { kanjis: ["婆ちゃん"], rareKanjis: ["祖母ちゃん"], hiragana: "ばあちゃん", romanization: "baachan", meaning: "grandmother (calling her)" },
+        { kanjis: ["お婆ちゃん"], rareKanjis: ["お祖母ちゃん"], hiragana: "おばあちゃん", romanization: "obaachan", meaning: "grandmother / old woman (referring to her or someone else's)" },
+        { hiragana: "そぼ", romanization: "sobo", meaning: "my grandmother (referring to her)" },
+        { hiragana: "ばば", romanization: "baba", meaning: "my grandmother (referring to her)" },
+        { katakana: "グランマ", romanization: "gulanma", meaning: "grandma" },
+
+        // miscellaneous relations
+        { kanjis: ["曽祖父母"], hiragana: "そうそふぼ", romanization: "sousofubo", meaning: "great-grandparents" },
+        { kanjis: ["義父母"], hiragana: "ぎふぼ", romanization: "gifubo", meaning: "parents-in-law" },
+        { kanjis: ["継父母"], hiragana: "けいふぼ", romanization: "keifubo", meaning: "step-parents" },
+        { kanjis: ["養父母"], hiragana: "ようふぼ", romanization: "youfubo", meaning: "adoptive parents" },
+
+        { kanjis: ["養子"], hiragana: "ようし", romanization: "youshi", meaning: "adoptive son" },
+        { kanjis: ["養女"], hiragana: "ようじょ", romanization: "youjo", meaning: "adoptive daughter" },
+
+        { hiragana: "いとこ", preferredForm: "hiragana", kanjis: ["従兄弟"], romanization: "itoko", meaning: "cousins (male)" },
+        { hiragana: "いとこ", preferredForm: "hiragana", kanjis: ["従姉妹"], romanization: "itoko", meaning: "cousins (female)" },
+
         // TODO: child, son, daughter
+        // TODO: 叔父 uncle, 叔母 aunt
+        // TODO: nieces and nephews
       );
     }
 
@@ -692,6 +783,8 @@ export const jp = new (class {
       words.splice(
         words.length,
         0, //
+        { kanjis: ["夫婦"], rareKanjis: ["妻夫", "女夫"], hiragana: "ふうふ", romanization: "fuufu", meaning: "spouses" },
+
         { kanjis: ["夫", "良人"], hiragana: "おっと", romanization: "otto", meaning: "husband" },
         { kanjis: ["良人"], hiragana: "りょうじん", romanization: "ryoujin", meaning: "husband" },
         { kanjis: ["妻"], hiragana: "つま", romanization: "tsuma", meaning: "wife" },
@@ -702,12 +795,14 @@ export const jp = new (class {
         { kanjis: ["友人"], hiragana: "ゆうじん", romanization: "yuujin", meaning: "friend (formal)" },
         { kanjis: ["朋友"], hiragana: "ほうゆう", romanization: "houyuu", meaning: "friend (literarily)" },
         { kanjis: ["相棒"], hiragana: "あいぼう", romanization: "aibou", meaning: "pal (informal)" },
+        { kanjis: ["親友"], hiragana: "しんゆう", romanization: "shinyuu", meaning: "close friend" },
         // TODO: aniki
 
         { kanjis: ["先輩"], hiragana: "せんぱい", romanization: "senpai", meaning: "senior" },
 
         { kanjis: ["先生"], hiragana: "せんせい", romanization: "sensei", meaning: "master" },
         { kanjis: ["大家"], hiragana: "たいか", romanization: "taika", meaning: "authority" },
+        { kanjis: ["親方"], hiragana: "おやかた", romanization: "oyakata", meaning: "boss" },
 
         { kanjis: ["仲間"], hiragana: "なかま", romanization: "nakama", meaning: "fellow / companion (informal)" },
         { kanjis: ["同僚"], hiragana: "どうりょう", romanization: "douryou", meaning: "colleague (in similar gojuonPosition with you)" },
@@ -784,9 +879,50 @@ export const jp = new (class {
       words.splice(
         words.length,
         0, //
+        { kanjis: ["人間"], hiragana: "にんげん", romanization: "ningen", meaning: "mankind / human being" },
+        { kanjis: ["人生"], hiragana: "じんせい", romanization: "jinsei", meaning: "life" },
+        { kanjis: ["人生観"], hiragana: "じんせいかん", romanization: "jinseikan", meaning: "view of life" },
+
+        { kanjis: ["男性"], hiragana: "だんせい", romanization: "dansei", meaning: "male" },
+        { kanjis: ["男性性"], hiragana: "だんせいせい", romanization: "danseisei", meaning: "masculinity" },
+        { kanjis: ["男装"], hiragana: "だんそう", romanization: "dansou", meaning: "men's clothing" },
+        { kanjis: ["女性"], hiragana: "じょせい", romanization: "josei", meaning: "female" },
+        { kanjis: ["女性性"], hiragana: "じょせいせい", romanization: "joseisei", meaning: "femininity" },
+        { kanjis: ["女装"], hiragana: "じょそう", romanization: "josou", meaning: "women's clothing" },
+        { kanjis: ["性"], hiragana: "せい", romanization: "sei", meaning: "sex / nature of a person" },
+        { kanjis: ["性別"], hiragana: "せいべつ", romanization: "seibetsu", meaning: "gender" },
+        { katakana: "ジェンダー", romanization: "jenda", meaning: "gender" },
+
+        { kanjis: ["家"], hiragana: "いえ", romanization: "ie", meaning: "home" },
+        { hiragana: "うち", preferredForm: "hiragana", kanjis: ["家"], romanization: "uchi", meaning: "house" },
+        { kanjis: ["家族"], hiragana: "かぞく", romanization: "kazoku", meaning: "extended family" },
+        { kanjis: ["親戚"], hiragana: "しんせき", romanization: "shinseki", meaning: "relatives" },
+        { kanjis: ["親類"], hiragana: "しんるい", romanization: "shinrui", meaning: "relatives" },
+        { kanjis: ["肉親"], hiragana: "にくしん", romanization: "nikushin", meaning: "blood relatives" },
+        { kanjis: ["親族"], hiragana: "しんぞく", romanization: "shinzoku", meaning: "kin" },
         { kanjis: ["名前"], hiragana: "なまえ", romanization: "namae", meaning: "name" },
 
-        { kanjis: ["家族"], hiragana: "かぞく", romanization: "kazoku", meaning: "extended family" },
+        { kanjis: ["親密"], hiragana: "しんみつ", romanization: "shinmitsu", meaning: "intimacy" },
+        { kanjis: ["親しみ"], hiragana: "したしみ", romanization: "shitashimi", meaning: "familarity" },
+        { kanjis: ["親善"], hiragana: "しんぜん", romanization: "shinzen", meaning: "goodwill" },
+        { kanjis: ["離別"], hiragana: "りべつ", romanization: "ribetsu", meaning: "segregation" },
+        { kanjis: ["分離"], hiragana: "ぶんり", romanization: "bunri", meaning: "detachment" },
+        { kanjis: ["隔離"], hiragana: "かくり", romanization: "kakuri", meaning: "quarantine" },
+
+        { kanjis: ["世代"], hiragana: "せだい", romanization: "sedai", meaning: "generation" },
+        { kanjis: ["誕生日"], hiragana: "たんじょうび", romanization: "tanjoubi", meaning: "birthday" },
+        { kanjis: ["長寿"], hiragana: "ちょうじゅ", romanization: "chouju", meaning: "longevity" },
+        { kanjis: ["結婚"], hiragana: "けっこん", romanization: "kekkon", meaning: "marriage" },
+        { kanjis: ["離婚"], hiragana: "りこん", romanization: "rikon", meaning: "divorce" },
+
+        { kanjis: ["社会"], hiragana: "しゃかい", romanization: "shakai", meaning: "society" },
+        { kanjis: ["教育"], hiragana: "きょういく", romanization: "kyouiku", meaning: "education" },
+        { kanjis: ["育児"], hiragana: "いくじ", romanization: "ikuji", meaning: "childcare" },
+        { kanjis: ["養成"], hiragana: "ようせい", romanization: "yousei", meaning: "development" },
+        { kanjis: ["栄養", "営養"], hiragana: "えいよう", romanization: "eiyou", meaning: "nutrition" },
+        { kanjis: ["教養"], hiragana: "きょうよう", romanization: "kyouyou", meaning: "manner" },
+        { kanjis: ["療養"], hiragana: "りょうよう", romanization: "ryouyou", meaning: "convalescence" },
+        { kanjis: ["休養"], hiragana: "きゅうよう", romanization: "kyuuyou", meaning: "recuperation / rest" },
 
         { kanjis: ["方法"], hiragana: "ほうほう", romanization: "houhou", meaning: "method / procedures" },
         { kanjis: ["方式"], hiragana: "ほうしき", romanization: "houshiki", meaning: "method / way of doing" },
@@ -797,6 +933,16 @@ export const jp = new (class {
         { kanjis: ["真面目"], hiragana: "まじめ", katakana: "マジメ", romanization: "majime", meaning: "truthfulness" },
 
         { kanjis: ["難度"], hiragana: "なんど", romanization: "nando", meaning: "difficulty" },
+
+        { kanjis: ["相続"], hiragana: "そうぞく", romanization: "souzoku", meaning: "succession" },
+        { kanjis: ["相続人"], hiragana: "そうぞくにん", romanization: "souzokunin", meaning: "heir" },
+        { kanjis: ["継承"], hiragana: "けいしょう", romanization: "keishou", meaning: "inheritance" },
+
+        { kanjis: ["学習"], hiragana: "がくしゅう", romanization: "gakushuu", meaning: "study" },
+        { kanjis: ["勉強"], hiragana: "べんきょう", romanization: "benkyou", meaning: "study / hardwork" },
+        { kanjis: ["習得", "修得"], hiragana: "しゅうとく", romanization: "shuutoku", meaning: "acquisition of a skill" },
+
+        { kanjis: ["一人暮らし", "１人暮らし"], rareKanjis: ["独り暮らし"], hiragana: "ひとりぐらし", romanization: "hitorigurashi", meaning: "the state of living alone" },
       );
     }
 
@@ -826,12 +972,22 @@ export const jp = new (class {
         { kanjis: ["歩く"], hiragana: "あるく", romanization: "aruku", meaning: "walk" },
         { kanjis: ["走る", "奔る", "疾る", "趨る"], hiragana: "はしる", romanization: "hashiru", meaning: "run / rush" },
 
+        { kanjis: ["思う", "想う"], rareKanjis: ["憶う", "念う"], hiragana: "おもう", romanization: "omou", meaning: "think / imagine / expect" },
+        { kanjis: ["知る", "識る"], hiragana: "しる", romanization: "shiru", meaning: "know" },
+        { kanjis: ["学ぶ"], hiragana: "まなぶ", romanization: "manabu", meaning: "learn" },
+        { kanjis: ["教わる"], hiragana: "おそわる", romanization: "osowaru", meaning: "teach" },
+
         { kanjis: ["使う", "遣う"], hiragana: "つかう", romanization: "tsukau", meaning: "use / employ / utilize" },
         { kanjis: ["動く"], hiragana: "うごく", romanization: "ugoku", meaning: "move / act / shift" },
         { kanjis: ["起こる", "起る"], hiragana: "おこる", romanization: "okoru", meaning: "occur" },
         { kanjis: ["成る"], rareKanjis: ["為る"], hiragana: "なる", romanization: "naru", meaning: "become / attain" },
 
+        { kanjis: ["親しむ"], hiragana: "したしむ", romanization: "shitashimu", meaning: "befriend" },
+
         { kanjis: ["落ち着く", "落ちつく", "落着く"], rareKanjis: ["落ち付く"], hiragana: "おちつく", romanization: "ochitsuku", meaning: "calm down" },
+        { kanjis: ["起こす", "起す"], hiragana: "おこす", romanization: "okosu", meaning: "raise" },
+        { kanjis: ["興す"], hiragana: "おこす", romanization: "okosu", meaning: "vitalize" },
+        { kanjis: ["養う"], hiragana: "やしなう", romanization: "yashinau", meaning: "foster" },
 
         // TODO: use
         // TODO: come
@@ -845,7 +1001,14 @@ export const jp = new (class {
         { kanjis: ["見る", "観る", "視る"], hiragana: "みる", romanization: "miru", meaning: "see / look" },
         { kanjis: ["食べる"], hiragana: "たべる", romanization: "taberu", meaning: "eat" },
 
+        { kanjis: ["考える", "勘える", "稽える"], hiragana: "かんがえる", romanization: "kangaeru", meaning: "consider / contemplate" },
+        { kanjis: ["覚える"], rareKanjis: ["憶える"], hiragana: "おぼえる", romanization: "oboeru", meaning: "memorize" },
+
         { kanjis: ["交える", "混える", "雑える"], hiragana: "まじえる", romanization: "majieru", meaning: "mix" },
+
+        { kanjis: ["離れる"], hiragana: "はなれる", romanization: "hanareru", meaning: "separate / leave" },
+        { kanjis: ["切り離す", "切離す"], rareKanjis: ["切り放す", "切放す"], hiragana: "きりはなす", romanization: "kirihanasu", meaning: "cut apart" },
+        { kanjis: ["引き離す", "引離す"], hiragana: "ひきはなす", romanization: "hikihanasu", meaning: "pull apart" },
       );
     }
 
@@ -868,14 +1031,18 @@ export const jp = new (class {
         { hiragana: "いい", romanization: "ii", meaning: "fine / decent" },
         { kanjis: ["良い", "好い", "善い"], rareKanjis: ["佳い", "吉い", "宜い"], hiragana: "よい", romanization: "yoi", meaning: "fine / decent (formal)" },
 
+        { kanjis: ["親しい"], hiragana: "したしい", romanization: "shitashii", meaning: "intimate" },
+        { kanjis: ["親切"], rareKanjis: ["深切"], hiragana: "しんせつ", romanization: "shinsetsu", meaning: "considerate" },
+
         { kanjis: ["同じ"], hiragana: "おなじ", romanization: "onaji", meaning: "identical" },
 
         { kanjis: ["近い"], hiragana: "ちかい", romanization: "chikai", meaning: "near" },
         { kanjis: ["遠い"], hiragana: "とおい", romanization: "tooi", meaning: "far" },
+
+        { kanjis: ["不思議"], hiragana: "ふしぎ", romanization: "fushigi", meaning: "amazing" },
       );
     }
 
-    // TODO: adverbs
     if (this.flashcardSettings.enableAdverbs) {
       words.splice(
         words.length,
@@ -884,8 +1051,16 @@ export const jp = new (class {
         { hiragana: "もし", preferredForm: "hiragana", kanjis: ["若し"], romanization: "moshi", meaning: "if" },
         { hiragana: "なんて", romanization: "nande", meaning: "xxx or something like that" },
         { hiragana: "なんでも", preferredForm: "hiragana", kanjis: ["何でも"], romanization: "nandemo", meaning: "anything (in positive sentence)" },
+        { hiragana: "なぜ", preferredForm: "hiragana", kanjis: ["何故"], romanization: "naze", meaning: "for what reason" },
+        { hiragana: "なぜか", preferredForm: "hiragana", kanjis: ["何故か"], romanization: "nazeka", meaning: "for some reason / somehow" },
 
+        { hiragana: "そう", preferredForm: "hiragana", rareKanjis: ["然う"], romanization: "sou", meaning: "likewise" },
+
+        { kanjis: ["何の"], hiragana: "なんの", romanization: "nanno", meaning: "what kind of" },
+        { kanjis: ["何と"], hiragana: "なんと", romanization: "nanto", meaning: "how" },
+        { kanjis: ["何らか", "何等か"], hiragana: "なんらか", romanization: "nanraka", meaning: "somewhat" },
         { kanjis: ["何にも"], hiragana: "なににも", romanization: "naninimo", meaning: "everything (in negative sentence)" },
+        { kanjis: ["何も"], hiragana: "なにも", romanization: "nanimo", meaning: "nothing" },
         { kanjis: ["何やら"], hiragana: "なにやら", romanization: "naniyara", meaning: "something" },
         { kanjis: ["何かと", "何彼と"], hiragana: "なにかと", romanization: "nanikato", meaning: "in many ways" },
         { kanjis: ["何しろ"], hiragana: "なにしろ", romanization: "nanishiro", meaning: "anyhow" },
@@ -932,7 +1107,11 @@ export const jp = new (class {
         { hiragana: "ばかり", preferredForm: "hiragana", rareKanjis: ["許り", "許"], romanization: "bakari", meaning: "only / 只" },
         { hiragana: "ともなく", preferredForm: "hiragana", romanization: "tomonaku", meaning: "unknowingly" },
         { hiragana: "だけ", preferredForm: "hiragana", kanjis: ["丈"], romanization: "dake", meaning: "merely" },
+        { hiragana: "なら", preferredForm: "hiragana", romanization: "nara", meaning: "in that case" },
+        { hiragana: "ならば", preferredForm: "hiragana", romanization: "naraba", meaning: "in that case" },
         { hiragana: "など", preferredForm: "hiragana", kanjis: ["等", "抔"], romanization: "nado", meaning: "etc." },
+        { hiragana: "なぜなら", preferredForm: "hiragana", kanjis: ["何故なら"], romanization: "nazenara", meaning: "because" },
+        { hiragana: "なぜならば", preferredForm: "hiragana", kanjis: ["何故ならば"], romanization: "nazenaraba", meaning: "because" },
       );
     }
 
@@ -940,8 +1119,16 @@ export const jp = new (class {
       words.splice(
         words.length,
         0, //
+        { hiragana: "いい", romanization: "ii", meaning: "that's good (informal)" },
+        { hiragana: "そう", preferredForm: "hiragana", rareKanjis: ["然う"], romanization: "sou", meaning: "(agree)" },
+        { kanjis: ["良い", "好い", "善い"], rareKanjis: ["佳い", "吉い", "宜い"], hiragana: "よい", romanization: "yoi", meaning: "that's good (formal)" },
+        { hiragana: "まじ？", romanization: "maji", meaning: "seriously? (informal)" },
+
+        { hiragana: "いや", preferredForm: "hiragana", kanjis: ["否"], romanization: "iya", meaning: "no" },
+        { hiragana: "いいえ", romanization: "iie", meaning: "no (formal) / don't mention it" },
         { hiragana: "あれっ？", romanization: "are", meaning: "eh?" },
-        { hiragana: "その…", romanization: "sono", meaning: "um..." },
+        { hiragana: "その…", romanization: "sono", meaning: "um... / 那個吧..." },
+
         { hiragana: "ほら", romanization: "hora", meaning: "look!" },
       );
     }
@@ -959,12 +1146,12 @@ export const jp = new (class {
         words.length,
         0, //
         // TODO: nani?
-        { hiragana: "いい", romanization: "ii", meaning: "that's good (informal)" },
-        { kanjis: ["良い", "好い", "善い"], rareKanjis: ["佳い", "吉い", "宜い"], hiragana: "よい", romanization: "yoi", meaning: "that's good (formal)" },
-
-        { hiragana: "まじ？", romanization: "maji", meaning: "seriously? (informal)" },
+        { kanjis: ["何？"], hiragana: "なに？", romanization: "nani", meaning: "what?" },
+        { kanjis: ["何ですか？"], hiragana: "なんですか？", romanization: "nandesuka", meaning: "what is it? (politely)" },
         { kanjis: ["何なのか？"], hiragana: "なんなのか？", romanization: "nannanoka", meaning: "what is this about?" },
         { kanjis: ["何なのか？"], hiragana: "なになのか？", romanization: "naninanoka", meaning: "what is this about?" },
+        { hiragana: "どうして？", preferredForm: "hiragana", rareKanjis: ["如何して？"], romanization: "doushite", meaning: "why? / how?" },
+        { hiragana: "どうして！", preferredForm: "hiragana", rareKanjis: ["如何して！"], romanization: "doushite", meaning: "no way!" },
 
         { hiragana: "などなど", preferredForm: "hiragana", kanjis: ["等など"], romanization: "nadonado", meaning: "et cetera" },
       );
