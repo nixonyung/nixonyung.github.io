@@ -7,6 +7,8 @@ export function appendAdjectives(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
+      // TODO: https://jlptsensei.com/learn-japanese-grammar/japanese-%e3%81%84-adjectives-%e3%81%84%e5%bd%a2%e5%ae%b9%e8%a9%9e-meaning/
+
       { hiragana: "いい", romanization: "ii", meaning: "fine / decent" },
       { kanjis: ["良い", "好い", "善い"], rareKanjis: ["佳い", "吉い", "宜い"], hiragana: "よい", romanization: "yoi", meaning: "fine / decent (formal)" },
       { kanjis: ["悪い"], hiragana: "わるい", romanization: "warui", meaning: "bad" },

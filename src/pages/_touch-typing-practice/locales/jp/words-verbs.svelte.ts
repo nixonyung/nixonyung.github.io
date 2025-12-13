@@ -55,12 +55,14 @@ export function appendVerbs(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
-      { hiragana: "ある", preferredForm: "hiragana", kanjis: ["有る", "在る"], romanization: "aru", meaning: "exist" },
+      { hiragana: "ある", preferredForm: "hiragana", kanjis: ["有る", "在る"], romanization: "aru", meaning: "exist (for objects)" },
+      { hiragana: "いる", preferredForm: "hiragana", rareKanjis: ["居る"], romanization: "iru", meaning: "exist (for living things)" },
 
       { kanjis: ["立つ"], hiragana: "たつ", romanization: "tatsu", meaning: "stand up" },
       { kanjis: ["上がる"], rareKanjis: ["騰がる"], hiragana: "あがる", romanization: "agaru", meaning: "rise" },
       { kanjis: ["高まる"], hiragana: "たかまる", romanization: "takamaru", meaning: "rise" },
 
+      { kanjis: ["入る"], hiragana: "いる", romanization: "iru", meaning: "enter" },
       { kanjis: ["終わる", "終る"], rareKanjis: ["了る", "卒る", "畢る", "竟る"], hiragana: "おわる", romanization: "owaru", meaning: "finish" },
     );
   }
@@ -76,6 +78,9 @@ export function appendVerbs(words: JapaneseWord[]) {
       { kanjis: ["覚える"], rareKanjis: ["憶える"], hiragana: "おぼえる", romanization: "oboeru", meaning: "memorize" },
 
       { kanjis: ["交える", "混える", "雑える"], hiragana: "まじえる", romanization: "majieru", meaning: "mix" },
+
+      { kanjis: ["射る"], hiragana: "いる", romanization: "iru", meaning: "shoot" },
+      { kanjis: ["鋳る"], hiragana: "いる", romanization: "iru", meaning: "mint" },
 
       { kanjis: ["離れる"], hiragana: "はなれる", romanization: "hanareru", meaning: "separate / leave" },
       { kanjis: ["切り離す", "切離す"], rareKanjis: ["切り放す", "切放す"], hiragana: "きりはなす", romanization: "kirihanasu", meaning: "cut apart" },

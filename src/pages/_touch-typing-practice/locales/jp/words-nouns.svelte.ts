@@ -393,6 +393,8 @@ export function appendNouns(words: JapaneseWord[]) {
       { katakana: "カメラマン", romanization: "kameraman", meaning: "cameraman" },
 
       { kanjis: ["種"], hiragana: "たね", romanization: "tane", meaning: "seed" },
+
+      { kanjis: ["衣類"], hiragana: "いるい", romanization: "irui", meaning: "clothes" },
     );
   }
 }
