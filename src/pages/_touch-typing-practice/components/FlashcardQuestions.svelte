@@ -10,11 +10,13 @@
 
   const {
     words,
-    wordToPronunciationFn: pronunciationFn,
+    wordToPronunciationFn,
+    wordToRomanizationFn,
     schema,
   }: {
     words: TWord[];
     wordToPronunciationFn?: (word: TWord) => string | undefined;
+    wordToRomanizationFn?: (word: TWord) => string | undefined;
     schema: {
       label: string;
       valueFn: (word: TWord) => string | undefined;
@@ -51,8 +53,8 @@
     }
   });
 
-  const questionHasSomething = $derived(settings.questionSettings.some((is) => is));
-  const optionHasSomething = $derived(settings.optionSettings.some((is) => is));
+  const isQuestionEmpty = $derived(!settings.questionSettings.some((is) => is));
+  const isOptionEmpty = $derived(!settings.optionSettings.some((is) => is));
   $effect(() => {
     for (const [i, is] of settings.questionSettings.entries()) {
       if (is) untrack(() => (settings.optionSettings[i] = false));
@@ -83,6 +85,7 @@
 
     return key;
   };
+  let showRomanization = $state(false);
 
   function nextQuestion() {
     untrack(() => {
@@ -95,6 +98,8 @@
         options = sampleSize(candidates, Math.min(candidates.length, settings.numOptions - 1));
         options.splice(randomInt(options.length + 1), 0, question);
       }
+
+      showRomanization = false;
     });
   }
 
@@ -124,10 +129,10 @@
     {/each}
 
     <div class="flex flex-col">
-      <span class={["text-red-700", questionHasSomething && "invisible"]}>
+      <span class={["text-red-700", !isQuestionEmpty && "invisible"]}>
         please choose at least one
       </span>
-      <span class={["text-red-700", optionHasSomething && "invisible"]}>
+      <span class={["text-red-700", !isOptionEmpty && "invisible"]}>
         please choose at least one
       </span>
     </div>
@@ -137,7 +142,7 @@
   </div>
 
   <!-- question and options -->
-  {#if questionHasSomething && optionHasSomething}
+  {#if !isQuestionEmpty && !isOptionEmpty}
     <div class="flex flex-col gap-6">
       <!-- question -->
       <div class="flex items-center-safe gap-3">
@@ -146,8 +151,11 @@
           <Highlighted
             vertical
             class={[app.voice && "pr-6", app.isSpeaking && "cursor-wait"]}
-            onclick={pronunciationFn && app.voice
-              ? () => speak(pronunciationFn(question!))
+            onclick={wordToPronunciationFn && app.voice
+              ? () => {
+                  showRomanization = true;
+                  speak(wordToPronunciationFn(question!));
+                }
               : undefined}
           >
             {#each schema as { valueFn }, i}
@@ -157,12 +165,15 @@
             {/each}
 
             <!-- pronunciation indicator -->
-            {#if pronunciationFn && app.voice}
+            {#if wordToPronunciationFn && app.voice}
               <span
                 class="absolute top-1 right-1 icon-[heroicons--speaker-wave-solid] text-xs opacity-80"
               ></span>
             {/if}
           </Highlighted>
+          {#if wordToRomanizationFn && showRomanization}
+            {wordToRomanizationFn(question)}
+          {/if}
         {/if}
       </div>
 

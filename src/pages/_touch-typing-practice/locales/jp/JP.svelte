@@ -28,18 +28,17 @@
     <FlashcardQuestions
       words={jp.words}
       wordToPronunciationFn={({ hiragana }) => hiragana}
+      wordToRomanizationFn={({ romanization }) => romanization}
       schema={[
         {
           label: "kanji",
           valueFn: ({ kanjis, rareKanjis }) =>
             [...(kanjis ?? []), ...(rareKanjis ?? [])].join(" / "),
-          defaultPosition: "question",
         },
         {
           label: "kana",
           valueFn: ({ hiragana, katakana }) =>
             [hiragana, katakana].filter((kana) => kana !== undefined).join(" / "),
-          defaultPosition: "option",
         },
         {
           label: "preferred written form",
@@ -57,15 +56,12 @@
                 return exampleUsages?.join(" / ") ?? kanjis?.join(" / ") ?? hiragana ?? katakana;
             }
           },
-        },
-        {
-          label: "romanization",
-          valueFn: ({ romanization }) => romanization,
+          defaultPosition: "question",
         },
         {
           label: "meaning",
           valueFn: ({ meaning }) => meaning,
-          defaultPosition: "question",
+          defaultPosition: "option",
         },
       ]}
     />
