@@ -186,4 +186,18 @@
       label="miscellaneous"
     />
   </div>
+  <div class="flex items-center-safe gap-9">
+    <Highlighted
+      onclick={() => {
+        if (!jp.flashcardSettings.enableSentenceStructures) {
+          jp.flashcardSettings.enableSentenceStructures = true;
+        } else {
+          jp.flashcardSettings.enableSentenceStructures = false;
+        }
+      }}
+    >
+      sentence structures:
+    </Highlighted>
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableSentenceStructures} label="all" />
+  </div>
 </div>
