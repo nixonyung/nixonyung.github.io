@@ -1,25 +1,27 @@
-import { shuffle } from "es-toolkit";
+import { range, shuffle } from "es-toolkit";
 
 export class ShufflingCircularQueue<Item> {
   private items: Item[];
-  private idx: number;
+  private idxs: number[];
+  private i: number;
 
   constructor(items: Item[]) {
-    this.items = shuffle(items);
-    this.idx = 0;
+    this.items = items;
+    this.idxs = shuffle(range(items.length));
+    this.i = 0;
   }
 
   reset() {
-    this.items = shuffle(this.items);
-    this.idx = 0;
+    this.idxs = shuffle(this.idxs);
+    this.i = 0;
   }
 
   next(): Item | undefined {
-    if (this.items.length === 0) return undefined;
+    if (this.idxs.length === 0) return undefined;
 
-    this.idx += 1;
-    if (this.idx >= this.items.length) this.reset();
+    this.i += 1;
+    if (this.i >= this.idxs.length) this.reset();
 
-    return this.items[this.idx];
+    return this.items[this.idxs[this.i]];
   }
 }

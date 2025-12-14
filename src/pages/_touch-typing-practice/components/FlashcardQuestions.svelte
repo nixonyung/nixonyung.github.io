@@ -3,7 +3,7 @@
   import Highlighted from "@/components/svelte/Highlighted.svelte";
   import NumericInput from "@/components/svelte/NumericInput.svelte";
   import { ShufflingCircularQueue } from "@/lib/shuffling-circular-queue";
-  import { isEqual, randomInt, sampleSize } from "es-toolkit";
+  import { isEqual, randomInt, sampleSize, uniqWith } from "es-toolkit";
   import { untrack } from "svelte";
   import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
   import { app, speak } from "../app.svelte";
@@ -53,8 +53,8 @@
     }
   });
 
-  const isQuestionEmpty = $derived(!settings.questionSettings.some((is) => is));
-  const isOptionEmpty = $derived(!settings.optionSettings.some((is) => is));
+  const isQuestionSettingsEmpty = $derived(!settings.questionSettings.some((is) => is));
+  const isOptionSettingsEmpty = $derived(!settings.optionSettings.some((is) => is));
   $effect(() => {
     for (const [i, is] of settings.questionSettings.entries()) {
       if (is) untrack(() => (settings.optionSettings[i] = false));
@@ -66,40 +66,73 @@
     }
   });
 
-  let questionsQueue = $derived(new ShufflingCircularQueue(words));
-  let question: TWord | undefined = $state();
-  let options: TWord[] = $state([]);
-  let keyFn = (word: TWord): (string | number | boolean)[] | undefined => {
+  function questionKeyFn(word: TWord) {
     const key = []; // array as key
 
-    for (const { valueFn } of schema.filter((_, i) => settings.questionSettings[i])) {
+    for (const [i, { valueFn }] of schema.entries()) {
+      if (!settings.questionSettings[i]) continue;
+
       const value = valueFn(word);
       if (value === undefined) return undefined;
       key.push(value);
     }
-    // for (const { valueFn } of schema.filter((_, i) => optionSettings[i])) {
-    //   const value = valueFn(word);
-    //   if (value === undefined) return undefined;
-    //   key.push(value);
-    // }
 
     return key;
-  };
+  }
+  function answerKeyFn(word: TWord) {
+    const key = []; // array as key
+
+    for (const [i, { valueFn }] of schema.entries()) {
+      if (!settings.optionSettings[i]) continue;
+
+      const value = valueFn(word);
+      if (value === undefined) return undefined;
+      key.push(value);
+    }
+
+    return key;
+  }
+  const validWords = $derived(
+    words
+      .map((word) => ({ word, questionKey: questionKeyFn(word), answerKey: answerKeyFn(word) }))
+      .filter(
+        (
+          entry,
+        ): entry is {
+          word: TWord;
+          questionKey: string[];
+          answerKey: string[];
+        } => entry.questionKey !== undefined && entry.answerKey !== undefined,
+      ),
+  );
+  let questionsQueue = $derived(new ShufflingCircularQueue(validWords));
+  let question:
+    | {
+        word: TWord;
+        questionKey: string[];
+        answerKey: string[];
+      }
+    | undefined = $state();
+  let options: string[][] = $state([]);
   let showRomanization = $state(false);
 
   function nextQuestion() {
     untrack(() => {
       question = questionsQueue.next();
+      showRomanization = false;
 
       if (question === undefined) {
         options = [];
       } else {
-        const candidates = words.filter((word) => !isEqual(keyFn(word), keyFn(question!)));
+        const candidates = uniqWith(
+          validWords
+            .filter(({ questionKey }) => !isEqual(questionKey, question?.questionKey))
+            .map(({ answerKey }) => answerKey!),
+          isEqual,
+        );
         options = sampleSize(candidates, Math.min(candidates.length, settings.numOptions - 1));
-        options.splice(randomInt(options.length + 1), 0, question);
+        options.splice(randomInt(options.length + 1), 0, question.answerKey!);
       }
-
-      showRomanization = false;
     });
   }
 
@@ -129,10 +162,10 @@
     {/each}
 
     <div class="flex flex-col">
-      <span class={["text-red-700", !isQuestionEmpty && "invisible"]}>
+      <span class={["text-red-700", !isQuestionSettingsEmpty && "invisible"]}>
         please choose at least one
       </span>
-      <span class={["text-red-700", !isOptionEmpty && "invisible"]}>
+      <span class={["text-red-700", !isOptionSettingsEmpty && "invisible"]}>
         please choose at least one
       </span>
     </div>
@@ -142,7 +175,7 @@
   </div>
 
   <!-- question and options -->
-  {#if !isQuestionEmpty && !isOptionEmpty}
+  {#if !isQuestionSettingsEmpty && !isOptionSettingsEmpty}
     <div class="flex flex-col gap-6">
       <!-- question -->
       <div class="flex items-center-safe gap-3">
@@ -154,14 +187,12 @@
             onclick={wordToPronunciationFn && app.voice
               ? () => {
                   showRomanization = true;
-                  speak(wordToPronunciationFn(question!));
+                  speak(wordToPronunciationFn(question!.word));
                 }
               : undefined}
           >
-            {#each schema as { valueFn }, i}
-              {#if settings.questionSettings[i]}
-                <span>{valueFn(question)}</span>
-              {/if}
+            {#each question.questionKey as text}
+              <span>{text}</span>
             {/each}
 
             <!-- pronunciation indicator -->
@@ -172,7 +203,7 @@
             {/if}
           </Highlighted>
           {#if wordToRomanizationFn && showRomanization}
-            {wordToRomanizationFn(question)}
+            {wordToRomanizationFn(question.word)}
           {/if}
         {/if}
       </div>
@@ -185,13 +216,11 @@
           <Highlighted
             vertical
             onclick={() => {
-              if (question !== undefined && isEqual(keyFn(option), keyFn(question))) nextQuestion();
+              if (isEqual(option, question?.answerKey)) nextQuestion();
             }}
           >
-            {#each schema as { valueFn }, i}
-              {#if settings.optionSettings[i]}
-                <span>{valueFn(option)}</span>
-              {/if}
+            {#each option as text}
+              <span>{text}</span>
             {/each}
           </Highlighted>
         {/each}
