@@ -86,54 +86,37 @@ export function appendPhrases(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableSentenceStructures) {
+  if (jp.flashcardSettings.enableSentenceStructuresDesu) {
     words.splice(
       words.length,
       0, //
-      // is / is not / was / was not:
+      // is:
       { hiragana: "だ", romanization: "da", meaning: "{xxx} is xxx (casual)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] だ"] },
       { hiragana: "です", romanization: "desu", meaning: "{xxx} is xxx", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] です"] },
 
+      // is not:
       { hiragana: "じゃない", romanization: "janai", meaning: "{xxx} is not xxx (casual)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] じゃない"] },
       { hiragana: "じゃありません", romanization: "ja arimasen", meaning: "{xxx} is not xxx (polite)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] じゃありません"] },
       { hiragana: "ではない", romanization: "dewanai", meaning: "{xxx} is not xxx (polite)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] ではない"] },
       { hiragana: "ではありません", romanization: "dewa arimasen", meaning: "{xxx} is not xxx (very formal)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] ではありません"] },
 
+      // was:
       { hiragana: "だった", romanization: "datta", meaning: "{xxx} was xxx (casual)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] だった"] },
       { hiragana: "でした", romanization: "deshita", meaning: "{xxx} was xxx (polite)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] でした"] },
 
+      // was not:
       { hiragana: "じゃなかった", romanization: "ja nakatta", meaning: "{xxx} was not xxx (informal)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] じゃなかった"] },
       { hiragana: "じゃありませんでした", romanization: "ja arimasen deshita", meaning: "{xxx} is was not xxx (polite)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] じゃありませんでした"] },
       { hiragana: "ではなかった", romanization: "dewa nakatta", meaning: "{xxx} is was not xxx (polite)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] ではなかった"] },
       { hiragana: "ではありませんでした", romanization: "dewa arimasen deshita", meaning: "{xxx} was not xxx (very formal)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] ではありませんでした"] },
+    );
+  }
 
-      // has / has not / had / had not (for living things):
-      { hiragana: "がいる", romanization: "ga iru", meaning: "there is {xxx} (for living things, casual)", exampleUsages: ["{ [Noun] } がいる"] },
-      { hiragana: "がいます", romanization: "ga imasu", meaning: "there is {xxx} (for living things, polite)", exampleUsages: ["{ [Noun] } がいます"] },
-
-      { hiragana: "がいない", romanization: "ga inai", meaning: "there is not {xxx} (for living things, casual)", exampleUsages: ["{ [Noun] } がいない"] },
-      { hiragana: "がいません", romanization: "ga imasen", meaning: "there is not {xxx} (for living things, polite)", exampleUsages: ["{ [Noun] } がいません"] },
-
-      { hiragana: "がいた", romanization: "ga ita", meaning: "there was {xxx} (for living things, casual)", exampleUsages: ["{ [Noun] } がいた"] },
-      { hiragana: "がいました", romanization: "ga imashita", meaning: "there was {xxx} (for living things, polite)", exampleUsages: ["{ [Noun] } がいました"] },
-
-      { hiragana: "がいなかった", romanization: "ga inakatta", meaning: "there was not {xxx} (for living things, casual)", exampleUsages: ["{ [Noun] } がいなかった "] },
-      { hiragana: "がいませんでした", romanization: "ga imasen deshita", meaning: "there was not {xxx} (for living things, polite)", exampleUsages: ["{ [Noun] } がいませんでした"] },
-
-      // has / has not / had / had not (for non-living things):
-      { hiragana: "がある", romanization: "ga aru", meaning: "there is {xxx} (for non-living things, casual)", exampleUsages: ["{ [Noun] } がある"] },
-      { hiragana: "があります", romanization: "ga arimasu", meaning: "there is {xxx} (for non-living things, polite)", exampleUsages: ["{ [Noun] } があります"] },
-
-      { hiragana: "がない", romanization: "ga nai", meaning: "there is not {xxx} (for non-living things, casual)", exampleUsages: ["{ [Noun] } がない"] },
-      { hiragana: "があります", romanization: "ga arimasen", meaning: "there is not {xxx} (for non-living things, polite)", exampleUsages: ["{ [Noun] } がありません"] },
-
-      { hiragana: "があった", romanization: "ga atta", meaning: "there was {xxx} (for non-living things, casual)", exampleUsages: ["{ [Noun] } があった"] },
-      { hiragana: "がありました", romanization: "ga arimashita", meaning: "there was {xxx} (for non-living things, polite)", exampleUsages: ["{ [Noun] } がありました"] },
-
-      { hiragana: "がなかった", romanization: "ga nakatta", meaning: "there was not {xxx} (for non-living things, casual)", exampleUsages: ["{ [Noun] } がなかった"] },
-      { hiragana: "がありませんでした", romanization: "ga arimasen deshita", meaning: "there was not {xxx} (for non-living things, polite)", exampleUsages: ["{ [Noun] } がありませんでした"] },
-
-      // adjectives grammar:
+  if (jp.flashcardSettings.enableSentenceStructuresAdjectives) {
+    words.splice(
+      words.length,
+      0, //
+      // i-adjectives usage:
       { exampleUsages: ["[i-Adj.]-い"], hiragana: "い", romanization: "-i", meaning: "(adjective in present tense)" },
 
       { exampleUsages: ["[i-Adj.]-くない"], hiragana: "くない", romanization: "-ku nai", meaning: "(adjective in present negative tense)" },
@@ -144,11 +127,75 @@ export function appendPhrases(words: JapaneseWord[]) {
       { exampleUsages: ["[i-Adj.]-くなかった"], hiragana: "くなかった", romanization: "-ku nakatta", meaning: "(adjective in past negative tense)" },
       { exampleUsages: ["[i-Adj.]-くありませんでした"], hiragana: "くありませんでした", romanization: "-ku arimasen deshita", meaning: "(adjective in past negative tense, polite)" },
 
-      // should / should not
-      { hiragana: "ちゃだめ", romanization: "cha dame", meaning: "should not / must not xxx! (informal, annoyed)", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)だめ"] },
-      { hiragana: "ちゃいけない", romanization: "cha ikenai", meaning: "should not / must not xxx (informal)", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)いけない"] },
+      // TODO: na-adjectives usage
+    );
+  }
+
+  // for living things:
+  if (jp.flashcardSettings.enableSentenceStructuresIru) {
+    words.splice(
+      words.length,
+      0, //
+      // has:
+      { hiragana: "いる", romanization: "iru", meaning: "there is {xxx} (for living things, casual)", exampleUsages: ["{ [Noun] } が(は) いる"] },
+      { hiragana: "います", romanization: "imasu", meaning: "there is {xxx} (for living things, polite)", exampleUsages: ["{ [Noun] } が(は) います"] },
+
+      // has not:
+      { hiragana: "いない", romanization: "inai", meaning: "there is not {xxx} (for living things, casual)", exampleUsages: ["{ [Noun] } が(は) いない"] },
+      { hiragana: "いません", romanization: "imasen", meaning: "there is not {xxx} (for living things, polite)", exampleUsages: ["{ [Noun] } が(は) いません"] },
+
+      // had:
+      { hiragana: "いた", romanization: "ita", meaning: "there was {xxx} (for living things, casual)", exampleUsages: ["{ [Noun] } が(は) いた"] },
+      { hiragana: "いました", romanization: "imashita", meaning: "there was {xxx} (for living things, polite)", exampleUsages: ["{ [Noun] } が(は) いました"] },
+
+      // had not:
+      { hiragana: "いなかった", romanization: "inakatta", meaning: "there was not {xxx} (for living things, casual)", exampleUsages: ["{ [Noun] } が(は) いなかった "] },
+      { hiragana: "いませんでした", romanization: "imasen deshita", meaning: "there was not {xxx} (for living things, polite)", exampleUsages: ["{ [Noun] } が(は) いませんでした"] },
+    );
+  }
+
+  // for non-living things
+  if (jp.flashcardSettings.enableSentenceStructuresAru) {
+    words.splice(
+      words.length,
+      0, //
+      // there is:
+      { hiragana: "ある", romanization: "aru", meaning: "there is {xxx} (for non-living things, casual)", exampleUsages: ["{ [Noun] } が(は) ある"] },
+      { hiragana: "あります", romanization: "arimasu", meaning: "there is {xxx} (for non-living things, polite)", exampleUsages: ["{ [Noun] } が(は) あります"] },
+
+      // there is not:
+      { hiragana: "ない", romanization: "nai", meaning: "there is not {xxx} (for non-living things, casual)", exampleUsages: ["{ [Noun] } が(は) ない"] },
+      { hiragana: "ありません", romanization: "arimasen", meaning: "there is not {xxx} (for non-living things, polite)", exampleUsages: ["{ [Noun] } が(は) ありません"] },
+
+      // there was:
+      { hiragana: "あった", romanization: "atta", meaning: "there was {xxx} (for non-living things, casual)", exampleUsages: ["{ [Noun] } が(は) あった"] },
+      { hiragana: "ありました", romanization: "arimashita", meaning: "there was {xxx} (for non-living things, polite)", exampleUsages: ["{ [Noun] } が(は) ありました"] },
+
+      // there was not:
+      { hiragana: "なかった", romanization: "nakatta", meaning: "there was not {xxx} (for non-living things, casual)", exampleUsages: ["{ [Noun] } が(は) なかった"] },
+      { hiragana: "ありませんでした", romanization: "arimasen deshita", meaning: "there was not {xxx} (for non-living things, polite)", exampleUsages: ["{ [Noun] } が(は) ありませんでした"] },
+    );
+  }
+
+  if (jp.flashcardSettings.enableSentenceStructuresIkenai) {
+    words.splice(
+      words.length,
+      0, //
+      // TODO: should
+
+      // should not
+      { hiragana: "ちゃだめ", romanization: "cha dame", meaning: "should not / must not xxx! (casual, annoyed)", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)だめ"] },
+      { hiragana: "ちゃいけない", romanization: "cha ikenai", meaning: "should not / must not xxx (casual)", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)いけない"] },
       { hiragana: "ちゃいけません", romanization: "cha ikemasen", meaning: "should not / must not xxx (formal)", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)いけません"] },
 
+      // TODO: must?
+    );
+  }
+
+  if (jp.flashcardSettings.enableSentenceStructuresMicellaneous) {
+    words.splice(
+      words.length,
+      0, //
       // miscellaneous simple sentences:
       { hiragana: "だろう", romanization: "darou", meaning: "right? (casual)", exampleUsages: ["だろう", "[Noun] だろう", "[Verb] だろう", "[Adj.] だろう"] },
       { hiragana: "でしょう", romanization: "deshou", meaning: "right? (polite)", exampleUsages: ["でしょう", "[Noun] でしょう", "[Verb] でしょう", "[Adj.] でしょう"] },

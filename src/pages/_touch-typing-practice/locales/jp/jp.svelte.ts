@@ -58,7 +58,12 @@ export const jp = new (class {
     enablePhrasesInterjections: { paramKey: "interjections", defaultValue: true },
     enablePhrasesGreetings: { paramKey: "greetings", defaultValue: true },
     enablePhrasesMiscellaneous: { paramKey: "miscellaneousPhrases", defaultValue: true },
-    enableSentenceStructures: { paramKey: "sentenceStructures", defaultValue: true },
+    enableSentenceStructuresDesu: { paramKey: "desu", defaultValue: true },
+    enableSentenceStructuresAdjectives: { paramKey: "adj", defaultValue: true },
+    enableSentenceStructuresIru: { paramKey: "iru", defaultValue: true },
+    enableSentenceStructuresAru: { paramKey: "aru", defaultValue: true },
+    enableSentenceStructuresIkenai: { paramKey: "ikenai", defaultValue: true },
+    enableSentenceStructuresMicellaneous: { paramKey: "miscellaneousSentenceStructures", defaultValue: true },
 
     enableGodanVerbs: { paramKey: "godan", defaultValue: true },
     enableIchidanVerbs: { paramKey: "ichidan", defaultValue: true },
