@@ -3,7 +3,7 @@
   import Highlighted from "@/components/svelte/Highlighted.svelte";
   import NumericInput from "@/components/svelte/NumericInput.svelte";
   import { ShufflingCircularQueue } from "@/lib/shuffling-circular-queue";
-  import { isEqual, randomInt, sampleSize, uniqWith } from "es-toolkit";
+  import { isEqual, randomInt, range } from "es-toolkit";
   import { untrack } from "svelte";
   import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
   import { app, speak } from "../app.svelte";
@@ -121,17 +121,42 @@
       question = questionsQueue.next();
       showRomanization = false;
 
-      if (question === undefined) {
-        options = [];
-      } else {
-        const candidates = uniqWith(
-          validWords
-            .filter(({ questionKey }) => !isEqual(questionKey, question?.questionKey))
-            .map(({ answerKey }) => answerKey!),
-          isEqual,
-        );
-        options = sampleSize(candidates, Math.min(candidates.length, settings.numOptions - 1));
-        options.splice(randomInt(options.length + 1), 0, question.answerKey!);
+      options = [];
+      if (question !== undefined) {
+        // pick N from validWords without replacement & with predicate
+
+        const answerKeyStrs = new Set();
+
+        // Fisher-Yates shuffle, from left-to-right, running on indices to avoid copying
+        const indices = range(validWords.length);
+        let i = 0;
+        while (options.length < settings.numOptions - 1 && i < indices.length) {
+          // (ref.) https://github.com/toss/es-toolkit/blob/3d75a713169c2db6fffe04121bc73ac0363d741e/src/array/shuffle.ts
+          const j = randomInt(i, indices.length);
+          [indices[i], indices[j]] = [indices[j], indices[i]];
+          const word = validWords[indices[i]];
+          i++;
+
+          // filter out words that could be considered as answers:
+          // (the real answer will be added at the end)
+          if (
+            // answers from other same-looking questions
+            isEqual(word.questionKey, question.questionKey) ||
+            // same-looking answers from other questions
+            isEqual(word.answerKey, question.answerKey)
+          )
+            continue;
+
+          // filter out duplicated options
+          const answerKeyStr = word.answerKey.join("|");
+          if (answerKeyStrs.has(answerKeyStr)) continue;
+          answerKeyStrs.add(answerKeyStr);
+
+          options.push(word.answerKey);
+        }
+
+        // add the real answer
+        options.splice(randomInt(options.length + 1), 0, question.answerKey);
       }
     });
   }
