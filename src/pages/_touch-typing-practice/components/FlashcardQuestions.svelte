@@ -37,7 +37,7 @@
     },
     numOptions: {
       paramKey: "numOptions",
-      defaultValue: 4,
+      defaultValue: 6,
     },
   };
   let settings = $state(initSettings(SETTINGS_SCHEMA));
@@ -177,10 +177,10 @@
         {/if}
       </div>
 
-      <span>Select the matching one:</span>
+      <span>Select the most appropriate one:</span>
 
       <!-- options -->
-      <div class="flex flex-wrap items-center-safe gap-4">
+      <div class="flex flex-col gap-2">
         {#each options as option}
           <Highlighted
             vertical
