@@ -21,6 +21,8 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { kanjis: ["近い"], hiragana: "ちかい", romanization: "chikai", meaning: "near" },
       { kanjis: ["遠い"], hiragana: "とおい", romanization: "tooi", meaning: "far" },
 
+      { kanjis: ["早い", "速い"], rareKanjis: ["疾い", "捷い"], hiragana: "はやい", romanization: "hayai", meaning: "quick" },
+
       { kanjis: ["不思議"], hiragana: "ふしぎ", romanization: "fushigi", meaning: "amazing" },
       { kanjis: ["素晴らしい"], hiragana: "すばらしい", romanization: "subarashii", meaning: "magnificent" },
       { kanjis: ["凄い"], hiragana: "すごい", romanization: "sugoi", meaning: "impressive" },

@@ -50,7 +50,7 @@ export const jp = new (class {
     enableNounsTime: { paramKey: "time", defaultValue: true },
     enableNounsIntangible: { paramKey: "intangible", defaultValue: true },
     enableNounsMiscellaneous: { paramKey: "miscellaneousNouns", defaultValue: true },
-    enableVerbsActions: { paramKey: "actions", defaultValue: true },
+    enableVerbsTransitive: { paramKey: "transitiveVerbs", defaultValue: true },
     enableVerbsIntransitive: { paramKey: "intransitiveVerbs", defaultValue: true },
     enableAdjectives: { paramKey: "adjectives", defaultValue: true },
     enableAdverbs: { paramKey: "adverbs", defaultValue: true },

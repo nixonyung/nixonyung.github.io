@@ -43,10 +43,10 @@ export function appendPronouns(words: JapaneseWord[]) {
       { kanjis: ["彼氏"], hiragana: "かれし", romanization: "kareshi", meaning: "he / boyfriend" },
       { kanjis: ["彼女"], hiragana: "かのじょ", romanization: "kanojo", meaning: "she / girlfriend" },
 
-      { kanjis: ["この人"], rareKanjis: ["此の人"], hiragana: "このひと", romanization: "konohito", meaning: "jp person" },
-      { kanjis: ["この方"], rareKanjis: ["此の方"], hiragana: "このひと", romanization: "このかた", meaning: "jp gentleman / lady (polite)" },
-      { hiragana: "こいつ", preferredForm: "hiragana", kanjis: ["此奴"], romanization: "koitsu", meaning: "jp bastard" },
-      { hiragana: "こやつ", preferredForm: "hiragana", kanjis: ["此奴"], romanization: "koyatsu", meaning: "jp bastard" },
+      { kanjis: ["この人"], rareKanjis: ["此の人"], hiragana: "このひと", romanization: "konohito", meaning: "this person" },
+      { kanjis: ["この方"], rareKanjis: ["此の方"], hiragana: "このひと", romanization: "このかた", meaning: "this gentleman / lady (polite)" },
+      { hiragana: "こいつ", preferredForm: "hiragana", kanjis: ["此奴"], romanization: "koitsu", meaning: "this bastard" },
+      { hiragana: "こやつ", preferredForm: "hiragana", kanjis: ["此奴"], romanization: "koyatsu", meaning: "this bastard" },
       { kanjis: ["その人", "其の人"], hiragana: "そのひと", romanization: "sonohito", meaning: "that person / the person" },
       { kanjis: ["その方"], rareKanjis: ["其の方"], hiragana: "そのかた", romanization: "sonokata", meaning: "that gentleman / lady (polite)" },
       { hiragana: "そいつ", preferredForm: "hiragana", rareKanjis: ["其奴"], romanization: "soitsu", meaning: "that bastard" },
@@ -78,18 +78,18 @@ export function appendPronouns(words: JapaneseWord[]) {
       words.length,
       0, //
       // it / that
-      { hiragana: "これ", preferredForm: "hiragana", rareKanjis: ["此れ", "是", "之", "維", "惟"], romanization: "kore", meaning: "jp (close to speaker)" },
+      { hiragana: "これ", preferredForm: "hiragana", rareKanjis: ["此れ", "是", "之", "維", "惟"], romanization: "kore", meaning: "this (close to speaker)" },
       { hiragana: "それ", preferredForm: "hiragana", rareKanjis: ["其れ"], romanization: "sore", meaning: "that (distant from speaker, close to listener)" },
       { hiragana: "あれ", preferredForm: "hiragana", rareKanjis: ["彼", "彼れ"], romanization: "are", meaning: "that (distant from both speaker and listener)" },
 
       // here / there
-      { hiragana: "ここ", preferredForm: "hiragana", kanjis: ["此処"], rareKanjis: ["此所", "是", "茲", "爰"], romanization: "koko", meaning: "here / jp place (close to speaker)" },
+      { hiragana: "ここ", preferredForm: "hiragana", kanjis: ["此処"], rareKanjis: ["此所", "是", "茲", "爰"], romanization: "koko", meaning: "here / this place (close to speaker)" },
       { hiragana: "そこ", preferredForm: "hiragana", kanjis: ["其処"], rareKanjis: ["其所"], romanization: "soko", meaning: "there / that place (distant from speaker, close to listener)" },
       { hiragana: "あそこ", preferredForm: "hiragana", kanjis: ["彼処"], rareKanjis: ["彼所"], katakana: "アソコ", romanization: "asoko", meaning: "there / that place (distant from both speaker and listener)" },
 
-      // jp way / that way
-      { hiragana: "こっち", preferredForm: "hiragana", kanjis: ["此方"], romanization: "kocchi", meaning: "here / jp way (close to speaker)" },
-      { hiragana: "こちら", preferredForm: "hiragana", kanjis: ["此方"], romanization: "kochira", meaning: "here / jp way (close to speaker) (politely)" },
+      // this way / that way
+      { hiragana: "こっち", preferredForm: "hiragana", kanjis: ["此方"], romanization: "kocchi", meaning: "here / this way (close to speaker)" },
+      { hiragana: "こちら", preferredForm: "hiragana", kanjis: ["此方"], romanization: "kochira", meaning: "here / this way (close to speaker) (politely)" },
       { hiragana: "そっち", preferredForm: "hiragana", kanjis: ["其方"], romanization: "socchi", meaning: "that way (distant from speaker, close to listener)" },
       { hiragana: "そちら", preferredForm: "hiragana", kanjis: ["其方"], romanization: "sochira", meaning: "that way (distant from speaker, close to listener) (politely)" },
       { hiragana: "かなた", preferredForm: "hiragana", kanjis: ["彼方"], romanization: "kanata", meaning: "that other side (distant from both speaker and listener)" },
@@ -101,7 +101,7 @@ export function appendPronouns(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
-      { exampleUsages: ["この [Noun]"], hiragana: "この", rareKanjis: ["此の", "斯の"], romanization: "kono", meaning: "jp xxx (close to listener) / 呢個" },
+      { exampleUsages: ["この [Noun]"], hiragana: "この", rareKanjis: ["此の", "斯の"], romanization: "kono", meaning: "this xxx (close to listener) / 呢個" },
       { exampleUsages: ["その [Noun]"], hiragana: "その", rareKanjis: ["其の"], romanization: "sono", meaning: "that xxx (distant from speaker, close to listener) / 嗰個" },
       { exampleUsages: ["かの [Noun]"], hiragana: "かの", kanjis: ["彼の", "彼"], romanization: "kano", meaning: "that xxx (distant from both speaker and listener) / 啊邊個" },
       { exampleUsages: ["どの [Noun]"], hiragana: "どの", kanjis: ["何の"], romanization: "dono", meaning: "which xxx / 邊個" },

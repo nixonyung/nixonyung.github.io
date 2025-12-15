@@ -5,7 +5,7 @@ export function appendVerbs(words: JapaneseWord[]) {
   // TODO: https://www.japanesepod101.com/blog/2020/08/25/japanese-verbs/
   // TODO: https://preply.com/en/blog/basic-japanese-words/
 
-  if (jp.flashcardSettings.enableVerbsActions && jp.flashcardSettings.enableGodanVerbs) {
+  if (jp.flashcardSettings.enableVerbsTransitive && jp.flashcardSettings.enableGodanVerbs) {
     words.splice(
       words.length,
       0, //
@@ -25,6 +25,7 @@ export function appendVerbs(words: JapaneseWord[]) {
       { kanjis: ["放す"], hiragana: "はなす", romanization: "hanasu", meaning: "release" },
       { kanjis: ["離す"], hiragana: "はなす", romanization: "hanasu", meaning: "depart" },
 
+      { hiragana: "やる", preferredForm: "hiragana", rareKanjis: ["遣る"], romanization: "yaru", meaning: "do" },
       { kanjis: ["読む"], hiragana: "よむ", romanization: "yomu", meaning: "read" },
       { kanjis: ["思う", "想う"], rareKanjis: ["憶う", "念う"], hiragana: "おもう", romanization: "omou", meaning: "think / imagine / expect" },
       { kanjis: ["知る", "識る"], hiragana: "しる", romanization: "shiru", meaning: "know" },
@@ -37,6 +38,8 @@ export function appendVerbs(words: JapaneseWord[]) {
       { kanjis: ["伺う"], hiragana: "うかがう", romanization: "ukagau", meaning: "inquire" },
       { kanjis: ["呼ぶ"], rareKanjis: ["喚ぶ"], hiragana: "よぶ", romanization: "yobu", meaning: "call / address" },
       { kanjis: ["成る"], rareKanjis: ["為る"], hiragana: "なる", romanization: "naru", meaning: "become / attain" },
+      { kanjis: ["過ごす", "過す"], hiragana: "すごす", romanization: "sugosu", meaning: "spend / spend time" },
+      { hiragana: "もらう", preferredForm: "hiragana", kanjis: ["貰う"], romanization: "morau", meaning: "receive" },
 
       { kanjis: ["親しむ"], hiragana: "したしむ", romanization: "shitashimu", meaning: "befriend" },
       { kanjis: ["遊ぶ"], hiragana: "あそぶ", romanization: "asobu", meaning: "play / have fun" },
@@ -51,29 +54,14 @@ export function appendVerbs(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableVerbsIntransitive && jp.flashcardSettings.enableGodanVerbs) {
-    words.splice(
-      words.length,
-      0, //
-      { hiragana: "ある", preferredForm: "hiragana", kanjis: ["有る", "在る"], romanization: "aru", meaning: "exist (for objects)" },
-      { hiragana: "いる", preferredForm: "hiragana", rareKanjis: ["居る"], romanization: "iru", meaning: "exist (for living things)" },
-
-      { kanjis: ["立つ"], hiragana: "たつ", romanization: "tatsu", meaning: "stand up" },
-      { kanjis: ["上がる"], rareKanjis: ["騰がる"], hiragana: "あがる", romanization: "agaru", meaning: "rise" },
-      { kanjis: ["高まる"], hiragana: "たかまる", romanization: "takamaru", meaning: "rise" },
-
-      { kanjis: ["入る"], hiragana: "いる", romanization: "iru", meaning: "enter" },
-      { kanjis: ["終わる", "終る"], rareKanjis: ["了る", "卒る", "畢る", "竟る"], hiragana: "おわる", romanization: "owaru", meaning: "finish" },
-    );
-  }
-
-  if (jp.flashcardSettings.enableVerbsActions && jp.flashcardSettings.enableIchidanVerbs) {
+  if (jp.flashcardSettings.enableVerbsTransitive && jp.flashcardSettings.enableIchidanVerbs) {
     words.splice(
       words.length,
       0, //
       { kanjis: ["見る", "観る", "視る"], hiragana: "みる", romanization: "miru", meaning: "see / look" },
       { kanjis: ["食べる"], hiragana: "たべる", romanization: "taberu", meaning: "eat" },
 
+      { kanjis: ["決める", "極める"], hiragana: "きめる", katakana: "キメる", romanization: "kimeru", meaning: "determine" },
       { kanjis: ["考える", "勘える", "稽える"], hiragana: "かんがえる", romanization: "kangaeru", meaning: "consider / contemplate" },
       { kanjis: ["覚える"], rareKanjis: ["憶える"], hiragana: "おぼえる", romanization: "oboeru", meaning: "memorize" },
 
@@ -88,11 +76,36 @@ export function appendVerbs(words: JapaneseWord[]) {
     );
   }
 
+  if (jp.flashcardSettings.enableVerbsIntransitive && jp.flashcardSettings.enableGodanVerbs) {
+    words.splice(
+      words.length,
+      0, //
+      { hiragana: "ある", preferredForm: "hiragana", kanjis: ["有る", "在る"], romanization: "aru", meaning: "exist (for objects)" },
+      { hiragana: "いる", preferredForm: "hiragana", rareKanjis: ["居る"], romanization: "iru", meaning: "exist (for living things)" },
+      { kanjis: ["暮らす", "暮す"], hiragana: "くらす", romanization: "kurasu", meaning: "live / get along" },
+      { kanjis: ["死ぬ"], hiragana: "しぬ", romanization: "shinu", meaning: "die" },
+
+      { kanjis: ["分かる", "解る", "判る", "分る"], hiragana: "わかる", romanization: "wakaru", meaning: "comprehend" },
+
+      { kanjis: ["立つ"], hiragana: "たつ", romanization: "tatsu", meaning: "stand up" },
+      { kanjis: ["上がる"], rareKanjis: ["騰がる"], hiragana: "あがる", romanization: "agaru", meaning: "rise" },
+      { kanjis: ["高まる"], hiragana: "たかまる", romanization: "takamaru", meaning: "rise" },
+      { kanjis: ["住まう"], rareKanjis: ["棲まう"], hiragana: "すまう", romanization: "sumau", meaning: "reside" },
+
+      { kanjis: ["入る"], hiragana: "いる", romanization: "iru", meaning: "enter" },
+      { kanjis: ["当たる", "当る", "中る", "中たる"], hiragana: "あたる", romanization: "ataru", meaning: "hit (not miss)" },
+      { kanjis: ["終わる", "終る"], rareKanjis: ["了る", "卒る", "畢る", "竟る"], hiragana: "おわる", romanization: "owaru", meaning: "finish" },
+    );
+  }
+
   if (jp.flashcardSettings.enableVerbsIntransitive && jp.flashcardSettings.enableIchidanVerbs) {
     words.splice(
       words.length,
       0, //
+      { kanjis: ["生きる"], rareKanjis: ["活きる"], hiragana: "いきる", romanization: "ikiru", meaning: "be alive" },
       { kanjis: ["起きる"], hiragana: "おきる", romanization: "okiru", meaning: "wake up" },
+
+      { kanjis: ["外れる"], hiragana: "はずれる", romanization: "hazureru", meaning: "miss (not hit)" },
     );
   }
 

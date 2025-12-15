@@ -99,26 +99,23 @@
         if (ev.target !== ev.currentTarget) return;
 
         if (
-          !jp.flashcardSettings.enableVerbsActions ||
+          !jp.flashcardSettings.enableVerbsTransitive ||
           !jp.flashcardSettings.enableVerbsIntransitive
         ) {
-          jp.flashcardSettings.enableVerbsActions = true;
+          jp.flashcardSettings.enableVerbsTransitive = true;
           jp.flashcardSettings.enableVerbsIntransitive = true;
         } else {
-          jp.flashcardSettings.enableVerbsActions = false;
+          jp.flashcardSettings.enableVerbsTransitive = false;
           jp.flashcardSettings.enableVerbsIntransitive = false;
         }
       }}
     >
       <span>verbs:</span>
-      <CheckboxInput bind:checked={jp.flashcardSettings.enableGodanVerbs} label="Godan verbs" />
-      <CheckboxInput bind:checked={jp.flashcardSettings.enableIchidanVerbs} label="Ichidan verbs" />
-      <CheckboxInput
-        bind:checked={jp.flashcardSettings.enableIrregularVerbs}
-        label="Irregular verbs"
-      />
+      <CheckboxInput bind:checked={jp.flashcardSettings.enableGodanVerbs} label="Godan" />
+      <CheckboxInput bind:checked={jp.flashcardSettings.enableIchidanVerbs} label="Ichidan" />
+      <CheckboxInput bind:checked={jp.flashcardSettings.enableIrregularVerbs} label="Irregular" />
     </Highlighted>
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsActions} label="actions" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsTransitive} label="transitive" />
     <CheckboxInput
       bind:checked={jp.flashcardSettings.enableVerbsIntransitive}
       label="intransitive"

@@ -240,16 +240,36 @@ export function appendNouns(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
-      { kanjis: ["今年"], hiragana: "ことし", romanization: "kotoshi", meaning: "jp year" },
+      { kanjis: ["朝"], hiragana: "あさ", romanization: "asa", meaning: "morning" },
+      { kanjis: ["午前"], hiragana: "ごぜん", romanization: "gozen", meaning: "morning" },
+      { katakana: "モーニング", romanization: "mooningu", meaning: "morning" },
+      { kanjis: ["今朝"], hiragana: "けさ", romanization: "kesa", meaning: "this morning" },
+      { kanjis: ["今朝"], hiragana: "こんちょう", romanization: "konchou", meaning: "this morning" },
+      { kanjis: ["午前中"], hiragana: "ごぜんちゅう", romanization: "gozenchuu", meaning: "in the morning" },
+
+      { kanjis: ["昼", "午"], hiragana: "ひる", romanization: "hiru", meaning: "noon" },
+
+      { kanjis: ["今週"], hiragana: "こんしゅう", romanization: "konshuu", meaning: "this week" },
+      { kanjis: ["今週末"], hiragana: "こんしゅうまつ", romanization: "konshuumatsu", meaning: "this weekend" },
+      { kanjis: ["先週"], hiragana: "せんしゅう", romanization: "senshuu", meaning: "last week" },
+      { kanjis: ["前週"], hiragana: "ぜんしゅう", romanization: "zenshuu", meaning: "last week" },
+      { kanjis: ["来週"], hiragana: "らいしゅう", romanization: "raishuu", meaning: "next week" },
+      { kanjis: ["月曜日"], hiragana: "げつようび", romanization: "getsuyoubi", meaning: "Monday" },
+      { kanjis: ["火曜日"], hiragana: "かようび", romanization: "kayoubi", meaning: "Tuesday" },
+      { kanjis: ["水曜日"], hiragana: "すいようび", romanization: "suiyoubi", meaning: "Wednesday" },
+      { kanjis: ["木曜日"], hiragana: "もくようび", romanization: "mokuyoubi", meaning: "Thursday" },
+      { kanjis: ["金曜日"], hiragana: "きんようび", romanization: "kinyoubi", meaning: "Friday" },
+      { kanjis: ["土曜日"], hiragana: "どようび", romanization: "doyoubi", meaning: "Saturday" },
+      { kanjis: ["日曜日"], hiragana: "にちようび", romanization: "nichiyoubi", meaning: "Sunday" },
+
+      { kanjis: ["今年"], hiragana: "ことし", romanization: "kotoshi", meaning: "this year" },
       { kanjis: ["昨年"], hiragana: "さくねん", romanization: "sakunen", meaning: "last year (formal)" },
       { kanjis: ["来年"], hiragana: "らいねん", romanization: "rainen", meaning: "next year" },
       { kanjis: ["今日"], hiragana: "きょう", romanization: "kyou", meaning: "today" },
       { kanjis: ["昨日"], hiragana: "きのう", romanization: "kinou", meaning: "yesterday" },
       { kanjis: ["明日"], hiragana: "あした", romanization: "ashita", meaning: "tomorrow" },
 
-      { kanjis: ["午前中"], hiragana: "ごぜんちゅう", romanization: "gozenchuu", meaning: "in the morning" },
-
-      { kanjis: ["今回"], hiragana: "こんかい", romanization: "konkai", meaning: "jp time" },
+      { kanjis: ["今回"], hiragana: "こんかい", romanization: "konkai", meaning: "this time" },
       { kanjis: ["次回"], hiragana: "じかい", romanization: "jikai", meaning: "next time" },
       { kanjis: ["前"], hiragana: "まえ", romanization: "mae", meaning: "previously (root word)" },
       { kanjis: ["以前"], rareKanjis: ["已前"], hiragana: "いぜん", romanization: "izen", meaning: "the past" },
@@ -265,6 +285,8 @@ export function appendNouns(words: JapaneseWord[]) {
       { kanjis: ["人間"], hiragana: "にんげん", romanization: "ningen", meaning: "mankind / human being" },
       { kanjis: ["人生"], hiragana: "じんせい", romanization: "jinsei", meaning: "life" },
       { kanjis: ["人生観"], hiragana: "じんせいかん", romanization: "jinseikan", meaning: "view of life" },
+      { kanjis: ["死"], hiragana: "し", romanization: "shi", meaning: "death" },
+      { kanjis: ["死去"], hiragana: "しきょ", romanization: "shikyo", meaning: "passing away" },
 
       { kanjis: ["男性"], hiragana: "だんせい", romanization: "dansei", meaning: "male" },
       { kanjis: ["男性性"], hiragana: "だんせいせい", romanization: "danseisei", meaning: "masculinity" },
@@ -325,6 +347,7 @@ export function appendNouns(words: JapaneseWord[]) {
       { kanjis: ["見方"], hiragana: "みかた", romanization: "mikata", meaning: "point of view" },
       { kanjis: ["意見"], hiragana: "いけん", romanization: "iken", meaning: "opinion" },
       { kanjis: ["知らせ"], rareKanjis: ["報せ"], hiragana: "しらせ", romanization: "shirase", meaning: "news" },
+      { kanjis: ["決定"], hiragana: "けってい", romanization: "kettei", meaning: "decision" },
 
       { kanjis: ["増加"], hiragana: "ぞうか", romanization: "zouka", meaning: "increase" },
       { kanjis: ["上昇"], hiragana: "じょうしょう", romanization: "joushou", meaning: "ascend" },
@@ -346,15 +369,21 @@ export function appendNouns(words: JapaneseWord[]) {
       { kanjis: ["習得", "修得"], hiragana: "しゅうとく", romanization: "shuutoku", meaning: "acquisition of a skill" },
       { kanjis: ["部活"], hiragana: "ぶかつ", romanization: "bukatsu", meaning: "club activities" },
       { kanjis: ["宿題"], hiragana: "しゅくだい", romanization: "shukudai", meaning: "homework" },
+      { kanjis: ["試験"], hiragana: "しけん", romanization: "shiken", meaning: "test / exam" },
+      { katakana: "テスト", romanization: "tesuto", meaning: "test / exam" },
 
       { kanjis: ["参加"], hiragana: "さんか", romanization: "sanka", meaning: "participation" },
       { kanjis: ["遊び"], hiragana: "あそび", romanization: "asobi", meaning: "play" },
       { kanjis: ["遊び方"], hiragana: "あそびかた", romanization: "asobikata", meaning: "how to play" },
       { kanjis: ["遊び場"], hiragana: "あそびば", romanization: "asobiba", meaning: "playground" },
 
-      { kanjis: ["訪れ"], hiragana: "おとずれ", romanization: "otozure", meaning: "rain" },
+      { kanjis: ["居住"], hiragana: "きょじゅう", romanization: "kyojuu", meaning: "reside" },
+      { kanjis: ["在住"], hiragana: "ざいじゅう", romanization: "zaijuu", meaning: "reside" },
+      { kanjis: ["寝"], hiragana: "ね", romanization: "ne", meaning: "sleep" },
+      { kanjis: ["寝"], hiragana: "しん", romanization: "shin", meaning: "sleep" },
+      { kanjis: ["訪れ"], hiragana: "おとずれ", romanization: "otozure", meaning: "visit" },
 
-      { kanjis: ["雨"], hiragana: "あめ", romanization: "ame", meaning: "visit" },
+      { kanjis: ["雨"], hiragana: "あめ", romanization: "ame", meaning: "rain" },
 
       { katakana: "コンビニエンス", romanization: "konbiniensu", meaning: "convenience" },
 
@@ -382,11 +411,23 @@ export function appendNouns(words: JapaneseWord[]) {
       { kanjis: ["食通"], hiragana: "しょくつう", romanization: "shokutsuu", meaning: "gourmet: someone who is very knowledgeable about food and enjoys trying new things" },
       { katakana: "グルメ", romanization: "gurume", meaning: "gourmet / fine food" },
 
+      // TODO: transportations
+      { katakana: "バス", romanization: "basu", meaning: "bus" },
+      { kanjis: ["電車"], hiragana: "でんしゃ", romanization: "densha", meaning: "train" },
+
+      // TODO: food (ingredients / dishes / kinds of restaurant)
+
+      // TODO: drinks
+      { kanjis: ["茶"], hiragana: "ちゃ", romanization: "cha", meaning: "tea" },
+      { kanjis: ["お茶"], hiragana: "おちゃ", romanization: "ocha", meaning: "tea (polite)" },
+
       // generic objects
       { kanjis: ["道", "途", "路", "径"], hiragana: "みち", romanization: "michi", meaning: "road / path" },
       { kanjis: ["地図"], hiragana: "ちず", romanization: "chizu", meaning: "map" },
 
       { kanjis: ["箱"], rareKanjis: ["函", "匣", "筥", "筐", "凾"], hiragana: "はこ", katakana: "ハコ", romanization: "hako", meaning: "box" },
+
+      { katakana: "シャツ", romanization: "shatsu", meaning: "shirt" },
 
       { katakana: "カメラ", romanization: "kamera", meaning: "camera" },
       { katakana: "キャメラ", romanization: "kiamera", meaning: "camera" },

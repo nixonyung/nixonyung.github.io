@@ -49,6 +49,8 @@ export function appendAdverbs(words: JapaneseWord[]) {
       { kanjis: ["極めて"], hiragana: "きわめて", romanization: "kiwamete", meaning: "extremely" },
       { kanjis: ["随分", "ずい分"], hiragana: "ずいぶん", romanization: "zuibun", meaning: "extremely" },
       { kanjis: ["全然"], hiragana: "ぜんぜん", romanization: "zenzen", meaning: "completely" },
+
+      { kanjis: ["早く"], hiragana: "はやく", romanization: "hayaku", meaning: "quickly" },
     );
   }
 }
