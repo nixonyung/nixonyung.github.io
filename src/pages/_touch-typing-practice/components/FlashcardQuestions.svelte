@@ -3,7 +3,7 @@
   import Highlighted from "@/components/svelte/Highlighted.svelte";
   import NumericInput from "@/components/svelte/NumericInput.svelte";
   import { ShufflingCircularQueue } from "@/lib/shuffling-circular-queue";
-  import { isEqual, randomInt, range } from "es-toolkit";
+  import { clone, isEqual, randomInt, range } from "es-toolkit";
   import { untrack } from "svelte";
   import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
   import { app, speak } from "../app.svelte";
@@ -19,7 +19,7 @@
     wordToRomanizationFn?: (word: TWord) => string | undefined;
     schema: {
       label: string;
-      valueFn: (word: TWord) => string | undefined;
+      valueFn: (word: TWord) => string | string[] | undefined;
       defaultPosition?: "question" | "option";
     }[];
   } = $props();
@@ -74,7 +74,7 @@
 
       const value = valueFn(word);
       if (value === undefined) return undefined;
-      key.push(value);
+      key.push(clone(value));
     }
 
     return key;
@@ -87,7 +87,7 @@
 
       const value = valueFn(word);
       if (value === undefined) return undefined;
-      key.push(value);
+      key.push(clone(value));
     }
 
     return key;
@@ -100,8 +100,8 @@
           entry,
         ): entry is {
           word: TWord;
-          questionKey: string[];
-          answerKey: string[];
+          questionKey: (string | string[])[];
+          answerKey: (string | string[])[];
         } => entry.questionKey !== undefined && entry.answerKey !== undefined,
       ),
   );
@@ -109,11 +109,11 @@
   let question:
     | {
         word: TWord;
-        questionKey: string[];
-        answerKey: string[];
+        questionKey: (string | string[])[];
+        answerKey: (string | string[])[];
       }
     | undefined = $state();
-  let options: string[][] = $state([]);
+  let options: (string | string[])[][] = $state([]);
   let showRomanization = $state(false);
 
   function nextQuestion() {
@@ -148,7 +148,7 @@
             continue;
 
           // filter out duplicated options
-          const answerKeyStr = word.answerKey.join("|");
+          const answerKeyStr = word.answerKey.flat().join("|");
           if (answerKeyStrs.has(answerKeyStr)) continue;
           answerKeyStrs.add(answerKeyStr);
 
@@ -216,8 +216,16 @@
                 }
               : undefined}
           >
-            {#each question.questionKey as text}
-              <span>{text}</span>
+            {#each question.questionKey as values}
+              {#if typeof values === "string"}
+                <div class="min-h-4">{values}</div>
+              {:else}
+                <div class="flex min-h-4 flex-col items-start text-xs">
+                  {#each values as value}
+                    <span>{value}</span>
+                  {/each}
+                </div>
+              {/if}
             {/each}
 
             <!-- pronunciation indicator -->
@@ -244,8 +252,16 @@
               if (isEqual(option, question?.answerKey)) nextQuestion();
             }}
           >
-            {#each option as text}
-              <span>{text}</span>
+            {#each option as values}
+              {#if typeof values === "string"}
+                <div class="min-h-4">{values}</div>
+              {:else}
+                <div class="flex min-h-4 flex-col items-start text-xs">
+                  {#each values as value}
+                    <span>{value}</span>
+                  {/each}
+                </div>
+              {/if}
             {/each}
           </Highlighted>
         {/each}

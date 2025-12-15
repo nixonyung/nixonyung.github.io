@@ -32,30 +32,37 @@
       schema={[
         {
           label: "kanji",
-          valueFn: ({ kanjis, rareKanjis }) =>
-            [...(kanjis ?? []), ...(rareKanjis ?? [])].join(" / "),
+          valueFn: ({ kanjis, rareKanjis }) => {
+            const values = [...(kanjis ?? []), ...(rareKanjis ?? [])];
+            return values.length ? values.join(" / ") : undefined;
+          },
         },
         {
           label: "kana",
-          valueFn: ({ hiragana, katakana }) =>
-            [hiragana, katakana].filter((kana) => kana !== undefined).join(" / "),
+          valueFn: ({ hiragana, katakana }) => {
+            const values = [hiragana, katakana].filter((kana) => kana !== undefined);
+            return values.length ? values.join(" / ") : undefined;
+          },
         },
         {
           label: "preferred written form",
-          valueFn: ({ kanjis, hiragana, katakana, exampleUsages, preferredForm }) => {
+          valueFn: ({ kanjis, hiragana, katakana, preferredForm }) => {
             switch (preferredForm) {
               case "kanji":
-                return kanjis?.join(" / ");
+                return kanjis;
               case "hiragana":
                 return hiragana;
               case "katakana":
                 return katakana;
-              case "example":
-                return exampleUsages?.join(" / ");
               case undefined:
-                return exampleUsages?.join(" / ") ?? kanjis?.join(" / ") ?? hiragana ?? katakana;
+                return kanjis ?? hiragana ?? katakana;
             }
           },
+          defaultPosition: "question",
+        },
+        {
+          label: "example usages",
+          valueFn: ({ exampleUsages }) => exampleUsages,
           defaultPosition: "question",
         },
         {
