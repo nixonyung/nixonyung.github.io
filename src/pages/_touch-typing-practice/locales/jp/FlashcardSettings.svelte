@@ -188,21 +188,24 @@
       onclick={() => {
         if (
           !jp.flashcardSettings.enableSentenceStructuresDesu ||
-          !jp.flashcardSettings.enableSentenceStructuresAdjectives ||
+          !jp.flashcardSettings.enableSentenceStructuresIAdjectives ||
+          !jp.flashcardSettings.enableSentenceStructuresNaAdjectives ||
           !jp.flashcardSettings.enableSentenceStructuresIru ||
           !jp.flashcardSettings.enableSentenceStructuresAru ||
           !jp.flashcardSettings.enableSentenceStructuresIkenai ||
           !jp.flashcardSettings.enableSentenceStructuresMicellaneous
         ) {
           jp.flashcardSettings.enableSentenceStructuresDesu = true;
-          jp.flashcardSettings.enableSentenceStructuresAdjectives = true;
+          jp.flashcardSettings.enableSentenceStructuresIAdjectives = true;
+          jp.flashcardSettings.enableSentenceStructuresNaAdjectives = true;
           jp.flashcardSettings.enableSentenceStructuresIru = true;
           jp.flashcardSettings.enableSentenceStructuresAru = true;
           jp.flashcardSettings.enableSentenceStructuresIkenai = true;
           jp.flashcardSettings.enableSentenceStructuresMicellaneous = true;
         } else {
           jp.flashcardSettings.enableSentenceStructuresDesu = false;
-          jp.flashcardSettings.enableSentenceStructuresAdjectives = false;
+          jp.flashcardSettings.enableSentenceStructuresIAdjectives = false;
+          jp.flashcardSettings.enableSentenceStructuresNaAdjectives = false;
           jp.flashcardSettings.enableSentenceStructuresIru = false;
           jp.flashcardSettings.enableSentenceStructuresAru = false;
           jp.flashcardSettings.enableSentenceStructuresIkenai = false;
@@ -214,8 +217,12 @@
     </Highlighted>
     <CheckboxInput bind:checked={jp.flashcardSettings.enableSentenceStructuresDesu} label="です" />
     <CheckboxInput
-      bind:checked={jp.flashcardSettings.enableSentenceStructuresAdjectives}
-      label="adjectives"
+      bind:checked={jp.flashcardSettings.enableSentenceStructuresIAdjectives}
+      label="い-adj."
+    />
+    <CheckboxInput
+      bind:checked={jp.flashcardSettings.enableSentenceStructuresNaAdjectives}
+      label="な-adj."
     />
     <CheckboxInput bind:checked={jp.flashcardSettings.enableSentenceStructuresIru} label="いる" />
     <CheckboxInput bind:checked={jp.flashcardSettings.enableSentenceStructuresAru} label="ある" />

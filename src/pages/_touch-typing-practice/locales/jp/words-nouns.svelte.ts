@@ -225,6 +225,7 @@ export function appendNouns(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
+      { kanjis: ["事務所"], hiragana: "じむしょ", romanization: "jimusho", meaning: "office" },
       { katakana: "コンビニ", romanization: "konbini", meaning: "convenience store" },
     );
   }
@@ -325,6 +326,7 @@ export function appendNouns(words: JapaneseWord[]) {
 
       { kanjis: ["社会"], hiragana: "しゃかい", romanization: "shakai", meaning: "society" },
       { kanjis: ["教育"], hiragana: "きょういく", romanization: "kyouiku", meaning: "education" },
+      { kanjis: ["留学"], hiragana: "りゅうがく", romanization: "ryuugaku", meaning: "studying abroad" },
       { kanjis: ["育児"], hiragana: "いくじ", romanization: "ikuji", meaning: "childcare" },
       { kanjis: ["養成"], hiragana: "ようせい", romanization: "yousei", meaning: "development" },
       { kanjis: ["栄養", "営養"], hiragana: "えいよう", romanization: "eiyou", meaning: "nutrition" },
@@ -355,8 +357,11 @@ export function appendNouns(words: JapaneseWord[]) {
       { kanjis: ["関連"], rareKanjis: ["関聯"], hiragana: "かんれん", romanization: "kanren", meaning: "relevance" },
 
       { kanjis: ["真面目"], hiragana: "まじめ", katakana: "マジメ", romanization: "majime", meaning: "truthfulness" },
+      { kanjis: ["検査"], hiragana: "けんさ", romanization: "kensa", meaning: "inspection" },
 
       { kanjis: ["難度"], hiragana: "なんど", romanization: "nando", meaning: "difficulty" },
+      { kanjis: ["邪魔"], hiragana: "じゃま", romanization: "jama", meaning: "obstacle" },
+      { kanjis: ["我慢"], hiragana: "がまん", katakana: "ガマン", romanization: "gaman", meaning: "endurance" },
 
       { kanjis: ["相続"], hiragana: "そうぞく", romanization: "souzoku", meaning: "succession" },
       { kanjis: ["相続人"], hiragana: "そうぞくにん", romanization: "souzokunin", meaning: "heir" },
@@ -384,6 +389,7 @@ export function appendNouns(words: JapaneseWord[]) {
       { kanjis: ["訪れ"], hiragana: "おとずれ", romanization: "otozure", meaning: "visit" },
 
       { kanjis: ["雨"], hiragana: "あめ", romanization: "ame", meaning: "rain" },
+      { kanjis: ["暑さ"], hiragana: "あつさ", romanization: "atsusa", meaning: "hotness" },
 
       { katakana: "コンビニエンス", romanization: "konbiniensu", meaning: "convenience" },
 
@@ -401,8 +407,12 @@ export function appendNouns(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
+      { kanjis: ["者"], hiragana: "もの", katakana: "モノ", romanization: "mono", meaning: "thing (person)" },
+      { kanjis: ["物"], hiragana: "もの", katakana: "モノ", romanization: "mono", meaning: "thing (object)" },
+
       // TODO: body parts
       { kanjis: ["手"], hiragana: "て", romanization: "te", meaning: "hand / arm" },
+      { kanjis: ["お腹"], rareKanjis: ["お中"], hiragana: "おなか", romanization: "onaka", meaning: "belly / stomach" },
 
       // TODO: animals
       { kanjis: ["猫"], hiragana: "ねこ", katakana: "ネコ", romanization: "neko", meaning: "cat" },
@@ -415,17 +425,30 @@ export function appendNouns(words: JapaneseWord[]) {
       { katakana: "バス", romanization: "basu", meaning: "bus" },
       { kanjis: ["電車"], hiragana: "でんしゃ", romanization: "densha", meaning: "train" },
 
+      { kanjis: ["食事"], hiragana: "しょくじ", romanization: "shokuji", meaning: "meal" },
+      { kanjis: ["ご飯", "御飯"], hiragana: "ごはん", romanization: "gohan", meaning: "meal / cooked rice" },
+      { kanjis: ["朝ご飯", "朝ごはん", "朝御飯"], hiragana: "あさごはん", romanization: "asagohan", meaning: "breakfast" },
+      { kanjis: ["昼ご飯", "昼ごはん", "昼御飯"], hiragana: "ひるごはん", romanization: "hirugohan", meaning: "lunch" },
+      { kanjis: ["晩ご飯", "晩ごはん", "晩御飯"], hiragana: "ばんごはん", romanization: "bangohan", meaning: "dinner" },
+
       // TODO: food (ingredients / dishes / kinds of restaurant)
+      { kanjis: ["食べ物"], hiragana: "たべもの", romanization: "tabemono", meaning: "food" },
+      { kanjis: ["料理"], hiragana: "りょうり", romanization: "ryouri", meaning: "dish" },
+      { kanjis: ["和食"], hiragana: "わしょく", romanization: "washoku", meaning: "Japanese cuisine" },
+      { kanjis: ["洋食"], hiragana: "ようしょく", romanization: "youshoku", meaning: "Western cuisine" },
+      { kanjis: ["寿司", "鮨"], rareKanjis: ["鮓"], hiragana: "すし", romanization: "sushi", meaning: "sushi" },
 
       // TODO: drinks
       { kanjis: ["茶"], hiragana: "ちゃ", romanization: "cha", meaning: "tea" },
       { kanjis: ["お茶"], hiragana: "おちゃ", romanization: "ocha", meaning: "tea (polite)" },
+      { katakana: "コーヒー", romanization: "koohii", meaning: "coffee" },
 
       // generic objects
       { kanjis: ["道", "途", "路", "径"], hiragana: "みち", romanization: "michi", meaning: "road / path" },
       { kanjis: ["地図"], hiragana: "ちず", romanization: "chizu", meaning: "map" },
 
       { kanjis: ["箱"], rareKanjis: ["函", "匣", "筥", "筐", "凾"], hiragana: "はこ", katakana: "ハコ", romanization: "hako", meaning: "box" },
+      { kanjis: ["傘"], hiragana: "かさ", romanization: "kasa", meaning: "umbrella" },
 
       { katakana: "シャツ", romanization: "shatsu", meaning: "shirt" },
 

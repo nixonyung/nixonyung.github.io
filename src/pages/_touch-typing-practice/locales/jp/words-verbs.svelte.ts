@@ -24,6 +24,7 @@ export function appendVerbs(words: JapaneseWord[]) {
       { kanjis: ["話す"], rareKanjis: ["咄す"], hiragana: "はなす", romanization: "hanasu", meaning: "converse" },
       { kanjis: ["放す"], hiragana: "はなす", romanization: "hanasu", meaning: "release" },
       { kanjis: ["離す"], hiragana: "はなす", romanization: "hanasu", meaning: "depart" },
+      { kanjis: ["消す"], hiragana: "けす", romanization: "kesu", meaning: "erase / turn off" },
 
       { hiragana: "やる", preferredForm: "hiragana", rareKanjis: ["遣る"], romanization: "yaru", meaning: "do" },
       { kanjis: ["読む"], hiragana: "よむ", romanization: "yomu", meaning: "read" },
@@ -84,8 +85,12 @@ export function appendVerbs(words: JapaneseWord[]) {
       { hiragana: "いる", preferredForm: "hiragana", rareKanjis: ["居る"], romanization: "iru", meaning: "exist (for living things)" },
       { kanjis: ["暮らす", "暮す"], hiragana: "くらす", romanization: "kurasu", meaning: "live / get along" },
       { kanjis: ["死ぬ"], hiragana: "しぬ", romanization: "shinu", meaning: "die" },
+      { kanjis: ["お腹が空く", "お腹がすく"], hiragana: "おなかがすく", romanization: "onakagasuku", meaning: "be hungry" },
 
       { kanjis: ["分かる", "解る", "判る", "分る"], hiragana: "わかる", romanization: "wakaru", meaning: "comprehend" },
+      { kanjis: ["会う", "逢う", "遭う"], rareKanjis: ["遇う"], hiragana: "あう", romanization: "au", meaning: "meet" },
+      { kanjis: ["帰る", "還る"], hiragana: "かえる", romanization: "kaeru", meaning: "go back" },
+      { kanjis: ["待つ"], rareKanjis: ["俟つ"], hiragana: "まつ", romanization: "matsu", meaning: "wait" },
 
       { kanjis: ["立つ"], hiragana: "たつ", romanization: "tatsu", meaning: "stand up" },
       { kanjis: ["上がる"], rareKanjis: ["騰がる"], hiragana: "あがる", romanization: "agaru", meaning: "rise" },
@@ -105,6 +110,7 @@ export function appendVerbs(words: JapaneseWord[]) {
       { kanjis: ["生きる"], rareKanjis: ["活きる"], hiragana: "いきる", romanization: "ikiru", meaning: "be alive" },
       { kanjis: ["起きる"], hiragana: "おきる", romanization: "okiru", meaning: "wake up" },
 
+      { kanjis: ["諦める"], hiragana: "あきらめる", romanization: "akirameru", meaning: "give up" },
       { kanjis: ["外れる"], hiragana: "はずれる", romanization: "hazureru", meaning: "miss (not hit)" },
     );
   }
@@ -113,8 +119,10 @@ export function appendVerbs(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
-      // TODO: kuru (to come), suru (to do)
+      { hiragana: "する", preferredForm: "hiragana", rareKanjis: ["為る"], romanization: "suru", meaning: "do / carry out" },
       { kanjis: ["関連する"], rareKanjis: ["関聯"], hiragana: "かんれんする", romanization: "kanrensuru", meaning: "relate" },
+
+      // TODO: kuru (to come)
     );
   }
 }

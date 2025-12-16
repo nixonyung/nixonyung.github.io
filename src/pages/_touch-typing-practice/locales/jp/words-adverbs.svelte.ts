@@ -7,7 +7,6 @@ export function appendAdverbs(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
-      { hiragana: "もう", romanization: "mou", meaning: "not any more / again" },
       { hiragana: "もし", preferredForm: "hiragana", kanjis: ["若し"], romanization: "moshi", meaning: "if" },
       { hiragana: "もっと", romanization: "motto", meaning: "even more" },
       { kanjis: ["最も", "尤も"], hiragana: "もっとも", romanization: "mottomo", meaning: "the most" },
@@ -51,6 +50,8 @@ export function appendAdverbs(words: JapaneseWord[]) {
       { kanjis: ["全然"], hiragana: "ぜんぜん", romanization: "zenzen", meaning: "completely" },
 
       { kanjis: ["早く"], hiragana: "はやく", romanization: "hayaku", meaning: "quickly" },
+      { hiragana: "そろそろ", katakana: "ソロソロ", romanization: "sorosoro", meaning: "soon" },
+      { kanjis: ["少し"], rareKanjis: ["寡し", "些し"], hiragana: "すこし", romanization: "sukoshi", meaning: "a little bit" },
     );
   }
 }
