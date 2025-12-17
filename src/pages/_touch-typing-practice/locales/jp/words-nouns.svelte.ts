@@ -226,7 +226,11 @@ export function appendNouns(words: JapaneseWord[]) {
       words.length,
       0, //
       { kanjis: ["事務所"], hiragana: "じむしょ", romanization: "jimusho", meaning: "office" },
+      { kanjis: ["空港"], hiragana: "くうこう", romanization: "kuukou", meaning: "airport" },
+
       { katakana: "コンビニ", romanization: "konbini", meaning: "convenience store" },
+      { katakana: "トイレ", romanization: "toire", meaning: "toilet" },
+      { katakana: "トイレット", romanization: "toiretto", meaning: "toilet" },
     );
   }
 
@@ -325,6 +329,7 @@ export function appendNouns(words: JapaneseWord[]) {
       { kanjis: ["離婚"], hiragana: "りこん", romanization: "rikon", meaning: "divorce" },
 
       { kanjis: ["社会"], hiragana: "しゃかい", romanization: "shakai", meaning: "society" },
+      { kanjis: ["学校"], hiragana: "がっこう", romanization: "gakkou", meaning: "school" },
       { kanjis: ["教育"], hiragana: "きょういく", romanization: "kyouiku", meaning: "education" },
       { kanjis: ["留学"], hiragana: "りゅうがく", romanization: "ryuugaku", meaning: "studying abroad" },
       { kanjis: ["育児"], hiragana: "いくじ", romanization: "ikuji", meaning: "childcare" },
@@ -391,13 +396,18 @@ export function appendNouns(words: JapaneseWord[]) {
       { kanjis: ["雨"], hiragana: "あめ", romanization: "ame", meaning: "rain" },
       { kanjis: ["暑さ"], hiragana: "あつさ", romanization: "atsusa", meaning: "hotness" },
 
-      { katakana: "コンビニエンス", romanization: "konbiniensu", meaning: "convenience" },
+      { kanjis: ["余り"], hiragana: "あまり", romanization: "amari", meaning: "remains" },
+      { kanjis: ["返し", "反し"], hiragana: "かえし", romanization: "kaeshi", meaning: "reversal / return" },
 
-      { katakana: "トイレ", romanization: "toire", meaning: "toilet" },
-      { katakana: "トイレット", romanization: "toiretto", meaning: "toilet" },
+      { kanjis: ["積もり", "積り"], hiragana: "つもり", romanization: "tsumori", meaning: "plan / intention" },
+
+      { hiragana: "ため", preferredForm: "hiragana", kanjis: ["為"], romanization: "tame", meaning: "advantage / benefit" },
+
+      { katakana: "コンビニエンス", romanization: "konbiniensu", meaning: "convenience" },
       { katakana: "トイレットペーパー", romanization: "toirettopeepaa", meaning: "toilet paper" },
 
       { katakana: "ルール", romanization: "ruuru", meaning: "rule" },
+      { katakana: "ダメージ", romanization: "dameeji", meaning: "damage" },
 
       { kanjis: ["一人暮らし", "１人暮らし"], rareKanjis: ["独り暮らし"], hiragana: "ひとりぐらし", romanization: "hitorigurashi", meaning: "the state of living alone" },
     );
@@ -433,6 +443,8 @@ export function appendNouns(words: JapaneseWord[]) {
 
       // TODO: food (ingredients / dishes / kinds of restaurant)
       { kanjis: ["食べ物"], hiragana: "たべもの", romanization: "tabemono", meaning: "food" },
+      { kanjis: ["外食"], hiragana: "がいしょく", romanization: "gaishoku", meaning: "eating out" },
+
       { kanjis: ["料理"], hiragana: "りょうり", romanization: "ryouri", meaning: "dish" },
       { kanjis: ["和食"], hiragana: "わしょく", romanization: "washoku", meaning: "Japanese cuisine" },
       { kanjis: ["洋食"], hiragana: "ようしょく", romanization: "youshoku", meaning: "Western cuisine" },
@@ -443,22 +455,25 @@ export function appendNouns(words: JapaneseWord[]) {
       { kanjis: ["お茶"], hiragana: "おちゃ", romanization: "ocha", meaning: "tea (polite)" },
       { katakana: "コーヒー", romanization: "koohii", meaning: "coffee" },
 
-      // generic objects
-      { kanjis: ["道", "途", "路", "径"], hiragana: "みち", romanization: "michi", meaning: "road / path" },
-      { kanjis: ["地図"], hiragana: "ちず", romanization: "chizu", meaning: "map" },
+      // TODO: sports
+      { katakana: "サッカー", romanization: "sakkaa", meaning: "soccer" },
 
-      { kanjis: ["箱"], rareKanjis: ["函", "匣", "筥", "筐", "凾"], hiragana: "はこ", katakana: "ハコ", romanization: "hako", meaning: "box" },
-      { kanjis: ["傘"], hiragana: "かさ", romanization: "kasa", meaning: "umbrella" },
-
+      // TODO: household objects
+      { kanjis: ["衣類"], hiragana: "いるい", romanization: "irui", meaning: "clothes" },
       { katakana: "シャツ", romanization: "shatsu", meaning: "shirt" },
+      { kanjis: ["傘"], hiragana: "かさ", romanization: "kasa", meaning: "umbrella" },
+      { kanjis: ["箱"], rareKanjis: ["函", "匣", "筥", "筐", "凾"], hiragana: "はこ", katakana: "ハコ", romanization: "hako", meaning: "box" },
 
+      // TODO: equipments
+      { kanjis: ["本"], hiragana: "ほん", romanization: "hon", meaning: "book" },
       { katakana: "カメラ", romanization: "kamera", meaning: "camera" },
       { katakana: "キャメラ", romanization: "kiamera", meaning: "camera" },
       { katakana: "カメラマン", romanization: "kameraman", meaning: "cameraman" },
 
+      // miscellaneous
+      { kanjis: ["道", "途", "路", "径"], hiragana: "みち", romanization: "michi", meaning: "road / path" },
+      { kanjis: ["地図"], hiragana: "ちず", romanization: "chizu", meaning: "map" },
       { kanjis: ["種"], hiragana: "たね", romanization: "tane", meaning: "seed" },
-
-      { kanjis: ["衣類"], hiragana: "いるい", romanization: "irui", meaning: "clothes" },
     );
   }
 }

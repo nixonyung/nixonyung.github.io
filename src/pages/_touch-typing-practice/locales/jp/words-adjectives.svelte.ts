@@ -8,10 +8,14 @@ export function appendAdjectives(words: JapaneseWord[]) {
       words.length,
       0, //
       // TODO: https://jlptsensei.com/learn-japanese-grammar/japanese-%e3%81%84-adjectives-%e3%81%84%e5%bd%a2%e5%ae%b9%e8%a9%9e-meaning/
+      // TODO: i-Adj. vs na-Adj.
 
       { hiragana: "いい", romanization: "ii", meaning: "fine / decent" },
       { kanjis: ["良い", "好い", "善い"], rareKanjis: ["佳い", "吉い", "宜い"], hiragana: "よい", romanization: "yoi", meaning: "fine / decent (formal)" },
+      { hiragana: "いけない", romanization: "ikenai", meaning: "wrong" },
+      { hiragana: "いけません", preferredForm: "hiragana", kanjis: ["行けません"], romanization: "ikemasen", meaning: "wrong (polite)" },
       { kanjis: ["悪い"], hiragana: "わるい", romanization: "warui", meaning: "bad" },
+      { hiragana: "だめ", preferredForm: "hiragana", katakana: "ダメ", kanjis: ["駄目"], romanization: "dame", meaning: "no good" },
 
       { hiragana: "したい", romanization: "shitai", meaning: "wanted to do" },
 
@@ -27,9 +31,16 @@ export function appendAdjectives(words: JapaneseWord[]) {
 
       { kanjis: ["早い", "速い"], rareKanjis: ["疾い", "捷い"], hiragana: "はやい", romanization: "hayai", meaning: "quick" },
 
+      { kanjis: ["一杯", "１杯"], hiragana: "いっぱい", romanization: "ippai", meaning: "full / many / much" },
+      { kanjis: ["多く"], hiragana: "おおく", romanization: "ooku", meaning: "many / much" },
+      { kanjis: ["多い"], hiragana: "おおい", romanization: "ooi", meaning: "a lot" },
+
       { kanjis: ["不思議"], hiragana: "ふしぎ", romanization: "fushigi", meaning: "amazing" },
       { kanjis: ["素晴らしい"], hiragana: "すばらしい", romanization: "subarashii", meaning: "magnificent" },
       { kanjis: ["凄い"], hiragana: "すごい", romanization: "sugoi", meaning: "impressive" },
+      { kanjis: ["無理"], hiragana: "むり", katakana: "ムリ", romanization: "muri", meaning: "unreasonable" },
+      { kanjis: ["難しい"], hiragana: "むずかしい", romanization: "muzukashii", meaning: "difficult" },
+      { kanjis: ["不可能"], hiragana: "ふかのう", romanization: "fukanou", meaning: "impossible" },
 
       { kanjis: ["上手い", "巧い"], rareKanjis: ["美い"], hiragana: "うまい", romanization: "umai", meaning: "skillful" },
       { kanjis: ["綺麗", "奇麗"], hiragana: "きれい", katakana: "キレイ", romanization: "kirei", meaning: "pretty" },

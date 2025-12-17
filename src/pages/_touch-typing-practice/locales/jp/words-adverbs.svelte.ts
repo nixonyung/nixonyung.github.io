@@ -18,11 +18,13 @@ export function appendAdverbs(words: JapaneseWord[]) {
 
       { hiragana: "そう", preferredForm: "hiragana", rareKanjis: ["然う"], romanization: "sou", meaning: "likewise" },
       { hiragana: "すでに", preferredForm: "hiragana", kanjis: ["既に"], rareKanjis: ["已に"], romanization: "sudeni", meaning: "already" },
+      { hiragana: "ずっと", romanization: "zutto", meaning: "(continuously)" },
       { kanjis: ["先に"], rareKanjis: ["曩に"], hiragana: "さきに", romanization: "sakini", meaning: "previously" },
       { kanjis: ["この前"], rareKanjis: ["此の前"], hiragana: "このまえ", romanization: "konomae", meaning: "last time" },
       { kanjis: ["前もって"], rareKanjis: ["前以て"], hiragana: "まえもって", romanization: "maemotte", meaning: "in advance" },
       { kanjis: ["予め"], hiragana: "あらかじめ", romanization: "arakajime", meaning: "in advance" },
       { kanjis: ["予て", "兼ねて"], hiragana: "かねて", romanization: "kanete", meaning: "for quite a while" },
+      { kanjis: ["多分"], hiragana: "たぶん", romanization: "tabun", meaning: "probably" },
 
       { kanjis: ["何の"], hiragana: "なんの", romanization: "nanno", meaning: "what kind of" },
       { kanjis: ["何と"], hiragana: "なんと", romanization: "nanto", meaning: "how" },
@@ -42,16 +44,20 @@ export function appendAdverbs(words: JapaneseWord[]) {
       { kanjis: ["内", "中"], hiragana: "うち", romanization: "uchi", meaning: "inside / between" },
       { kanjis: ["同じく"], hiragana: "おなじく", romanization: "onajiku", meaning: "likewise" },
 
-      { exampleUsages: ["超xx"], kanjis: ["超"], hiragana: "ちょう", romanization: "chou", meaning: "super-" },
+      { kanjis: ["超"], hiragana: "ちょう", romanization: "chou", meaning: "super-", exampleUsages: ["超xx"] },
       { kanjis: ["大層", "大そう"], hiragana: "たいそう", romanization: "taisou", meaning: "greatly" },
       { kanjis: ["最も", "尤も"], hiragana: "もっとも", romanization: "mottomo", meaning: "the most" },
       { kanjis: ["極めて"], hiragana: "きわめて", romanization: "kiwamete", meaning: "extremely" },
       { kanjis: ["随分", "ずい分"], hiragana: "ずいぶん", romanization: "zuibun", meaning: "extremely" },
+      { hiragana: "めっちゃ", preferredForm: "hiragana", rareKanjis: ["滅茶"], romanization: "meccha", meaning: "extremely" },
       { kanjis: ["全然"], hiragana: "ぜんぜん", romanization: "zenzen", meaning: "completely" },
 
       { kanjis: ["早く"], hiragana: "はやく", romanization: "hayaku", meaning: "quickly" },
+      { kanjis: ["早々", "早早"], hiragana: "はやばや", romanization: "hayabaya", meaning: "promptly" },
+      { hiragana: "どんどん", katakana: "ドンドン", romanization: "dondon", meaning: "(drumming sound) / quickly" },
       { hiragana: "そろそろ", katakana: "ソロソロ", romanization: "sorosoro", meaning: "soon" },
       { kanjis: ["少し"], rareKanjis: ["寡し", "些し"], hiragana: "すこし", romanization: "sukoshi", meaning: "a little bit" },
+      { kanjis: ["本当に"], hiragana: "ほんとうに", romanization: "hontouni", meaning: "for real" },
     );
   }
 }

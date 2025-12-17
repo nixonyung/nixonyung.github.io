@@ -5,6 +5,8 @@ export function appendVerbs(words: JapaneseWord[]) {
   // TODO: https://www.japanesepod101.com/blog/2020/08/25/japanese-verbs/
   // TODO: https://preply.com/en/blog/basic-japanese-words/
 
+  // TODO: what is the object? e.g. person, time, object, event
+
   if (jp.flashcardSettings.enableVerbsTransitive && jp.flashcardSettings.enableGodanVerbs) {
     words.splice(
       words.length,
@@ -22,6 +24,7 @@ export function appendVerbs(words: JapaneseWord[]) {
       { kanjis: ["走る", "奔る", "疾る", "趨る"], hiragana: "はしる", romanization: "hashiru", meaning: "run / rush" },
 
       { kanjis: ["話す"], rareKanjis: ["咄す"], hiragana: "はなす", romanization: "hanasu", meaning: "converse" },
+      { kanjis: ["来る"], hiragana: "くる", romanization: "kuru", meaning: "come (spatially / temporally)" },
       { kanjis: ["放す"], hiragana: "はなす", romanization: "hanasu", meaning: "release" },
       { kanjis: ["離す"], hiragana: "はなす", romanization: "hanasu", meaning: "depart" },
       { kanjis: ["消す"], hiragana: "けす", romanization: "kesu", meaning: "erase / turn off" },
@@ -35,12 +38,15 @@ export function appendVerbs(words: JapaneseWord[]) {
 
       { kanjis: ["使う", "遣う"], hiragana: "つかう", romanization: "tsukau", meaning: "use / employ / utilize" },
       { kanjis: ["動く"], hiragana: "うごく", romanization: "ugoku", meaning: "move / act / shift" },
+      { kanjis: ["通る"], rareKanjis: ["透る", "徹る"], hiragana: "とおる", romanization: "tooru", meaning: "pass through / travel" },
       { kanjis: ["起こる", "起る"], hiragana: "おこる", romanization: "okoru", meaning: "occur" },
       { kanjis: ["伺う"], hiragana: "うかがう", romanization: "ukagau", meaning: "inquire" },
       { kanjis: ["呼ぶ"], rareKanjis: ["喚ぶ"], hiragana: "よぶ", romanization: "yobu", meaning: "call / address" },
       { kanjis: ["成る"], rareKanjis: ["為る"], hiragana: "なる", romanization: "naru", meaning: "become / attain" },
       { kanjis: ["過ごす", "過す"], hiragana: "すごす", romanization: "sugosu", meaning: "spend / spend time" },
+      { kanjis: ["返す", "反す"], hiragana: "かえす", romanization: "kaesu", meaning: "return" },
       { hiragana: "もらう", preferredForm: "hiragana", kanjis: ["貰う"], romanization: "morau", meaning: "receive" },
+      { hiragana: "いける", katakana: "イケる", romanization: "ikeru", meaning: "go well" },
 
       { kanjis: ["親しむ"], hiragana: "したしむ", romanization: "shitashimu", meaning: "befriend" },
       { kanjis: ["遊ぶ"], hiragana: "あそぶ", romanization: "asobu", meaning: "play / have fun" },
@@ -49,9 +55,7 @@ export function appendVerbs(words: JapaneseWord[]) {
       { kanjis: ["起こす", "起す"], hiragana: "おこす", romanization: "okosu", meaning: "raise" },
       { kanjis: ["興す"], hiragana: "おこす", romanization: "okosu", meaning: "vitalize" },
       { kanjis: ["養う"], hiragana: "やしなう", romanization: "yashinau", meaning: "foster" },
-
-      // TODO: use
-      // TODO: come
+      { kanjis: ["払う"], rareKanjis: ["掃う"], hiragana: "はらう", romanization: "harau", meaning: "pay" },
     );
   }
 
@@ -100,6 +104,7 @@ export function appendVerbs(words: JapaneseWord[]) {
       { kanjis: ["入る"], hiragana: "いる", romanization: "iru", meaning: "enter" },
       { kanjis: ["当たる", "当る", "中る", "中たる"], hiragana: "あたる", romanization: "ataru", meaning: "hit (not miss)" },
       { kanjis: ["終わる", "終る"], rareKanjis: ["了る", "卒る", "畢る", "竟る"], hiragana: "おわる", romanization: "owaru", meaning: "finish" },
+      { kanjis: ["急ぐ"], hiragana: "いそぐ", romanization: "isogu", meaning: "hurry" },
     );
   }
 
@@ -109,6 +114,7 @@ export function appendVerbs(words: JapaneseWord[]) {
       0, //
       { kanjis: ["生きる"], rareKanjis: ["活きる"], hiragana: "いきる", romanization: "ikiru", meaning: "be alive" },
       { kanjis: ["起きる"], hiragana: "おきる", romanization: "okiru", meaning: "wake up" },
+      { kanjis: ["出来る"], hiragana: "できる", romanization: "dekiru", meaning: "be able to" },
 
       { kanjis: ["諦める"], hiragana: "あきらめる", romanization: "akirameru", meaning: "give up" },
       { kanjis: ["外れる"], hiragana: "はずれる", romanization: "hazureru", meaning: "miss (not hit)" },
