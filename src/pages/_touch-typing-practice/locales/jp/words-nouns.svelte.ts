@@ -267,6 +267,12 @@ export function appendNouns(words: JapaneseWord[]) {
       { kanjis: ["土曜日"], hiragana: "どようび", romanization: "doyoubi", meaning: "Saturday" },
       { kanjis: ["日曜日"], hiragana: "にちようび", romanization: "nichiyoubi", meaning: "Sunday" },
 
+      { kanjis: ["季節"], hiragana: "きせつ", romanization: "kisetsu", meaning: "season" },
+      { kanjis: ["春"], hiragana: "はる", romanization: "haru", meaning: "spring" },
+      { kanjis: ["夏"], hiragana: "なつ", romanization: "natsu", meaning: "summer" },
+      { kanjis: ["秋"], hiragana: "あき", romanization: "aki", meaning: "autumn" },
+      { kanjis: ["冬"], hiragana: "ふゆ", romanization: "fuyu", meaning: "winter" },
+
       { kanjis: ["今年"], hiragana: "ことし", romanization: "kotoshi", meaning: "this year" },
       { kanjis: ["昨年"], hiragana: "さくねん", romanization: "sakunen", meaning: "last year (formal)" },
       { kanjis: ["来年"], hiragana: "らいねん", romanization: "rainen", meaning: "next year" },
@@ -355,6 +361,7 @@ export function appendNouns(words: JapaneseWord[]) {
       { kanjis: ["意見"], hiragana: "いけん", romanization: "iken", meaning: "opinion" },
       { kanjis: ["知らせ"], rareKanjis: ["報せ"], hiragana: "しらせ", romanization: "shirase", meaning: "news" },
       { kanjis: ["決定"], hiragana: "けってい", romanization: "kettei", meaning: "decision" },
+      { kanjis: ["説得"], hiragana: "せっとく", romanization: "settoku", meaning: "persuasion" },
 
       { kanjis: ["増加"], hiragana: "ぞうか", romanization: "zouka", meaning: "increase" },
       { kanjis: ["上昇"], hiragana: "じょうしょう", romanization: "joushou", meaning: "ascend" },
@@ -448,7 +455,9 @@ export function appendNouns(words: JapaneseWord[]) {
       { kanjis: ["料理"], hiragana: "りょうり", romanization: "ryouri", meaning: "dish" },
       { kanjis: ["和食"], hiragana: "わしょく", romanization: "washoku", meaning: "Japanese cuisine" },
       { kanjis: ["洋食"], hiragana: "ようしょく", romanization: "youshoku", meaning: "Western cuisine" },
+
       { kanjis: ["寿司", "鮨"], rareKanjis: ["鮓"], hiragana: "すし", romanization: "sushi", meaning: "sushi" },
+      { katakana: "カレー", romanization: "karii", meaning: "curry" },
 
       // TODO: drinks
       { kanjis: ["茶"], hiragana: "ちゃ", romanization: "cha", meaning: "tea" },
@@ -465,6 +474,8 @@ export function appendNouns(words: JapaneseWord[]) {
       { kanjis: ["箱"], rareKanjis: ["函", "匣", "筥", "筐", "凾"], hiragana: "はこ", katakana: "ハコ", romanization: "hako", meaning: "box" },
 
       // TODO: equipments
+      { kanjis: ["袋"], rareKanjis: ["嚢"], hiragana: "ふくろ", romanization: "fukuro", meaning: "bag" },
+      { hiragana: "かばん", preferredForm: "hiragana", katakana: "カバン", kanjis: ["鞄"], romanization: "kaban", meaning: "bag / basket" },
       { kanjis: ["本"], hiragana: "ほん", romanization: "hon", meaning: "book" },
       { katakana: "カメラ", romanization: "kamera", meaning: "camera" },
       { katakana: "キャメラ", romanization: "kiamera", meaning: "camera" },

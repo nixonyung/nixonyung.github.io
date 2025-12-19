@@ -49,7 +49,8 @@ export function appendAdverbs(words: JapaneseWord[]) {
       { kanjis: ["最も", "尤も"], hiragana: "もっとも", romanization: "mottomo", meaning: "the most" },
       { kanjis: ["極めて"], hiragana: "きわめて", romanization: "kiwamete", meaning: "extremely" },
       { kanjis: ["随分", "ずい分"], hiragana: "ずいぶん", romanization: "zuibun", meaning: "extremely" },
-      { hiragana: "めっちゃ", preferredForm: "hiragana", rareKanjis: ["滅茶"], romanization: "meccha", meaning: "extremely" },
+      { hiragana: "めっちゃ", preferredForm: "hiragana", rareKanjis: ["滅茶"], romanization: "meccha", meaning: "extremely (slang)" },
+      { hiragana: "とても", preferredForm: "hiragana", rareKanjis: ["迚も"], romanization: "totemo", meaning: "very" },
       { kanjis: ["全然"], hiragana: "ぜんぜん", romanization: "zenzen", meaning: "completely" },
 
       { kanjis: ["早く"], hiragana: "はやく", romanization: "hayaku", meaning: "quickly" },

@@ -7,13 +7,6 @@ export function appendPhrases(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
-      { hiragana: "よ", romanization: "yo", meaning: "(exclamation marker) / 啊" },
-
-      { hiragana: "も", romanization: "mo", meaning: "and" },
-      { hiragana: "と", romanization: "to", meaning: "and" },
-      { hiragana: "より", romanization: "yori", meaning: "than / instead of" },
-      { hiragana: "から", romanization: "kara", meaning: "from / since" },
-      { hiragana: "まで", rareKanjis: ["迄"], romanization: "made", meaning: "up to / until" },
       { hiragana: "たら", romanization: "tara", meaning: "if" },
       { hiragana: "とも", romanization: "tomo", meaning: "even if" },
       { hiragana: "とか", romanization: "toka", meaning: "or something like that" },
@@ -76,6 +69,7 @@ export function appendPhrases(words: JapaneseWord[]) {
       { hiragana: "などなど", preferredForm: "hiragana", kanjis: ["等など"], romanization: "nadonado", meaning: "et cetera" },
 
       { hiragana: "だから", romanization: "dakara", meaning: "Told you already!" },
+      { hiragana: "しかしなぜ？", romanization: "shikashi naze?", meaning: "But why?" },
 
       { hiragana: "もうありません", romanization: "mou arimasen", meaning: "aren't any left" },
 
@@ -100,9 +94,9 @@ export function appendPhrases(words: JapaneseWord[]) {
       { hiragana: "でした", romanization: "deshita", meaning: "{xxx} was xxx (polite)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] でした"] },
 
       // is not:
-      { hiragana: "じゃない", romanization: "janai", meaning: "{xxx} is not xxx (casual)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] じゃない"] },
+      { hiragana: "じゃない", romanization: "ja nai", meaning: "{xxx} is not xxx (casual)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] じゃない"] },
       { hiragana: "じゃありません", romanization: "ja arimasen", meaning: "{xxx} is not xxx (polite)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] じゃありません"] },
-      { hiragana: "ではない", romanization: "dewanai", meaning: "{xxx} is not xxx (polite)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] ではない"] },
+      { hiragana: "ではない", romanization: "dewa nai", meaning: "{xxx} is not xxx (polite)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] ではない"] },
       { hiragana: "ではありません", romanization: "dewa arimasen", meaning: "{xxx} is not xxx (very formal)", exampleUsages: ["{ [Noun] は(が) } [Noun / Adj.] ではありません"] },
 
       // was not:
@@ -208,16 +202,12 @@ export function appendPhrases(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
-      // TODO: to simple sentences?
-
-      // TODO: should
+      // TODO: move to suffixes to verbs?
 
       // should not
-      { hiragana: "ちゃだめ", romanization: "cha dame", meaning: "should not / must not xxx! (casual, annoyed)", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)だめ"] },
-      { hiragana: "ちゃいけない", romanization: "cha ikenai", meaning: "should not / must not xxx (casual)", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)いけない"] },
-      { hiragana: "ちゃいけません", romanization: "cha ikemasen", meaning: "should not / must not xxx (formal)", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)いけません"] },
-
-      // TODO: must?
+      { hiragana: "ちゃだめ", romanization: "cha dame", meaning: "should not / must not xxx! (spoken, casual)", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)だめ"] },
+      { hiragana: "ちゃいけない", romanization: "cha ikenai", meaning: "should not / must not xxx (spoken, casual)", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)いけない"] },
+      { hiragana: "ちゃいけません", romanization: "cha ikemasen", meaning: "should not / must not xxx (spoken, polite)", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)いけません"] },
     );
   }
 
@@ -225,44 +215,86 @@ export function appendPhrases(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
+      // TODO: "nai desu ka" vs "arimasen ka": "nai desu ka" is modern / spoken
+
+      { hiragana: "は", romanization: "wa", meaning: "(topic marker, e.g. time/place/concept)", exampleUsages: ["[Noun] は [Clause]"] },
+
       // connectives:
-      { hiragana: "は", romanization: "wa", meaning: "(topic marker, e.g. time/place/person)", exampleUsages: ["[Noun] は [Clause]"] },
-      { hiragana: "か", romanization: "ka", meaning: "or", exampleUsages: ["[Noun] か [Noun] か ...", "[Noun] か [Noun] ？"] },
+      { hiragana: "から", romanization: "kara", meaning: "(introducing precedent:) because of ...", exampleUsages: ["[Clause ending with Verb] から ...", "[Clause ending with Noun] だから ...", "[Clause ending with i-Adj.] から ...", "[Clause ending with na-Adj.] だから ..."] },
+      { hiragana: "ので", romanization: "node", meaning: "because ...", exampleUsages: ["[Clause ending with Verb] ので ...", "[Clause ending with Noun] なので ...", "[Clause ending with i-Adj.] ので ...", "[Clause ending with na-Adj.] なので ..."] },
+
+      { hiragana: "もう", romanization: "mou", meaning: '("not happening again") already', exampleUsages: ["[Noun] はもう [Clause]"] },
+      { kanjis: ["時", "刻", "秋"], hiragana: "とき", romanization: "toki", meaning: "at that time", exampleUsages: ["[Verb] 時、", "[Noun] の時、", "[na-Adj.] 時、", "[i-Adj.] 時、"] },
+
+      { hiragana: "か", romanization: "ka", meaning: "or (listing options)", exampleUsages: ["[Noun] か [Noun] か ...", "[Noun] か [Noun] ？"] },
+      { hiragana: "たり", romanization: "tari", meaning: "and (listing actions / targets)", exampleUsages: ["[Verb-た] り ...", "[Noun] だったり ...", "[i-Adj. (dropped)] だったり ...", "[na-Adj.] だったり ..."] },
+      { hiragana: "と", romanization: "to", meaning: "and (listing ALL subjects) / with me", exampleUsages: ["[Noun] と [Noun] ...", "[Noun] と ..."] },
+      { hiragana: "や", romanization: "ya", meaning: "and (listing SOME subjects)", exampleUsages: ["[Noun] や [Noun] ..."] },
+
+      { hiragana: "そして", romanization: "soshite", meaning: "and then", exampleUsages: ["...。 そして ..."] },
+      { hiragana: "それから", romanization: "sorekara", meaning: "after that", exampleUsages: ["...。 それから ...", "あなたはそれから ...？"] },
+
+      { hiragana: "でも", romanization: "demo", meaning: "however (spoken, casual)", exampleUsages: ["...。 でも、[Clause]"] },
+      { hiragana: "しかし", romanization: "shikashi", meaning: "however (written, polite)", exampleUsages: ["...。 しかし、[Clause]"] },
+
       { hiragana: "が", romanization: "ga", meaning: "even though", exampleUsages: ["[Clause] が、 [Clause]。"] },
-      { hiragana: "から", romanization: "kara", meaning: "(introducing precedent:) because of ...", exampleUsages: ["[Clause ending with Verb] から、 ...", "[Clause ending with Noun] だから、 ...", "[Clause ending with i-Adj.] から、 ...", "[Clause ending with na-Adj.] だから、 ..."] },
       { hiragana: "けど", romanization: "kedo", meaning: "but (casual)", exampleUsages: ["[Clause] けど、 [Clause]。", "[Noun] は [Adj.] けど [Adj.]。", "...。 けど、 [Clause]。"] },
       { hiragana: "けれど", romanization: "keredo", meaning: "but (polite)", exampleUsages: ["[Clause] けれど、 [Clause]。", "[Noun] は [Adj.] けれど [Adj.]。", "...。 けれど、 [Clause]。"] },
       { hiragana: "けれども", romanization: "keredomo", meaning: "but (very formal)", exampleUsages: ["[Clause] けれども、 [Clause]。", "[Noun] は [Adj.] けれども [Adj.]。", "...。 けれども、 [Clause]。"] },
-      { hiragana: "でも", romanization: "demo", meaning: "however", exampleUsages: ["...。 でも、[Clause]"] },
-      { hiragana: "もう", romanization: "mou", meaning: '("not happening again") already', exampleUsages: ["[Noun] はもう [Clause]"] },
+
+      { hiragana: "と思う。", romanization: "to omou", meaning: "I think (casual)", exampleUsages: ["[Verb] と思う。", "[Noun] だと思う。", "[i-Adj.] と思う。", "[na-Adj.] だと思う。"] },
+      { hiragana: "と思います。", romanization: "to omoimasu", meaning: "I think (polite)", exampleUsages: ["[Verb] と思います。", "[Noun] だと思います。", "[i-Adj.] と思います。", "[na-Adj.] だと思います。"] },
+      { hiragana: "と思っている。", romanization: "to omotteiru", meaning: "I am thinking", exampleUsages: ["[Verb] と思っている。", "[Noun] だと思っている。", "[i-Adj.] と思っている。", "[na-Adj.] だと思っている。"] },
+      { hiragana: "と思わない？", romanization: "to omowanai", meaning: "don't you think? (casual)", exampleUsages: ["[Verb] と思わない？", "[Noun] だと思わない？", "[i-Adj.] と思わない？", "[na-Adj.] だと思わない？"] },
 
       // questions:
       { hiragana: "か？", romanization: "ka", meaning: "(question marker)", exampleUsages: ["[Clause] か？"] },
+
       { hiragana: "ね？", romanization: "ne", meaning: "isn't it? (expressing feelings, casual)", exampleUsages: ["[Clause] ね。"] },
+      { hiragana: "だろう", romanization: "darou", meaning: "right? (stating facts, casual)", exampleUsages: ["[Clause] だろう？"] },
+      { hiragana: "でしょう", romanization: "deshou", meaning: "right? (stating facts, polite)", exampleUsages: ["[Clause] でしょう？"] },
+
       { hiragana: "ませんか？", romanization: "masen ka", meaning: "will you?", exampleUsages: ["[Verb-ます (dropped)] ませんか？"] },
       { hiragana: "ましょうか？", romanization: "mashou ka", meaning: "shall I? (assuming yes)", exampleUsages: ["[Verb-ます (dropped)] ましょうか？"] },
 
-      { hiragana: "だろう", romanization: "darou", meaning: "right? (casual)", exampleUsages: ["[Clause] だろう？"] },
-      { hiragana: "でしょう", romanization: "deshou", meaning: "right? (polite)", exampleUsages: ["[Clause] でしょう？"] },
-
-      { hiragana: "どうして？", romanization: "doshite", meaning: "why 點解會係", exampleUsages: ["どうして [Clause]？", "[Noun] はどうして [Verb]？"] },
-      { hiragana: "どうやって？", romanization: "douyatte", meaning: "how 點樣", exampleUsages: ["どうやって [Clause]？", "[Noun] はどうやって [Verb]？"] },
+      { hiragana: "どう", romanization: "dou", meaning: "how is xxx?", exampleUsages: ["[Noun] はどうですか？"] },
+      { hiragana: "どうして", romanization: "doshite", meaning: "why does that happen?", exampleUsages: ["どうして [Clause]？", "[Noun] はどうして [Verb]？"] },
+      { hiragana: "どうやって", romanization: "douyatte", meaning: "how to xxx?", exampleUsages: ["どうやって [Clause]？", "[Noun] はどうやって [Verb]？"] },
 
       // exclamations:
-      { hiragana: "なあ。", romanization: "naa", meaning: '("I think") - wow / I wonder (casual)', exampleUsages: ["[Clause] なあ。"] },
+      { hiragana: "よ", romanization: "yo", meaning: "(exclamation, spoken)", exampleUsages: ["[Clause] よ。", "[Clause] よね。"] },
+      { hiragana: "なあ", romanization: "naa", meaning: '("I think") - wow / I wonder (casual)', exampleUsages: ["[Clause] なあ。"] },
+
       { hiragana: "ましょう！", romanization: "mashou", meaning: "let's xxx (polite)", exampleUsages: ["[Verb-ます (dropped)] ましょう！"] },
       { hiragana: "しましょう！", romanization: "shimashou", meaning: "let's do xxx (polite)", exampleUsages: ["[Noun] しましょう！"] },
 
       // simple sentences:
-      { hiragana: "〇〇んだ ", romanization: "-n da", meaning: "it is because (casual)", exampleUsages: ["[Clause] んだ。"] },
-      { hiragana: "〇〇んです", romanization: "-n desu", meaning: "it is because (polite)", exampleUsages: ["[Clause] んです。"] },
+      { hiragana: "より", romanization: "yori", meaning: "compared to", exampleUsages: ["[Noun] は [Noun] より [Adj.] です。"] },
+      { kanjis: ["〇〇より〇〇方が"], hiragana: "〇〇より〇〇ほうが", romanization: "yori ~ hou ga", meaning: "compared to xxx, xxx is even more xxx", exampleUsages: ["[Noun] より、 [Noun] のほうが [Adj.] です。", "[Verb] より、 [Verb] のほうが [Adj.] です。", "[Adj.] より、 [Adj.] のほうが [Adj.] です。"] },
+
+      { hiragana: "という ", romanization: "-n da", meaning: "it is because (spoken, casual)", exampleUsages: ["[Clause] んだ。"] },
+
+      { hiragana: "〇〇んだ ", romanization: "-n da", meaning: "it is because (spoken, casual)", exampleUsages: ["[Clause] んだ。"] },
+      { hiragana: "〇〇んです", romanization: "-n desu", meaning: "it is because (spoken, polite)", exampleUsages: ["[Clause] んです。"] },
+      { hiragana: "〇〇のだ ", romanization: "-no da", meaning: "it is because (written, casual)", exampleUsages: ["[Clause] のだ。"] },
+      { hiragana: "〇〇のです", romanization: "-no desu", meaning: "it is because (written, polite)", exampleUsages: ["[Clause] のです。"] },
+
+      { hiragana: "ほしい", preferredForm: "hiragana", kanjis: ["欲しい"], romanization: "hoshii", meaning: "I want xxx (casual)", exampleUsages: ["[Noun] がほしいです。"] },
+      { hiragana: "たい", romanization: "tai", meaning: "I want to xxx (casual)", exampleUsages: ["[Verb--ます (dropped)] たいです。"] },
+      { hiragana: "たくない", romanization: "takunai", meaning: "I don't want to xxx (casual)", exampleUsages: ["[Verb--ます (dropped)] たくない。"] },
+      { hiragana: "たかった", romanization: "takatta", meaning: "I wanted to xxx (casual)", exampleUsages: ["[Verb--ます (dropped)] たかった。"] },
+      { hiragana: "をください", preferredForm: "hiragana", kanjis: ["を下さい"], romanization: "-o kudasai", meaning: "please give me xxx (polite)", exampleUsages: ["[Noun] をください。", "[Noun] を [Noun (counter)] ください。"] },
+      { kanjis: ["〇〇の中で〇〇が一番〇〇"], hiragana: "〇〇のなかで〇〇がいちばん〇〇", romanization: "-no naka de 〇〇 ga ichiban", meaning: "in xxx, xxx is the most xxx", exampleUsages: ["[Noun] の中で [Noun] が 一番 ..."] },
+
+      { hiragana: "すぎる", preferredForm: "hiragana", kanjis: ["過ぎる"], romanization: "sugiru", meaning: "too much (present tense, casual)", exampleUsages: ["[Verb-ます (dropped] すぎる。", "[i-Adj. (dropped)] すぎる。", "[na-Adj.] すぎる。"] },
+      { hiragana: "すぎます", preferredForm: "hiragana", kanjis: ["過ぎます"], romanization: "sugimasu", meaning: "too much (present tense, casual)", exampleUsages: ["[Verb-ます (dropped] すぎます。", "[i-Adj. (dropped)] すぎます。", "[na-Adj.] すぎます。"] },
+      { hiragana: "すぎた", preferredForm: "hiragana", kanjis: ["過ぎた"], romanization: "sugita", meaning: "too much (past tense, casual)", exampleUsages: ["[Verb-ます (dropped] すぎた。", "[i-Adj. (dropped)] すぎた。", "[na-Adj.] すぎた。"] },
+      { hiragana: "すぎました", preferredForm: "hiragana", kanjis: ["過ぎました"], romanization: "sugimashita", meaning: "too much (past tense, polite)", exampleUsages: ["[Verb-ます (dropped] すぎました。", "[i-Adj. (dropped)] すぎました。", "[na-Adj.] すぎました。"] },
 
       { kanjis: ["に行く"], hiragana: "にいく", romanization: "ni iku", meaning: "I am going to xxx (casual)", exampleUsages: ["[Verb-ます (dropped)] に行く。"] },
       { kanjis: ["に行きます"], hiragana: "にいきません", romanization: "ni ikimasen", meaning: "I am going to xxx (polite)", exampleUsages: ["[Verb-ます (dropped)] に行きます。"] },
       { hiragana: "にする", romanization: "ni suru", meaning: "I am going for xxx (casual)", exampleUsages: ["[Noun] にする。"] },
       { hiragana: "にします", romanization: "ni shimasu", meaning: "I am going for xxx (polite)", exampleUsages: ["[Noun] にします。"] },
-
-      { hiragana: "ほしい", preferredForm: "hiragana", kanjis: ["欲しい"], romanization: "hoshii", meaning: "I want xxx", exampleUsages: ["[Noun] がほしいです。"] },
 
       { hiragana: "なる", preferredForm: "hiragana", kanjis: ["成る"], romanization: "naru", meaning: "become xxx (casual)", exampleUsages: ["[i-Adj. (dropped)] くなる", "[na-Adj.] になる", "[Noun] になる"] },
       { hiragana: "なります", preferredForm: "hiragana", kanjis: ["成ります"], romanization: "narimasu", meaning: "become xxx (polite)", exampleUsages: ["[i-Adj. (dropped)] くなります", "[na-Adj.] になります", "[Noun] になります"] },
@@ -291,7 +323,10 @@ export function appendPhrases(words: JapaneseWord[]) {
       { hiragana: "なくてはなりません", romanization: "nakutewa narimasen", meaning: "have to xxx (polite)", exampleUsages: ["[Verb-ない (dropped)] なくてはなりません。"] },
 
       // prefixes to nouns:
-      { hiragana: "の", romanization: "no", meaning: "(possession marker)", exampleUsages: ["[Noun] の [Noun] ..."] },
+      { hiragana: "お", preferredForm: "hiragana", kanjis: ["御"], romanization: "o", meaning: "(honorific, with native Japanese words)", exampleUsages: ["お[Noun]"] },
+      { hiragana: "ご", preferredForm: "hiragana", kanjis: ["御"], romanization: "go", meaning: "(honorific, with Chinese-derived words)", exampleUsages: ["ご[Noun]"] },
+
+      { hiragana: "の", romanization: "no", meaning: "(possession marker)", exampleUsages: ["[Noun] の [Noun] ...", "だれの [Noun] ですか？"] },
 
       { hiragana: "から", romanization: "kara", meaning: "(introducing precedent:) (who the action is from)", exampleUsages: ["... [Noun (people/things)] から [Verb]"] },
       { hiragana: "まだ", preferredForm: "hiragana", kanjis: ["未だ"], romanization: "(emphasize continuity:) just", meaning: "still (continuing)", exampleUsages: ["まだ [Noun]"] },
@@ -316,27 +351,58 @@ export function appendPhrases(words: JapaneseWord[]) {
       { kanjis: ["一緒に"], hiragana: "いっしょに", romanization: "isshoni", meaning: "together {with xxx}", exampleUsages: ["一緒に [Verb]", "[Noun] と 一緒に [Verb]。"] },
       { hiragana: "いつも", preferredForm: "hiragana", kanjis: ["何時も"], romanization: "itsumo", meaning: "always", exampleUsages: ["{[Noun] は} いつも [Verb / Adj.]"] },
 
+      { kanjis: ["〇〇のが上手"], hiragana: "のがじょうず", romanization: "no ga jouzu", meaning: "good at xxx", exampleUsages: ["... [Verb] のが上手 です。"] },
+      { kanjis: ["〇〇のが下手"], hiragana: "のがへた", romanization: "no ga heta", meaning: "bad at xxx", exampleUsages: ["... [Verb] のが下手 です。"] },
+      { kanjis: ["〇〇のが好き"], hiragana: "のがじょうず", romanization: "no ga suki", meaning: "like xxx", exampleUsages: ["... [Verb] のが好き です。"] },
+
       // prefixes to adjs:
       { kanjis: ["一番", "１番"], hiragana: "いちばん", romanization: "ichiban", meaning: "xxx is the most xxx", exampleUsages: ["[Noun] は(が) 一番 [Verb / Adj.] です。"] },
+      { hiragana: "とても", rareKanjis: ["迚も"], romanization: "totemo", meaning: "very", exampleUsages: ["とても [Adj.]", "とても [Verb]"] },
 
       // suffixes to nouns:
       { hiragana: "も", romanization: "mo", meaning: "also", exampleUsages: ["[Noun] も [Verb]", "[Noun] も [Noun] も [Verb]", "[Noun] も [Noun] も [Noun] も [Verb]"] },
       { hiragana: "だけ", romanization: "dake", meaning: "xxx (in its entirety)", exampleUsages: ["[Noun] だけ", "[Verb] だけ", "[Adj.] だけ", "[Clause] だけ"] },
+      { hiragana: "のせいで", preferredForm: "hiragana", rareKanjis: ["の所為で"], romanization: "noseide", meaning: "due to", exampleUsages: ["[Noun] のせいで [Clause]"] },
       // TODO: [Noun-の]: noun as verb
       { kanjis: ["前に"], hiragana: "まえに", romanization: "maeni", meaning: "before xxx", exampleUsages: ["[Noun] の前に ..."] },
       { kanjis: ["後で"], hiragana: "あとで", romanization: "atode", meaning: "after xxx (informal)", exampleUsages: ["[Noun] の後で ..."] },
       { kanjis: ["後に"], hiragana: "あとに", romanization: "atoni", meaning: "after xxx (formal)", exampleUsages: ["[Noun] の後に ..."] },
 
       // suffixes to verbs:
-      { hiragana: "から", romanization: "kara", meaning: "(introducing precedent:) xxx and immediately after", exampleUsages: ["[Verb-て] から ..."] },
-      { hiragana: "ないで", romanization: "naide", meaning: "without xxx", exampleUsages: ["[Verb-ない] で [Verb]"] },
+      { hiragana: "てください", romanization: "-te kudasai", meaning: "please do xxx", exampleUsages: ["[Verb-て] ください ..."] },
+      { hiragana: "てもいいです", romanization: "-temo ii desu", meaning: "you can xxx", exampleUsages: ["[Verb-て] もいいです", "[Verb-て] もいいですか？", "[Noun] てもいいです", "[i-Adj. (dropped)] もいいです", "[na-Adj.] てもいいです"] },
+
+      { hiragana: "つもりです", romanization: "tsumori", meaning: "planning to", exampleUsages: ["[Verb] つもりです。"] },
+      { hiragana: "つもりはない", romanization: "tsumori", meaning: "planning not to (spoken, casual)", exampleUsages: ["[Verb-ない (dropped)] つもりはない"] },
+
+      { hiragana: "ないで", romanization: "naide", meaning: "without xxx", exampleUsages: ["[Verb-ない (dropped)] ないで [Verb]"] },
+
+      { hiragana: "ている", romanization: "-te iru", meaning: "is doing xxx / xxx is still ongoing (active voice, casual)", exampleUsages: ["[Verb-て] いる ..."] },
+      { hiragana: "ています", romanization: "-te imasu", meaning: "is doing xxx / xxx is still ongoing (active voice, polite)", exampleUsages: ["[Verb-て] います ..."] },
+      { hiragana: "ていない", romanization: "-te inai", meaning: "is not doing / xxx is still ongoing (active voice, casual)", exampleUsages: ["[Verb-て] いない ..."] },
+      { hiragana: "ていません", romanization: "-te imasen", meaning: "is not doing / xxx is still ongoing (active voice, polite)", exampleUsages: ["[Verb-て] いません ..."] },
+
+      { hiragana: "たことがある", romanization: "-ta koto ga aru", meaning: "have done xxx (casual)", exampleUsages: ["[Verb-た] ことがある ..."] },
+      { hiragana: "たことがあります", romanization: "-ta koto ga arimasu", meaning: "have done xxx (polite)", exampleUsages: ["[Verb-た] ことがあります ..."] },
+      { hiragana: "たことがない", romanization: "-ta koto ga nai", meaning: "haven't done xxx (casual)", exampleUsages: ["[Verb-た] ことがない ..."] },
+      { hiragana: "たことがありません", romanization: "-ta koto ga arimasen", meaning: "haven't done xxx (polite)", exampleUsages: ["[Verb-た] ことがありません ..."] },
+
+      { hiragana: "てある", romanization: "-te aru", meaning: "xxx has been done (passive voice, casual)", exampleUsages: ["[Verb-て] ある ..."] },
+      { hiragana: "てあります", romanization: "-te arimasu", meaning: "xxx has been done (passive voice, polite)", exampleUsages: ["[Verb-て] あります ..."] },
+      { hiragana: "てない", romanization: "-te nai", meaning: "xxx has not been done (passive voice, casual)", exampleUsages: ["[Verb-て] ない ..."] },
+      { hiragana: "てありません", romanization: "-te arimasen", meaning: "xxx has not been done (passive voice, polite)", exampleUsages: ["[Verb-て] ありません ..."] },
+
+      { hiragana: "てから", romanization: "kara", meaning: "(introducing precedent:) xxx and immediately after", exampleUsages: ["[Verb-て] から ..."] },
       { kanjis: ["前に"], hiragana: "まえに", romanization: "maeni", meaning: "before xxx", exampleUsages: ["[Verb-る] 前に ..."] },
       { kanjis: ["後で"], hiragana: "あとで", romanization: "atode", meaning: "after xxx (informal)", exampleUsages: ["[Verb-た] 後で ..."] },
       { kanjis: ["後に"], hiragana: "あとに", romanization: "atoni", meaning: "after xxx (formal)", exampleUsages: ["[Verb-た] 後に ..."] },
 
       { kanjis: ["方"], hiragana: "かた", romanization: "kata", meaning: "way of doing", exampleUsages: ["[Noun] の [Verb-ます (dropped)] 方"] },
-      { kanjis: ["方がいい", "方が良い", "ほうが良い"], hiragana: "ほうがいい", romanization: "hougaii", meaning: "is preferred", exampleUsages: ["[Verb] 方がいい ..."] },
-      { kanjis: ["方が良い", "ほうが良い", "方がよい"], hiragana: "ほうがよい", romanization: "hougayoi", meaning: "is preferred", exampleUsages: ["[Verb] 方が良い ..."] },
+      { kanjis: ["方がいい", "方が良い", "ほうが良い"], hiragana: "ほうがいい", romanization: "hougaii", meaning: "should xxx", exampleUsages: ["[Verb] 方がいい ..."] },
+      { kanjis: ["方が良い", "ほうが良い", "方がよい"], hiragana: "ほうがよい", romanization: "hougayoi", meaning: "should xxx", exampleUsages: ["[Verb] 方が良い ..."] },
+
+      { hiragana: "てはいけない", romanization: "-te wa ikenai", meaning: "must not (written, casual)", exampleUsages: ["[Verb-て] はいけない。"] },
+      { hiragana: "ではいけません", romanization: "-te wa ikemasen", meaning: "must not (written, polite)", exampleUsages: ["[Verb-て] はいけません。"] },
 
       // TODO: wake dewanai
       // TODO: beki dewanai
@@ -345,6 +411,14 @@ export function appendPhrases(words: JapaneseWord[]) {
       // TODO: noni
 
       // TODO: Shika, Bakari, Nomi
+
+      // TODO: [Clause] ということ です (it is said?)
     );
   }
 }
+
+// TODO:
+// In Japanese, "must" or "have to" is expressed using verb forms like V-なければならない (nakereba naranai) or V-なくてはいけない (nakute wa ikenai) for formal/written speech,
+// while casual speech uses shortened versions like V-なくちゃ (nakucha) or V-なきゃ (nakya),
+// all meaning something is necessary or required.
+// These structures attach to the nai-form (negative) of a verb, essentially meaning "if [verb] doesn't happen, it's not good".

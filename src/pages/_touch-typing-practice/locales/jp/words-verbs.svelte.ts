@@ -118,6 +118,8 @@ export function appendVerbs(words: JapaneseWord[]) {
 
       { kanjis: ["諦める"], hiragana: "あきらめる", romanization: "akirameru", meaning: "give up" },
       { kanjis: ["外れる"], hiragana: "はずれる", romanization: "hazureru", meaning: "miss (not hit)" },
+
+      { kanjis: ["似る"], hiragana: "にる", romanization: "niru", meaning: "be alike" },
     );
   }
 
