@@ -19,7 +19,10 @@
     "printWidth": 100,
     "overrides": [
       {
-        "files": "**/locales/*/*.svelte.ts",
+        "files": [
+          "**/locales/*/words-*.svelte.ts",
+          "**/locales/*/letters.svelte.ts"
+        ],
         "options": {
           "printWidth": 999
         }

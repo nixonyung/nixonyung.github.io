@@ -218,9 +218,9 @@
           >
             {#each question.questionKey as values}
               {#if typeof values === "string"}
-                <div class="min-h-4">{values}</div>
+                <div>{values}</div>
               {:else}
-                <div class="flex min-h-4 flex-col items-start text-xs">
+                <div class="flex flex-col items-start text-xs">
                   {#each values as value}
                     <span>{value}</span>
                   {/each}
@@ -254,9 +254,9 @@
           >
             {#each option as values}
               {#if typeof values === "string"}
-                <div class="min-h-4">{values}</div>
+                <div>{values}</div>
               {:else}
-                <div class="flex min-h-4 flex-col items-start text-xs">
+                <div class="flex flex-col items-start text-xs">
                   {#each values as value}
                     <span>{value}</span>
                   {/each}

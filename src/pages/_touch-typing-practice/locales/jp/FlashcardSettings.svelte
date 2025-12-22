@@ -5,10 +5,16 @@
   import { jp } from "./jp.svelte";
 
   useSyncSettings(jp.FLASHCARD_SETTINGS_SCHEMA, jp.flashcardSettings);
+
+  const allVerbsDisabled = $derived(!jp.flashcardSettings.enableVerbs);
+  const allAdjsDisabled = $derived(
+    !jp.flashcardSettings.enableAdjectivesFeelings &&
+      !jp.flashcardSettings.enableAdjectivesDescriptors,
+  );
 </script>
 
-<div class="flex flex-col flex-wrap gap-2">
-  <div class="flex items-center-safe gap-9">
+<div class="flex flex-col flex-wrap gap-3">
+  <div class="flex items-center-safe gap-6">
     <Highlighted
       onclick={() => {
         if (
@@ -33,109 +39,220 @@
     </Highlighted>
     <CheckboxInput bind:checked={jp.flashcardSettings.enablePronounsPeople} label="people" />
     <CheckboxInput bind:checked={jp.flashcardSettings.enablePronounsThings} label="things" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enablePronounsGeneral} label="generic" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enablePronounsGeneral} label="general" />
     <CheckboxInput
       bind:checked={jp.flashcardSettings.enablePronounsQuestionWords}
       label="question words"
     />
   </div>
-  <div class="flex items-center-safe gap-9">
+  <div class="flex items-start gap-6">
     <Highlighted
       onclick={() => {
         if (
-          !jp.flashcardSettings.enableNounsPeopleGeneric ||
-          !jp.flashcardSettings.enableNounsPeopleFamily ||
-          !jp.flashcardSettings.enableNounsPeopleFellows ||
-          !jp.flashcardSettings.enableNounsNavigation ||
-          !jp.flashcardSettings.enableNounsPlacesGeneric ||
+          !jp.flashcardSettings.enableNounsPeopleCharacteristicsGeneric ||
+          !jp.flashcardSettings.enableNounsPeopleCharacteristicsGender ||
+          !jp.flashcardSettings.enableNounsPeopleCharacteristicsAge ||
+          !jp.flashcardSettings.enableNounsPeopleCharacteristicsProfessions ||
+          !jp.flashcardSettings.enableNounsPeopleCharacteristicsSocialStatus ||
+          !jp.flashcardSettings.enableNounsPeopleRelationshipsImmediateFamily ||
+          !jp.flashcardSettings.enableNounsPeopleRelationshipsExtendedFamily ||
+          !jp.flashcardSettings.enableNounsPeopleRelationshipsChosenFamily ||
+          !jp.flashcardSettings.enableNounsPeopleRelationshipsFriends ||
+          !jp.flashcardSettings.enableNounsPeopleRelationshipsCoworkers ||
+          !jp.flashcardSettings.enableNounsAnimals ||
+          !jp.flashcardSettings.enableNounsObjects ||
           !jp.flashcardSettings.enableNounsTime ||
-          !jp.flashcardSettings.enableNounsIntangible ||
-          !jp.flashcardSettings.enableNounsMiscellaneous
+          !jp.flashcardSettings.enableNounsNavigation ||
+          !jp.flashcardSettings.enableNounsAbstract
         ) {
-          jp.flashcardSettings.enableNounsPeopleGeneric = true;
-          jp.flashcardSettings.enableNounsPeopleFamily = true;
-          jp.flashcardSettings.enableNounsPeopleFellows = true;
-          jp.flashcardSettings.enableNounsNavigation = true;
-          jp.flashcardSettings.enableNounsPlacesGeneric = true;
+          jp.flashcardSettings.enableNounsPeopleCharacteristicsGeneric = true;
+          jp.flashcardSettings.enableNounsPeopleCharacteristicsGender = true;
+          jp.flashcardSettings.enableNounsPeopleCharacteristicsAge = true;
+          jp.flashcardSettings.enableNounsPeopleCharacteristicsProfessions = true;
+          jp.flashcardSettings.enableNounsPeopleCharacteristicsSocialStatus = true;
+          jp.flashcardSettings.enableNounsPeopleRelationshipsImmediateFamily = true;
+          jp.flashcardSettings.enableNounsPeopleRelationshipsExtendedFamily = true;
+          jp.flashcardSettings.enableNounsPeopleRelationshipsChosenFamily = true;
+          jp.flashcardSettings.enableNounsPeopleRelationshipsFriends = true;
+          jp.flashcardSettings.enableNounsPeopleRelationshipsCoworkers = true;
+          jp.flashcardSettings.enableNounsAnimals = true;
+          jp.flashcardSettings.enableNounsObjects = true;
           jp.flashcardSettings.enableNounsTime = true;
-          jp.flashcardSettings.enableNounsIntangible = true;
-          jp.flashcardSettings.enableNounsMiscellaneous = true;
+          jp.flashcardSettings.enableNounsNavigation = true;
+          jp.flashcardSettings.enableNounsAbstract = true;
         } else {
-          jp.flashcardSettings.enableNounsPeopleGeneric = false;
-          jp.flashcardSettings.enableNounsPeopleFamily = false;
-          jp.flashcardSettings.enableNounsPeopleFellows = false;
-          jp.flashcardSettings.enableNounsNavigation = false;
-          jp.flashcardSettings.enableNounsPlacesGeneric = false;
+          jp.flashcardSettings.enableNounsPeopleCharacteristicsGeneric = false;
+          jp.flashcardSettings.enableNounsPeopleCharacteristicsGender = false;
+          jp.flashcardSettings.enableNounsPeopleCharacteristicsAge = false;
+          jp.flashcardSettings.enableNounsPeopleCharacteristicsProfessions = false;
+          jp.flashcardSettings.enableNounsPeopleCharacteristicsSocialStatus = false;
+          jp.flashcardSettings.enableNounsPeopleRelationshipsImmediateFamily = false;
+          jp.flashcardSettings.enableNounsPeopleRelationshipsExtendedFamily = false;
+          jp.flashcardSettings.enableNounsPeopleRelationshipsChosenFamily = false;
+          jp.flashcardSettings.enableNounsPeopleRelationshipsFriends = false;
+          jp.flashcardSettings.enableNounsPeopleRelationshipsCoworkers = false;
+          jp.flashcardSettings.enableNounsAnimals = false;
+          jp.flashcardSettings.enableNounsObjects = false;
           jp.flashcardSettings.enableNounsTime = false;
-          jp.flashcardSettings.enableNounsIntangible = false;
-          jp.flashcardSettings.enableNounsMiscellaneous = false;
+          jp.flashcardSettings.enableNounsNavigation = false;
+          jp.flashcardSettings.enableNounsAbstract = false;
         }
       }}
     >
       nouns:
     </Highlighted>
-    <CheckboxInput
-      bind:checked={jp.flashcardSettings.enableNounsPeopleGeneric}
-      label="generic people"
-    />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsPeopleFamily} label="family" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsPeopleFellows} label="fellows" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsNavigation} label="navigation" />
-    <CheckboxInput
-      bind:checked={jp.flashcardSettings.enableNounsPlacesGeneric}
-      label="generic places"
-    />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsTime} label="time" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIntangible} label="intangible" />
-    <CheckboxInput
-      bind:checked={jp.flashcardSettings.enableNounsMiscellaneous}
-      label="miscellaneous"
-    />
+
+    <div class="flex flex-col gap-y-1.5">
+      <div class="flex flex-wrap items-center-safe gap-x-3">
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableNounsPeopleCharacteristicsGeneric}
+          label="Generic People"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableNounsPeopleCharacteristicsGender}
+          label="People By Gender"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableNounsPeopleCharacteristicsAge}
+          label="People By Age"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableNounsPeopleCharacteristicsProfessions}
+          label="People By Professions"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableNounsPeopleCharacteristicsSocialStatus}
+          label="People By Social Status"
+        />
+      </div>
+      <div class="flex flex-wrap items-center-safe gap-x-3">
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableNounsPeopleRelationshipsImmediateFamily}
+          label="Immediate Family"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableNounsPeopleRelationshipsExtendedFamily}
+          label="Extended Family"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableNounsPeopleRelationshipsChosenFamily}
+          label="Chosen Family"
+        />
+      </div>
+      <div class="flex flex-wrap items-center-safe gap-x-3">
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableNounsPeopleRelationshipsFriends}
+          label="Friends"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableNounsPeopleRelationshipsCoworkers}
+          label="Coworkers"
+        />
+      </div>
+      <div class="flex flex-wrap items-center-safe gap-x-3">
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsAnimals} label="Animals" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsObjects} label="Objects" />
+      </div>
+      <div class="flex flex-wrap items-center-safe gap-x-3">
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsTime} label="Time" />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableNounsNavigation}
+          label="Navigation"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableNounsAbstract}
+          label="Abstract Concepts"
+        />
+      </div>
+    </div>
   </div>
-  <div class="flex items-center-safe gap-9">
+  <div class="flex items-center-safe gap-6">
+    <Highlighted
+      vertical
+      onclick={(ev) => {
+        if (ev.target !== ev.currentTarget) return;
+
+        if (!jp.flashcardSettings.enableVerbs) {
+          jp.flashcardSettings.enableVerbs = true;
+        } else {
+          jp.flashcardSettings.enableVerbs = false;
+        }
+      }}
+    >
+      verbs:
+
+      <div class="flex items-center-safe gap-3">
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableTransitiveVerbs}
+          label="Transitive"
+          disabled={allVerbsDisabled}
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableIntransitiveVerbs}
+          label="Intransitive"
+          disabled={allVerbsDisabled}
+        />
+      </div>
+      <div class="flex items-center-safe gap-3">
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableGodanVerbs}
+          label="Godan"
+          disabled={allVerbsDisabled}
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableIchidanVerbs}
+          label="Ichidan"
+          disabled={allVerbsDisabled}
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableIrregularVerbs}
+          label="Irregular"
+          disabled={allVerbsDisabled}
+        />
+      </div>
+    </Highlighted>
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbs} label="all" />
+  </div>
+  <div class="flex items-center-safe gap-6">
     <Highlighted
       vertical
       onclick={(ev) => {
         if (ev.target !== ev.currentTarget) return;
 
         if (
-          !jp.flashcardSettings.enableVerbsTransitive ||
-          !jp.flashcardSettings.enableVerbsIntransitive
+          !jp.flashcardSettings.enableAdjectivesFeelings ||
+          !jp.flashcardSettings.enableAdjectivesDescriptors
         ) {
-          jp.flashcardSettings.enableVerbsTransitive = true;
-          jp.flashcardSettings.enableVerbsIntransitive = true;
+          jp.flashcardSettings.enableAdjectivesFeelings = true;
+          jp.flashcardSettings.enableAdjectivesDescriptors = true;
         } else {
-          jp.flashcardSettings.enableVerbsTransitive = false;
-          jp.flashcardSettings.enableVerbsIntransitive = false;
-        }
-      }}
-    >
-      <span>verbs:</span>
-      <CheckboxInput bind:checked={jp.flashcardSettings.enableGodanVerbs} label="Godan" />
-      <CheckboxInput bind:checked={jp.flashcardSettings.enableIchidanVerbs} label="Ichidan" />
-      <CheckboxInput bind:checked={jp.flashcardSettings.enableIrregularVerbs} label="Irregular" />
-    </Highlighted>
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsTransitive} label="transitive" />
-    <CheckboxInput
-      bind:checked={jp.flashcardSettings.enableVerbsIntransitive}
-      label="intransitive"
-    />
-  </div>
-  <div class="flex items-center-safe gap-9">
-    <Highlighted
-      onclick={() => {
-        if (!jp.flashcardSettings.enableAdjectives) {
-          jp.flashcardSettings.enableAdjectives = true;
-        } else {
-          jp.flashcardSettings.enableAdjectives = false;
+          jp.flashcardSettings.enableAdjectivesFeelings = false;
+          jp.flashcardSettings.enableAdjectivesDescriptors = false;
         }
       }}
     >
       adjectives:
+
+      <div class="flex items-center-safe gap-3">
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableIAdjectives}
+          label="い-adj."
+          disabled={allAdjsDisabled}
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableNaAdjectives}
+          label="な-adj."
+          disabled={allAdjsDisabled}
+        />
+      </div>
     </Highlighted>
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableAdjectives} label="adjectives" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableAdjectivesFeelings} label="Feelings" />
+    <CheckboxInput
+      bind:checked={jp.flashcardSettings.enableAdjectivesDescriptors}
+      label="Descriptors"
+    />
   </div>
-  <div class="flex items-center-safe gap-9">
+  <div class="flex items-center-safe gap-6">
     <Highlighted
       onclick={() => {
         if (!jp.flashcardSettings.enableAdverbs) {
@@ -149,7 +266,7 @@
     </Highlighted>
     <CheckboxInput bind:checked={jp.flashcardSettings.enableAdverbs} label="adverbs" />
   </div>
-  <div class="flex items-center-safe gap-9">
+  <div class="flex items-center-safe gap-6">
     <Highlighted
       onclick={() => {
         if (
@@ -170,7 +287,7 @@
         }
       }}
     >
-      phrases:
+      phrases
     </Highlighted>
     <CheckboxInput bind:checked={jp.flashcardSettings.enablePhrasesParticles} label="particles" />
     <CheckboxInput
@@ -183,7 +300,7 @@
       label="miscellaneous"
     />
   </div>
-  <div class="flex items-center-safe gap-9">
+  <div class="flex items-center-safe gap-6">
     <Highlighted
       onclick={() => {
         if (

@@ -49,20 +49,20 @@
           valueFn: ({ kanjis, hiragana, katakana, preferredForm }) => {
             switch (preferredForm) {
               case "kanji":
-                return kanjis;
+                return kanjis?.join(" / ");
               case "hiragana":
                 return hiragana;
               case "katakana":
                 return katakana;
               case undefined:
-                return kanjis ?? hiragana ?? katakana;
+                return kanjis?.join(" / ") ?? hiragana ?? katakana;
             }
           },
           defaultPosition: "question",
         },
         {
           label: "example usages",
-          valueFn: ({ exampleUsages }) => exampleUsages,
+          valueFn: ({ exampleUsages }) => exampleUsages ?? [],
           defaultPosition: "question",
         },
         {

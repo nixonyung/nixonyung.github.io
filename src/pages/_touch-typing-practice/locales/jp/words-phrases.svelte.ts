@@ -1,6 +1,25 @@
 import type { JapaneseWord } from "../../types";
 import { jp } from "./jp.svelte";
 
+// TODO: by intents
+//
+// greetings
+//
+// questions
+// - what is x / is x y?
+// - how many?
+// - making requests
+//
+// making statements
+// - descriptions, e.g. what I did/saw/felt / what I am doing/seeing/feeling
+// - plans, e.g. what I want / what I will do
+// - conditionals
+// - answering questions
+
+// ---
+
+// TODO: desu ne: answer questions
+
 export function appendPhrases(words: JapaneseWord[]) {
   // TODO: example usage for sentence structures
   if (jp.flashcardSettings.enablePhrasesParticles) {
@@ -25,15 +44,15 @@ export function appendPhrases(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
-      { hiragana: "いい", romanization: "ii", meaning: "that's good (informal)" },
       { hiragana: "そう", preferredForm: "hiragana", rareKanjis: ["然う"], romanization: "sou", meaning: "(agree)" },
-      { kanjis: ["良い", "好い", "善い"], rareKanjis: ["佳い", "吉い", "宜い"], hiragana: "よい", romanization: "yoi", meaning: "that's good (formal)" },
+
+      { hiragana: "いいえ", romanization: "iie", meaning: "no (formal) / don't mention it" },
+      { hiragana: "いや", preferredForm: "hiragana", kanjis: ["否"], romanization: "iya", meaning: "no" },
+
       { hiragana: "まじ？", romanization: "maji", meaning: "seriously? (informal)" },
       { hiragana: "まだまだ", preferredForm: "hiragana", kanjis: ["未だ未だ"], romanization: "madamada", meaning: "not done yet" },
       { hiragana: "まだですか？", preferredForm: "hiragana", kanjis: ["未だですか？"], romanization: "madadesuka", meaning: "not done yet?" },
 
-      { hiragana: "いや", preferredForm: "hiragana", kanjis: ["否"], romanization: "iya", meaning: "no" },
-      { hiragana: "いいえ", romanization: "iie", meaning: "no (formal) / don't mention it" },
       { hiragana: "あれっ？", romanization: "are", meaning: "eh?" },
       { hiragana: "その…", romanization: "sono", meaning: "um... / 那個吧..." },
 
@@ -60,8 +79,6 @@ export function appendPhrases(words: JapaneseWord[]) {
       { kanjis: ["何ですか？"], hiragana: "なんですか？", romanization: "nandesuka", meaning: "what is it? (polite)" },
       { kanjis: ["何なのか？"], hiragana: "なんなのか？", romanization: "nannanoka", meaning: "what is this about?" },
       { kanjis: ["何なのか？"], hiragana: "なになのか？", romanization: "naninanoka", meaning: "what is this about?" },
-      { hiragana: "どうして？", preferredForm: "hiragana", rareKanjis: ["如何して？"], romanization: "doushite", meaning: "why? / how?" },
-      { hiragana: "どうして！", preferredForm: "hiragana", rareKanjis: ["如何して！"], romanization: "doushite", meaning: "no way!" },
 
       { hiragana: "どれにする?", romanization: "dore ni suru", meaning: "Which one are you going for?" },
       { hiragana: "これにします。", romanization: "kore ni shimasu", meaning: "I am going for this." },
@@ -76,10 +93,31 @@ export function appendPhrases(words: JapaneseWord[]) {
       { kanjis: ["最後まで"], hiragana: "さいごまで", romanization: "saigomade", meaning: "till the end", exampleUsages: ["最後まで [Verb]"] },
 
       { kanjis: ["仕方がない"], hiragana: "しかたがない", romanization: "shikataganai", meaning: "It can't be helped" },
+      { kanjis: ["失礼しました"], hiragana: "しつれいしました", romanization: "shitsureishimashita", meaning: "Excuse me." },
 
       { kanjis: ["日本へようこそ！"], hiragana: "にほんへようこそ！", romanization: "nihon e youkoso", meaning: "Welcome to Japan!" },
     );
   }
+
+  /*
+  TODO:
+  [Noun] desu: is
+
+  [Noun] dewa: is not xxx
+    -> ja (spoken)
+  [Verb] tewa: if not xxx
+    -> cha (spoken)
+  [Clause] dewa: in that case
+
+  aru / iru: (exist)
+
+  => desu = is, dewa = is (not)
+
+  ---
+
+  Verb-ta = past tense
+  Verb-masu = politeness
+  */
 
   if (jp.flashcardSettings.enableSentenceStructuresDesu) {
     words.splice(
@@ -107,6 +145,8 @@ export function appendPhrases(words: JapaneseWord[]) {
     );
   }
 
+  // usually native Japanese, express feelings
+  // used like verbs
   if (jp.flashcardSettings.enableSentenceStructuresIAdjectives) {
     words.splice(
       words.length,
@@ -127,6 +167,8 @@ export function appendPhrases(words: JapaneseWord[]) {
     );
   }
 
+  // usually derived from Chinese
+  // usually more formal
   if (jp.flashcardSettings.enableSentenceStructuresNaAdjectives) {
     words.splice(
       words.length,
@@ -136,7 +178,7 @@ export function appendPhrases(words: JapaneseWord[]) {
       // present
       { hiragana: "な", romanization: "na", meaning: "(na-adj. in present tense, middle-of-sentence)", exampleUsages: ["[na-Adj.] な"] },
       { hiragana: "だ", romanization: "da", meaning: "(na-adj. in present tense, end-of-sentence, casual)", exampleUsages: ["[na-Adj.] だ。"] },
-      { hiragana: "です", romanization: "da", meaning: "(na-adj. in present tense, end-of-sentence, polite)", exampleUsages: ["[na-Adj.] です。"] },
+      { hiragana: "です", romanization: "desu", meaning: "(na-adj. in present tense, end-of-sentence, polite)", exampleUsages: ["[na-Adj.] です。"] },
 
       // past
       { hiragana: "だった", romanization: "datta", meaning: "(na-adj. in past tense, casual)", exampleUsages: ["[na-Adj.] だった"] },
@@ -223,7 +265,7 @@ export function appendPhrases(words: JapaneseWord[]) {
       { hiragana: "から", romanization: "kara", meaning: "(introducing precedent:) because of ...", exampleUsages: ["[Clause ending with Verb] から ...", "[Clause ending with Noun] だから ...", "[Clause ending with i-Adj.] から ...", "[Clause ending with na-Adj.] だから ..."] },
       { hiragana: "ので", romanization: "node", meaning: "because ...", exampleUsages: ["[Clause ending with Verb] ので ...", "[Clause ending with Noun] なので ...", "[Clause ending with i-Adj.] ので ...", "[Clause ending with na-Adj.] なので ..."] },
 
-      { hiragana: "もう", romanization: "mou", meaning: '("not happening again") already', exampleUsages: ["[Noun] はもう [Clause]"] },
+      { hiragana: "もう", romanization: "mou", meaning: '("not happening again":) already', exampleUsages: ["[Noun] はもう [Clause]"] },
       { kanjis: ["時", "刻", "秋"], hiragana: "とき", romanization: "toki", meaning: "at that time", exampleUsages: ["[Verb] 時、", "[Noun] の時、", "[na-Adj.] 時、", "[i-Adj.] 時、"] },
 
       { hiragana: "か", romanization: "ka", meaning: "or (listing options)", exampleUsages: ["[Noun] か [Noun] か ...", "[Noun] か [Noun] ？"] },
@@ -234,8 +276,9 @@ export function appendPhrases(words: JapaneseWord[]) {
       { hiragana: "そして", romanization: "soshite", meaning: "and then", exampleUsages: ["...。 そして ..."] },
       { hiragana: "それから", romanization: "sorekara", meaning: "after that", exampleUsages: ["...。 それから ...", "あなたはそれから ...？"] },
 
-      { hiragana: "でも", romanization: "demo", meaning: "however (spoken, casual)", exampleUsages: ["...。 でも、[Clause]"] },
-      { hiragana: "しかし", romanization: "shikashi", meaning: "however (written, polite)", exampleUsages: ["...。 しかし、[Clause]"] },
+      { hiragana: "でも", romanization: "demo", meaning: "however (in contrast) (spoken, casual)", exampleUsages: ["...。 でも、[Clause]"] },
+      { hiragana: "しかし", rareKanjis: ["然し", "併し"], romanization: "shikashi", meaning: "however (in contrast) (written, polite)", exampleUsages: ["...。 しかし、[Clause]"] },
+      { kanjis: ["但し"], hiragana: "ただし", romanization: "tadashi", meaning: "however (exception to what is said) (written, polite)", exampleUsages: ["...。 しかし、[Clause]"] },
 
       { hiragana: "が", romanization: "ga", meaning: "even though", exampleUsages: ["[Clause] が、 [Clause]。"] },
       { hiragana: "けど", romanization: "kedo", meaning: "but (casual)", exampleUsages: ["[Clause] けど、 [Clause]。", "[Noun] は [Adj.] けど [Adj.]。", "...。 けど、 [Clause]。"] },
@@ -258,7 +301,7 @@ export function appendPhrases(words: JapaneseWord[]) {
       { hiragana: "ましょうか？", romanization: "mashou ka", meaning: "shall I? (assuming yes)", exampleUsages: ["[Verb-ます (dropped)] ましょうか？"] },
 
       { hiragana: "どう", romanization: "dou", meaning: "how is xxx?", exampleUsages: ["[Noun] はどうですか？"] },
-      { hiragana: "どうして", romanization: "doshite", meaning: "why does that happen?", exampleUsages: ["どうして [Clause]？", "[Noun] はどうして [Verb]？"] },
+      { hiragana: "どうして", romanization: "doushite", meaning: "why does that happen?", exampleUsages: ["どうして [Clause]？", "[Noun] はどうして [Verb]？"] },
       { hiragana: "どうやって", romanization: "douyatte", meaning: "how to xxx?", exampleUsages: ["どうやって [Clause]？", "[Noun] はどうやって [Verb]？"] },
 
       // exclamations:
@@ -272,7 +315,7 @@ export function appendPhrases(words: JapaneseWord[]) {
       { hiragana: "より", romanization: "yori", meaning: "compared to", exampleUsages: ["[Noun] は [Noun] より [Adj.] です。"] },
       { kanjis: ["〇〇より〇〇方が"], hiragana: "〇〇より〇〇ほうが", romanization: "yori ~ hou ga", meaning: "compared to xxx, xxx is even more xxx", exampleUsages: ["[Noun] より、 [Noun] のほうが [Adj.] です。", "[Verb] より、 [Verb] のほうが [Adj.] です。", "[Adj.] より、 [Adj.] のほうが [Adj.] です。"] },
 
-      { hiragana: "という ", romanization: "-n da", meaning: "it is because (spoken, casual)", exampleUsages: ["[Clause] んだ。"] },
+      { hiragana: "という", romanization: "-n da", meaning: "it is because (spoken, casual)", exampleUsages: ["[Clause] んだ。"] },
 
       { hiragana: "〇〇んだ ", romanization: "-n da", meaning: "it is because (spoken, casual)", exampleUsages: ["[Clause] んだ。"] },
       { hiragana: "〇〇んです", romanization: "-n desu", meaning: "it is because (spoken, polite)", exampleUsages: ["[Clause] んです。"] },
@@ -336,17 +379,17 @@ export function appendPhrases(words: JapaneseWord[]) {
       // prefixes to verbs:
       { hiragana: "を", romanization: "o", meaning: "(object marker)", exampleUsages: ["[Noun (object)] を [Verb] ..."] },
       { hiragana: "に", romanization: "ni", meaning: "(time/location marker)", exampleUsages: ["[Noun (time/location)] に [Verb] ...", "[Noun (time)] に [Noun (location)] に [Verb] ..."] },
-      { hiragana: "へ", romanization: "e", meaning: "(obscure location marker)", exampleUsages: ["[Noun (time/location)] に [Verb] ..."] },
+      { hiragana: "へ", romanization: "e", meaning: "(direction marker)", exampleUsages: ["[Noun (time/location)] に [Verb] ..."] },
       { hiragana: "で", romanization: "de", meaning: "location/method/tool/material/language/scope/cause of an action", exampleUsages: ["[Noun] で [Verb] ..."] },
 
       { hiragana: "から", romanization: "kara", meaning: "(introducing precedent:) since", exampleUsages: ["[Noun (time/place)] から [Verb]"] },
       { hiragana: "まで", romanization: "made", meaning: "(introducing termination:) until", exampleUsages: ["[Noun (time/place)] まで [Verb]"] },
       { hiragana: "〇〇から〇〇まで", romanization: "kara, made", meaning: "from xxx to xxx", exampleUsages: ["[Noun (time/place)] から [Noun (time/place)] まで [Verb]"] },
 
-      { hiragana: "まだ", preferredForm: "hiragana", kanjis: ["未だ"], romanization: "mada", meaning: "(emphasize continuity:) still", exampleUsages: ["まだ [Verb-て] いる"] },
-      { hiragana: "まだ", preferredForm: "hiragana", kanjis: ["未だ"], romanization: "mada", meaning: "(emphasize continuity:) not yet", exampleUsages: ["まだ [Verb-て] いない", "まだ [Verb-て] いません"] },
+      { hiragana: "まだ〇〇いる", preferredForm: "hiragana", kanjis: ["未だ"], romanization: "mada", meaning: "(emphasize continuity:) still", exampleUsages: ["まだ [Verb-て] いる"] },
+      { hiragana: "まだ〇〇いない", preferredForm: "hiragana", kanjis: ["未だ"], romanization: "mada", meaning: "(emphasize continuity:) not yet", exampleUsages: ["まだ [Verb-て] いない", "まだ [Verb-て] いません"] },
       // TODO: ずっと zutto
-      { hiragana: "もう", romanization: "mou", meaning: '("not happening again") not again', exampleUsages: ["もう [Verb]"] },
+      { hiragana: "もう", romanization: "mou", meaning: '("not happening again":) not again', exampleUsages: ["もう [Verb]"] },
 
       { kanjis: ["一緒に"], hiragana: "いっしょに", romanization: "isshoni", meaning: "together {with xxx}", exampleUsages: ["一緒に [Verb]", "[Noun] と 一緒に [Verb]。"] },
       { hiragana: "いつも", preferredForm: "hiragana", kanjis: ["何時も"], romanization: "itsumo", meaning: "always", exampleUsages: ["{[Noun] は} いつも [Verb / Adj.]"] },
@@ -372,8 +415,8 @@ export function appendPhrases(words: JapaneseWord[]) {
       { hiragana: "てください", romanization: "-te kudasai", meaning: "please do xxx", exampleUsages: ["[Verb-て] ください ..."] },
       { hiragana: "てもいいです", romanization: "-temo ii desu", meaning: "you can xxx", exampleUsages: ["[Verb-て] もいいです", "[Verb-て] もいいですか？", "[Noun] てもいいです", "[i-Adj. (dropped)] もいいです", "[na-Adj.] てもいいです"] },
 
-      { hiragana: "つもりです", romanization: "tsumori", meaning: "planning to", exampleUsages: ["[Verb] つもりです。"] },
-      { hiragana: "つもりはない", romanization: "tsumori", meaning: "planning not to (spoken, casual)", exampleUsages: ["[Verb-ない (dropped)] つもりはない"] },
+      { hiragana: "つもりです", romanization: "tsumori desu", meaning: "planning to", exampleUsages: ["[Verb] つもりです。"] },
+      { hiragana: "つもりはない", romanization: "tsumori wa nai", meaning: "planning not to (spoken, casual)", exampleUsages: ["[Verb-ない (dropped)] つもりはない"] },
 
       { hiragana: "ないで", romanization: "naide", meaning: "without xxx", exampleUsages: ["[Verb-ない (dropped)] ないで [Verb]"] },
 
@@ -398,8 +441,8 @@ export function appendPhrases(words: JapaneseWord[]) {
       { kanjis: ["後に"], hiragana: "あとに", romanization: "atoni", meaning: "after xxx (formal)", exampleUsages: ["[Verb-た] 後に ..."] },
 
       { kanjis: ["方"], hiragana: "かた", romanization: "kata", meaning: "way of doing", exampleUsages: ["[Noun] の [Verb-ます (dropped)] 方"] },
-      { kanjis: ["方がいい", "方が良い", "ほうが良い"], hiragana: "ほうがいい", romanization: "hougaii", meaning: "should xxx", exampleUsages: ["[Verb] 方がいい ..."] },
-      { kanjis: ["方が良い", "ほうが良い", "方がよい"], hiragana: "ほうがよい", romanization: "hougayoi", meaning: "should xxx", exampleUsages: ["[Verb] 方が良い ..."] },
+      { kanjis: ["方がいい", "方が良い", "ほうが良い"], hiragana: "ほうがいい", romanization: "hougaii (spoken/written)", meaning: "should xxx", exampleUsages: ["[Verb] 方がいい ..."] },
+      { kanjis: ["方が良い", "ほうが良い", "方がよい"], hiragana: "ほうがよい", romanization: "hougayoi (slightly more written)", meaning: "should xxx", exampleUsages: ["[Verb] 方が良い ..."] },
 
       { hiragana: "てはいけない", romanization: "-te wa ikenai", meaning: "must not (written, casual)", exampleUsages: ["[Verb-て] はいけない。"] },
       { hiragana: "ではいけません", romanization: "-te wa ikemasen", meaning: "must not (written, polite)", exampleUsages: ["[Verb-て] はいけません。"] },
