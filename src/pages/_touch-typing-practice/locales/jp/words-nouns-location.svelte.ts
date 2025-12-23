@@ -1,7 +1,7 @@
 import type { JapaneseWord } from "../../types";
 import { jp } from "./jp.svelte";
 
-export function appendNounsNavigation(words: JapaneseWord[]) {
+export function appendNounsLocation(words: JapaneseWord[]) {
   if (jp.flashcardSettings.enableNounsNavigation) {
     words.splice(
       words.length,

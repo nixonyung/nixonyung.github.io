@@ -131,6 +131,8 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
     );
   }
 
+  // TODO: classmates
+
   if (jp.flashcardSettings.enableNounsPeopleRelationshipsCoworkers) {
     words.splice(
       words.length,

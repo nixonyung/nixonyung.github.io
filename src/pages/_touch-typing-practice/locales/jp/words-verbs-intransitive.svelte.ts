@@ -9,8 +9,9 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
-      { hiragana: "ある", preferredForm: "hiragana", kanjis: ["有る", "在る"], romanization: "aru", meaning: "exist (for objects)" },
       { hiragana: "いる", preferredForm: "hiragana", rareKanjis: ["居る"], romanization: "iru", meaning: "exist (for living things)" },
+      { hiragana: "ある", preferredForm: "hiragana", kanjis: ["有る", "在る"], romanization: "aru", meaning: "exist (for non-living things)" },
+
       { kanjis: ["暮らす", "暮す"], hiragana: "くらす", romanization: "kurasu", meaning: "live / get along" },
       { kanjis: ["死ぬ"], hiragana: "しぬ", romanization: "shinu", meaning: "die" },
       { kanjis: ["お腹が空く", "お腹がすく"], hiragana: "おなかがすく", romanization: "onakagasuku", meaning: "be hungry" },

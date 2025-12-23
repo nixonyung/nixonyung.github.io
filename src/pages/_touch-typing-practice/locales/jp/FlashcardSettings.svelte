@@ -14,37 +14,100 @@
 </script>
 
 <div class="flex flex-col flex-wrap gap-3">
-  <div class="flex items-center-safe gap-6">
+  <div class="flex items-start gap-6">
     <Highlighted
       onclick={() => {
         if (
-          !jp.flashcardSettings.enablePronounsPeople ||
-          !jp.flashcardSettings.enablePronounsThings ||
-          !jp.flashcardSettings.enablePronounsGeneral ||
-          !jp.flashcardSettings.enablePronounsQuestionWords
+          !jp.flashcardSettings.enablePronounsMe ||
+          !jp.flashcardSettings.enablePronounsYou ||
+          !jp.flashcardSettings.enablePronounsUs ||
+          !jp.flashcardSettings.enablePronounsThatPerson ||
+          !jp.flashcardSettings.enablePronounsThosePeople ||
+          !jp.flashcardSettings.enablePronounsThatThing ||
+          !jp.flashcardSettings.enablePronounsThoseThings ||
+          !jp.flashcardSettings.enablePronounsReflective ||
+          !jp.flashcardSettings.enablePronounsIndefinite ||
+          !jp.flashcardSettings.enablePronounsInterrogativeWho ||
+          !jp.flashcardSettings.enablePronounsInterrogativeWhat
         ) {
-          jp.flashcardSettings.enablePronounsPeople = true;
-          jp.flashcardSettings.enablePronounsThings = true;
-          jp.flashcardSettings.enablePronounsGeneral = true;
-          jp.flashcardSettings.enablePronounsQuestionWords = true;
+          jp.flashcardSettings.enablePronounsMe = true;
+          jp.flashcardSettings.enablePronounsYou = true;
+          jp.flashcardSettings.enablePronounsUs = true;
+          jp.flashcardSettings.enablePronounsThatPerson = true;
+          jp.flashcardSettings.enablePronounsThosePeople = true;
+          jp.flashcardSettings.enablePronounsThatThing = true;
+          jp.flashcardSettings.enablePronounsThoseThings = true;
+          jp.flashcardSettings.enablePronounsReflective = true;
+          jp.flashcardSettings.enablePronounsIndefinite = true;
+          jp.flashcardSettings.enablePronounsInterrogativeWho = true;
+          jp.flashcardSettings.enablePronounsInterrogativeWhat = true;
         } else {
-          jp.flashcardSettings.enablePronounsPeople = false;
-          jp.flashcardSettings.enablePronounsThings = false;
-          jp.flashcardSettings.enablePronounsGeneral = false;
-          jp.flashcardSettings.enablePronounsQuestionWords = false;
+          jp.flashcardSettings.enablePronounsMe = false;
+          jp.flashcardSettings.enablePronounsYou = false;
+          jp.flashcardSettings.enablePronounsUs = false;
+          jp.flashcardSettings.enablePronounsThatPerson = false;
+          jp.flashcardSettings.enablePronounsThosePeople = false;
+          jp.flashcardSettings.enablePronounsThatThing = false;
+          jp.flashcardSettings.enablePronounsThoseThings = false;
+          jp.flashcardSettings.enablePronounsReflective = false;
+          jp.flashcardSettings.enablePronounsIndefinite = false;
+          jp.flashcardSettings.enablePronounsInterrogativeWho = false;
+          jp.flashcardSettings.enablePronounsInterrogativeWhat = false;
         }
       }}
     >
-      pronouns:
+      Pronouns:
     </Highlighted>
-    <CheckboxInput bind:checked={jp.flashcardSettings.enablePronounsPeople} label="people" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enablePronounsThings} label="things" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enablePronounsGeneral} label="general" />
-    <CheckboxInput
-      bind:checked={jp.flashcardSettings.enablePronounsQuestionWords}
-      label="question words"
-    />
+
+    <div class="flex flex-col gap-y-1.5">
+      <div class="flex flex-wrap items-center-safe gap-x-3">
+        <CheckboxInput bind:checked={jp.flashcardSettings.enablePronounsMe} label="I" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enablePronounsYou} label="You" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enablePronounsUs} label="We" />
+      </div>
+      <div class="flex flex-wrap items-center-safe gap-x-3">
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enablePronounsThatPerson}
+          label="That Person"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enablePronounsThosePeople}
+          label="Those People"
+        />
+      </div>
+      <div class="flex flex-wrap items-center-safe gap-x-3">
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enablePronounsThatThing}
+          label="That Thing"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enablePronounsThoseThings}
+          label="Those Things"
+        />
+      </div>
+      <div class="flex flex-wrap items-center-safe gap-x-3">
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enablePronounsReflective}
+          label="Reflective"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enablePronounsIndefinite}
+          label="Indefinite"
+        />
+      </div>
+      <div class="flex flex-wrap items-center-safe gap-x-3">
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enablePronounsInterrogativeWho}
+          label="Who?"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enablePronounsInterrogativeWhat}
+          label="What?"
+        />
+      </div>
+    </div>
   </div>
+
   <div class="flex items-start gap-6">
     <Highlighted
       onclick={() => {
@@ -99,7 +162,7 @@
         }
       }}
     >
-      nouns:
+      Nouns:
     </Highlighted>
 
     <div class="flex flex-col gap-y-1.5">
@@ -179,8 +242,7 @@
         }
       }}
     >
-      verbs:
-
+      Verbs:
       <div class="flex items-center-safe gap-3">
         <CheckboxInput
           bind:checked={jp.flashcardSettings.enableTransitiveVerbs}
@@ -211,6 +273,7 @@
         />
       </div>
     </Highlighted>
+
     <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbs} label="all" />
   </div>
   <div class="flex items-center-safe gap-6">
@@ -231,8 +294,7 @@
         }
       }}
     >
-      adjectives:
-
+      Adjectives:
       <div class="flex items-center-safe gap-3">
         <CheckboxInput
           bind:checked={jp.flashcardSettings.enableIAdjectives}
@@ -246,50 +308,123 @@
         />
       </div>
     </Highlighted>
+
     <CheckboxInput bind:checked={jp.flashcardSettings.enableAdjectivesFeelings} label="Feelings" />
     <CheckboxInput
       bind:checked={jp.flashcardSettings.enableAdjectivesDescriptors}
       label="Descriptors"
     />
   </div>
-  <div class="flex items-center-safe gap-6">
+
+  <div class="flex items-start gap-6">
     <Highlighted
       onclick={() => {
-        if (!jp.flashcardSettings.enableAdverbs) {
-          jp.flashcardSettings.enableAdverbs = true;
+        if (
+          !jp.flashcardSettings.enableAdverbsTime ||
+          !jp.flashcardSettings.enableAdverbsLocation ||
+          !jp.flashcardSettings.enableAdverbsLogical ||
+          !jp.flashcardSettings.enableAdverbsDegree ||
+          !jp.flashcardSettings.enableAdverbsManner ||
+          !jp.flashcardSettings.enableAdverbsInterrogativeWhen ||
+          !jp.flashcardSettings.enableAdverbsInterrogativeWhere ||
+          !jp.flashcardSettings.enableAdverbsInterrogativeWhy ||
+          !jp.flashcardSettings.enableAdverbsInterrogativeHowCome ||
+          !jp.flashcardSettings.enableAdverbsInterrogativeHowMany
+        ) {
+          jp.flashcardSettings.enableAdverbsTime = true;
+          jp.flashcardSettings.enableAdverbsLocation = true;
+          jp.flashcardSettings.enableAdverbsLogical = true;
+          jp.flashcardSettings.enableAdverbsDegree = true;
+          jp.flashcardSettings.enableAdverbsManner = true;
+          jp.flashcardSettings.enableAdverbsInterrogativeWhen = true;
+          jp.flashcardSettings.enableAdverbsInterrogativeWhere = true;
+          jp.flashcardSettings.enableAdverbsInterrogativeWhy = true;
+          jp.flashcardSettings.enableAdverbsInterrogativeHowCome = true;
+          jp.flashcardSettings.enableAdverbsInterrogativeHowMany = true;
         } else {
-          jp.flashcardSettings.enableAdverbs = false;
+          jp.flashcardSettings.enableAdverbsTime = false;
+          jp.flashcardSettings.enableAdverbsLocation = false;
+          jp.flashcardSettings.enableAdverbsLogical = false;
+          jp.flashcardSettings.enableAdverbsDegree = false;
+          jp.flashcardSettings.enableAdverbsManner = false;
+          jp.flashcardSettings.enableAdverbsInterrogativeWhen = false;
+          jp.flashcardSettings.enableAdverbsInterrogativeWhere = false;
+          jp.flashcardSettings.enableAdverbsInterrogativeWhy = false;
+          jp.flashcardSettings.enableAdverbsInterrogativeHowCome = false;
+          jp.flashcardSettings.enableAdverbsInterrogativeHowMany = false;
         }
       }}
     >
-      adverbs:
+      Adverbs:
     </Highlighted>
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableAdverbs} label="adverbs" />
+
+    <div class="flex flex-col gap-y-1.5">
+      <div class="flex flex-wrap items-center-safe gap-x-3">
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableAdverbsTime} label="Time" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableAdverbsLocation} label="Location" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableAdverbsLogical} label="Logical" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableAdverbsDegree} label="Degree" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableAdverbsManner} label="Manner" />
+      </div>
+      <div class="flex flex-wrap items-center-safe gap-x-3">
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableAdverbsInterrogativeWhen}
+          label="When?"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableAdverbsInterrogativeWhere}
+          label="Where?"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableAdverbsInterrogativeWhy}
+          label="Why?"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableAdverbsInterrogativeHowCome}
+          label="How Come?"
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableAdverbsInterrogativeHowMany}
+          label="How Many?"
+        />
+      </div>
+    </div>
   </div>
   <div class="flex items-center-safe gap-6">
     <Highlighted
       onclick={() => {
+        if (!jp.flashcardSettings.enableConjunctions) {
+          jp.flashcardSettings.enableConjunctions = true;
+        } else {
+          jp.flashcardSettings.enableConjunctions = false;
+        }
+      }}
+    >
+      Conjunctions
+    </Highlighted>
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableConjunctions} label="Conjunctions" />
+  </div>
+
+  <div class="flex items-center-safe gap-6">
+    <Highlighted
+      onclick={() => {
         if (
-          !jp.flashcardSettings.enablePhrasesParticles ||
           !jp.flashcardSettings.enablePhrasesInterjections ||
           !jp.flashcardSettings.enablePhrasesGreetings ||
           !jp.flashcardSettings.enablePhrasesMiscellaneous
         ) {
-          jp.flashcardSettings.enablePhrasesParticles = true;
           jp.flashcardSettings.enablePhrasesInterjections = true;
           jp.flashcardSettings.enablePhrasesGreetings = true;
           jp.flashcardSettings.enablePhrasesMiscellaneous = true;
         } else {
-          jp.flashcardSettings.enablePhrasesParticles = false;
           jp.flashcardSettings.enablePhrasesInterjections = false;
           jp.flashcardSettings.enablePhrasesGreetings = false;
           jp.flashcardSettings.enablePhrasesMiscellaneous = false;
         }
       }}
     >
-      phrases
+      Phrases:
     </Highlighted>
-    <CheckboxInput bind:checked={jp.flashcardSettings.enablePhrasesParticles} label="particles" />
     <CheckboxInput
       bind:checked={jp.flashcardSettings.enablePhrasesInterjections}
       label="interjections"
@@ -300,56 +435,22 @@
       label="miscellaneous"
     />
   </div>
+
   <div class="flex items-center-safe gap-6">
     <Highlighted
       onclick={() => {
-        if (
-          !jp.flashcardSettings.enableSentenceStructuresDesu ||
-          !jp.flashcardSettings.enableSentenceStructuresIAdjectives ||
-          !jp.flashcardSettings.enableSentenceStructuresNaAdjectives ||
-          !jp.flashcardSettings.enableSentenceStructuresIru ||
-          !jp.flashcardSettings.enableSentenceStructuresAru ||
-          !jp.flashcardSettings.enableSentenceStructuresIkenai ||
-          !jp.flashcardSettings.enableSentenceStructuresMicellaneous
-        ) {
-          jp.flashcardSettings.enableSentenceStructuresDesu = true;
-          jp.flashcardSettings.enableSentenceStructuresIAdjectives = true;
-          jp.flashcardSettings.enableSentenceStructuresNaAdjectives = true;
-          jp.flashcardSettings.enableSentenceStructuresIru = true;
-          jp.flashcardSettings.enableSentenceStructuresAru = true;
-          jp.flashcardSettings.enableSentenceStructuresIkenai = true;
-          jp.flashcardSettings.enableSentenceStructuresMicellaneous = true;
+        if (!jp.flashcardSettings.enableRulesConjugations) {
+          jp.flashcardSettings.enableRulesConjugations = true;
         } else {
-          jp.flashcardSettings.enableSentenceStructuresDesu = false;
-          jp.flashcardSettings.enableSentenceStructuresIAdjectives = false;
-          jp.flashcardSettings.enableSentenceStructuresNaAdjectives = false;
-          jp.flashcardSettings.enableSentenceStructuresIru = false;
-          jp.flashcardSettings.enableSentenceStructuresAru = false;
-          jp.flashcardSettings.enableSentenceStructuresIkenai = false;
-          jp.flashcardSettings.enableSentenceStructuresMicellaneous = false;
+          jp.flashcardSettings.enableRulesConjugations = false;
         }
       }}
     >
-      sentence structures:
+      Grammar Rules:
     </Highlighted>
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableSentenceStructuresDesu} label="です" />
     <CheckboxInput
-      bind:checked={jp.flashcardSettings.enableSentenceStructuresIAdjectives}
-      label="い-adj."
-    />
-    <CheckboxInput
-      bind:checked={jp.flashcardSettings.enableSentenceStructuresNaAdjectives}
-      label="な-adj."
-    />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableSentenceStructuresIru} label="いる" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableSentenceStructuresAru} label="ある" />
-    <CheckboxInput
-      bind:checked={jp.flashcardSettings.enableSentenceStructuresIkenai}
-      label="いけない"
-    />
-    <CheckboxInput
-      bind:checked={jp.flashcardSettings.enableSentenceStructuresMicellaneous}
-      label="miscellaneous"
+      bind:checked={jp.flashcardSettings.enableRulesConjugations}
+      label="Conjugations"
     />
   </div>
 </div>

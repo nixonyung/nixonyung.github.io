@@ -20,9 +20,11 @@ export function appendAdjectivesDesriptors(words: JapaneseWord[]) {
       { kanjis: ["暑い"], hiragana: "あつい", romanization: "atsui", meaning: "hot" },
 
       { kanjis: ["早い", "速い"], rareKanjis: ["疾い", "捷い"], hiragana: "はやい", romanization: "hayai", meaning: "quick" },
+      { kanjis: ["遅い"], hiragana: "おそい", romanization: "osoi", meaning: "slow" },
+
+      { kanjis: ["綺麗", "奇麗"], hiragana: "きれい", katakana: "キレイ", romanization: "kirei", meaning: "pretty" },
 
       { kanjis: ["上手い", "巧い"], rareKanjis: ["美い"], hiragana: "うまい", romanization: "umai", meaning: "skillful" },
-      { kanjis: ["綺麗", "奇麗"], hiragana: "きれい", katakana: "キレイ", romanization: "kirei", meaning: "pretty" },
     );
   }
 

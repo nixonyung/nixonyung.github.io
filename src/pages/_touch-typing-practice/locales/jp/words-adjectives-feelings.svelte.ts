@@ -20,6 +20,7 @@ export function appendAdjectivesFeelings(words: JapaneseWord[]) {
       { hiragana: "したい", romanization: "shitai", meaning: "wanted to do" },
       { hiragana: "もっともらしい", preferredForm: "hiragana", kanjis: ["尤もらしい"], romanization: "mottomorashii", meaning: "plausible" },
       { kanjis: ["難しい"], hiragana: "むずかしい", romanization: "muzukashii", meaning: "difficult" },
+      { kanjis: ["易しい"], hiragana: "やさしい", romanization: "yasashii", meaning: "easy" },
 
       { kanjis: ["優しい"], hiragana: "やさしい", romanization: "yasashii", meaning: "kind / gentle" },
       { kanjis: ["親しい"], hiragana: "したしい", romanization: "shitashii", meaning: "intimate" },
@@ -28,11 +29,9 @@ export function appendAdjectivesFeelings(words: JapaneseWord[]) {
       { kanjis: ["怖い", "恐い"], hiragana: "こわい", romanization: "kowai", meaning: "scary" },
 
       { kanjis: ["面白い"], hiragana: "おもしろい", romanization: "omoshiroi", meaning: "interesting" },
-      { kanjis: ["不思議"], hiragana: "ふしぎ", romanization: "fushigi", meaning: "amazing" },
       { kanjis: ["頭いい", "頭良い", "頭よい"], hiragana: "あたまいい", romanization: "atamaii", meaning: "smart" },
       { kanjis: ["素晴らしい"], hiragana: "すばらしい", romanization: "subarashii", meaning: "magnificent" },
       { kanjis: ["凄い"], hiragana: "すごい", romanization: "sugoi", meaning: "impressive" },
-      { kanjis: ["無理"], hiragana: "むり", katakana: "ムリ", romanization: "muri", meaning: "unreasonable" },
 
       { kanjis: ["仲がいい", "仲が良い"], hiragana: "なかがいい", romanization: "nakagaii", meaning: "on good terms" },
     );
@@ -42,6 +41,12 @@ export function appendAdjectivesFeelings(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
+      { kanjis: ["好き"], hiragana: "すき", romanization: "suki", meaning: "liked" },
+      { kanjis: ["嫌い"], hiragana: "きらい", romanization: "kirai", meaning: "disliked" },
+
+      { kanjis: ["不思議"], hiragana: "ふしぎ", romanization: "fushigi", meaning: "amazing" },
+
+      { kanjis: ["無理"], hiragana: "むり", katakana: "ムリ", romanization: "muri", meaning: "unreasonable" },
     );
   }
 }

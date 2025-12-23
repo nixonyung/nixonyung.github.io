@@ -5,15 +5,17 @@ import { getGojuons, getLetters } from "./letters.svelte";
 import { appendAdjectivesDesriptors } from "./words-adjectives-descriptors.svelte";
 import { appendAdjectivesFeelings } from "./words-adjectives-feelings.svelte";
 import { appendAdverbs } from "./words-adverbs.svelte";
+import { appendConjunctions } from "./words-conjunctions.svelte";
 import { appendNounsAbstract } from "./words-nouns-abstract.svelte";
 import { appendNounsAnimals } from "./words-nouns-animals.svelte";
-import { appendNounsNavigation } from "./words-nouns-navigation.svelte";
+import { appendNounsLocation } from "./words-nouns-location.svelte";
 import { appendNounsObjects } from "./words-nouns-objects.svelte";
 import { appendNounsPeopleByCharacteristics } from "./words-nouns-people-characteristics.svelte";
 import { appendNounsPeopleByRelationships } from "./words-nouns-people-relationships.svelte";
 import { appendNounsTime } from "./words-nouns-time.svelte";
 import { appendPhrases } from "./words-phrases.svelte";
 import { appendPronouns } from "./words-pronouns.svelte";
+import { appendRulesConjugations } from "./words-rules-conjugations.svelte";
 import { appendIntransitiveVerbs } from "./words-verbs-intransitive.svelte";
 import { appendTransitiveVerbs } from "./words-verbs-transitive.svelte";
 
@@ -47,10 +49,17 @@ export const jp = new (class {
 
   FLASHCARD_SETTINGS_SCHEMA = {
     // pronouns:
-    enablePronounsPeople: { paramKey: "peoplePronouns", defaultValue: true },
-    enablePronounsThings: { paramKey: "thingsPronouns", defaultValue: true },
-    enablePronounsGeneral: { paramKey: "generalPronouns", defaultValue: true },
-    enablePronounsQuestionWords: { paramKey: "questionWords", defaultValue: true },
+    enablePronounsMe: { paramKey: "me", defaultValue: true },
+    enablePronounsYou: { paramKey: "you", defaultValue: true },
+    enablePronounsUs: { paramKey: "us", defaultValue: true },
+    enablePronounsThatPerson: { paramKey: "thatPerson", defaultValue: true },
+    enablePronounsThosePeople: { paramKey: "thosePeople", defaultValue: true },
+    enablePronounsThatThing: { paramKey: "thatThing", defaultValue: true },
+    enablePronounsThoseThings: { paramKey: "thoseThings", defaultValue: true },
+    enablePronounsReflective: { paramKey: "reflectiveProns", defaultValue: true },
+    enablePronounsIndefinite: { paramKey: "indefiniteProns", defaultValue: true },
+    enablePronounsInterrogativeWho: { paramKey: "who", defaultValue: true },
+    enablePronounsInterrogativeWhat: { paramKey: "what", defaultValue: true },
 
     // nouns:
     enableNounsPeopleCharacteristicsGeneric: { paramKey: "genericPeople", defaultValue: true },
@@ -61,24 +70,23 @@ export const jp = new (class {
 
     enableNounsPeopleRelationshipsImmediateFamily: { paramKey: "immFamily", defaultValue: true },
     enableNounsPeopleRelationshipsExtendedFamily: { paramKey: "extFamily", defaultValue: true },
-    enableNounsPeopleRelationshipsChosenFamily: {
-      paramKey: "nonBioFamily",
-      defaultValue: true,
-    },
+    enableNounsPeopleRelationshipsChosenFamily: { paramKey: "chosenFamily", defaultValue: true },
     enableNounsPeopleRelationshipsFriends: { paramKey: "friends", defaultValue: true },
     enableNounsPeopleRelationshipsCoworkers: { paramKey: "coworkers", defaultValue: true },
 
     enableNounsAnimals: { paramKey: "animals", defaultValue: true },
     enableNounsObjects: { paramKey: "objects", defaultValue: true },
-    enableNounsTime: { paramKey: "time", defaultValue: true },
-    enableNounsNavigation: { paramKey: "navigation", defaultValue: true },
+    enableNounsTime: { paramKey: "timeNouns", defaultValue: true },
+    enableNounsNavigation: { paramKey: "locationNouns", defaultValue: true },
     enableNounsAbstract: { paramKey: "abstract", defaultValue: true },
 
     // verbs:
+    // TODO: need to categorize?
     enableVerbs: { paramKey: "verbs", defaultValue: true },
 
     enableTransitiveVerbs: { paramKey: "transitiveVerbs", defaultValue: true },
     enableIntransitiveVerbs: { paramKey: "intransitiveVerbs", defaultValue: true },
+    enableAuxiliaryVerbs: { paramKey: "auxiliary", defaultValue: true },
 
     enableGodanVerbs: { paramKey: "godanVerbs", defaultValue: true },
     enableIchidanVerbs: { paramKey: "ichidanVerbs", defaultValue: true },
@@ -92,27 +100,27 @@ export const jp = new (class {
     enableNaAdjectives: { paramKey: "naAdjs", defaultValue: true },
 
     // adverbs:
-    // TODO: move to sentence structures
-    enableAdverbs: { paramKey: "adverbs", defaultValue: true },
+    enableAdverbsTime: { paramKey: "timeAdvs", defaultValue: true },
+    enableAdverbsLocation: { paramKey: "locationAdvs", defaultValue: true },
+    enableAdverbsLogical: { paramKey: "logicalAdvs", defaultValue: true },
+    enableAdverbsDegree: { paramKey: "degreeAdvs", defaultValue: true },
+    enableAdverbsManner: { paramKey: "mannerAdvs", defaultValue: true },
+    enableAdverbsInterrogativeWhen: { paramKey: "when", defaultValue: true },
+    enableAdverbsInterrogativeWhere: { paramKey: "where", defaultValue: true },
+    enableAdverbsInterrogativeWhy: { paramKey: "why", defaultValue: true },
+    enableAdverbsInterrogativeHowCome: { paramKey: "howCome", defaultValue: true },
+    enableAdverbsInterrogativeHowMany: { paramKey: "howMany", defaultValue: true },
+
+    // syntax:
+    enableConjunctions: { paramKey: "conjunctions", defaultValue: true },
 
     // phrases / expressions:
-    enablePhrasesParticles: { paramKey: "particles", defaultValue: true },
     enablePhrasesInterjections: { paramKey: "interjections", defaultValue: true },
     enablePhrasesGreetings: { paramKey: "greetings", defaultValue: true },
     enablePhrasesMiscellaneous: { paramKey: "miscellaneousPhrases", defaultValue: true },
 
-    // sentences structures:
-    // TODO: need refine
-    enableSentenceStructuresDesu: { paramKey: "desu", defaultValue: true },
-    enableSentenceStructuresIAdjectives: { paramKey: "iAdj", defaultValue: true },
-    enableSentenceStructuresNaAdjectives: { paramKey: "naAdj", defaultValue: true },
-    enableSentenceStructuresIru: { paramKey: "iru", defaultValue: true },
-    enableSentenceStructuresAru: { paramKey: "aru", defaultValue: true },
-    enableSentenceStructuresIkenai: { paramKey: "ikenai", defaultValue: true },
-    enableSentenceStructuresMicellaneous: {
-      paramKey: "miscellaneousSentenceStructures",
-      defaultValue: true,
-    },
+    // grammar rules:
+    enableRulesConjugations: { paramKey: "conjugations", defaultValue: true },
   };
   flashcardSettings = $state(initSettings(this.FLASHCARD_SETTINGS_SCHEMA));
 
@@ -129,14 +137,16 @@ export const jp = new (class {
     appendNounsAnimals(words);
     appendNounsObjects(words);
     appendNounsTime(words);
-    appendNounsNavigation(words);
+    appendNounsLocation(words);
     appendNounsAbstract(words);
     appendTransitiveVerbs(words);
     appendIntransitiveVerbs(words);
     appendAdjectivesFeelings(words);
     appendAdjectivesDesriptors(words);
     appendAdverbs(words);
+    appendConjunctions(words);
     appendPhrases(words);
+    appendRulesConjugations(words);
 
     return words;
   });
