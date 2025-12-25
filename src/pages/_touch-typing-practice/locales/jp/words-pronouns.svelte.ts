@@ -143,6 +143,7 @@ export function appendPronouns(words: JapaneseWord[]) {
       { kanjis: ["何やら"], hiragana: "なにやら", romanization: "naniyara", meaning: "something" },
       { kanjis: ["何にも"], hiragana: "なににも", romanization: "naninimo", meaning: "everything (in negative sentence)" },
       { kanjis: ["何事も", "何ごとも"], hiragana: "なにごとも", romanization: "nanigotomo", meaning: "everything" },
+      { kanjis: ["全て"], rareKanjis: ["総て", "凡て", "惣て", "渾て"], hiragana: "すべて", romanization: "subete", meaning: "everything / all" },
     );
   }
 

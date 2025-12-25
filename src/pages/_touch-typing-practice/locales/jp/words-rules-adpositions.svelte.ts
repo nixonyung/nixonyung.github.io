@@ -10,10 +10,13 @@ export function appendRulesAdpositions(words: JapaneseWord[]) {
       { hiragana: "が", romanization: "ga", meaning: "(new subject marker)", exampleUsages: ["[Noun] が ..."] },
 
       { hiragana: "を", romanization: "o", meaning: "(object marker)", exampleUsages: ["[Noun (object)] を [Verb (transitive)] ..."] },
+      // TODO: と
 
       { hiragana: "に", romanization: "ni", meaning: "(time/location marker)", exampleUsages: ["[Noun (time/location)] に [Verb] ...", "[Noun (time)] に [Noun (location)] に [Verb] ..."] },
       { hiragana: "へ", romanization: "e", meaning: "(direction marker)", exampleUsages: ["[Noun (time/location)] に [Verb] ..."] },
       { hiragana: "で", romanization: "de", meaning: "location/method/tool/material/language/scope/cause of an action", exampleUsages: ["[Noun] で [Verb] ..."] },
+      { hiragana: "のに", romanization: "noni", meaning: "(purpose marker)", exampleUsages: ["[Verb] のに [Verb] ..."] },
+      { hiragana: "として", romanization: "toshite", meaning: "as", exampleUsages: ["[Noun] として [Verb]"] },
 
       { hiragana: "か", romanization: "ka", meaning: "(question marker)", exampleUsages: ["[Clause] か？"] },
       {
@@ -39,7 +42,7 @@ export function appendRulesAdpositions(words: JapaneseWord[]) {
 
       // TODO: changing word forms
       // TODO: だっ
-      // TODO: no
+      // TODO: の
     );
   }
 }

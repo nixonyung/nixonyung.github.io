@@ -8,10 +8,12 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       0, //
       { kanjis: ["者"], hiragana: "もの", katakana: "モノ", romanization: "mono", meaning: "thing (person)" },
       { kanjis: ["物"], hiragana: "もの", katakana: "モノ", romanization: "mono", meaning: "thing (object)" },
+      { hiragana: "こと", preferredForm: "hiragana", kanjis: ["事"], romanization: "koto", meaning: "matter / business" },
 
       // TODO: body parts
       { kanjis: ["手"], hiragana: "て", romanization: "te", meaning: "hand / arm" },
       { kanjis: ["お腹"], rareKanjis: ["お中"], hiragana: "おなか", romanization: "onaka", meaning: "belly / stomach" },
+      { katakana: "ティアー", romanization: "tiaa", meaning: "tear" },
 
       // TODO: transportations
       { katakana: "バス", romanization: "basu", meaning: "bus" },

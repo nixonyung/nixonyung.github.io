@@ -2,6 +2,10 @@ import type { JapaneseWord } from "../../types";
 import { jp } from "./jp.svelte";
 
 export function appendFunctionalLogical(words: JapaneseWord[]) {
+  // TODO: ように
+  // https://colanekojp.com.tw/blog_detail/66
+  // https://www.sigure.tw/learn-japanese/grammar/n3/123
+
   if (jp.flashcardSettings.enableFunctionalLogical) {
     words.splice(
       words.length,
@@ -11,7 +15,6 @@ export function appendFunctionalLogical(words: JapaneseWord[]) {
       { hiragana: "なぜならば", preferredForm: "hiragana", kanjis: ["何故ならば"], romanization: "nazenaraba", meaning: "because" },
       { hiragana: "から", romanization: "kara", meaning: "(introducing precedent:) because of ...", exampleUsages: ["[Clause ending with Verb] から ...", "[Clause ending with Noun] だから ...", "[Clause ending with i-Adj.] から ...", "[Clause ending with na-Adj.] だから ..."] },
       { hiragana: "から", romanization: "kara", meaning: "(introducing precedent:) (who the action is from)", exampleUsages: ["... [Noun (people/things)] から [Verb]"] },
-      { hiragana: "てから", romanization: "kara", meaning: "(introducing precedent:) xxx and immediately after", exampleUsages: ["[Verb-て] から ..."] },
       { hiragana: "ので", romanization: "node", meaning: "because ...", exampleUsages: ["[Clause ending with Verb] ので ...", "[Clause ending with Noun] なので ...", "[Clause ending with i-Adj.] ので ...", "[Clause ending with na-Adj.] なので ..."] },
       { hiragana: "のせいで", preferredForm: "hiragana", rareKanjis: ["の所為で"], romanization: "noseide", meaning: "due to", exampleUsages: ["[Noun] のせいで [Clause]"] },
 

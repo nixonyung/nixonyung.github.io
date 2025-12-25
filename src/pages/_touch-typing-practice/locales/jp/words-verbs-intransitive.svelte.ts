@@ -26,10 +26,16 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["上がる"], rareKanjis: ["騰がる"], hiragana: "あがる", romanization: "agaru", meaning: "rise" },
       { kanjis: ["高まる"], hiragana: "たかまる", romanization: "takamaru", meaning: "rise" },
       { kanjis: ["住まう"], rareKanjis: ["棲まう"], hiragana: "すまう", romanization: "sumau", meaning: "reside" },
+      { kanjis: ["始まる"], hiragana: "はじまる", romanization: "hajimaru", meaning: "begin", exampleUsages: ["で始まる"] },
+      { kanjis: ["終わる", "終る"], rareKanjis: ["了る", "卒る", "畢る", "竟る"], hiragana: "おわる", romanization: "owaru", meaning: "finish", exampleUsages: ["で終わる"] },
 
+      { kanjis: ["飛び出す"], hiragana: "とびだす", romanization: "tobidasu", meaning: "jump out / fly out" },
+
+      { kanjis: ["寄る"], hiragana: "よる", romanization: "yoru", meaning: "lean towards" },
       { kanjis: ["入る"], hiragana: "いる", romanization: "iru", meaning: "enter" },
       { kanjis: ["当たる", "当る", "中る", "中たる"], hiragana: "あたる", romanization: "ataru", meaning: "hit (not miss)" },
-      { kanjis: ["終わる", "終る"], rareKanjis: ["了る", "卒る", "畢る", "竟る"], hiragana: "おわる", romanization: "owaru", meaning: "finish" },
+      { kanjis: ["遊ぶ"], hiragana: "あそぶ", romanization: "asobu", meaning: "play (games / sports)" },
+
       { kanjis: ["急ぐ"], hiragana: "いそぐ", romanization: "isogu", meaning: "hurry" },
     );
   }
@@ -56,6 +62,7 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
       words.length,
       0, //
       // -suru
+      { kanjis: ["機能する"], hiragana: "きのうする", romanization: "kinousuru", meaning: "function" },
       { kanjis: ["関連する"], rareKanjis: ["関聯"], hiragana: "かんれんする", romanization: "kanrensuru", meaning: "relate" },
 
       // -kuru

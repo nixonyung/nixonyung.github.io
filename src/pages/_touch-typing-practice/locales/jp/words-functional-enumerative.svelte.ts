@@ -2,13 +2,16 @@ import type { JapaneseWord } from "../../types";
 import { jp } from "./jp.svelte";
 
 export function appendFunctionalEnumerative(words: JapaneseWord[]) {
+  // TODO: https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%AB
+  // TODO: https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%AF
+
   if (jp.flashcardSettings.enableFunctionalEnumerative) {
     words.splice(
       words.length,
       0, //
       // and
-      { hiragana: "も", romanization: "mo", meaning: "also", exampleUsages: ["[Noun] も [Verb]", "[Noun] も [Noun] も [Verb]", "[Noun] も [Noun] も [Noun] も [Verb]"] },
       { hiragana: "と", romanization: "to", meaning: "and (exhausive) / with me", exampleUsages: ["[Noun] と [Noun] ...", "[Noun] と ..."] },
+      { hiragana: "も", romanization: "mo", meaning: "also", exampleUsages: ["[Noun] も [Verb]", "[Noun] も [Noun] も [Verb]", "[Noun] も [Noun] も [Noun] も [Verb]"] },
       { hiragana: "とか", romanization: "toka", meaning: "and (non-exhausive, spoken)" },
       { hiragana: "や", romanization: "ya", meaning: "and (non-exhausive, written)", exampleUsages: ["[Noun] や [Noun] ..."] },
       { hiragana: "たり", romanization: "tari", meaning: "and (listing actions / targets)", exampleUsages: ["[Verb-た] り ...", "[Noun] だったり ...", "[i-Adj. (dropped)] だったり ...", "[na-Adj.] だったり ..."] },
@@ -24,15 +27,20 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
 
       { kanjis: ["〇〇の中で〇〇が一番〇〇"], hiragana: "〇〇のなかで〇〇がいちばん〇〇", romanization: "-no naka de 〇〇 ga ichiban", meaning: "in xxx, xxx is the most xxx", exampleUsages: ["[Noun] の中で [Noun] が 一番 ..."] },
 
+      { hiragana: "けど", romanization: "kedo", meaning: "but (spoken, casual)", exampleUsages: ["[Clause] けど、 [Clause]。", "[Noun] は [Adj.] けど [Adj.]。", "...。 けど、 [Clause]。"] },
+      { hiragana: "けども", romanization: "kedomo", meaning: "but (spoken, slightly polite)", exampleUsages: ["[Clause] けど、 [Clause]。", "[Noun] は [Adj.] けど [Adj.]。", "...。 けど、 [Clause]。"] },
+      { hiragana: "けれど", romanization: "keredo", meaning: "but (spoken, polite)", exampleUsages: ["[Clause] けれど、 [Clause]。", "[Noun] は [Adj.] けれど [Adj.]。", "...。 けれど、 [Clause]。"] },
+      { hiragana: "けれども", romanization: "keredomo", meaning: "but (spoken, very formal)", exampleUsages: ["[Clause] けれども、 [Clause]。", "[Noun] は [Adj.] けれども [Adj.]。", "...。 けれども、 [Clause]。"] },
+      { hiragana: "が", romanization: "ga", meaning: "but (written)", exampleUsages: ["[Clause] が、 [Clause]。"] },
+
       { hiragana: "でも", romanization: "demo", meaning: "however (casual)", exampleUsages: ["...。 でも、[Clause]"] },
       { hiragana: "しかし", rareKanjis: ["然し", "併し"], romanization: "shikashi", meaning: "however (polite)", exampleUsages: ["...。 しかし、[Clause]"] },
-      { kanjis: ["但し"], hiragana: "ただし", romanization: "tadashi", meaning: "except that (written, polite)", exampleUsages: ["...。 しかし、[Clause]"] },
-      { hiragana: "もっとも", preferredForm: "hiragana", rareKanjis: ["尤も"], romanization: "mottomo", meaning: "but then" },
 
-      { hiragana: "が", romanization: "ga", meaning: "even though", exampleUsages: ["[Clause] が、 [Clause]。"] },
-      { hiragana: "けど", romanization: "kedo", meaning: "but (casual)", exampleUsages: ["[Clause] けど、 [Clause]。", "[Noun] は [Adj.] けど [Adj.]。", "...。 けど、 [Clause]。"] },
-      { hiragana: "けれど", romanization: "keredo", meaning: "but (polite)", exampleUsages: ["[Clause] けれど、 [Clause]。", "[Noun] は [Adj.] けれど [Adj.]。", "...。 けれど、 [Clause]。"] },
-      { hiragana: "けれども", romanization: "keredomo", meaning: "but (very formal)", exampleUsages: ["[Clause] けれども、 [Clause]。", "[Noun] は [Adj.] けれども [Adj.]。", "...。 けれども、 [Clause]。"] },
+      { hiragana: "のに", romanization: "noni", meaning: "even though (something still happen unexpectedly)", exampleUsages: ["[Clause] のに、 [Clause]。"] },
+
+      { kanjis: ["但し"], hiragana: "ただし", romanization: "tadashi", meaning: "except that (written, polite)", exampleUsages: ["...。 しかし、[Clause]"] },
+
+      { hiragana: "もっとも", preferredForm: "hiragana", rareKanjis: ["尤も"], romanization: "mottomo", meaning: "but then" },
     );
   }
 }

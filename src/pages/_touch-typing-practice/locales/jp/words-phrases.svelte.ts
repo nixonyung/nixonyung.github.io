@@ -10,7 +10,6 @@ export function appendPhrases(words: JapaneseWord[]) {
   // TODO: noni
   // TODO: Shika, Bakari, Nomi
   // TODO: [Clause] ということ です (it is said?)
-  // TODO: chotto
 
   if (jp.flashcardSettings.enablePhrasesInterjections) {
     words.splice(
@@ -23,6 +22,8 @@ export function appendPhrases(words: JapaneseWord[]) {
       { hiragana: "ご", preferredForm: "hiragana", kanjis: ["御"], romanization: "go", meaning: "(honorific, with Chinese-derived words)", exampleUsages: ["ご[Noun]"] },
       { kanjis: ["多分"], hiragana: "たぶん", romanization: "tabun", meaning: "probably" },
       { kanjis: ["少し"], rareKanjis: ["寡し", "些し"], hiragana: "すこし", romanization: "sukoshi", meaning: "a little bit" },
+      { hiragana: "ほしい", preferredForm: "hiragana", kanjis: ["欲しい"], romanization: "hoshii", meaning: "I want xxx (casual)", exampleUsages: ["[Noun] がほしいです。"] },
+      { hiragana: "ください", preferredForm: "hiragana", kanjis: ["下さい"], romanization: "kudasai", meaning: "please give me (polite)", exampleUsages: ["[Noun] をください。", "[Noun] を [(counter)] ください。"] },
 
       // TODO: emphasizing
       { kanjis: ["と言う"], hiragana: "という", romanization: "to iu", meaning: "xxx is called/said", exampleUsages: ["(name) という [Pronoun] ..."] },
@@ -49,7 +50,11 @@ export function appendPhrases(words: JapaneseWord[]) {
       // TODO: agreement / yes or no
       // TODO: wow
 
+      { hiragana: "はい", romanization: "sou", meaning: "yes / I see" },
+      { hiragana: "ええ", romanization: "ee", meaning: "yes (casual)" },
       { hiragana: "そう", preferredForm: "hiragana", rareKanjis: ["然う"], romanization: "sou", meaning: "(agree)" },
+      { hiragana: "そうですね", romanization: "soudesune", meaning: "that's correct (polite)" },
+      { hiragana: "わかりました", romanization: "wakarimashita", meaning: "understood" },
 
       { hiragana: "いいえ", romanization: "iie", meaning: "no (formal) / don't mention it" },
       { hiragana: "いや", preferredForm: "hiragana", kanjis: ["否"], romanization: "iya", meaning: "no" },
@@ -67,9 +72,6 @@ export function appendPhrases(words: JapaneseWord[]) {
 
       { kanjis: ["方"], hiragana: "かた", romanization: "kata", meaning: "way of doing", exampleUsages: ["[Noun] の [Verb-ます (dropped)] 方"] },
 
-      { hiragana: "ほしい", preferredForm: "hiragana", kanjis: ["欲しい"], romanization: "hoshii", meaning: "I want xxx (casual)", exampleUsages: ["[Noun] がほしいです。"] },
-      { hiragana: "をください", preferredForm: "hiragana", kanjis: ["を下さい"], romanization: "-o kudasai", meaning: "please give me xxx (polite)", exampleUsages: ["[Noun] をください。", "[Noun] を [Noun (counter)] ください。"] },
-
       { hiragana: "にする", romanization: "ni suru", meaning: "I am going for xxx (casual)", exampleUsages: ["[Noun] にする。"] },
       { hiragana: "にします", romanization: "ni shimasu", meaning: "I am going for xxx (polite)", exampleUsages: ["[Noun] にします。"] },
     );
@@ -80,6 +82,8 @@ export function appendPhrases(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
+      { hiragana: "みなさん、こんにちは", romanization: "minasan konnichiwa", meaning: "Hello everyone (spoken, casual)" },
+      { hiragana: "すみません", romanization: "sumimasen", meaning: "sorry / excuse me (polite)" },
     );
   }
 
@@ -105,8 +109,10 @@ export function appendPhrases(words: JapaneseWord[]) {
 
       { hiragana: "〇〇のが〇〇", romanization: "no ga", meaning: "xxx is xxx", exampleUsages: ["... [Verb] のが [Adj.] です。", "... [Verb] のが上手/下手 です。", "... [Verb] のが好き/嫌い です。", "... [Verb] のが速い/遅い です。", "... [Verb] のが難しい/易しい です。"] },
 
+      { kanjis: ["何とおっしゃいましたか？"], romanization: "nani to osshaimashita ka", meaning: "What did you say? (very polite)" },
+
       { kanjis: ["仕方がない"], hiragana: "しかたがない", romanization: "shikataganai", meaning: "It can't be helped" },
-      { kanjis: ["失礼しました"], hiragana: "しつれいしました", romanization: "shitsureishimashita", meaning: "Excuse me." },
+      { kanjis: ["失礼します"], hiragana: "しつれいします", romanization: "shitsureishimasu", meaning: "excuse me / pardon me", exampleUsages: ["失礼しました"] },
 
       { kanjis: ["日本へようこそ！"], hiragana: "にほんへようこそ！", romanization: "nihon e youkoso", meaning: "Welcome to Japan!" },
     );

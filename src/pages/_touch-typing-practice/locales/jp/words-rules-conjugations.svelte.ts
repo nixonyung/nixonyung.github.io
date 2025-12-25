@@ -6,7 +6,21 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
-      // TODO: verb conjugations
+      // TODO: -no to change noun to adj.
+      // TODO: -suru to change noun to verb
+
+      // TODO: verb conjugations rules
+      // -nai
+      // -masu
+      // -you
+      // -ta
+      // -te
+      //   -suru -> -shite
+
+      // TODO: -ba: conditional
+      // TODO: -ba + kara:
+
+      // TODO: -reru: passive voice
 
       // i-Adjs.
       { hiragana: "い", romanization: "i", meaning: "(i-adj. in present tense)", exampleUsages: ["[i-Adj.]-い"] },

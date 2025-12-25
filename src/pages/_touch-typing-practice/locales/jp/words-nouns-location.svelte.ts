@@ -26,17 +26,36 @@ export function appendNounsLocation(words: JapaneseWord[]) {
       { kanjis: ["側"], hiragana: "そく", romanization: "soku", meaning: "nearby" },
       { kanjis: ["隣"], hiragana: "となり", romanization: "tonari", meaning: "immediate neighbor" },
 
+      { katakana: "トップ", romanization: "toppu", meaning: "top" },
+
       { kanjis: ["近く"], hiragana: "ちかく", romanization: "chikaku", meaning: "nearby" },
       { kanjis: ["遠く"], hiragana: "とおく", romanization: "tooku", meaning: "afar" },
 
-      // TODO: venues
+      { kanjis: ["地元"], hiragana: "じもと", romanization: "jimoto", meaning: "home area", exampleUsages: ["地元の"] },
+
+      // generic
+      { kanjis: ["地方"], hiragana: "ちほう", romanization: "chihou", meaning: "area / region" },
+      { kanjis: ["場所"], hiragana: "ばしょ", romanization: "basho", meaning: "place" },
+      { kanjis: ["名所"], hiragana: "などころ", romanization: "nadokoro", meaning: "famous place" },
+      { kanjis: ["村"], hiragana: "むら", romanization: "mura", meaning: "village" },
+      { kanjis: ["都市"], hiragana: "とし", romanization: "toshi", meaning: "city" },
+      { kanjis: ["国", "邦"], hiragana: "くに", romanization: "kuni", meaning: "country" },
+
+      // shops / restaurants
+      { kanjis: ["空港"], hiragana: "くうこう", romanization: "kuukou", meaning: "airport" },
+      { kanjis: ["屋", "家"], hiragana: "や", romanization: "ya", meaning: "shop", exampleUsages: ["砂利屋"] },
+      { katakana: "コンビニ", romanization: "konbini", meaning: "convenience store" },
+
+      // infrastructures
+      { kanjis: ["学校"], hiragana: "がっこう", romanization: "gakkou", meaning: "school" },
+      { kanjis: ["空港"], hiragana: "くうこう", romanization: "kuukou", meaning: "airport" },
+
       { katakana: "トイレ", romanization: "toire", meaning: "toilet" },
       { katakana: "トイレット", romanization: "toiretto", meaning: "toilet" },
 
-      { kanjis: ["学校"], hiragana: "がっこう", romanization: "gakkou", meaning: "school" },
+      // TODO: miscellaneous venues
       { kanjis: ["事務所"], hiragana: "じむしょ", romanization: "jimusho", meaning: "office" },
-      { kanjis: ["空港"], hiragana: "くうこう", romanization: "kuukou", meaning: "airport" },
-      { katakana: "コンビニ", romanization: "konbini", meaning: "convenience store" },
+      { katakana: "ヘブン", romanization: "hebun", meaning: "heaven" },
     );
   }
 }

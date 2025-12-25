@@ -2,6 +2,8 @@ import type { JapaneseWord } from "../../types";
 import { jp } from "./jp.svelte";
 
 export function appendFunctionalDegree(words: JapaneseWord[]) {
+  // TODO: https://www.nihongomaster.com/japanese/dictionary/word/68426/nanraka-%E4%BD%95%E3%82%89%E3%81%8B-%E4%BD%95%E7%AD%89%E3%81%8B-%E3%81%AA%E3%82%93%E3%82%89%E3%81%8B
+
   if (jp.flashcardSettings.enableFunctionalDegree) {
     words.splice(
       words.length,
@@ -13,7 +15,11 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { kanjis: ["極めて"], hiragana: "きわめて", romanization: "kiwamete", meaning: "extremely" },
       { kanjis: ["随分", "ずい分"], hiragana: "ずいぶん", romanization: "zuibun", meaning: "extremely" },
       { hiragana: "めっちゃ", preferredForm: "hiragana", rareKanjis: ["滅茶"], romanization: "meccha", meaning: "extremely (slang)" },
-      { kanjis: ["全然"], hiragana: "ぜんぜん", romanization: "zenzen", meaning: "completely" },
+
+      { hiragana: "ちょっと", rareKanjis: ["一寸"], katakana: "チョット", romanization: "chotto", meaning: "a little bit" },
+      { kanjis: ["結構"], hiragana: "けっこう", romanization: "kekkou", meaning: "quite (written)" },
+
+      { kanjis: ["多く"], hiragana: "おおく", romanization: "ooku", meaning: "many / much" },
       { hiragana: "もっと", romanization: "motto", meaning: "even more" },
 
       // superlative
@@ -29,6 +35,8 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       // proportions
       { hiragana: "ばかり", preferredForm: "hiragana", rareKanjis: ["許り", "許"], romanization: "bakari", meaning: "only / 只" },
       { hiragana: "だけ", preferredForm: "hiragana", kanjis: ["丈"], romanization: "dake", meaning: "(in its entirety)" },
+      { kanjis: ["全体"], hiragana: "ぜんたい", romanization: "zentai", meaning: "the whole thing (written)", exampleUsages: ["[Noun] 全体"] },
+      { kanjis: ["全然"], hiragana: "ぜんぜん", romanization: "zenzen", meaning: "completely" },
 
       // TODO: numbers
       // TODO: counters

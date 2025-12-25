@@ -48,6 +48,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       // indefinite frequency
       // TODO: always, usually, often, sometimes, rarely, seldom, never, occasionally
       { hiragana: "いつも", preferredForm: "hiragana", kanjis: ["何時も"], romanization: "itsumo", meaning: "always", exampleUsages: ["{[Noun] は} いつも [Verb / Adj.]"] },
+      { kanjis: ["多くの場合"], hiragana: "おおくのばあい", romanization: "ookunobaai", meaning: "in many cases (written)" },
 
       // interrogative point in time
       { hiragana: "いつ", preferredForm: "hiragana", kanjis: ["何時"], romanization: "itsu", meaning: "when" },

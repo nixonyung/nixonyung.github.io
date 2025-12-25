@@ -27,6 +27,7 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
       { kanjis: ["公子"], hiragana: "こうし", romanization: "koushi", meaning: "young nobleman" },
       { kanjis: ["紳士"], hiragana: "しんし", romanization: "shinshi", meaning: "gentleman" },
       { kanjis: ["殿方"], hiragana: "とのがた", romanization: "tonogata", meaning: "gentlemen (woman speaking to a group of men)" },
+      { hiragana: "おっちゃん", romanization: "otchan", meaning: "uncle (casual)" },
 
       { kanjis: ["女"], hiragana: "おんな", romanization: "onna", meaning: "woman (objectified)" },
       { kanjis: ["少女"], rareKanjis: ["小女"], hiragana: "しょうじょ", romanization: "shoujo", meaning: "young lady" },

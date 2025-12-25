@@ -1,6 +1,7 @@
 <script lang="ts">
   import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
   import Highlighted from "@/components/svelte/Highlighted.svelte";
+  import ReferenceLink from "@/components/svelte/ReferenceLink.svelte";
   import { useSyncSettings } from "../../../../lib/settings.svelte";
   import { jp } from "./jp.svelte";
 
@@ -12,6 +13,16 @@
       !jp.flashcardSettings.enableAdjectivesDescriptors,
   );
 </script>
+
+<div class="flex flex-col items-start">
+  <ReferenceLink title="TAKOBOTO (English dictionary)" href="https://takoboto.jp/" />
+  <ReferenceLink title="weblio (native dictionary)" href="https://www.weblio.jp/" />
+  <ReferenceLink
+    title="Ultra Handy Japanese Verb Conjugator"
+    href="https://www.japaneseverbconjugator.com/"
+  />
+  <span>(ref.) Google Search - AI Overview (for grammar & word usages)</span>
+</div>
 
 <div class="flex flex-col flex-wrap gap-3">
   <div class="flex items-start gap-6">

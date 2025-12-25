@@ -51,7 +51,14 @@
 <svelte:window onmouseup={() => (isMousedown = false)} />
 
 <!-- settings -->
-<div class="flex flex-col gap-3">
+<div class="flex flex-col gap-6">
+  <div class="flex flex-col items-start">
+    <ReferenceLink
+      title="平文式羅馬字"
+      href="https://www.wikiwand.com/zh-hk/articles/平文式罗马字#罗马字表"
+    />
+  </div>
+
   <div class="flex flex-col">
     <div class="flex items-center-safe gap-9">
       <CheckboxInput
@@ -76,12 +83,6 @@
         label="show Gojuon 五十音 origins"
       />
     </div>
-  </div>
-  <div class="flex items-center-safe gap-9">
-    <ReferenceLink
-      title="平文式羅馬字"
-      href="https://www.wikiwand.com/zh-hk/articles/平文式罗马字#罗马字表"
-    />
   </div>
 
   <!-- (ref.) [平假名](https://www.wikiwand.com/zh-hk/articles/平假名) -->
