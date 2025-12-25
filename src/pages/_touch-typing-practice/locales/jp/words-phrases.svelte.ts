@@ -1,30 +1,54 @@
 import type { JapaneseWord } from "../../types";
 import { jp } from "./jp.svelte";
 
-// TODO: by intents
-//
-// greetings
-//
-// questions
-// - what is x / is x y?
-// - how many?
-// - making requests
-//
-// making statements
-// - descriptions, e.g. what I did/saw/felt / what I am doing/seeing/feeling
-// - plans, e.g. what I want / what I will do
-// - conditionals
-// - answering questions
-
-// ---
-
-// TODO: desu ne: answer questions
-
 export function appendPhrases(words: JapaneseWord[]) {
+  // TODO: "nai desu ka" vs "arimasen ka": "nai desu ka" is modern / spoken
+  // TODO: ずっと zutto
+  // TODO: wake dewanai
+  // TODO: beki dewanai
+  // TODO: mono dewanai
+  // TODO: noni
+  // TODO: Shika, Bakari, Nomi
+  // TODO: [Clause] ということ です (it is said?)
+  // TODO: chotto
+
   if (jp.flashcardSettings.enablePhrasesInterjections) {
     words.splice(
       words.length,
       0, //
+      // TODO: politeness / softening
+      // TODO: desu, desu ne
+      { hiragana: "と思う。", romanization: "to omou", meaning: "I think (casual)", exampleUsages: ["[Clause] と思う。", "[Clause] と思います。", "[Clause] と思っている。"] },
+      { hiragana: "お", preferredForm: "hiragana", kanjis: ["御"], romanization: "o", meaning: "(honorific, with native Japanese words)", exampleUsages: ["お[Noun]"] },
+      { hiragana: "ご", preferredForm: "hiragana", kanjis: ["御"], romanization: "go", meaning: "(honorific, with Chinese-derived words)", exampleUsages: ["ご[Noun]"] },
+      { kanjis: ["多分"], hiragana: "たぶん", romanization: "tabun", meaning: "probably" },
+      { kanjis: ["少し"], rareKanjis: ["寡し", "些し"], hiragana: "すこし", romanization: "sukoshi", meaning: "a little bit" },
+
+      // TODO: emphasizing
+      { kanjis: ["と言う"], hiragana: "という", romanization: "to iu", meaning: "xxx is called/said", exampleUsages: ["(name) という [Pronoun] ..."] },
+      { kanjis: ["本当に"], hiragana: "ほんとうに", romanization: "hontouni", meaning: "for real" },
+
+      // TODO: leading questions
+      { hiragana: "ね", romanization: "ne", meaning: "isn't it? (expressing feelings, casual)", exampleUsages: ["[Clause] ね。"] },
+      { hiragana: "だろう", romanization: "darou", meaning: "right? (stating facts, casual)", exampleUsages: ["[Clause] だろう？"] },
+      { hiragana: "でしょう", romanization: "deshou", meaning: "right? (stating facts, polite)", exampleUsages: ["[Clause] でしょう？"] },
+
+      { hiragana: "〇〇んです", romanization: "-n desu", meaning: "it is because (spoken, polite)", exampleUsages: ["[Clause] んです。"] },
+      { hiragana: "〇〇のです", romanization: "-no desu", meaning: "it is because (written, polite)", exampleUsages: ["[Clause] のです。"] },
+
+      { hiragana: "と思わない？", romanization: "to omowanai", meaning: "don't you think? (casual)", exampleUsages: ["[Verb] と思わない？", "[Noun] だと思わない？", "[i-Adj.] と思わない？", "[na-Adj.] だと思わない？"] },
+
+      { hiragana: "ませんか？", romanization: "masen ka", meaning: "will you?", exampleUsages: ["[Verb-ます (dropped)] ませんか？"] },
+      { hiragana: "ましょうか？", romanization: "mashou ka", meaning: "shall I? (assuming yes)", exampleUsages: ["[Verb-ます (dropped)] ましょうか？"] },
+
+      // TODO: exclamational
+      { hiragana: "よ", romanization: "yo", meaning: "(exclamation, spoken)", exampleUsages: ["[Clause] よ。", "[Clause] よね。"] },
+      { hiragana: "なあ", romanization: "naa", meaning: '("I think") - wow / I wonder (casual)', exampleUsages: ["[Clause] なあ。"] },
+
+      // miscellaneous
+      // TODO: agreement / yes or no
+      // TODO: wow
+
       { hiragana: "そう", preferredForm: "hiragana", rareKanjis: ["然う"], romanization: "sou", meaning: "(agree)" },
 
       { hiragana: "いいえ", romanization: "iie", meaning: "no (formal) / don't mention it" },
@@ -40,6 +64,14 @@ export function appendPhrases(words: JapaneseWord[]) {
       { hiragana: "ほら", romanization: "hora", meaning: "look!" },
       { kanjis: ["急いで"], hiragana: "いそいで", romanization: "isoide", meaning: "hurry up!" },
       { hiragana: "すげー", romanization: "sugee", meaning: "incredible" },
+
+      { kanjis: ["方"], hiragana: "かた", romanization: "kata", meaning: "way of doing", exampleUsages: ["[Noun] の [Verb-ます (dropped)] 方"] },
+
+      { hiragana: "ほしい", preferredForm: "hiragana", kanjis: ["欲しい"], romanization: "hoshii", meaning: "I want xxx (casual)", exampleUsages: ["[Noun] がほしいです。"] },
+      { hiragana: "をください", preferredForm: "hiragana", kanjis: ["を下さい"], romanization: "-o kudasai", meaning: "please give me xxx (polite)", exampleUsages: ["[Noun] をください。", "[Noun] を [Noun (counter)] ください。"] },
+
+      { hiragana: "にする", romanization: "ni suru", meaning: "I am going for xxx (casual)", exampleUsages: ["[Noun] にする。"] },
+      { hiragana: "にします", romanization: "ni shimasu", meaning: "I am going for xxx (polite)", exampleUsages: ["[Noun] にします。"] },
     );
   }
 
@@ -71,9 +103,7 @@ export function appendPhrases(words: JapaneseWord[]) {
 
       { hiragana: "もうありません", romanization: "mou arimasen", meaning: "aren't any left" },
 
-      { kanjis: ["〇〇のが上手"], hiragana: "〇〇のが〇〇", romanization: "no ga jouzu", meaning: "xxx is xxx", exampleUsages: ["... [Verb] のが [Adj.] です。", "... [Verb] のが上手/下手 です。", "... [Verb] のが好き/嫌い です。", "... [Verb] のが速い/遅い です。", "... [Verb] のが難しい/易しい です。"] },
-
-      { kanjis: ["最後まで"], hiragana: "さいごまで", romanization: "saigomade", meaning: "till the end", exampleUsages: ["最後まで [Verb]"] },
+      { hiragana: "〇〇のが〇〇", romanization: "no ga", meaning: "xxx is xxx", exampleUsages: ["... [Verb] のが [Adj.] です。", "... [Verb] のが上手/下手 です。", "... [Verb] のが好き/嫌い です。", "... [Verb] のが速い/遅い です。", "... [Verb] のが難しい/易しい です。"] },
 
       { kanjis: ["仕方がない"], hiragana: "しかたがない", romanization: "shikataganai", meaning: "It can't be helped" },
       { kanjis: ["失礼しました"], hiragana: "しつれいしました", romanization: "shitsureishimashita", meaning: "Excuse me." },
@@ -81,23 +111,4 @@ export function appendPhrases(words: JapaneseWord[]) {
       { kanjis: ["日本へようこそ！"], hiragana: "にほんへようこそ！", romanization: "nihon e youkoso", meaning: "Welcome to Japan!" },
     );
   }
-
-  /*
-  TODO:
-  [Noun] desu: is
-
-  [Noun] dewa: is not xxx
-    -> ja (spoken)
-  [Verb] tewa: if not xxx
-    -> cha (spoken)
-  [Clause] dewa: in that case
-
-  aru / iru: (exist)
-  */
 }
-
-// TODO:
-// In Japanese, "must" or "have to" is expressed using verb forms like V-なければならない (nakereba naranai) or V-なくてはいけない (nakute wa ikenai) for formal/written speech,
-// while casual speech uses shortened versions like V-なくちゃ (nakucha) or V-なきゃ (nakya),
-// all meaning something is necessary or required.
-// These structures attach to the nai-form (negative) of a verb, essentially meaning "if [verb] doesn't happen, it's not good".

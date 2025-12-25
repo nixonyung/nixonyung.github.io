@@ -320,89 +320,57 @@
     <Highlighted
       onclick={() => {
         if (
-          !jp.flashcardSettings.enableAdverbsTime ||
-          !jp.flashcardSettings.enableAdverbsLocation ||
-          !jp.flashcardSettings.enableAdverbsLogical ||
-          !jp.flashcardSettings.enableAdverbsDegree ||
-          !jp.flashcardSettings.enableAdverbsManner ||
-          !jp.flashcardSettings.enableAdverbsInterrogativeWhen ||
-          !jp.flashcardSettings.enableAdverbsInterrogativeWhere ||
-          !jp.flashcardSettings.enableAdverbsInterrogativeWhy ||
-          !jp.flashcardSettings.enableAdverbsInterrogativeHowCome ||
-          !jp.flashcardSettings.enableAdverbsInterrogativeHowMany
+          !jp.flashcardSettings.enableFunctionalChronological ||
+          !jp.flashcardSettings.enableFunctionalLocational ||
+          !jp.flashcardSettings.enableFunctionalLogical ||
+          !jp.flashcardSettings.enableFunctionalEnumerative ||
+          !jp.flashcardSettings.enableFunctionalDegree ||
+          !jp.flashcardSettings.enableFunctionalManner
         ) {
-          jp.flashcardSettings.enableAdverbsTime = true;
-          jp.flashcardSettings.enableAdverbsLocation = true;
-          jp.flashcardSettings.enableAdverbsLogical = true;
-          jp.flashcardSettings.enableAdverbsDegree = true;
-          jp.flashcardSettings.enableAdverbsManner = true;
-          jp.flashcardSettings.enableAdverbsInterrogativeWhen = true;
-          jp.flashcardSettings.enableAdverbsInterrogativeWhere = true;
-          jp.flashcardSettings.enableAdverbsInterrogativeWhy = true;
-          jp.flashcardSettings.enableAdverbsInterrogativeHowCome = true;
-          jp.flashcardSettings.enableAdverbsInterrogativeHowMany = true;
+          jp.flashcardSettings.enableFunctionalChronological = true;
+          jp.flashcardSettings.enableFunctionalLocational = true;
+          jp.flashcardSettings.enableFunctionalLogical = true;
+          jp.flashcardSettings.enableFunctionalEnumerative = true;
+          jp.flashcardSettings.enableFunctionalDegree = true;
+          jp.flashcardSettings.enableFunctionalManner = true;
         } else {
-          jp.flashcardSettings.enableAdverbsTime = false;
-          jp.flashcardSettings.enableAdverbsLocation = false;
-          jp.flashcardSettings.enableAdverbsLogical = false;
-          jp.flashcardSettings.enableAdverbsDegree = false;
-          jp.flashcardSettings.enableAdverbsManner = false;
-          jp.flashcardSettings.enableAdverbsInterrogativeWhen = false;
-          jp.flashcardSettings.enableAdverbsInterrogativeWhere = false;
-          jp.flashcardSettings.enableAdverbsInterrogativeWhy = false;
-          jp.flashcardSettings.enableAdverbsInterrogativeHowCome = false;
-          jp.flashcardSettings.enableAdverbsInterrogativeHowMany = false;
+          jp.flashcardSettings.enableFunctionalChronological = false;
+          jp.flashcardSettings.enableFunctionalLocational = false;
+          jp.flashcardSettings.enableFunctionalLogical = false;
+          jp.flashcardSettings.enableFunctionalEnumerative = false;
+          jp.flashcardSettings.enableFunctionalDegree = false;
+          jp.flashcardSettings.enableFunctionalManner = false;
         }
       }}
     >
-      Adverbs:
+      Functional Words:
     </Highlighted>
 
     <div class="flex flex-col gap-y-1.5">
       <div class="flex flex-wrap items-center-safe gap-x-3">
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableAdverbsTime} label="Time" />
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableAdverbsLocation} label="Location" />
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableAdverbsLogical} label="Logical" />
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableAdverbsDegree} label="Degree" />
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableAdverbsManner} label="Manner" />
-      </div>
-      <div class="flex flex-wrap items-center-safe gap-x-3">
         <CheckboxInput
-          bind:checked={jp.flashcardSettings.enableAdverbsInterrogativeWhen}
-          label="When?"
+          bind:checked={jp.flashcardSettings.enableFunctionalChronological}
+          label="Chronological"
         />
         <CheckboxInput
-          bind:checked={jp.flashcardSettings.enableAdverbsInterrogativeWhere}
-          label="Where?"
+          bind:checked={jp.flashcardSettings.enableFunctionalLocational}
+          label="Locational"
         />
         <CheckboxInput
-          bind:checked={jp.flashcardSettings.enableAdverbsInterrogativeWhy}
-          label="Why?"
+          bind:checked={jp.flashcardSettings.enableFunctionalLogical}
+          label="Logical"
         />
         <CheckboxInput
-          bind:checked={jp.flashcardSettings.enableAdverbsInterrogativeHowCome}
-          label="How Come?"
+          bind:checked={jp.flashcardSettings.enableFunctionalEnumerative}
+          label="Enumerative"
         />
         <CheckboxInput
-          bind:checked={jp.flashcardSettings.enableAdverbsInterrogativeHowMany}
-          label="How Many?"
+          bind:checked={jp.flashcardSettings.enableFunctionalDegree}
+          label="Comparative"
         />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableFunctionalManner} label="Manner" />
       </div>
     </div>
-  </div>
-  <div class="flex items-center-safe gap-6">
-    <Highlighted
-      onclick={() => {
-        if (!jp.flashcardSettings.enableConjunctions) {
-          jp.flashcardSettings.enableConjunctions = true;
-        } else {
-          jp.flashcardSettings.enableConjunctions = false;
-        }
-      }}
-    >
-      Conjunctions
-    </Highlighted>
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableConjunctions} label="Conjunctions" />
   </div>
 
   <div class="flex items-center-safe gap-6">
@@ -425,6 +393,7 @@
     >
       Phrases:
     </Highlighted>
+
     <CheckboxInput
       bind:checked={jp.flashcardSettings.enablePhrasesInterjections}
       label="interjections"
@@ -439,15 +408,22 @@
   <div class="flex items-center-safe gap-6">
     <Highlighted
       onclick={() => {
-        if (!jp.flashcardSettings.enableRulesConjugations) {
+        if (
+          !jp.flashcardSettings.enableRulesAdpositions ||
+          !jp.flashcardSettings.enableRulesConjugations
+        ) {
+          jp.flashcardSettings.enableRulesAdpositions = true;
           jp.flashcardSettings.enableRulesConjugations = true;
         } else {
+          jp.flashcardSettings.enableRulesAdpositions = false;
           jp.flashcardSettings.enableRulesConjugations = false;
         }
       }}
     >
       Grammar Rules:
     </Highlighted>
+
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableRulesAdpositions} label="Adpositions" />
     <CheckboxInput
       bind:checked={jp.flashcardSettings.enableRulesConjugations}
       label="Conjugations"

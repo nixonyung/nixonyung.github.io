@@ -15,6 +15,7 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["暮らす", "暮す"], hiragana: "くらす", romanization: "kurasu", meaning: "live / get along" },
       { kanjis: ["死ぬ"], hiragana: "しぬ", romanization: "shinu", meaning: "die" },
       { kanjis: ["お腹が空く", "お腹がすく"], hiragana: "おなかがすく", romanization: "onakagasuku", meaning: "be hungry" },
+      { kanjis: ["眠る", "睡る"], hiragana: "ねむる", romanization: "nemuru", meaning: "sleep" },
 
       { kanjis: ["分かる", "解る", "判る", "分る"], hiragana: "わかる", romanization: "wakaru", meaning: "comprehend" },
       { kanjis: ["会う", "逢う", "遭う"], rareKanjis: ["遇う"], hiragana: "あう", romanization: "au", meaning: "meet" },
@@ -39,12 +40,14 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
       0, //
       { kanjis: ["生きる"], rareKanjis: ["活きる"], hiragana: "いきる", romanization: "ikiru", meaning: "be alive" },
       { kanjis: ["起きる"], hiragana: "おきる", romanization: "okiru", meaning: "wake up" },
-      { kanjis: ["出来る"], hiragana: "できる", romanization: "dekiru", meaning: "be able to" },
+      { kanjis: ["寝る"], rareKanjis: ["寐る"], hiragana: "ねる", romanization: "neru", meaning: "sleep" },
 
+      { kanjis: ["出来る"], hiragana: "できる", romanization: "dekiru", meaning: "be able to" },
       { kanjis: ["諦める"], hiragana: "あきらめる", romanization: "akirameru", meaning: "give up" },
-      { kanjis: ["外れる"], hiragana: "はずれる", romanization: "hazureru", meaning: "miss (not hit)" },
 
       { kanjis: ["似る"], hiragana: "にる", romanization: "niru", meaning: "be alike" },
+
+      { kanjis: ["外れる"], hiragana: "はずれる", romanization: "hazureru", meaning: "miss (not hit)" },
     );
   }
 
@@ -52,9 +55,10 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
-      { hiragana: "する", preferredForm: "hiragana", rareKanjis: ["為る"], romanization: "suru", meaning: "do / carry out" },
+      // -suru
       { kanjis: ["関連する"], rareKanjis: ["関聯"], hiragana: "かんれんする", romanization: "kanrensuru", meaning: "relate" },
 
+      // -kuru
       // TODO: kuru (to come)
     );
   }

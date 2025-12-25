@@ -2,6 +2,8 @@ import type { JapaneseWord } from "../../types";
 import { jp } from "./jp.svelte";
 
 export function appendPronouns(words: JapaneseWord[]) {
+  // TODO: rename to "references"
+
   if (jp.flashcardSettings.enablePronounsMe) {
     words.splice(
       words.length,
@@ -100,6 +102,8 @@ export function appendPronouns(words: JapaneseWord[]) {
       { hiragana: "それ", rareKanjis: ["其れ"], romanization: "sore", meaning: "that (distant from speaker, close to listener)" },
       { hiragana: "あれ", rareKanjis: ["彼", "彼れ"], romanization: "are", meaning: "that (distant from both speaker and listener)" },
 
+      { hiragana: "の", romanization: "no", meaning: "(possession marker)", exampleUsages: ["[Noun] の [Noun] ...", "だれの [Noun] ですか？"] },
+
       { exampleUsages: ["この [Noun]"], hiragana: "この", rareKanjis: ["此の", "斯の"], romanization: "kono", meaning: "this xxx (close to listener) / 呢個" },
       { exampleUsages: ["その [Noun]"], hiragana: "その", rareKanjis: ["其の"], romanization: "sono", meaning: "that xxx (distant from speaker, close to listener) / 嗰個" },
       { exampleUsages: ["かの [Noun]"], hiragana: "かの", kanjis: ["彼の", "彼"], romanization: "kano", meaning: "that xxx (distant from both speaker and listener) / 啊邊個" },
@@ -160,6 +164,7 @@ export function appendPronouns(words: JapaneseWord[]) {
       { kanjis: ["何事", "何ごと"], hiragana: "なにごと", romanization: "nanigoto", meaning: "what event" },
       { hiragana: "どれ", rareKanjis: ["何れ"], romanization: "dore", meaning: "which" },
       { hiragana: "どの", rareKanjis: ["何の"], romanization: "dono", meaning: "which xxx", exampleUsages: ["どの [Noun]"] },
+      { hiragana: "どんな", romanization: "donna", meaning: "what kind of", exampleUsages: ["どんな [Noun] ..."] },
     );
   }
 }

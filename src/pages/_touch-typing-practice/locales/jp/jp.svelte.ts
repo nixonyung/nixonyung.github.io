@@ -4,8 +4,12 @@ import { getKeymap } from "./keymap.svelte";
 import { getGojuons, getLetters } from "./letters.svelte";
 import { appendAdjectivesDesriptors } from "./words-adjectives-descriptors.svelte";
 import { appendAdjectivesFeelings } from "./words-adjectives-feelings.svelte";
-import { appendAdverbs } from "./words-adverbs.svelte";
-import { appendConjunctions } from "./words-conjunctions.svelte";
+import { appendFunctionalChronological } from "./words-functional-chronological.svelte";
+import { appendFunctionalDegree } from "./words-functional-degree.svelte";
+import { appendFunctionalEnumerative } from "./words-functional-enumerative.svelte";
+import { appendFunctionalLocational } from "./words-functional-locational.svelte";
+import { appendFunctionalLogical } from "./words-functional-logical.svelte";
+import { appendFunctionalManner } from "./words-functional-manner.svelte";
 import { appendNounsAbstract } from "./words-nouns-abstract.svelte";
 import { appendNounsAnimals } from "./words-nouns-animals.svelte";
 import { appendNounsLocation } from "./words-nouns-location.svelte";
@@ -15,6 +19,7 @@ import { appendNounsPeopleByRelationships } from "./words-nouns-people-relations
 import { appendNounsTime } from "./words-nouns-time.svelte";
 import { appendPhrases } from "./words-phrases.svelte";
 import { appendPronouns } from "./words-pronouns.svelte";
+import { appendRulesAdpositions } from "./words-rules-adpositions.svelte";
 import { appendRulesConjugations } from "./words-rules-conjugations.svelte";
 import { appendIntransitiveVerbs } from "./words-verbs-intransitive.svelte";
 import { appendTransitiveVerbs } from "./words-verbs-transitive.svelte";
@@ -99,28 +104,24 @@ export const jp = new (class {
     enableIAdjectives: { paramKey: "iAdjs", defaultValue: true },
     enableNaAdjectives: { paramKey: "naAdjs", defaultValue: true },
 
-    // adverbs:
-    enableAdverbsTime: { paramKey: "timeAdvs", defaultValue: true },
-    enableAdverbsLocation: { paramKey: "locationAdvs", defaultValue: true },
-    enableAdverbsLogical: { paramKey: "logicalAdvs", defaultValue: true },
-    enableAdverbsDegree: { paramKey: "degreeAdvs", defaultValue: true },
-    enableAdverbsManner: { paramKey: "mannerAdvs", defaultValue: true },
-    enableAdverbsInterrogativeWhen: { paramKey: "when", defaultValue: true },
-    enableAdverbsInterrogativeWhere: { paramKey: "where", defaultValue: true },
-    enableAdverbsInterrogativeWhy: { paramKey: "why", defaultValue: true },
-    enableAdverbsInterrogativeHowCome: { paramKey: "howCome", defaultValue: true },
-    enableAdverbsInterrogativeHowMany: { paramKey: "howMany", defaultValue: true },
+    // functional words
+    enableFunctionalChronological: { paramKey: "chronological", defaultValue: true },
+    enableFunctionalLocational: { paramKey: "locational", defaultValue: true },
+    enableFunctionalLogical: { paramKey: "logical", defaultValue: true },
+    enableFunctionalEnumerative: { paramKey: "enumerative", defaultValue: true },
+    enableFunctionalDegree: { paramKey: "comparative", defaultValue: true },
+    enableFunctionalManner: { paramKey: "manner", defaultValue: true },
 
-    // syntax:
-    enableConjunctions: { paramKey: "conjunctions", defaultValue: true },
+    enableInterrogativeFunctional: { paramKey: "interrogativeFunc", defaultValue: true },
+
+    // grammar rules:
+    enableRulesAdpositions: { paramKey: "adpositions", defaultValue: true },
+    enableRulesConjugations: { paramKey: "conjugations", defaultValue: true },
 
     // phrases / expressions:
     enablePhrasesInterjections: { paramKey: "interjections", defaultValue: true },
     enablePhrasesGreetings: { paramKey: "greetings", defaultValue: true },
     enablePhrasesMiscellaneous: { paramKey: "miscellaneousPhrases", defaultValue: true },
-
-    // grammar rules:
-    enableRulesConjugations: { paramKey: "conjugations", defaultValue: true },
   };
   flashcardSettings = $state(initSettings(this.FLASHCARD_SETTINGS_SCHEMA));
 
@@ -143,9 +144,14 @@ export const jp = new (class {
     appendIntransitiveVerbs(words);
     appendAdjectivesFeelings(words);
     appendAdjectivesDesriptors(words);
-    appendAdverbs(words);
-    appendConjunctions(words);
+    appendFunctionalChronological(words);
+    appendFunctionalLocational(words);
+    appendFunctionalLogical(words);
+    appendFunctionalEnumerative(words);
+    appendFunctionalDegree(words);
+    appendFunctionalManner(words);
     appendPhrases(words);
+    appendRulesAdpositions(words);
     appendRulesConjugations(words);
 
     return words;
