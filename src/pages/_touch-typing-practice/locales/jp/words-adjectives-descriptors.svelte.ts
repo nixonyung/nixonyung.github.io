@@ -33,8 +33,6 @@ export function appendAdjectivesDesriptors(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
-      { kanjis: ["結構"], hiragana: "けっこう", romanization: "kekkou", meaning: "wonderful" },
-
       { hiragana: "だめ", preferredForm: "hiragana", katakana: "ダメ", kanjis: ["駄目"], romanization: "dame", meaning: "no good" },
 
       { kanjis: ["親切"], rareKanjis: ["深切"], hiragana: "しんせつ", romanization: "shinsetsu", meaning: "considerate" },
@@ -44,8 +42,6 @@ export function appendAdjectivesDesriptors(words: JapaneseWord[]) {
       { kanjis: ["下手"], hiragana: "へた", romanization: "heta", meaning: "unskilled" },
 
       { kanjis: ["不可能"], hiragana: "ふかのう", romanization: "fukanou", meaning: "impossible" },
-
-      { kanjis: ["一杯", "１杯"], hiragana: "いっぱい", romanization: "ippai", meaning: "full / many / much" },
     );
   }
 }

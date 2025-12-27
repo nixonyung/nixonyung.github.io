@@ -10,12 +10,12 @@ export function appendNounsLocation(words: JapaneseWord[]) {
       { kanjis: ["前"], hiragana: "まえ", romanization: "mae", meaning: "front" },
       { kanjis: ["後"], hiragana: "あと", romanization: "ato", meaning: "back" },
       // TODO: up, down
-      { kanjis: ["左"], hiragana: "あと", romanization: "hidari", meaning: "left" },
+      { kanjis: ["左"], hiragana: "ひだり", romanization: "hidari", meaning: "left" },
       { kanjis: ["右"], hiragana: "みぎ", romanization: "migi", meaning: "right" },
 
       { kanjis: ["真ん中"], hiragana: "まんなか", romanization: "mannaka", meaning: "center" },
-      { kanjis: ["向こう"], hiragana: "むこう", romanization: "mukou", meaning: "beyond / the other side / 嗰度" },
-      { kanjis: ["向こう側", "向う側"], hiragana: "むこうがわ", romanization: "mukougawa", meaning: "the other side / 嗰邊" },
+      { kanjis: ["向こう"], hiragana: "むこう", romanization: "mukou", meaning: "over there / the other side" },
+      { kanjis: ["向こう側", "向う側"], hiragana: "むこうがわ", romanization: "mukougawa", meaning: "over there / the other side" },
       { kanjis: ["東"], hiragana: "ひがし", romanization: "higashi", meaning: "east" },
       { kanjis: ["南"], hiragana: "みなみ", romanization: "minami", meaning: "south" },
       { kanjis: ["西"], hiragana: "にし", romanization: "nishi", meaning: "west" },
@@ -23,7 +23,6 @@ export function appendNounsLocation(words: JapaneseWord[]) {
 
       // relative positions
       { kanjis: ["側", "傍"], hiragana: "そば", romanization: "soba", meaning: "nearby" },
-      { kanjis: ["側"], hiragana: "そく", romanization: "soku", meaning: "nearby" },
       { kanjis: ["隣"], hiragana: "となり", romanization: "tonari", meaning: "immediate neighbor" },
 
       { katakana: "トップ", romanization: "toppu", meaning: "top" },
@@ -41,9 +40,14 @@ export function appendNounsLocation(words: JapaneseWord[]) {
       { kanjis: ["都市"], hiragana: "とし", romanization: "toshi", meaning: "city" },
       { kanjis: ["国", "邦"], hiragana: "くに", romanization: "kuni", meaning: "country" },
 
+      { kanjis: ["道", "途", "路", "径"], hiragana: "みち", romanization: "michi", meaning: "road / path" },
+
       // shops / restaurants
+      { kanjis: ["店"], hiragana: "みせ", romanization: "mise", meaning: "shop" },
+      { kanjis: ["商店"], hiragana: "しょうてん", romanization: "shouten", meaning: "shop" },
+      { kanjis: ["屋", "家"], hiragana: "や", romanization: "ya", meaning: "house", derivedMeanings: ["shop"], exampleUsages: ["砂利屋"] },
+
       { kanjis: ["空港"], hiragana: "くうこう", romanization: "kuukou", meaning: "airport" },
-      { kanjis: ["屋", "家"], hiragana: "や", romanization: "ya", meaning: "shop", exampleUsages: ["砂利屋"] },
       { katakana: "コンビニ", romanization: "konbini", meaning: "convenience store" },
 
       // infrastructures
@@ -55,6 +59,8 @@ export function appendNounsLocation(words: JapaneseWord[]) {
 
       // TODO: miscellaneous venues
       { kanjis: ["事務所"], hiragana: "じむしょ", romanization: "jimusho", meaning: "office" },
+
+      { kanjis: ["天国"], hiragana: "てんごく", romanization: "tengoku", meaning: "heaven" },
       { katakana: "ヘブン", romanization: "hebun", meaning: "heaven" },
     );
   }

@@ -217,14 +217,16 @@
               : undefined}
           >
             {#each question.questionKey as values}
-              {#if typeof values === "string"}
-                <div>{values}</div>
-              {:else}
-                <div class="flex flex-col items-start text-xs">
-                  {#each values as value}
-                    <span>{value}</span>
-                  {/each}
-                </div>
+              {#if values}
+                {#if typeof values === "string"}
+                  <div>{values}</div>
+                {:else}
+                  <div class="flex flex-col items-start text-xs">
+                    {#each values as value}
+                      <span>{value}</span>
+                    {/each}
+                  </div>
+                {/if}
               {/if}
             {/each}
 

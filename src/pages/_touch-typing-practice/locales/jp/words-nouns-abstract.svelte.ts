@@ -10,28 +10,31 @@ export function appendNounsAbstract(words: JapaneseWord[]) {
       { kanjis: ["人生"], hiragana: "じんせい", romanization: "jinsei", meaning: "life" },
       { kanjis: ["人生観"], hiragana: "じんせいかん", romanization: "jinseikan", meaning: "view of life" },
       { kanjis: ["死"], hiragana: "し", romanization: "shi", meaning: "death" },
-      { kanjis: ["死去"], hiragana: "しきょ", romanization: "shikyo", meaning: "passing away" },
+      { kanjis: ["死去"], hiragana: "しきょ", romanization: "shikyo", meaning: "passing away (formal)" },
 
-      { kanjis: ["男性"], hiragana: "だんせい", romanization: "dansei", meaning: "male" },
-      { kanjis: ["男性性"], hiragana: "だんせいせい", romanization: "danseisei", meaning: "masculinity" },
-      { kanjis: ["男装"], hiragana: "だんそう", romanization: "dansou", meaning: "men's clothing" },
-      { kanjis: ["女性"], hiragana: "じょせい", romanization: "josei", meaning: "female" },
-      { kanjis: ["女性性"], hiragana: "じょせいせい", romanization: "joseisei", meaning: "femininity" },
-      { kanjis: ["女装"], hiragana: "じょそう", romanization: "josou", meaning: "women's clothing" },
       { kanjis: ["性"], hiragana: "せい", romanization: "sei", meaning: "sex / nature of a person" },
       { kanjis: ["性別"], hiragana: "せいべつ", romanization: "seibetsu", meaning: "gender" },
       { katakana: "ジェンダー", romanization: "jenda", meaning: "gender" },
+      { kanjis: ["男性"], hiragana: "だんせい", romanization: "dansei", meaning: "male" },
+      { kanjis: ["男らしさ"], hiragana: "おとこらしさ", romanization: "otokorashisa", meaning: "masculinity" },
+      { kanjis: ["男性性"], hiragana: "だんせいせい", romanization: "danseisei", meaning: "masculinity (written)" },
+      { kanjis: ["女性"], hiragana: "じょせい", romanization: "josei", meaning: "female" },
+      { kanjis: ["女らしさ"], hiragana: "おんならしさ", romanization: "onnashisa", meaning: "femininity" },
+      { kanjis: ["女性性"], hiragana: "じょせいせい", romanization: "joseisei", meaning: "femininity (written)" },
+
+      { kanjis: ["男装"], hiragana: "だんそう", romanization: "dansou", meaning: "men's clothing" },
+      { kanjis: ["女装"], hiragana: "じょそう", romanization: "josou", meaning: "women's clothing" },
 
       { kanjis: ["家"], hiragana: "いえ", romanization: "ie", meaning: "home" },
       { hiragana: "うち", preferredForm: "hiragana", kanjis: ["家"], romanization: "uchi", meaning: "house" },
       { kanjis: ["家族"], hiragana: "かぞく", romanization: "kazoku", meaning: "extended family" },
       { kanjis: ["親戚"], hiragana: "しんせき", romanization: "shinseki", meaning: "relatives" },
-      { kanjis: ["親類"], hiragana: "しんるい", romanization: "shinrui", meaning: "relatives" },
+      { kanjis: ["親類"], hiragana: "しんるい", romanization: "shinrui", meaning: "relatives (formal)" },
       { kanjis: ["肉親"], hiragana: "にくしん", romanization: "nikushin", meaning: "blood relatives" },
-      { kanjis: ["親族"], hiragana: "しんぞく", romanization: "shinzoku", meaning: "kin" },
+      { kanjis: ["親族"], hiragana: "しんぞく", romanization: "shinzoku", meaning: "kin (formal)" },
       { kanjis: ["名前"], hiragana: "なまえ", romanization: "namae", meaning: "name" },
       { kanjis: ["姓名"], hiragana: "せいめい", romanization: "seimei", meaning: "full name" },
-      { kanjis: ["氏名"], hiragana: "しめい", romanization: "shimei", meaning: "full name" },
+      { kanjis: ["氏名"], hiragana: "しめい", romanization: "shimei", meaning: "full name (formal)" },
       { kanjis: ["苗字", "名字"], hiragana: "みょうじ", romanization: "myouji", meaning: "surname" },
 
       { kanjis: ["親密"], hiragana: "しんみつ", romanization: "shinmitsu", meaning: "intimacy" },
@@ -107,9 +110,9 @@ export function appendNounsAbstract(words: JapaneseWord[]) {
 
       { kanjis: ["増加"], hiragana: "ぞうか", romanization: "zouka", meaning: "increase" },
       { kanjis: ["上昇"], hiragana: "じょうしょう", romanization: "joushou", meaning: "ascend" },
-      { kanjis: ["末"], hiragana: "すえ", romanization: "sue", meaning: "end / tip" },
-      { kanjis: ["関連"], rareKanjis: ["関聯"], hiragana: "かんれん", romanization: "kanren", meaning: "relevance" },
-      { kanjis: ["分脈"], hiragana: "ぶんみゃく", romanization: "bunmyaku", meaning: "branch / fork" },
+      { kanjis: ["末"], hiragana: "すえ", romanization: "sue", meaning: "end / tip / last part" },
+      { kanjis: ["関連"], rareKanjis: ["関聯"], hiragana: "かんれん", romanization: "kanren", meaning: "relation" },
+      { kanjis: ["分脈"], hiragana: "ぶんみゃく", romanization: "bunmyaku", meaning: "branch / fork (of a family tree)" },
 
       { kanjis: ["真面目"], hiragana: "まじめ", katakana: "マジメ", romanization: "majime", meaning: "truthfulness" },
       { kanjis: ["検査"], hiragana: "けんさ", romanization: "kensa", meaning: "inspection" },
@@ -126,12 +129,12 @@ export function appendNounsAbstract(words: JapaneseWord[]) {
       { katakana: "クラス", romanization: "kurasu", meaning: "class" },
       { kanjis: ["授業中"], hiragana: "じゅぎょうちゅう", romanization: "jugyouchuu", meaning: "in class" },
       { kanjis: ["学習"], hiragana: "がくしゅう", romanization: "gakushuu", meaning: "study" },
-      { kanjis: ["勉強"], hiragana: "べんきょう", romanization: "benkyou", meaning: "study / hardwork" },
-      { kanjis: ["習得", "修得"], hiragana: "しゅうとく", romanization: "shuutoku", meaning: "acquisition of a skill" },
+      { kanjis: ["勉強"], hiragana: "べんきょう", romanization: "benkyou", meaning: "dedication", derivedMeanings: ["study"] },
+      { kanjis: ["習得", "修得"], hiragana: "しゅうとく", romanization: "shuutoku", meaning: "mastering a skill" },
       { kanjis: ["部活"], hiragana: "ぶかつ", romanization: "bukatsu", meaning: "club activities" },
       { kanjis: ["宿題"], hiragana: "しゅくだい", romanization: "shukudai", meaning: "homework" },
       { kanjis: ["答え", "答", "応え", "報え"], hiragana: "こたえ", romanization: "kotae", meaning: "answer" },
-      { kanjis: ["試験"], hiragana: "しけん", romanization: "shiken", meaning: "test / exam" },
+      { kanjis: ["試験"], hiragana: "しけん", romanization: "shiken", meaning: "formal exam" },
       { katakana: "テスト", romanization: "tesuto", meaning: "test / exam" },
       { katakana: "ランキング", romanization: "rankingu", meaning: "ranking" },
 
@@ -142,19 +145,16 @@ export function appendNounsAbstract(words: JapaneseWord[]) {
 
       { kanjis: ["居住"], hiragana: "きょじゅう", romanization: "kyojuu", meaning: "reside" },
       { kanjis: ["在住"], hiragana: "ざいじゅう", romanization: "zaijuu", meaning: "reside" },
-      { kanjis: ["寝"], hiragana: "ね", romanization: "ne", meaning: "sleep" },
-      { kanjis: ["寝"], hiragana: "しん", romanization: "shin", meaning: "sleep" },
       { kanjis: ["訪れ"], hiragana: "おとずれ", romanization: "otozure", meaning: "visit" },
 
       { kanjis: ["雨"], hiragana: "あめ", romanization: "ame", meaning: "rain" },
       { kanjis: ["暑さ"], hiragana: "あつさ", romanization: "atsusa", meaning: "hotness" },
 
       { kanjis: ["余り"], hiragana: "あまり", romanization: "amari", meaning: "remains" },
-      { kanjis: ["返し", "反し"], hiragana: "かえし", romanization: "kaeshi", meaning: "reversal / return" },
+      { kanjis: ["返し"], hiragana: "かえし", romanization: "kaeshi", meaning: "reversal / return" },
 
       { kanjis: ["積もり", "積り"], hiragana: "つもり", romanization: "tsumori", meaning: "plan / intention" },
-
-      { hiragana: "ため", preferredForm: "hiragana", kanjis: ["為"], romanization: "tame", meaning: "advantage / benefit" },
+      { kanjis: ["場合"], hiragana: "ばあい", romanization: "baai", meaning: "occasion" },
 
       { katakana: "コンビニエンス", romanization: "konbiniensu", meaning: "convenience" },
       { katakana: "トイレットペーパー", romanization: "toirettopeepaa", meaning: "toilet paper" },
@@ -184,7 +184,18 @@ export function appendNounsAbstract(words: JapaneseWord[]) {
       { katakana: "ピンク", romanization: "pinku", meaning: "pink" },
       { kanjis: ["桃色"], hiragana: "ももいろ", romanization: "momoiro", meaning: "peach" },
 
-      // TODO: linguistics
+      // festivals
+      { katakana: "クリスマス", romanization: "kurisumasu", meaning: "Christmas" },
+
+      // art
+      { katakana: "メドレー", romanization: "medorii", meaning: "medley" },
+
+      { katakana: "アニメ", romanization: "anime", meaning: "anime" },
+      { katakana: "アニメーション", romanization: "animeeshon", meaning: "animation" },
+      { katakana: "アニメソング", romanization: "anime songu", meaning: "anime song" },
+      { katakana: "アニソン", romanization: "anison", meaning: "anime song" },
+
+      // linguistics
       { kanjis: ["辞典"], hiragana: "じてん", romanization: "jiten", meaning: "dictionary" },
       { kanjis: ["事典"], hiragana: "じてん", romanization: "jiten", meaning: "encyclopedia" },
       { kanjis: ["字典"], hiragana: "じてん", romanization: "jiten", meaning: "Kanji dictionary" },

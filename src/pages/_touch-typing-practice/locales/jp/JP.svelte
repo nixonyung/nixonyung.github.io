@@ -70,6 +70,11 @@
           valueFn: ({ meaning }) => meaning,
           defaultPosition: "option",
         },
+        {
+          label: "derived meanings",
+          valueFn: ({ derivedMeanings }) => derivedMeanings ?? [],
+          defaultPosition: "option",
+        },
       ]}
     />
   {/if}

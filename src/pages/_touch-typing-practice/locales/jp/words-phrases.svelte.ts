@@ -10,6 +10,7 @@ export function appendPhrases(words: JapaneseWord[]) {
   // TODO: noni
   // TODO: Shika, Bakari, Nomi
   // TODO: [Clause] ということ です (it is said?)
+  // TODO: proverbs
 
   if (jp.flashcardSettings.enablePhrasesInterjections) {
     words.splice(
@@ -17,13 +18,21 @@ export function appendPhrases(words: JapaneseWord[]) {
       0, //
       // TODO: politeness / softening
       // TODO: desu, desu ne
-      { hiragana: "と思う。", romanization: "to omou", meaning: "I think (casual)", exampleUsages: ["[Clause] と思う。", "[Clause] と思います。", "[Clause] と思っている。"] },
+
       { hiragana: "お", preferredForm: "hiragana", kanjis: ["御"], romanization: "o", meaning: "(honorific, with native Japanese words)", exampleUsages: ["お[Noun]"] },
       { hiragana: "ご", preferredForm: "hiragana", kanjis: ["御"], romanization: "go", meaning: "(honorific, with Chinese-derived words)", exampleUsages: ["ご[Noun]"] },
+
       { kanjis: ["多分"], hiragana: "たぶん", romanization: "tabun", meaning: "probably" },
       { kanjis: ["少し"], rareKanjis: ["寡し", "些し"], hiragana: "すこし", romanization: "sukoshi", meaning: "a little bit" },
+      { hiragana: "ちょっと", rareKanjis: ["一寸"], katakana: "チョット", romanization: "chotto", meaning: "a little bit" },
+      { hiragana: "もっと", romanization: "motto", meaning: "even more" },
+
+      { hiragana: "と思う。", romanization: "to omou", meaning: "I think (casual)", exampleUsages: ["[Clause] と思う。", "[Clause] と思います。", "[Clause] と思っている。"] },
+
+      { kanjis: ["全然"], hiragana: "ぜんぜん", romanization: "zenzen", meaning: "not really" },
+
       { hiragana: "ほしい", preferredForm: "hiragana", kanjis: ["欲しい"], romanization: "hoshii", meaning: "I want xxx (casual)", exampleUsages: ["[Noun] がほしいです。"] },
-      { hiragana: "ください", preferredForm: "hiragana", kanjis: ["下さい"], romanization: "kudasai", meaning: "please give me (polite)", exampleUsages: ["[Noun] をください。", "[Noun] を [(counter)] ください。"] },
+      { hiragana: "ください", preferredForm: "hiragana", kanjis: ["下さい"], romanization: "kudasai", meaning: "please give me (polite)", exampleUsages: ["お [Noun] をください。", "[Noun] を {(counter)} ください。"] },
 
       // TODO: emphasizing
       { kanjis: ["と言う"], hiragana: "という", romanization: "to iu", meaning: "xxx is called/said", exampleUsages: ["(name) という [Pronoun] ..."] },
@@ -91,7 +100,6 @@ export function appendPhrases(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
-      // TODO: nani?
       { kanjis: ["何？"], hiragana: "なに？", romanization: "nani", meaning: "what?" },
       { kanjis: ["何ですか？"], hiragana: "なんですか？", romanization: "nandesuka", meaning: "what is it? (polite)" },
       { kanjis: ["何なのか？"], hiragana: "なんなのか？", romanization: "nannanoka", meaning: "what is this about?" },

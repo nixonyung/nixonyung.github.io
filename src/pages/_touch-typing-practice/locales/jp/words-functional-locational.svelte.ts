@@ -19,7 +19,7 @@ export function appendFunctionalLocational(words: JapaneseWord[]) {
       { hiragana: "かなた", preferredForm: "hiragana", kanjis: ["彼方"], romanization: "kanata", meaning: "that other side (distant from both speaker and listener)" },
       { hiragana: "あちら", preferredForm: "hiragana", kanjis: ["彼方"], romanization: "achira", meaning: "that other side (distant from both speaker and listener) (politely)" },
 
-      { kanjis: ["内", "中"], hiragana: "うち", romanization: "uchi", meaning: "inside / between" },
+      { kanjis: ["内"], hiragana: "うち", romanization: "uchi", meaning: "inside / between" },
 
       // interrogative
       { hiragana: "どこ", preferredForm: "hiragana", kanjis: ["何処", "何所"], romanization: "doko", meaning: "where" },

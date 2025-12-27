@@ -69,6 +69,9 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
       { hiragana: "(て) ちゃった", romanization: "chatta", meaning: "completely done", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)だめ"] },
       { hiragana: "てから", romanization: "-te kara", meaning: "(introducing precedent:) xxx and immediately after", exampleUsages: ["[Verb-て] から ..."] },
       // TODO: -te shimau
+
+      // TODO: -たい (-tai)
+      // TODO: たがる
     );
   }
 }

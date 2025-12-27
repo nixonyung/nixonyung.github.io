@@ -61,4 +61,5 @@ export type JapaneseWord = {
   romanization?: string;
 
   meaning: string;
+  derivedMeanings?: string[];
 };

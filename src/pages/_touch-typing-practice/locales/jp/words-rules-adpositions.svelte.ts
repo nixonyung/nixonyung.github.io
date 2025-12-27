@@ -7,7 +7,7 @@ export function appendRulesAdpositions(words: JapaneseWord[]) {
       words.length,
       0, //
       { hiragana: "は", romanization: "wa", meaning: "(known subject marker)", exampleUsages: ["[Noun] は ..."] },
-      { hiragana: "が", romanization: "ga", meaning: "(new subject marker)", exampleUsages: ["[Noun] が ..."] },
+      { hiragana: "が", romanization: "ga", meaning: "(new subject marker)", derivedMeanings: ["(signaling contrasting info, written)"], exampleUsages: ["[Noun] が ...", "[Clause] が、 [Clause]"] },
 
       { hiragana: "を", romanization: "o", meaning: "(object marker)", exampleUsages: ["[Noun (object)] を [Verb (transitive)] ..."] },
       // TODO: と
@@ -43,6 +43,12 @@ export function appendRulesAdpositions(words: JapaneseWord[]) {
       // TODO: changing word forms
       // TODO: だっ
       // TODO: の
+      { hiragana: "さ", romanization: "sa", meaning: "-ness (adj. to noun)" },
+
+      { hiragana: "ら", romanization: "ra", meaning: "(plural, informal)" },
+      { hiragana: "たち", preferredForm: "hiragana", kanjis: ["達"], romanization: "tachi", meaning: "(plural, formal)" },
+
+      // TODO: English particles / common short words in Katakana
     );
   }
 }

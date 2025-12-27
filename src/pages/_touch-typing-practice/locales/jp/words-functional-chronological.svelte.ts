@@ -31,6 +31,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { hiragana: "すでに", preferredForm: "hiragana", kanjis: ["既に"], rareKanjis: ["已に"], romanization: "sudeni", meaning: "already" },
 
       { hiragana: "そろそろ", katakana: "ソロソロ", romanization: "sorosoro", meaning: "soon" },
+      { kanjis: ["即"], hiragana: "そく", romanization: "soku", meaning: "at once / immediately" },
 
       // duration
       // TODO: for an hour, for a while, since Monday, since 1990, briefly, temporarily, permanently, all day
@@ -47,12 +48,12 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
 
       // indefinite frequency
       // TODO: always, usually, often, sometimes, rarely, seldom, never, occasionally
-      { hiragana: "いつも", preferredForm: "hiragana", kanjis: ["何時も"], romanization: "itsumo", meaning: "always", exampleUsages: ["{[Noun] は} いつも [Verb / Adj.]"] },
       { kanjis: ["多くの場合"], hiragana: "おおくのばあい", romanization: "ookunobaai", meaning: "in many cases (written)" },
+      { hiragana: "いつも", preferredForm: "hiragana", kanjis: ["何時も"], romanization: "itsumo", meaning: "always", exampleUsages: ["{[Noun] は} いつも [Verb / Adj.]"] },
 
       // interrogative point in time
       { hiragana: "いつ", preferredForm: "hiragana", kanjis: ["何時"], romanization: "itsu", meaning: "when" },
-      { kanjis: ["何時"], hiragana: "なんじ", romanization: "nanji", meaning: "which hour" },
+      { kanjis: ["何時"], hiragana: "なんじ", romanization: "nanji", meaning: "what hour" },
     );
   }
 }

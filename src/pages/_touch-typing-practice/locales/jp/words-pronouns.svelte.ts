@@ -18,7 +18,7 @@ export function appendPronouns(words: JapaneseWord[]) {
       { kanjis: ["俺様", "オレ様"], rareKanjis: ["己様"], hiragana: "おれさま", romanization: "oresama", meaning: "the one and only me (men, arrogant)" },
       { kanjis: ["我", "吾"], hiragana: "われ", romanization: "ware", meaning: "I (men, very formal, old-fashioned)" },
       { hiragana: "わし", preferredForm: "hiragana", kanjis: ["儂"], rareKanjis: ["私"], katakana: "ワシ", romanization: "washi", meaning: "I (old men, literary)" },
-      { kanjis: ["拙者"], hiragana: "せっしゃ", romanization: "sessha", meaning: "I (men (samurais), humble)" },
+      { kanjis: ["拙者"], hiragana: "せっしゃ", romanization: "sessha", meaning: "I (men / samurais, humble)" },
 
       { hiragana: "うち", romanization: "uchi", meaning: "I (young women, casual)" },
     );
@@ -66,7 +66,7 @@ export function appendPronouns(words: JapaneseWord[]) {
       { kanjis: ["その人", "其の人"], hiragana: "そのひと", romanization: "sonohito", meaning: "that person / the person" },
       { kanjis: ["あの人", "彼の人"], hiragana: "あのひと", romanization: "anohito", meaning: "that person" },
 
-      { kanjis: ["この方"], rareKanjis: ["此の方"], hiragana: "このひと", romanization: "このかた", meaning: "this gentleman / lady (polite)" },
+      { kanjis: ["この方"], rareKanjis: ["此の方"], hiragana: "このひと", romanization: "konokata", meaning: "this gentleman / lady (polite)" },
       { kanjis: ["その方"], rareKanjis: ["其の方"], hiragana: "そのかた", romanization: "sonokata", meaning: "that gentleman / lady (polite)" },
       { kanjis: ["あの方", "彼の方"], hiragana: "あのかた", romanization: "anokata", meaning: "that gentleman / lady (polite)" },
 
@@ -162,7 +162,7 @@ export function appendPronouns(words: JapaneseWord[]) {
       0, //
       { hiragana: "なに", preferredForm: "hiragana", kanjis: ["何"], katakana: "ナニ", romanization: "nani", meaning: "what" },
       { kanjis: ["何の"], hiragana: "なんの", romanization: "nanno", meaning: "what kind of" },
-      { kanjis: ["何事", "何ごと"], hiragana: "なにごと", romanization: "nanigoto", meaning: "what event" },
+      { kanjis: ["何事", "何ごと"], hiragana: "なにごと", romanization: "nanigoto", meaning: "what situation" },
       { hiragana: "どれ", rareKanjis: ["何れ"], romanization: "dore", meaning: "which" },
       { hiragana: "どの", rareKanjis: ["何の"], romanization: "dono", meaning: "which xxx", exampleUsages: ["どの [Noun]"] },
       { hiragana: "どんな", romanization: "donna", meaning: "what kind of", exampleUsages: ["どんな [Noun] ..."] },

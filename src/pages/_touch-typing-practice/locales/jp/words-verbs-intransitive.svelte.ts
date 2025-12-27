@@ -15,6 +15,7 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["暮らす", "暮す"], hiragana: "くらす", romanization: "kurasu", meaning: "live / get along" },
       { kanjis: ["死ぬ"], hiragana: "しぬ", romanization: "shinu", meaning: "die" },
       { kanjis: ["お腹が空く", "お腹がすく"], hiragana: "おなかがすく", romanization: "onakagasuku", meaning: "be hungry" },
+      { kanjis: ["吹く"], hiragana: "ふく", romanization: "fuku", meaning: "blow" },
       { kanjis: ["眠る", "睡る"], hiragana: "ねむる", romanization: "nemuru", meaning: "sleep" },
 
       { kanjis: ["分かる", "解る", "判る", "分る"], hiragana: "わかる", romanization: "wakaru", meaning: "comprehend" },
@@ -32,7 +33,7 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["飛び出す"], hiragana: "とびだす", romanization: "tobidasu", meaning: "jump out / fly out" },
 
       { kanjis: ["寄る"], hiragana: "よる", romanization: "yoru", meaning: "lean towards" },
-      { kanjis: ["入る"], hiragana: "いる", romanization: "iru", meaning: "enter" },
+      { kanjis: ["入る"], hiragana: "はいる", romanization: "hairu", meaning: "enter" },
       { kanjis: ["当たる", "当る", "中る", "中たる"], hiragana: "あたる", romanization: "ataru", meaning: "hit (not miss)" },
       { kanjis: ["遊ぶ"], hiragana: "あそぶ", romanization: "asobu", meaning: "play (games / sports)" },
 
@@ -64,6 +65,8 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
       // -suru
       { kanjis: ["機能する"], hiragana: "きのうする", romanization: "kinousuru", meaning: "function" },
       { kanjis: ["関連する"], rareKanjis: ["関聯"], hiragana: "かんれんする", romanization: "kanrensuru", meaning: "relate" },
+      { kanjis: ["反する"], hiragana: "はんする", romanization: "hansuru", meaning: "oppose", exampleUsages: ["意に反する (against one's will)", "予測に反する"] },
+      { kanjis: ["大当たりする", "大当りする"], hiragana: "おおあたりする", romanization: "ooatarisuru", meaning: "win big / jackpot" },
 
       // -kuru
       // TODO: kuru (to come)
