@@ -39,6 +39,7 @@ export function appendNounsTime(words: JapaneseWord[]) {
       { kanjis: ["今朝"], hiragana: "こんちょう", romanization: "konchou", meaning: "this morning" },
 
       { kanjis: ["今日"], hiragana: "きょう", romanization: "kyou", meaning: "today" },
+      { kanjis: ["この日"], hiragana: "このひ", romanization: "konohi", meaning: "this day (emphasizing importance)" },
       { kanjis: ["昨日"], hiragana: "きのう", romanization: "kinou", meaning: "yesterday" },
       { kanjis: ["明日"], hiragana: "あした", romanization: "ashita", meaning: "tomorrow" },
 

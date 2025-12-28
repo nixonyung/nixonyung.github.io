@@ -41,14 +41,17 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { kanjis: ["全部"], hiragana: "ぜんぶ", romanization: "zenbu", meaning: "all (concrete items)" },
       { hiragana: "すべて", kanjis: ["全て"], rareKanjis: ["総て", "凡て", "惣て", "渾て"], romanization: "subete", meaning: "all (formal, for abstract concepts)" },
       { kanjis: ["全体"], hiragana: "ぜんたい", romanization: "zentai", meaning: "the whole thing (written, for abstract concepts)", exampleUsages: ["[Noun] 全体"] },
+      // TODO: each
 
       // quantity
       { kanjis: ["多く"], hiragana: "おおく", romanization: "ooku", meaning: "many / much" },
       { kanjis: ["大分"], hiragana: "だいぶ", romanization: "daibu", meaning: "a lot" },
+      { hiragana: "たくさん", preferredForm: "hiragana", kanjis: ["沢山"], romanization: "takusan", meaning: "a lot / much", exampleUsages: ["たくさん勉強します"] },
       { hiragana: "うんと", romanization: "unto", meaning: "much (spoken, used by women)" },
       { hiragana: "ほとんど", preferredForm: "hiragana", kanjis: ["殆ど"], rareKanjis: ["幾ど"], romanization: "hotondo", meaning: "nearly all" },
       // TODO: numbers
       { kanjis: ["二つ"], hiragana: "ふたつ", romanization: "futatsu", meaning: "two", exampleUsages: ["二つの [Noun]"] },
+      { kanjis: ["就き"], hiragana: "つき", romanization: "tsuki", meaning: "per" },
       // TODO: counters
       { kanjis: ["一杯", "１杯"], hiragana: "いっぱい", romanization: "ippai", meaning: "one cup", derivedMeanings: ["full / many / much"] },
 

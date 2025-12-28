@@ -12,6 +12,8 @@ export function appendNounsAbstract(words: JapaneseWord[]) {
       { kanjis: ["死"], hiragana: "し", romanization: "shi", meaning: "death" },
       { kanjis: ["死去"], hiragana: "しきょ", romanization: "shikyo", meaning: "passing away (formal)" },
 
+      { kanjis: ["健康"], hiragana: "けんこう", romanization: "kenkou", meaning: "health" },
+
       { kanjis: ["性"], hiragana: "せい", romanization: "sei", meaning: "sex / nature of a person" },
       { kanjis: ["性別"], hiragana: "せいべつ", romanization: "seibetsu", meaning: "gender" },
       { katakana: "ジェンダー", romanization: "jenda", meaning: "gender" },
@@ -63,6 +65,11 @@ export function appendNounsAbstract(words: JapaneseWord[]) {
       { kanjis: ["距離"], hiragana: "きょり", romanization: "kyori", meaning: "distance" },
 
       { kanjis: ["見晴らし"], hiragana: "みはらし", romanization: "miharashi", meaning: "view" },
+
+      { kanjis: ["企業"], hiragana: "きぎょう", romanization: "kigyou", meaning: "enterprise" },
+      { kanjis: ["事業"], hiragana: "じぎょう", romanization: "jigyou", meaning: "business" },
+      { kanjis: ["仕事"], hiragana: "しごと", romanization: "shigoto", meaning: "work" },
+      { kanjis: ["成功"], hiragana: "せいこう", romanization: "seikou", meaning: "success" },
 
       { kanjis: ["社会"], hiragana: "しゃかい", romanization: "shakai", meaning: "society" },
       { kanjis: ["教育"], hiragana: "きょういく", romanization: "kyouiku", meaning: "education" },
@@ -156,6 +163,8 @@ export function appendNounsAbstract(words: JapaneseWord[]) {
       { kanjis: ["積もり", "積り"], hiragana: "つもり", romanization: "tsumori", meaning: "plan / intention" },
       { kanjis: ["場合"], hiragana: "ばあい", romanization: "baai", meaning: "occasion" },
 
+      { kanjis: ["昼寝"], hiragana: "ひるね", romanization: "hirune", meaning: "afternoon nap" },
+
       { katakana: "コンビニエンス", romanization: "konbiniensu", meaning: "convenience" },
       { katakana: "トイレットペーパー", romanization: "toirettopeepaa", meaning: "toilet paper" },
 
@@ -190,6 +199,7 @@ export function appendNounsAbstract(words: JapaneseWord[]) {
       // art
       { katakana: "メドレー", romanization: "medorii", meaning: "medley" },
 
+      { kanjis: ["漫画"], hiragana: "まんが", katakana: "マンガ", romanization: "manga", meaning: "manga / cartoon" },
       { katakana: "アニメ", romanization: "anime", meaning: "anime" },
       { katakana: "アニメーション", romanization: "animeeshon", meaning: "animation" },
       { katakana: "アニメソング", romanization: "anime songu", meaning: "anime song" },
@@ -206,6 +216,7 @@ export function appendNounsAbstract(words: JapaneseWord[]) {
       { katakana: "ワード", romanization: "woodo", meaning: "word" },
       { kanjis: ["言"], hiragana: "げん", romanization: "gen", meaning: "statement" },
       { kanjis: ["語り"], hiragana: "かたり", romanization: "katari", meaning: "talk" },
+      { katakana: "フレーズ", romanization: "fureezu", meaning: "phrase" },
 
       { kanjis: ["否定文"], hiragana: "ひていぶん", romanization: "hiteibun", meaning: "negative sentence" },
       { kanjis: ["述語"], hiragana: "じゅつご", romanization: "jutsugo", meaning: "predicate (verb and object)" },

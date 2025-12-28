@@ -11,9 +11,11 @@ export function appendFunctionalLogical(words: JapaneseWord[]) {
       words.length,
       0, //
       // because
-      { hiragana: "から", romanization: "kara", meaning: "because of (casual)", derivedMeanings: ["(who did the action)"], exampleUsages: ["[Clause ending with Verb] から ...", "[Clause ending with Noun] だから ...", "[Clause ending with i-Adj.] から ...", "[Clause ending with na-Adj.] だから ..."] },
+      { hiragana: "から", romanization: "kara", meaning: "because of (casual)", derivedMeanings: ["(who did the action)"], exampleUsages: ["[Clause ending with Verb] から [Clause]", "[Clause ending with Noun] だから [Clause]", "[Clause ending with i-Adj.] から [Clause]", "[Clause ending with na-Adj.] だから [Clause]"] },
+      // TODO: only use with volitional verbs
+      { hiragana: "ために", preferredForm: "hiragana", kanjis: ["為に"], romanization: "tameni", meaning: "so (explaining volitional reason)", exampleUsages: ["テストに合格するために ...", "家族のために ...", "この日のために ..."] },
+      { hiragana: "ように", preferredForm: "hiragana", kanjis: ["様に"], romanization: "youni", meaning: "so (explaining non-volitional goal)", exampleUsages: ["日本語て漫画が読めるように ..."] },
       { hiragana: "ので", romanization: "node", meaning: "because of (what cause, written)", exampleUsages: ["[Clause ending with Verb] ので ...", "[Clause ending with Noun] なので ...", "[Clause ending with i-Adj.] ので ...", "[Clause ending with na-Adj.] なので ..."] },
-      { hiragana: "ため", preferredForm: "hiragana", kanjis: ["為"], romanization: "tame", meaning: "because of (for what purpose, written)", exampleUsages: ["[Clause ending with Verb] ために ...", "[Clause ending with Noun] のために ...", "[Clause ending with i-Adj.] ために ...", "[Clause ending with na-Adj.] なために ..."] },
       { hiragana: "なぜなら", preferredForm: "hiragana", kanjis: ["何故なら"], romanization: "nazenara", meaning: "because (formal)" },
       { hiragana: "なぜならば", preferredForm: "hiragana", kanjis: ["何故ならば"], romanization: "nazenaraba", meaning: "because (formal)" },
       { hiragana: "のせいで", preferredForm: "hiragana", rareKanjis: ["の所為で"], romanization: "noseide", meaning: "due to", exampleUsages: ["[Noun] のせいで [Clause]"] },

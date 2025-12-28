@@ -43,10 +43,12 @@ export function appendRulesAdpositions(words: JapaneseWord[]) {
       // TODO: changing word forms
       // TODO: だっ
       // TODO: の
-      { hiragana: "さ", romanization: "sa", meaning: "-ness (adj. to noun)" },
+      { hiragana: "-さ", romanization: "-sa", meaning: "-ness (adj. to noun)" },
 
-      { hiragana: "ら", romanization: "ra", meaning: "(plural, informal)" },
-      { hiragana: "たち", preferredForm: "hiragana", kanjis: ["達"], romanization: "tachi", meaning: "(plural, formal)" },
+      { hiragana: "-ら", romanization: "-ra", meaning: "(plural, informal)" },
+      { hiragana: "-たち", preferredForm: "hiragana", kanjis: ["-達"], romanization: "-tachi", meaning: "(plural, formal)" },
+
+      { hiragana: "-そう", romanization: "-sou", meaning: "(appearing that)", exampleUsages: ["あなたは眠そうだね"] },
 
       // TODO: English particles / common short words in Katakana
     );

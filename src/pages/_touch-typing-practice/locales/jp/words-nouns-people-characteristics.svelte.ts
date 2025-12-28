@@ -12,8 +12,6 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
       { kanjis: ["人物"], hiragana: "じんぶつ", romanization: "jinbutsu", meaning: "character / a notable person" },
 
       { kanjis: ["一人", "１人", "独り"], hiragana: "ひとり", romanization: "hitori", meaning: "one person" },
-
-      { kanjis: ["〇〇"], hiragana: "まるまる", romanization: "marumaru", meaning: "(placeholder)" },
     );
   }
 

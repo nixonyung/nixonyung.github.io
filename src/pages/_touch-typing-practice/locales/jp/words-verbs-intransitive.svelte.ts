@@ -5,6 +5,8 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
   // TODO: https://www.japanesepod101.com/blog/2020/08/25/japanese-verbs/
   // TODO: https://preply.com/en/blog/basic-japanese-words/
 
+  // TODO: volitional verbs
+
   if (jp.flashcardSettings.enableVerbs && jp.flashcardSettings.enableIntransitiveVerbs && jp.flashcardSettings.enableGodanVerbs) {
     words.splice(
       words.length,
@@ -20,7 +22,8 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
 
       { kanjis: ["分かる", "解る", "判る", "分る"], hiragana: "わかる", romanization: "wakaru", meaning: "comprehend" },
       { kanjis: ["会う", "逢う", "遭う"], rareKanjis: ["遇う"], hiragana: "あう", romanization: "au", meaning: "meet" },
-      { kanjis: ["帰る", "還る"], hiragana: "かえる", romanization: "kaeru", meaning: "go back" },
+      { kanjis: ["帰る", "還る"], hiragana: "かえる", romanization: "kaeru", meaning: "go back", exampleUsages: ["家に帰る"] },
+      { kanjis: ["乗る"], hiragana: "のる", katakana: "ノる", romanization: "noru", meaning: "get on (transportation)", exampleUsages: ["電車に乗った"] },
       { kanjis: ["待つ"], rareKanjis: ["俟つ"], hiragana: "まつ", romanization: "matsu", meaning: "wait" },
 
       { kanjis: ["立つ"], hiragana: "たつ", romanization: "tatsu", meaning: "stand up" },
@@ -38,6 +41,9 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["遊ぶ"], hiragana: "あそぶ", romanization: "asobu", meaning: "play (games / sports)" },
 
       { kanjis: ["急ぐ"], hiragana: "いそぐ", romanization: "isogu", meaning: "hurry" },
+
+      { kanjis: ["働く"], hiragana: "はたらく", romanization: "hataraku", meaning: "work" },
+      { kanjis: ["頑張る"], hiragana: "がんばる", romanization: "ganbaru", meaning: "persist / keep up" },
     );
   }
 
@@ -46,10 +52,11 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
       words.length,
       0, //
       { kanjis: ["生きる"], rareKanjis: ["活きる"], hiragana: "いきる", romanization: "ikiru", meaning: "be alive" },
-      { kanjis: ["起きる"], hiragana: "おきる", romanization: "okiru", meaning: "wake up" },
+      { kanjis: ["起きる"], hiragana: "おきる", romanization: "okiru", meaning: "wake up", exampleUsages: ["早く起きられる (can wake up early)"] },
       { kanjis: ["寝る"], rareKanjis: ["寐る"], hiragana: "ねる", romanization: "neru", meaning: "sleep" },
 
       { kanjis: ["出来る"], hiragana: "できる", romanization: "dekiru", meaning: "be able to" },
+      { kanjis: ["出かける"], hiragana: "でかける", romanization: "dekakeru", meaning: "go out" },
       { kanjis: ["諦める"], hiragana: "あきらめる", romanization: "akirameru", meaning: "give up" },
 
       { kanjis: ["似る"], hiragana: "にる", romanization: "niru", meaning: "be alike" },
@@ -63,9 +70,11 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
       words.length,
       0, //
       // -suru
+      { kanjis: ["合格する"], hiragana: "ごうかくする", romanization: "goukakusuru", meaning: "pass (an exam)" },
       { kanjis: ["機能する"], hiragana: "きのうする", romanization: "kinousuru", meaning: "function" },
       { kanjis: ["関連する"], rareKanjis: ["関聯"], hiragana: "かんれんする", romanization: "kanrensuru", meaning: "relate" },
       { kanjis: ["反する"], hiragana: "はんする", romanization: "hansuru", meaning: "oppose", exampleUsages: ["意に反する (against one's will)", "予測に反する"] },
+      { kanjis: ["成功する"], hiragana: "せいこうする", romanization: "seikousuru", meaning: "succeed", exampleUsages: ["ビジネスで成功する"] },
       { kanjis: ["大当たりする", "大当りする"], hiragana: "おおあたりする", romanization: "ooatarisuru", meaning: "win big / jackpot" },
 
       // -kuru

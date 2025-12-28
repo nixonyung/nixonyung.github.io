@@ -29,10 +29,10 @@ export function appendPronouns(words: JapaneseWord[]) {
       words.length,
       0, //
       // TODO: https://nihonshock.com/2012/07/saying-you-in-japanese/
-      { hiragana: "さん", romanization: "san", meaning: "Mr/Mrs/Miss/Ms xxx" },
-      { kanjis: ["xx 様"], rareKanjis: ["方", "状"], hiragana: "さま", romanization: "sama", meaning: "Mr/Mrs/Miss/Ms xxx (very formal, to higher status / customer" },
-      { kanjis: ["xx 君"], hiragana: "くん", romanization: "kun", meaning: "xxx (to younger males)" },
-      { hiragana: "ちゃん", romanization: "chan", meaning: "xxx (to girls / children / pets, cute)" },
+      { hiragana: "〇〇さん", romanization: "san", meaning: "Mr/Mrs/Miss/Ms xxx" },
+      { kanjis: ["〇〇様"], rareKanjis: ["〇〇方", "〇〇状"], hiragana: "〇〇さま", romanization: "sama", meaning: "Mr/Mrs/Miss/Ms xxx (very formal, to higher status / customer" },
+      { kanjis: ["〇〇君"], hiragana: "〇〇くん", romanization: "kun", meaning: "(addressing younger males)" },
+      { hiragana: "〇〇ちゃん", romanization: "chan", meaning: "(addressing girls / children / pets, cute)" },
       { kanjis: ["君"], rareKanjis: ["公"], hiragana: "きみ", romanization: "kimi", meaning: "you (for male to female / among close friends)" },
       { kanjis: ["お前"], rareKanjis: ["御前"], hiragana: "おまえ", romanization: "omae", meaning: "you (for man to lovers / close friends / arrogant)" },
       { kanjis: ["貴方", "貴女", "貴男"], hiragana: "あなた", romanization: "anata", meaning: "you (polite, maybe impersonal)" },
@@ -78,6 +78,7 @@ export function appendPronouns(words: JapaneseWord[]) {
 
       // TODO: placeholders
       // (ref.) [Are there placeholders in spoken Japanese?](https://japanese.stackexchange.com/questions/80870/are-there-placeholders-in-spoken-japanese)
+      { kanjis: ["〇〇"], hiragana: "まるまる", romanization: "marumaru", meaning: "(placeholder)" },
     );
   }
 
@@ -104,9 +105,9 @@ export function appendPronouns(words: JapaneseWord[]) {
 
       { hiragana: "の", romanization: "no", meaning: "(possession marker)", exampleUsages: ["[Noun] の [Noun] ...", "だれの [Noun] ですか？"] },
 
-      { exampleUsages: ["この [Noun]"], hiragana: "この", rareKanjis: ["此の", "斯の"], romanization: "kono", meaning: "this xxx (close to listener) / 呢個" },
-      { exampleUsages: ["その [Noun]"], hiragana: "その", rareKanjis: ["其の"], romanization: "sono", meaning: "that xxx (distant from speaker, close to listener) / 嗰個" },
-      { exampleUsages: ["かの [Noun]"], hiragana: "かの", kanjis: ["彼の", "彼"], romanization: "kano", meaning: "that xxx (distant from both speaker and listener) / 啊邊個" },
+      { exampleUsages: ["この [Noun]"], hiragana: "この", rareKanjis: ["此の", "斯の"], romanization: "kono", meaning: "this xxx (close to listener)" },
+      { exampleUsages: ["その [Noun]"], hiragana: "その", rareKanjis: ["其の"], romanization: "sono", meaning: "that xxx (distant from speaker, close to listener)" },
+      { exampleUsages: ["かの [Noun]"], hiragana: "かの", kanjis: ["彼の", "彼"], romanization: "kano", meaning: "that xxx (distant from both speaker and listener)" },
     );
   }
 
@@ -133,11 +134,12 @@ export function appendPronouns(words: JapaneseWord[]) {
     words.splice(
       words.length,
       0, //
+      { kanjis: ["誰か"], hiragana: "だれか", romanization: "dareka", meaning: "someone" },
+      { kanjis: ["誰も"], hiragana: "だれも", romanization: "daremo", meaning: "everyone / no one" },
       { kanjis: ["何人", "何びと"], hiragana: "なにびと", romanization: "nanibito", meaning: "whoever" },
 
       { kanjis: ["何か"], hiragana: "なにか", romanization: "nanika", meaning: "anything" },
       { kanjis: ["何か"], hiragana: "なんか", romanization: "nanka", meaning: "anything (casual)" },
-      { hiragana: "なんて", romanization: "nande", meaning: "xxx or something like that" },
       { hiragana: "なんでも", preferredForm: "hiragana", kanjis: ["何でも"], romanization: "nandemo", meaning: "anything (in positive sentence)" },
       { kanjis: ["何も"], hiragana: "なにも", romanization: "nanimo", meaning: "nothing" },
       { kanjis: ["何やら"], hiragana: "なにやら", romanization: "naniyara", meaning: "something" },
@@ -164,7 +166,7 @@ export function appendPronouns(words: JapaneseWord[]) {
       { kanjis: ["何の"], hiragana: "なんの", romanization: "nanno", meaning: "what kind of" },
       { kanjis: ["何事", "何ごと"], hiragana: "なにごと", romanization: "nanigoto", meaning: "what situation" },
       { hiragana: "どれ", rareKanjis: ["何れ"], romanization: "dore", meaning: "which" },
-      { hiragana: "どの", rareKanjis: ["何の"], romanization: "dono", meaning: "which xxx", exampleUsages: ["どの [Noun]"] },
+      { hiragana: "どの", rareKanjis: ["何の"], romanization: "dono", meaning: "which of", exampleUsages: ["どの [Noun]"] },
       { hiragana: "どんな", romanization: "donna", meaning: "what kind of", exampleUsages: ["どんな [Noun] ..."] },
     );
   }

@@ -51,6 +51,7 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
       { hiragana: "たことがありません", romanization: "-ta koto ga arimasen", meaning: "haven't done xxx (polite)", exampleUsages: ["[Verb-た] ことがありません ..."] },
 
       // -te (-te [Verb])
+      { hiragana: "-て", romanization: "-te", meaning: "please (spoken, casual)", exampleUsages: ["[Verb-て]！"] },
       { hiragana: "ている", romanization: "-te iru", meaning: "is doing xxx / xxx is still ongoing (active voice, casual)", exampleUsages: ["[Verb-て] いる ..."] },
       { hiragana: "ています", romanization: "-te imasu", meaning: "is doing xxx / xxx is still ongoing (active voice, polite)", exampleUsages: ["[Verb-て] います ..."] },
       { hiragana: "ていない", romanization: "-te inai", meaning: "is not doing / xxx is still ongoing (active voice, casual)", exampleUsages: ["[Verb-て] いない ..."] },
@@ -68,6 +69,8 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
       { hiragana: "(て) ちゃいけません", romanization: "cha ikemasen", meaning: "should not / must not xxx (spoken, polite)", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)いけません"] },
       { hiragana: "(て) ちゃった", romanization: "chatta", meaning: "completely done", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)だめ"] },
       { hiragana: "てから", romanization: "-te kara", meaning: "(introducing precedent:) xxx and immediately after", exampleUsages: ["[Verb-て] から ..."] },
+      { hiragana: "てくる", romanization: "-te kiru", meaning: "(continuous, towards a moment)" },
+      { hiragana: "ておく", romanization: "-te oku", meaning: "(I am going to)" },
       // TODO: -te shimau
 
       // TODO: -たい (-tai)

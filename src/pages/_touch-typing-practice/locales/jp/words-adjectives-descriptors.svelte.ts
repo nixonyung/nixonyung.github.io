@@ -38,9 +38,12 @@ export function appendAdjectivesDesriptors(words: JapaneseWord[]) {
       { kanjis: ["親切"], rareKanjis: ["深切"], hiragana: "しんせつ", romanization: "shinsetsu", meaning: "considerate" },
       { kanjis: ["綺麗", "奇麗"], hiragana: "きれい", katakana: "キレイ", romanization: "kirei", meaning: "pretty" },
 
+      { kanjis: ["眠そう"], hiragana: "ねむそう", romanization: "nemusou", meaning: "sleepy-looking" },
+
       { kanjis: ["上手"], hiragana: "じょうず", romanization: "jouzu", meaning: "skilled" },
       { kanjis: ["下手"], hiragana: "へた", romanization: "heta", meaning: "unskilled" },
 
+      { kanjis: ["便利"], hiragana: "べんり", romanization: "benri", meaning: "convenient", derivedMeanings: ["useful / handy"] },
       { kanjis: ["不可能"], hiragana: "ふかのう", romanization: "fukanou", meaning: "impossible" },
     );
   }

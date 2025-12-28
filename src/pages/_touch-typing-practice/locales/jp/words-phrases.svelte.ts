@@ -17,10 +17,12 @@ export function appendPhrases(words: JapaneseWord[]) {
       words.length,
       0, //
       // TODO: politeness / softening
-      // TODO: desu, desu ne
+      // TODO: da ne, desu ne
 
       { hiragana: "お", preferredForm: "hiragana", kanjis: ["御"], romanization: "o", meaning: "(honorific, with native Japanese words)", exampleUsages: ["お[Noun]"] },
       { hiragana: "ご", preferredForm: "hiragana", kanjis: ["御"], romanization: "go", meaning: "(honorific, with Chinese-derived words)", exampleUsages: ["ご[Noun]"] },
+
+      { hiragana: "ね", romanization: "ne", meaning: "isn't it? (expressing feelings, casual)", exampleUsages: ["... ですね。", "... だね。"] },
 
       { kanjis: ["多分"], hiragana: "たぶん", romanization: "tabun", meaning: "probably" },
       { kanjis: ["少し"], rareKanjis: ["寡し", "些し"], hiragana: "すこし", romanization: "sukoshi", meaning: "a little bit" },
@@ -37,9 +39,9 @@ export function appendPhrases(words: JapaneseWord[]) {
       // TODO: emphasizing
       { kanjis: ["と言う"], hiragana: "という", romanization: "to iu", meaning: "xxx is called/said", exampleUsages: ["(name) という [Pronoun] ..."] },
       { kanjis: ["本当に"], hiragana: "ほんとうに", romanization: "hontouni", meaning: "for real" },
+      // TODO: について
 
       // TODO: leading questions
-      { hiragana: "ね", romanization: "ne", meaning: "isn't it? (expressing feelings, casual)", exampleUsages: ["[Clause] ね。"] },
       { hiragana: "だろう", romanization: "darou", meaning: "right? (stating facts, casual)", exampleUsages: ["[Clause] だろう？"] },
       { hiragana: "でしょう", romanization: "deshou", meaning: "right? (stating facts, polite)", exampleUsages: ["[Clause] でしょう？"] },
 
@@ -64,6 +66,8 @@ export function appendPhrases(words: JapaneseWord[]) {
       { hiragana: "そう", preferredForm: "hiragana", rareKanjis: ["然う"], romanization: "sou", meaning: "(agree)" },
       { hiragana: "そうですね", romanization: "soudesune", meaning: "that's correct (polite)" },
       { hiragana: "わかりました", romanization: "wakarimashita", meaning: "understood" },
+      { hiragana: "それでは", romanization: "soredewa", meaning: "well then (spoken, formal)" },
+      { hiragana: "じゃあ", romanization: "zyaa", meaning: "well then (spoken, casual)" },
 
       { hiragana: "いいえ", romanization: "iie", meaning: "no (formal) / don't mention it" },
       { hiragana: "いや", preferredForm: "hiragana", kanjis: ["否"], romanization: "iya", meaning: "no" },
@@ -123,6 +127,9 @@ export function appendPhrases(words: JapaneseWord[]) {
       { kanjis: ["失礼します"], hiragana: "しつれいします", romanization: "shitsureishimasu", meaning: "excuse me / pardon me", exampleUsages: ["失礼しました"] },
 
       { kanjis: ["日本へようこそ！"], hiragana: "にほんへようこそ！", romanization: "nihon e youkoso", meaning: "Welcome to Japan!" },
+
+      { kanjis: ["見てくれて、ありがとう"], hiragana: "みてくれて、ありがとう", romanization: "mite kurete, arigatou", meaning: "Thanks for watching" },
+      { hiragana: "またね", preferredForm: "hiragana", kanjis: ["又ね"], romanization: "matane", meaning: "see you later" },
     );
   }
 }

@@ -36,7 +36,11 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["外食"], hiragana: "がいしょく", romanization: "gaishoku", meaning: "eating out" },
 
       { kanjis: ["寿司", "鮨"], rareKanjis: ["鮓"], hiragana: "すし", romanization: "sushi", meaning: "sushi" },
+      { kanjis: ["野菜"], hiragana: "やさい", romanization: "yasai", meaning: "vegetables", derivedMeanings: ["marijuana"] },
+
       { katakana: "カレー", romanization: "karii", meaning: "curry" },
+      { katakana: "ケーキ", romanization: "keeki", meaning: "cake" },
+      { katakana: "プリン", romanization: "purin", meaning: "pudding" },
 
       // TODO: drinks
       { kanjis: ["茶"], hiragana: "ちゃ", romanization: "cha", meaning: "tea" },

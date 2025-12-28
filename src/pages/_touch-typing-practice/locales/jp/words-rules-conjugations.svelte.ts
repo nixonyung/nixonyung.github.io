@@ -16,11 +16,12 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
       // -ta
       // -te
       //   -suru -> -shite
+      // -o: volitional form (I am going to xxx / Let's xxx)
 
       // TODO: -ba: conditional
       // TODO: -ba + kara:
 
-      // TODO: -reru: passive voice
+      // TODO: -reru: passive voice / potential form (able to / can)
 
       // i-Adjs.
       { hiragana: "い", romanization: "i", meaning: "(i-adj. in present tense)", exampleUsages: ["[i-Adj.]-い"] },
