@@ -10,8 +10,9 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
       words.length,
       0, //
       // and
-      { hiragana: "と", romanization: "to", meaning: "and (exhausive)", derivedMeanings: ["with me"], exampleUsages: ["[Noun] と [Noun] ...", "[Noun] と ..."] },
-      { hiragana: "も", romanization: "mo", meaning: "also", exampleUsages: ["[Noun] も [Verb]", "[Noun] も [Noun] も [Verb]", "[Noun] も [Noun] も [Noun] も [Verb]"] },
+      { hiragana: "も", romanization: "mo", meaning: "and / also (non-exhausive)", exampleUsages: ["[Noun] も [Verb]", "[Noun] も [Noun] も [Verb]", "[Noun] も [Noun] も [Noun] も [Verb]"] },
+      { hiragana: "し", romanization: "shi", meaning: "and (non-exhausive, spoken)", exampleUsages: ["[Clause] し、 [Clause]"] },
+      { hiragana: "と", romanization: "to", meaning: "and (exhausive)", derivedMeanings: ["with me", "and then (facts/habits)", "when (what also happened)"], exampleUsages: ["[Noun] と [Noun] [Verb] ... (and)", "[Noun] と [Verb] ... (with me)", "[Clause] と [Clause] (and then / when)"] },
       { hiragana: "とか", romanization: "toka", meaning: "and (non-exhausive, spoken)" },
       { hiragana: "や", romanization: "ya", meaning: "and (non-exhausive, written)", exampleUsages: ["[Noun] や [Noun] ..."] },
       { hiragana: "たり", romanization: "tari", meaning: "and (listing actions / targets)", exampleUsages: ["[Verb-た] り ...", "[Noun] だったり ...", "[i-Adj. (dropped)] だったり ...", "[na-Adj.] だったり ..."] },

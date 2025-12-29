@@ -54,10 +54,15 @@ export function appendNounsTime(words: JapaneseWord[]) {
       { kanjis: ["来年"], hiragana: "らいねん", romanization: "rainen", meaning: "next year" },
 
       { kanjis: ["今回"], hiragana: "こんかい", romanization: "konkai", meaning: "this time" },
+      { kanjis: ["今度"], hiragana: "こんど", romanization: "kondo", meaning: "this time" },
       { kanjis: ["次回"], hiragana: "じかい", romanization: "jikai", meaning: "next time" },
 
       { kanjis: ["前"], hiragana: "まえ", romanization: "mae", meaning: "previously (root word)" },
       { kanjis: ["以前"], rareKanjis: ["已前"], hiragana: "いぜん", romanization: "izen", meaning: "the past" },
+
+      { kanjis: ["この間"], hiragana: "このあいだ", romanization: "konoaida", meaning: "the other day" },
+
+      { kanjis: ["晴れ", "晴"], hiragana: "はれ", romanization: "hare", meaning: "good weather" },
     );
   }
 }

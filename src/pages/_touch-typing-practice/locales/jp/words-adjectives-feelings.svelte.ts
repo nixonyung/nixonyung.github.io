@@ -23,6 +23,8 @@ export function appendAdjectivesFeelings(words: JapaneseWord[]) {
       { kanjis: ["美味しい"], hiragana: "おいしい", romanization: "oishii", meaning: "delicious" },
       { kanjis: ["美味い", "旨い"], hiragana: "うまい", romanization: "umai", meaning: "delicious (masculine)" },
       { kanjis: ["若い"], hiragana: "わかい", romanization: "wakai", meaning: "youthful" },
+      { kanjis: ["暑い"], hiragana: "あつい", romanization: "atsui", meaning: "hot" },
+      { kanjis: ["寒い"], hiragana: "さむい", romanization: "samui", meaning: "cold" },
 
       // negative
       { hiragana: "いけない", romanization: "ikenai", meaning: "wrong" },

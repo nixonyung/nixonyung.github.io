@@ -19,26 +19,7 @@ export function appendRulesAdpositions(words: JapaneseWord[]) {
       { hiragana: "として", romanization: "toshite", meaning: "as", exampleUsages: ["[Noun] として [Verb]"] },
 
       { hiragana: "か", romanization: "ka", meaning: "(question marker)", exampleUsages: ["[Clause] か？"] },
-      {
-        hiragana: "ば",
-        romanization: "ba",
-        meaning: "(conditional marker)",
-        exampleUsages: [
-          // positive forms
-          "[Verb-u (dropped)] -e か ...",
-          "[Verb-ru] れば ...",
-          "来れば ...",
-          "[Verb-suru (drop ru)] れば ...",
-          "[i-Adj (dropped)] ければ ...",
-          "[na-Adj] ならば / であれば ...",
-          "[Noun] ならば / であれば ...",
-          // negative forms
-          "[Verb-nai (dropped)] なければ ...",
-          "[i-Adj (dropped)] なければ ...",
-          "[na-Adj] じゃなければ / でなければ ...",
-          "[Noun] じゃなければ / でなければ ...",
-        ],
-      },
+      { hiragana: "の", romanization: "no", meaning: "really? (spoken)", exampleUsages: ["学生なの？"] },
 
       // TODO: changing word forms
       // TODO: だっ
@@ -47,8 +28,6 @@ export function appendRulesAdpositions(words: JapaneseWord[]) {
 
       { hiragana: "-ら", romanization: "-ra", meaning: "(plural, informal)" },
       { hiragana: "-たち", preferredForm: "hiragana", kanjis: ["-達"], romanization: "-tachi", meaning: "(plural, formal)" },
-
-      { hiragana: "-そう", romanization: "-sou", meaning: "(appearing that)", exampleUsages: ["あなたは眠そうだね"] },
 
       // TODO: English particles / common short words in Katakana
     );

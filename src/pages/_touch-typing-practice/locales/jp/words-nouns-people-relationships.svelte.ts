@@ -53,7 +53,6 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
       { kanjis: ["夫人"], hiragana: "ふじん", romanization: "fujin", meaning: "Mrs xxx" },
 
       // children
-      { kanjis: ["子供", "子ども"], hiragana: "こども", romanization: "kodomo", meaning: "child / children" },
       { kanjis: ["子孫"], hiragana: "しそん", romanization: "shison", meaning: "descendants" },
       { kanjis: ["お子様", "お子さま"], hiragana: "おこさま", romanization: "okosama", meaning: "child (referring to someone else's)" },
       { kanjis: ["親子"], hiragana: "おやこ", romanization: "oyako", meaning: "parent and child" },

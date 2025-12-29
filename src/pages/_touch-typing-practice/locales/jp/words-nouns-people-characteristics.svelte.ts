@@ -44,6 +44,8 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
 
       { kanjis: ["赤ちゃん"], hiragana: "あかちゃん", romanization: "akachan", meaning: "infant" },
       { kanjis: ["幼童"], hiragana: "ようどう", romanization: "youdou", meaning: "young child (written)" },
+      { kanjis: ["子", "児"], hiragana: "こ", romanization: "ko", meaning: "child (spoken)" },
+      { kanjis: ["子供", "子ども"], hiragana: "こども", romanization: "kodomo", meaning: "children (in general)" },
       { kanjis: ["１０代", "十代"], hiragana: "じゅうだい", romanization: "juudai", meaning: "teenagers" },
       { kanjis: ["若年", "弱年"], hiragana: "じゃくねん", romanization: "jakunen", meaning: "youth (age-wise)" },
       { kanjis: ["若者"], hiragana: "わかもの", romanization: "wakamono", meaning: "young person / 年輕人 / 後生仔/女" },

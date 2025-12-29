@@ -52,13 +52,19 @@ export function appendNounsLocation(words: JapaneseWord[]) {
 
       // infrastructures
       { kanjis: ["学校"], hiragana: "がっこう", romanization: "gakkou", meaning: "school" },
+      { kanjis: ["教室"], hiragana: "きょうしつ", romanization: "kyoushitsu", meaning: "classroom" },
       { kanjis: ["空港"], hiragana: "くうこう", romanization: "kuukou", meaning: "airport" },
 
       { katakana: "トイレ", romanization: "toire", meaning: "toilet" },
       { katakana: "トイレット", romanization: "toiretto", meaning: "toilet" },
 
+      // countries / places
+      { kanjis: ["東京"], hiragana: "とうきょう", romanization: "toukyou", meaning: "tokyo" },
+
       // TODO: miscellaneous venues
       { kanjis: ["事務所"], hiragana: "じむしょ", romanization: "jimusho", meaning: "office" },
+
+      { kanjis: ["居室"], hiragana: "きょしつ", romanization: "kyoshitsu", meaning: "living room" },
 
       { kanjis: ["天国"], hiragana: "てんごく", romanization: "tengoku", meaning: "heaven" },
       { katakana: "ヘブン", romanization: "hebun", meaning: "heaven" },

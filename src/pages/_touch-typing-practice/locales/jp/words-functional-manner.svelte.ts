@@ -15,6 +15,7 @@ export function appendFunctionalManner(words: JapaneseWord[]) {
 
       { hiragana: "どんどん", katakana: "ドンドン", romanization: "dondon", meaning: "(drumming sound) / quickly" },
       { hiragana: "すやすや", romanization: "suyasuya", meaning: "(sleeping sound, quietly)" },
+      { hiragana: "ぷるぷる", katakana: "プルプル", romanization: "purupuru", meaning: "(trembling sound)" },
     );
   }
 }

@@ -19,6 +19,20 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
       // -o: volitional form (I am going to xxx / Let's xxx)
 
       // TODO: -ba: conditional
+      // // positive forms
+      // "[Verb-u (dropped)] -e か ...",
+      // "[Verb-ru] れば ...",
+      // "来れば ...",
+      // "[Verb-suru (drop ru)] れば ...",
+      // "[i-Adj (dropped)] ければ ...",
+      // "[na-Adj] ならば / であれば ...",
+      // "[Noun] ならば / であれば ...",
+      // // negative forms
+      // "[Verb-nai (dropped)] なければ ...",
+      // "[i-Adj (dropped)] なければ ...",
+      // "[na-Adj] じゃなければ / でなければ ...",
+      // "[Noun] じゃなければ / でなければ ...",
+
       // TODO: -ba + kara:
 
       // TODO: -reru: passive voice / potential form (able to / can)

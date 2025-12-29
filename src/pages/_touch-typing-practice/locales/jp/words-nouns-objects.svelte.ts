@@ -18,6 +18,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       // TODO: transportations
       { katakana: "バス", romanization: "basu", meaning: "bus" },
       { kanjis: ["電車"], hiragana: "でんしゃ", romanization: "densha", meaning: "train" },
+      { kanjis: ["駅"], hiragana: "えき", romanization: "eki", meaning: "train station" },
 
       // meals
       // TODO: kinds of restaurants / cuisine
@@ -37,8 +38,9 @@ export function appendNounsObjects(words: JapaneseWord[]) {
 
       { kanjis: ["寿司", "鮨"], rareKanjis: ["鮓"], hiragana: "すし", romanization: "sushi", meaning: "sushi" },
       { kanjis: ["野菜"], hiragana: "やさい", romanization: "yasai", meaning: "vegetables", derivedMeanings: ["marijuana"] },
-
       { katakana: "カレー", romanization: "karii", meaning: "curry" },
+
+      { kanjis: ["綿菓子"], hiragana: "わたがし", romanization: "watagashi", meaning: "cotton candy" },
       { katakana: "ケーキ", romanization: "keeki", meaning: "cake" },
       { katakana: "プリン", romanization: "purin", meaning: "pudding" },
 
@@ -46,11 +48,13 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["茶"], hiragana: "ちゃ", romanization: "cha", meaning: "tea" },
       { kanjis: ["お茶"], hiragana: "おちゃ", romanization: "ocha", meaning: "tea (polite)" },
       { katakana: "コーヒー", romanization: "koohii", meaning: "coffee" },
+      { katakana: "コーラ", romanization: "coola", meaning: "coke" },
 
       // TODO: sports
       { katakana: "サッカー", romanization: "sakkaa", meaning: "soccer" },
 
       // TODO: household objects
+      { kanjis: ["服"], hiragana: "ふく", romanization: "fuku", meaning: "clothes" },
       { kanjis: ["衣類"], hiragana: "いるい", romanization: "irui", meaning: "clothes" },
       { katakana: "シャツ", romanization: "shatsu", meaning: "shirt" },
       { kanjis: ["傘"], hiragana: "かさ", romanization: "kasa", meaning: "umbrella" },
@@ -64,9 +68,18 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { katakana: "キャメラ", romanization: "kyamera", meaning: "camera" },
       { katakana: "スマホ", romanization: "sumaho", meaning: "smartphone" },
 
+      // TODO: nature
+      { kanjis: ["種"], hiragana: "たね", romanization: "tane", meaning: "seed" },
+      { kanjis: ["雲"], hiragana: "くも", romanization: "kumo", meaning: "cloud" },
+      { kanjis: ["花", "華"], hiragana: "はな", romanization: "hana", meaning: "flower" },
+      { kanjis: ["海"], hiragana: "うみ", romanization: "umi", meaning: "sea" },
+
       // miscellaneous
       { kanjis: ["地図"], hiragana: "ちず", romanization: "chizu", meaning: "map" },
-      { kanjis: ["種"], hiragana: "たね", romanization: "tane", meaning: "seed" },
+      { kanjis: ["金"], hiragana: "かね", romanization: "kane", meaning: "money" },
+      { kanjis: ["お金", "御金"], hiragana: "おかね", romanization: "okane", meaning: "money (polite)" },
+      { kanjis: ["切符"], hiragana: "きっぷ", romanization: "kippu", meaning: "ticket" },
+      { katakana: "チケット", romanization: "chiketto", meaning: "ticket" },
     );
   }
 }

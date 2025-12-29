@@ -17,16 +17,16 @@ export function appendPhrases(words: JapaneseWord[]) {
       words.length,
       0, //
       // TODO: politeness / softening
-      // TODO: da ne, desu ne
-
       { hiragana: "お", preferredForm: "hiragana", kanjis: ["御"], romanization: "o", meaning: "(honorific, with native Japanese words)", exampleUsages: ["お[Noun]"] },
       { hiragana: "ご", preferredForm: "hiragana", kanjis: ["御"], romanization: "go", meaning: "(honorific, with Chinese-derived words)", exampleUsages: ["ご[Noun]"] },
-
-      { hiragana: "ね", romanization: "ne", meaning: "isn't it? (expressing feelings, casual)", exampleUsages: ["... ですね。", "... だね。"] },
+      // (alternatives to desu)
+      { hiragana: "よ", romanization: "yo", meaning: "don't you know? (spoken, casual)", exampleUsages: ["[Clause] よ。", "[Clause] だよ。", "[Clause] よね。"] },
+      { hiragana: "ね", romanization: "ne", meaning: "isn't it? (expressing feelings, spoken, casual)", exampleUsages: ["... ですね。", "[Adj.] ね。"] },
+      { hiragana: "し", romanization: "shi", meaning: "because of", exampleUsages: ["だって、子供だし。"] },
 
       { kanjis: ["多分"], hiragana: "たぶん", romanization: "tabun", meaning: "probably" },
       { kanjis: ["少し"], rareKanjis: ["寡し", "些し"], hiragana: "すこし", romanization: "sukoshi", meaning: "a little bit" },
-      { hiragana: "ちょっと", rareKanjis: ["一寸"], katakana: "チョット", romanization: "chotto", meaning: "a little bit" },
+      { hiragana: "ちょっと", rareKanjis: ["一寸"], katakana: "チョット", romanization: "chotto", meaning: "a little bit", exampleUsages: ["ちょっと難し"] },
       { hiragana: "もっと", romanization: "motto", meaning: "even more" },
 
       { hiragana: "と思う。", romanization: "to omou", meaning: "I think (casual)", exampleUsages: ["[Clause] と思う。", "[Clause] と思います。", "[Clause] と思っている。"] },
@@ -54,7 +54,6 @@ export function appendPhrases(words: JapaneseWord[]) {
       { hiragana: "ましょうか？", romanization: "mashou ka", meaning: "shall I? (assuming yes)", exampleUsages: ["[Verb-ます (dropped)] ましょうか？"] },
 
       // TODO: exclamational
-      { hiragana: "よ", romanization: "yo", meaning: "(exclamation, spoken)", exampleUsages: ["[Clause] よ。", "[Clause] よね。"] },
       { hiragana: "なあ", romanization: "naa", meaning: '("I think") - wow / I wonder (casual)', exampleUsages: ["[Clause] なあ。"] },
 
       // miscellaneous
@@ -64,6 +63,7 @@ export function appendPhrases(words: JapaneseWord[]) {
       { hiragana: "はい", romanization: "sou", meaning: "yes / I see" },
       { hiragana: "ええ", romanization: "ee", meaning: "yes (casual)" },
       { hiragana: "そう", preferredForm: "hiragana", rareKanjis: ["然う"], romanization: "sou", meaning: "(agree)" },
+      { hiragana: "いいな", romanization: "iina", meaning: "that's nice" },
       { hiragana: "そうですね", romanization: "soudesune", meaning: "that's correct (polite)" },
       { hiragana: "わかりました", romanization: "wakarimashita", meaning: "understood" },
       { hiragana: "それでは", romanization: "soredewa", meaning: "well then (spoken, formal)" },
@@ -73,11 +73,14 @@ export function appendPhrases(words: JapaneseWord[]) {
       { hiragana: "いや", preferredForm: "hiragana", kanjis: ["否"], romanization: "iya", meaning: "no" },
 
       { hiragana: "まじ？", romanization: "maji", meaning: "seriously? (informal)" },
+      { kanjis: ["何それ？"], hiragana: "なにそれ", romanization: "nanisore", meaning: "what the?!" },
       { hiragana: "まだまだ", preferredForm: "hiragana", kanjis: ["未だ未だ"], romanization: "madamada", meaning: "not done yet" },
       { hiragana: "まだですか？", preferredForm: "hiragana", kanjis: ["未だですか？"], romanization: "madadesuka", meaning: "not done yet?" },
 
-      { hiragana: "あれっ？", romanization: "are", meaning: "eh?" },
+      { hiragana: "あれ？", romanization: "are", meaning: "eh?" },
+      { hiragana: "え？", romanization: "e", meaning: "oh? / eh?" },
       { hiragana: "その…", romanization: "sono", meaning: "um... / 那個吧..." },
+      { hiragana: "うわ", romanization: "uwa", meaning: "wow" },
 
       { hiragana: "ほら", romanization: "hora", meaning: "look!" },
       { kanjis: ["急いで"], hiragana: "いそいで", romanization: "isoide", meaning: "hurry up!" },
@@ -96,6 +99,7 @@ export function appendPhrases(words: JapaneseWord[]) {
       words.length,
       0, //
       { hiragana: "みなさん、こんにちは", romanization: "minasan konnichiwa", meaning: "Hello everyone (spoken, casual)" },
+      { hiragana: "おはこんばんちは", romanization: "ohakonbanchiwa", meaning: "good whatever (spoken, casual)" },
       { hiragana: "すみません", romanization: "sumimasen", meaning: "sorry / excuse me (polite)" },
     );
   }
@@ -127,6 +131,8 @@ export function appendPhrases(words: JapaneseWord[]) {
       { kanjis: ["失礼します"], hiragana: "しつれいします", romanization: "shitsureishimasu", meaning: "excuse me / pardon me", exampleUsages: ["失礼しました"] },
 
       { kanjis: ["日本へようこそ！"], hiragana: "にほんへようこそ！", romanization: "nihon e youkoso", meaning: "Welcome to Japan!" },
+
+      { hiragana: "あとちょっと", romanization: "atochotto", meaning: "just a little bit more" },
 
       { kanjis: ["見てくれて、ありがとう"], hiragana: "みてくれて、ありがとう", romanization: "mite kurete, arigatou", meaning: "Thanks for watching" },
       { hiragana: "またね", preferredForm: "hiragana", kanjis: ["又ね"], romanization: "matane", meaning: "see you later" },

@@ -71,10 +71,12 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
       { hiragana: "てから", romanization: "-te kara", meaning: "(introducing precedent:) xxx and immediately after", exampleUsages: ["[Verb-て] から ..."] },
       { hiragana: "てくる", romanization: "-te kiru", meaning: "(continuous, towards a moment)" },
       { hiragana: "ておく", romanization: "-te oku", meaning: "(I am going to)" },
+      { hiragana: "てもいい", preferredForm: "hiragana", kanjis: ["ても良い"], romanization: "-te moii", meaning: "you can / can I?" },
       // TODO: -te shimau
 
-      // TODO: -たい (-tai)
+      // TODO: -たい (-tai): desire
       // TODO: たがる
+      // TODO: imperative form
     );
   }
 }

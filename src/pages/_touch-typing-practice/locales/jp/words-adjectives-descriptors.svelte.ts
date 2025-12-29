@@ -15,8 +15,6 @@ export function appendAdjectivesDesriptors(words: JapaneseWord[]) {
 
       { kanjis: ["多い"], hiragana: "おおい", romanization: "ooi", meaning: "a lot" },
 
-      { kanjis: ["暑い"], hiragana: "あつい", romanization: "atsui", meaning: "hot" },
-
       { kanjis: ["強い"], hiragana: "つよい", romanization: "tsuyoi", meaning: "strong / tough" },
       { hiragana: "こわい", preferredForm: "hiragana", kanjis: ["強い"], romanization: "kowai", meaning: "stiff / hard" },
 
@@ -26,6 +24,10 @@ export function appendAdjectivesDesriptors(words: JapaneseWord[]) {
       { kanjis: ["安い", "廉い"], hiragana: "やすい", romanization: "yasui", meaning: "cheap" },
 
       { kanjis: ["上手い", "巧い"], rareKanjis: ["美い"], hiragana: "うまい", romanization: "umai", meaning: "skillful" },
+
+      { kanjis: ["暇がない", "暇が無い"], hiragana: "ひまがない", romanization: "himaganai", meaning: "busy" },
+
+      { hiragana: "-らしい", romanization: "-rashii", meaning: "(appearing like, by characteristic)", exampleUsages: ["あなたらしいね", "[Noun] らしい"] },
     );
   }
 
@@ -39,12 +41,16 @@ export function appendAdjectivesDesriptors(words: JapaneseWord[]) {
       { kanjis: ["綺麗", "奇麗"], hiragana: "きれい", katakana: "キレイ", romanization: "kirei", meaning: "pretty" },
 
       { kanjis: ["眠そう"], hiragana: "ねむそう", romanization: "nemusou", meaning: "sleepy-looking" },
+      { kanjis: ["暇"], rareKanjis: ["閑"], hiragana: "ひま", romanization: "hima", meaning: "free / unoccupied" },
 
-      { kanjis: ["上手"], hiragana: "じょうず", romanization: "jouzu", meaning: "skilled" },
+      { kanjis: ["上手"], hiragana: "じょうず", romanization: "jouzu", meaning: "skilled", exampleUsages: ["日本語が上手"] },
       { kanjis: ["下手"], hiragana: "へた", romanization: "heta", meaning: "unskilled" },
 
       { kanjis: ["便利"], hiragana: "べんり", romanization: "benri", meaning: "convenient", derivedMeanings: ["useful / handy"] },
       { kanjis: ["不可能"], hiragana: "ふかのう", romanization: "fukanou", meaning: "impossible" },
+
+      { hiragana: "-そう", romanization: "-sou", meaning: "(appearing like, by feeling)", exampleUsages: ["あなたは眠そうだね", "[Noun] は [Adj. (feeling)] そう"] },
+      { hiragana: "-みたい", romanization: "-midai", meaning: "(appearing like, by appearance)", exampleUsages: ["本物みたい", "[Noun] みたい", "[Verb] みたい", "[Verb-ta] みたい", "[Verb-te] いるみたい"] },
     );
   }
 }

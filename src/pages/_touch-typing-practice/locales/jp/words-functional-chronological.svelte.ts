@@ -27,7 +27,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { kanjis: ["予め"], hiragana: "あらかじめ", romanization: "arakajime", meaning: "in advance" },
       { kanjis: ["最後まで"], hiragana: "さいごまで", romanization: "saigomade", meaning: "till the end", exampleUsages: ["最後まで [Verb]"] },
 
-      { hiragana: "もう", romanization: "mou", meaning: "already / not anymore", exampleUsages: ["もう [Noun (time)] ...", "[Noun] はもう ...", "もう [Verb]"] },
+      { hiragana: "もう", romanization: "mou", meaning: "already / not anymore", exampleUsages: ["もう宿題終わった", "もう [Noun (time)] ...", "[Noun] はもう ...", "もう [Verb]"] },
       { hiragana: "すでに", preferredForm: "hiragana", kanjis: ["既に"], rareKanjis: ["已に"], romanization: "sudeni", meaning: "already" },
 
       { hiragana: "そろそろ", katakana: "ソロソロ", romanization: "sorosoro", meaning: "soon" },
