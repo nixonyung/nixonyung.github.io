@@ -6,10 +6,7 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
   // TODO: https://www.mlcjapanese.co.jp/n3_01_01.html
 
   if (jp.flashcardSettings.enableAuxiliaryVerbs) {
-    words.splice(
-      words.length,
-      0, //
-
+    words.push(
       // (dictionary)
       { kanjis: ["方がいい", "方が良い", "ほうが良い"], hiragana: "ほうがいい", romanization: "hougaii (spoken/written)", meaning: "should xxx", exampleUsages: ["[Verb] 方がいい ..."] },
       { kanjis: ["方が良い", "ほうが良い", "方がよい"], hiragana: "ほうがよい", romanization: "hougayoi (slightly more written)", meaning: "should xxx", exampleUsages: ["[Verb] 方が良い ..."] },

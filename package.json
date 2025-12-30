@@ -20,6 +20,17 @@
     "overrides": [
       {
         "files": [
+          "**/en.svelte.ts",
+          "**/jp.svelte.ts",
+          "**/jp/FlashcardSettings.svelte",
+          "**/kr.svelte.ts"
+        ],
+        "options": {
+          "printWidth": 140
+        }
+      },
+      {
+        "files": [
           "**/locales/*/words-*.svelte.ts",
           "**/locales/*/letters.svelte.ts"
         ],

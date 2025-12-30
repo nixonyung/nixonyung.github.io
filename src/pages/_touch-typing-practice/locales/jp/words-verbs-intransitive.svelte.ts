@@ -8,9 +8,7 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
   // TODO: volitional verbs
 
   if (jp.flashcardSettings.enableVerbs && jp.flashcardSettings.enableIntransitiveVerbs && jp.flashcardSettings.enableGodanVerbs) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       { hiragana: "いる", preferredForm: "hiragana", rareKanjis: ["居る"], romanization: "iru", meaning: "exist (for living things)" },
       { hiragana: "ある", preferredForm: "hiragana", kanjis: ["有る", "在る"], romanization: "aru", meaning: "exist (for non-living things)", exampleUsages: ["質問かあれば"] },
 
@@ -23,7 +21,7 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
 
       { kanjis: ["分かる", "解る", "判る", "分る"], hiragana: "わかる", romanization: "wakaru", meaning: "comprehend" },
       { kanjis: ["会う", "逢う", "遭う"], rareKanjis: ["遇う"], hiragana: "あう", romanization: "au", meaning: "meet" },
-      { kanjis: ["帰る", "還る"], hiragana: "かえる", romanization: "kaeru", meaning: "go back", exampleUsages: ["家に帰る"] },
+      { kanjis: ["帰る", "還る"], hiragana: "かえる", romanization: "kaeru", meaning: "return", exampleUsages: ["家に帰る"] },
       { kanjis: ["乗る"], hiragana: "のる", katakana: "ノる", romanization: "noru", meaning: "get on (transportation)", exampleUsages: ["電車に乗った"] },
       { kanjis: ["待つ"], rareKanjis: ["俟つ"], hiragana: "まつ", romanization: "matsu", meaning: "wait" },
       { kanjis: ["成る"], rareKanjis: ["為る"], hiragana: "なる", romanization: "naru", meaning: "become (reaching a certain time/state)", exampleUsages: ["春になる", "暇になる"] },
@@ -33,7 +31,8 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["立つ"], hiragana: "たつ", romanization: "tatsu", meaning: "stand up" },
       { kanjis: ["上がる"], rareKanjis: ["騰がる"], hiragana: "あがる", romanization: "agaru", meaning: "rise" },
       { kanjis: ["高まる"], hiragana: "たかまる", romanization: "takamaru", meaning: "rise" },
-      { kanjis: ["住まう"], rareKanjis: ["棲まう"], hiragana: "すまう", romanization: "sumau", meaning: "reside" },
+      { kanjis: ["住む"], hiragana: "すむ", romanization: "sumu", meaning: "reside" },
+      { kanjis: ["住まう"], rareKanjis: ["棲まう"], hiragana: "すまう", romanization: "sumau", meaning: "reside (formal)" },
       { kanjis: ["始まる"], hiragana: "はじまる", romanization: "hajimaru", meaning: "begin", exampleUsages: ["で始まる"] },
       { kanjis: ["終わる", "終る"], rareKanjis: ["了る", "卒る", "畢る", "竟る"], hiragana: "おわる", romanization: "owaru", meaning: "finish", exampleUsages: ["で終わる", "宿題終わった"] },
 
@@ -56,9 +55,7 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enableVerbs && jp.flashcardSettings.enableIntransitiveVerbs && jp.flashcardSettings.enableIchidanVerbs) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       { kanjis: ["生きる"], rareKanjis: ["活きる"], hiragana: "いきる", romanization: "ikiru", meaning: "be alive" },
       { kanjis: ["起きる"], hiragana: "おきる", romanization: "okiru", meaning: "wake up", exampleUsages: ["早く起きられる (can wake up early)"] },
       { kanjis: ["寝る"], rareKanjis: ["寐る"], hiragana: "ねる", romanization: "neru", meaning: "sleep" },
@@ -75,15 +72,21 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enableVerbs && jp.flashcardSettings.enableIntransitiveVerbs && jp.flashcardSettings.enableIrregularVerbs) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       // -suru
+      { hiragana: "する", preferredForm: "hiragana", rareKanjis: ["為る"], romanization: "suru", meaning: "choose", exampleUsages: ["これにします"] },
+
+      { kanjis: ["参加する"], hiragana: "さんかする", romanization: "sankasuru", meaning: "participate" },
       { kanjis: ["合格する"], hiragana: "ごうかくする", romanization: "goukakusuru", meaning: "pass (an exam)" },
+
       { kanjis: ["機能する"], hiragana: "きのうする", romanization: "kinousuru", meaning: "function" },
       { kanjis: ["関連する"], rareKanjis: ["関聯"], hiragana: "かんれんする", romanization: "kanrensuru", meaning: "relate" },
-      { kanjis: ["暇する"], hiragana: "ひまする", romanization: "himasuru", meaning: "be free / be unoccupied" },
       { kanjis: ["反する"], hiragana: "はんする", romanization: "hansuru", meaning: "oppose", exampleUsages: ["意に反する (against one's will)", "予測に反する"] },
+
+      { kanjis: ["居住する"], hiragana: "きょじゅうする", romanization: "kyojuusuru", meaning: "reside" },
+      { kanjis: ["訪問する"], hiragana: "ほうもんする", romanization: "houmonsuru", meaning: "visit" },
+      { kanjis: ["暇する"], hiragana: "ひまする", romanization: "himasuru", meaning: "be free / be unoccupied" },
+
       { kanjis: ["成功する"], hiragana: "せいこうする", romanization: "seikousuru", meaning: "succeed", exampleUsages: ["ビジネスで成功する"] },
       { kanjis: ["大当たりする", "大当りする"], hiragana: "おおあたりする", romanization: "ooatarisuru", meaning: "win big / jackpot" },
 

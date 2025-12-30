@@ -6,9 +6,7 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
   // TODO: https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%AF
 
   if (jp.flashcardSettings.enableFunctionalEnumerative) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       // and
       { hiragana: "も", romanization: "mo", meaning: "and / also (non-exhausive)", exampleUsages: ["[Noun] も [Verb]", "[Noun] も [Noun] も [Verb]", "[Noun] も [Noun] も [Noun] も [Verb]"] },
       { hiragana: "し", romanization: "shi", meaning: "and (non-exhausive, spoken)", exampleUsages: ["[Clause] し、 [Clause]"] },
@@ -17,7 +15,8 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
       { hiragana: "や", romanization: "ya", meaning: "and (non-exhausive, written)", exampleUsages: ["[Noun] や [Noun] ..."] },
       { hiragana: "たり", romanization: "tari", meaning: "and (listing actions / targets)", exampleUsages: ["[Verb-た] り ...", "[Noun] だったり ...", "[i-Adj. (dropped)] だったり ...", "[na-Adj.] だったり ..."] },
 
-      { hiragana: "など", preferredForm: "hiragana", kanjis: ["等", "抔"], romanization: "nado", meaning: "etc. (written)" },
+      { hiragana: "など", preferredForm: "hiragana", kanjis: ["等", "抔"], romanization: "nado", meaning: "etc. (written)", exampleUsages: ["A、B、C など ..."] },
+      { hiragana: "などなど", preferredForm: "hiragana", kanjis: ["等など"], romanization: "nadonado", meaning: "et cetera (written, formal)" },
 
       // or
       { hiragana: "か", romanization: "ka", meaning: "or (listing options)", exampleUsages: ["[Noun] か [Noun] か ...", "[Noun] か [Noun] ..."] },

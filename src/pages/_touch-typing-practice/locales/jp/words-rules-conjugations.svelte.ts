@@ -3,9 +3,7 @@ import { jp } from "./jp.svelte";
 
 export function appendRulesConjugations(words: JapaneseWord[]) {
   if (jp.flashcardSettings.enableRulesConjugations) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       // TODO: -no to change noun to adj.
       // TODO: -suru to change noun to verb
 

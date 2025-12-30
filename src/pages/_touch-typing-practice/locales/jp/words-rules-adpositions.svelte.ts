@@ -3,9 +3,7 @@ import { jp } from "./jp.svelte";
 
 export function appendRulesAdpositions(words: JapaneseWord[]) {
   if (jp.flashcardSettings.enableRulesAdpositions) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       { hiragana: "は", romanization: "wa", meaning: "(known subject marker)", exampleUsages: ["[Noun] は ..."] },
       { hiragana: "が", romanization: "ga", meaning: "(new subject marker)", derivedMeanings: ["(signaling contrasting info, written)"], exampleUsages: ["[Noun] が ...", "[Clause] が、 [Clause]"] },
 
@@ -19,7 +17,8 @@ export function appendRulesAdpositions(words: JapaneseWord[]) {
       { hiragana: "として", romanization: "toshite", meaning: "as", exampleUsages: ["[Noun] として [Verb]"] },
 
       { hiragana: "か", romanization: "ka", meaning: "(question marker)", exampleUsages: ["[Clause] か？"] },
-      { hiragana: "の", romanization: "no", meaning: "really? (spoken)", exampleUsages: ["学生なの？"] },
+      { hiragana: "の", romanization: "no", meaning: "how? / really? (spoken)", exampleUsages: ["学生なの？"] },
+      { hiragana: "し", romanization: "shi", meaning: "because of that (spoken)", exampleUsages: ["だって、子供だし。"] },
 
       // TODO: changing word forms
       // TODO: だっ

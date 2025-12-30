@@ -8,9 +8,7 @@ export function appendTransitiveVerbs(words: JapaneseWord[]) {
   // TODO: what is the object? e.g. person, time, object, event
 
   if (jp.flashcardSettings.enableVerbs && jp.flashcardSettings.enableTransitiveVerbs && jp.flashcardSettings.enableGodanVerbs) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       { kanjis: ["飲む", "呑む"], hiragana: "のむ", romanization: "nomu", meaning: "drink / swallow" },
       { kanjis: ["噛む", "咬む"], rareKanjis: ["嚙む", "嚼む"], hiragana: "かむ", romanization: "kamu", meaning: "bite / chew" },
       { kanjis: ["聞く", "聴く"], hiragana: "きく", romanization: "kiku", meaning: "hear / listen", derivedMeanings: ["ask"] },
@@ -20,6 +18,7 @@ export function appendTransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["持つ"], hiragana: "もつ", romanization: "motsu", meaning: "hold / carry" },
       { kanjis: ["歩く"], hiragana: "あるく", romanization: "aruku", meaning: "walk" },
       { kanjis: ["走る", "奔る", "疾る", "趨る"], hiragana: "はしる", romanization: "hashiru", meaning: "run / rush" },
+      { kanjis: ["蹴る"], hiragana: "ける", romanization: "keru", meaning: "kick" },
 
       { kanjis: ["話す"], rareKanjis: ["咄す"], hiragana: "はなす", romanization: "hanasu", meaning: "converse" },
       { kanjis: ["来る"], hiragana: "くる", romanization: "kuru", meaning: "come (spatially / temporally)" },
@@ -78,9 +77,7 @@ export function appendTransitiveVerbs(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enableVerbs && jp.flashcardSettings.enableTransitiveVerbs && jp.flashcardSettings.enableIchidanVerbs) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       { kanjis: ["見る", "観る", "視る"], hiragana: "みる", romanization: "miru", meaning: "see / look" },
       { kanjis: ["食べる"], hiragana: "たべる", romanization: "taberu", meaning: "eat" },
 
@@ -108,11 +105,10 @@ export function appendTransitiveVerbs(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enableVerbs && jp.flashcardSettings.enableTransitiveVerbs && jp.flashcardSettings.enableIrregularVerbs) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       // -suru
       { hiragana: "する", preferredForm: "hiragana", rareKanjis: ["為る"], romanization: "suru", meaning: "do / carry out", exampleUsages: ["せールをする", "ゲームをする"] },
+
       { kanjis: ["一致する"], hiragana: "いっちする", romanization: "icchisuru", meaning: "match", exampleUsages: ["[Noun] は [Noun] と一致する。", "[Noun (with counters)] は一致する。"] },
       { kanjis: ["勉強する"], hiragana: "べんきょうする", romanization: "benkyousuru", meaning: "study", exampleUsages: ["日本語を勉強します"] },
       { kanjis: ["予測する"], hiragana: "よそくする", romanization: "yosokusuru", meaning: "predict" },

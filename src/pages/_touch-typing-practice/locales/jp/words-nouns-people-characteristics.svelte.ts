@@ -3,9 +3,7 @@ import { jp } from "./jp.svelte";
 
 export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
   if (jp.flashcardSettings.enableNounsPeopleCharacteristicsGeneric) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       { kanjis: ["人"], hiragana: "ひと", katakana: "ヒト", romanization: "hito", meaning: "person" },
       { kanjis: ["人々", "人びと"], hiragana: "ひとびと", romanization: "hitobito", meaning: "people" },
       { kanjis: ["他人"], hiragana: "たにん", romanization: "tanin", meaning: "others" },
@@ -16,9 +14,7 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enableNounsPeopleCharacteristicsGender) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       { kanjis: ["男"], hiragana: "おとこ", romanization: "otoko", meaning: "man" },
       { kanjis: ["少年"], hiragana: "しょうねん", romanization: "shounen", meaning: "young man" },
       { kanjis: ["公子"], hiragana: "こうし", romanization: "koushi", meaning: "young nobleman" },
@@ -36,9 +32,7 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enableNounsPeopleCharacteristicsAge) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       { kanjis: ["成人"], hiragana: "せいじん", romanization: "seijin", meaning: "adult" },
       { kanjis: ["大人"], hiragana: "おとな", romanization: "otona", meaning: "grown-up" },
 
@@ -56,20 +50,19 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enableNounsPeopleCharacteristicsProfessions) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       { kanjis: ["食通"], hiragana: "しょくつう", romanization: "shokutsuu", meaning: "gourmet: someone who is very knowledgeable about food and enjoys trying new things" },
       { katakana: "グルメ", romanization: "gurume", meaning: "gourmet / fine food" },
 
       { katakana: "カメラマン", romanization: "kameraman", meaning: "cameraman" },
+
+      { katakana: "メーカー", romanization: "meekaa", meaning: "maker" },
     );
   }
 
   if (jp.flashcardSettings.enableNounsPeopleCharacteristicsSocialStatus) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
+      //
       { kanjis: ["先生"], hiragana: "せんせい", romanization: "sensei", meaning: "master" },
       { kanjis: ["大家"], hiragana: "たいか", romanization: "taika", meaning: "authority (known for expertise)" },
     );

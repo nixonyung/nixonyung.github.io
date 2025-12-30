@@ -5,9 +5,7 @@ export function appendPronouns(words: JapaneseWord[]) {
   // TODO: rename to "references"
 
   if (jp.flashcardSettings.enablePronounsMe) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       { kanjis: ["私"], hiragana: "わたし", romanization: "watashi", meaning: "I" },
       { kanjis: ["私"], hiragana: "わたくし", romanization: "watakushi", meaning: "I (very formal)" },
       { kanjis: ["私"], hiragana: "あたし", romanization: "atashi", meaning: "I (women)" },
@@ -25,10 +23,8 @@ export function appendPronouns(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enablePronounsYou) {
-    words.splice(
-      words.length,
-      0, //
-      // TODO: https://nihonshock.com/2012/07/saying-you-in-japanese/
+    // TODO: https://nihonshock.com/2012/07/saying-you-in-japanese/
+    words.push(
       { hiragana: "〇〇さん", romanization: "san", meaning: "Mr/Mrs/Miss/Ms xxx" },
       { kanjis: ["〇〇様"], rareKanjis: ["〇〇方", "〇〇状"], hiragana: "〇〇さま", romanization: "sama", meaning: "Mr/Mrs/Miss/Ms xxx (very formal, to higher status / customer" },
       { kanjis: ["〇〇君"], hiragana: "〇〇くん", romanization: "kun", meaning: "(addressing younger males)" },
@@ -43,9 +39,8 @@ export function appendPronouns(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enablePronounsUs) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
+      //
       { kanjis: ["私たち", "私達"], hiragana: "わたしたち", romanization: "watashitachi", meaning: "we" },
       { kanjis: ["我々", "吾々", "我我", "吾吾"], hiragana: "われわれ", romanization: "wareware", meaning: "we (formal, on behalf of an organization)" },
       { kanjis: ["皆"], hiragana: "みんな", romanization: "minna", meaning: "everyone (informal)" },
@@ -55,9 +50,7 @@ export function appendPronouns(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enablePronounsThatPerson) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       { kanjis: ["彼"], hiragana: "かれ", romanization: "kare", meaning: "he" },
       { kanjis: ["彼氏"], hiragana: "かれし", romanization: "kareshi", meaning: "he / boyfriend" },
       { kanjis: ["彼女"], hiragana: "かのじょ", romanization: "kanojo", meaning: "she / girlfriend" },
@@ -83,9 +76,7 @@ export function appendPronouns(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enablePronounsThosePeople) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       { kanjis: ["彼ら", "彼等"], hiragana: "かれら", romanization: "karera", meaning: "they" },
       { kanjis: ["彼女ら", "彼女等"], hiragana: "かのじょら", romanization: "kanojora", meaning: "they (to females)" },
 
@@ -96,9 +87,7 @@ export function appendPronouns(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enablePronounsThatThing) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       { hiragana: "これ", rareKanjis: ["此れ", "是", "之", "維", "惟"], romanization: "kore", meaning: "this (close to speaker)" },
       { hiragana: "それ", rareKanjis: ["其れ"], romanization: "sore", meaning: "that (distant from speaker, close to listener)" },
       { hiragana: "あれ", rareKanjis: ["彼", "彼れ"], romanization: "are", meaning: "that (distant from both speaker and listener)" },
@@ -112,9 +101,8 @@ export function appendPronouns(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enablePronounsThoseThings) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
+      //
       { hiragana: "これら", preferredForm: "hiragana", kanjis: ["これ等"], rareKanjis: ["此等", "是等", "之等", "此れ等"], romanization: "korera", meaning: "these (close to speaker)" },
       { hiragana: "それら", rareKanjis: ["それ等", "其れ等"], romanization: "sorera", meaning: "those (distant from speaker, close to listener)" },
       { hiragana: "あれら", rareKanjis: ["彼等", "彼ら"], romanization: "arera", meaning: "those (distant from both speaker and listener)" },
@@ -122,18 +110,15 @@ export function appendPronouns(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enablePronounsReflective) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
+      ///
       { kanjis: ["自分"], hiragana: "じぶん", romanization: "jibun", meaning: "myself / yourself / oneself / himself / herself" },
       { kanjis: ["自分たち", "自分達"], hiragana: "じぶんたち", romanization: "jibuntachi", meaning: "ourselves / themselves" },
     );
   }
 
   if (jp.flashcardSettings.enablePronounsIndefinite) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       { kanjis: ["誰か"], hiragana: "だれか", romanization: "dareka", meaning: "someone" },
       { kanjis: ["誰も"], hiragana: "だれも", romanization: "daremo", meaning: "everyone / no one" },
       { kanjis: ["何人", "何びと"], hiragana: "なにびと", romanization: "nanibito", meaning: "whoever" },
@@ -150,18 +135,15 @@ export function appendPronouns(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enablePronounsInterrogativeWho) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
+      //
       { kanjis: ["誰"], hiragana: "だれ", romanization: "dare", meaning: "who" },
       { kanjis: ["何者", "何もの"], hiragana: "なにもの", romanization: "nanimono", meaning: "what kind of person" },
     );
   }
 
   if (jp.flashcardSettings.enablePronounsInterrogativeWhat) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       { hiragana: "なに", preferredForm: "hiragana", kanjis: ["何"], katakana: "ナニ", romanization: "nani", meaning: "what" },
       { kanjis: ["何の"], hiragana: "なんの", romanization: "nanno", meaning: "what kind of" },
       { kanjis: ["何事", "何ごと"], hiragana: "なにごと", romanization: "nanigoto", meaning: "what situation" },

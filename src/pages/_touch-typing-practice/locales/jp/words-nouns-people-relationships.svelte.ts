@@ -2,11 +2,8 @@ import type { JapaneseWord } from "../../types";
 import { jp } from "./jp.svelte";
 
 export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableNounsPeopleRelationshipsImmediateFamily) {
-    words.splice(
-      words.length,
-      0, //
-      // parents
+  if (jp.flashcardSettings.enableNounsPeopleRelationshipsParents) {
+    words.push(
       { kanjis: ["父母"], hiragana: "ふぼ", romanization: "fubo", meaning: "parents" },
       { kanjis: ["父母"], hiragana: "ちちはは", romanization: "chichihaha", meaning: "parents" },
       { kanjis: ["親"], hiragana: "おや", romanization: "oya", meaning: "parent / parents" },
@@ -23,8 +20,11 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
       { kanjis: ["お母さん"], hiragana: "おかあさん", romanization: "okaasan", meaning: "mother (referring to her or someone else's)" },
       { kanjis: ["母"], hiragana: "はは", romanization: "haha", meaning: "my mother (referring to her)" },
       { kanjis: ["母親"], hiragana: "ははおや", romanization: "hahaoya", meaning: "mother (objectified)" },
+    );
+  }
 
-      // siblings
+  if (jp.flashcardSettings.enableNounsPeopleRelationshipsSiblings) {
+    words.push(
       { kanjis: ["兄弟姉妹"], hiragana: "きょうだいしまい", romanization: "kyoudaishimai", meaning: "siblings" },
       { kanjis: ["兄弟"], hiragana: "きょうだい", romanization: "kyoudai", meaning: "brothers" },
       { kanjis: ["姉妹"], hiragana: "しまい", romanization: "shimai", meaning: "sisters" },
@@ -43,20 +43,22 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
 
       { kanjis: ["妹さん"], hiragana: "いもうとさん", romanization: "imoutosan", meaning: "younger sister (referring to her or someone else's)" },
       { kanjis: ["妹"], hiragana: "いもうと", romanization: "imouto", meaning: "my younger sister (referring to her)" },
+    );
+  }
 
-      // spouses
-      { kanjis: ["夫婦"], rareKanjis: ["妻夫", "女夫"], hiragana: "ふうふ", romanization: "fuufu", meaning: "spouses" },
-
+  if (jp.flashcardSettings.enableNounsPeopleRelationshipsSpouses) {
+    words.push(
+      //
       { kanjis: ["夫", "良人"], hiragana: "おっと", romanization: "otto", meaning: "husband" },
       { kanjis: ["良人"], hiragana: "りょうじん", romanization: "ryoujin", meaning: "husband" },
       { kanjis: ["妻"], hiragana: "つま", romanization: "tsuma", meaning: "wife" },
       { kanjis: ["夫人"], hiragana: "ふじん", romanization: "fujin", meaning: "Mrs xxx" },
+    );
+  }
 
-      // children
-      { kanjis: ["子孫"], hiragana: "しそん", romanization: "shison", meaning: "descendants" },
+  if (jp.flashcardSettings.enableNounsPeopleRelationshipsOffsprings) {
+    words.push(
       { kanjis: ["お子様", "お子さま"], hiragana: "おこさま", romanization: "okosama", meaning: "child (referring to someone else's)" },
-      { kanjis: ["親子"], hiragana: "おやこ", romanization: "oyako", meaning: "parent and child" },
-      { kanjis: ["親子"], hiragana: "しんし", romanization: "shinshi", meaning: "parent and child" },
 
       { kanjis: ["息子", "息"], hiragana: "むすこ", romanization: "musuko", meaning: "son" },
       { kanjis: ["お子さん"], hiragana: "おこさん", romanization: "okosan", meaning: "son" },
@@ -68,19 +70,16 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsPeopleRelationshipsExtendedFamily) {
-    words.splice(
-      words.length,
-      0, //
-      // grandparents
+  if (jp.flashcardSettings.enableNounsPeopleRelationshipsGrandparents) {
+    words.push(
       { kanjis: ["祖父母"], hiragana: "そふぼ", romanization: "sofubo", meaning: "grandparents" },
       { hiragana: "じじばば", preferredForm: "hiragana", kanjis: ["祖父祖母", "爺婆"], katakana: "ジジババ", romanization: "jijibaba", meaning: "elderly" },
 
       { kanjis: ["爺さん"], rareKanjis: ["祖父さん"], hiragana: "じいさん", romanization: "jiisan", meaning: "grandfather (calling him)" },
       { kanjis: ["お祖父さん"], hiragana: "おじいさん", romanization: "ojiisan", meaning: "grandfather / old man (referring to him or someone else's)" },
       { kanjis: ["お爺ちゃま", "お祖父ちゃま"], hiragana: "おじいちゃま", romanization: "ojiichama", meaning: "grandfather (child referring to him or someone else's)" },
-      { kanjis: ["祖父"], hiragana: "そふ", romanization: "sofu", meaning: "my grandfather (referring to her)" },
-      { kanjis: ["祖父"], hiragana: "じじ", romanization: "jiji", meaning: "my grandfather (referring to her)" },
+      { kanjis: ["祖父"], hiragana: "そふ", romanization: "sofu", meaning: "my grandfather (referring to him)" },
+      { kanjis: ["祖父"], hiragana: "じじ", romanization: "jiji", meaning: "my grandfather (referring to him)" },
       { katakana: "グランパ", romanization: "gulanpa", meaning: "grandpa" },
 
       { kanjis: ["婆ちゃん"], rareKanjis: ["祖母ちゃん"], hiragana: "ばあちゃん", romanization: "baachan", meaning: "grandmother (calling her)" },
@@ -88,7 +87,11 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
       { hiragana: "そぼ", romanization: "sobo", meaning: "my grandmother (referring to her)" },
       { hiragana: "ばば", romanization: "baba", meaning: "my grandmother (referring to her)" },
       { katakana: "グランマ", romanization: "gulanma", meaning: "grandma" },
+    );
+  }
 
+  if (jp.flashcardSettings.enableNounsPeopleRelationshipsExtendedFamily) {
+    words.push(
       { kanjis: ["曽祖父母"], hiragana: "そうそふぼ", romanization: "sousofubo", meaning: "great-grandparents" },
 
       // TODO: 叔父 uncle, 叔母 aunt
@@ -100,9 +103,7 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enableNounsPeopleRelationshipsChosenFamily) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       // step-family
       { kanjis: ["継父母"], hiragana: "けいふぼ", romanization: "keifubo", meaning: "step-parents" },
 
@@ -117,9 +118,8 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
   }
 
   if (jp.flashcardSettings.enableNounsPeopleRelationshipsFriends) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
+      //
       { kanjis: ["友"], hiragana: "とも", romanization: "tomo", meaning: "friend (root word)" },
       { kanjis: ["友達"], hiragana: "ともだち", romanization: "tomodachi", meaning: "friends (informal)" },
       { kanjis: ["達"], hiragana: "だち", katakana: "ダチ", romanization: "dachi", meaning: "pal (slang)" },
@@ -130,17 +130,20 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
     );
   }
 
-  // TODO: classmates
-
-  if (jp.flashcardSettings.enableNounsPeopleRelationshipsCoworkers) {
-    words.splice(
-      words.length,
-      0, //
+  if (jp.flashcardSettings.enableNounsPeopleRelationshipsFellows) {
+    words.push(
       { kanjis: ["知り合い"], hiragana: "しりあい", romanization: "shiriai", meaning: "acquaintance" },
       { kanjis: ["仲間"], hiragana: "なかま", romanization: "nakama", meaning: "fellow / companion (informal)" },
-      { kanjis: ["同僚"], hiragana: "どうりょう", romanization: "douryou", meaning: "colleague (in similar position with you)" },
-
+      { kanjis: ["同期"], hiragana: "どうき", romanization: "douki", meaning: "same year", derivedMeanings: ["classmate", "colleague from the same year"] },
       { kanjis: ["先輩"], hiragana: "せんぱい", romanization: "senpai", meaning: "senior" },
+      { kanjis: ["後輩"], hiragana: "こうはい", romanization: "kouhai", meaning: "junior" },
+
+      { kanjis: ["同学"], hiragana: "どうがく", romanization: "dougaku", meaning: "classmate" },
+      { katakana: "クラスメイト", romanization: "kurasumeito", meaning: "classmate" },
+      { kanjis: ["同級生"], hiragana: "どうきゅうせい", romanization: "doukyuusei", meaning: "people in the same grade" },
+
+      { kanjis: ["同僚"], hiragana: "どうりょう", romanization: "douryou", meaning: "colleague (in similar position with you)" },
+      { kanjis: ["部下"], hiragana: "ぶか", romanization: "buka", meaning: "subordinate" },
       { kanjis: ["親方"], hiragana: "おやかた", romanization: "oyakata", meaning: "boss" },
       { kanjis: ["上司"], hiragana: "じょうし", romanization: "joushi", meaning: "boss" },
       { kanjis: ["監督"], hiragana: "かんとく", romanization: "kantoku", meaning: "supervisor" },
@@ -149,9 +152,6 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
       { kanjis: ["部長"], hiragana: "ぶちょう", romanization: "buchou", meaning: "department head" },
       { kanjis: ["係長"], rareKanjis: ["掛長"], hiragana: "かかりちょう", romanization: "kakarichou", meaning: "department head" },
       { kanjis: ["社長"], hiragana: "しゃちょう", romanization: "shachou", meaning: "president" },
-
-      { kanjis: ["後輩"], hiragana: "こうはい", romanization: "kouhai", meaning: "junior" },
-      { kanjis: ["部下"], hiragana: "ぶか", romanization: "buka", meaning: "subordinate" },
     );
   }
 }

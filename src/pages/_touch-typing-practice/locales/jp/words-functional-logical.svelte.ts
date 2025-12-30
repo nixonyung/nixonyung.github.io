@@ -7,9 +7,7 @@ export function appendFunctionalLogical(words: JapaneseWord[]) {
   // https://www.sigure.tw/learn-japanese/grammar/n3/123
 
   if (jp.flashcardSettings.enableFunctionalLogical) {
-    words.splice(
-      words.length,
-      0, //
+    words.push(
       // because
       { hiragana: "だって", romanization: "datte", meaning: "because (spoken, casual)" },
       { hiragana: "なぜなら", preferredForm: "hiragana", kanjis: ["何故なら"], romanization: "nazenara", meaning: "because (formal)" },
