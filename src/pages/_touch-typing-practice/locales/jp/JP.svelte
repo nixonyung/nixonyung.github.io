@@ -55,7 +55,7 @@
               case "katakana":
                 return katakana;
               case undefined:
-                return kanjis?.join(" / ") ?? hiragana ?? katakana;
+                return kanjis?.join(" / ") ?? hiragana ?? katakana ?? "";
             }
           },
           defaultPosition: "question",
@@ -74,6 +74,14 @@
           label: "derived meanings",
           valueFn: ({ derivedMeanings }) => derivedMeanings ?? [],
           defaultPosition: "option",
+        },
+        {
+          label: "grammar question",
+          valueFn: ({ question }) => question,
+        },
+        {
+          label: "grammar answer",
+          valueFn: ({ answer }) => answer,
         },
       ]}
     />

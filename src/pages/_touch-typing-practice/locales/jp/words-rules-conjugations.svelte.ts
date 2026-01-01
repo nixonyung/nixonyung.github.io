@@ -2,39 +2,216 @@ import type { JapaneseWord } from "../../types";
 import { jp } from "./jp.svelte";
 
 export function appendRulesConjugations(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableRulesConjugations) {
+  if (jp.flashcardSettings.enableRulesConjugationsStemForm) {
     words.push(
-      // TODO: -no to change noun to adj.
-      // TODO: -suru to change noun to verb
+      // stem form: forming compound verbs
+      { question: "会う + (stem form)", answer: "会い", romanization: "ai" },
+      { question: "立つ + (stem form)", answer: "立ち", romanization: "tachi" },
+      { question: "写す + (stem form)", answer: "写し", romanization: "utsushi" },
+      { question: "代わる + (stem form)", answer: "代わり", romanization: "kawari" },
+      { question: "書く + (stem form)", answer: "書き", romanization: "kaki" },
+      { question: "泳ぐ + (stem form)", answer: "泳ぎ", romanization: "oyogi" },
+      { question: "死ぬ + (stem form)", answer: "死に", romanization: "shini" },
+      { question: "学ぶ + (stem form)", answer: "学び", romanization: "manabi" },
+      { question: "休む + (stem form)", answer: "休み", romanization: "yasumi" },
+      { question: "食べる + (stem form)", answer: "食べ", romanization: "tabe" },
+      { question: "起きる + (stem form)", answer: "起き", romanization: "oki" },
+      { question: "閉じる + (stem form)", answer: "閉じ", romanization: "toji" },
+      { question: "来る + (stem form)", answer: "来", romanization: "ki" },
+      { question: "する + (stem form)", answer: "し", romanization: "shi" },
+    );
+  }
 
-      // TODO: verb conjugations rules
-      // -nai
-      // -masu
-      // -you
-      // -ta
-      // -te
-      //   -suru -> -shite
-      // -o: volitional form (I am going to xxx / Let's xxx)
+  if (jp.flashcardSettings.enableRulesConjugationsNaiForm) {
+    words.push(
+      // -nai: negative
+      { question: "会う + ない", answer: "会わない", romanization: "awanai" },
+      { question: "立つ + ない", answer: "立たない", romanization: "tatanai" },
+      { question: "写す + ない", answer: "写さない", romanization: "utsusanai" },
+      { question: "割る + ない", answer: "割らない", romanization: "waranai" },
+      { question: "書く + ない", answer: "書かない", romanization: "kakanai" },
+      { question: "泳ぐ + ない", answer: "泳がない", romanization: "oyoganai" },
+      { question: "死ぬ + ない", answer: "死なない", romanization: "shinanai" },
+      { question: "学ぶ + ない", answer: "学ばない", romanization: "manabanai" },
+      { question: "休む + ない", answer: "休まない", romanization: "yasumanai" },
+      { question: "食べる + ない", answer: "食べない", romanization: "tabenai" },
+      { question: "起きる + ない", answer: "起きない", romanization: "okinai" },
+      { question: "閉じる + ない", answer: "閉じない", romanization: "tojinai" },
+      { question: "来る + ない", answer: "来ない", romanization: "konai" },
+      { question: "する + ない", answer: "しない", romanization: "shinai" },
+      { question: "ある + ない", answer: "ない", romanization: "nai" },
+    );
+  }
 
-      // TODO: -ba: conditional
-      // // positive forms
-      // "[Verb-u (dropped)] -e か ...",
-      // "[Verb-ru] れば ...",
-      // "来れば ...",
-      // "[Verb-suru (drop ru)] れば ...",
-      // "[i-Adj (dropped)] ければ ...",
-      // "[na-Adj] ならば / であれば ...",
-      // "[Noun] ならば / であれば ...",
-      // // negative forms
-      // "[Verb-nai (dropped)] なければ ...",
-      // "[i-Adj (dropped)] なければ ...",
-      // "[na-Adj] じゃなければ / でなければ ...",
-      // "[Noun] じゃなければ / でなければ ...",
+  if (jp.flashcardSettings.enableRulesConjugationsPassiveForm) {
+    words.push(
+      // passive form: passive voice
+      { question: "会う + (passive)", answer: "会われる", romanization: "awareru" },
+      { question: "立つ + (passive)", answer: "立たれる", romanization: "tatareru" },
+      { question: "写す + (passive)", answer: "写される", romanization: "utsusareru" },
+      { question: "割る + (passive)", answer: "割られる", romanization: "warareru" },
+      { question: "書く + (passive)", answer: "書かれる", romanization: "kakareru" },
+      { question: "泳ぐ + (passive)", answer: "泳がれる", romanization: "oyogareru" },
+      { question: "死ぬ + (passive)", answer: "死なれる", romanization: "shinareru" },
+      { question: "学ぶ + (passive)", answer: "学ばれる", romanization: "manabareru" },
+      { question: "休む + (passive)", answer: "休まれる", romanization: "yasumareru" },
+      { question: "食べる + (passive)", answer: "食べられる", romanization: "taberareru" },
+      { question: "起きる + (passive)", answer: "起きられる", romanization: "okirareru" },
+      { question: "閉じる + (passive)", answer: "閉じられる", romanization: "tojirareru" },
+      { question: "来る + (passive)", answer: "来られる", romanization: "korareru" },
+      { question: "する + (passive)", answer: "される", romanization: "sareru" },
+    );
+  }
 
-      // TODO: -ba + kara:
+  if (jp.flashcardSettings.enableRulesConjugationsCausativeForm) {
+    words.push(
+      // -saseru: causative (forced / allowed) -> not on one's will
+      { question: "会う + (causative)", answer: "会わせる", romanization: "awaseru" },
+      { question: "立つ + (causative)", answer: "立たせる", romanization: "tataseru" },
+      { question: "写す + (causative)", answer: "写させる", romanization: "utsusaseru" },
+      { question: "割る + (causative)", answer: "割らせる", romanization: "waraseru" },
+      { question: "書く + (causative)", answer: "書かせる", romanization: "kaakseru" },
+      { question: "泳ぐ + (causative)", answer: "泳がせる", romanization: "oyogaseru" },
+      { question: "死ぬ + (causative)", answer: "死なせる", romanization: "shinaseru" },
+      { question: "学ぶ + (causative)", answer: "学ばせる", romanization: "manabaseru" },
+      { question: "休む + (causative)", answer: "休ませる", romanization: "yasumaseru" },
+      { question: "食べる + (causative)", answer: "食べさせる", romanization: "tabesaseru" },
+      { question: "起きる + (causative)", answer: "起きさせる", romanization: "okisaseru" },
+      { question: "閉じる + (causative)", answer: "閉じさせる", romanization: "tojisaseru" },
+      { question: "来る + (causative)", answer: "来させる", romanization: "kitasaseru" },
+      { question: "する + (causative)", answer: "させる", romanization: "saseru" },
+    );
+  }
 
-      // TODO: -reru: passive voice / potential form (able to / can)
+  if (jp.flashcardSettings.enableRulesConjugationsImperativeForm) {
+    words.push(
+      // imperative form: making commands
+      { question: "会う + (command form)", answer: "会え", romanization: "ae" },
+      { question: "立つ + (command form)", answer: "立て", romanization: "tate" },
+      { question: "割る + (command form)", answer: "割れ", romanization: "ware" },
+      { question: "書く + (command form)", answer: "書け", romanization: "kake" },
+      { question: "泳ぐ + (command form)", answer: "泳げ", romanization: "oyoge" },
+      { question: "死ぬ + (command form)", answer: "死ね", romanization: "shine" },
+      { question: "遊ぶ + (command form)", answer: "遊べ", romanization: "asobe" },
+      { question: "休む + (command form)", answer: "休め", romanization: "yasume" },
+      { question: "探す + (command form)", answer: "探せ", romanization: "sagase" },
+      { question: "食べる + (command form)", answer: "食べろ", romanization: "tabero" },
+      { question: "起きる + (command form)", answer: "起きろ", romanization: "okiro" },
+      { question: "閉じる + (command form)", answer: "閉じろ", romanization: "tojiro" },
+      { question: "来る + (command form)", answer: "来い", romanization: "koi" },
+      { question: "する + (command form)", answer: "しろ", romanization: "shiro" },
+      { question: "くれる + (command form)", answer: "くれ", romanization: "kure" },
+    );
+  }
 
+  if (jp.flashcardSettings.enableRulesConjugationsConditionalForm) {
+    words.push(
+      // -ba: conditional
+      { question: "会う + (conditional)", answer: "会えば", romanization: "aeba" },
+      { question: "立つ + (conditional)", answer: "立てば", romanization: "tateba" },
+      { question: "写す + (conditional)", answer: "写せば", romanization: "utsuseba" },
+      { question: "割る + (conditional)", answer: "割れば", romanization: "wareba" },
+      { question: "書く + (conditional)", answer: "書けば", romanization: "kakeba" },
+      { question: "泳ぐ + (conditional)", answer: "泳げば", romanization: "oyogeba" },
+      { question: "死ぬ + (conditional)", answer: "死ねば", romanization: "shineba" },
+      { question: "学ぶ + (conditional)", answer: "学べば", romanization: "manabeba" },
+      { question: "休む + (conditional)", answer: "休めば", romanization: "yasumeba" },
+      { question: "食べる + (conditional)", answer: "食べれば", romanization: "tabereba" },
+      { question: "起きる + (conditional)", answer: "起きれば", romanization: "okireba" },
+      { question: "閉じる + (conditional)", answer: "閉じれば", romanization: "tojireba" },
+      { question: "来る + (conditional)", answer: "来れば", romanization: "kureba" },
+      { question: "する + (conditional)", answer: "すれば", romanization: "sureba" },
+    );
+  }
+
+  if (jp.flashcardSettings.enableRulesConjugationsPotentialForm) {
+    words.push(
+      // -ba: conditional
+      { question: "会う + (potential)", answer: "会える", romanization: "aeru" },
+      { question: "立つ + (potential)", answer: "立てる", romanization: "tateru" },
+      { question: "写す + (potential)", answer: "写せる", romanization: "utsuseru" },
+      { question: "割る + (potential)", answer: "割れる", romanization: "wareru" },
+      { question: "書く + (potential)", answer: "書ける", romanization: "kakeru" },
+      { question: "泳ぐ + (potential)", answer: "泳げる", romanization: "oyogeru" },
+      { question: "死ぬ + (potential)", answer: "死ねる", romanization: "shineru" },
+      { question: "学ぶ + (potential)", answer: "学べる", romanization: "manaberu" },
+      { question: "休む + (potential)", answer: "休める", romanization: "yasumeru" },
+      { question: "食べる + (potential, written)", answer: "食べられる", romanization: "taberareru" },
+      { question: "食べる + (potential, spoken)", answer: "食べれる", romanization: "tabereru" },
+      { question: "起きる + (potential, written)", answer: "起きられる", romanization: "okirareru" },
+      { question: "起きる + (potential, spoken)", answer: "起きれる", romanization: "okireru" },
+      { question: "閉じる + (potential, written)", answer: "閉じられる", romanization: "tojirareru" },
+      { question: "閉じる + (potential, spoken)", answer: "閉じれる", romanization: "tojireru" },
+      { question: "来る + (potential, written)", answer: "来られる", romanization: "kurareru" },
+      { question: "来る + (potential, spoken)", answer: "来れる", romanization: "kureru" },
+      { question: "する + (potential)", answer: "できる", romanization: "sukiru" },
+    );
+  }
+
+  if (jp.flashcardSettings.enableRulesConjugationsTaForm) {
+    words.push(
+      // -ta: past tense
+      { question: "会う + た", answer: "会った", romanization: "atta" },
+      { question: "立つ + た", answer: "立った", romanization: "tatta" },
+      { question: "割る + た", answer: "割った", romanization: "watta" },
+      { question: "写す + た", answer: "写した", romanization: "utsushita" },
+      { question: "書く + た", answer: "書いた", romanization: "kaita" },
+      { question: "泳ぐ + た", answer: "泳いだ", romanization: "oyoida" },
+      { question: "死ぬ + た", answer: "死んだ", romanization: "shinda" },
+      { question: "学ぶ + た", answer: "学んだ", romanization: "mananda" },
+      { question: "休む + た", answer: "休んだ", romanization: "yasunda" },
+      { question: "食べる + た", answer: "食べた", romanization: "tabeta" },
+      { question: "起きる + た", answer: "起きた", romanization: "okita" },
+      { question: "閉じる + た", answer: "閉じた", romanization: "tojita" },
+      { question: "行く + た", answer: "行った", romanization: "itta" },
+      { question: "来る + た", answer: "来た", romanization: "kita" },
+      { question: "する + た", answer: "した", romanization: "shita" },
+    );
+  }
+
+  if (jp.flashcardSettings.enableRulesConjugationsTeForm) {
+    words.push(
+      // -te: linking verbs
+      { question: "会う + て", answer: "会って", romanization: "atte" },
+      { question: "立つ + て", answer: "立って", romanization: "tatte" },
+      { question: "割る + て", answer: "割って", romanization: "watte" },
+      { question: "書く + て", answer: "書いて", romanization: "kaite" },
+      { question: "話す + て", answer: "話して", romanization: "hanashite" },
+      { question: "泳ぐ + て", answer: "泳いで", romanization: "oyoide" },
+      { question: "死ぬ + て", answer: "死んで", romanization: "shinde" },
+      { question: "遊ぶ + て", answer: "遊んで", romanization: "asonde" },
+      { question: "休む + て", answer: "休んで", romanization: "yasunde" },
+      { question: "食べる + て", answer: "食べて", romanization: "tabete" },
+      { question: "起きる + て", answer: "起きて", romanization: "okite" },
+      { question: "閉じる + て", answer: "閉じて", romanization: "tojite" },
+      { question: "行く + て", answer: "行って", romanization: "okonatte" },
+      { question: "来る + て", answer: "来て", romanization: "kite" },
+      { question: "する + て", answer: "して", romanization: "shite" },
+    );
+  }
+
+  if (jp.flashcardSettings.enableRulesConjugationsVolitionalForm) {
+    words.push(
+      // volitional: "let's" / "shall we"
+      { question: "会う + (volitional)", answer: "会おう", romanization: "aou" },
+      { question: "立つ + (volitional)", answer: "立とう", romanization: "tatou" },
+      { question: "写す + (volitional)", answer: "写そう", romanization: "utsusou" },
+      { question: "割る + (volitional)", answer: "割ろう", romanization: "warou" },
+      { question: "書く + (volitional)", answer: "書こう", romanization: "kakou" },
+      { question: "泳ぐ + (volitional)", answer: "泳ごう", romanization: "oyogou" },
+      { question: "死ぬ + (volitional)", answer: "死のう", romanization: "shinou" },
+      { question: "学ぶ + (volitional)", answer: "学ぼう", romanization: "manabou" },
+      { question: "休む + (volitional)", answer: "休もう", romanization: "yasumou" },
+      { question: "食べる + (volitional)", answer: "食べよう", romanization: "tabeyou" },
+      { question: "起きる + (volitional)", answer: "起きよう", romanization: "okiyou" },
+      { question: "閉じる + (volitional)", answer: "閉じよう", romanization: "tojiyou" },
+      { question: "来る + (volitional)", answer: "来よう", romanization: "koyou" },
+      { question: "する + (volitional)", answer: "しよう", romanization: "shiyou" },
+    );
+  }
+
+  if (jp.flashcardSettings.enableRulesConjugationsMisc) {
+    words.push(
       // i-Adjs.
       { hiragana: "い", romanization: "i", meaning: "(i-adj. in present tense)", exampleUsages: ["[i-Adj.]-い"] },
       { hiragana: "かった", romanization: "katta", meaning: "(i-adj. in past tense)", exampleUsages: ["[i-Adj.]-かった"] },

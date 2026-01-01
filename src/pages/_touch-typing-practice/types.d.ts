@@ -60,6 +60,9 @@ export type JapaneseWord = {
   preferredForm?: "kanji" | "hiragana" | "katakana";
   romanization?: string;
 
-  meaning: string;
+  meaning?: string;
   derivedMeanings?: string[];
+
+  question?: string;
+  answer?: string;
 };

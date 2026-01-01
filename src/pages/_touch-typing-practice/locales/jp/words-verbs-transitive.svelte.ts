@@ -82,7 +82,7 @@ export function appendTransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["食べる"], hiragana: "たべる", romanization: "taberu", meaning: "eat" },
 
       { kanjis: ["用いる"], hiragana: "もちいる", romanization: "mochiiru", meaning: "use / utilize" },
-      { hiragana: "くれる", rareKanjis: ["呉れる"], romanization: "kureru", meaning: "give me", exampleUsages: ["譲ってくれた"] },
+      { hiragana: "くれる", rareKanjis: ["呉れる"], romanization: "kureru", meaning: "give / let one have" },
       { hiragana: "かける", preferredForm: "hiragana", kanjis: ["掛ける", "懸ける"], romanization: "kakeru", meaning: "hang" },
 
       { kanjis: ["決める", "極める"], hiragana: "きめる", katakana: "キメる", romanization: "kimeru", meaning: "determine" },

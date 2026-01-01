@@ -26,14 +26,15 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
       { hiragana: "ないといけない", romanization: "nai to ikenai", meaning: "must (spoken)", exampleUsages: ["[Verb-ない] といけない。"] },
       { hiragana: "(ない) なければいけない", romanization: "nakereba ikenai", meaning: "must (written)", exampleUsages: ["[Verb-ない (dropped)] なければいけない。"] },
 
-      // -masu
+      // -masu / stem
       { hiragana: "(ます) すぎる", preferredForm: "hiragana", kanjis: ["過ぎる"], romanization: "sugiru", meaning: "too much (present tense, casual)", exampleUsages: ["[Verb-ます (dropped()] すぎる。", "[i-Adj. (dropped)] すぎる。", "[na-Adj.] すぎる。"] },
       { hiragana: "(ます) すぎます", preferredForm: "hiragana", kanjis: ["過ぎます"], romanization: "sugimasu", meaning: "too much (present tense, casual)", exampleUsages: ["[Verb-ます (dropped)] すぎます。", "[i-Adj. (dropped)] すぎます。", "[na-Adj.] すぎます。"] },
       { hiragana: "(ます) すぎた", preferredForm: "hiragana", kanjis: ["過ぎた"], romanization: "sugita", meaning: "too much (past tense, casual)", exampleUsages: ["[Verb-ます (dropped)] すぎた。", "[i-Adj. (dropped)] すぎた。", "[na-Adj.] すぎた。"] },
       { hiragana: "(ます) すぎました", preferredForm: "hiragana", kanjis: ["過ぎました"], romanization: "sugimashita", meaning: "too much (past tense, polite)", exampleUsages: ["[Verb-ます (dropped)] すぎました。", "[i-Adj. (dropped)] すぎました。", "[na-Adj.] すぎました。"] },
-      { hiragana: "(ます) たい", romanization: "tai", meaning: "I want to xxx (casual)", exampleUsages: ["[Verb--ます (dropped)] たいです。"] },
       { hiragana: "(ます) たくない", romanization: "takunai", meaning: "I don't want to xxx (casual)", exampleUsages: ["[Verb--ます (dropped)] たくない。"] },
-      { hiragana: "(ます) たかった", romanization: "takatta", meaning: "I wanted to xxx (casual)", exampleUsages: ["[Verb--ます (dropped)] たかった。"] },
+      { hiragana: "たがる", romanization: "tagaru", meaning: "(appearring wanted to)", exampleUsages: ["[Verb-stem] たがる"] },
+      { hiragana: "ながら", rareKanjis: ["乍ら"], romanization: "nagara", meaning: "while", exampleUsages: ["[Verb-stem] ながら"] },
+      { hiragana: "なさい", preferredForm: "hiragana", kanjis: ["為さい"], romanization: "nasai", meaning: "(imperative, polite)", exampleUsages: ["[Verb-stem] なさい"] },
       { kanjis: ["(ます) に行く"], hiragana: "(ます) にいく", romanization: "ni iku", meaning: "I am going to xxx (casual)", exampleUsages: ["[Verb-ます (dropped)] に行く。"] },
       { kanjis: ["(ます) に行きます"], hiragana: "(ます) にいきません", romanization: "ni ikimasen", meaning: "I am going to xxx (polite)", exampleUsages: ["[Verb-ます (dropped)] に行きます。"] },
       { hiragana: "(ます) ましょう！", romanization: "mashou", meaning: "let's xxx (polite)", exampleUsages: ["[Verb-ます (dropped)] ましょう！", "[Noun] しましょう！"] },
@@ -69,6 +70,7 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
       { hiragana: "てくる", romanization: "-te kiru", meaning: "(continuous, towards a moment)" },
       { hiragana: "ておく", romanization: "-te oku", meaning: "(I am going to)" },
       { hiragana: "てもいい", preferredForm: "hiragana", kanjis: ["ても良い"], romanization: "-te moii", meaning: "you can / can I?" },
+      { hiragana: "てくれる", romanization: "-te kureru", meaning: "give to me", exampleUsages: ["譲ってくれた"] },
       // TODO: -te shimau
 
       // TODO: -たい (-tai): desire

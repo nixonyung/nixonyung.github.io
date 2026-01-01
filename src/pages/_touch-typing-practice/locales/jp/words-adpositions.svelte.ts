@@ -1,8 +1,8 @@
 import type { JapaneseWord } from "../../types";
 import { jp } from "./jp.svelte";
 
-export function appendRulesAdpositions(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableRulesAdpositions) {
+export function appendAdpositions(words: JapaneseWord[]) {
+  if (jp.flashcardSettings.enableAdpositions) {
     words.push(
       { hiragana: "は", romanization: "wa", meaning: "(known subject marker)", exampleUsages: ["[Noun] は ..."] },
       { hiragana: "が", romanization: "ga", meaning: "(new subject marker)", derivedMeanings: ["(signaling contrasting info, written)"], exampleUsages: ["[Noun] が ...", "[Clause] が、 [Clause]"] },
@@ -22,7 +22,7 @@ export function appendRulesAdpositions(words: JapaneseWord[]) {
 
       // TODO: changing word forms
       // TODO: だっ
-      // TODO: の
+      // TODO: の: noun to adj.
       { hiragana: "-さ", romanization: "-sa", meaning: "-ness (adj. to noun)" },
 
       { hiragana: "-ら", romanization: "-ra", meaning: "(plural, informal)" },

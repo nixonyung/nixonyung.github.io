@@ -3,6 +3,7 @@ import { jp } from "./jp.svelte";
 
 export function appendNounsAbstract(words: JapaneseWord[]) {
   if (jp.flashcardSettings.enableNounsIdeasLife) {
+    // TODO: humanity vs wellbeing
     words.push(
       { kanjis: ["人間"], hiragana: "にんげん", romanization: "ningen", meaning: "mankind / human being" },
 
@@ -17,6 +18,8 @@ export function appendNounsAbstract(words: JapaneseWord[]) {
 
       { kanjis: ["死"], hiragana: "し", romanization: "shi", meaning: "death" },
       { kanjis: ["死去"], hiragana: "しきょ", romanization: "shikyo", meaning: "passing away (formal)" },
+
+      { kanjis: ["車酔い"], hiragana: "くるまよい", romanization: "kurumayoi", meaning: "car sickness" },
 
       { kanjis: ["性"], hiragana: "せい", romanization: "sei", meaning: "sex / nature of a person" },
       { kanjis: ["性別"], hiragana: "せいべつ", romanization: "seibetsu", meaning: "gender" },

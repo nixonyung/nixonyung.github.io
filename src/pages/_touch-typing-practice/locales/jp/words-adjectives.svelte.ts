@@ -59,6 +59,9 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { kanjis: ["暇がない", "暇が無い"], hiragana: "ひまがない", romanization: "himaganai", meaning: "busy" },
 
       { hiragana: "-らしい", romanization: "-rashii", meaning: "(appearing like, by characteristic)", exampleUsages: ["あなたらしいね", "[Noun] らしい"] },
+      { hiragana: "-たい", romanization: "-tai", meaning: "wanted to", exampleUsages: ["[Verb-stem] たい", "したい"] },
+      { kanjis: ["-易い"], hiragana: "-やすい", romanization: "-yasui", meaning: "easy to (in terms of any kind of effort)", exampleUsages: ["[Verb-stem] 易い", "話しやすい (easy to talk with / easy to find and talk)", "酔いやすい (get drunk easily)"] },
+      { kanjis: ["-難い", "-悪い"], hiragana: "-にくい", romanization: "-nikui", meaning: "hard to (in terms of any kind of effort)", exampleUsages: ["[Verb-stem] 難い", "使いにくい (hard to use)", "車酔いしにくい (doesn't get car sick easily)"] },
     );
   }
 

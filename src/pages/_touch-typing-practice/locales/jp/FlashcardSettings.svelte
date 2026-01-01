@@ -14,6 +14,11 @@
 <div class="flex flex-col items-start">
   <ReferenceLink title="TAKOBOTO (English dictionary)" href="https://takoboto.jp/" />
   <ReferenceLink title="Weblio (native dictionary)" href="https://www.weblio.jp/" />
+  <ReferenceLink title="Verb Conjugation - Tofugu" href="https://www.tofugu.com/japanese-grammar/verb-conjugation-groups/" />
+  <ReferenceLink
+    title="Japanese conjugation"
+    href="https://www.wikiwand.com/en/articles/Japanese_conjugation#/media/File:AMB_Japanese_Verbs.pdf"
+  />
   <ReferenceLink title="Ultra Handy Japanese Verb Conjugator" href="https://www.japaneseverbconjugator.com/" />
   <ReferenceLink title="Google Search - AI Overview" />
 </div>
@@ -121,7 +126,7 @@
           !jp.flashcardSettings.enableNounsMomentsMonths ||
           !jp.flashcardSettings.enableNounsMomentsSeasons ||
           !jp.flashcardSettings.enableNounsMomentsFestivals ||
-          !jp.flashcardSettings.enableNounsMomentsMiscellaneous ||
+          !jp.flashcardSettings.enableNounsMomentsMisc ||
           !jp.flashcardSettings.enableNounsVenuesGeneric ||
           !jp.flashcardSettings.enableNounsVenuesFacilities ||
           !jp.flashcardSettings.enableNounsVenuesShops ||
@@ -165,7 +170,7 @@
           jp.flashcardSettings.enableNounsMomentsMonths = true;
           jp.flashcardSettings.enableNounsMomentsSeasons = true;
           jp.flashcardSettings.enableNounsMomentsFestivals = true;
-          jp.flashcardSettings.enableNounsMomentsMiscellaneous = true;
+          jp.flashcardSettings.enableNounsMomentsMisc = true;
           jp.flashcardSettings.enableNounsVenuesGeneric = true;
           jp.flashcardSettings.enableNounsVenuesFacilities = true;
           jp.flashcardSettings.enableNounsVenuesShops = true;
@@ -209,7 +214,7 @@
           jp.flashcardSettings.enableNounsMomentsMonths = false;
           jp.flashcardSettings.enableNounsMomentsSeasons = false;
           jp.flashcardSettings.enableNounsMomentsFestivals = false;
-          jp.flashcardSettings.enableNounsMomentsMiscellaneous = false;
+          jp.flashcardSettings.enableNounsMomentsMisc = false;
           jp.flashcardSettings.enableNounsVenuesGeneric = false;
           jp.flashcardSettings.enableNounsVenuesFacilities = false;
           jp.flashcardSettings.enableNounsVenuesShops = false;
@@ -392,21 +397,21 @@
               !jp.flashcardSettings.enableNounsMomentsMonths ||
               !jp.flashcardSettings.enableNounsMomentsSeasons ||
               !jp.flashcardSettings.enableNounsMomentsFestivals ||
-              !jp.flashcardSettings.enableNounsMomentsMiscellaneous
+              !jp.flashcardSettings.enableNounsMomentsMisc
             ) {
               jp.flashcardSettings.enableNounsMomentsTimesOfDay = true;
               jp.flashcardSettings.enableNounsMomentsDaysOfWeek = true;
               jp.flashcardSettings.enableNounsMomentsMonths = true;
               jp.flashcardSettings.enableNounsMomentsSeasons = true;
               jp.flashcardSettings.enableNounsMomentsFestivals = true;
-              jp.flashcardSettings.enableNounsMomentsMiscellaneous = true;
+              jp.flashcardSettings.enableNounsMomentsMisc = true;
             } else {
               jp.flashcardSettings.enableNounsMomentsTimesOfDay = false;
               jp.flashcardSettings.enableNounsMomentsDaysOfWeek = false;
               jp.flashcardSettings.enableNounsMomentsMonths = false;
               jp.flashcardSettings.enableNounsMomentsSeasons = false;
               jp.flashcardSettings.enableNounsMomentsFestivals = false;
-              jp.flashcardSettings.enableNounsMomentsMiscellaneous = false;
+              jp.flashcardSettings.enableNounsMomentsMisc = false;
             }
           }}>Moments:</Highlighted
         >
@@ -415,7 +420,7 @@
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsMomentsMonths} label="Months" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsMomentsSeasons} label="Seasons" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsMomentsFestivals} label="Festivals" />
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsMomentsMiscellaneous} label="(miscellaneous)" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsMomentsMisc} label="(misc.)" />
       </div>
       <div class="flex flex-wrap items-center-safe gap-x-3">
         <Highlighted
@@ -594,60 +599,173 @@
     <Highlighted
       onclick={() => {
         if (
-          !jp.flashcardSettings.enableColloquialSoftening ||
-          !jp.flashcardSettings.enableColloquialEmphasis ||
-          !jp.flashcardSettings.enableColloquialAgreeing ||
-          !jp.flashcardSettings.enableColloquialRequests ||
-          !jp.flashcardSettings.enableColloquialSurprised ||
-          !jp.flashcardSettings.enableColloquialGreetingsAndClosings ||
-          !jp.flashcardSettings.enableColloquialMiscellaneous
+          !jp.flashcardSettings.enableExpressionsSoftening ||
+          !jp.flashcardSettings.enableExpressionsEmphasis ||
+          !jp.flashcardSettings.enableExpressionsAgreeing ||
+          !jp.flashcardSettings.enableExpressionsRequests ||
+          !jp.flashcardSettings.enableExpressionsSurprised ||
+          !jp.flashcardSettings.enableExpressionsGreetingsAndClosings ||
+          !jp.flashcardSettings.enableExpressionsMisc
         ) {
-          jp.flashcardSettings.enableColloquialSoftening = true;
-          jp.flashcardSettings.enableColloquialEmphasis = true;
-          jp.flashcardSettings.enableColloquialAgreeing = true;
-          jp.flashcardSettings.enableColloquialRequests = true;
-          jp.flashcardSettings.enableColloquialSurprised = true;
-          jp.flashcardSettings.enableColloquialGreetingsAndClosings = true;
-          jp.flashcardSettings.enableColloquialMiscellaneous = true;
+          jp.flashcardSettings.enableExpressionsSoftening = true;
+          jp.flashcardSettings.enableExpressionsEmphasis = true;
+          jp.flashcardSettings.enableExpressionsAgreeing = true;
+          jp.flashcardSettings.enableExpressionsRequests = true;
+          jp.flashcardSettings.enableExpressionsSurprised = true;
+          jp.flashcardSettings.enableExpressionsGreetingsAndClosings = true;
+          jp.flashcardSettings.enableExpressionsMisc = true;
         } else {
-          jp.flashcardSettings.enableColloquialSoftening = false;
-          jp.flashcardSettings.enableColloquialEmphasis = false;
-          jp.flashcardSettings.enableColloquialAgreeing = false;
-          jp.flashcardSettings.enableColloquialRequests = false;
-          jp.flashcardSettings.enableColloquialSurprised = false;
-          jp.flashcardSettings.enableColloquialGreetingsAndClosings = false;
-          jp.flashcardSettings.enableColloquialMiscellaneous = false;
+          jp.flashcardSettings.enableExpressionsSoftening = false;
+          jp.flashcardSettings.enableExpressionsEmphasis = false;
+          jp.flashcardSettings.enableExpressionsAgreeing = false;
+          jp.flashcardSettings.enableExpressionsRequests = false;
+          jp.flashcardSettings.enableExpressionsSurprised = false;
+          jp.flashcardSettings.enableExpressionsGreetingsAndClosings = false;
+          jp.flashcardSettings.enableExpressionsMisc = false;
         }
       }}
     >
       Expressions:
     </Highlighted>
 
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableColloquialSoftening} label="Softening" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableColloquialEmphasis} label="Emphasis" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableColloquialAgreeing} label="Agreeing" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableColloquialRequests} label="Requests" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableColloquialSurprised} label="Surprised" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableColloquialGreetingsAndClosings} label="Greetings and Closings" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableColloquialMiscellaneous} label="(miscellaneous)" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsSoftening} label="Softening" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsEmphasis} label="Emphasis" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsAgreeing} label="Agreeing" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsRequests} label="Requests" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsSurprised} label="Surprised" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsGreetingsAndClosings} label="Greetings and Closings" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsMisc} label="(misc.)" />
   </div>
 
   <div class="flex items-center-safe gap-6">
     <Highlighted
       onclick={() => {
-        if (!jp.flashcardSettings.enableRulesAdpositions || !jp.flashcardSettings.enableRulesConjugations) {
-          jp.flashcardSettings.enableRulesAdpositions = true;
-          jp.flashcardSettings.enableRulesConjugations = true;
+        if (!jp.flashcardSettings.enableAdpositions) {
+          jp.flashcardSettings.enableAdpositions = true;
         } else {
-          jp.flashcardSettings.enableRulesAdpositions = false;
-          jp.flashcardSettings.enableRulesConjugations = false;
+          jp.flashcardSettings.enableAdpositions = false;
+        }
+      }}
+    >
+      Adpositions:
+    </Highlighted>
+
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableAdpositions} label="(all)" />
+  </div>
+
+  <div class="flex items-start gap-6">
+    <Highlighted
+      onclick={() => {
+        if (
+          !jp.flashcardSettings.enableRulesConjugationsStemForm ||
+          !jp.flashcardSettings.enableRulesConjugationsNaiForm ||
+          !jp.flashcardSettings.enableRulesConjugationsPassiveForm ||
+          !jp.flashcardSettings.enableRulesConjugationsCausativeForm ||
+          !jp.flashcardSettings.enableRulesConjugationsImperativeForm ||
+          !jp.flashcardSettings.enableRulesConjugationsConditionalForm ||
+          !jp.flashcardSettings.enableRulesConjugationsPotentialForm ||
+          !jp.flashcardSettings.enableRulesConjugationsTaForm ||
+          !jp.flashcardSettings.enableRulesConjugationsTeForm ||
+          !jp.flashcardSettings.enableRulesConjugationsVolitionalForm ||
+          !jp.flashcardSettings.enableRulesConjugationsMisc
+        ) {
+          jp.flashcardSettings.enableRulesConjugationsStemForm = true;
+          jp.flashcardSettings.enableRulesConjugationsNaiForm = true;
+          jp.flashcardSettings.enableRulesConjugationsPassiveForm = true;
+          jp.flashcardSettings.enableRulesConjugationsCausativeForm = true;
+          jp.flashcardSettings.enableRulesConjugationsImperativeForm = true;
+          jp.flashcardSettings.enableRulesConjugationsConditionalForm = true;
+          jp.flashcardSettings.enableRulesConjugationsPotentialForm = true;
+          jp.flashcardSettings.enableRulesConjugationsTaForm = true;
+          jp.flashcardSettings.enableRulesConjugationsTeForm = true;
+          jp.flashcardSettings.enableRulesConjugationsVolitionalForm = true;
+          jp.flashcardSettings.enableRulesConjugationsMisc = true;
+        } else {
+          jp.flashcardSettings.enableRulesConjugationsStemForm = false;
+          jp.flashcardSettings.enableRulesConjugationsNaiForm = false;
+          jp.flashcardSettings.enableRulesConjugationsPassiveForm = false;
+          jp.flashcardSettings.enableRulesConjugationsCausativeForm = false;
+          jp.flashcardSettings.enableRulesConjugationsImperativeForm = false;
+          jp.flashcardSettings.enableRulesConjugationsConditionalForm = false;
+          jp.flashcardSettings.enableRulesConjugationsPotentialForm = false;
+          jp.flashcardSettings.enableRulesConjugationsTaForm = false;
+          jp.flashcardSettings.enableRulesConjugationsTeForm = false;
+          jp.flashcardSettings.enableRulesConjugationsVolitionalForm = false;
+          jp.flashcardSettings.enableRulesConjugationsMisc = false;
         }
       }}
     >
       Grammar Rules:
     </Highlighted>
 
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableRulesAdpositions} label="Adpositions" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableRulesConjugations} label="Conjugations" />
+    <div class="flex flex-col gap-y-1.5">
+      <div class="flex items-start gap-3">
+        <Highlighted
+          onclick={() => {
+            if (
+              !jp.flashcardSettings.enableRulesConjugationsStemForm ||
+              !jp.flashcardSettings.enableRulesConjugationsNaiForm ||
+              !jp.flashcardSettings.enableRulesConjugationsPassiveForm ||
+              !jp.flashcardSettings.enableRulesConjugationsCausativeForm ||
+              !jp.flashcardSettings.enableRulesConjugationsImperativeForm ||
+              !jp.flashcardSettings.enableRulesConjugationsConditionalForm ||
+              !jp.flashcardSettings.enableRulesConjugationsPotentialForm ||
+              !jp.flashcardSettings.enableRulesConjugationsTaForm ||
+              !jp.flashcardSettings.enableRulesConjugationsTeForm ||
+              !jp.flashcardSettings.enableRulesConjugationsVolitionalForm
+            ) {
+              jp.flashcardSettings.enableRulesConjugationsStemForm = true;
+              jp.flashcardSettings.enableRulesConjugationsNaiForm = true;
+              jp.flashcardSettings.enableRulesConjugationsPassiveForm = true;
+              jp.flashcardSettings.enableRulesConjugationsCausativeForm = true;
+              jp.flashcardSettings.enableRulesConjugationsImperativeForm = true;
+              jp.flashcardSettings.enableRulesConjugationsConditionalForm = true;
+              jp.flashcardSettings.enableRulesConjugationsPotentialForm = true;
+              jp.flashcardSettings.enableRulesConjugationsTaForm = true;
+              jp.flashcardSettings.enableRulesConjugationsTeForm = true;
+              jp.flashcardSettings.enableRulesConjugationsVolitionalForm = true;
+            } else {
+              jp.flashcardSettings.enableRulesConjugationsStemForm = false;
+              jp.flashcardSettings.enableRulesConjugationsNaiForm = false;
+              jp.flashcardSettings.enableRulesConjugationsPassiveForm = false;
+              jp.flashcardSettings.enableRulesConjugationsCausativeForm = false;
+              jp.flashcardSettings.enableRulesConjugationsImperativeForm = false;
+              jp.flashcardSettings.enableRulesConjugationsConditionalForm = false;
+              jp.flashcardSettings.enableRulesConjugationsPotentialForm = false;
+              jp.flashcardSettings.enableRulesConjugationsTaForm = false;
+              jp.flashcardSettings.enableRulesConjugationsTeForm = false;
+              jp.flashcardSettings.enableRulesConjugationsVolitionalForm = false;
+            }
+          }}
+        >
+          Verb Conjugations:
+        </Highlighted>
+
+        <div class="flex flex-col gap-y-1.5">
+          <div class="flex flex-wrap items-center-safe gap-x-3">
+            <CheckboxInput bind:checked={jp.flashcardSettings.enableRulesConjugationsStemForm} label="Stem" />
+          </div>
+          <div class="flex flex-wrap items-center-safe gap-x-3">
+            <CheckboxInput bind:checked={jp.flashcardSettings.enableRulesConjugationsNaiForm} label="ない" />
+            <CheckboxInput bind:checked={jp.flashcardSettings.enableRulesConjugationsPassiveForm} label="Passive" />
+            <CheckboxInput bind:checked={jp.flashcardSettings.enableRulesConjugationsCausativeForm} label="Causative" />
+          </div>
+          <div class="flex flex-wrap items-center-safe gap-x-3">
+            <CheckboxInput bind:checked={jp.flashcardSettings.enableRulesConjugationsImperativeForm} label="Imperative" />
+            <CheckboxInput bind:checked={jp.flashcardSettings.enableRulesConjugationsConditionalForm} label="Conditional" />
+            <CheckboxInput bind:checked={jp.flashcardSettings.enableRulesConjugationsPotentialForm} label="Potential" />
+          </div>
+          <div class="flex flex-wrap items-center-safe gap-x-3">
+            <CheckboxInput bind:checked={jp.flashcardSettings.enableRulesConjugationsTaForm} label="た" />
+            <CheckboxInput bind:checked={jp.flashcardSettings.enableRulesConjugationsTeForm} label="て" />
+          </div>
+          <div class="flex flex-wrap items-center-safe gap-x-3">
+            <CheckboxInput bind:checked={jp.flashcardSettings.enableRulesConjugationsVolitionalForm} label="Volitional" />
+          </div>
+        </div>
+      </div>
+
+      <CheckboxInput bind:checked={jp.flashcardSettings.enableRulesConjugationsMisc} label="(misc.)" />
+    </div>
   </div>
 </div>

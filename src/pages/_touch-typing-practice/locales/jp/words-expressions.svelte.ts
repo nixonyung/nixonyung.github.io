@@ -1,7 +1,7 @@
 import type { JapaneseWord } from "../../types";
 import { jp } from "./jp.svelte";
 
-export function appendColloquial(words: JapaneseWord[]) {
+export function appendExpressions(words: JapaneseWord[]) {
   // TODO: "nai desu ka" vs "arimasen ka": "nai desu ka" is modern / spoken
   // TODO: ずっと zutto
   // TODO: wake dewanai
@@ -12,7 +12,7 @@ export function appendColloquial(words: JapaneseWord[]) {
   // TODO: [Clause] ということ です (it is said?)
   // TODO: proverbs
 
-  if (jp.flashcardSettings.enableColloquialSoftening) {
+  if (jp.flashcardSettings.enableExpressionsSoftening) {
     words.push(
       { hiragana: "お", preferredForm: "hiragana", kanjis: ["御"], romanization: "o", meaning: "(honorific, with native Japanese words)", exampleUsages: ["お[Noun]"] },
       { hiragana: "ご", preferredForm: "hiragana", kanjis: ["御"], romanization: "go", meaning: "(honorific, with Chinese-derived words)", exampleUsages: ["ご[Noun]"] },
@@ -31,7 +31,7 @@ export function appendColloquial(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableColloquialEmphasis) {
+  if (jp.flashcardSettings.enableExpressionsEmphasis) {
     words.push(
       //
       { hiragana: "だろう", romanization: "darou", meaning: "right? (stating facts, casual)", exampleUsages: ["[Clause] だろう？"] },
@@ -52,7 +52,7 @@ export function appendColloquial(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableColloquialAgreeing) {
+  if (jp.flashcardSettings.enableExpressionsAgreeing) {
     words.push(
       //
       { hiragana: "はい", romanization: "sou", meaning: "yes / I see", derivedMeanings: ["(I am listening)"] },
@@ -70,7 +70,7 @@ export function appendColloquial(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableColloquialRequests) {
+  if (jp.flashcardSettings.enableExpressionsRequests) {
     words.push(
       //
       { hiragana: "ください", preferredForm: "hiragana", kanjis: ["下さい"], romanization: "kudasai", meaning: "please give me (polite)", exampleUsages: ["お [Noun] をください。", "[Noun] を {(counter)} ください。"] },
@@ -82,7 +82,7 @@ export function appendColloquial(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableColloquialSurprised) {
+  if (jp.flashcardSettings.enableExpressionsSurprised) {
     words.push(
       //
       { hiragana: "うわ", romanization: "uwa", meaning: "wow" },
@@ -103,7 +103,7 @@ export function appendColloquial(words: JapaneseWord[]) {
   }
 
   // TODO: greetings
-  if (jp.flashcardSettings.enableColloquialGreetingsAndClosings) {
+  if (jp.flashcardSettings.enableExpressionsGreetingsAndClosings) {
     words.push(
       { hiragana: "みなさん、こんにちは", romanization: "minasan konnichiwa", meaning: "Hello everyone (spoken, casual)" },
       { hiragana: "おはこんばんちは", romanization: "ohakonbanchiwa", meaning: "good whatever (spoken, casual)" },
@@ -116,7 +116,7 @@ export function appendColloquial(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableColloquialMiscellaneous) {
+  if (jp.flashcardSettings.enableExpressionsMisc) {
     words.push(
       { hiragana: "あとちょっと", romanization: "atochotto", meaning: "just a little bit more" },
       { hiragana: "もうありません", romanization: "mou arimasen", meaning: "aren't any left" },

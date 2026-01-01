@@ -3,7 +3,8 @@ import type { JapaneseWord } from "../../types";
 import { getKeymap } from "./keymap.svelte";
 import { getGojuons, getLetters } from "./letters.svelte";
 import { appendAdjectives } from "./words-adjectives.svelte";
-import { appendColloquial } from "./words-colloquial.svelte";
+import { appendAdpositions } from "./words-adpositions.svelte";
+import { appendExpressions } from "./words-expressions.svelte";
 import { appendFunctionalChronological } from "./words-functional-chronological.svelte";
 import { appendFunctionalDegree } from "./words-functional-degree.svelte";
 import { appendFunctionalEnumerative } from "./words-functional-enumerative.svelte";
@@ -18,7 +19,6 @@ import { appendNounsPeopleByCharacteristics } from "./words-nouns-people-charact
 import { appendNounsPeopleByRelationships } from "./words-nouns-people-relationships.svelte";
 import { appendNounsVenues } from "./words-nouns-venues.svelte";
 import { appendPronouns } from "./words-pronouns.svelte";
-import { appendRulesAdpositions } from "./words-rules-adpositions.svelte";
 import { appendRulesConjugations } from "./words-rules-conjugations.svelte";
 import { appendAuxiliaryVerbs } from "./words-verbs-auxiliary.svelte";
 import { appendIntransitiveVerbs } from "./words-verbs-intransitive.svelte";
@@ -53,7 +53,7 @@ export const jp = new (class {
   gojuonSettings = $state(initSettings(this.GOJUON_SETTINGS_SCHEMA));
 
   FLASHCARD_SETTINGS_SCHEMA = {
-    // pronouns:
+    // pronouns
     enablePronounsMe: { paramKey: "me", defaultValue: true },
     enablePronounsYou: { paramKey: "you", defaultValue: true },
     enablePronounsUs: { paramKey: "us", defaultValue: true },
@@ -66,7 +66,7 @@ export const jp = new (class {
     enablePronounsInterrogativeWho: { paramKey: "who", defaultValue: true },
     enablePronounsInterrogativeWhat: { paramKey: "what", defaultValue: true },
 
-    // nouns:
+    // nouns
     enableNounsPeopleCharacteristicsGeneric: { paramKey: "genericPeople", defaultValue: true },
     enableNounsPeopleCharacteristicsGender: { paramKey: "gender", defaultValue: true },
     enableNounsPeopleCharacteristicsAge: { paramKey: "age", defaultValue: true },
@@ -99,7 +99,7 @@ export const jp = new (class {
     enableNounsMomentsMonths: { paramKey: "months", defaultValue: true },
     enableNounsMomentsSeasons: { paramKey: "seasons", defaultValue: true },
     enableNounsMomentsFestivals: { paramKey: "festivals", defaultValue: true },
-    enableNounsMomentsMiscellaneous: { paramKey: "miscMoments", defaultValue: true },
+    enableNounsMomentsMisc: { paramKey: "miscMoments", defaultValue: true },
 
     enableNounsVenuesGeneric: { paramKey: "genericVenues", defaultValue: true },
     enableNounsVenuesFacilities: { paramKey: "facilities", defaultValue: true },
@@ -117,7 +117,7 @@ export const jp = new (class {
     enableNounsIdeasRPG: { paramKey: "rpg", defaultValue: true },
     enableNounsIdeasActivities: { paramKey: "activities", defaultValue: true },
 
-    // verbs:
+    // verbs
     // TODO: need to categorize?
     // Existence/Being: be, exist, belong, represent.
     // Bodily Functions: breathe, cough, sleep.
@@ -136,7 +136,7 @@ export const jp = new (class {
     enableIchidanVerbs: { paramKey: "ichidanVerbs", defaultValue: true },
     enableIrregularVerbs: { paramKey: "irregularVerbs", defaultValue: true },
 
-    // adjectives:
+    // adjectives
     enableAdjectives: { paramKey: "adjs", defaultValue: true },
 
     enableIAdjectives: { paramKey: "iAdjs", defaultValue: true },
@@ -150,18 +150,30 @@ export const jp = new (class {
     enableFunctionalDegree: { paramKey: "comparative", defaultValue: true },
     enableFunctionalManner: { paramKey: "manner", defaultValue: true },
 
-    // grammar rules:
-    enableRulesAdpositions: { paramKey: "adpositions", defaultValue: true },
-    enableRulesConjugations: { paramKey: "conjugations", defaultValue: true },
+    // adpositions
+    enableAdpositions: { paramKey: "adpositions", defaultValue: true },
 
-    // colloquial expressions:
-    enableColloquialSoftening: { paramKey: "softening", defaultValue: true },
-    enableColloquialEmphasis: { paramKey: "emphasis", defaultValue: true },
-    enableColloquialAgreeing: { paramKey: "agreeing", defaultValue: true },
-    enableColloquialRequests: { paramKey: "requests", defaultValue: true },
-    enableColloquialSurprised: { paramKey: "surprised", defaultValue: true },
-    enableColloquialGreetingsAndClosings: { paramKey: "greetNClose", defaultValue: true },
-    enableColloquialMiscellaneous: { paramKey: "miscColloq", defaultValue: true },
+    // grammar rules
+    enableRulesConjugationsStemForm: { paramKey: "stemForm", defaultValue: true },
+    enableRulesConjugationsNaiForm: { paramKey: "naiForm", defaultValue: true },
+    enableRulesConjugationsPassiveForm: { paramKey: "passiveForm", defaultValue: true },
+    enableRulesConjugationsCausativeForm: { paramKey: "causativeForm", defaultValue: true },
+    enableRulesConjugationsImperativeForm: { paramKey: "imperativeForm", defaultValue: true },
+    enableRulesConjugationsConditionalForm: { paramKey: "conditionalForm", defaultValue: true },
+    enableRulesConjugationsPotentialForm: { paramKey: "potentialForm", defaultValue: true },
+    enableRulesConjugationsTaForm: { paramKey: "taForm", defaultValue: true },
+    enableRulesConjugationsTeForm: { paramKey: "teForm", defaultValue: true },
+    enableRulesConjugationsVolitionalForm: { paramKey: "volitionalForm", defaultValue: true },
+    enableRulesConjugationsMisc: { paramKey: "miscConjugations", defaultValue: true },
+
+    // expressions
+    enableExpressionsSoftening: { paramKey: "softening", defaultValue: true },
+    enableExpressionsEmphasis: { paramKey: "emphasis", defaultValue: true },
+    enableExpressionsAgreeing: { paramKey: "agreeing", defaultValue: true },
+    enableExpressionsRequests: { paramKey: "requests", defaultValue: true },
+    enableExpressionsSurprised: { paramKey: "surprised", defaultValue: true },
+    enableExpressionsGreetingsAndClosings: { paramKey: "greetNClose", defaultValue: true },
+    enableExpressionsMisc: { paramKey: "miscExpr", defaultValue: true },
   };
   flashcardSettings = $state(initSettings(this.FLASHCARD_SETTINGS_SCHEMA));
 
@@ -189,9 +201,9 @@ export const jp = new (class {
     appendFunctionalEnumerative(words);
     appendFunctionalDegree(words);
     appendFunctionalManner(words);
-    appendRulesAdpositions(words);
+    appendAdpositions(words);
     appendRulesConjugations(words);
-    appendColloquial(words);
+    appendExpressions(words);
 
     return words;
   });
