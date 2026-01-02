@@ -14,7 +14,7 @@
   <input
     bind:checked
     type="checkbox"
-    class="align-middle"
+    class="align-middle accent-primary-content"
     onclick={({ currentTarget }) => currentTarget.blur()}
     {disabled}
   />

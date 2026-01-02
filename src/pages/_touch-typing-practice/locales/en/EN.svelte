@@ -3,4 +3,4 @@
   import { en } from "./en.svelte";
 </script>
 
-<TypingQuestions keymap={en.keymap} letters={en.letters} />
+<TypingQuestions letters={en.letters} />

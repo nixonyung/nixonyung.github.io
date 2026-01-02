@@ -1,5 +1,5 @@
 <script lang="ts">
-  import TabsInput from "@/components/svelte/TabsInput.svelte";
+  import TabsInput from "@/components/TabsInput.svelte";
   import { useSyncSettings } from "../../../../lib/settings.svelte";
   import FlashcardQuestions from "../../components/FlashcardQuestions.svelte";
   import TypingQuestions from "../../components/TypingQuestions.svelte";
@@ -17,6 +17,7 @@
     label="Select Mode:"
     options={["Typing", "Gojuon Table", "Flashcards"]}
   />
+
   {#if jp.settings.mode === "Typing"}
     <GojuonTable />
     <TypingQuestions letters={jp.letters} keymap={jp.keymap} />
@@ -27,7 +28,7 @@
     <FlashcardSettings />
     <FlashcardQuestions
       words={jp.words}
-      wordToPronunciationFn={({ hiragana }) => hiragana}
+      wordToPronunciationFn={({ hiragana, romanization }) => hiragana ?? romanization}
       wordToRomanizationFn={({ romanization }) => romanization}
       schema={[
         {

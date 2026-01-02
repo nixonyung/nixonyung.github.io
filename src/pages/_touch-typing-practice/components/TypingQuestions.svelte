@@ -1,12 +1,13 @@
 <script lang="ts">
-  import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
-  import Highlighted from "@/components/svelte/Highlighted.svelte";
-  import KBD from "@/components/svelte/KBD.svelte";
-  import NumericInput from "@/components/svelte/NumericInput.svelte";
+  import CheckboxInput from "@/components/CheckboxInput.svelte";
+  import Highlighted from "@/components/Highlighted.svelte";
+  import KBD from "@/components/KBD.svelte";
+  import NumericInput from "@/components/NumericInput.svelte";
+  import { emitKeydown } from "@/lib/emulated-events";
   import { ShufflingCircularQueue } from "@/lib/shuffling-circular-queue";
+  import { speech } from "@/lib/speech.svelte";
   import { untrack } from "svelte";
   import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
-  import { app, emitKeydown, speak } from "../app.svelte";
   import type { Keymap, Letter } from "../types";
   import TypingKeyboard from "./TypingKeyboard.svelte";
 
@@ -77,7 +78,7 @@
       return;
     }
 
-    if (app.DEV) {
+    if (import.meta.env.DEV) {
       console.log("onInput", key, "ctrl", ctrlKey);
     }
 
@@ -93,7 +94,7 @@
       switch (key) {
         case "r":
         case "R":
-          speak(questions.map((question) => question?.pronunciation));
+          speech.speak(questions.map((question) => question?.pronunciation));
           break;
         case "Enter":
           nextQuestion();
@@ -138,15 +139,16 @@
 
   <!-- SpeechSynthesis status -->
   <div class="flex items-center-safe gap-9">
-    <Highlighted class={app.voice === undefined ? "text-red-700" : "text-green-700"}>
+    <Highlighted class={speech.voice === undefined ? "text-red-700" : "text-green-700"}>
       <span>SpeechSynthesis:</span>
-      <span class={app.voice === undefined ? "icon-[heroicons--x-mark]" : "icon-[heroicons--check]"}
+      <span
+        class={speech.voice === undefined ? "icon-[heroicons--x-mark]" : "icon-[heroicons--check]"}
       ></span>
     </Highlighted>
 
-    {#if app.speechSynthesisErr}
+    {#if speech.err}
       <span class="text-red-700">
-        SpeechSynthesis: ({app.speechSynthesisErr.error}) {app.speechSynthesisErr}
+        SpeechSynthesis: ({speech.err.error}) {speech.err}
       </span>
     {/if}
   </div>
@@ -166,10 +168,10 @@
           isCorrect ? "ring-green-400" : !!input && "ring-red-400",
           allCorrect || index + 1 === inputs.length ? "opacity-100" : "opacity-50",
           question?.pronunciation &&
-            app.voice &&
-            (app.isSpeaking ? "cursor-wait" : "cursor-pointer"),
+            speech.voice &&
+            (speech.isSpeaking ? "cursor-wait" : "cursor-pointer"),
         ]}
-        onclick={() => speak(question?.pronunciation)}
+        onclick={() => speech.speak(question?.pronunciation)}
       >
         <!-- letter -->
         <div class="grid h-12 place-items-center-safe">
@@ -185,7 +187,7 @@
         <div class="h-6 w-full border-t border-primary-lighter">{input}</div>
 
         <!-- pronunciation indicator -->
-        {#if question?.pronunciation && app.voice}
+        {#if question?.pronunciation && speech.voice}
           <span class="absolute top-0.5 right-0.5 icon-[heroicons--speaker-wave-solid] text-xs"
           ></span>
         {/if}
@@ -201,7 +203,7 @@
   <div class={!allCorrect ? "invisible" : ""}>
     <div>All correct!</div>
 
-    {#if app.voice}
+    {#if speech.voice}
       <button class="block" onclick={() => emitKeydown({ key: "r" })}>
         <KBD label="r" /> to read all words
       </button>

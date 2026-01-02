@@ -67,7 +67,6 @@ export const en = new (class {
     M: "M",
   };
 
-  // prettier-ignore
   letters: Letter[] = [
     { letter: "a" },
     { letter: "A" },

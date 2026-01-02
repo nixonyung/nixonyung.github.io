@@ -1,7 +1,7 @@
 <script lang="ts">
-  import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
-  import Highlighted from "@/components/svelte/Highlighted.svelte";
-  import ReferenceLink from "@/components/svelte/ReferenceLink.svelte";
+  import CheckboxInput from "@/components/CheckboxInput.svelte";
+  import Highlighted from "@/components/Highlighted.svelte";
+  import ReferencesList from "@/components/ReferencesList.svelte";
   import { useSyncSettings } from "../../../../lib/settings.svelte";
   import { jp } from "./jp.svelte";
 
@@ -11,17 +11,20 @@
   const allAdjsDisabled = $derived(!jp.flashcardSettings.enableAdjectives);
 </script>
 
-<div class="flex flex-col items-start">
-  <ReferenceLink title="TAKOBOTO (English dictionary)" href="https://takoboto.jp/" />
-  <ReferenceLink title="Weblio (native dictionary)" href="https://www.weblio.jp/" />
-  <ReferenceLink title="Verb Conjugation - Tofugu" href="https://www.tofugu.com/japanese-grammar/verb-conjugation-groups/" />
-  <ReferenceLink
-    title="Japanese conjugation"
-    href="https://www.wikiwand.com/en/articles/Japanese_conjugation#/media/File:AMB_Japanese_Verbs.pdf"
-  />
-  <ReferenceLink title="Ultra Handy Japanese Verb Conjugator" href="https://www.japaneseverbconjugator.com/" />
-  <ReferenceLink title="Google Search - AI Overview" />
-</div>
+<ReferencesList
+  references={{
+    Dictionaries: {
+      "TAKOBOTO (English dictionary)": "https://takoboto.jp/",
+      "Weblio (native dictionary)": "https://www.weblio.jp/",
+    },
+    "Verb Conjugations": {
+      "Verb Conjugation - Tofugu": "https://www.tofugu.com/japanese-grammar/verb-conjugation-groups/",
+      "Japanese conjugation - revision sheet":
+        "https://www.wikiwand.com/en/articles/Japanese_conjugation#/media/File:AMB_Japanese_Verbs.pdf",
+    },
+    "Google Search with AI Overview": undefined,
+  }}
+/>
 
 <div class="flex flex-col flex-wrap gap-3">
   <div class="flex items-start gap-6">

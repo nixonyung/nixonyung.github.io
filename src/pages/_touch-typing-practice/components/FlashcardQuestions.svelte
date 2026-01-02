@@ -1,12 +1,12 @@
 <script lang="ts" generics="TWord extends object">
-  import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
-  import Highlighted from "@/components/svelte/Highlighted.svelte";
-  import NumericInput from "@/components/svelte/NumericInput.svelte";
+  import CheckboxInput from "@/components/CheckboxInput.svelte";
+  import Highlighted from "@/components/Highlighted.svelte";
+  import NumericInput from "@/components/NumericInput.svelte";
   import { ShufflingCircularQueue } from "@/lib/shuffling-circular-queue";
+  import { speech } from "@/lib/speech.svelte";
   import { clone, isEqual, randomInt, range } from "es-toolkit";
   import { untrack } from "svelte";
   import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
-  import { app, speak } from "../app.svelte";
 
   const {
     words,
@@ -208,11 +208,11 @@
         {#if question}
           <Highlighted
             vertical
-            class={[app.voice && "pr-6", app.isSpeaking && "cursor-wait"]}
-            onclick={wordToPronunciationFn && app.voice
+            class={[speech.voice && "pr-6", speech.isSpeaking && "cursor-wait"]}
+            onclick={wordToPronunciationFn && speech.voice
               ? () => {
                   showRomanization = true;
-                  speak(wordToPronunciationFn(question!.word));
+                  speech.speak(wordToPronunciationFn(question!.word));
                 }
               : undefined}
           >
@@ -231,7 +231,7 @@
             {/each}
 
             <!-- pronunciation indicator -->
-            {#if wordToPronunciationFn && app.voice}
+            {#if wordToPronunciationFn && speech.voice}
               <span
                 class="absolute top-1 right-1 icon-[heroicons--speaker-wave-solid] text-xs opacity-80"
               ></span>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { emitKeydown } from "../app.svelte";
+  import { emitKeydown } from "@/lib/emulated-events";
   import type { Keymap } from "../types";
 
   const {
@@ -24,8 +24,8 @@
   <div class="flex flex-col gap-2">
     {#snippet key(key: string)}
       {@const upperCaseKey = key.toUpperCase()}
-      {@const mappedKey = keymap?.[key]}
-      {@const mappedUpperCaseKey = keymap?.[upperCaseKey]}
+      {@const mappedKey = keymap ? keymap[key] : key}
+      {@const mappedUpperCaseKey = keymap ? keymap[upperCaseKey] : upperCaseKey}
 
       <button
         class="relative grid size-12 place-items-center-safe rounded ring ring-primary-content"

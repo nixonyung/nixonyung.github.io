@@ -1,6 +1,6 @@
 <script lang="ts">
-  import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
-  import ReferenceLink from "@/components/svelte/ReferenceLink.svelte";
+  import CheckboxInput from "@/components/CheckboxInput.svelte";
+  import ReferencesList from "@/components/ReferencesList.svelte";
   import { useSyncSettings } from "../../../../lib/settings.svelte";
   import GojuonRow from "./GojuonRow.svelte";
   import { jp } from "./jp.svelte";
@@ -50,17 +50,16 @@
 
 <svelte:window onmouseup={() => (isMousedown = false)} />
 
+<ReferencesList
+  references={{
+    平文式羅馬字: "https://www.wikiwand.com/zh-hk/articles/平文式罗马字#罗马字表",
+  }}
+/>
+
 <!-- settings -->
 <div class="flex flex-col gap-6">
-  <div class="flex flex-col items-start">
-    <ReferenceLink
-      title="平文式羅馬字"
-      href="https://www.wikiwand.com/zh-hk/articles/平文式罗马字#罗马字表"
-    />
-  </div>
-
-  <div class="flex flex-col">
-    <div class="flex items-center-safe gap-9">
+  <div class="flex flex-col gap-1.5">
+    <div class="flex items-center-safe gap-3">
       <CheckboxInput
         bind:checked={jp.gojuonSettings.enableHiragana}
         label="enable Hiragana 平假名"
@@ -70,14 +69,14 @@
         label="enable Katakana 片假名"
       />
     </div>
-    <div class="flex items-center-safe gap-9">
+    <div class="flex items-center-safe gap-3">
       <CheckboxInput
         bind:checked={jp.gojuonSettings.enableDiacritics}
         label="enable Dakuten 濁音 and Handakuten 半濁音"
       />
       <CheckboxInput bind:checked={jp.gojuonSettings.enableYoon} label="enable Yoon 拗音" />
     </div>
-    <div class="flex items-center-safe gap-9">
+    <div class="flex items-center-safe gap-3">
       <CheckboxInput
         bind:checked={jp.gojuonSettings.showOrigins}
         label="show Gojuon 五十音 origins"

@@ -1,8 +1,8 @@
 <script lang="ts">
-  import SelectInput from "@/components/svelte/SelectInput.svelte";
+  import SelectInput from "@/components/SelectInput.svelte";
+  import { speech } from "@/lib/speech.svelte";
   import "@/styles.css";
   import { initSettings, useSyncSettings } from "../../lib/settings.svelte";
-  import { app } from "./app.svelte";
   import EN from "./locales/en/EN.svelte";
   import JP from "./locales/jp/JP.svelte";
   import KR from "./locales/kr/KR.svelte";
@@ -15,18 +15,8 @@
   const settings = $state(initSettings(SETTINGS_SCHEMA));
   useSyncSettings(SETTINGS_SCHEMA, settings);
 
-  speechSynthesis.addEventListener("voiceschanged", () => {
-    app.availableVoices = speechSynthesis.getVoices();
-
-    if (app.DEV) {
-      console.log(
-        "voices",
-        app.availableVoices.map(({ lang, name }) => `(${lang}) ${name}`),
-      );
-    }
-  });
   $effect(() => {
-    app.voice = app.availableVoices.find(
+    speech.voice = speech.availableVoices.find(
       ({ lang, name }) => lang === settings?.lang && name.startsWith("Google"),
     );
   });

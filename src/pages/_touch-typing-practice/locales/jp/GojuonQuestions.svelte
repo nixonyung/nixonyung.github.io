@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Highlighted from "@/components/svelte/Highlighted.svelte";
-  import NumericInput from "@/components/svelte/NumericInput.svelte";
+  import Highlighted from "@/components/Highlighted.svelte";
+  import NumericInput from "@/components/NumericInput.svelte";
   import { ShufflingCircularQueue } from "@/lib/shuffling-circular-queue";
   import { randomInt, sampleSize } from "es-toolkit";
   import { untrack } from "svelte";
