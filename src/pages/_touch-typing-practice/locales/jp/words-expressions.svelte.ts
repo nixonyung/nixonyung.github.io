@@ -125,6 +125,8 @@ export function appendExpressions(words: JapaneseWord[]) {
 
       { hiragana: "〇〇のが〇〇", romanization: "no ga", meaning: "xxx is doing it xxx-ly", exampleUsages: ["... [Verb] のが [Adj.] です。", "... [Verb] のが上手/下手 です。", "... [Verb] のが好き/嫌い です。", "... [Verb] のが速い/遅い です。", "... [Verb] のが難しい/易しい です。"] },
 
+      { hiragana: "おめでとう", preferredForm: "hiragana", kanjis: ["おめでとう"], rareKanjis: ["御目出度う"], romanization: "omedetou", meaning: "congratulations", exampleUsages: ["おめでとう御座います"] },
+
       { kanjis: ["何とおっしゃいましたか？"], romanization: "nani to osshaimashita ka", meaning: "What did you say? (very polite)" },
 
       { kanjis: ["仕方がない"], hiragana: "しかたがない", romanization: "shikataganai", meaning: "It can't be helped" },

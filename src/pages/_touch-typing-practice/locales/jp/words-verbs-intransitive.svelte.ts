@@ -44,13 +44,16 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["入る"], hiragana: "はいる", romanization: "hairu", meaning: "enter" },
       { kanjis: ["当たる", "当る", "中る", "中たる"], hiragana: "あたる", romanization: "ataru", meaning: "hit (not miss)" },
       { kanjis: ["遊ぶ"], hiragana: "あそぶ", romanization: "asobu", meaning: "play (games / sports)" },
+      { kanjis: ["休む"], hiragana: "やすむ", romanization: "yasumu", meaning: "rest", derivedMeanings: ["sleep", "have a day off"] },
 
       { kanjis: ["急ぐ"], hiragana: "いそぐ", romanization: "isogu", meaning: "hurry" },
+      { kanjis: ["泳ぐ"], rareKanjis: ["游ぐ"], hiragana: "およぐ", romanization: "oyogu", meaning: "swim" },
 
       { kanjis: ["驚く"], hiragana: "おどろく", romanization: "odoroku", meaning: "be surprised" },
 
       { kanjis: ["働く"], hiragana: "はたらく", romanization: "hataraku", meaning: "work" },
       { kanjis: ["頑張る"], hiragana: "がんばる", romanization: "ganbaru", meaning: "persist / keep up" },
+      { kanjis: ["替わる", "代わる", "換わる", "替る", "代る", "換る"], hiragana: "かわる", romanization: "kawaru", meaning: "succeed / replace" },
     );
   }
 
