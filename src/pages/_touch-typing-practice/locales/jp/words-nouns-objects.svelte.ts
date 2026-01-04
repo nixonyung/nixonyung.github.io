@@ -98,6 +98,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["服"], hiragana: "ふく", romanization: "fuku", meaning: "clothes" },
       { kanjis: ["衣類"], hiragana: "いるい", romanization: "irui", meaning: "clothes" },
       { katakana: "シャツ", romanization: "shatsu", meaning: "shirt" },
+      { katakana: "ボタン", romanization: "botan", meaning: "button (clothing / machinewry)" },
 
       { katakana: "トイレットペーパー", romanization: "toirettopeepaa", meaning: "toilet paper" },
 
@@ -117,6 +118,9 @@ export function appendNounsObjects(words: JapaneseWord[]) {
 
       { kanjis: ["切符"], hiragana: "きっぷ", romanization: "kippu", meaning: "ticket" },
       { katakana: "チケット", romanization: "chiketto", meaning: "ticket" },
+
+      { katakana: "ロボット", romanization: "robotto", meaning: "robot" },
+      { kanjis: ["電池"], hiragana: "でんち", romanization: "denchi", meaning: "battery" },
     );
   }
 

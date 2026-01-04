@@ -18,15 +18,29 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["吹く"], hiragana: "ふく", romanization: "fuku", meaning: "blow" },
       { kanjis: ["眠る", "睡る"], hiragana: "ねむる", romanization: "nemuru", meaning: "sleep" },
       { kanjis: ["行く", "往く"], hiragana: "いく", romanization: "iku", meaning: "go", exampleUsages: ["東京に行く"] },
+      { kanjis: ["動く"], hiragana: "うごく", romanization: "ugoku", meaning: "move / act / shift" },
+      { kanjis: ["歩く"], hiragana: "あるく", romanization: "aruku", meaning: "walk" },
+      { kanjis: ["走る", "奔る", "疾る", "趨る"], hiragana: "はしる", romanization: "hashiru", meaning: "run / rush" },
 
+      { kanjis: ["泣き出す"], hiragana: "なきだす", romanization: "nakidasu", meaning: "burst into tears" },
+      { kanjis: ["降り出す"], hiragana: "ふりだす", romanization: "furidasu", meaning: "start raining" },
+      { kanjis: ["動き出す", "動きだす"], hiragana: "うごきだす", romanization: "ugokidasu", meaning: "start moving" },
+
+      { kanjis: ["違う"], hiragana: "ちがう", romanization: "chigau", meaning: "differ", exampleUsages: ["[Noun] は [Noun] と違う"] },
+      { kanjis: ["通る"], rareKanjis: ["透る", "徹る"], hiragana: "とおる", romanization: "tooru", meaning: "pass through / travel" },
+      { kanjis: ["起こる", "起る"], hiragana: "おこる", romanization: "okoru", meaning: "occur" },
+      { kanjis: ["親しむ"], hiragana: "したしむ", romanization: "shitashimu", meaning: "befriend" },
+      { kanjis: ["遊ぶ"], hiragana: "あそぶ", romanization: "asobu", meaning: "play / have fun" },
+      { kanjis: ["荒ぶ", "進ぶ"], hiragana: "すさぶ", romanization: "susabu", meaning: "grow wild" },
+      { kanjis: ["落ち着く", "落ちつく", "落着く"], rareKanjis: ["落ち付く"], hiragana: "おちつく", romanization: "ochitsuku", meaning: "calm down" },
       { kanjis: ["分かる", "解る", "判る", "分る"], hiragana: "わかる", romanization: "wakaru", meaning: "comprehend" },
       { kanjis: ["会う", "逢う", "遭う"], rareKanjis: ["遇う"], hiragana: "あう", romanization: "au", meaning: "meet" },
       { kanjis: ["帰る", "還る"], hiragana: "かえる", romanization: "kaeru", meaning: "return", exampleUsages: ["家に帰る"] },
       { kanjis: ["乗る"], hiragana: "のる", katakana: "ノる", romanization: "noru", meaning: "get on (transportation)", exampleUsages: ["電車に乗った"] },
-      { kanjis: ["待つ"], rareKanjis: ["俟つ"], hiragana: "まつ", romanization: "matsu", meaning: "wait" },
       { kanjis: ["成る"], rareKanjis: ["為る"], hiragana: "なる", romanization: "naru", meaning: "become (reaching a certain time/state)", exampleUsages: ["春になる", "暇になる"] },
       { kanjis: ["咲く"], hiragana: "さく", romanization: "saku", meaning: "bloom", exampleUsages: ["花が咲く"] },
       { kanjis: ["飛ぶ", "跳ぶ"], hiragana: "とぶ", romanization: "tobu", meaning: "fly", exampleUsages: ["空を飛べ", "山の上を飛んだ"] },
+      { kanjis: ["翔る", "駆ける"], hiragana: "かける", romanization: "kakeru", meaning: "soar" },
 
       { kanjis: ["立つ"], hiragana: "たつ", romanization: "tatsu", meaning: "stand up" },
       { kanjis: ["上がる"], rareKanjis: ["騰がる"], hiragana: "あがる", romanization: "agaru", meaning: "rise" },
@@ -46,7 +60,6 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["遊ぶ"], hiragana: "あそぶ", romanization: "asobu", meaning: "play (games / sports)" },
       { kanjis: ["休む"], hiragana: "やすむ", romanization: "yasumu", meaning: "rest", derivedMeanings: ["sleep", "have a day off"] },
 
-      { kanjis: ["急ぐ"], hiragana: "いそぐ", romanization: "isogu", meaning: "hurry" },
       { kanjis: ["泳ぐ"], rareKanjis: ["游ぐ"], hiragana: "およぐ", romanization: "oyogu", meaning: "swim" },
 
       { kanjis: ["驚く"], hiragana: "おどろく", romanization: "odoroku", meaning: "be surprised" },
@@ -66,11 +79,17 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["出る"], hiragana: "でる", romanization: "deru", meaning: "leave / exit" },
       { kanjis: ["出来る"], hiragana: "できる", romanization: "dekiru", meaning: "be able to" },
       { kanjis: ["出かける"], hiragana: "でかける", romanization: "dekakeru", meaning: "go out" },
-      { kanjis: ["諦める"], hiragana: "あきらめる", romanization: "akirameru", meaning: "give up" },
+      { kanjis: ["切れる"], hiragana: "きれる", romanization: "kireru", meaning: "break", derivedMeanings: ["wear out"], exampleUsages: ["電池が切れた"] },
+      { kanjis: ["欠ける", "缺ける", "闕ける"], hiragana: "かける", romanization: "kakeru", meaning: "chip / break / be missing" },
+      { kanjis: ["駆ける", "駈ける"], hiragana: "かける", romanization: "kakeru", meaning: "dash / race" },
 
       { kanjis: ["似る"], hiragana: "にる", romanization: "niru", meaning: "be alike" },
+      { kanjis: ["暮れる", "眩れる", "暗れる", "昏れる"], hiragana: "くれる", romanization: "kureru", meaning: "grow dark" },
+      { hiragana: "いける", katakana: "イケる", romanization: "ikeru", meaning: "go well (informal, slang)" },
 
       { kanjis: ["外れる"], hiragana: "はずれる", romanization: "hazureru", meaning: "miss (not hit)" },
+
+      { kanjis: ["離れる"], hiragana: "はなれる", romanization: "hanareru", meaning: "separate / leave" },
     );
   }
 
@@ -84,17 +103,19 @@ export function appendIntransitiveVerbs(words: JapaneseWord[]) {
 
       { kanjis: ["機能する"], hiragana: "きのうする", romanization: "kinousuru", meaning: "function" },
       { kanjis: ["関連する"], rareKanjis: ["関聯"], hiragana: "かんれんする", romanization: "kanrensuru", meaning: "relate" },
+      { kanjis: ["一致する"], hiragana: "いっちする", romanization: "icchisuru", meaning: "match", exampleUsages: ["[Noun] は [Noun] と一致する。", "[Noun (with counters)] は一致する。"] },
       { kanjis: ["反する"], hiragana: "はんする", romanization: "hansuru", meaning: "oppose", exampleUsages: ["意に反する (against one's will)", "予測に反する"] },
 
       { kanjis: ["居住する"], hiragana: "きょじゅうする", romanization: "kyojuusuru", meaning: "reside" },
-      { kanjis: ["訪問する"], hiragana: "ほうもんする", romanization: "houmonsuru", meaning: "visit" },
       { kanjis: ["暇する"], hiragana: "ひまする", romanization: "himasuru", meaning: "be free / be unoccupied" },
 
       { kanjis: ["成功する"], hiragana: "せいこうする", romanization: "seikousuru", meaning: "succeed", exampleUsages: ["ビジネスで成功する"] },
       { kanjis: ["大当たりする", "大当りする"], hiragana: "おおあたりする", romanization: "ooatarisuru", meaning: "win big / jackpot" },
 
       // -kuru
-      { kanjis: ["出て来る", "出てくる"], hiragana: "でてくる", romanization: "detekuru", meaning: "come out" },
+      { kanjis: ["来る"], hiragana: "くる", romanization: "kuru", meaning: "come (spatially / temporally)" },
+
+      { kanjis: ["出て来る", "出てくる"], hiragana: "でてくる", romanization: "detekuru", meaning: "come out (towards speaker)" },
     );
   }
 }

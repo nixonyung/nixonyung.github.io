@@ -16,16 +16,14 @@ export function appendTransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["言う", "云う", "謂う"], hiragana: "いう", romanization: "iu", meaning: "say" },
       { kanjis: ["取る"], hiragana: "とる", romanization: "toru", meaning: "take / grab" },
       { kanjis: ["持つ"], hiragana: "もつ", romanization: "motsu", meaning: "hold / carry" },
-      { kanjis: ["歩く"], hiragana: "あるく", romanization: "aruku", meaning: "walk" },
-      { kanjis: ["走る", "奔る", "疾る", "趨る"], hiragana: "はしる", romanization: "hashiru", meaning: "run / rush" },
       { kanjis: ["蹴る"], hiragana: "ける", romanization: "keru", meaning: "kick" },
 
       { kanjis: ["話す"], rareKanjis: ["咄す"], hiragana: "はなす", romanization: "hanasu", meaning: "converse" },
-      { kanjis: ["来る"], hiragana: "くる", romanization: "kuru", meaning: "come (spatially / temporally)" },
       { kanjis: ["放す"], hiragana: "はなす", romanization: "hanasu", meaning: "release" },
       { kanjis: ["離す"], hiragana: "はなす", romanization: "hanasu", meaning: "depart" },
       { kanjis: ["消す"], hiragana: "けす", romanization: "kesu", meaning: "erase / turn off" },
       { kanjis: ["置く"], hiragana: "おく", romanization: "oku", meaning: "put / place" },
+      { kanjis: ["押す"], hiragana: "おす", romanization: "osu", meaning: "push / press down", exampleUsages: ["ボタンを押す"] },
 
       { kanjis: ["出す"], hiragana: "だす", romanization: "dasu", meaning: "take out" },
       { kanjis: ["思い出す"], hiragana: "おもいだす", romanization: "omoidasu", meaning: "recall" },
@@ -33,6 +31,9 @@ export function appendTransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["乗り出す"], hiragana: "のりだす", romanization: "noridasu", meaning: "set out" },
       { kanjis: ["引き出す", "引出す", "引きだす"], hiragana: "ひきだす", romanization: "hikidasu", meaning: "pull out" },
       { kanjis: ["生み出す", "産み出す"], hiragana: "うみだす", romanization: "umidasu", meaning: "produce" },
+      { kanjis: ["取り出す", "取出す", "取りだす", "とり出す"], hiragana: "とりだす", romanization: "toridasu", meaning: "take out" },
+      { kanjis: ["顔を出す", "顔をだす"], hiragana: "かおをだす", romanization: "kaowodasu", meaning: "show up" },
+      { kanjis: ["持ち出す", "持出す"], hiragana: "もちだす", romanization: "mochidasu", meaning: "take out" },
       // TODO: xx出す
 
       { hiragana: "やる", preferredForm: "hiragana", rareKanjis: ["遣る"], romanization: "yaru", meaning: "do" },
@@ -43,13 +44,11 @@ export function appendTransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["知る", "識る"], hiragana: "しる", romanization: "shiru", meaning: "know" },
       { kanjis: ["学ぶ"], hiragana: "まなぶ", romanization: "manabu", meaning: "learn" },
       { kanjis: ["教わる"], hiragana: "おそわる", romanization: "osowaru", meaning: "be taught" },
+      { kanjis: ["繰る"], hiragana: "くる", romanization: "kuru", meaning: "reel / spin", derivedMeanings: ["turn (pages)"] },
+      { kanjis: ["抉る", "刳る", "剔る"], hiragana: "えぐる", romanization: "eguru", meaning: "gouge", derivedMeanings: ["turn (pages)"] },
       { kanjis: ["含む", "銜む"], hiragana: "ふくむ", romanization: "fukumu", meaning: "contain", exampleUsages: ["A を B に含む (B contains A)"] },
-      { kanjis: ["違う"], hiragana: "ちがう", romanization: "chigau", meaning: "differ", exampleUsages: ["[Noun] は [Noun] と違う"] },
 
       { kanjis: ["使う", "遣う"], hiragana: "つかう", romanization: "tsukau", meaning: "employ / use (as a tool)" },
-      { kanjis: ["動く"], hiragana: "うごく", romanization: "ugoku", meaning: "move / act / shift" },
-      { kanjis: ["通る"], rareKanjis: ["透る", "徹る"], hiragana: "とおる", romanization: "tooru", meaning: "pass through / travel" },
-      { kanjis: ["起こる", "起る"], hiragana: "おこる", romanization: "okoru", meaning: "occur" },
       { kanjis: ["伺う"], hiragana: "うかがう", romanization: "ukagau", meaning: "inquire" },
       { kanjis: ["扱う"], hiragana: "あつかう", romanization: "atsukau", meaning: "deal / handle" },
       { kanjis: ["呼ぶ"], rareKanjis: ["喚ぶ"], hiragana: "よぶ", romanization: "yobu", meaning: "call / address" },
@@ -59,16 +58,15 @@ export function appendTransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["譲る"], hiragana: "ゆずる", romanization: "yuzuru", meaning: "hand over" },
       { kanjis: ["閉じる"], hiragana: "とじる", romanization: "tojiru", meaning: "close / shut" },
       { hiragana: "もらう", preferredForm: "hiragana", kanjis: ["貰う"], romanization: "morau", meaning: "receive" },
-      { hiragana: "いける", katakana: "イケる", romanization: "ikeru", meaning: "go well (informal, slang)" },
       { hiragana: "くださる", preferredForm: "hiragana", kanjis: ["下さる"], romanization: "kudasaru", meaning: "bestow" },
       { kanjis: ["焼く"], hiragana: "やく", romanization: "yaku", meaning: "burn", derivedMeanings: ["bake / toast"], exampleUsages: ["ケーキを焼く"] },
       { kanjis: ["買う"], hiragana: "かう", romanization: "kau", meaning: "buy", exampleUsages: ["コーラを買う"] },
       { kanjis: ["割る"], hiragana: "わる", romanization: "waru", meaning: "cut / divide" },
+      { kanjis: ["描く", "画く"], hiragana: "えがく", romanization: "egaku", meaning: "draw / paint" },
+      { hiragana: "かく", preferredForm: "hiragana", kanjis: ["掻く"], romanization: "kaku", meaning: "scratch" },
+      { kanjis: ["欠く"], rareKanjis: ["闕く"], hiragana: "かく", romanization: "kaku", meaning: "crack / lack" },
+      { kanjis: ["剃る"], hiragana: "そる", romanization: "soru", meaning: "shave" },
 
-      { kanjis: ["親しむ"], hiragana: "したしむ", romanization: "shitashimu", meaning: "befriend" },
-      { kanjis: ["遊ぶ"], hiragana: "あそぶ", romanization: "asobu", meaning: "play / have fun" },
-
-      { kanjis: ["落ち着く", "落ちつく", "落着く"], rareKanjis: ["落ち付く"], hiragana: "おちつく", romanization: "ochitsuku", meaning: "calm down" },
       { kanjis: ["起こす", "起す"], hiragana: "おこす", romanization: "okosu", meaning: "raise" },
       { kanjis: ["興す"], hiragana: "おこす", romanization: "okosu", meaning: "vitalize" },
       { kanjis: ["養う"], hiragana: "やしなう", romanization: "yashinau", meaning: "foster" },
@@ -76,6 +74,15 @@ export function appendTransitiveVerbs(words: JapaneseWord[]) {
 
       { kanjis: ["感じ取る", "感じとる"], hiragana: "かんじとる", romanization: "kanjitoru", meaning: "perceive / feel" },
       { hiragana: "つなぐ", preferredForm: "hiragana", kanjis: ["繋ぐ"], romanization: "tsunagu", meaning: "connect", exampleUsages: ["手をつなぐ"] },
+
+      { kanjis: ["切り離す", "切離す"], rareKanjis: ["切り放す", "切放す"], hiragana: "きりはなす", romanization: "kirihanasu", meaning: "cut apart" },
+      { kanjis: ["引き離す", "引離す"], hiragana: "ひきはなす", romanization: "hikihanasu", meaning: "pull apart" },
+
+      { kanjis: ["刷る", "摺る"], hiragana: "する", romanization: "suru", meaning: "print" },
+      { kanjis: ["擦る", "擂る"], rareKanjis: ["摩る", "磨る"], hiragana: "する", romanization: "suru", meaning: "rub" },
+
+      { kanjis: ["待つ"], rareKanjis: ["俟つ"], hiragana: "まつ", romanization: "matsu", meaning: "wait" },
+      { kanjis: ["急ぐ"], hiragana: "いそぐ", romanization: "isogu", meaning: "hurry" },
     );
   }
 
@@ -87,6 +94,7 @@ export function appendTransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["用いる"], hiragana: "もちいる", romanization: "mochiiru", meaning: "use / utilize" },
       { hiragana: "くれる", rareKanjis: ["呉れる"], romanization: "kureru", meaning: "give / let one have" },
       { hiragana: "かける", preferredForm: "hiragana", kanjis: ["掛ける", "懸ける"], romanization: "kakeru", meaning: "hang" },
+      { kanjis: ["賭ける"], hiragana: "かける", romanization: "kakeru", meaning: "gamble" },
 
       { kanjis: ["決める", "極める"], hiragana: "きめる", katakana: "キメる", romanization: "kimeru", meaning: "determine" },
       { kanjis: ["考える", "勘える", "稽える"], hiragana: "かんがえる", romanization: "kangaeru", meaning: "consider / contemplate" },
@@ -95,27 +103,26 @@ export function appendTransitiveVerbs(words: JapaneseWord[]) {
       { kanjis: ["強いる"], hiragana: "しいる", romanization: "shiiru", meaning: "force / press" },
       { kanjis: ["着る"], hiragana: "きる", romanization: "kiru", meaning: "wear", exampleUsages: ["服を着る"] },
       { kanjis: ["入れる"], rareKanjis: ["容れる", "函れる"], hiragana: "いれる", romanization: "ireru", meaning: "insert", exampleUsages: ["ここにお金を入れる"] },
+      { kanjis: ["生ける", "活ける"], hiragana: "いける", romanization: "ikeru", meaning: "plant", derivedMeanings: ["arrange flowers"] },
+      { kanjis: ["埋ける"], hiragana: "いける", romanization: "ikeru", meaning: "bury" },
+      { kanjis: ["諦める"], hiragana: "あきらめる", romanization: "akirameru", meaning: "give up" },
 
       { kanjis: ["交える", "混える", "雑える"], hiragana: "まじえる", romanization: "majieru", meaning: "mix" },
 
       { kanjis: ["射る"], hiragana: "いる", romanization: "iru", meaning: "shoot" },
       { kanjis: ["鋳る"], hiragana: "いる", romanization: "iru", meaning: "mint" },
-
-      { kanjis: ["離れる"], hiragana: "はなれる", romanization: "hanareru", meaning: "separate / leave" },
-      { kanjis: ["切り離す", "切離す"], rareKanjis: ["切り放す", "切放す"], hiragana: "きりはなす", romanization: "kirihanasu", meaning: "cut apart" },
-      { kanjis: ["引き離す", "引離す"], hiragana: "ひきはなす", romanization: "hikihanasu", meaning: "pull apart" },
     );
   }
 
   if (jp.flashcardSettings.enableVerbs && jp.flashcardSettings.enableTransitiveVerbs && jp.flashcardSettings.enableIrregularVerbs) {
     words.push(
       // -suru
-      { hiragana: "する", preferredForm: "hiragana", rareKanjis: ["為る"], romanization: "suru", meaning: "do / carry out", exampleUsages: ["せールをする", "ゲームをする"] },
+      { hiragana: "する", preferredForm: "hiragana", rareKanjis: ["為る"], romanization: "suru", meaning: "do / carry out", derivedMeanings: ["choose", "pickpocket"], exampleUsages: ["せールをする (on sale)", "ゲームをする (play a game)", "これにします (choose this)"] },
 
-      { kanjis: ["一致する"], hiragana: "いっちする", romanization: "icchisuru", meaning: "match", exampleUsages: ["[Noun] は [Noun] と一致する。", "[Noun (with counters)] は一致する。"] },
       { kanjis: ["勉強する"], hiragana: "べんきょうする", romanization: "benkyousuru", meaning: "study", exampleUsages: ["日本語を勉強します"] },
       { kanjis: ["予測する"], hiragana: "よそくする", romanization: "yosokusuru", meaning: "predict" },
       { kanjis: ["準備する"], hiragana: "じゅんびする", romanization: "junbisuru", meaning: "prepare" },
+      { kanjis: ["訪問する"], hiragana: "ほうもんする", romanization: "houmonsuru", meaning: "visit" },
     );
   }
 }

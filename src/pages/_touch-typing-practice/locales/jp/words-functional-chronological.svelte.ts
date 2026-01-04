@@ -33,6 +33,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
 
       { kanjis: ["今回"], hiragana: "こんかい", romanization: "konkai", meaning: "this time" },
       { kanjis: ["今度"], hiragana: "こんど", romanization: "kondo", meaning: "this time" },
+      { kanjis: ["また今度"], hiragana: "またこんど", romanization: "matakondo", meaning: "next time" },
       { kanjis: ["次回"], hiragana: "じかい", romanization: "jikai", meaning: "next time" },
 
       { kanjis: ["前"], hiragana: "まえ", romanization: "mae", meaning: "previously (root word)" },

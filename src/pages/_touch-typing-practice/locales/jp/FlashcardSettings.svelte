@@ -520,8 +520,12 @@
     >
       Verbs:
       <div class="flex items-center-safe gap-3">
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableTransitiveVerbs} label="Transitive" disabled={allVerbsDisabled} />
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableIntransitiveVerbs} label="Intransitive" disabled={allVerbsDisabled} />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableTransitiveVerbs} label="Transitive 他動詞" disabled={allVerbsDisabled} />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableIntransitiveVerbs}
+          label="Intransitive 自動詞"
+          disabled={allVerbsDisabled}
+        />
       </div>
       <div class="flex items-center-safe gap-3">
         <CheckboxInput bind:checked={jp.flashcardSettings.enableGodanVerbs} label="Godan" disabled={allVerbsDisabled} />

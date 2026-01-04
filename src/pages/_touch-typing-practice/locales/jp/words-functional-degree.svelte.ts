@@ -33,6 +33,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { kanjis: ["何より"], hiragana: "なにより", romanization: "naniyori", meaning: "above anything else" },
       { kanjis: ["何も"], hiragana: "なにも", romanization: "nanimo", meaning: "not at all" },
       { kanjis: ["何も"], hiragana: "なんも", romanization: "nanmo", meaning: "not at all (spoken)" },
+      { hiragana: "もちろん", preferredForm: "hiragana", kanjis: ["勿論"], romanization: "mochiron", meaning: "of course", exampleUsages: ["もちろん！", "A はもちろん B も ... (B ..., not to mention A)"] },
 
       // proportions
       { hiragana: "だけ", preferredForm: "hiragana", kanjis: ["丈"], romanization: "dake", meaning: "only (in its entirety)" },

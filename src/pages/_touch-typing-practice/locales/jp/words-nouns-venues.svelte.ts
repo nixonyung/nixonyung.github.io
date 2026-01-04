@@ -44,6 +44,8 @@ export function appendNounsVenues(words: JapaneseWord[]) {
       { kanjis: ["屋", "家"], hiragana: "や", romanization: "ya", meaning: "house", derivedMeanings: ["shop"], exampleUsages: ["砂利屋"] },
 
       { katakana: "コンビニ", romanization: "konbini", meaning: "convenience store" },
+
+      { katakana: "ホテル", romanization: "hoteru", meaning: "hotel" },
     );
   }
 
