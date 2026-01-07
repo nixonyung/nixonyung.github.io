@@ -22,7 +22,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { hiragana: "ずいぶん", preferredForm: "hiragana", kanjis: ["随分", "ずい分"], romanization: "zuibun", meaning: "very (better than expected)" },
 
       { hiragana: "しか", romanization: "shika", meaning: "only (unsatisfied)" },
-      { hiragana: "ばかり", preferredForm: "hiragana", rareKanjis: ["許り", "許"], romanization: "bakari", meaning: "only (nothing else)" },
+      { hiragana: "ばかり", rareKanjis: ["許り", "許"], romanization: "bakari", meaning: "only (nothing else)" },
 
       // superlative
       { kanjis: ["最も", "尤も"], hiragana: "もっとも", romanization: "mottomo", meaning: "the most" },

@@ -7,7 +7,7 @@
 
   useSyncSettings(jp.FLASHCARD_SETTINGS_SCHEMA, jp.flashcardSettings);
 
-  const allVerbsDisabled = $derived(!jp.flashcardSettings.enableVerbs && !jp.flashcardSettings.enableAuxiliaryVerbs);
+  // const allVerbsDisabled = $derived(!jp.flashcardSettings.enableVerbs && !jp.flashcardSettings.enableAuxiliaryVerbs);
   const allAdjsDisabled = $derived(!jp.flashcardSettings.enableAdjectives);
 </script>
 
@@ -380,8 +380,10 @@
               jp.flashcardSettings.enableNounsObjectsEquipments = false;
               jp.flashcardSettings.enableNounsObjectsTransportation = false;
             }
-          }}>Objects:</Highlighted
+          }}
         >
+          Objects:
+        </Highlighted>
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsObjectsGeneric} label="(generic)" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsObjectsBiological} label="Biological Parts" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsObjectsNature} label="Nature" />
@@ -416,8 +418,10 @@
               jp.flashcardSettings.enableNounsMomentsFestivals = false;
               jp.flashcardSettings.enableNounsMomentsMisc = false;
             }
-          }}>Moments:</Highlighted
+          }}
         >
+          Moments:
+        </Highlighted>
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsMomentsTimesOfDay} label="Times Of Day" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsMomentsDaysOfWeek} label="Days Of Week" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsMomentsMonths} label="Months" />
@@ -447,9 +451,11 @@
               jp.flashcardSettings.enableNounsVenuesRegions = false;
               jp.flashcardSettings.enableNounsVenuesImaginary = false;
             }
-          }}>Venues:</Highlighted
+          }}
         >
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsVenuesGeneric} label="(Generic)" />
+          Venues:
+        </Highlighted>
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsVenuesGeneric} label="(generic)" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsVenuesFacilities} label="Facilities" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsVenuesShops} label="Shops" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsVenuesRegions} label="Regions" />
@@ -489,8 +495,10 @@
               jp.flashcardSettings.enableNounsIdeasRPG = false;
               jp.flashcardSettings.enableNounsIdeasActivities = false;
             }
-          }}>Ideas:</Highlighted
+          }}
         >
+          Ideas:
+        </Highlighted>
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIdeasLife} label="Life" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIdeasSocialConstructs} label="Social Constructs" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIdeasLeadership} label="Leadership" />
@@ -503,39 +511,189 @@
       </div>
     </div>
   </div>
-  <div class="flex items-center-safe gap-6">
+  <div class="flex items-start gap-6">
     <Highlighted
       vertical
       onclick={(ev) => {
         if (ev.target !== ev.currentTarget) return;
 
-        if (!jp.flashcardSettings.enableVerbs || !jp.flashcardSettings.enableAuxiliaryVerbs) {
-          jp.flashcardSettings.enableVerbs = true;
+        if (
+          !jp.flashcardSettings.enableVerbsActionsBodily ||
+          !jp.flashcardSettings.enableVerbsActionsIntellectual ||
+          !jp.flashcardSettings.enableVerbsActionsOwnership ||
+          !jp.flashcardSettings.enableVerbsActionsTranspositional ||
+          !jp.flashcardSettings.enableVerbsActionsManeuvers ||
+          !jp.flashcardSettings.enableVerbsActionsActivities ||
+          !jp.flashcardSettings.enableVerbsDescriptiveBeing ||
+          !jp.flashcardSettings.enableVerbsDescriptiveExistence ||
+          !jp.flashcardSettings.enableVerbsDescriptiveProcesses ||
+          !jp.flashcardSettings.enableVerbsChangesEnvironmenal ||
+          !jp.flashcardSettings.enableVerbsChangesQuantitative ||
+          !jp.flashcardSettings.enableVerbsChangesResultative ||
+          !jp.flashcardSettings.enableAuxiliaryVerbs
+        ) {
+          jp.flashcardSettings.enableVerbsActionsBodily = true;
+          jp.flashcardSettings.enableVerbsActionsIntellectual = true;
+          jp.flashcardSettings.enableVerbsActionsOwnership = true;
+          jp.flashcardSettings.enableVerbsActionsTranspositional = true;
+          jp.flashcardSettings.enableVerbsActionsManeuvers = true;
+          jp.flashcardSettings.enableVerbsActionsActivities = true;
+          jp.flashcardSettings.enableVerbsDescriptiveBeing = true;
+          jp.flashcardSettings.enableVerbsDescriptiveExistence = true;
+          jp.flashcardSettings.enableVerbsDescriptiveProcesses = true;
+          jp.flashcardSettings.enableVerbsChangesEnvironmenal = true;
+          jp.flashcardSettings.enableVerbsChangesQuantitative = true;
+          jp.flashcardSettings.enableVerbsChangesResultative = true;
           jp.flashcardSettings.enableAuxiliaryVerbs = true;
         } else {
-          jp.flashcardSettings.enableVerbs = false;
+          jp.flashcardSettings.enableVerbsActionsBodily = false;
+          jp.flashcardSettings.enableVerbsActionsIntellectual = false;
+          jp.flashcardSettings.enableVerbsActionsOwnership = false;
+          jp.flashcardSettings.enableVerbsActionsTranspositional = false;
+          jp.flashcardSettings.enableVerbsActionsManeuvers = false;
+          jp.flashcardSettings.enableVerbsActionsActivities = false;
+          jp.flashcardSettings.enableVerbsDescriptiveBeing = false;
+          jp.flashcardSettings.enableVerbsDescriptiveExistence = false;
+          jp.flashcardSettings.enableVerbsDescriptiveProcesses = false;
+          jp.flashcardSettings.enableVerbsChangesEnvironmenal = false;
+          jp.flashcardSettings.enableVerbsChangesQuantitative = false;
+          jp.flashcardSettings.enableVerbsChangesResultative = false;
           jp.flashcardSettings.enableAuxiliaryVerbs = false;
         }
       }}
     >
       Verbs:
-      <div class="flex items-center-safe gap-3">
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableTransitiveVerbs} label="Transitive 他動詞" disabled={allVerbsDisabled} />
+
+      <!-- <div class="flex items-center-safe gap-3">
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableTransitiveVerbs}
+          label="Transitive 他動詞"
+          tooltip="usually use を"
+          disabled={allVerbsDisabled}
+        />
         <CheckboxInput
           bind:checked={jp.flashcardSettings.enableIntransitiveVerbs}
           label="Intransitive 自動詞"
+          tooltip="usually use が/は/に/で"
           disabled={allVerbsDisabled}
         />
       </div>
+
       <div class="flex items-center-safe gap-3">
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableGodanVerbs} label="Godan" disabled={allVerbsDisabled} />
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableIchidanVerbs} label="Ichidan" disabled={allVerbsDisabled} />
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableIrregularVerbs} label="Irregular" disabled={allVerbsDisabled} />
-      </div>
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableGodanVerbs}
+          label="Godan 五段動詞"
+          tooltip="conjugates by changing the vowel of the ending う/く/ぐ/す/つ/ぬ/ぶ/む/る"
+          disabled={allVerbsDisabled}
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableIchidanVerbs}
+          label="Ichidan 一段動詞"
+          tooltip="conjugates by changing the ending る"
+          disabled={allVerbsDisabled}
+        />
+        <CheckboxInput
+          bind:checked={jp.flashcardSettings.enableIrregularVerbs}
+          label="Irregular 変格動詞"
+          tooltip="ends with する / くる"
+          disabled={allVerbsDisabled}
+        />
+      </div> -->
     </Highlighted>
 
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbs} label="Verbs" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableAuxiliaryVerbs} label="Auxiliary Verbs" />
+    <div class="flex flex-col gap-y-1.5">
+      <div class="flex flex-wrap items-center-safe gap-x-3">
+        <Highlighted
+          onclick={() => {
+            if (
+              !jp.flashcardSettings.enableVerbsActionsBodily ||
+              !jp.flashcardSettings.enableVerbsActionsIntellectual ||
+              !jp.flashcardSettings.enableVerbsActionsOwnership ||
+              !jp.flashcardSettings.enableVerbsActionsTranspositional ||
+              !jp.flashcardSettings.enableVerbsActionsManeuvers ||
+              !jp.flashcardSettings.enableVerbsActionsActivities
+            ) {
+              jp.flashcardSettings.enableVerbsActionsBodily = true;
+              jp.flashcardSettings.enableVerbsActionsIntellectual = true;
+              jp.flashcardSettings.enableVerbsActionsOwnership = true;
+              jp.flashcardSettings.enableVerbsActionsTranspositional = true;
+              jp.flashcardSettings.enableVerbsActionsManeuvers = true;
+              jp.flashcardSettings.enableVerbsActionsActivities = true;
+            } else {
+              jp.flashcardSettings.enableVerbsActionsBodily = false;
+              jp.flashcardSettings.enableVerbsActionsIntellectual = false;
+              jp.flashcardSettings.enableVerbsActionsOwnership = false;
+              jp.flashcardSettings.enableVerbsActionsTranspositional = false;
+              jp.flashcardSettings.enableVerbsActionsManeuvers = false;
+              jp.flashcardSettings.enableVerbsActionsActivities = false;
+            }
+          }}
+        >
+          Actions:
+        </Highlighted>
+
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsActionsBodily} label="Bodily" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsActionsIntellectual} label="Intellectual" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsActionsOwnership} label="Ownership" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsActionsTranspositional} label="Transpositional" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsActionsManeuvers} label="Maneuvers" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsActionsActivities} label="Activities" />
+      </div>
+
+      <div class="flex flex-wrap items-center-safe gap-x-3">
+        <Highlighted
+          onclick={() => {
+            if (
+              !jp.flashcardSettings.enableVerbsDescriptiveBeing ||
+              !jp.flashcardSettings.enableVerbsDescriptiveExistence ||
+              !jp.flashcardSettings.enableVerbsDescriptiveProcesses
+            ) {
+              jp.flashcardSettings.enableVerbsDescriptiveBeing = true;
+              jp.flashcardSettings.enableVerbsDescriptiveExistence = true;
+              jp.flashcardSettings.enableVerbsDescriptiveProcesses = true;
+            } else {
+              jp.flashcardSettings.enableVerbsDescriptiveBeing = false;
+              jp.flashcardSettings.enableVerbsDescriptiveExistence = false;
+              jp.flashcardSettings.enableVerbsDescriptiveProcesses = false;
+            }
+          }}
+        >
+          Descriptive:
+        </Highlighted>
+
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsDescriptiveBeing} label="Being" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsDescriptiveExistence} label="Existence" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsDescriptiveProcesses} label="Processes" />
+      </div>
+
+      <div class="flex flex-wrap items-center-safe gap-x-3">
+        <Highlighted
+          onclick={() => {
+            if (
+              !jp.flashcardSettings.enableVerbsChangesEnvironmenal ||
+              !jp.flashcardSettings.enableVerbsChangesQuantitative ||
+              !jp.flashcardSettings.enableVerbsChangesResultative
+            ) {
+              jp.flashcardSettings.enableVerbsChangesEnvironmenal = true;
+              jp.flashcardSettings.enableVerbsChangesQuantitative = true;
+              jp.flashcardSettings.enableVerbsChangesResultative = true;
+            } else {
+              jp.flashcardSettings.enableVerbsChangesEnvironmenal = false;
+              jp.flashcardSettings.enableVerbsChangesQuantitative = false;
+              jp.flashcardSettings.enableVerbsChangesResultative = false;
+            }
+          }}
+        >
+          Changes:
+        </Highlighted>
+
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsChangesEnvironmenal} label="Environmenal" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsChangesQuantitative} label="Quantitative" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableVerbsChangesResultative} label="Resultative" />
+      </div>
+
+      <CheckboxInput bind:checked={jp.flashcardSettings.enableAuxiliaryVerbs} label="Auxiliary Verbs" />
+    </div>
   </div>
   <div class="flex items-center-safe gap-6">
     <Highlighted
@@ -647,17 +805,17 @@
   <div class="flex items-center-safe gap-6">
     <Highlighted
       onclick={() => {
-        if (!jp.flashcardSettings.enableAdpositions) {
-          jp.flashcardSettings.enableAdpositions = true;
+        if (!jp.flashcardSettings.enableFunctionalAdpositions) {
+          jp.flashcardSettings.enableFunctionalAdpositions = true;
         } else {
-          jp.flashcardSettings.enableAdpositions = false;
+          jp.flashcardSettings.enableFunctionalAdpositions = false;
         }
       }}
     >
       Adpositions:
     </Highlighted>
 
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableAdpositions} label="(all)" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableFunctionalAdpositions} label="(all)" />
   </div>
 
   <div class="flex items-start gap-6">

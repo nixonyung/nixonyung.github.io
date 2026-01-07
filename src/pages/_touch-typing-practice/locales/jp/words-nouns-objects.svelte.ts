@@ -129,6 +129,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       //
       { katakana: "バス", romanization: "basu", meaning: "bus" },
       { kanjis: ["電車"], hiragana: "でんしゃ", romanization: "densha", meaning: "train" },
+      // TODO: escalator, elevator
     );
   }
 }

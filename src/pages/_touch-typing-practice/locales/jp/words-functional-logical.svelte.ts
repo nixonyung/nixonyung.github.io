@@ -17,7 +17,7 @@ export function appendFunctionalLogical(words: JapaneseWord[]) {
       { hiragana: "ために", preferredForm: "hiragana", kanjis: ["為に"], romanization: "tameni", meaning: "so (purpose)", exampleUsages: ["[Clause] ために [Clause]", "テストに合格するために ...", "家族のために ...", "この日のために ..."] },
       { hiragana: "ように", preferredForm: "hiragana", kanjis: ["様に"], romanization: "youni", meaning: "so (desired state)", exampleUsages: ["[Clause] ように [Clause]", "日本語て漫画が読めるように ..."] },
       { hiragana: "ので", romanization: "node", meaning: "because of (what cause, written)", exampleUsages: ["[Clause ending with Verb] ので ...", "[Clause ending with Noun] なので ...", "[Clause ending with i-Adj.] ので ...", "[Clause ending with na-Adj.] なので ..."] },
-      { hiragana: "のせいで", preferredForm: "hiragana", rareKanjis: ["の所為で"], romanization: "noseide", meaning: "due to", exampleUsages: ["[Noun] のせいで [Clause]"] },
+      { hiragana: "のせいで", rareKanjis: ["の所為で"], romanization: "noseide", meaning: "due to", exampleUsages: ["[Noun] のせいで [Clause]"] },
 
       // conditional
       { hiragana: "たら", romanization: "tara", meaning: "if so (uncertain / imaginary)", derivedMeanings: ["and then (making request / what should be done)", "when (what also happened)"], exampleUsages: ["[Clause] たら [Clause]", "暇になったら"] },
@@ -36,7 +36,7 @@ export function appendFunctionalLogical(words: JapaneseWord[]) {
       { hiragana: "なぜか", preferredForm: "hiragana", kanjis: ["何故か"], romanization: "nazeka", meaning: "for some reason / somehow" },
       { hiragana: "ともなく", preferredForm: "hiragana", romanization: "tomonaku", meaning: "unknowingly" },
 
-      { hiragana: "そう", preferredForm: "hiragana", rareKanjis: ["然う"], romanization: "sou", meaning: "like what is just said" },
+      { hiragana: "そう", rareKanjis: ["然う"], romanization: "sou", meaning: "like what is just said" },
       { kanjis: ["同じく"], hiragana: "おなじく", romanization: "onajiku", meaning: "likewise" },
 
       // interrogative

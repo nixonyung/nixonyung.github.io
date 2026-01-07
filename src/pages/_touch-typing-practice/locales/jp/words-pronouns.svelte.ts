@@ -65,9 +65,9 @@ export function appendPronouns(words: JapaneseWord[]) {
 
       { hiragana: "こいつ", preferredForm: "hiragana", kanjis: ["此奴"], romanization: "koitsu", meaning: "this bastard" },
       { hiragana: "こやつ", preferredForm: "hiragana", kanjis: ["此奴"], romanization: "koyatsu", meaning: "this bastard" },
-      { hiragana: "そいつ", preferredForm: "hiragana", rareKanjis: ["其奴"], romanization: "soitsu", meaning: "that bastard" },
-      { hiragana: "そやつ", preferredForm: "hiragana", rareKanjis: ["其奴"], romanization: "soyatsu", meaning: "that bastard" },
-      { hiragana: "あいつ", preferredForm: "hiragana", rareKanjis: ["彼奴"], romanization: "aitsu", meaning: "that bastard" },
+      { hiragana: "そいつ", rareKanjis: ["其奴"], romanization: "soitsu", meaning: "that bastard" },
+      { hiragana: "そやつ", rareKanjis: ["其奴"], romanization: "soyatsu", meaning: "that bastard" },
+      { hiragana: "あいつ", rareKanjis: ["彼奴"], romanization: "aitsu", meaning: "that bastard" },
 
       // TODO: placeholders
       // (ref.) [Are there placeholders in spoken Japanese?](https://japanese.stackexchange.com/questions/80870/are-there-placeholders-in-spoken-japanese)

@@ -1,7 +1,7 @@
 import type { JapaneseWord } from "../../types";
 import { jp } from "./jp.svelte";
 
-export function appendNounsAbstract(words: JapaneseWord[]) {
+export function appendNounsIdeas(words: JapaneseWord[]) {
   if (jp.flashcardSettings.enableNounsIdeasLife) {
     // TODO: humanity vs wellbeing
     words.push(

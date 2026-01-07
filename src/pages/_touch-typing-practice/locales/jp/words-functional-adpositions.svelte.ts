@@ -1,8 +1,8 @@
 import type { JapaneseWord } from "../../types";
 import { jp } from "./jp.svelte";
 
-export function appendAdpositions(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableAdpositions) {
+export function appendFunctionalAdpositions(words: JapaneseWord[]) {
+  if (jp.flashcardSettings.enableFunctionalAdpositions) {
     words.push(
       { hiragana: "は", romanization: "wa", meaning: "(known subject marker)", exampleUsages: ["[Noun] は ..."] },
       { hiragana: "が", romanization: "ga", meaning: "(new subject marker)", derivedMeanings: ["(signaling contrasting info, written)"], exampleUsages: ["[Noun] が ...", "[Clause] が、 [Clause]"] },
