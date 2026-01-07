@@ -1,16 +1,19 @@
 <script lang="ts">
+  import WithTooltip, { type WithTooltipProps } from "./WithTooltip.svelte";
+
   let {
     checked = $bindable(),
     label,
+    tooltip,
     disabled,
-  }: {
+  }: WithTooltipProps & {
     checked: boolean;
     label: string;
     disabled?: boolean;
   } = $props();
 </script>
 
-<label class="whitespace-nowrap">
+<label class="flex gap-1 whitespace-nowrap">
   <input
     bind:checked
     type="checkbox"
@@ -19,5 +22,7 @@
     {disabled}
   />
 
-  <span class={disabled ? "line-through opacity-50" : ""}>{label}</span>
+  <WithTooltip {tooltip} {disabled}>
+    <span class={disabled ? "line-through opacity-50" : ""}>{label}</span>
+  </WithTooltip>
 </label>
