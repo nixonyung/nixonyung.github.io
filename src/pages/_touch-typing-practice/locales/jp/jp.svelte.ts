@@ -135,12 +135,12 @@ export const jp = new (class {
     // TODO: move to functional and also include auxiliary adjs.?
     enableAuxiliaryVerbs: { paramKey: "auxiliary", defaultValue: true },
 
-    // enableTransitiveVerbs: { paramKey: "transitiveVerbs", defaultValue: true },
-    // enableIntransitiveVerbs: { paramKey: "intransitiveVerbs", defaultValue: true },
+    enableTransitiveVerbs: { paramKey: "transitiveVerbs", defaultValue: true },
+    enableIntransitiveVerbs: { paramKey: "intransitiveVerbs", defaultValue: true },
 
-    // enableGodanVerbs: { paramKey: "godanVerbs", defaultValue: true },
-    // enableIchidanVerbs: { paramKey: "ichidanVerbs", defaultValue: true },
-    // enableIrregularVerbs: { paramKey: "irregularVerbs", defaultValue: true },
+    enableGodanVerbs: { paramKey: "godanVerbs", defaultValue: true },
+    enableIchidanVerbs: { paramKey: "ichidanVerbs", defaultValue: true },
+    enableIrregularVerbs: { paramKey: "irregularVerbs", defaultValue: true },
 
     // adjectives
     // TODO: need to categorize?

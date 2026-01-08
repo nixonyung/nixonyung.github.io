@@ -57,6 +57,7 @@ export type JapaneseWord = {
   hiragana?: string;
   katakana?: string;
   exampleUsages?: string[];
+  // TODO: to `preferHiragana`
   preferredForm?: "kanji" | "hiragana" | "katakana";
   romanization?: string;
 
@@ -65,4 +66,10 @@ export type JapaneseWord = {
 
   question?: string;
   answer?: string;
+};
+
+export type JapaneseVerb = JapaneseWord & {
+  verbGroup: "godan" | "ichidan" | "irregular";
+  // true | false
+  verbIsTransitive: boolean;
 };
