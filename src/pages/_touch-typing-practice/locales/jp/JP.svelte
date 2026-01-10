@@ -14,7 +14,7 @@
 <div class="flex flex-col gap-6">
   <TabsInput
     bind:value={jp.settings.mode}
-    label="Select Mode:"
+    label="Select Mode"
     options={["Typing", "Gojuon Table", "Flashcards"]}
   />
 

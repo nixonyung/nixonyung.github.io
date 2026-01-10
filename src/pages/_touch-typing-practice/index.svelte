@@ -27,7 +27,7 @@
 
   <!-- settings -->
   <div class="flex items-center-safe gap-9">
-    <SelectInput bind:value={settings.lang} label="lang:" options={["en-US", "ja-JP", "ko-KR"]} />
+    <SelectInput bind:value={settings.lang} label="Lang" options={["en-US", "ja-JP", "ko-KR"]} />
   </div>
 
   {#if settings.lang === "en-US"}

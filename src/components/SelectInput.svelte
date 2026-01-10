@@ -13,7 +13,7 @@
 </script>
 
 <label>
-  <span>{label}</span>
+  <span>{label}:</span>
 
   <select bind:value class="rounded bg-primary px-1 ring" {disabled}>
     {#each options as option (option)}

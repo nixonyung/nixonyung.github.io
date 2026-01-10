@@ -13,7 +13,7 @@
 </script>
 
 <div class="flex items-center-safe">
-  <span class="mr-3">{label}</span>
+  <span class="mr-3">{label}:</span>
 
   {#each options as option (option)}
     <button

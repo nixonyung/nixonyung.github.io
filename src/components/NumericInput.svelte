@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { clamp } from "es-toolkit";
+  import { clamp, round } from "es-toolkit";
 
   let {
     value = $bindable(),
@@ -17,9 +17,13 @@
     disabled?: boolean;
   } = $props();
 
+  const numDecimalPlaces = $derived(step.toString().split(".", 2)[1]?.length ?? 0);
   const disabled = $derived(disabledProp || min > max);
   const canDecrement = $derived(!disabled && value - step >= min);
   const canIncrement = $derived(!disabled && value + step <= max);
+  function clampValue() {
+    value = clamp(round(value, numDecimalPlaces), min, max);
+  }
   $effect(() => {
     if (!disabled) {
       if (value < min) value = min;
@@ -35,13 +39,14 @@
 <svelte:window
   onmousemove={({ screenX }) => {
     if (isMousedown) {
-      value = Math.floor(clamp(prevValue + (screenX - startScreenX) / 20, min, max));
+      value = prevValue + Math.floor((screenX - startScreenX) / 16) * step;
+      clampValue();
     }
   }}
   onmouseup={() => (isMousedown = false)}
 />
 
-<div class="flex items-center-safe">
+<div class="flex items-center-safe gap-1">
   <button
     class="flex cursor-ew-resize items-center-safe gap-1"
     onmousedown={({ screenX }) => {
@@ -50,16 +55,19 @@
       prevValue = value;
     }}
   >
-    <span>{label}</span>
+    <span>{label}:</span>
     <span class="min-w-8 text-start">{value}</span>
   </button>
 
   <div>
     <!-- decrement button -->
     <button
-      title="decrement button"
+      title="Decrement."
       class="not-disabled:cursor-pointer disabled:opacity-50"
-      onclick={() => (value -= step)}
+      onclick={() => {
+        value -= step;
+        clampValue();
+      }}
       disabled={!canDecrement}
     >
       <span class="icon-[heroicons--minus-circle] align-middle text-2xl"></span>
@@ -67,9 +75,12 @@
 
     <!-- increment button -->
     <button
-      title="increment button"
+      title="Increment."
       class="not-disabled:cursor-pointer disabled:opacity-50"
-      onclick={() => (value += step)}
+      onclick={() => {
+        value += step;
+        clampValue();
+      }}
       disabled={!canIncrement}
     >
       <span class="icon-[heroicons--plus-circle] align-middle text-2xl"></span>

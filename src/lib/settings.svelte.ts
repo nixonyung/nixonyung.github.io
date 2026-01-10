@@ -50,7 +50,7 @@ function decodeSetting(
     case "string":
       return encoded;
     case "number":
-      return parseInt(encoded);
+      return parseFloat(encoded);
     case "boolean":
       return encoded === "1";
     case "string[]":

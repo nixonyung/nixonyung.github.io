@@ -2,10 +2,11 @@
   import CheckboxInput from "@/components/CheckboxInput.svelte";
   import Highlighted from "@/components/Highlighted.svelte";
   import NumericInput from "@/components/NumericInput.svelte";
-  import { ShufflingCircularQueue } from "@/lib/shuffling-circular-queue";
+  import { QuestionQueue } from "@/lib/question-queue";
   import { speech } from "@/lib/speech.svelte";
-  import { clone, isEqual, randomInt, range } from "es-toolkit";
+  import { isEqual, random, randomInt, range } from "es-toolkit";
   import { untrack } from "svelte";
+  import { SvelteSet } from "svelte/reactivity";
   import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
 
   const {
@@ -39,6 +40,10 @@
       paramKey: "numOptions",
       defaultValue: 6,
     },
+    preferPinnedProb: {
+      paramKey: "preferPinnedProb",
+      defaultValue: 0.4,
+    },
   };
   let settings = $state(initSettings(SETTINGS_SCHEMA));
   useSyncSettings(SETTINGS_SCHEMA, settings);
@@ -56,73 +61,79 @@
   const isQuestionSettingsEmpty = $derived(!settings.questionSettings.some((is) => is));
   const isOptionSettingsEmpty = $derived(!settings.optionSettings.some((is) => is));
   $effect(() => {
-    for (const [i, is] of settings.questionSettings.entries()) {
-      if (is) untrack(() => (settings.optionSettings[i] = false));
+    for (const [i, enabled] of settings.questionSettings.entries()) {
+      if (enabled) untrack(() => (settings.optionSettings[i] = false));
     }
   });
   $effect(() => {
-    for (const [i, is] of settings.optionSettings.entries()) {
-      if (is) untrack(() => (settings.questionSettings[i] = false));
+    for (const [i, enabled] of settings.optionSettings.entries()) {
+      if (enabled) untrack(() => (settings.questionSettings[i] = false));
     }
   });
 
-  function questionKeyFn(word: TWord) {
-    const key = []; // array as key
+  type Question = {
+    word: TWord;
+    questionKey: (string | string[])[];
+    answerKey: (string | string[])[];
+    pronunciation?: string;
+    romanization?: string;
+    idx: number;
+  };
+  function key(word: TWord, settings: boolean[]) {
+    const key = range(settings.length)
+      .filter((i) => settings[i])
+      .map((i) => schema[i].valueFn(word));
+    return key.includes(undefined) ? undefined : key;
+  }
 
-    for (const [i, { valueFn }] of schema.entries()) {
-      if (!settings.questionSettings[i]) continue;
+  const validWords = $derived.by(() => {
+    const result: Question[] = [];
 
-      const value = valueFn(word);
-      if (value === undefined) return undefined;
-      key.push(clone(value));
+    for (const word of words) {
+      const questionKey = key(word, settings.questionSettings);
+      const answerKey = key(word, settings.optionSettings);
+      if (questionKey === undefined || answerKey === undefined) continue;
+
+      result.push(<Question>{
+        word,
+        questionKey,
+        answerKey,
+        pronunciation: wordToPronunciationFn?.(word),
+        romanization: wordToRomanizationFn?.(word),
+        idx: result.length,
+      });
     }
 
-    return key;
-  }
-  function answerKeyFn(word: TWord) {
-    const key = []; // array as key
-
-    for (const [i, { valueFn }] of schema.entries()) {
-      if (!settings.optionSettings[i]) continue;
-
-      const value = valueFn(word);
-      if (value === undefined) return undefined;
-      key.push(clone(value));
-    }
-
-    return key;
-  }
-  const validWords = $derived(
-    words
-      .map((word) => ({ word, questionKey: questionKeyFn(word), answerKey: answerKeyFn(word) }))
-      .filter(
-        (
-          entry,
-        ): entry is {
-          word: TWord;
-          questionKey: (string | string[])[];
-          answerKey: (string | string[])[];
-        } => entry.questionKey !== undefined && entry.answerKey !== undefined,
-      ),
-  );
-  let questionsQueue = $derived(new ShufflingCircularQueue(validWords));
-  let question:
-    | {
-        word: TWord;
-        questionKey: (string | string[])[];
-        answerKey: (string | string[])[];
-      }
-    | undefined = $state();
+    return result;
+  });
+  let questionsQueue = $derived(new QuestionQueue(validWords));
+  let question: Question | undefined = $state();
+  let isQuestionPinned = $state(false);
+  let pinnedIdxs = $state(new SvelteSet<number>());
+  let pinnedQuestions = $derived(Array.from(pinnedIdxs).map((idx) => validWords[idx]));
+  let pinnedQuestionsQueue = $derived(new QuestionQueue(pinnedQuestions));
   let options: (string | string[])[][] = $state([]);
   let showRomanization = $state(false);
+  $effect(() => {
+    validWords;
+
+    pinnedIdxs = new SvelteSet<number>();
+  });
 
   function nextQuestion() {
     untrack(() => {
-      question = questionsQueue.next();
+      question = (
+        pinnedIdxs.size && random(1) < settings.preferPinnedProb
+          ? pinnedQuestionsQueue
+          : questionsQueue
+      ).next();
+      isQuestionPinned = false;
       showRomanization = false;
 
       options = [];
       if (question !== undefined) {
+        isQuestionPinned = pinnedIdxs.has(question.idx);
+
         // pick N from validWords without replacement & with predicate
 
         const answerKeyStrs = new Set();
@@ -160,12 +171,9 @@
       }
     });
   }
-
   $effect(() => {
-    words;
+    validWords;
     settings.numOptions;
-    for (let i = 0; i < schema.length; i++) settings.questionSettings[i];
-    for (let i = 0; i < schema.length; i++) settings.optionSettings[i];
 
     nextQuestion();
   });
@@ -196,10 +204,31 @@
     </div>
   </div>
   <div class="flex items-center-safe gap-9">
-    <NumericInput bind:value={settings.numOptions} label="number of options:" min={1} />
+    <NumericInput bind:value={settings.numOptions} label="Number of Options" min={1} />
+    <NumericInput
+      bind:value={settings.preferPinnedProb}
+      label="Prefer Pinned Probability"
+      min={0}
+      max={1}
+      step={0.1}
+    />
   </div>
 
   <!-- question and options -->
+  {#snippet item(values: (string | string[])[])}
+    {#each values as content}
+      {#if typeof content === "string"}
+        <span>{content}</span>
+      {:else if Array.isArray(content) && content.length}
+        <div class="flex flex-col items-start text-xs">
+          {#each content as text}
+            <span>{text}</span>
+          {/each}
+        </div>
+      {/if}
+    {/each}
+  {/snippet}
+
   {#if !isQuestionSettingsEmpty && !isOptionSettingsEmpty}
     <div class="flex flex-col gap-6">
       <!-- question -->
@@ -209,37 +238,74 @@
           <Highlighted
             vertical
             class={[speech.voice && "pr-6", speech.isSpeaking && "cursor-wait"]}
-            onclick={wordToPronunciationFn && speech.voice
+            onclick={speech.voice
               ? () => {
                   showRomanization = true;
-                  speech.speak(wordToPronunciationFn(question!.word));
+                  speech.speak(question!.pronunciation);
                 }
               : undefined}
           >
-            {#each question.questionKey as values}
-              {#if values}
-                {#if typeof values === "string"}
-                  <div>{values}</div>
-                {:else}
-                  <div class="flex flex-col items-start text-xs">
-                    {#each values as value}
-                      <span>{value}</span>
-                    {/each}
-                  </div>
-                {/if}
-              {/if}
-            {/each}
+            {@render item(question.questionKey)}
 
             <!-- pronunciation indicator -->
-            {#if wordToPronunciationFn && speech.voice}
+            {#if question!.pronunciation && speech.voice}
               <span
                 class="absolute top-1 right-1 icon-[heroicons--speaker-wave-solid] text-xs opacity-80"
               ></span>
             {/if}
           </Highlighted>
-          {#if wordToRomanizationFn && showRomanization}
-            {wordToRomanizationFn(question.word)}
+
+          {#if showRomanization}
+            {question.romanization}
           {/if}
+
+          <div class="group/list relative cursor-default p-3">
+            <button
+              title="Pin this question."
+              class="cursor-pointer rounded-full px-2 py-1 text-primary-content hover:bg-primary-lighter"
+              onclick={() => {
+                if (isQuestionPinned) {
+                  pinnedIdxs.delete(question!.idx);
+                  isQuestionPinned = false;
+                } else {
+                  pinnedIdxs.add(question!.idx);
+                  isQuestionPinned = true;
+                }
+              }}
+            >
+              {#if isQuestionPinned}
+                <span class="icon-[icon-park-solid--pin]"></span>
+              {:else}
+                <span class="icon-[icon-park-outline--pin] opacity-75"></span>
+              {/if}
+            </button>
+
+            {#if pinnedIdxs.size}
+              <div
+                class="invisible absolute top-0 right-0 z-10 flex translate-x-full translate-y-2 flex-col divide-y rounded bg-primary whitespace-nowrap ring group-hover/list:visible"
+              >
+                {#each pinnedQuestions as { questionKey, answerKey, romanization, idx }}
+                  <button
+                    class="group/item flex cursor-pointer items-center-safe gap-1.5 px-2 py-1.5"
+                    onclick={() => {
+                      if (idx === question!.idx) isQuestionPinned = false;
+                      pinnedIdxs.delete(idx);
+                    }}
+                  >
+                    <div class="flex gap-4.5">
+                      {@render item(questionKey)}
+                      {romanization && `(${romanization})`}
+                      {@render item(answerKey)}
+                    </div>
+                    <div class="grow"></div>
+                    <span
+                      class="invisible icon-[icon-park-outline--close-small] opacity-75 group-hover/item:visible"
+                    ></span>
+                  </button>
+                {/each}
+              </div>
+            {/if}
+          </div>
         {/if}
       </div>
 
@@ -254,17 +320,7 @@
               if (isEqual(option, question?.answerKey)) nextQuestion();
             }}
           >
-            {#each option as values}
-              {#if typeof values === "string"}
-                <div>{values}</div>
-              {:else}
-                <div class="flex flex-col items-start text-xs">
-                  {#each values as value}
-                    <span>{value}</span>
-                  {/each}
-                </div>
-              {/if}
-            {/each}
+            {@render item(option)}
           </Highlighted>
         {/each}
       </div>

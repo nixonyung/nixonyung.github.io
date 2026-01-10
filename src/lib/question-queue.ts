@@ -1,9 +1,12 @@
 import { range, shuffle } from "es-toolkit";
 
-export class ShufflingCircularQueue<Item> {
+/**
+ * circular queue that shuffle on initialization and when reaching the end
+ */
+export class QuestionQueue<Item> {
   private items: Item[];
   private idxs: number[];
-  private i: number;
+  private i: number; // pointer in queue
 
   constructor(items: Item[]) {
     this.items = items;
@@ -11,7 +14,7 @@ export class ShufflingCircularQueue<Item> {
     this.i = 0;
   }
 
-  reset() {
+  private reset() {
     this.idxs = shuffle(this.idxs);
     this.i = 0;
   }

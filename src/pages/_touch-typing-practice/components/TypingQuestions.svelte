@@ -4,7 +4,7 @@
   import KBD from "@/components/KBD.svelte";
   import NumericInput from "@/components/NumericInput.svelte";
   import { emitKeydown } from "@/lib/emulated-events";
-  import { ShufflingCircularQueue } from "@/lib/shuffling-circular-queue";
+  import { QuestionQueue } from "@/lib/question-queue";
   import { speech } from "@/lib/speech.svelte";
   import { untrack } from "svelte";
   import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
@@ -33,7 +33,7 @@
     input: string;
   };
   let questionsQueue = $derived(
-    new ShufflingCircularQueue<Question>(
+    new QuestionQueue<Question>(
       letters.map(({ letter, actualPronunciation, romanization, actualInput }) => ({
         letter,
         pronunciation: actualPronunciation ?? letter,
@@ -133,8 +133,8 @@
 <div class="flex flex-col gap-3">
   <!-- settings -->
   <div class="flex items-center-safe gap-9">
-    <NumericInput bind:value={settings.numQuestions} min={1} label="number of questions:" />
-    <CheckboxInput bind:checked={settings.showRomanizations} label="show romanizations" />
+    <NumericInput bind:value={settings.numQuestions} min={1} label="Number of Questions" />
+    <CheckboxInput bind:checked={settings.showRomanizations} label="Show Romanizations" />
   </div>
 
   <!-- SpeechSynthesis status -->

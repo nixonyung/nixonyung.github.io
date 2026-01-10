@@ -20,6 +20,9 @@ importers:
       '@iconify-json/icon-park-outline':
         specifier: ^1.2.4
         version: 1.2.4
+      '@iconify-json/icon-park-solid':
+        specifier: ^1.2.4
+        version: 1.2.4
       '@tailwindcss/typography':
         specifier: ^0.5.19
         version: 0.5.19(tailwindcss@4.1.18)
@@ -404,6 +407,9 @@ packages:
 
   '@iconify-json/icon-park-outline@1.2.4':
     resolution: {integrity: sha512-NyZxXe2gD2TbTOyoRRMdtEJhr6i2KQCdDlYYoOn5oZLndQjwpIhw79hzeFhXvP38/o40D3gQ+l+IaSJgbB+0TQ==}
+
+  '@iconify-json/icon-park-solid@1.2.4':
+    resolution: {integrity: sha512-030MChSP6lCY7N+U5J5R7YguHTGcm7qQEI/ivBjk77El/i8yJatoj568cwwXGM8c6HEU/kIxEE4m3O/6w0WBGg==}
 
   '@iconify/tailwind4@1.2.0':
     resolution: {integrity: sha512-+t7XqfojOB0zzZdd8gV7IQZGq1AaIHTlsxMVzagxYR0hAlJCLUD63o3iSlNKRMH3ZR7gZ8y5c9dJ7J431avRbA==}
@@ -3492,6 +3498,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/icon-park-outline@1.2.4':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/icon-park-solid@1.2.4':
     dependencies:
       '@iconify/types': 2.0.0
 
