@@ -44,6 +44,10 @@
       paramKey: "preferPinnedProb",
       defaultValue: 0.4,
     },
+    pinWhenWrong: {
+      paramKey: "pinWhenWrong",
+      defaultValue: true,
+    },
   };
   let settings = $state(initSettings(SETTINGS_SCHEMA));
   useSyncSettings(SETTINGS_SCHEMA, settings);
@@ -108,6 +112,15 @@
     validWords;
 
     pinnedIdxs = new SvelteSet<number>();
+  });
+  $effect(() => {
+    if (!question) return;
+
+    if (pinnedIdxs.has(question.idx)) {
+      isQuestionPinned = true;
+    } else {
+      isQuestionPinned = false;
+    }
   });
 
   function nextQuestion() {
@@ -202,6 +215,7 @@
       max={1}
       step={0.1}
     />
+    <CheckboxInput bind:checked={settings.pinWhenWrong} label="Auto Pin When Wrong" />
   </div>
 
   <!-- question and options -->
@@ -256,10 +270,8 @@
               onclick={() => {
                 if (isQuestionPinned) {
                   pinnedIdxs.delete(question!.idx);
-                  isQuestionPinned = false;
                 } else {
                   pinnedIdxs.add(question!.idx);
-                  isQuestionPinned = true;
                 }
               }}
             >
@@ -278,7 +290,6 @@
                   <button
                     class="group/item flex cursor-pointer items-center-safe gap-1.5 px-2 py-1.5"
                     onclick={() => {
-                      if (idx === question!.idx) isQuestionPinned = false;
                       pinnedIdxs.delete(idx);
                     }}
                   >
@@ -307,7 +318,13 @@
           <Highlighted
             vertical
             onclick={() => {
-              if (isEqual(option, question?.answerKey)) nextQuestion();
+              if (!question) return;
+
+              if (isEqual(option, question.answerKey)) {
+                nextQuestion();
+              } else if (settings.pinWhenWrong) {
+                pinnedIdxs.add(question.idx);
+              }
             }}
           >
             {@render item(option)}
