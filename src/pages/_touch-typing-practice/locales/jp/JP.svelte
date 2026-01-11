@@ -3,7 +3,7 @@
   import { useSyncSettings } from "../../../../lib/settings.svelte";
   import FlashcardQuestions from "../../components/FlashcardQuestions.svelte";
   import TypingQuestions from "../../components/TypingQuestions.svelte";
-  import FlashcardSettings from "./FlashcardSettings.svelte";
+  import FlashcardSettingsJP from "./FlashcardSettingsJP.svelte";
   import GojuonQuestions from "./GojuonQuestions.svelte";
   import GojuonTable from "./GojuonTable.svelte";
   import { jp } from "./jp.svelte";
@@ -25,7 +25,7 @@
     <GojuonTable />
     <GojuonQuestions gojuons={jp.gojuons} />
   {:else if jp.settings.mode === "Flashcards"}
-    <FlashcardSettings />
+    <FlashcardSettingsJP />
     <FlashcardQuestions
       words={jp.words}
       wordToPronunciationFn={({ hiragana, romanization }) => hiragana ?? romanization}
