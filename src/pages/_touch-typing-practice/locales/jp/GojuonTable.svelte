@@ -62,24 +62,24 @@
     <div class="flex items-center-safe gap-3">
       <CheckboxInput
         bind:checked={jp.gojuonSettings.enableHiragana}
-        label="enable Hiragana 平假名"
+        label="Enable Hiragana 平假名"
       />
       <CheckboxInput
         bind:checked={jp.gojuonSettings.enableKatakana}
-        label="enable Katakana 片假名"
+        label="Enable Katakana 片假名"
       />
     </div>
     <div class="flex items-center-safe gap-3">
       <CheckboxInput
         bind:checked={jp.gojuonSettings.enableDiacritics}
-        label="enable Dakuten 濁音 and Handakuten 半濁音"
+        label="Enable Dakuten 濁音 and Handakuten 半濁音"
       />
-      <CheckboxInput bind:checked={jp.gojuonSettings.enableYoon} label="enable Yoon 拗音" />
+      <CheckboxInput bind:checked={jp.gojuonSettings.enableYoon} label="Enable Yoon 拗音" />
     </div>
     <div class="flex items-center-safe gap-3">
       <CheckboxInput
         bind:checked={jp.gojuonSettings.showOrigins}
-        label="show Gojuon 五十音 origins"
+        label="Show Gojuon 五十音 Origins"
       />
     </div>
   </div>

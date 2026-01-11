@@ -53,7 +53,7 @@
 <div class="flex flex-col gap-6">
   <!-- settings -->
   <div class="flex items-center-safe gap-9">
-    <NumericInput bind:value={settings.numOptions} label="number of options:" min={1} />
+    <NumericInput bind:value={settings.numOptions} label="Number of Options" min={1} />
   </div>
 
   <!-- question -->
@@ -98,5 +98,5 @@
   </div>
 
   <!-- padding -->
-  <div class="h-dvh"></div>
+  <div class="h-[75dvh]"></div>
 </div>

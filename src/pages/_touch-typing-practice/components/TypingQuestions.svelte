@@ -20,7 +20,7 @@
   } = $props();
 
   const SETTINGS_SCHEMA = {
-    numQuestions: { paramKey: "numQuestions", defaultValue: 3 },
+    numQuestions: { paramKey: "numQuestions", defaultValue: 8 },
     showRomanizations: { paramKey: "romanizations", defaultValue: false },
   };
   const settings = $state(initSettings(SETTINGS_SCHEMA));
