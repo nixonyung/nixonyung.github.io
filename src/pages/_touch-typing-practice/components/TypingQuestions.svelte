@@ -57,7 +57,7 @@
     });
   }
 
-  $effect(() => {
+  $effect.pre(() => {
     letters;
     settings.numQuestions;
 

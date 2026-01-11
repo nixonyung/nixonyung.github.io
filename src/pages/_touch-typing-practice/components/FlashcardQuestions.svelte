@@ -54,12 +54,12 @@
 
   const isQuestionSettingsEmpty = $derived(!settings.questionSettings.some((is) => is));
   const isOptionSettingsEmpty = $derived(!settings.optionSettings.some((is) => is));
-  $effect(() => {
+  $effect.pre(() => {
     for (const [i, enabled] of settings.questionSettings.entries()) {
       if (enabled) untrack(() => (settings.optionSettings[i] = false));
     }
   });
-  $effect(() => {
+  $effect.pre(() => {
     for (const [i, enabled] of settings.optionSettings.entries()) {
       if (enabled) untrack(() => (settings.questionSettings[i] = false));
     }
@@ -109,12 +109,12 @@
   let options: (string | string[])[][] = $state([]);
   let isWrongOptions: boolean[] = $state([]);
   let showRomanization = $state(false);
-  $effect(() => {
+  $effect.pre(() => {
     validWords;
 
     pinnedIdxs = new SvelteSet<number>();
   });
-  $effect(() => {
+  $effect.pre(() => {
     if (!question) return;
 
     if (pinnedIdxs.has(question.idx)) {
@@ -176,7 +176,7 @@
       isWrongOptions = Array(options.length).fill(false);
     });
   }
-  $effect(() => {
+  $effect.pre(() => {
     validWords;
     settings.numOptions;
 

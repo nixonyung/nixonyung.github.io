@@ -104,7 +104,7 @@ export function useSyncSettings<Sc extends SettingsSchema>(schema: Sc, settings:
 
   // sync settings with URL
   for (const [key, { paramKey, defaultValue }] of Object.entries(schema)) {
-    $effect(() => {
+    $effect.pre(() => {
       const value = settings[key as keyof Sc];
       const encoded = encodeSetting(value);
 

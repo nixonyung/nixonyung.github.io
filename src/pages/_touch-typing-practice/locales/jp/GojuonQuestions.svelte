@@ -42,7 +42,7 @@
     });
   }
 
-  $effect(() => {
+  $effect.pre(() => {
     gojuons;
     settings.numOptions;
 

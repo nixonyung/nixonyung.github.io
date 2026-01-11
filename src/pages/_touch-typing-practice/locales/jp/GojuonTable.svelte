@@ -19,7 +19,7 @@
   let isSelectingRowRa = $state(jp.gojuonSettings.enableRowRa);
   let isSelectingRowWa = $state(jp.gojuonSettings.enableRowWa);
   let isSelectingRowN = $state(jp.gojuonSettings.enableRowN);
-  $effect(() => {
+  $effect.pre(() => {
     if (isMousedown) {
       isSelectingRowA = false;
       isSelectingRowKa = false;

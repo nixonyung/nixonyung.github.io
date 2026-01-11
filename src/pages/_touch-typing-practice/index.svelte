@@ -15,7 +15,7 @@
   const settings = $state(initSettings(SETTINGS_SCHEMA));
   useSyncSettings(SETTINGS_SCHEMA, settings);
 
-  $effect(() => {
+  $effect.pre(() => {
     speech.voice = speech.availableVoices.find(
       ({ lang, name }) => lang === settings?.lang && name.startsWith("Google"),
     );

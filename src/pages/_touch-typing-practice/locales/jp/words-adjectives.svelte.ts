@@ -21,7 +21,6 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { kanjis: ["美味しい"], hiragana: "おいしい", romanization: "oishii", meaning: "delicious" },
       { kanjis: ["美味い", "旨い"], hiragana: "うまい", romanization: "umai", meaning: "delicious (masculine)" },
       { kanjis: ["上手い", "巧い"], rareKanjis: ["美い"], hiragana: "うまい", romanization: "umai", meaning: "skillful" },
-      { kanjis: ["若い"], hiragana: "わかい", romanization: "wakai", meaning: "youthful" },
       { kanjis: ["暑い"], hiragana: "あつい", romanization: "atsui", meaning: "hot" },
       { kanjis: ["寒い"], hiragana: "さむい", romanization: "samui", meaning: "cold" },
       { kanjis: ["近しい"], hiragana: "ちかしい", romanization: "chikashii", meaning: "intimate" },
@@ -40,6 +39,8 @@ export function appendAdjectives(words: JapaneseWord[]) {
 
       { kanjis: ["男らしい"], hiragana: "おとこらしい", romanization: "otokorashii", meaning: "manly" },
       { kanjis: ["女らしい"], hiragana: "おんならしい", romanization: "onnarashii", meaning: "womanly" },
+
+      { kanjis: ["若い"], hiragana: "わかい", romanization: "wakai", meaning: "youthful" },
 
       { kanjis: ["易しい"], hiragana: "やさしい", romanization: "yasashii", meaning: "easy" },
       { kanjis: ["難しい"], hiragana: "むずかしい", romanization: "muzukashii", meaning: "difficult" },

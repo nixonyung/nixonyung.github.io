@@ -24,7 +24,7 @@
   function clampValue() {
     value = clamp(round(value, numDecimalPlaces), min, max);
   }
-  $effect(() => {
+  $effect.pre(() => {
     if (!disabled) {
       if (value < min) value = min;
       if (value > max) value = max;
