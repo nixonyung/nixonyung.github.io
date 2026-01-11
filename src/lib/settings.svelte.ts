@@ -1,4 +1,4 @@
-import { cloneDeep, isEqual } from "es-toolkit";
+import { cloneDeep } from "es-toolkit";
 import { onDestroy, onMount } from "svelte";
 import type { Settings, SettingsSchema, SettingValue } from "../pages/_touch-typing-practice/types";
 
@@ -106,10 +106,12 @@ export function useSyncSettings<Sc extends SettingsSchema>(schema: Sc, settings:
   for (const [key, { paramKey, defaultValue }] of Object.entries(schema)) {
     $effect(() => {
       const value = settings[key as keyof Sc];
-      if (isEqual(value, defaultValue)) {
+      const encoded = encodeSetting(value);
+
+      if (encoded === encodeSetting(defaultValue)) {
         searchParams.delete(paramKey);
       } else {
-        searchParams.set(paramKey, encodeSetting(value));
+        searchParams.set(paramKey, encoded);
       }
 
       updateURL();

@@ -28,12 +28,12 @@
   const SETTINGS_SCHEMA = {
     questionSettings: {
       paramKey: "questionSettings",
-      defaultValue: [],
+      defaultValue: schema.map(({ defaultPosition }) => defaultPosition === "question"),
       arrayType: "boolean[]" as const,
     },
     optionSettings: {
       paramKey: "optionSettings",
-      defaultValue: [],
+      defaultValue: schema.map(({ defaultPosition }) => defaultPosition === "option"),
       arrayType: "boolean[]" as const,
     },
     numOptions: {
@@ -47,16 +47,6 @@
   };
   let settings = $state(initSettings(SETTINGS_SCHEMA));
   useSyncSettings(SETTINGS_SCHEMA, settings);
-  $effect(() => {
-    if (settings.questionSettings.length !== schema.length) {
-      settings.questionSettings = schema.map(
-        ({ defaultPosition }) => defaultPosition === "question",
-      );
-    }
-    if (settings.optionSettings.length !== schema.length) {
-      settings.optionSettings = schema.map(({ defaultPosition }) => defaultPosition === "option");
-    }
-  });
 
   const isQuestionSettingsEmpty = $derived(!settings.questionSettings.some((is) => is));
   const isOptionSettingsEmpty = $derived(!settings.optionSettings.some((is) => is));
