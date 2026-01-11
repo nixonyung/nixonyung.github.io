@@ -171,6 +171,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["索引"], hiragana: "さくいん", romanization: "sakuin", meaning: "index" },
       { katakana: "カテゴリ", romanization: "kateguri", meaning: "category" },
       { katakana: "キーワード", romanization: "kiiwaado", meaning: "keyword" },
+      { katakana: "ポイント", romanization: "pointo", meaning: "point" },
 
       { kanjis: ["言葉"], rareKanjis: ["詞", "辞"], hiragana: "ことば", romanization: "kotoba", meaning: "language / word" },
       { kanjis: ["語"], hiragana: "ご", romanization: "go", meaning: "word" },
