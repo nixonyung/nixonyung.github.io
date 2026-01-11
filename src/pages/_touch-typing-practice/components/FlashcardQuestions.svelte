@@ -107,6 +107,7 @@
   let pinnedQuestions = $derived(Array.from(pinnedIdxs).map((idx) => validWords[idx]));
   let pinnedQuestionsQueue = $derived(new QuestionQueue(pinnedQuestions));
   let options: (string | string[])[][] = $state([]);
+  let isWrongOptions: boolean[] = $state([]);
   let showRomanization = $state(false);
   $effect(() => {
     validWords;
@@ -172,6 +173,7 @@
         // add the real answer
         options.splice(randomInt(options.length + 1), 0, question.answerKey);
       }
+      isWrongOptions = Array(options.length).fill(false);
     });
   }
   $effect(() => {
@@ -293,10 +295,14 @@
                       pinnedIdxs.delete(idx);
                     }}
                   >
-                    <div class="flex gap-4.5">
-                      {@render item(questionKey)}
-                      {romanization && `(${romanization})`}
-                      {@render item(answerKey)}
+                    <div class="flex flex-col items-start">
+                      <div class="flex gap-4.5">
+                        {@render item(questionKey)}
+                        {@render item(answerKey)}
+                      </div>
+                      {#if romanization}
+                        <span>{romanization}</span>
+                      {/if}
                     </div>
                     <div class="grow"></div>
                     <span
@@ -314,18 +320,23 @@
 
       <!-- options -->
       <div class="flex flex-col gap-2">
-        {#each options as option}
+        {#each options as option, i}
           <Highlighted
             vertical
+            variant={isWrongOptions[i] ? "error" : "primary-lighter"}
             onclick={() => {
               if (!question) return;
 
               if (isEqual(option, question.answerKey)) {
                 nextQuestion();
-              } else if (settings.pinWhenWrong) {
-                pinnedIdxs.add(question.idx);
+              } else {
+                isWrongOptions[i] = true;
+                if (settings.pinWhenWrong) {
+                  pinnedIdxs.add(question.idx);
+                }
               }
             }}
+            disabled={isWrongOptions[i]}
           >
             {@render item(option)}
           </Highlighted>

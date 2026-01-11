@@ -3,26 +3,36 @@
   import type { ClassValue, MouseEventHandler } from "svelte/elements";
 
   const {
-    class: classList,
     vertical = false,
+    variant = "primary-lighter",
+    class: classList,
     onclick,
+    disabled = false,
     children,
   }: {
-    class?: ClassValue;
     vertical?: boolean;
+    variant?: "primary-lighter" | "error";
+    class?: ClassValue;
     onclick?: MouseEventHandler<HTMLButtonElement>;
+    disabled?: boolean;
     children: Snippet;
   } = $props();
 </script>
 
 <button
   class={[
-    "relative flex w-fit gap-1 bg-primary-lighter/50 px-3 py-1",
+    "relative flex w-fit gap-1 px-3 py-1",
     vertical ? "flex-col items-start" : "items-center-safe",
-    onclick && "cursor-pointer hover:bg-primary-lighter",
+    variant === "primary-lighter"
+      ? "bg-primary-lighter/50"
+      : variant === "error"
+        ? "bg-red-700/50"
+        : "",
+    onclick && !disabled && "cursor-pointer hover:bg-primary-lighter",
     classList,
   ]}
   {onclick}
+  {disabled}
 >
   {@render children()}
 </button>
