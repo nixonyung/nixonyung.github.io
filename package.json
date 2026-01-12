@@ -22,7 +22,7 @@
         "files": [
           "**/en.svelte.ts",
           "**/jp.svelte.ts",
-          "**/jp/FlashcardSettings.svelte",
+          "**/jp/FlashcardSettingsJP.svelte",
           "**/kr.svelte.ts"
         ],
         "options": {
