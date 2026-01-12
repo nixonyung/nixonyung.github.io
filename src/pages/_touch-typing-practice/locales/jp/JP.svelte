@@ -11,7 +11,7 @@
   useSyncSettings(jp.SETTINGS_SCHEMA, jp.settings);
 </script>
 
-<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-9">
   <TabsInput
     bind:value={jp.settings.mode}
     label="Select Mode"
@@ -32,7 +32,8 @@
     <FlashcardSettingsJP />
     <FlashcardQuestions
       words={jp.words}
-      wordToPronunciationFn={({ hiragana, romanization }) => hiragana ?? romanization}
+      wordToPronunciationFn={({ hiragana, katakana, romanization }) =>
+        hiragana ?? katakana ?? romanization}
       wordToRomanizationFn={({ romanization }) => romanization}
       schema={[
         {
