@@ -112,6 +112,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
 
       { katakana: "カメラ", romanization: "kamera", meaning: "camera" },
       { katakana: "キャメラ", romanization: "kyamera", meaning: "camera" },
+      { katakana: "スマートフォン", romanization: "sumaatofon", meaning: "smartphone" },
       { katakana: "スマホ", romanization: "sumaho", meaning: "smartphone" },
 
       { kanjis: ["地図"], hiragana: "ちず", romanization: "chizu", meaning: "map" },

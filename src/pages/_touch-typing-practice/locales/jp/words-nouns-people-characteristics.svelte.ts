@@ -64,7 +64,8 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
   if (jp.flashcardSettings.enableNounsPeopleCharacteristicsSocialStatus) {
     words.push(
       //
-      { kanjis: ["先生"], hiragana: "せんせい", romanization: "sensei", meaning: "master" },
+      { kanjis: ["先生"], hiragana: "せんせい", romanization: "sensei", meaning: "master / teacher" },
+      { kanjis: ["親方"], hiragana: "おやかた", romanization: "oyakata", meaning: "master / boss" },
       { kanjis: ["大家"], hiragana: "たいか", romanization: "taika", meaning: "authority (known for expertise)" },
     );
   }

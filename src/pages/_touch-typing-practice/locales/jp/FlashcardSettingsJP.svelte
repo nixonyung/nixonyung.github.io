@@ -816,28 +816,31 @@
     <Highlighted
       onclick={() => {
         if (
+          !jp.flashcardSettings.enableExpressionsAppellations ||
+          !jp.flashcardSettings.enableExpressionsGreetingsAndClosings ||
           !jp.flashcardSettings.enableExpressionsSoftening ||
           !jp.flashcardSettings.enableExpressionsEmphasis ||
           !jp.flashcardSettings.enableExpressionsAgreeing ||
           !jp.flashcardSettings.enableExpressionsRequests ||
           !jp.flashcardSettings.enableExpressionsSurprised ||
-          !jp.flashcardSettings.enableExpressionsGreetingsAndClosings ||
           !jp.flashcardSettings.enableExpressionsMisc
         ) {
+          jp.flashcardSettings.enableExpressionsAppellations= true;
+          jp.flashcardSettings.enableExpressionsGreetingsAndClosings = true;
           jp.flashcardSettings.enableExpressionsSoftening = true;
           jp.flashcardSettings.enableExpressionsEmphasis = true;
           jp.flashcardSettings.enableExpressionsAgreeing = true;
           jp.flashcardSettings.enableExpressionsRequests = true;
           jp.flashcardSettings.enableExpressionsSurprised = true;
-          jp.flashcardSettings.enableExpressionsGreetingsAndClosings = true;
           jp.flashcardSettings.enableExpressionsMisc = true;
         } else {
+          jp.flashcardSettings.enableExpressionsAppellations= false;
+          jp.flashcardSettings.enableExpressionsGreetingsAndClosings = false;
           jp.flashcardSettings.enableExpressionsSoftening = false;
           jp.flashcardSettings.enableExpressionsEmphasis = false;
           jp.flashcardSettings.enableExpressionsAgreeing = false;
           jp.flashcardSettings.enableExpressionsRequests = false;
           jp.flashcardSettings.enableExpressionsSurprised = false;
-          jp.flashcardSettings.enableExpressionsGreetingsAndClosings = false;
           jp.flashcardSettings.enableExpressionsMisc = false;
         }
       }}
@@ -845,12 +848,13 @@
       Expressions:
     </Highlighted>
 
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsAppellations} label="Appellations" />
+    <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsGreetingsAndClosings} label="Greetings and Closings" />
     <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsSoftening} label="Softening" />
     <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsEmphasis} label="Emphasis" />
     <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsAgreeing} label="Agreeing" />
     <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsRequests} label="Requests" />
     <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsSurprised} label="Surprised" />
-    <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsGreetingsAndClosings} label="Greetings and Closings" />
     <CheckboxInput bind:checked={jp.flashcardSettings.enableExpressionsMisc} label="(misc.)" />
   </div>
 

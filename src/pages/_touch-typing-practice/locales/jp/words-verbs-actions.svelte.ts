@@ -93,6 +93,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
 
       { kanjis: ["返す", "反す"], hiragana: "かえす", romanization: "kaesu", verbGroup: "godan", verbIsTransitive: true, meaning: "return" },
       { kanjis: ["帰る", "還る"], hiragana: "かえる", romanization: "kaeru", verbGroup: "godan", verbIsTransitive: false, meaning: "return", exampleUsages: ["家に帰る"] },
+      { kanjis: ["頼む"], rareKanjis: ["恃む", "憑む"], hiragana: "たのむ", romanization: "tanomu", verbGroup: "godan", verbIsTransitive: true, meaning: "depend", derivedMeanings: ["request"], exampleUsages: ["生活費を親に頼っている"] },
 
       { kanjis: ["買う"], hiragana: "かう", romanization: "kau", verbGroup: "godan", verbIsTransitive: true, meaning: "buy", exampleUsages: ["コーラを買う"] },
       { kanjis: ["払う"], rareKanjis: ["掃う"], hiragana: "はらう", romanization: "harau", verbGroup: "godan", verbIsTransitive: true, meaning: "pay" },

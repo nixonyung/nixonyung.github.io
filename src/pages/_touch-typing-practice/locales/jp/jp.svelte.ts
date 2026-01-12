@@ -182,12 +182,13 @@ export const jp = new (class {
     enableRulesConjugationsMisc: { paramKey: "miscConjugations", defaultValue: true },
 
     // expressions
+    enableExpressionsAppellations: { paramKey: "appellations", defaultValue: true },
+    enableExpressionsGreetingsAndClosings: { paramKey: "greetNClose", defaultValue: true },
     enableExpressionsSoftening: { paramKey: "softening", defaultValue: true },
     enableExpressionsEmphasis: { paramKey: "emphasis", defaultValue: true },
     enableExpressionsAgreeing: { paramKey: "agreeing", defaultValue: true },
     enableExpressionsRequests: { paramKey: "requests", defaultValue: true },
     enableExpressionsSurprised: { paramKey: "surprised", defaultValue: true },
-    enableExpressionsGreetingsAndClosings: { paramKey: "greetNClose", defaultValue: true },
     enableExpressionsMisc: { paramKey: "miscExpr", defaultValue: true },
   };
   flashcardSettings = $state(initSettings(this.FLASHCARD_SETTINGS_SCHEMA));

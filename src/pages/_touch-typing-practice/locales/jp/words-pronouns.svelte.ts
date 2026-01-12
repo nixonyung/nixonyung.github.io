@@ -25,10 +25,7 @@ export function appendPronouns(words: JapaneseWord[]) {
   if (jp.flashcardSettings.enablePronounsYou) {
     // TODO: https://nihonshock.com/2012/07/saying-you-in-japanese/
     words.push(
-      { hiragana: "〇〇さん", romanization: "san", meaning: "Mr/Mrs/Miss/Ms xxx" },
-      { kanjis: ["〇〇様"], rareKanjis: ["〇〇方", "〇〇状"], hiragana: "〇〇さま", romanization: "sama", meaning: "Mr/Mrs/Miss/Ms xxx (very formal, to higher status / customer" },
-      { kanjis: ["〇〇君"], hiragana: "〇〇くん", romanization: "kun", meaning: "(addressing younger males)" },
-      { hiragana: "〇〇ちゃん", romanization: "chan", meaning: "(addressing girls / children / pets, cute)" },
+      //
       { kanjis: ["君"], rareKanjis: ["公"], hiragana: "きみ", romanization: "kimi", meaning: "you (for male to female / among close friends)" },
       { kanjis: ["お前"], rareKanjis: ["御前"], hiragana: "おまえ", romanization: "omae", meaning: "you (for man to lovers / close friends / arrogant)" },
       { kanjis: ["貴方", "貴女", "貴男"], hiragana: "あなた", romanization: "anata", meaning: "you (polite, maybe impersonal)" },
@@ -112,8 +109,10 @@ export function appendPronouns(words: JapaneseWord[]) {
   if (jp.flashcardSettings.enablePronounsReflective) {
     words.push(
       ///
-      { kanjis: ["自分"], hiragana: "じぶん", romanization: "jibun", meaning: "myself / yourself / oneself / himself / herself" },
+      { kanjis: ["自分"], hiragana: "じぶん", romanization: "jibun", meaning: "myself / yourself / oneself / himself / herself", derivedMeanings: ["the speaker's side"] },
       { kanjis: ["自分たち", "自分達"], hiragana: "じぶんたち", romanization: "jibuntachi", meaning: "ourselves / themselves" },
+
+      { kanjis: ["相手"], hiragana: "あいて", romanization: "aite", meaning: "the other party", derivedMeanings: ["the listener's side"] },
     );
   }
 
