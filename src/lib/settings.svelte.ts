@@ -1,4 +1,4 @@
-import { cloneDeep } from "es-toolkit";
+import { cloneDeep, debounce } from "es-toolkit";
 import { onDestroy, onMount } from "svelte";
 import type { Settings, SettingsSchema, SettingValue } from "../pages/_touch-typing-practice/types";
 
@@ -6,10 +6,10 @@ import type { Settings, SettingsSchema, SettingValue } from "../pages/_touch-typ
 // caveat: native URLSearchParams has better performance over SvelteURLSearchParams
 const searchParams = new URLSearchParams(window.location.search);
 
-function updateURL() {
+const updateURL = debounce(() => {
   const paramStr = searchParams.toString();
   history.replaceState(null, "", paramStr ? `?${paramStr}` : location.pathname);
-}
+}, 100);
 
 function encodeSetting(value: string | number | boolean): string;
 function encodeSetting(value: string | number | boolean | (string | number | boolean)[]): string;

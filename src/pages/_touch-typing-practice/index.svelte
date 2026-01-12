@@ -23,7 +23,16 @@
 </script>
 
 <div class="flex min-h-dvh flex-col gap-3 px-4 pt-2 pb-6">
-  <h1 class="mt-3 mb-6 text-xl underline underline-offset-4">Touch Typing Practice</h1>
+  <h1>
+    <button
+      class="mt-3 mb-6 cursor-pointer text-xl underline underline-offset-4"
+      onclick={() => {
+        window.location.replace(window.location.pathname);
+      }}
+    >
+      Touch Typing Practice
+    </button>
+  </h1>
 
   <!-- settings -->
   <div class="flex items-center-safe gap-9">
