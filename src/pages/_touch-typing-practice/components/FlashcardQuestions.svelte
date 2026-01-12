@@ -44,6 +44,10 @@
       paramKey: "preferPinnedProb",
       defaultValue: 0.4,
     },
+    autoSpeak: {
+      paramKey: "autoSpeak",
+      defaultValue: false,
+    },
     pinWhenWrong: {
       paramKey: "pinWhenWrong",
       defaultValue: true,
@@ -137,6 +141,9 @@
       options = [];
       if (question !== undefined) {
         isQuestionPinned = pinnedIdxs.has(question.idx);
+        if (settings.autoSpeak) {
+          speech.speak(question?.pronunciation);
+        }
 
         // pick N from validWords without replacement & with predicate
 
@@ -186,38 +193,38 @@
 
 <div class="flex flex-col gap-6">
   <!-- settings -->
-  <div class="flex items-center-safe gap-9">
-    <div class="flex flex-col">
-      <span>show in question:</span>
-      <span>show in options:</span>
-    </div>
-
-    {#each schema as { label }, i}
+  <div class="flex flex-col gap-3">
+    <div class="flex items-center-safe gap-9 whitespace-nowrap">
       <div class="flex flex-col">
-        <CheckboxInput bind:checked={settings.questionSettings[i]} {label} />
-        <CheckboxInput bind:checked={settings.optionSettings[i]} {label} />
+        <span>Show in Questions:</span>
+        <span>Show in Options:</span>
       </div>
-    {/each}
 
-    <div class="flex flex-col">
-      <span class={["text-red-700", !isQuestionSettingsEmpty && "invisible"]}>
-        please choose at least one
-      </span>
-      <span class={["text-red-700", !isOptionSettingsEmpty && "invisible"]}>
-        please choose at least one
-      </span>
+      {#each schema as { label }, i}
+        <div class="flex flex-col">
+          <CheckboxInput bind:checked={settings.questionSettings[i]} {label} />
+          <CheckboxInput bind:checked={settings.optionSettings[i]} {label} />
+        </div>
+      {/each}
+
+      <div class="flex flex-col text-red-700">
+        <span class={[!isQuestionSettingsEmpty && "invisible"]}>Please choose at least one!</span>
+        <span class={[!isOptionSettingsEmpty && "invisible"]}>Please choose at least one!</span>
+      </div>
     </div>
-  </div>
-  <div class="flex items-center-safe gap-9">
+
+    <CheckboxInput bind:checked={settings.autoSpeak} label="Auto Speak" />
     <NumericInput bind:value={settings.numOptions} label="Number of Options" min={1} />
-    <NumericInput
-      bind:value={settings.preferPinnedProb}
-      label="Prefer Pinned Probability"
-      min={0}
-      max={1}
-      step={0.1}
-    />
-    <CheckboxInput bind:checked={settings.pinWhenWrong} label="Auto Pin When Wrong" />
+    <div class="flex items-center-safe gap-9">
+      <NumericInput
+        bind:value={settings.preferPinnedProb}
+        label="Prefer Pinned Probability"
+        min={0}
+        max={1}
+        step={0.1}
+      />
+      <CheckboxInput bind:checked={settings.pinWhenWrong} label="Auto Pin When Wrong" />
+    </div>
   </div>
 
   <!-- question and options -->
