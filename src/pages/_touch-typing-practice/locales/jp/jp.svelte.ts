@@ -27,7 +27,7 @@ import { appendVerbsDescriptive } from "./words-verbs-descriptive.svelte";
 
 export const jp = new (class {
   SETTINGS_SCHEMA = {
-    mode: { paramKey: "mode", defaultValue: <"Typing" | "Gojuon Table" | "Flashcards">"Typing" },
+    mode: { paramKey: "mode", defaultValue: <"typing" | "gojuonTable" | "flashcards">"typing" },
   };
   settings = $state(initSettings(this.SETTINGS_SCHEMA));
 

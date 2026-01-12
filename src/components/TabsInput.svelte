@@ -1,13 +1,13 @@
-<script lang="ts" generics="const Options extends string[]">
+<script lang="ts" generics="const LabelsDict extends { [K: string]: string}">
   let {
     value = $bindable(),
     label,
-    options,
+    labelsDict,
     disabled,
   }: {
-    value: Options[number];
+    value: keyof LabelsDict;
     label: string;
-    options: Options;
+    labelsDict: LabelsDict;
     disabled?: boolean;
   } = $props();
 </script>
@@ -15,16 +15,16 @@
 <div class="flex items-center-safe">
   <span class="mr-3">{label}:</span>
 
-  {#each options as option (option)}
+  {#each Object.entries(labelsDict) as [optionValue, label] (optionValue)}
     <button
       class={[
         "cursor-pointer px-2 py-1 ring transition-all duration-300 ease-out hover:opacity-100",
-        option !== value && "opacity-50",
+        value !== optionValue && "opacity-50",
       ]}
-      onclick={() => (value = option)}
+      onclick={() => (value = optionValue)}
       {disabled}
     >
-      {option}
+      {label}
     </button>
   {/each}
 </div>

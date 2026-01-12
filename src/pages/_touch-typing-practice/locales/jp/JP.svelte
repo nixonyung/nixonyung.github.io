@@ -15,16 +15,20 @@
   <TabsInput
     bind:value={jp.settings.mode}
     label="Select Mode"
-    options={["Typing", "Gojuon Table", "Flashcards"]}
+    labelsDict={{
+      typing: "Typing",
+      gojuonTable: "Gojuon Table",
+      flashcards: "Flashcards",
+    }}
   />
 
-  {#if jp.settings.mode === "Typing"}
+  {#if jp.settings.mode === "typing"}
     <GojuonTable />
     <TypingQuestions letters={jp.letters} keymap={jp.keymap} />
-  {:else if jp.settings.mode === "Gojuon Table"}
+  {:else if jp.settings.mode === "gojuonTable"}
     <GojuonTable />
     <GojuonQuestions gojuons={jp.gojuons} />
-  {:else if jp.settings.mode === "Flashcards"}
+  {:else if jp.settings.mode === "flashcards"}
     <FlashcardSettingsJP />
     <FlashcardQuestions
       words={jp.words}
