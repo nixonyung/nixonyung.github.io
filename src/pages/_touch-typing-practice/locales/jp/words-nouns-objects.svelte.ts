@@ -32,6 +32,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["暑さ"], hiragana: "あつさ", romanization: "atsusa", meaning: "hotness" },
 
       // colors
+      // TODO: to adjective
       { kanjis: ["白"], hiragana: "しろ", romanization: "shiro", meaning: "white" },
       { kanjis: ["灰色"], hiragana: "はいいろ", romanization: "haiiro", meaning: "gray" },
       { kanjis: ["黒"], hiragana: "くろ", romanization: "kuro", meaning: "black" },
@@ -44,7 +45,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["青"], hiragana: "あお", romanization: "ao", meaning: "blue" },
       { kanjis: ["紫"], hiragana: "むらさき", romanization: "murasaki", meaning: "purple" },
       { katakana: "ピンク", romanization: "pinku", meaning: "pink" },
-      { kanjis: ["桃色"], hiragana: "ももいろ", romanization: "momoiro", meaning: "peach" },
+      { kanjis: ["桃色"], hiragana: "ももいろ", romanization: "momoiro", meaning: "peach (color)" },
     );
   }
 
@@ -98,7 +99,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["服"], hiragana: "ふく", romanization: "fuku", meaning: "clothes" },
       { kanjis: ["衣類"], hiragana: "いるい", romanization: "irui", meaning: "clothes" },
       { katakana: "シャツ", romanization: "shatsu", meaning: "shirt" },
-      { katakana: "ボタン", romanization: "botan", meaning: "button (clothing / machinewry)" },
+      { katakana: "ボタン", romanization: "botan", meaning: "button (clothing / machinery)" },
 
       { katakana: "トイレットペーパー", romanization: "toirettopeepaa", meaning: "toilet paper" },
 
