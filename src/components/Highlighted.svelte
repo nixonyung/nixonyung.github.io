@@ -24,11 +24,11 @@
     "relative flex w-fit gap-1 px-3 py-1",
     vertical ? "flex-col items-start" : "items-center-safe",
     variant === "primary-lighter"
-      ? "bg-primary-lighter/50"
+      ? "bg-primary-lighter/75"
       : variant === "error"
         ? "bg-red-700/50"
         : "",
-    onclick && !disabled && "cursor-pointer hover:bg-primary-lighter",
+    onclick && !disabled && "cursor-pointer hover:bg-primary-lighter hover:brightness-150",
     classList,
   ]}
   {onclick}

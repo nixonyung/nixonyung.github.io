@@ -9,6 +9,8 @@
   import { SvelteSet } from "svelte/reactivity";
   import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
 
+  const USE_PINNED_PROB = 0.4;
+
   const {
     words,
     wordToPronunciationFn,
@@ -40,12 +42,12 @@
       paramKey: "numOptions",
       defaultValue: 6,
     },
-    preferPinnedProb: {
-      paramKey: "preferPinnedProb",
-      defaultValue: 0.4,
+    onlyPinned: {
+      paramKey: "onlyPinned",
+      defaultValue: false,
     },
-    autoSpeak: {
-      paramKey: "autoSpeak",
+    autoReadQuestion: {
+      paramKey: "autoReadQuestion",
       defaultValue: false,
     },
     pinWhenWrong: {
@@ -131,7 +133,7 @@
   function nextQuestion() {
     untrack(() => {
       question = (
-        pinnedIdxs.size && random(1) < settings.preferPinnedProb
+        pinnedIdxs.size && (settings.onlyPinned || random(1) < USE_PINNED_PROB)
           ? pinnedQuestionsQueue
           : questionsQueue
       ).next();
@@ -141,7 +143,7 @@
       options = [];
       if (question !== undefined) {
         isQuestionPinned = pinnedIdxs.has(question.idx);
-        if (settings.autoSpeak) {
+        if (settings.autoReadQuestion) {
           speech.speak(question?.pronunciation);
         }
 
@@ -191,43 +193,35 @@
   });
 </script>
 
-<div class="flex flex-col gap-6">
+<div>
+  <hr class="mt-3 opacity-50" />
+
   <!-- settings -->
-  <div class="flex flex-col gap-3">
-    <div class="flex items-center-safe gap-9 whitespace-nowrap">
-      <div class="flex flex-col">
-        <span>Show in Questions:</span>
-        <span>Show in Options:</span>
-      </div>
-
-      {#each schema as { label }, i}
-        <div class="flex flex-col">
-          <CheckboxInput bind:checked={settings.questionSettings[i]} {label} />
-          <CheckboxInput bind:checked={settings.optionSettings[i]} {label} />
-        </div>
-      {/each}
-
-      <div class="flex flex-col text-red-700">
-        <span class={[!isQuestionSettingsEmpty && "invisible"]}>Please choose at least one!</span>
-        <span class={[!isOptionSettingsEmpty && "invisible"]}>Please choose at least one!</span>
-      </div>
+  <div class="mt-6 flex items-center-safe gap-9 whitespace-nowrap">
+    <div class="flex flex-col">
+      <span>Show in Questions:</span>
+      <span>Show in Options:</span>
     </div>
 
-    <CheckboxInput bind:checked={settings.autoSpeak} label="Auto Speak" />
-    <NumericInput bind:value={settings.numOptions} label="Number of Options" min={1} />
-    <div class="flex items-center-safe gap-9">
-      <NumericInput
-        bind:value={settings.preferPinnedProb}
-        label="Prefer Pinned Probability"
-        min={0}
-        max={1}
-        step={0.1}
-      />
-      <CheckboxInput bind:checked={settings.pinWhenWrong} label="Auto Pin When Wrong" />
+    {#each schema as { label }, i}
+      <div class="flex flex-col">
+        <CheckboxInput bind:checked={settings.questionSettings[i]} {label} />
+        <CheckboxInput bind:checked={settings.optionSettings[i]} {label} />
+      </div>
+    {/each}
+
+    <div class="flex flex-col text-red-700">
+      <span class={[!isQuestionSettingsEmpty && "invisible"]}>Please choose at least one!</span>
+      <span class={[!isOptionSettingsEmpty && "invisible"]}>Please choose at least one!</span>
     </div>
   </div>
+  <div class="mt-3 flex flex-col gap-1.5">
+    <CheckboxInput bind:checked={settings.autoReadQuestion} label="Auto Read Question" />
+    <CheckboxInput bind:checked={settings.pinWhenWrong} label="Auto Pin When Wrong" />
+    <CheckboxInput bind:checked={settings.onlyPinned} label="Only Use Pinned (if any)" />
+    <NumericInput bind:value={settings.numOptions} label="Number of Options" min={1} />
+  </div>
 
-  <!-- question and options -->
   {#snippet item(values: (string | string[])[])}
     {#each values as content}
       {#if typeof content === "string"}
@@ -243,112 +237,114 @@
   {/snippet}
 
   {#if !isQuestionSettingsEmpty && !isOptionSettingsEmpty}
-    <div class="flex flex-col gap-6">
-      <!-- question -->
-      <div class="flex items-center-safe gap-3">
-        <span class="underline">Question:</span>
-        {#if question}
-          <Highlighted
-            vertical
-            class={[speech.voice && "pr-6", speech.isSpeaking && "cursor-wait"]}
-            onclick={speech.voice
-              ? () => {
-                  showRomanization = true;
-                  speech.speak(question!.pronunciation);
-                }
-              : undefined}
-          >
-            {@render item(question.questionKey)}
+    <hr class="mt-6 opacity-50" />
 
-            <!-- pronunciation indicator -->
-            {#if question!.pronunciation && speech.voice}
-              <span
-                class="absolute top-1 right-1 icon-[heroicons--speaker-wave-solid] text-xs opacity-80"
-              ></span>
-            {/if}
-          </Highlighted>
+    <!-- question -->
+    <div class="mt-9 flex items-center-safe">
+      <span class="underline">Question:</span>
+      {#if question}
+        <Highlighted
+          vertical
+          class={["ml-6", speech.voice && "pr-6", speech.isSpeaking && "cursor-wait"]}
+          onclick={speech.voice
+            ? () => {
+                showRomanization = true;
+                speech.speak(question!.pronunciation);
+              }
+            : undefined}
+        >
+          {@render item(question.questionKey)}
 
-          {#if showRomanization}
-            {question.romanization}
+          <!-- pronunciation indicator -->
+          {#if question!.pronunciation && speech.voice}
+            <span
+              class="absolute top-1 right-1 icon-[heroicons--speaker-wave-solid] text-xs opacity-80"
+            ></span>
           {/if}
+        </Highlighted>
 
-          <div class="group/list relative cursor-default p-3">
-            <button
-              title="Pin this question."
-              class="cursor-pointer rounded-full px-2 py-1 text-primary-content hover:bg-primary-lighter"
-              onclick={() => {
-                if (isQuestionPinned) {
-                  pinnedIdxs.delete(question!.idx);
-                } else {
-                  pinnedIdxs.add(question!.idx);
-                }
-              }}
-            >
-              {#if isQuestionPinned}
-                <span class="icon-[icon-park-solid--pin]"></span>
-              {:else}
-                <span class="icon-[icon-park-outline--pin] opacity-75"></span>
-              {/if}
-            </button>
-
-            {#if pinnedIdxs.size}
-              <div
-                class="invisible absolute top-0 right-0 z-10 flex translate-x-full translate-y-2 flex-col divide-y rounded bg-primary whitespace-nowrap ring group-hover/list:visible"
-              >
-                {#each pinnedQuestions as { questionKey, answerKey, romanization, idx }}
-                  <button
-                    class="group/item flex cursor-pointer items-center-safe gap-1.5 px-2 py-1.5"
-                    onclick={() => {
-                      pinnedIdxs.delete(idx);
-                    }}
-                  >
-                    <div class="flex flex-col items-start">
-                      <div class="flex gap-4.5">
-                        {@render item(questionKey)}
-                        {@render item(answerKey)}
-                      </div>
-                      {#if romanization}
-                        <span>{romanization}</span>
-                      {/if}
-                    </div>
-                    <div class="grow"></div>
-                    <span
-                      class="invisible icon-[icon-park-outline--close-small] opacity-75 group-hover/item:visible"
-                    ></span>
-                  </button>
-                {/each}
-              </div>
-            {/if}
-          </div>
+        {#if showRomanization}
+          <span class="ml-3">{question.romanization}</span>
         {/if}
-      </div>
 
-      <span>Select the most appropriate one:</span>
-
-      <!-- options -->
-      <div class="flex flex-col gap-2">
-        {#each options as option, i}
-          <Highlighted
-            vertical
-            variant={isWrongOptions[i] ? "error" : "primary-lighter"}
+        <div class="group/list relative ml-6 cursor-default p-3">
+          <button
+            title="Pin this question."
+            class="grid size-10 cursor-pointer place-items-center-safe rounded-full text-primary-content hover:bg-primary-lighter"
             onclick={() => {
-              if (!question) return;
-
-              if (isEqual(option, question.answerKey)) {
-                nextQuestion();
+              if (isQuestionPinned) {
+                pinnedIdxs.delete(question!.idx);
               } else {
-                isWrongOptions[i] = true;
-                if (settings.pinWhenWrong) {
-                  pinnedIdxs.add(question.idx);
-                }
+                pinnedIdxs.add(question!.idx);
               }
             }}
-            disabled={isWrongOptions[i]}
           >
-            {@render item(option)}
-          </Highlighted>
-        {/each}
-      </div>
+            {#if isQuestionPinned}
+              <span class="icon-[icon-park-solid--pin]"></span>
+            {:else}
+              <span class="icon-[icon-park-outline--pin] opacity-75"></span>
+            {/if}
+          </button>
+
+          {#if pinnedIdxs.size}
+            <div
+              class="invisible absolute top-0 right-0 z-10 flex translate-x-full translate-y-2 flex-col divide-y rounded bg-primary whitespace-nowrap ring group-hover/list:visible"
+            >
+              {#each pinnedQuestions as { questionKey, answerKey, romanization, idx }}
+                <button
+                  class="group/item flex cursor-pointer items-center-safe gap-1.5 px-2 py-1.5"
+                  onclick={() => {
+                    pinnedIdxs.delete(idx);
+                  }}
+                >
+                  <div class="flex flex-col items-start">
+                    <div class="flex gap-4.5">
+                      {@render item(questionKey)}
+                      {@render item(answerKey)}
+                    </div>
+                    {#if romanization}
+                      <span>{romanization}</span>
+                    {/if}
+                  </div>
+                  <div class="grow"></div>
+                  <span
+                    class="invisible icon-[icon-park-outline--close-small] opacity-75 group-hover/item:visible"
+                  ></span>
+                </button>
+              {/each}
+            </div>
+          {/if}
+        </div>
+      {/if}
+    </div>
+
+    <div class="mt-9 flex flex-col gap-1.5">
+      <span>Select the most appropriate one:</span>
+    </div>
+
+    <!-- options -->
+    <div class="mt-6 flex flex-col gap-2">
+      {#each options as option, i}
+        <Highlighted
+          vertical
+          variant={isWrongOptions[i] ? "error" : "primary-lighter"}
+          onclick={() => {
+            if (!question) return;
+
+            if (isEqual(option, question.answerKey)) {
+              nextQuestion();
+            } else {
+              isWrongOptions[i] = true;
+              if (settings.pinWhenWrong) {
+                pinnedIdxs.add(question.idx);
+              }
+            }
+          }}
+          disabled={isWrongOptions[i]}
+        >
+          {@render item(option)}
+        </Highlighted>
+      {/each}
     </div>
   {/if}
 

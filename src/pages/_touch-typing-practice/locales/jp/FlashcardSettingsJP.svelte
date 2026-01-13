@@ -40,7 +40,7 @@
   }}
 />
 
-<div class="flex flex-col flex-wrap gap-3">
+<div class="flex max-w-dvw flex-col gap-3">
   <div class="flex items-start gap-6">
     <Highlighted
       onclick={() => {
@@ -552,6 +552,7 @@
   <div class="flex items-start gap-6">
     <Highlighted
       vertical
+      class="whitespace-nowrap"
       onclick={(ev) => {
         if (ev.target !== ev.currentTarget) return;
 
@@ -750,6 +751,7 @@
   <div class="flex items-center-safe gap-6">
     <Highlighted
       vertical
+      class="whitespace-nowrap"
       onclick={(ev) => {
         if (ev.target !== ev.currentTarget) return;
 
@@ -770,7 +772,7 @@
     <CheckboxInput bind:checked={jp.flashcardSettings.enableAdjectives} label="(all)" />
   </div>
 
-  <div class="flex items-start gap-6">
+  <div class="flex items-center-safe gap-6">
     <Highlighted
       onclick={() => {
         if (
@@ -825,7 +827,7 @@
           !jp.flashcardSettings.enableExpressionsSurprised ||
           !jp.flashcardSettings.enableExpressionsMisc
         ) {
-          jp.flashcardSettings.enableExpressionsAppellations= true;
+          jp.flashcardSettings.enableExpressionsAppellations = true;
           jp.flashcardSettings.enableExpressionsGreetingsAndClosings = true;
           jp.flashcardSettings.enableExpressionsSoftening = true;
           jp.flashcardSettings.enableExpressionsEmphasis = true;
@@ -834,7 +836,7 @@
           jp.flashcardSettings.enableExpressionsSurprised = true;
           jp.flashcardSettings.enableExpressionsMisc = true;
         } else {
-          jp.flashcardSettings.enableExpressionsAppellations= false;
+          jp.flashcardSettings.enableExpressionsAppellations = false;
           jp.flashcardSettings.enableExpressionsGreetingsAndClosings = false;
           jp.flashcardSettings.enableExpressionsSoftening = false;
           jp.flashcardSettings.enableExpressionsEmphasis = false;

@@ -5,12 +5,16 @@
 </script>
 
 <script lang="ts">
+  import type { ClassValue } from "svelte/elements";
+
   import ReferenceLink from "./ReferenceLink.svelte";
 
   let {
     references,
+    class: classList,
   }: {
     references: References;
+    class?: ClassValue;
   } = $props();
 </script>
 
@@ -29,6 +33,6 @@
   </ul>
 {/snippet}
 
-<div>
+<div class={classList}>
   {@render list(references)}
 </div>

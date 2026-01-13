@@ -1,5 +1,6 @@
 <script lang="ts">
   import { clamp, round } from "es-toolkit";
+  import type { ClassValue } from "svelte/elements";
 
   let {
     value = $bindable(),
@@ -7,6 +8,7 @@
     min = -Infinity,
     max = Infinity,
     step = 1,
+    class: classList,
     disabled: disabledProp,
   }: {
     value: number;
@@ -14,6 +16,7 @@
     min?: number;
     max?: number;
     step?: number;
+    class?: ClassValue;
     disabled?: boolean;
   } = $props();
 
@@ -46,7 +49,7 @@
   onmouseup={() => (isMousedown = false)}
 />
 
-<div class="flex items-center-safe gap-1">
+<div class={["flex items-center-safe gap-1", classList]}>
   <button
     class="flex cursor-ew-resize items-center-safe gap-1"
     onmousedown={({ screenX }) => {
