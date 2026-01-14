@@ -11,6 +11,9 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["人生観"], hiragana: "じんせいかん", romanization: "jinseikan", meaning: "view of life" },
       { kanjis: ["見晴らし"], hiragana: "みはらし", romanization: "miharashi", meaning: "view" },
 
+      { kanjis: ["気持ち", "気持"], hiragana: "きもち", romanization: "kimochi", meaning: "feeling" },
+      { kanjis: ["気分"], hiragana: "きぶん", romanization: "kibun", meaning: "mood" },
+
       { kanjis: ["健康"], hiragana: "けんこう", romanization: "kenkou", meaning: "health" },
       { kanjis: ["長寿"], hiragana: "ちょうじゅ", romanization: "chouju", meaning: "longevity" },
       { kanjis: ["栄養", "営養"], hiragana: "えいよう", romanization: "eiyou", meaning: "nutrition" },

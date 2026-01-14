@@ -21,9 +21,14 @@ export function appendNounsObjects(words: JapaneseWord[]) {
 
   if (jp.flashcardSettings.enableNounsObjectsNature) {
     words.push(
+      { kanjis: ["天気"], hiragana: "てんき", romanization: "tenki", meaning: "weather" },
+
       { kanjis: ["雲"], hiragana: "くも", romanization: "kumo", meaning: "cloud" },
       { kanjis: ["海"], hiragana: "うみ", romanization: "umi", meaning: "sea" },
       { kanjis: ["雨"], hiragana: "あめ", romanization: "ame", meaning: "rain" },
+
+      { kanjis: ["夕暮れ"], hiragana: "ゆうぐれ", romanization: "yuugure", meaning: "twilight" },
+      { kanjis: ["夕陽"], hiragana: "せきよう", romanization: "sekiyou", meaning: "the setting sun" },
 
       { kanjis: ["花", "華"], hiragana: "はな", romanization: "hana", meaning: "flower" },
       { kanjis: ["種"], hiragana: "たね", romanization: "tane", meaning: "seed" },

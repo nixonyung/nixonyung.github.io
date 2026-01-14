@@ -4,8 +4,8 @@ import { jp } from "./jp.svelte";
 export function appendNounsVenues(words: JapaneseWord[]) {
   if (jp.flashcardSettings.enableNounsVenuesGeneric) {
     words.push(
-      { kanjis: ["地方"], hiragana: "ちほう", romanization: "chihou", meaning: "area / region" },
       { kanjis: ["場所"], hiragana: "ばしょ", romanization: "basho", meaning: "place" },
+      { kanjis: ["地方"], hiragana: "ちほう", romanization: "chihou", meaning: "area / region" },
 
       { kanjis: ["名所"], hiragana: "などころ", romanization: "nadokoro", meaning: "famous place" },
       { kanjis: ["地元"], hiragana: "じもと", romanization: "jimoto", meaning: "home area", exampleUsages: ["地元の"] },

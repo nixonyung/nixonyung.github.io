@@ -51,7 +51,8 @@ export function appendExpressions(words: JapaneseWord[]) {
       // TODO: yone
       { hiragana: "なあ", romanization: "naa", meaning: '("I think") - wow / I wonder (casual)', exampleUsages: ["[Clause] なあ。"] },
 
-      { hiragana: "ちょっと", rareKanjis: ["一寸"], katakana: "チョット", romanization: "chotto", meaning: "a bit (casual, intensity)", exampleUsages: ["ちょっと難し"] },
+      { hiragana: "ちょっと", rareKanjis: ["一寸"], katakana: "チョット", romanization: "chotto", meaning: "a bit (casual, intensity)", exampleUsages: ["ちょっと難し", "あとちょっと (just a bit more)"] },
+      { hiragana: "どうも", romanization: "doumo", meaning: "very", exampleUsages: ["どうも ありがとう ございます (thank you very much)"] },
 
       { kanjis: ["多分"], hiragana: "たぶん", romanization: "tabun", meaning: "probably" },
 
@@ -133,7 +134,6 @@ export function appendExpressions(words: JapaneseWord[]) {
 
   if (jp.flashcardSettings.enableExpressionsMisc) {
     words.push(
-      { hiragana: "あとちょっと", romanization: "atochotto", meaning: "just a little bit more" },
       { hiragana: "もうありません", romanization: "mou arimasen", meaning: "aren't any left" },
 
       { hiragana: "どれにする?", romanization: "dore ni suru", meaning: "Which one are you going for?" },
