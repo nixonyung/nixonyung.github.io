@@ -1,3 +1,7 @@
+<script lang="ts" module>
+  type Entry = string | string[];
+</script>
+
 <script lang="ts" generics="TWord extends object">
   import CheckboxInput from "@/components/CheckboxInput.svelte";
   import Highlighted from "@/components/Highlighted.svelte";
@@ -8,8 +12,6 @@
   import { untrack } from "svelte";
   import { SvelteSet } from "svelte/reactivity";
   import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
-
-  const USE_PINNED_PROB = 0.4;
 
   const {
     words,
@@ -22,7 +24,7 @@
     wordToRomanizationFn?: (word: TWord) => string | undefined;
     schema: {
       label: string;
-      valueFn: (word: TWord) => string | string[] | undefined;
+      valueFn: (word: TWord) => Entry | undefined;
       defaultPosition?: "question" | "option";
     }[];
   } = $props();
@@ -38,25 +40,20 @@
       defaultValue: schema.map(({ defaultPosition }) => defaultPosition === "option"),
       arrayType: "boolean[]" as const,
     },
-    numOptions: {
-      paramKey: "numOptions",
-      defaultValue: 6,
-    },
-    onlyPinned: {
-      paramKey: "onlyPinned",
-      defaultValue: false,
-    },
-    autoReadQuestion: {
-      paramKey: "autoReadQuestion",
-      defaultValue: false,
-    },
-    pinWhenWrong: {
-      paramKey: "pinWhenWrong",
-      defaultValue: true,
-    },
+    numOptions: { paramKey: "numOptions", defaultValue: 6 },
+    onlyPinned: { paramKey: "onlyPinned", defaultValue: false },
+    onlyUnpinned: { paramKey: "onlyUnpinned", defaultValue: false },
+    autoReadQuestion: { paramKey: "autoReadQuestion", defaultValue: false },
+    pinWhenWrong: { paramKey: "pinWhenWrong", defaultValue: true },
   };
   let settings = $state(initSettings(SETTINGS_SCHEMA));
   useSyncSettings(SETTINGS_SCHEMA, settings);
+  $effect.pre(() => {
+    if (settings.onlyPinned) untrack(() => (settings.onlyUnpinned = false));
+  });
+  $effect.pre(() => {
+    if (settings.onlyUnpinned) untrack(() => (settings.onlyPinned = false));
+  });
 
   const isQuestionSettingsEmpty = $derived(!settings.questionSettings.some((is) => is));
   const isOptionSettingsEmpty = $derived(!settings.optionSettings.some((is) => is));
@@ -73,31 +70,33 @@
 
   type Question = {
     word: TWord;
-    questionKey: (string | string[])[];
-    answerKey: (string | string[])[];
+    questionEntries: Entry[];
+    answerEntries: Entry[];
     pronunciation?: string;
     romanization?: string;
     idx: number;
   };
-  function key(word: TWord, settings: boolean[]) {
-    const key = range(settings.length)
+  function wordToEntries(word: TWord, settings: boolean[]) {
+    const entries = range(settings.length)
       .filter((i) => settings[i])
       .map((i) => schema[i].valueFn(word));
-    return key.includes(undefined) ? undefined : key;
+    return entries.includes(undefined)
+      ? undefined
+      : <Exclude<ReturnType<(typeof schema)[number]["valueFn"]>, undefined>[]>entries;
   }
 
-  const validWords = $derived.by(() => {
+  const allQuestions = $derived.by(() => {
     const result: Question[] = [];
 
     for (const word of words) {
-      const questionKey = key(word, settings.questionSettings);
-      const answerKey = key(word, settings.optionSettings);
-      if (questionKey === undefined || answerKey === undefined) continue;
+      const questionEntries = wordToEntries(word, settings.questionSettings);
+      const answerEntries = wordToEntries(word, settings.optionSettings);
+      if (questionEntries === undefined || answerEntries === undefined) continue;
 
-      result.push(<Question>{
+      result.push({
         word,
-        questionKey,
-        answerKey,
+        questionEntries,
+        answerEntries,
         pronunciation: wordToPronunciationFn?.(word),
         romanization: wordToRomanizationFn?.(word),
         idx: result.length,
@@ -106,87 +105,97 @@
 
     return result;
   });
-  let questionsQueue = $derived(new QuestionQueue(validWords));
-  let question: Question | undefined = $state();
-  let isQuestionPinned = $state(false);
+
   let pinnedIdxs = $state(new SvelteSet<number>());
-  let pinnedQuestions = $derived(Array.from(pinnedIdxs).map((idx) => validWords[idx]));
-  let pinnedQuestionsQueue = $derived(new QuestionQueue(pinnedQuestions));
-  let options: (string | string[])[][] = $state([]);
-  let isWrongOptions: boolean[] = $state([]);
-  let showRomanization = $state(false);
+  let questionsPools = $derived.by(() => {
+    const pinned: Question[] = [];
+    const unpinned: Question[] = [];
+
+    for (const question of allQuestions) {
+      (pinnedIdxs.has(question.idx) ? pinned : unpinned).push(question);
+    }
+
+    return { pinned, unpinned };
+  });
+  let unpinnedQuestionsQueue = $derived(new QuestionQueue(questionsPools.unpinned));
+  let pinnedQuestionsQueue = $derived(new QuestionQueue(questionsPools.pinned));
   $effect.pre(() => {
-    validWords;
+    allQuestions;
 
     pinnedIdxs = new SvelteSet<number>();
   });
-  $effect.pre(() => {
-    if (!question) return;
 
-    if (pinnedIdxs.has(question.idx)) {
-      isQuestionPinned = true;
-    } else {
-      isQuestionPinned = false;
-    }
+  let question: Question | undefined = $state();
+  let showRomanization = $state(false);
+  let isQuestionPinned = $state(false);
+  $effect.pre(() => {
+    question;
+
+    showRomanization = false;
+    isQuestionPinned = question ? pinnedIdxs.has(question.idx) : false;
   });
+
+  let options: Entry[][] = $state([]);
+  let isWrongOptions: boolean[] = $state([]);
 
   function nextQuestion() {
     untrack(() => {
-      question = (
-        pinnedIdxs.size && (settings.onlyPinned || random(1) < USE_PINNED_PROB)
-          ? pinnedQuestionsQueue
-          : questionsQueue
-      ).next();
-      isQuestionPinned = false;
-      showRomanization = false;
+      if (!allQuestions.length) {
+        question = undefined;
+      } else if (settings.onlyPinned && questionsPools.pinned.length) {
+        question = pinnedQuestionsQueue.next();
+      } else if (settings.onlyUnpinned && questionsPools.unpinned.length) {
+        question = unpinnedQuestionsQueue.next();
+      } else if (random(allQuestions.length) < questionsPools.unpinned.length) {
+        question = unpinnedQuestionsQueue.next();
+      } else {
+        question = pinnedQuestionsQueue.next();
+      }
 
       options = [];
       if (question !== undefined) {
-        isQuestionPinned = pinnedIdxs.has(question.idx);
         if (settings.autoReadQuestion) {
           speech.speak(question?.pronunciation);
         }
 
-        // pick N from validWords without replacement & with predicate
+        // pick N randomly (without replacement) from allQuestions with filtering
 
-        const answerKeyStrs = new Set();
+        function entriesToStr(entries: Entry[]) {
+          return entries.flat().join("|");
+        }
+        const optionStrs = new Set([entriesToStr(question.answerEntries)]);
 
         // Fisher-Yates shuffle, from left-to-right, running on indices to avoid copying
-        const indices = range(validWords.length);
+        // (ref.) https://github.com/toss/es-toolkit/blob/3d75a713169c2db6fffe04121bc73ac0363d741e/src/array/shuffle.ts
+        const indices = range(allQuestions.length);
         let i = 0;
         while (options.length < settings.numOptions - 1 && i < indices.length) {
-          // (ref.) https://github.com/toss/es-toolkit/blob/3d75a713169c2db6fffe04121bc73ac0363d741e/src/array/shuffle.ts
           const j = randomInt(i, indices.length);
           [indices[i], indices[j]] = [indices[j], indices[i]];
-          const word = validWords[indices[i]];
+          const word = allQuestions[indices[i]];
           i++;
 
-          // filter out words that could be considered as answers:
-          // (the real answer will be added at the end)
-          if (
-            // answers from other same-looking questions
-            isEqual(word.questionKey, question.questionKey) ||
-            // same-looking answers from other questions
-            isEqual(word.answerKey, question.answerKey)
-          )
-            continue;
+          // filter out answers from other same-looking questions
+          if (isEqual(word.questionEntries, question.questionEntries)) continue;
 
-          // filter out duplicated options
-          const answerKeyStr = word.answerKey.flat().join("|");
-          if (answerKeyStrs.has(answerKeyStr)) continue;
-          answerKeyStrs.add(answerKeyStr);
+          // filter out same-looking options
+          const answerEntriesStr = entriesToStr(word.answerEntries);
+          if (optionStrs.has(answerEntriesStr)) continue;
 
-          options.push(word.answerKey);
+          options.push(word.answerEntries);
+          optionStrs.add(answerEntriesStr);
         }
 
-        // add the real answer
-        options.splice(randomInt(options.length + 1), 0, question.answerKey);
+        // add the real answer at random position
+        options.splice(randomInt(options.length + 1), 0, question.answerEntries);
       }
       isWrongOptions = Array(options.length).fill(false);
     });
   }
   $effect.pre(() => {
-    validWords;
+    allQuestions;
+    settings.onlyPinned;
+    settings.onlyUnpinned;
     settings.numOptions;
 
     nextQuestion();
@@ -218,17 +227,20 @@
   <div class="mt-3 flex flex-col gap-1.5">
     <CheckboxInput bind:checked={settings.autoReadQuestion} label="Auto Read Question" />
     <CheckboxInput bind:checked={settings.pinWhenWrong} label="Auto Pin When Wrong" />
-    <CheckboxInput bind:checked={settings.onlyPinned} label="Only Use Pinned (if any)" />
+    <div class="flex gap-9">
+      <CheckboxInput bind:checked={settings.onlyPinned} label="Only Use Pinned (if any)" />
+      <CheckboxInput bind:checked={settings.onlyUnpinned} label="Only Use Unpinned (if any)" />
+    </div>
     <NumericInput bind:value={settings.numOptions} label="Number of Options" min={1} />
   </div>
 
-  {#snippet item(values: (string | string[])[])}
-    {#each values as content}
-      {#if typeof content === "string"}
-        <span>{content}</span>
-      {:else if Array.isArray(content) && content.length}
+  {#snippet entries(entries: Entry[])}
+    {#each entries as entry}
+      {#if typeof entry === "string"}
+        <span>{entry}</span>
+      {:else if Array.isArray(entry) && entry.length}
         <div class="flex flex-col items-start text-xs">
-          {#each content as text}
+          {#each entry as text}
             <span>{text}</span>
           {/each}
         </div>
@@ -253,7 +265,7 @@
               }
             : undefined}
         >
-          {@render item(question.questionKey)}
+          {@render entries(question.questionEntries)}
 
           <!-- pronunciation indicator -->
           {#if question!.pronunciation && speech.voice}
@@ -290,7 +302,7 @@
             <div
               class="invisible absolute top-0 right-0 z-10 flex translate-x-full translate-y-2 flex-col divide-y rounded bg-primary whitespace-nowrap ring group-hover/list:visible"
             >
-              {#each pinnedQuestions as { questionKey, answerKey, romanization, idx }}
+              {#each questionsPools.pinned as { questionEntries, answerEntries, romanization, idx }}
                 <button
                   class="group/item flex cursor-pointer items-center-safe gap-1.5 px-2 py-1.5"
                   onclick={() => {
@@ -299,8 +311,8 @@
                 >
                   <div class="flex flex-col items-start">
                     <div class="flex gap-4.5">
-                      {@render item(questionKey)}
-                      {@render item(answerKey)}
+                      {@render entries(questionEntries)}
+                      {@render entries(answerEntries)}
                     </div>
                     {#if romanization}
                       <span>{romanization}</span>
@@ -331,7 +343,7 @@
           onclick={() => {
             if (!question) return;
 
-            if (isEqual(option, question.answerKey)) {
+            if (isEqual(option, question.answerEntries)) {
               nextQuestion();
             } else {
               isWrongOptions[i] = true;
@@ -342,7 +354,7 @@
           }}
           disabled={isWrongOptions[i]}
         >
-          {@render item(option)}
+          {@render entries(option)}
         </Highlighted>
       {/each}
     </div>
