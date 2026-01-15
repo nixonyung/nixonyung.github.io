@@ -3,7 +3,7 @@
   import Highlighted from "@/components/Highlighted.svelte";
   import KBD from "@/components/KBD.svelte";
   import NumericInput from "@/components/NumericInput.svelte";
-  import { emitKeydown } from "@/lib/emulated-events";
+  import { emitKeydown, onkeydown } from "@/lib/keyboard";
   import { QuestionQueue } from "@/lib/question-queue";
   import { speech } from "@/lib/speech.svelte";
   import { untrack } from "svelte";
@@ -66,30 +66,7 @@
 </script>
 
 <svelte:window
-  onkeydown={(ev) => {
-    const { key, ctrlKey, metaKey } = ev;
-
-    if (
-      // ignore refresh (Ctrl-r / Cmd-r)
-      ((ctrlKey || metaKey) && (key === "r" || key === "R")) ||
-      // use default behaviour when modifying settings
-      document.activeElement instanceof HTMLInputElement
-    ) {
-      return;
-    }
-
-    if (import.meta.env.DEV) {
-      console.log("onInput", key, "ctrl", ctrlKey);
-    }
-
-    if (document.activeElement instanceof HTMLElement) {
-      document.activeElement.blur();
-    }
-    if (key === " ") {
-      // prevent scrolling with Space
-      ev.preventDefault();
-    }
-
+  onkeydown={onkeydown(({ key, ctrlKey, metaKey }) => {
     if (allCorrect) {
       switch (key) {
         case "r":
@@ -111,7 +88,7 @@
             }
             break;
           case "Backspace":
-            if (ctrlKey) {
+            if (ctrlKey || metaKey) {
               inputs[inputs.length - 1] = "";
             } else {
               const lastInput = inputs[inputs.length - 1];
@@ -127,7 +104,7 @@
         }
       }
     }
-  }}
+  })}
 />
 
 <div class="flex flex-col gap-3">

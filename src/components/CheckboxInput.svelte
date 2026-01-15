@@ -19,16 +19,21 @@
 <WithTooltip {tooltip} {disabled}>
   <button
     class={[
-      "flex cursor-pointer items-center-safe gap-1 hover:brightness-150 hover:grayscale-50",
+      "flex items-center-safe gap-1",
       classList,
-      disabled && "line-through opacity-50",
+      !disabled
+        ? "cursor-pointer hover:brightness-150 hover:grayscale-50"
+        : "line-through opacity-50",
     ]}
     onclick={() => (checked = !checked)}
+    {disabled}
   >
     <span
       class={[
         "text-sm",
-        checked ? "icon-[icon-park-solid--check-one]" : "icon-[icon-park-outline--round]",
+        checked
+          ? "icon-[icon-park-solid--check-one]"
+          : "icon-[icon-park-outline--round] opacity-50",
       ]}
     >
     </span>

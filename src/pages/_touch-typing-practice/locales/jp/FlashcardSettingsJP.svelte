@@ -550,95 +550,98 @@
     </div>
   </div>
   <div class="flex items-start gap-6">
-    <Highlighted
-      vertical
-      class="whitespace-nowrap"
-      onclick={(ev) => {
-        if (ev.target !== ev.currentTarget) return;
+    <div>
+      <Highlighted
+        class="whitespace-nowrap"
+        onclick={(ev) => {
+          if (ev.target !== ev.currentTarget) return;
 
-        if (
-          !jp.flashcardSettings.enableVerbsActionsBodily ||
-          !jp.flashcardSettings.enableVerbsActionsIntellectual ||
-          !jp.flashcardSettings.enableVerbsActionsOwnership ||
-          !jp.flashcardSettings.enableVerbsActionsTranspositional ||
-          !jp.flashcardSettings.enableVerbsActionsManeuvers ||
-          !jp.flashcardSettings.enableVerbsActionsActivities ||
-          !jp.flashcardSettings.enableVerbsDescriptiveBeing ||
-          !jp.flashcardSettings.enableVerbsDescriptiveExistence ||
-          !jp.flashcardSettings.enableVerbsDescriptiveProcesses ||
-          !jp.flashcardSettings.enableVerbsChangesEnvironmenal ||
-          !jp.flashcardSettings.enableVerbsChangesQuantitative ||
-          !jp.flashcardSettings.enableVerbsChangesResultative ||
-          !jp.flashcardSettings.enableAuxiliaryVerbs
-        ) {
-          jp.flashcardSettings.enableVerbsActionsBodily = true;
-          jp.flashcardSettings.enableVerbsActionsIntellectual = true;
-          jp.flashcardSettings.enableVerbsActionsOwnership = true;
-          jp.flashcardSettings.enableVerbsActionsTranspositional = true;
-          jp.flashcardSettings.enableVerbsActionsManeuvers = true;
-          jp.flashcardSettings.enableVerbsActionsActivities = true;
-          jp.flashcardSettings.enableVerbsDescriptiveBeing = true;
-          jp.flashcardSettings.enableVerbsDescriptiveExistence = true;
-          jp.flashcardSettings.enableVerbsDescriptiveProcesses = true;
-          jp.flashcardSettings.enableVerbsChangesEnvironmenal = true;
-          jp.flashcardSettings.enableVerbsChangesQuantitative = true;
-          jp.flashcardSettings.enableVerbsChangesResultative = true;
-          jp.flashcardSettings.enableAuxiliaryVerbs = true;
-        } else {
-          jp.flashcardSettings.enableVerbsActionsBodily = false;
-          jp.flashcardSettings.enableVerbsActionsIntellectual = false;
-          jp.flashcardSettings.enableVerbsActionsOwnership = false;
-          jp.flashcardSettings.enableVerbsActionsTranspositional = false;
-          jp.flashcardSettings.enableVerbsActionsManeuvers = false;
-          jp.flashcardSettings.enableVerbsActionsActivities = false;
-          jp.flashcardSettings.enableVerbsDescriptiveBeing = false;
-          jp.flashcardSettings.enableVerbsDescriptiveExistence = false;
-          jp.flashcardSettings.enableVerbsDescriptiveProcesses = false;
-          jp.flashcardSettings.enableVerbsChangesEnvironmenal = false;
-          jp.flashcardSettings.enableVerbsChangesQuantitative = false;
-          jp.flashcardSettings.enableVerbsChangesResultative = false;
-          jp.flashcardSettings.enableAuxiliaryVerbs = false;
-        }
-      }}
-    >
-      Verbs:
+          if (
+            !jp.flashcardSettings.enableVerbsActionsBodily ||
+            !jp.flashcardSettings.enableVerbsActionsIntellectual ||
+            !jp.flashcardSettings.enableVerbsActionsOwnership ||
+            !jp.flashcardSettings.enableVerbsActionsTranspositional ||
+            !jp.flashcardSettings.enableVerbsActionsManeuvers ||
+            !jp.flashcardSettings.enableVerbsActionsActivities ||
+            !jp.flashcardSettings.enableVerbsDescriptiveBeing ||
+            !jp.flashcardSettings.enableVerbsDescriptiveExistence ||
+            !jp.flashcardSettings.enableVerbsDescriptiveProcesses ||
+            !jp.flashcardSettings.enableVerbsChangesEnvironmenal ||
+            !jp.flashcardSettings.enableVerbsChangesQuantitative ||
+            !jp.flashcardSettings.enableVerbsChangesResultative ||
+            !jp.flashcardSettings.enableAuxiliaryVerbs
+          ) {
+            jp.flashcardSettings.enableVerbsActionsBodily = true;
+            jp.flashcardSettings.enableVerbsActionsIntellectual = true;
+            jp.flashcardSettings.enableVerbsActionsOwnership = true;
+            jp.flashcardSettings.enableVerbsActionsTranspositional = true;
+            jp.flashcardSettings.enableVerbsActionsManeuvers = true;
+            jp.flashcardSettings.enableVerbsActionsActivities = true;
+            jp.flashcardSettings.enableVerbsDescriptiveBeing = true;
+            jp.flashcardSettings.enableVerbsDescriptiveExistence = true;
+            jp.flashcardSettings.enableVerbsDescriptiveProcesses = true;
+            jp.flashcardSettings.enableVerbsChangesEnvironmenal = true;
+            jp.flashcardSettings.enableVerbsChangesQuantitative = true;
+            jp.flashcardSettings.enableVerbsChangesResultative = true;
+            jp.flashcardSettings.enableAuxiliaryVerbs = true;
+          } else {
+            jp.flashcardSettings.enableVerbsActionsBodily = false;
+            jp.flashcardSettings.enableVerbsActionsIntellectual = false;
+            jp.flashcardSettings.enableVerbsActionsOwnership = false;
+            jp.flashcardSettings.enableVerbsActionsTranspositional = false;
+            jp.flashcardSettings.enableVerbsActionsManeuvers = false;
+            jp.flashcardSettings.enableVerbsActionsActivities = false;
+            jp.flashcardSettings.enableVerbsDescriptiveBeing = false;
+            jp.flashcardSettings.enableVerbsDescriptiveExistence = false;
+            jp.flashcardSettings.enableVerbsDescriptiveProcesses = false;
+            jp.flashcardSettings.enableVerbsChangesEnvironmenal = false;
+            jp.flashcardSettings.enableVerbsChangesQuantitative = false;
+            jp.flashcardSettings.enableVerbsChangesResultative = false;
+            jp.flashcardSettings.enableAuxiliaryVerbs = false;
+          }
+        }}
+      >
+        Verbs:
+      </Highlighted>
 
-      <div class="flex items-center-safe gap-3">
-        <CheckboxInput
-          bind:checked={jp.flashcardSettings.enableTransitiveVerbs}
-          label="Transitive 他動詞"
-          tooltip="usually use を"
-          disabled={allVerbsDisabled}
-        />
-        <CheckboxInput
-          bind:checked={jp.flashcardSettings.enableIntransitiveVerbs}
-          label="Intransitive 自動詞"
-          tooltip="usually use が/は/に/で"
-          disabled={allVerbsDisabled}
-        />
+      <div class="mt-1.5 flex flex-col gap-1.5 rounded p-1.5 whitespace-nowrap ring ring-primary-content/50">
+        <div class="flex items-center-safe gap-3">
+          <CheckboxInput
+            bind:checked={jp.flashcardSettings.enableTransitiveVerbs}
+            label="Transitive 他動詞"
+            tooltip="usually use を"
+            disabled={allVerbsDisabled}
+          />
+          <CheckboxInput
+            bind:checked={jp.flashcardSettings.enableIntransitiveVerbs}
+            label="Intransitive 自動詞"
+            tooltip="usually use が/は/に/で"
+            disabled={allVerbsDisabled}
+          />
+        </div>
+
+        <div class="flex items-center-safe gap-3">
+          <CheckboxInput
+            bind:checked={jp.flashcardSettings.enableGodanVerbs}
+            label="Godan 五段動詞"
+            tooltip="conjugates by changing the vowel of the ending う/く/ぐ/す/つ/ぬ/ぶ/む/る"
+            disabled={allVerbsDisabled}
+          />
+          <CheckboxInput
+            bind:checked={jp.flashcardSettings.enableIchidanVerbs}
+            label="Ichidan 一段動詞"
+            tooltip="conjugates by changing the ending る"
+            disabled={allVerbsDisabled}
+          />
+          <CheckboxInput
+            bind:checked={jp.flashcardSettings.enableIrregularVerbs}
+            label="Irregular 変格動詞"
+            tooltip="ends with する / くる"
+            disabled={allVerbsDisabled}
+          />
+        </div>
       </div>
-
-      <div class="flex items-center-safe gap-3">
-        <CheckboxInput
-          bind:checked={jp.flashcardSettings.enableGodanVerbs}
-          label="Godan 五段動詞"
-          tooltip="conjugates by changing the vowel of the ending う/く/ぐ/す/つ/ぬ/ぶ/む/る"
-          disabled={allVerbsDisabled}
-        />
-        <CheckboxInput
-          bind:checked={jp.flashcardSettings.enableIchidanVerbs}
-          label="Ichidan 一段動詞"
-          tooltip="conjugates by changing the ending る"
-          disabled={allVerbsDisabled}
-        />
-        <CheckboxInput
-          bind:checked={jp.flashcardSettings.enableIrregularVerbs}
-          label="Irregular 変格動詞"
-          tooltip="ends with する / くる"
-          disabled={allVerbsDisabled}
-        />
-      </div>
-    </Highlighted>
+    </div>
 
     <div class="flex flex-col gap-y-1.5">
       <div class="flex flex-wrap items-center-safe gap-x-3">
@@ -749,25 +752,29 @@
     </div>
   </div>
   <div class="flex items-center-safe gap-6">
-    <Highlighted
-      vertical
-      class="whitespace-nowrap"
-      onclick={(ev) => {
-        if (ev.target !== ev.currentTarget) return;
+    <div>
+      <Highlighted
+        class="whitespace-nowrap"
+        onclick={(ev) => {
+          if (ev.target !== ev.currentTarget) return;
 
-        if (!jp.flashcardSettings.enableAdjectives) {
-          jp.flashcardSettings.enableAdjectives = true;
-        } else {
-          jp.flashcardSettings.enableAdjectives = false;
-        }
-      }}
-    >
-      Adjectives:
-      <div class="flex items-center-safe gap-3">
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableIAdjectives} label="い-adj." disabled={allAdjsDisabled} />
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableNaAdjectives} label="な-adj." disabled={allAdjsDisabled} />
+          if (!jp.flashcardSettings.enableAdjectives) {
+            jp.flashcardSettings.enableAdjectives = true;
+          } else {
+            jp.flashcardSettings.enableAdjectives = false;
+          }
+        }}
+      >
+        Adjectives:
+      </Highlighted>
+
+      <div class="mt-1.5 flex flex-col gap-1.5 rounded p-1.5 whitespace-nowrap ring ring-primary-content/50">
+        <div class="flex items-center-safe gap-3">
+          <CheckboxInput bind:checked={jp.flashcardSettings.enableIAdjectives} label="い-adj." disabled={allAdjsDisabled} />
+          <CheckboxInput bind:checked={jp.flashcardSettings.enableNaAdjectives} label="な-adj." disabled={allAdjsDisabled} />
+        </div>
       </div>
-    </Highlighted>
+    </div>
 
     <CheckboxInput bind:checked={jp.flashcardSettings.enableAdjectives} label="(all)" />
   </div>

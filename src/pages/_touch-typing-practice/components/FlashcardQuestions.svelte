@@ -5,7 +5,9 @@
 <script lang="ts" generics="TWord extends object">
   import CheckboxInput from "@/components/CheckboxInput.svelte";
   import Highlighted from "@/components/Highlighted.svelte";
+  import KBD from "@/components/KBD.svelte";
   import NumericInput from "@/components/NumericInput.svelte";
+  import { onkeydown } from "@/lib/keyboard";
   import { QuestionQueue } from "@/lib/question-queue";
   import { speech } from "@/lib/speech.svelte";
   import { isEqual, random, randomInt, range } from "es-toolkit";
@@ -128,11 +130,15 @@
   let question: Question | undefined = $state();
   let showRomanization = $state(false);
   let isQuestionPinned = $state(false);
+  let questionRef: Highlighted | undefined = $state();
   $effect.pre(() => {
     question;
 
     showRomanization = false;
     isQuestionPinned = question ? pinnedIdxs.has(question.idx) : false;
+    if (settings.autoReadQuestion) {
+      questionRef?.click();
+    }
   });
 
   let options: Entry[][] = $state([]);
@@ -154,10 +160,6 @@
 
       options = [];
       if (question !== undefined) {
-        if (settings.autoReadQuestion) {
-          speech.speak(question?.pronunciation);
-        }
-
         // pick N randomly (without replacement) from allQuestions with filtering
 
         function entriesToStr(entries: Entry[]) {
@@ -194,13 +196,19 @@
   }
   $effect.pre(() => {
     allQuestions;
-    settings.onlyPinned;
-    settings.onlyUnpinned;
     settings.numOptions;
 
     nextQuestion();
   });
 </script>
+
+<svelte:window
+  onkeydown={onkeydown(({ key }) => {
+    if (key === "r") {
+      questionRef?.click();
+    }
+  })}
+/>
 
 <div>
   <hr class="mt-3 opacity-50" />
@@ -235,17 +243,19 @@
   </div>
 
   {#snippet entries(entries: Entry[])}
-    {#each entries as entry}
-      {#if typeof entry === "string"}
-        <span>{entry}</span>
-      {:else if Array.isArray(entry) && entry.length}
-        <div class="flex flex-col items-start text-xs">
-          {#each entry as text}
-            <span>{text}</span>
-          {/each}
-        </div>
-      {/if}
-    {/each}
+    <div class="flex flex-col items-start">
+      {#each entries as entry}
+        {#if typeof entry === "string"}
+          <span>{entry}</span>
+        {:else if Array.isArray(entry) && entry.length}
+          <div class="flex flex-col items-start text-xs">
+            {#each entry as text}
+              <span>{text}</span>
+            {/each}
+          </div>
+        {/if}
+      {/each}
+    </div>
   {/snippet}
 
   {#if !isQuestionSettingsEmpty && !isOptionSettingsEmpty}
@@ -256,8 +266,8 @@
       <span class="underline">Question:</span>
       {#if question}
         <Highlighted
-          vertical
-          class={["ml-6", speech.voice && "pr-6", speech.isSpeaking && "cursor-wait"]}
+          bind:this={questionRef}
+          class="ml-6"
           onclick={speech.voice
             ? () => {
                 showRomanization = true;
@@ -265,14 +275,19 @@
               }
             : undefined}
         >
-          {@render entries(question.questionEntries)}
+          <div class={["relative", speech.voice && "pr-4.5", speech.isSpeaking && "cursor-wait"]}>
+            {@render entries(question.questionEntries)}
 
-          <!-- pronunciation indicator -->
-          {#if question!.pronunciation && speech.voice}
-            <span
-              class="absolute top-1 right-1 icon-[heroicons--speaker-wave-solid] text-xs opacity-80"
-            ></span>
-          {/if}
+            <!-- pronunciation indicator -->
+            {#if question!.pronunciation && speech.voice}
+              <span class="absolute top-0 -right-1.5 icon-[heroicons--speaker-wave-solid] text-xs"
+              ></span>
+            {/if}
+          </div>
+
+          {#snippet customTooltip()}
+            <KBD label="r" /> to read the question.
+          {/snippet}
         </Highlighted>
 
         {#if showRomanization}
@@ -330,9 +345,7 @@
       {/if}
     </div>
 
-    <div class="mt-9 flex flex-col gap-1.5">
-      <span>Select the most appropriate one:</span>
-    </div>
+    <div class="mt-9">Select the most appropriate one:</div>
 
     <!-- options -->
     <div class="mt-6 flex flex-col gap-2">

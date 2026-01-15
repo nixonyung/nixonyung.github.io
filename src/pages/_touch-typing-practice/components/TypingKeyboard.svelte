@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { emitKeydown } from "@/lib/emulated-events";
+  import { emitKeydown } from "@/lib/keyboard";
   import type { Keymap } from "../types";
 
   const {
