@@ -34,6 +34,7 @@ export function appendVerbsChanges(words: JapaneseWord[]) {
       { kanjis: ["閉じる"], hiragana: "とじる", romanization: "tojiru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "close / shut" },
 
       { kanjis: ["親しむ"], hiragana: "したしむ", romanization: "shitashimu", verbGroup: "godan", verbIsTransitive: false, meaning: "befriend" },
+      { kanjis: ["疲れる"], hiragana: "つかれる", romanization: "tsukareru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "get tired" },
 
       { kanjis: ["興す"], hiragana: "おこす", romanization: "okosu", verbGroup: "godan", verbIsTransitive: true, meaning: "vitalize" },
       { kanjis: ["養う"], hiragana: "やしなう", romanization: "yashinau", verbGroup: "godan", verbIsTransitive: true, meaning: "foster" },

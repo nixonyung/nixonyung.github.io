@@ -11,8 +11,6 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
       { kanjis: ["方がいい", "方が良い", "ほうが良い"], hiragana: "ほうがいい", romanization: "hougaii (spoken/written)", meaning: "should xxx", exampleUsages: ["[Verb] 方がいい ..."] },
       { kanjis: ["方が良い", "ほうが良い", "方がよい"], hiragana: "ほうがよい", romanization: "hougayoi (slightly more written)", meaning: "should xxx", exampleUsages: ["[Verb] 方が良い ..."] },
 
-      { hiragana: "し", romanization: "shi", meaning: "did" },
-
       { hiragana: "つもりです", romanization: "tsumori desu", meaning: "planning to", exampleUsages: ["[Verb] つもりです。"] },
       { hiragana: "つもりはない", romanization: "tsumori wa nai", meaning: "planning not to (spoken, casual)", exampleUsages: ["[Verb-ない (dropped)] つもりはない"] },
 
@@ -58,6 +56,7 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
       { hiragana: "てあります", romanization: "-te arimasu", meaning: "xxx has been done (passive voice, polite)", exampleUsages: ["[Verb-て] あります ..."] },
       { hiragana: "てない", romanization: "-te nai", meaning: "xxx has not been done (passive voice, casual)", exampleUsages: ["[Verb-て] ない ..."] },
       { hiragana: "てありません", romanization: "-te arimasen", meaning: "xxx has not been done (passive voice, polite)", exampleUsages: ["[Verb-て] ありません ..."] },
+      { hiragana: "ても", romanization: "-temo", meaning: "even if", exampleUsages: ["[Verb]-ても [Clause]"] },
       { hiragana: "てもいいです", romanization: "-temo ii desu", meaning: "you can xxx", exampleUsages: ["[Verb-て] もいいです", "[Verb-て] もいいですか？", "[Noun] てもいいです", "[i-Adj. (dropped)] もいいです", "[na-Adj.] てもいいです"] },
       { hiragana: "てください", romanization: "-te kudasai", meaning: "please do xxx", exampleUsages: ["[Verb-て] ください ..."] },
       { hiragana: "てはいけない", romanization: "-te wa ikenai", meaning: "must not (written, casual)", exampleUsages: ["[Verb-て] はいけない。"] },

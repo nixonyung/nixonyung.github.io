@@ -21,9 +21,10 @@ export function appendFunctionalAdpositions(words: JapaneseWord[]) {
       { hiragana: "し", romanization: "shi", meaning: "because of that (spoken)", exampleUsages: ["だって、子供だし。"] },
 
       // TODO: changing word forms
+      // (move to auxiliary?)
       // TODO: だっ
       // TODO: の: noun to adj.
-      { hiragana: "-さ", romanization: "-sa", meaning: "-ness (adj. to noun)" },
+      { hiragana: "-さ", romanization: "-sa", meaning: "-ness (adj. to noun)", exampleUsages: ["-らしさ (xxx-like-ness)"] },
 
       { hiragana: "-ら", romanization: "-ra", meaning: "(plural, informal)" },
       { hiragana: "-たち", preferredForm: "hiragana", kanjis: ["-達"], romanization: "-tachi", meaning: "(plural, formal)" },

@@ -9,12 +9,17 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
     words.push(
       // and
       { hiragana: "も", romanization: "mo", meaning: "and / also (non-exhausive)", exampleUsages: ["[Noun] も [Verb]", "[Noun] も [Noun] も [Verb]", "[Noun] も [Noun] も [Noun] も [Verb]"] },
-      { hiragana: "し", romanization: "shi", meaning: "and (non-exhausive, spoken)", exampleUsages: ["[Clause] し、 [Clause]"] },
+      { hiragana: "や", romanization: "ya", meaning: "and (non-exhausive, written)", exampleUsages: ["[Noun] や [Noun] ..."] },
+
       { hiragana: "と", romanization: "to", meaning: "and (exhausive)", derivedMeanings: ["with me", "and then (facts/habits)", "when (what also happened)"], exampleUsages: ["[Noun] と [Noun] [Verb] ... (and)", "[Noun] と [Verb] ... (with me)", "[Clause] と [Clause] (and then / when)"] },
       { hiragana: "とか", romanization: "toka", meaning: "and (non-exhausive, spoken)" },
-      { hiragana: "や", romanization: "ya", meaning: "and (non-exhausive, written)", exampleUsages: ["[Noun] や [Noun] ..."] },
+      { hiragana: "といった", preferredForm: "hiragana", kanjis: ["と言った"], romanization: "toitta", meaning: "etc." },
+
       { hiragana: "たり", romanization: "tari", meaning: "and (listing actions / targets)", exampleUsages: ["[Verb-た] り ...", "[Noun] だったり ...", "[i-Adj. (dropped)] だったり ...", "[na-Adj.] だったり ..."] },
 
+      { hiragana: "し", romanization: "shi", meaning: "and (non-exhausive, spoken)", exampleUsages: ["[Clause] し、 [Clause]"] },
+
+      { hiragana: "など", preferredForm: "hiragana", kanjis: ["等", "抔"], romanization: "nado", meaning: "etc. (written)", exampleUsages: ["A、B、C など ..."] },
       { hiragana: "など", preferredForm: "hiragana", kanjis: ["等", "抔"], romanization: "nado", meaning: "etc. (written)", exampleUsages: ["A、B、C など ..."] },
       { hiragana: "などなど", preferredForm: "hiragana", kanjis: ["等など"], romanization: "nadonado", meaning: "et cetera (written, formal)" },
 

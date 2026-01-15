@@ -19,8 +19,8 @@ export function appendNounsVenues(words: JapaneseWord[]) {
 
   if (jp.flashcardSettings.enableNounsVenuesFacilities) {
     words.push(
-      { kanjis: ["家"], hiragana: "いえ", romanization: "ie", meaning: "home" },
-      { hiragana: "うち", preferredForm: "hiragana", kanjis: ["家"], romanization: "uchi", meaning: "house" },
+      { hiragana: "うち", preferredForm: "hiragana", kanjis: ["家"], romanization: "uchi", meaning: "home / my home" },
+      { kanjis: ["家"], hiragana: "いえ", romanization: "ie", meaning: "home / house" },
       { kanjis: ["居室"], hiragana: "きょしつ", romanization: "kyoshitsu", meaning: "living room" },
       { katakana: "トイレ", romanization: "toire", meaning: "toilet" },
       { katakana: "トイレット", romanization: "toiretto", meaning: "toilet" },

@@ -14,17 +14,20 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["気持ち", "気持"], hiragana: "きもち", romanization: "kimochi", meaning: "feeling" },
       { kanjis: ["気分"], hiragana: "きぶん", romanization: "kibun", meaning: "mood" },
 
+      // living
       { kanjis: ["健康"], hiragana: "けんこう", romanization: "kenkou", meaning: "health" },
       { kanjis: ["長寿"], hiragana: "ちょうじゅ", romanization: "chouju", meaning: "longevity" },
       { kanjis: ["栄養", "営養"], hiragana: "えいよう", romanization: "eiyou", meaning: "nutrition" },
       { kanjis: ["昼寝"], hiragana: "ひるね", romanization: "hirune", meaning: "afternoon nap" },
+      { kanjis: ["疲れ"], hiragana: "つかれ", romanization: "tsukare", meaning: "tiredness" },
 
       { kanjis: ["死"], hiragana: "し", romanization: "shi", meaning: "death" },
       { kanjis: ["死去"], hiragana: "しきょ", romanization: "shikyo", meaning: "passing away (formal)" },
 
       { kanjis: ["車酔い"], hiragana: "くるまよい", romanization: "kurumayoi", meaning: "car sickness" },
 
-      { kanjis: ["性"], hiragana: "せい", romanization: "sei", meaning: "sex / nature of a person" },
+      // gender
+      { kanjis: ["性"], hiragana: "せい", romanization: "sei", meaning: "sex / nature of a person", derivedMeanings: ["gender"] },
       { kanjis: ["性別"], hiragana: "せいべつ", romanization: "seibetsu", meaning: "gender" },
       { katakana: "ジェンダー", romanization: "jenda", meaning: "gender" },
       { kanjis: ["男性"], hiragana: "だんせい", romanization: "dansei", meaning: "male" },
@@ -34,13 +37,14 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["女らしさ"], hiragana: "おんならしさ", romanization: "onnashisa", meaning: "femininity" },
       { kanjis: ["女性性"], hiragana: "じょせいせい", romanization: "joseisei", meaning: "femininity (written)" },
 
-      { kanjis: ["真面目"], hiragana: "まじめ", katakana: "マジメ", romanization: "majime", meaning: "truthfulness" },
       { kanjis: ["男装"], hiragana: "だんそう", romanization: "dansou", meaning: "men's clothing" },
       { kanjis: ["女装"], hiragana: "じょそう", romanization: "josou", meaning: "women's clothing" },
 
       { kanjis: ["難度"], hiragana: "なんど", romanization: "nando", meaning: "difficulty" },
       { kanjis: ["邪魔"], hiragana: "じゃま", romanization: "jama", meaning: "obstacle" },
       { kanjis: ["我慢"], hiragana: "がまん", katakana: "ガマン", romanization: "gaman", meaning: "endurance" },
+
+      { kanjis: ["真面目"], hiragana: "まじめ", katakana: "マジメ", romanization: "majime", meaning: "truthfulness" },
 
       { kanjis: ["暇"], rareKanjis: ["閑"], hiragana: "ひま", romanization: "hima", meaning: "spare time" },
       { kanjis: ["暇"], rareKanjis: ["遑"], hiragana: "いとま", romanization: "itoma", meaning: "time off (formal)" },
@@ -104,10 +108,11 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["部活"], hiragana: "ぶかつ", romanization: "bukatsu", meaning: "club activities" },
 
       // TODO: trading
-      { katakana: "せール", romanization: "seeru", meaning: "sale" },
       { kanjis: ["本物"], hiragana: "ほんもの", romanization: "honmono", meaning: "the original" },
       { kanjis: ["余り"], hiragana: "あまり", romanization: "amari", meaning: "remains" },
       { kanjis: ["借金"], hiragana: "しゃっきん", romanization: "shakkin", meaning: "debt" },
+      { katakana: "せール", romanization: "seeru", meaning: "sale" },
+      { katakana: "プレゼント", romanization: "purezento", meaning: "present" },
 
       { katakana: "チーム", romanization: "chiimu", meaning: "team" },
       { katakana: "チームワーク", romanization: "chiimuwaaku", meaning: "teamwork" },
@@ -176,7 +181,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { katakana: "キーワード", romanization: "kiiwaado", meaning: "keyword" },
       { katakana: "ポイント", romanization: "pointo", meaning: "point" },
 
-      { kanjis: ["言葉"], rareKanjis: ["詞", "辞"], hiragana: "ことば", romanization: "kotoba", meaning: "language / word" },
+      { kanjis: ["言葉"], rareKanjis: ["詞", "辞"], hiragana: "ことば", romanization: "kotoba", meaning: "language / word", exampleUsages: ['"xxx" という言葉 (the word "xxx")'] },
       { kanjis: ["語"], hiragana: "ご", romanization: "go", meaning: "word" },
       { katakana: "ワード", romanization: "woodo", meaning: "word" },
       { kanjis: ["言"], hiragana: "げん", romanization: "gen", meaning: "statement" },

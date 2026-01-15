@@ -9,7 +9,6 @@ export function appendExpressions(words: JapaneseWord[]) {
   // TODO: mono dewanai
   // TODO: noni
   // TODO: Shika, Bakari, Nomi
-  // TODO: [Clause] ということ です (it is said?)
   // TODO: proverbs
 
   if (jp.flashcardSettings.enableExpressionsAppellations) {
@@ -21,6 +20,8 @@ export function appendExpressions(words: JapaneseWord[]) {
 
       { hiragana: "お〇〇", preferredForm: "hiragana", kanjis: ["御-"], romanization: "o", meaning: "(honorific for native Japanese words)", exampleUsages: ["お[Noun]", "(addressing family members politely)", "(talking about others' family members)"] },
       { hiragana: "ご〇〇", preferredForm: "hiragana", kanjis: ["御-"], romanization: "go", meaning: "(honorific for Chinese-derived words)", exampleUsages: ["ご[Noun]"] },
+
+      { hiragana: "という", romanization: "toiu", meaning: "called", exampleUsages: ["[Name] と言う [Thing] (the [Thing] named [Name])"] },
     );
   }
 
@@ -58,6 +59,9 @@ export function appendExpressions(words: JapaneseWord[]) {
 
       { hiragana: "と思う。", romanization: "to omou", meaning: "I think (casual)", exampleUsages: ["[Clause] と思う。", "[Clause] と思います。", "[Clause] と思っている。"] },
       { hiragana: "と思わない？", romanization: "to omowanai", meaning: "don't you think? (casual)", exampleUsages: ["[Verb] と思わない？", "[Noun] だと思わない？", "[i-Adj.] と思わない？", "[na-Adj.] だと思わない？"] },
+
+      { hiragana: "ということだ", preferredForm: "hiragana", kanjis: ["と言うことだ"], romanization: "toiukotoda", meaning: "as rumoured" },
+      { hiragana: "って", romanization: "tte", meaning: "as someone said / as I heard", derivedMeanings: ["you really mean it?"], exampleUsages: ["すごいって (I heard it is amazing)", "って言っていた (it is said that)"] },
     );
   }
 
@@ -77,6 +81,7 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "〇〇んです", romanization: "-n desu", meaning: "it is because (spoken, polite)", exampleUsages: ["[Clause] んです。"] },
       { hiragana: "〇〇のです", romanization: "-no desu", meaning: "it is because (written, polite)", exampleUsages: ["[Clause] のです。"] },
 
+      { kanjis: ["と言うことは", "と言う事は"], hiragana: "ということは", romanization: "toiukotowa", meaning: "if that's true" },
       { hiragana: "それでは", romanization: "soredewa", meaning: "well then (spoken, formal)" },
       { hiragana: "じゃあ", romanization: "zyaa", meaning: "well then (spoken, casual)" },
     );
