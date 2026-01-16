@@ -93,8 +93,9 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "はい", romanization: "sou", meaning: "yes / I see", derivedMeanings: ["(I am listening)"] },
       { hiragana: "ええ", romanization: "ee", meaning: "yes (casual)" },
       { hiragana: "そう", rareKanjis: ["然う"], romanization: "sou", meaning: "(agree)" },
+      { hiragana: "そうか", romanization: "souka", meaning: "I see" },
+      { hiragana: "そうですね", romanization: "soudesune", meaning: "you're right (polite)", derivedMeanings: ["isn't it"] },
       { hiragana: "いいな", romanization: "iina", meaning: "that's nice" },
-      { hiragana: "そうですね", romanization: "soudesune", meaning: "that's correct (polite)" },
       { hiragana: "わかりました", romanization: "wakarimashita", meaning: "understood" },
 
       { hiragana: "いいえ", romanization: "iie", meaning: "no (formal) / don't mention it" },

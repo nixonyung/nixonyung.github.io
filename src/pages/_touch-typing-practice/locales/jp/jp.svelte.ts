@@ -110,13 +110,13 @@ export const jp = new (class {
 
     enableNounsIdeasLife: { paramKey: "life", defaultValue: true },
     enableNounsIdeasSocialConstructs: { paramKey: "socialConstructs", defaultValue: true },
-    enableNounsIdeasLeadership: { paramKey: "leadership", defaultValue: true },
+    enableNounsIdeasDecisionMaking: { paramKey: "decisionMaking", defaultValue: true },
     enableNounsIdeasNarration: { paramKey: "narration", defaultValue: true },
     enableNounsIdeasMath: { paramKey: "math", defaultValue: true },
     enableNounsIdeasScience: { paramKey: "science", defaultValue: true },
     enableNounsIdeasArts: { paramKey: "arts", defaultValue: true },
-    enableNounsIdeasRPG: { paramKey: "rpg", defaultValue: true },
     enableNounsIdeasActivities: { paramKey: "activities", defaultValue: true },
+    enableNounsIdeasVideoGames: { paramKey: "videoGames", defaultValue: true },
 
     // verbs
     enableVerbsActionsBodily: { paramKey: "bodily", defaultValue: true },

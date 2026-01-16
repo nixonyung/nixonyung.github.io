@@ -151,12 +151,12 @@
           !jp.flashcardSettings.enableNounsVenuesImaginary ||
           !jp.flashcardSettings.enableNounsIdeasLife ||
           !jp.flashcardSettings.enableNounsIdeasSocialConstructs ||
-          !jp.flashcardSettings.enableNounsIdeasLeadership ||
+          !jp.flashcardSettings.enableNounsIdeasDecisionMaking ||
           !jp.flashcardSettings.enableNounsIdeasNarration ||
           !jp.flashcardSettings.enableNounsIdeasMath ||
           !jp.flashcardSettings.enableNounsIdeasScience ||
           !jp.flashcardSettings.enableNounsIdeasArts ||
-          !jp.flashcardSettings.enableNounsIdeasRPG ||
+          !jp.flashcardSettings.enableNounsIdeasVideoGames ||
           !jp.flashcardSettings.enableNounsIdeasActivities
         ) {
           jp.flashcardSettings.enableNounsPeopleCharacteristicsGeneric = true;
@@ -195,12 +195,12 @@
           jp.flashcardSettings.enableNounsVenuesImaginary = true;
           jp.flashcardSettings.enableNounsIdeasLife = true;
           jp.flashcardSettings.enableNounsIdeasSocialConstructs = true;
-          jp.flashcardSettings.enableNounsIdeasLeadership = true;
+          jp.flashcardSettings.enableNounsIdeasDecisionMaking = true;
           jp.flashcardSettings.enableNounsIdeasNarration = true;
           jp.flashcardSettings.enableNounsIdeasMath = true;
           jp.flashcardSettings.enableNounsIdeasScience = true;
           jp.flashcardSettings.enableNounsIdeasArts = true;
-          jp.flashcardSettings.enableNounsIdeasRPG = true;
+          jp.flashcardSettings.enableNounsIdeasVideoGames = true;
           jp.flashcardSettings.enableNounsIdeasActivities = true;
         } else {
           jp.flashcardSettings.enableNounsPeopleCharacteristicsGeneric = false;
@@ -239,12 +239,12 @@
           jp.flashcardSettings.enableNounsVenuesImaginary = false;
           jp.flashcardSettings.enableNounsIdeasLife = false;
           jp.flashcardSettings.enableNounsIdeasSocialConstructs = false;
-          jp.flashcardSettings.enableNounsIdeasLeadership = false;
+          jp.flashcardSettings.enableNounsIdeasDecisionMaking = false;
           jp.flashcardSettings.enableNounsIdeasNarration = false;
           jp.flashcardSettings.enableNounsIdeasMath = false;
           jp.flashcardSettings.enableNounsIdeasScience = false;
           jp.flashcardSettings.enableNounsIdeasArts = false;
-          jp.flashcardSettings.enableNounsIdeasRPG = false;
+          jp.flashcardSettings.enableNounsIdeasVideoGames = false;
           jp.flashcardSettings.enableNounsIdeasActivities = false;
         }
       }}
@@ -504,32 +504,32 @@
             if (
               !jp.flashcardSettings.enableNounsIdeasLife ||
               !jp.flashcardSettings.enableNounsIdeasSocialConstructs ||
-              !jp.flashcardSettings.enableNounsIdeasLeadership ||
+              !jp.flashcardSettings.enableNounsIdeasDecisionMaking ||
               !jp.flashcardSettings.enableNounsIdeasNarration ||
               !jp.flashcardSettings.enableNounsIdeasMath ||
               !jp.flashcardSettings.enableNounsIdeasScience ||
               !jp.flashcardSettings.enableNounsIdeasArts ||
-              !jp.flashcardSettings.enableNounsIdeasRPG ||
+              !jp.flashcardSettings.enableNounsIdeasVideoGames ||
               !jp.flashcardSettings.enableNounsIdeasActivities
             ) {
               jp.flashcardSettings.enableNounsIdeasLife = true;
               jp.flashcardSettings.enableNounsIdeasSocialConstructs = true;
-              jp.flashcardSettings.enableNounsIdeasLeadership = true;
+              jp.flashcardSettings.enableNounsIdeasDecisionMaking = true;
               jp.flashcardSettings.enableNounsIdeasNarration = true;
               jp.flashcardSettings.enableNounsIdeasMath = true;
               jp.flashcardSettings.enableNounsIdeasScience = true;
               jp.flashcardSettings.enableNounsIdeasArts = true;
-              jp.flashcardSettings.enableNounsIdeasRPG = true;
+              jp.flashcardSettings.enableNounsIdeasVideoGames = true;
               jp.flashcardSettings.enableNounsIdeasActivities = true;
             } else {
               jp.flashcardSettings.enableNounsIdeasLife = false;
               jp.flashcardSettings.enableNounsIdeasSocialConstructs = false;
-              jp.flashcardSettings.enableNounsIdeasLeadership = false;
+              jp.flashcardSettings.enableNounsIdeasDecisionMaking = false;
               jp.flashcardSettings.enableNounsIdeasNarration = false;
               jp.flashcardSettings.enableNounsIdeasMath = false;
               jp.flashcardSettings.enableNounsIdeasScience = false;
               jp.flashcardSettings.enableNounsIdeasArts = false;
-              jp.flashcardSettings.enableNounsIdeasRPG = false;
+              jp.flashcardSettings.enableNounsIdeasVideoGames = false;
               jp.flashcardSettings.enableNounsIdeasActivities = false;
             }
           }}
@@ -539,13 +539,13 @@
 
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIdeasLife} label="Life" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIdeasSocialConstructs} label="Social Constructs" />
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIdeasLeadership} label="Leadership" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIdeasDecisionMaking} label="Decision-making" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIdeasNarration} label="Narration" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIdeasMath} label="Math" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIdeasScience} label="Science" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIdeasArts} label="Arts" />
-        <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIdeasRPG} label="RPG Terminology" />
         <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIdeasActivities} label="Activities" />
+        <CheckboxInput bind:checked={jp.flashcardSettings.enableNounsIdeasVideoGames} label="Video Games" />
       </div>
     </div>
   </div>
