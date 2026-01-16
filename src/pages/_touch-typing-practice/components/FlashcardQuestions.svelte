@@ -135,10 +135,12 @@
     question;
 
     showRomanization = false;
-    isQuestionPinned = question ? pinnedIdxs.has(question.idx) : false;
-    if (settings.autoReadQuestion) {
+    if (untrack(() => settings.autoReadQuestion)) {
       questionRef?.click();
     }
+  });
+  $effect.pre(() => {
+    isQuestionPinned = question ? pinnedIdxs.has(question.idx) : false;
   });
 
   let options: Entry[][] = $state([]);
@@ -268,14 +270,12 @@
         <Highlighted
           bind:this={questionRef}
           class="ml-6"
-          onclick={speech.voice
-            ? () => {
-                showRomanization = true;
-                speech.speak(question!.pronunciation);
-              }
-            : undefined}
+          onclick={() => {
+            showRomanization = true;
+            speech.speak(question!.pronunciation);
+          }}
         >
-          <div class={["relative", speech.voice && "pr-4.5", speech.isSpeaking && "cursor-wait"]}>
+          <div class={["relative", speech.voice && "pr-3", speech.isSpeaking && "cursor-wait"]}>
             {@render entries(question.questionEntries)}
 
             <!-- pronunciation indicator -->
