@@ -8,11 +8,10 @@
   import KBD from "@/components/KBD.svelte";
   import NumericInput from "@/components/NumericInput.svelte";
   import { onkeydown } from "@/lib/keyboard";
-  import { QuestionQueue } from "@/lib/question-queue";
+  import { QuestionsQueue } from "@/lib/questions-queue.svelte.ts";
   import { speech } from "@/lib/speech.svelte";
-  import { isEqual, random, randomInt, range } from "es-toolkit";
+  import { isEqual, randomInt, range, sortBy } from "es-toolkit";
   import { untrack } from "svelte";
-  import { SvelteSet } from "svelte/reactivity";
   import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
 
   const {
@@ -76,7 +75,6 @@
     answerEntries: Entry[];
     pronunciation?: string;
     romanization?: string;
-    idx: number;
   };
   function wordToEntries(word: TWord, settings: boolean[]) {
     const entries = range(settings.length)
@@ -101,36 +99,78 @@
         answerEntries,
         pronunciation: wordToPronunciationFn?.(word),
         romanization: wordToRomanizationFn?.(word),
-        idx: result.length,
       });
     }
 
     return result;
   });
 
-  let pinnedIdxs = $state(new SvelteSet<number>());
-  let questionsPools = $derived.by(() => {
-    const pinned: Question[] = [];
-    const unpinned: Question[] = [];
-
-    for (const question of allQuestions) {
-      (pinnedIdxs.has(question.idx) ? pinned : unpinned).push(question);
-    }
-
-    return { pinned, unpinned };
-  });
-  let unpinnedQuestionsQueue = $derived(new QuestionQueue(questionsPools.unpinned));
-  let pinnedQuestionsQueue = $derived(new QuestionQueue(questionsPools.pinned));
-  $effect.pre(() => {
-    allQuestions;
-
-    pinnedIdxs = new SvelteSet<number>();
-  });
-
-  let question: Question | undefined = $state();
-  let showRomanization = $state(false);
-  let isQuestionPinned = $state(false);
+  let questionsQueue = $state(new QuestionsQueue(allQuestions));
+  let question: (Question & { idx: number }) | undefined = $state();
   let questionRef: Highlighted | undefined = $state();
+  let showRomanization = $state(false);
+
+  let options: Entry[][] = $state([]);
+  let isWrongOptions: boolean[] = $state([]);
+
+  function entriesToStr(entries: Entry[]) {
+    return entries.flat().join("|");
+  }
+  function genOptions() {
+    options = [];
+    if (question !== undefined) {
+      // from allQuestions, sample N elements (without replacement) with filtering
+      //
+      // problem: need to efficiently find a new unique element if the current one is filtered out
+      //
+      // inferior solutions:
+      //   - repeatedly call es-toolkit's `sampleSize` and filter until having enough elements
+      //     - will incorrectly return elements WITH replacement
+      //   - shuffle the whole array and pick until having N elements
+      //     - costly in time when the array is large
+
+      const optionStrs = new Set([entriesToStr(question.answerEntries)]);
+
+      // Fisher-Yates shuffle, from left-to-right, running on indices to avoid copying
+      // (ref.) https://github.com/toss/es-toolkit/blob/3d75a713169c2db6fffe04121bc73ac0363d741e/src/array/shuffle.ts
+      const indices = range(allQuestions.length);
+      let i = 0;
+      while (options.length < settings.numOptions - 1 && i < indices.length) {
+        const j = randomInt(i, indices.length);
+        [indices[i], indices[j]] = [indices[j], indices[i]];
+        const word = allQuestions[indices[i]];
+        i++;
+
+        // filter out answers from other same-looking questions
+        if (isEqual(word.questionEntries, question.questionEntries)) continue;
+
+        // filter out same-looking options
+        const answerEntriesStr = entriesToStr(word.answerEntries);
+        if (optionStrs.has(answerEntriesStr)) continue;
+
+        options.push(word.answerEntries);
+        optionStrs.add(answerEntriesStr);
+      }
+
+      // add the real answer
+      options.push(question.answerEntries);
+    }
+    options = sortBy(options, [(entries) => entriesToStr(entries).toLowerCase()]);
+    isWrongOptions = Array(options.length).fill(false);
+  }
+
+  function nextQuestion() {
+    question = questionsQueue.next({
+      onlyPinned: settings.onlyPinned,
+      onlyUnpinned: settings.onlyUnpinned,
+    });
+    genOptions();
+  }
+
+  $effect.pre(() => {
+    questionsQueue = new QuestionsQueue(allQuestions);
+    untrack(() => nextQuestion());
+  });
   $effect.pre(() => {
     question;
 
@@ -139,68 +179,18 @@
       questionRef?.click();
     }
   });
+
   $effect.pre(() => {
-    isQuestionPinned = question ? pinnedIdxs.has(question.idx) : false;
+    if (
+      (settings.onlyPinned && questionsQueue.numPinned) ||
+      (settings.onlyUnpinned && questionsQueue.numUnpinned)
+    )
+      untrack(() => nextQuestion());
   });
-
-  let options: Entry[][] = $state([]);
-  let isWrongOptions: boolean[] = $state([]);
-
-  function nextQuestion() {
-    untrack(() => {
-      if (!allQuestions.length) {
-        question = undefined;
-      } else if (settings.onlyPinned && questionsPools.pinned.length) {
-        question = pinnedQuestionsQueue.next();
-      } else if (settings.onlyUnpinned && questionsPools.unpinned.length) {
-        question = unpinnedQuestionsQueue.next();
-      } else if (random(allQuestions.length) < questionsPools.unpinned.length) {
-        question = unpinnedQuestionsQueue.next();
-      } else {
-        question = pinnedQuestionsQueue.next();
-      }
-
-      options = [];
-      if (question !== undefined) {
-        // pick N randomly (without replacement) from allQuestions with filtering
-
-        function entriesToStr(entries: Entry[]) {
-          return entries.flat().join("|");
-        }
-        const optionStrs = new Set([entriesToStr(question.answerEntries)]);
-
-        // Fisher-Yates shuffle, from left-to-right, running on indices to avoid copying
-        // (ref.) https://github.com/toss/es-toolkit/blob/3d75a713169c2db6fffe04121bc73ac0363d741e/src/array/shuffle.ts
-        const indices = range(allQuestions.length);
-        let i = 0;
-        while (options.length < settings.numOptions - 1 && i < indices.length) {
-          const j = randomInt(i, indices.length);
-          [indices[i], indices[j]] = [indices[j], indices[i]];
-          const word = allQuestions[indices[i]];
-          i++;
-
-          // filter out answers from other same-looking questions
-          if (isEqual(word.questionEntries, question.questionEntries)) continue;
-
-          // filter out same-looking options
-          const answerEntriesStr = entriesToStr(word.answerEntries);
-          if (optionStrs.has(answerEntriesStr)) continue;
-
-          options.push(word.answerEntries);
-          optionStrs.add(answerEntriesStr);
-        }
-
-        // add the real answer at random position
-        options.splice(randomInt(options.length + 1), 0, question.answerEntries);
-      }
-      isWrongOptions = Array(options.length).fill(false);
-    });
-  }
   $effect.pre(() => {
-    allQuestions;
     settings.numOptions;
 
-    nextQuestion();
+    untrack(() => genOptions());
   });
 </script>
 
@@ -241,7 +231,7 @@
       <CheckboxInput bind:checked={settings.onlyPinned} label="Only Use Pinned (if any)" />
       <CheckboxInput bind:checked={settings.onlyUnpinned} label="Only Use Unpinned (if any)" />
     </div>
-    <NumericInput bind:value={settings.numOptions} label="Number of Options" min={1} />
+    <NumericInput bind:value={settings.numOptions} label="Number of Options" min={2} />
   </div>
 
   {#snippet entries(entries: Entry[])}
@@ -266,6 +256,7 @@
     <!-- question -->
     <div class="mt-9 flex items-center-safe">
       <span class="underline">Question:</span>
+
       {#if question}
         <Highlighted
           bind:this={questionRef}
@@ -279,7 +270,7 @@
             {@render entries(question.questionEntries)}
 
             <!-- pronunciation indicator -->
-            {#if question!.pronunciation && speech.voice}
+            {#if question.pronunciation && speech.voice}
               <span class="absolute top-0 -right-1.5 icon-[heroicons--speaker-wave-solid] text-xs"
               ></span>
             {/if}
@@ -299,29 +290,29 @@
             title="Pin this question."
             class="grid size-10 cursor-pointer place-items-center-safe rounded-full text-primary-content hover:bg-primary-lighter"
             onclick={() => {
-              if (isQuestionPinned) {
-                pinnedIdxs.delete(question!.idx);
+              if (questionsQueue.isPinned(question!.idx)) {
+                questionsQueue.unpin(question!.idx);
               } else {
-                pinnedIdxs.add(question!.idx);
+                questionsQueue.pin(question!.idx);
               }
             }}
           >
-            {#if isQuestionPinned}
+            {#if questionsQueue.isPinned(question!.idx)}
               <span class="icon-[icon-park-solid--pin]"></span>
             {:else}
               <span class="icon-[icon-park-outline--pin] opacity-75"></span>
             {/if}
           </button>
 
-          {#if pinnedIdxs.size}
+          {#if questionsQueue.numPinned}
             <div
               class="invisible absolute top-0 right-0 z-10 flex translate-x-full translate-y-2 flex-col divide-y rounded bg-primary whitespace-nowrap ring group-hover/list:visible"
             >
-              {#each questionsPools.pinned as { questionEntries, answerEntries, romanization, idx }}
+              {#each questionsQueue.pinnedItems as { questionEntries, answerEntries, romanization, idx }}
                 <button
                   class="group/item flex cursor-pointer items-center-safe gap-1.5 px-2 py-1.5"
                   onclick={() => {
-                    pinnedIdxs.delete(idx);
+                    questionsQueue.unpin(idx);
                   }}
                 >
                   <div class="flex flex-col items-start">
@@ -361,7 +352,7 @@
             } else {
               isWrongOptions[i] = true;
               if (settings.pinWhenWrong) {
-                pinnedIdxs.add(question.idx);
+                questionsQueue.pin(question.idx);
               }
             }
           }}

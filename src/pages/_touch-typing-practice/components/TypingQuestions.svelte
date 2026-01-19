@@ -4,7 +4,7 @@
   import KBD from "@/components/KBD.svelte";
   import NumericInput from "@/components/NumericInput.svelte";
   import { emitKeydown, onkeydown } from "@/lib/keyboard";
-  import { QuestionQueue } from "@/lib/question-queue";
+  import { QuestionsQueue } from "@/lib/questions-queue.svelte.ts";
   import { speech } from "@/lib/speech.svelte";
   import { untrack } from "svelte";
   import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
@@ -33,8 +33,8 @@
     input: string;
   };
   let questionsQueue = $derived(
-    new QuestionQueue<Question>(
-      letters.map(({ letter, actualPronunciation, romanization, actualInput }) => ({
+    new QuestionsQueue(
+      letters.map<Question>(({ letter, actualPronunciation, romanization, actualInput }) => ({
         letter,
         pronunciation: actualPronunciation ?? letter,
         romanization: romanization,

@@ -1,7 +1,7 @@
 <script lang="ts">
   import Highlighted from "@/components/Highlighted.svelte";
   import NumericInput from "@/components/NumericInput.svelte";
-  import { QuestionQueue } from "@/lib/question-queue";
+  import { QuestionsQueue } from "@/lib/questions-queue.svelte.ts";
   import { randomInt, sampleSize } from "es-toolkit";
   import { untrack } from "svelte";
   import { initSettings, useSyncSettings } from "../../../../lib/settings.svelte";
@@ -19,7 +19,7 @@
   const settings = $state(initSettings(SETTINGS_SCHEMA));
   useSyncSettings(SETTINGS_SCHEMA, settings);
 
-  const questionsQueue = $derived(new QuestionQueue(gojuons));
+  const questionsQueue = $derived(new QuestionsQueue(gojuons));
   let question: Gojuon | undefined = $state();
   let options: string[] = $state([]);
 
