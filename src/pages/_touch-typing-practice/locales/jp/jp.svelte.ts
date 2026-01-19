@@ -115,7 +115,7 @@ export const jp = new (class {
     enableNounsIdeasMath: { paramKey: "math", defaultValue: true },
     enableNounsIdeasScience: { paramKey: "science", defaultValue: true },
     enableNounsIdeasArts: { paramKey: "arts", defaultValue: true },
-    enableNounsIdeasActivities: { paramKey: "activities", defaultValue: true },
+    enableNounsIdeasActivities: { paramKey: "activitiesNouns", defaultValue: true },
     enableNounsIdeasVideoGames: { paramKey: "videoGames", defaultValue: true },
 
     // verbs
@@ -124,7 +124,7 @@ export const jp = new (class {
     enableVerbsActionsOwnership: { paramKey: "ownership", defaultValue: true },
     enableVerbsActionsTranspositional: { paramKey: "transpositional", defaultValue: true },
     enableVerbsActionsManeuvers: { paramKey: "maneuvers", defaultValue: true },
-    enableVerbsActionsActivities: { paramKey: "activities", defaultValue: true },
+    enableVerbsActionsActivities: { paramKey: "activitiesVerbs", defaultValue: true },
     enableVerbsDescriptiveBeing: { paramKey: "being", defaultValue: true },
     enableVerbsDescriptiveExistence: { paramKey: "existence", defaultValue: true },
     enableVerbsDescriptiveProcesses: { paramKey: "processes", defaultValue: true },

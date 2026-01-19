@@ -111,7 +111,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["部活"], hiragana: "ぶかつ", romanization: "bukatsu", meaning: "club activities" },
 
       // TODO: trading
-      { kanjis: ["本物"], hiragana: "ほんもの", romanization: "honmono", meaning: "the original" },
+      { kanjis: ["本物"], hiragana: "ほんもの", romanization: "honmono", meaning: "the original thing" },
       { kanjis: ["余り"], hiragana: "あまり", romanization: "amari", meaning: "remains" },
       { kanjis: ["借金"], hiragana: "しゃっきん", romanization: "shakkin", meaning: "debt" },
       { katakana: "せール", romanization: "seeru", meaning: "sale" },
