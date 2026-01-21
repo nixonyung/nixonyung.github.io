@@ -17,13 +17,13 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       // rest
       { kanjis: ["生きる"], rareKanjis: ["活きる"], hiragana: "いきる", romanization: "ikiru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "be alive" },
       { kanjis: ["起きる"], hiragana: "おきる", romanization: "okiru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "wake up", exampleUsages: ["早く起きられる (can wake up early)"] },
-      { kanjis: ["寝る"], rareKanjis: ["寐る"], hiragana: "ねる", romanization: "neru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "sleep" },
+      { kanjis: ["寝る"], rareKanjis: ["寐る"], hiragana: "ねる", romanization: "neru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "go to bed" },
       { kanjis: ["眠る", "睡る"], hiragana: "ねむる", romanization: "nemuru", verbGroup: "godan", verbIsTransitive: false, meaning: "sleep" },
       { kanjis: ["休む"], hiragana: "やすむ", romanization: "yasumu", verbGroup: "godan", verbIsTransitive: false, meaning: "rest", derivedMeanings: ["sleep", "have a day off"] },
 
       // eyes
-      { kanjis: ["見る", "観る", "視る"], hiragana: "みる", romanization: "miru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "see / look" },
-      { kanjis: ["泣き出す"], hiragana: "なきだす", romanization: "nakidasu", verbGroup: "godan", verbIsTransitive: false, meaning: "burst into tears" },
+      { kanjis: ["見る", "観る", "視る"], hiragana: "みる", romanization: "miru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "look / see" },
+      { kanjis: ["泣き出す"], hiragana: "なきだす", romanization: "nakidasu", verbGroup: "godan", verbIsTransitive: false, meaning: "start crying" },
 
       // ears
       { kanjis: ["聞く", "聴く"], hiragana: "きく", romanization: "kiku", verbGroup: "godan", verbIsTransitive: true, meaning: "hear / listen", derivedMeanings: ["ask"] },
@@ -39,7 +39,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["嗅ぐ"], hiragana: "かぐ", romanization: "kagu", verbGroup: "godan", verbIsTransitive: true, meaning: "smell" },
 
       // muscular
-      { kanjis: ["動く"], hiragana: "うごく", romanization: "ugoku", verbGroup: "godan", verbIsTransitive: false, meaning: "move / act / shift" },
+      { kanjis: ["動く"], hiragana: "うごく", romanization: "ugoku", verbGroup: "godan", verbIsTransitive: false, meaning: "move", derivedMeanings: ["operate"] },
       { kanjis: ["動き出す", "動きだす"], hiragana: "うごきだす", romanization: "ugokidasu", verbGroup: "godan", verbIsTransitive: false, meaning: "start moving" },
       { kanjis: ["着る"], hiragana: "きる", romanization: "kiru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "wear", exampleUsages: ["服を着る"] },
       { kanjis: ["立つ"], hiragana: "たつ", romanization: "tatsu", verbGroup: "godan", verbIsTransitive: false, meaning: "stand up" },
@@ -157,6 +157,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { hiragana: "こする", preferredForm: "hiragana", kanjis: ["擦る"], rareKanjis: ["錯る"], romanization: "kosuru", verbGroup: "godan", verbIsTransitive: true, meaning: "rub" },
       { kanjis: ["擦る", "擂る"], rareKanjis: ["摩る", "磨る"], hiragana: "する", romanization: "suru", verbGroup: "godan", verbIsTransitive: true, meaning: "rub" },
       { kanjis: ["交える", "混える", "雑える"], hiragana: "まじえる", romanization: "majieru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "mix" },
+      { kanjis: ["梳く"], hiragana: "すく", romanization: "suku", verbGroup: "godan", verbIsTransitive: true, meaning: "comb" },
     );
   }
 

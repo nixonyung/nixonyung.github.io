@@ -22,6 +22,7 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "ご〇〇", preferredForm: "hiragana", kanjis: ["御-"], romanization: "go", meaning: "(honorific for Chinese-derived words)", exampleUsages: ["ご[Noun]"] },
 
       { hiragana: "という", romanization: "toiu", meaning: "called", exampleUsages: ["[Name] と言う [Thing] (the [Thing] named [Name])"] },
+      // TODO: について
     );
   }
 
@@ -53,7 +54,6 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "なあ", romanization: "naa", meaning: '("I think") - wow / I wonder (casual)', exampleUsages: ["[Clause] なあ。"] },
 
       { hiragana: "ちょっと", rareKanjis: ["一寸"], katakana: "チョット", romanization: "chotto", meaning: "a bit (casual, intensity)", exampleUsages: ["ちょっと難し", "あとちょっと (just a bit more)"] },
-      { hiragana: "どうも", romanization: "doumo", meaning: "very", exampleUsages: ["どうも ありがとう ございます (thank you very much)"] },
 
       { kanjis: ["多分"], hiragana: "たぶん", romanization: "tabun", meaning: "probably" },
 
@@ -74,9 +74,8 @@ export function appendExpressions(words: JapaneseWord[]) {
 
       { hiragana: "だから", romanization: "dakara", meaning: "Told you already!" },
 
-      { kanjis: ["本当に"], hiragana: "ほんとうに", romanization: "hontouni", meaning: "for real" },
-      { kanjis: ["と言う"], hiragana: "という", romanization: "to iu", meaning: "xxx is called/said", exampleUsages: ["(name) という [Pronoun] ..."] },
-      // TODO: について
+      { hiragana: "どうも", romanization: "doumo", meaning: "very", exampleUsages: ["どうも ありがとう ございます (thank you very much)"] },
+      { kanjis: ["本当に"], hiragana: "ほんとうに", romanization: "hontouni", meaning: "really" },
 
       { hiragana: "〇〇んです", romanization: "-n desu", meaning: "it is because (spoken, polite)", exampleUsages: ["[Clause] んです。"] },
       { hiragana: "〇〇のです", romanization: "-no desu", meaning: "it is because (written, polite)", exampleUsages: ["[Clause] のです。"] },
@@ -102,7 +101,8 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "いや", preferredForm: "hiragana", kanjis: ["否"], romanization: "iya", meaning: "no" },
       { kanjis: ["全然"], hiragana: "ぜんぜん", romanization: "zenzen", meaning: "not really" },
 
-      { hiragana: "その…", romanization: "sono", meaning: "um... / 那個吧..." },
+      { hiragana: "えっと", romanization: "etto", meaning: "let me see ..." },
+      { hiragana: "その", romanization: "sono", meaning: "um ..." },
     );
   }
 

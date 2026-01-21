@@ -30,6 +30,7 @@ export function appendVerbsChanges(words: JapaneseWord[]) {
 
       { kanjis: ["当たる", "当る", "中る", "中たる"], hiragana: "あたる", romanization: "ataru", verbGroup: "godan", verbIsTransitive: false, meaning: "hit (not miss)" },
       { kanjis: ["外れる"], hiragana: "はずれる", romanization: "hazureru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "miss (not hit)" },
+      { kanjis: ["空く"], hiragana: "すく", romanization: "suku", verbGroup: "godan", verbIsTransitive: false, meaning: "empty / thin out" },
       { kanjis: ["消す"], hiragana: "けす", romanization: "kesu", verbGroup: "godan", verbIsTransitive: true, meaning: "erase / turn off" },
       { kanjis: ["閉じる"], hiragana: "とじる", romanization: "tojiru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "close / shut" },
 

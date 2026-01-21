@@ -42,7 +42,8 @@ export function appendFunctionalLocational(words: JapaneseWord[]) {
 
       { kanjis: ["近く"], hiragana: "ちかく", romanization: "chikaku", meaning: "nearby" },
       { kanjis: ["遠く"], hiragana: "とおく", romanization: "tooku", meaning: "afar" },
-      { kanjis: ["内"], hiragana: "うち", romanization: "uchi", meaning: "inside / between" },
+      { kanjis: ["内"], hiragana: "うち", romanization: "uchi", meaning: "inside" },
+      { kanjis: ["中"], hiragana: "なか", romanization: "naka", meaning: "middle / centre", derivedMeanings: ["inside"] },
 
       // interrogative
       { hiragana: "どこ", preferredForm: "hiragana", kanjis: ["何処", "何所"], romanization: "doko", meaning: "where", exampleUsages: ["[Noun] はどこですか？", "どこが [Noun] ですか？"] },

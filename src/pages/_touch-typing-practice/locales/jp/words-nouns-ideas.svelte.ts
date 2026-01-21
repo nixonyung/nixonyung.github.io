@@ -27,6 +27,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["死"], hiragana: "し", romanization: "shi", meaning: "death" },
       { kanjis: ["死去"], hiragana: "しきょ", romanization: "shikyo", meaning: "passing away (formal)" },
 
+      { kanjis: ["泣き"], hiragana: "なき", romanization: "naki", meaning: "crying" },
       { kanjis: ["車酔い"], hiragana: "くるまよい", romanization: "kurumayoi", meaning: "car sickness" },
 
       // gender
