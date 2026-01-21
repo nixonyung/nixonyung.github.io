@@ -6,6 +6,7 @@ export type SettingsSchema = {
   };
 };
 
+// TODO: should not use generics and just use unions + runtime checking?
 type SettingValue<
   Sc extends SettingsSchema,
   K extends keyof Sc,
@@ -38,17 +39,6 @@ export type Gojuon = Letter & {
     row: number;
     col: number;
   };
-};
-
-export type Word = {
-  word: string;
-  actualPronunciation?: string;
-  aliases?: string[];
-
-  meaning: string;
-
-  romanization?: string;
-  actualInput?: string;
 };
 
 export type JapaneseWord = {

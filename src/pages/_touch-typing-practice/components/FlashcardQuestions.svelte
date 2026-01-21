@@ -11,7 +11,7 @@
   import { QuestionsQueue } from "@/lib/questions-queue.svelte.ts";
   import { speech } from "@/lib/speech.svelte";
   import { isEqual, randomInt, range, sortBy } from "es-toolkit";
-  import { untrack } from "svelte";
+  import { tick, untrack } from "svelte";
   import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
 
   const {
@@ -138,7 +138,8 @@
       while (options.length < settings.numOptions - 1 && i < indices.length) {
         const j = randomInt(i, indices.length);
         [indices[i], indices[j]] = [indices[j], indices[i]];
-        const word = allQuestions[indices[i]];
+        const idx = indices[i];
+        const word = allQuestions[idx];
         i++;
 
         // filter out answers from other same-looking questions
@@ -147,6 +148,10 @@
         // filter out same-looking options
         const answerEntriesStr = entriesToStr(word.answerEntries);
         if (optionStrs.has(answerEntriesStr)) continue;
+
+        // filter out pinned/unpinned depending on settings
+        if (settings.onlyPinned && !questionsQueue.isPinned(idx)) continue;
+        if (settings.onlyUnpinned && questionsQueue.isPinned(idx)) continue;
 
         options.push(word.answerEntries);
         optionStrs.add(answerEntriesStr);
@@ -176,14 +181,14 @@
 
     showRomanization = false;
     if (untrack(() => settings.autoReadQuestion)) {
-      questionRef?.click();
+      tick().then(() => questionRef?.click());
     }
   });
 
   $effect.pre(() => {
     if (
-      (settings.onlyPinned && questionsQueue.numPinned) ||
-      (settings.onlyUnpinned && questionsQueue.numUnpinned)
+      (settings.onlyPinned && untrack(() => questionsQueue.numPinned)) ||
+      (settings.onlyUnpinned && untrack(() => questionsQueue.numPinned < allQuestions.length))
     )
       untrack(() => nextQuestion());
   });

@@ -33,7 +33,6 @@ export class QuestionsQueue<Item extends object> {
 
   #pinnedIdxs: SvelteSet<number>;
   #pinnedIdxsQueue: Queue;
-  #unpinnedIdxs: SvelteSet<number>; // to improve the performance for generating unpinnedQueue
   #unpinnedIdxsQueue: Queue;
 
   constructor(items: Item[]) {
@@ -41,22 +40,19 @@ export class QuestionsQueue<Item extends object> {
 
     this.#pinnedIdxs = new SvelteSet();
     this.#pinnedIdxsQueue = new Queue();
-    this.#unpinnedIdxs = new SvelteSet(range(items.length));
     this.#unpinnedIdxsQueue = new Queue();
   }
 
   get numPinned() {
     return this.#pinnedIdxs.size;
   }
-  get numUnpinned() {
-    return this.#unpinnedIdxs.size;
-  }
 
-  get pinnedItems() {
-    return [...this.#pinnedIdxs].map((idx) => ({ ...this.items[idx], idx }));
+  #idxToItem(idx: number): Item & { idx: number };
+  #idxToItem(idx: number | undefined) {
+    return idx !== undefined ? clone({ ...this.items[idx], idx }) : undefined;
   }
-  get unpinnedItems() {
-    return [...this.#unpinnedIdxs].map((idx) => ({ ...this.items[idx], idx }));
+  get pinnedItems() {
+    return [...this.#pinnedIdxs].map((idx) => this.#idxToItem(idx));
   }
 
   isPinned(idx: number) {
@@ -64,24 +60,21 @@ export class QuestionsQueue<Item extends object> {
   }
   pin(idx: number) {
     this.#pinnedIdxs.add(idx);
-    this.#unpinnedIdxs.delete(idx);
   }
   unpin(idx: number) {
     this.#pinnedIdxs.delete(idx);
-    this.#unpinnedIdxs.add(idx);
   }
   unpinAll() {
     this.#pinnedIdxs = new SvelteSet();
   }
 
-  #idxToItem(idx: number | undefined) {
-    return idx !== undefined ? clone({ ...this.items[idx], idx }) : undefined;
-  }
   #resetPinnedQueue() {
     this.#pinnedIdxsQueue = new Queue(shuffle([...this.#pinnedIdxs]));
   }
   #resetUnpinnedQueue() {
-    this.#unpinnedIdxsQueue = new Queue(shuffle([...this.#unpinnedIdxs]));
+    this.#unpinnedIdxsQueue = new Queue(
+      shuffle(range(this.items.length).filter((idx) => !this.#pinnedIdxs.has(idx))),
+    );
   }
   next({
     onlyPinned = false,
@@ -100,13 +93,13 @@ export class QuestionsQueue<Item extends object> {
           this.#resetPinnedQueue();
           return this.#idxToItem(this.#pinnedIdxsQueue.pop()!);
         }
-        if (!this.#unpinnedIdxs.has(idx)) {
+        if (this.#pinnedIdxs.has(idx)) {
           return this.#idxToItem(idx);
         }
       }
     }
 
-    if (onlyUnpinned && this.#unpinnedIdxs.size) {
+    if (onlyUnpinned && this.#pinnedIdxs.size < this.items.length) {
       while (true) {
         const idx = this.#unpinnedIdxsQueue.pop();
 
@@ -126,8 +119,8 @@ export class QuestionsQueue<Item extends object> {
     }
     return this.#idxToItem(
       random(this.#pinnedIdxsQueue.size + this.#unpinnedIdxsQueue.size) < this.#pinnedIdxsQueue.size
-        ? this.#pinnedIdxsQueue.pop()
-        : this.#unpinnedIdxsQueue.pop(),
+        ? this.#pinnedIdxsQueue.pop()!
+        : this.#unpinnedIdxsQueue.pop()!,
     );
   }
 }

@@ -32,8 +32,8 @@
     <FlashcardSettingsJP />
     <FlashcardQuestions
       words={jp.words}
-      wordToPronunciationFn={({ hiragana, katakana, romanization }) =>
-        hiragana ?? katakana ?? romanization}
+      wordToPronunciationFn={({ hiragana, katakana, kanjis, romanization }) =>
+        hiragana ?? katakana ?? kanjis?.[0] ?? romanization}
       wordToRomanizationFn={({ romanization }) => romanization}
       schema={[
         {
