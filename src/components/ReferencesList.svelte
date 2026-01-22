@@ -18,15 +18,15 @@
   } = $props();
 </script>
 
-{#snippet list(references: References, listTitle?: string)}
+{#snippet list(nodes: References, listTitle?: string)}
   {listTitle ?? "References:"}
   <ul class={["list-inside list-disc", listTitle && "pl-6"]}>
-    {#each Object.entries(references) as [title, v]}
+    {#each Object.entries(nodes) as [title, node] (title)}
       <li>
-        {#if v === undefined || typeof v === "string"}
-          <ReferenceLink {title} href={v} />
+        {#if node === undefined || typeof node === "string"}
+          <ReferenceLink {title} href={node} />
         {:else}
-          {@render list(v, title)}
+          {@render list(node, title)}
         {/if}
       </li>
     {/each}

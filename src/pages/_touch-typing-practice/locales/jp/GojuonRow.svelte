@@ -59,7 +59,7 @@
     ]}
     onclick={() => (enabled = !enabled)}
   >
-    {#each gojuons as gojuon}
+    {#each gojuons as gojuon, i (gojuon?.hiragana ?? i)}
       <div class="flex h-12 gap-2 px-2 ring">
         <div
           class={[

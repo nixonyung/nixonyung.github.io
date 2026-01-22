@@ -43,6 +43,10 @@ export default defineConfig(
       },
     },
     rules: {
+      // allow adding dependencies in effects
+      "@typescript-eslint/no-unused-expressions": "off",
+
+      // prefer URLSearchParams over SvelteURLSearchParams
       "svelte/prefer-svelte-reactivity": "off",
     },
   },

@@ -84,7 +84,7 @@
 
   <!-- options -->
   <div class="flex flex-wrap items-center-safe gap-3">
-    {#each options as option}
+    {#each options as option (option)}
       <Highlighted
         onclick={() => {
           if (option === question?.letter) {

@@ -217,7 +217,7 @@
       <span>Show in Options:</span>
     </div>
 
-    {#each schema as { label }, i}
+    {#each schema as { label }, i (label)}
       <div class="flex flex-col">
         <CheckboxInput bind:checked={settings.questionSettings[i]} {label} />
         <CheckboxInput bind:checked={settings.optionSettings[i]} {label} />
@@ -241,12 +241,12 @@
 
   {#snippet entries(entries: Entry[])}
     <div class="flex flex-col items-start">
-      {#each entries as entry}
+      {#each entries as entry (entry)}
         {#if typeof entry === "string"}
           <span>{entry}</span>
         {:else if Array.isArray(entry) && entry.length}
           <div class="flex flex-col items-start text-xs">
-            {#each entry as text}
+            {#each entry as text (text)}
               <span>{text}</span>
             {/each}
           </div>
@@ -313,7 +313,7 @@
             <div
               class="invisible absolute top-0 right-0 z-10 flex translate-x-full translate-y-2 flex-col divide-y rounded bg-primary whitespace-nowrap ring group-hover/list:visible"
             >
-              {#each questionsQueue.pinnedItems as { questionEntries, answerEntries, romanization, idx }}
+              {#each questionsQueue.pinnedItems as { questionEntries, answerEntries, romanization, idx } (idx)}
                 <button
                   class="group/item flex cursor-pointer items-center-safe gap-1.5 px-2 py-1.5"
                   onclick={() => {
@@ -345,7 +345,7 @@
 
     <!-- options -->
     <div class="mt-6 flex flex-col gap-2">
-      {#each options as option, i}
+      {#each options as option, i (option)}
         <Highlighted
           vertical
           variant={isWrongOptions[i] ? "error" : "primary-lighter"}
