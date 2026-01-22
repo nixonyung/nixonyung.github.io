@@ -13,6 +13,7 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
 
       { hiragana: "つもりです", romanization: "tsumori desu", meaning: "planning to", exampleUsages: ["[Verb] つもりです。"] },
       { hiragana: "つもりはない", romanization: "tsumori wa nai", meaning: "planning not to (spoken, casual)", exampleUsages: ["[Verb-ない (dropped)] つもりはない"] },
+      // TODO: dasu
 
       // -nai
       { hiragana: "ないで", romanization: "naide", meaning: "do not", exampleUsages: ["[Verb-ない (dropped)] ないで [Verb]", "[Verb-ない] でください。"] },

@@ -22,7 +22,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["休む"], hiragana: "やすむ", romanization: "yasumu", verbGroup: "godan", verbIsTransitive: false, meaning: "rest", derivedMeanings: ["sleep", "have a day off"] },
 
       // eyes
-      { kanjis: ["見る", "観る", "視る"], hiragana: "みる", romanization: "miru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "look / see" },
+      { kanjis: ["見る", "観る", "視る"], hiragana: "みる", romanization: "miru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "look / see / watch", exampleUsages: ["見て (watch me/this!) (casual)"] },
       { kanjis: ["泣き出す"], hiragana: "なきだす", romanization: "nakidasu", verbGroup: "godan", verbIsTransitive: false, meaning: "start crying" },
 
       // ears
@@ -58,29 +58,32 @@ export function appendVerbsActions(words: JapaneseWord[]) {
 
   if (jp.flashcardSettings.enableVerbsActionsIntellectual) {
     verbs.push(
-      // input / studying
-      { kanjis: ["読む"], hiragana: "よむ", romanization: "yomu", verbGroup: "godan", verbIsTransitive: true, meaning: "read" },
-      // TODO: observe
-      { kanjis: ["勉強する"], hiragana: "べんきょうする", romanization: "benkyousuru", verbGroup: "irregular", verbIsTransitive: true, meaning: "study", exampleUsages: ["日本語を勉強します"] },
-      { hiragana: "わかる", preferredForm: "hiragana", kanjis: ["分かる", "解る", "判る", "分る"], romanization: "wakaru", verbGroup: "godan", verbIsTransitive: false, meaning: "comprehend" },
-      { kanjis: ["覚える"], rareKanjis: ["憶える"], hiragana: "おぼえる", romanization: "oboeru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "memorize" },
-      { kanjis: ["学ぶ"], hiragana: "まなぶ", romanization: "manabu", verbGroup: "godan", verbIsTransitive: true, meaning: "learn" },
-      { kanjis: ["教わる"], hiragana: "おそわる", romanization: "osowaru", verbGroup: "godan", verbIsTransitive: true, meaning: "learn / be taught" },
-      { kanjis: ["知る", "識る"], hiragana: "しる", romanization: "shiru", verbGroup: "godan", verbIsTransitive: true, meaning: "know" },
+      // knowing
+      { hiragana: "わかる", preferredForm: "hiragana", kanjis: ["分かる", "解る", "判る", "分る"], romanization: "wakaru", verbGroup: "godan", verbIsTransitive: false, meaning: "understand", derivedMeanings: ["be able to"], exampleUsages: ["わかるよ (I understand!) (casual)", "わかりました (I understood) (polite)"] },
+      { kanjis: ["知る", "識る"], hiragana: "しる", romanization: "shiru", verbGroup: "godan", verbIsTransitive: true, meaning: "know / acquire", exampleUsages: ["知っている (I know)"] },
+      { kanjis: ["出来る"], hiragana: "できる", romanization: "dekiru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "can do", derivedMeanings: ["ready"] },
 
-      // output / recalling
-      { kanjis: ["思う", "想う"], rareKanjis: ["憶う", "念う"], hiragana: "おもう", romanization: "omou", verbGroup: "godan", verbIsTransitive: true, meaning: "think / imagine / expect" },
+      // learning
+      { kanjis: ["学ぶ"], hiragana: "まなぶ", romanization: "manabu", verbGroup: "godan", verbIsTransitive: true, meaning: "learn" },
+      { kanjis: ["教わる"], hiragana: "おそわる", romanization: "osowaru", verbGroup: "godan", verbIsTransitive: true, meaning: "be taught" },
+      { kanjis: ["勉強する"], hiragana: "べんきょうする", romanization: "benkyousuru", verbGroup: "irregular", verbIsTransitive: true, meaning: "study", exampleUsages: ["日本語を勉強します"] },
+      { kanjis: ["認める"], hiragana: "みとめる", romanization: "mitomeru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "recognize" },
+      { kanjis: ["覚える"], rareKanjis: ["憶える"], hiragana: "おぼえる", romanization: "oboeru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "memorize" },
+
+      // thinking
+      { kanjis: ["思う", "想う"], rareKanjis: ["憶う", "念う"], hiragana: "おもう", romanization: "omou", verbGroup: "godan", verbIsTransitive: true, meaning: "feel about / consider (emotionally)" },
       { kanjis: ["思い出す"], hiragana: "おもいだす", romanization: "omoidasu", verbGroup: "godan", verbIsTransitive: true, meaning: "recall" },
-      { kanjis: ["考える", "勘える", "稽える"], hiragana: "かんがえる", romanization: "kangaeru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "consider / contemplate" },
-      { kanjis: ["出来る"], hiragana: "できる", romanization: "dekiru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "be able to" },
+      { kanjis: ["考える", "勘える", "稽える"], hiragana: "かんがえる", romanization: "kangaeru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "consider (logically) / contemplate" },
       { kanjis: ["決める", "極める"], hiragana: "きめる", katakana: "キメる", romanization: "kimeru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "determine" },
 
       // communicative
-      { kanjis: ["言う", "云う", "謂う"], hiragana: "いう", romanization: "iu", verbGroup: "godan", verbIsTransitive: true, meaning: "say" },
+      { kanjis: ["言う", "云う", "謂う"], hiragana: "いう", romanization: "iu", verbGroup: "godan", verbIsTransitive: true, meaning: "say / utter" },
+      { kanjis: ["話す"], rareKanjis: ["咄す"], hiragana: "はなす", romanization: "hanasu", verbGroup: "godan", verbIsTransitive: true, meaning: "talk / converse" },
+      { hiragana: "しゃべる", kanjis: ["喋る"], romanization: "shaberu", verbGroup: "godan", verbIsTransitive: true, meaning: "chatter (casual)" },
       { kanjis: ["呼ぶ"], rareKanjis: ["喚ぶ"], hiragana: "よぶ", romanization: "yobu", verbGroup: "godan", verbIsTransitive: true, meaning: "call / address" },
-      { kanjis: ["話す"], rareKanjis: ["咄す"], hiragana: "はなす", romanization: "hanasu", verbGroup: "godan", verbIsTransitive: true, meaning: "converse" },
+      { kanjis: ["語る"], hiragana: "かたる", romanization: "kataru", verbGroup: "godan", verbIsTransitive: true, meaning: "narrate / tell a story" },
       { kanjis: ["伺う"], hiragana: "うかがう", romanization: "ukagau", verbGroup: "godan", verbIsTransitive: true, meaning: "inquire" },
-      { kanjis: ["教える"], hiragana: "おしえる", romanization: "oshieru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "teach", derivedMeanings: ["inform"], exampleUsages: ["べんりなフレーズを三つ教えます (teach)", "教えて (please let me know)"] },
+      { kanjis: ["教える"], hiragana: "おしえる", romanization: "oshieru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "teach", derivedMeanings: ["inform"], exampleUsages: ["便利なフレーズを三つ教えます", "教えて (please let me know)"] },
     );
   }
 
@@ -198,6 +201,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["合格する"], hiragana: "ごうかくする", romanization: "goukakusuru", verbGroup: "irregular", verbIsTransitive: false, meaning: "pass (an exam)" },
 
       // using tools
+      { kanjis: ["読む"], hiragana: "よむ", romanization: "yomu", verbGroup: "godan", verbIsTransitive: true, meaning: "read" },
       { kanjis: ["書く"], hiragana: "かく", romanization: "kaku", verbGroup: "godan", verbIsTransitive: true, meaning: "write" },
       { kanjis: ["写す"], hiragana: "うつす", romanization: "utsusu", verbGroup: "godan", verbIsTransitive: true, meaning: "copy / reproduce / describe" },
       { kanjis: ["描く", "画く"], hiragana: "えがく", romanization: "egaku", verbGroup: "godan", verbIsTransitive: true, meaning: "draw / paint" },
