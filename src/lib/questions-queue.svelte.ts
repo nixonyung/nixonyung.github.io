@@ -46,6 +46,9 @@ export class QuestionsQueue<Item extends object> {
   get numPinned() {
     return this.#pinnedIdxs.size;
   }
+  get numUnpinned() {
+    return this.items.length - this.#pinnedIdxs.size;
+  }
 
   #idxToItem(idx: number): Item & { idx: number };
   #idxToItem(idx: number | undefined) {

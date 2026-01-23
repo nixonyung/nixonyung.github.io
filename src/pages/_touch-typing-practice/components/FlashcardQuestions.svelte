@@ -150,8 +150,10 @@
         if (optionStrs.has(answerEntriesStr)) continue;
 
         // filter out pinned/unpinned depending on settings
-        if (settings.onlyPinned && !questionsQueue.isPinned(idx)) continue;
-        if (settings.onlyUnpinned && questionsQueue.isPinned(idx)) continue;
+        if (settings.onlyPinned && questionsQueue.numPinned && !questionsQueue.isPinned(idx))
+          continue;
+        if (settings.onlyUnpinned && questionsQueue.numUnpinned && questionsQueue.isPinned(idx))
+          continue;
 
         options.push(word.answerEntries);
         optionStrs.add(answerEntriesStr);
@@ -188,7 +190,7 @@
   $effect.pre(() => {
     if (
       (settings.onlyPinned && untrack(() => questionsQueue.numPinned)) ||
-      (settings.onlyUnpinned && untrack(() => questionsQueue.numPinned < allQuestions.length))
+      (settings.onlyUnpinned && untrack(() => questionsQueue.numUnpinned))
     )
       untrack(() => nextQuestion());
   });
