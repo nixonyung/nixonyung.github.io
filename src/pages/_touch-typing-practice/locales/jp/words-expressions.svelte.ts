@@ -1,6 +1,7 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
+// TODO: separate into files
 export function appendExpressions(words: JapaneseWord[]) {
   // TODO: "nai desu ka" vs "arimasen ka": "nai desu ka" is modern / spoken
   // TODO: ずっと zutto
@@ -11,7 +12,7 @@ export function appendExpressions(words: JapaneseWord[]) {
   // TODO: Shika, Bakari, Nomi
   // TODO: proverbs
 
-  if (jp.flashcardSettings.enableExpressionsAppellations) {
+  if (flashcardSettings.words.expressions.appellations.value) {
     words.push(
       { hiragana: "〇〇さん", romanization: "san", meaning: "Mr/Mrs/Miss/Ms xxx" },
       { kanjis: ["〇〇様"], rareKanjis: ["〇〇方", "〇〇状"], hiragana: "〇〇さま", romanization: "sama", meaning: "Mr/Mrs/Miss/Ms xxx (very formal)", exampleUsages: ["(addressing higher status people / customers)"] },
@@ -26,7 +27,7 @@ export function appendExpressions(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableExpressionsGreetingsAndClosings) {
+  if (flashcardSettings.words.expressions.greetingsAndClosings.value) {
     words.push(
       // TODO: good morning, good afternoon, good evening
       { hiragana: "おはこんばんちは", romanization: "ohakonbanchiwa", meaning: "(good morning/afternoon/evening)", derivedMeanings: ["good day (spoken, casual)"] },
@@ -46,7 +47,7 @@ export function appendExpressions(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableExpressionsSoftening) {
+  if (flashcardSettings.words.expressions.softening.value) {
     words.push(
       { hiragana: "よ", romanization: "yo", meaning: "don't you know? (spoken, casual)", exampleUsages: ["[Clause] よ。", "[Clause] だよ。", "[Clause] よね。"] },
       { hiragana: "ね", romanization: "ne", meaning: "isn't it? (expressing feelings, spoken, casual)", exampleUsages: ["... ですね。", "[Adj.] ね。"] },
@@ -65,7 +66,7 @@ export function appendExpressions(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableExpressionsEmphasis) {
+  if (flashcardSettings.words.expressions.emphasis.value) {
     words.push(
       //
       { hiragana: "だろう", romanization: "darou", meaning: "right? (stating facts, casual)", exampleUsages: ["[Clause] だろう？"] },
@@ -86,7 +87,7 @@ export function appendExpressions(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableExpressionsAgreeing) {
+  if (flashcardSettings.words.expressions.agreeing.value) {
     words.push(
       //
       { hiragana: "はい", romanization: "sou", meaning: "yes / I see", derivedMeanings: ["(I am listening)"] },
@@ -106,7 +107,7 @@ export function appendExpressions(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableExpressionsRequests) {
+  if (flashcardSettings.words.expressions.requests.value) {
     words.push(
       //
       { hiragana: "ください", preferredForm: "hiragana", kanjis: ["下さい"], romanization: "kudasai", meaning: "please give me (polite)", exampleUsages: ["お [Noun] をください。", "[Noun] を {(counter)} ください。"] },
@@ -118,7 +119,7 @@ export function appendExpressions(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableExpressionsSurprised) {
+  if (flashcardSettings.words.expressions.surprised.value) {
     words.push(
       //
       { hiragana: "うわ", romanization: "uwa", meaning: "wow" },
@@ -138,7 +139,7 @@ export function appendExpressions(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableExpressionsMisc) {
+  if (flashcardSettings.words.expressions.misc.value) {
     words.push(
       { hiragana: "もうありません", romanization: "mou arimasen", meaning: "aren't any left" },
       { hiragana: "あと", romanization: "ato", meaning: "still have", exampleUsages: ["あと5秒"] },

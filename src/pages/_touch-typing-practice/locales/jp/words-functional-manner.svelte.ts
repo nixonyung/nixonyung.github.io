@@ -1,8 +1,8 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendFunctionalManner(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableFunctionalManner) {
+  if (flashcardSettings.words.functional.manner.value) {
     words.push(
       { kanjis: ["一緒に"], hiragana: "いっしょに", romanization: "isshoni", meaning: "together {with xxx}", exampleUsages: ["一緒に [Verb]", "[Noun] と 一緒に [Verb]。"] },
 

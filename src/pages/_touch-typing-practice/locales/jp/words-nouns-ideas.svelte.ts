@@ -1,8 +1,8 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendNounsIdeas(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableNounsIdeasLife) {
+  if (flashcardSettings.words.nouns.ideas.life.value) {
     // TODO: humanity vs wellbeing
     words.push(
       { kanjis: ["人間"], hiragana: "にんげん", romanization: "ningen", meaning: "mankind / human being" },
@@ -58,7 +58,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsIdeasSocialConstructs) {
+  if (flashcardSettings.words.nouns.ideas.socialConstructs.value) {
     words.push(
       { kanjis: ["家族"], hiragana: "かぞく", romanization: "kazoku", meaning: "family / clan" },
       { kanjis: ["親戚"], hiragana: "しんせき", romanization: "shinseki", meaning: "relatives" },
@@ -137,7 +137,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsIdeasDecisionMaking) {
+  if (flashcardSettings.words.nouns.ideas.decisionMaking.value) {
     words.push(
       { kanjis: ["意見"], hiragana: "いけん", romanization: "iken", meaning: "opinion" },
       { kanjis: ["見方"], hiragana: "みかた", romanization: "mikata", meaning: "point of view" },
@@ -163,7 +163,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsIdeasNarration) {
+  if (flashcardSettings.words.nouns.ideas.narration.value) {
     words.push(
       // TODO: manual, documents
       { kanjis: ["辞書"], hiragana: "じしょ", romanization: "jisho", meaning: "dictionary" },
@@ -207,7 +207,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsIdeasMath) {
+  if (flashcardSettings.words.nouns.ideas.math.value) {
     words.push(
       // numerical
       { kanjis: ["増加"], hiragana: "ぞうか", romanization: "zouka", meaning: "increase" },
@@ -226,7 +226,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsIdeasScience) {
+  if (flashcardSettings.words.nouns.ideas.science.value) {
     words.push(
       //
       // TODO: to engineering?
@@ -234,7 +234,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsIdeasArts) {
+  if (flashcardSettings.words.nouns.ideas.arts.value) {
     words.push(
       // drawings
       { kanjis: ["漫画"], hiragana: "まんが", katakana: "マンガ", romanization: "manga", meaning: "manga" },
@@ -250,7 +250,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsIdeasActivities) {
+  if (flashcardSettings.words.nouns.ideas.activities.value) {
     words.push(
       //
       { katakana: "サッカー", romanization: "sakkaa", meaning: "soccer" },
@@ -259,7 +259,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsIdeasVideoGames) {
+  if (flashcardSettings.words.nouns.ideas.videoGames.value) {
     words.push(
       //
       { katakana: "ゲーム", romanization: "geemu", meaning: "game" },

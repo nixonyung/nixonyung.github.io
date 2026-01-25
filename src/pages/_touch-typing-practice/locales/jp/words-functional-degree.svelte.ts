@@ -1,10 +1,10 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendFunctionalDegree(words: JapaneseWord[]) {
   // TODO: https://www.nihongomaster.com/japanese/dictionary/word/68426/nanraka-%E4%BD%95%E3%82%89%E3%81%8B-%E4%BD%95%E7%AD%89%E3%81%8B-%E3%81%AA%E3%82%93%E3%82%89%E3%81%8B
 
-  if (jp.flashcardSettings.enableFunctionalDegree) {
+  if (flashcardSettings.words.functional.degree.value) {
     words.push(
       // comparative
       { hiragana: "とても", rareKanjis: ["迚も"], romanization: "totemo", meaning: "very", exampleUsages: ["とても [Adj.]", "とても [Verb]"] },

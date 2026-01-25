@@ -1,19 +1,15 @@
 import { cloneDeep, debounce } from "es-toolkit";
 import { onDestroy, onMount } from "svelte";
-import type { Settings, SettingsSchema, SettingValue } from "../pages/_touch-typing-practice/types";
 
-// searchParams should be initialized before app, as initSettings depends on searchParams
-// caveat: native URLSearchParams has better performance over SvelteURLSearchParams
 const searchParams = new URLSearchParams(window.location.search);
 
+// need debounce to handle onDestroy from multiple components
 const updateURL = debounce(() => {
   const paramStr = searchParams.toString();
   history.replaceState(null, "", paramStr ? `?${paramStr}` : location.pathname);
-}, 100);
+}, 50);
 
-function encodeSetting(value: string | number | boolean): string;
-function encodeSetting(value: string | number | boolean | (string | number | boolean)[]): string;
-function encodeSetting(value: string | number | boolean | (string | number | boolean)[]) {
+function encodeSetting(value: string | number | boolean | string[] | number[] | boolean[]): string {
   if (Array.isArray(value)) {
     return value.map(encodeSetting).join("-");
   } else {
@@ -33,19 +29,12 @@ function decodeSetting(encoded: string, type: "number"): number;
 function decodeSetting(encoded: string, type: "boolean"): boolean;
 function decodeSetting(
   encoded: string,
-  type: "string" | "number" | "boolean",
-): string | number | boolean;
-function decodeSetting(encoded: string, type: "string[]"): string[];
-function decodeSetting(encoded: string, type: "number[]"): number[];
-function decodeSetting(encoded: string, type: "boolean[]"): boolean[];
-function decodeSetting(
-  encoded: string,
-  type: "string[]" | "number[]" | "boolean[]",
-): (string | number | boolean)[];
+  type: "string" | "number" | "boolean" | "string[]" | "number[]" | "boolean[]",
+): string | number | boolean | string[] | number[] | boolean[];
 function decodeSetting(
   encoded: string,
   type: "string" | "number" | "boolean" | "string[]" | "number[]" | "boolean[]" = "string",
-): string | number | boolean | (string | number | boolean)[] {
+): string | number | boolean | string[] | number[] | boolean[] {
   switch (type) {
     case "string":
       return encoded;
@@ -62,50 +51,115 @@ function decodeSetting(
   }
 }
 
-function readSetting(
-  paramKey: string,
-  defaultValue: string | number | boolean | (string | number | boolean)[] = "",
-  arrayType: "string[]" | "number[]" | "boolean[]" = "string[]",
-): string | number | boolean | (string | number | boolean)[] {
-  const encoded = searchParams.get(paramKey);
-  if (encoded === null) return cloneDeep(defaultValue);
+export type SettingsSchemaField = {
+  paramKey: string;
+} & (
+  | { arrayType?: undefined; defaultValue: string }
+  | { arrayType?: undefined; defaultValue: number }
+  | { arrayType?: undefined; defaultValue: boolean }
+  | { arrayType: "string[]"; defaultValue: string[] }
+  | { arrayType: "number[]"; defaultValue: number[] }
+  | { arrayType: "boolean[]"; defaultValue: boolean[] }
+);
 
-  switch (typeof defaultValue) {
-    case "string":
-      return decodeSetting(encoded, "string");
-    case "number":
-      return decodeSetting(encoded, "number");
-    case "boolean":
-      return decodeSetting(encoded, "boolean");
-    default:
-      return decodeSetting(encoded, arrayType);
-  }
+type SettingsSchema = {
+  [K: string]: SettingsSchemaField | SettingsSchema;
+};
+
+type SettingsValue<Field extends SettingsSchemaField> = Field["defaultValue"] extends never[]
+  ? Field["arrayType"] extends "string[]"
+    ? string[]
+    : Field["arrayType"] extends "number[]"
+      ? number[]
+      : Field["arrayType"] extends "boolean[]"
+        ? boolean[]
+        : never
+  : Field["defaultValue"] extends true | false
+    ? boolean
+    : Field["defaultValue"];
+
+type Setting<SchemaField extends SettingsSchemaField> = Omit<
+  SchemaField,
+  "defaultValue" | "value"
+> & {
+  defaultValue: SettingsValue<SchemaField>;
+  value: SettingsValue<SchemaField>;
+};
+
+type Settings<Sc extends SettingsSchema> = {
+  [K in keyof Sc]: Sc[K] extends SettingsSchemaField
+    ? Setting<Sc[K]>
+    : Sc[K] extends SettingsSchema
+      ? Settings<Sc[K]>
+      : never;
+};
+
+function readSetting(field: {
+  paramKey: SettingsSchemaField["paramKey"];
+  arrayType?: SettingsSchemaField["arrayType"];
+  defaultValue: SettingsSchemaField["defaultValue"];
+}) {
+  const encoded = searchParams.get(field.paramKey);
+  return encoded !== null
+    ? decodeSetting(
+        encoded,
+        field.arrayType ?? (typeof field.defaultValue as "string" | "number" | "boolean"),
+      )
+    : cloneDeep(field.defaultValue);
 }
 
-export function initSettings<Sc extends SettingsSchema>(schema: Sc) {
+function isSchemaField(field: SettingsSchema | SettingsSchemaField): field is SettingsSchemaField {
+  return field.paramKey !== undefined;
+}
+export function initSettings<Sc extends SettingsSchema>(schema: Sc): Settings<Sc> {
   return Object.fromEntries(
-    Object.entries(schema).map(([key, { paramKey, defaultValue }]) => [
+    Object.entries(schema).map(([key, field]) => [
       key,
-      readSetting(paramKey, defaultValue),
+      isSchemaField(field)
+        ? {
+            paramKey: field.paramKey,
+            defaultValue: field.defaultValue,
+            value: readSetting(field),
+          }
+        : initSettings(field),
     ]),
   ) as Settings<Sc>;
 }
 
-export function useSyncSettings<Sc extends SettingsSchema>(schema: Sc, settings: Settings<Sc>) {
-  onMount(() => {
-    // read settings from URL
-    for (const [key, { paramKey, defaultValue, arrayType }] of Object.entries(schema)) {
-      settings[key as keyof Sc] = readSetting(paramKey, defaultValue, arrayType) as SettingValue<
-        Sc,
-        typeof key
-      >;
+type ResultSetting = Setting<SettingsSchemaField>;
+
+type ResultSettings = {
+  [K: string]: Setting<SettingsSchemaField> | ResultSettings;
+};
+
+function isSetting(setting: ResultSetting | ResultSettings): setting is ResultSetting {
+  return setting.paramKey !== undefined;
+}
+function settingsForEach(
+  settings: ResultSetting | ResultSettings,
+  callbackFn: (setting: ResultSetting) => void,
+) {
+  if (isSetting(settings)) {
+    const result = callbackFn(settings);
+    if (result !== undefined) {
+      settings.value = result;
     }
+  } else {
+    for (const setting of Object.values(settings)) {
+      settingsForEach(setting, callbackFn);
+    }
+  }
+}
+
+export function useSyncSettings(settings: ResultSettings) {
+  // read settings from URL
+  onMount(() => {
+    settingsForEach(settings, (setting) => readSetting(setting));
   });
 
-  // sync settings with URL
-  for (const [key, { paramKey, defaultValue }] of Object.entries(schema)) {
-    $effect.pre(() => {
-      const value = settings[key as keyof Sc];
+  // sync settings with URL when component is in use
+  $effect.pre(() => {
+    settingsForEach(settings, ({ paramKey, defaultValue, value }) => {
       const encoded = encodeSetting(value);
 
       if (encoded === encodeSetting(defaultValue)) {
@@ -113,17 +167,15 @@ export function useSyncSettings<Sc extends SettingsSchema>(schema: Sc, settings:
       } else {
         searchParams.set(paramKey, encoded);
       }
-
-      updateURL();
     });
-  }
+    updateURL();
+  });
 
+  // remove settings from URL when component is not in use
   onDestroy(() => {
-    // remove settings from URL
-    for (const { paramKey } of Object.values(schema)) {
+    settingsForEach(settings, ({ paramKey }) => {
       searchParams.delete(paramKey);
-    }
-
+    });
     updateURL();
   });
 }

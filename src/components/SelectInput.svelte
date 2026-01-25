@@ -1,4 +1,4 @@
-<script lang="ts" generics="const Options extends string[]">
+<script lang="ts" generics="Value extends string">
   import type { ClassValue } from "svelte/elements";
 
   let {
@@ -8,9 +8,9 @@
     class: classList,
     disabled,
   }: {
-    value: Options[number];
+    value: Value;
     label: string;
-    options: Options;
+    options: Value[];
     class?: ClassValue;
     disabled?: boolean;
   } = $props();

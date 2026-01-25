@@ -1,6 +1,6 @@
 import { cloneDeep } from "es-toolkit";
 import type { Gojuon, Letter } from "../../types";
-import { jp } from "./jp.svelte";
+import { gojuonSettings } from "./GojuonTable.svelte";
 
 export function getGojuons(): Gojuon[] {
   // (ref.) [平文式羅馬字](https://www.wikiwand.com/zh-hk/articles/平文式罗马字#罗马字表)
@@ -8,7 +8,7 @@ export function getGojuons(): Gojuon[] {
   const gojuons: Gojuon[] = [];
 
   // 平假名 Hiragana
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableRowA) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowA.value) {
     gojuons.push(
       //
       { letter: "あ", romanization: "a", gojuonPosition: { row: 0, col: 0 } },
@@ -18,7 +18,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "お", romanization: "o", gojuonPosition: { row: 0, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableRowKa) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowKa.value) {
     gojuons.push(
       //
       { letter: "か", romanization: "ka", gojuonPosition: { row: 1, col: 0 } },
@@ -28,7 +28,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "こ", romanization: "ko", gojuonPosition: { row: 1, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableRowSa) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowSa.value) {
     gojuons.push(
       //
       { letter: "さ", romanization: "sa", gojuonPosition: { row: 2, col: 0 } },
@@ -38,7 +38,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "そ", romanization: "so", gojuonPosition: { row: 2, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableRowTa) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowTa.value) {
     gojuons.push(
       //
       { letter: "た", romanization: "ta", gojuonPosition: { row: 3, col: 0 } },
@@ -48,7 +48,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "と", romanization: "to", gojuonPosition: { row: 3, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableRowNa) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowNa.value) {
     gojuons.push(
       //
       { letter: "な", romanization: "na", gojuonPosition: { row: 4, col: 0 } },
@@ -58,7 +58,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "の", romanization: "no", gojuonPosition: { row: 4, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableRowHa) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowHa.value) {
     gojuons.push(
       //
       { letter: "は", romanization: "ha", gojuonPosition: { row: 5, col: 0 } },
@@ -68,7 +68,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "ほ", romanization: "ho", gojuonPosition: { row: 5, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableRowMa) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowMa.value) {
     gojuons.push(
       //
       { letter: "ま", romanization: "ma", gojuonPosition: { row: 6, col: 0 } },
@@ -78,7 +78,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "も", romanization: "mo", gojuonPosition: { row: 6, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableRowYa) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowYa.value) {
     gojuons.push(
       //
       { letter: "や", romanization: "ya", gojuonPosition: { row: 7, col: 0 } },
@@ -86,7 +86,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "よ", romanization: "yo", gojuonPosition: { row: 7, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableRowRa) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowRa.value) {
     gojuons.push(
       //
       { letter: "ら", romanization: "ra", gojuonPosition: { row: 8, col: 0 } },
@@ -96,14 +96,14 @@ export function getGojuons(): Gojuon[] {
       { letter: "ろ", romanization: "ro", gojuonPosition: { row: 8, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableRowWa) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowWa.value) {
     gojuons.push(
       //
       { letter: "わ", romanization: "wa", gojuonPosition: { row: 9, col: 0 } },
       { letter: "を", romanization: "o", gojuonPosition: { row: 9, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableRowN) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowN.value) {
     gojuons.push(
       //
       { letter: "ん", romanization: "n", gojuonPosition: { row: 10, col: 0 } },
@@ -111,7 +111,7 @@ export function getGojuons(): Gojuon[] {
   }
 
   // 片假名 Katakana
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableRowA) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowA.value) {
     gojuons.push(
       //
       { letter: "ア", romanization: "a", gojuonPosition: { row: 0, col: 0 } },
@@ -121,7 +121,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "オ", romanization: "o", gojuonPosition: { row: 0, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableRowKa) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowKa.value) {
     gojuons.push(
       //
       { letter: "カ", romanization: "ka", gojuonPosition: { row: 1, col: 0 } },
@@ -131,7 +131,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "コ", romanization: "ko", gojuonPosition: { row: 1, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableRowSa) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowSa.value) {
     gojuons.push(
       //
       { letter: "サ", romanization: "sa", gojuonPosition: { row: 2, col: 0 } },
@@ -141,7 +141,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "ソ", romanization: "so", gojuonPosition: { row: 2, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableRowTa) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowTa.value) {
     gojuons.push(
       //
       { letter: "タ", romanization: "ta", gojuonPosition: { row: 3, col: 0 } },
@@ -151,7 +151,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "ト", romanization: "to", gojuonPosition: { row: 3, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableRowNa) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowNa.value) {
     gojuons.push(
       //
       { letter: "ナ", romanization: "na", gojuonPosition: { row: 4, col: 0 } },
@@ -161,7 +161,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "ノ", romanization: "no", gojuonPosition: { row: 4, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableRowHa) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowHa.value) {
     gojuons.push(
       //
       { letter: "ハ", romanization: "ha", gojuonPosition: { row: 5, col: 0 } },
@@ -171,7 +171,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "ホ", romanization: "ho", gojuonPosition: { row: 5, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableRowMa) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowMa.value) {
     gojuons.push(
       //
       { letter: "マ", romanization: "ma", gojuonPosition: { row: 6, col: 0 } },
@@ -181,7 +181,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "モ", romanization: "mo", gojuonPosition: { row: 6, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableRowYa) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowYa.value) {
     gojuons.push(
       //
       { letter: "ヤ", romanization: "ya", gojuonPosition: { row: 7, col: 0 } },
@@ -189,7 +189,7 @@ export function getGojuons(): Gojuon[] {
       { letter: "ヨ", romanization: "yo", gojuonPosition: { row: 7, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableRowRa) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowRa.value) {
     gojuons.push(
       //
       { letter: "ラ", romanization: "ra", gojuonPosition: { row: 8, col: 0 } },
@@ -199,14 +199,14 @@ export function getGojuons(): Gojuon[] {
       { letter: "ロ", romanization: "ro", gojuonPosition: { row: 8, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableRowWa) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowWa.value) {
     gojuons.push(
       //
       { letter: "ワ", romanization: "wa", gojuonPosition: { row: 9, col: 0 } },
       { letter: "ヲ", romanization: "o", gojuonPosition: { row: 9, col: 4 } },
     );
   }
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableRowN) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowN.value) {
     gojuons.push(
       //
       { letter: "ン", romanization: "n", gojuonPosition: { row: 10, col: 0 } },
@@ -222,7 +222,7 @@ export const getLetters = (): Letter[] => {
   const letters: Letter[] = cloneDeep(getGojuons());
 
   // Hiragana - 濁音 Dakuten and 半濁音 Handakuten
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableDiacritics && jp.gojuonSettings.enableRowKa) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableSubsets.diacritics.value && gojuonSettings.enableRows.rowKa.value) {
     letters.push(
       //
       { letter: "が", romanization: "ga" },
@@ -232,7 +232,7 @@ export const getLetters = (): Letter[] => {
       { letter: "ご", romanization: "go" },
     );
   }
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableDiacritics && jp.gojuonSettings.enableRowSa) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableSubsets.diacritics.value && gojuonSettings.enableRows.rowSa.value) {
     letters.push(
       //
       { letter: "ざ", romanization: "za" },
@@ -242,7 +242,7 @@ export const getLetters = (): Letter[] => {
       { letter: "ぞ", romanization: "zo" },
     );
   }
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableDiacritics && jp.gojuonSettings.enableRowTa) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableSubsets.diacritics.value && gojuonSettings.enableRows.rowTa.value) {
     letters.push(
       //
       { letter: "だ", romanization: "da" },
@@ -252,7 +252,7 @@ export const getLetters = (): Letter[] => {
       { letter: "ど", romanization: "do" },
     );
   }
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableDiacritics && jp.gojuonSettings.enableRowHa) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableSubsets.diacritics.value && gojuonSettings.enableRows.rowHa.value) {
     letters.push(
       //
       { letter: "ば", romanization: "ba" },
@@ -262,7 +262,7 @@ export const getLetters = (): Letter[] => {
       { letter: "ぼ", romanization: "bo" },
     );
   }
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableDiacritics && jp.gojuonSettings.enableRowHa) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableSubsets.diacritics.value && gojuonSettings.enableRows.rowHa.value) {
     letters.push(
       //
       { letter: "ぱ", romanization: "pa" },
@@ -274,7 +274,7 @@ export const getLetters = (): Letter[] => {
   }
 
   // Hiragana - 拗音 Yoon
-  if (jp.gojuonSettings.enableHiragana && jp.gojuonSettings.enableRowYa && jp.gojuonSettings.enableYoon) {
+  if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowYa.value && gojuonSettings.enableSubsets.yoons.value) {
     letters.push(
       //
       { letter: "きゃ", romanization: "kya" },
@@ -302,7 +302,7 @@ export const getLetters = (): Letter[] => {
   }
 
   // Katakana - 濁音 Dakuten and 半濁音 Handakuten
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableDiacritics && jp.gojuonSettings.enableRowKa) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableSubsets.diacritics.value && gojuonSettings.enableRows.rowKa.value) {
     letters.push(
       //
       { letter: "ガ", romanization: "ga" },
@@ -312,7 +312,7 @@ export const getLetters = (): Letter[] => {
       { letter: "ゴ", romanization: "go" },
     );
   }
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableDiacritics && jp.gojuonSettings.enableRowSa) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableSubsets.diacritics.value && gojuonSettings.enableRows.rowSa.value) {
     letters.push(
       //
       { letter: "ザ", romanization: "za" },
@@ -322,7 +322,7 @@ export const getLetters = (): Letter[] => {
       { letter: "ゾ", romanization: "zo" },
     );
   }
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableDiacritics && jp.gojuonSettings.enableRowTa) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableSubsets.diacritics.value && gojuonSettings.enableRows.rowTa.value) {
     letters.push(
       //
       { letter: "ダ", romanization: "da" },
@@ -332,7 +332,7 @@ export const getLetters = (): Letter[] => {
       { letter: "ド", romanization: "do" },
     );
   }
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableDiacritics && jp.gojuonSettings.enableRowHa) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableSubsets.diacritics.value && gojuonSettings.enableRows.rowHa.value) {
     letters.push(
       //
       { letter: "バ", romanization: "ba" },
@@ -342,7 +342,7 @@ export const getLetters = (): Letter[] => {
       { letter: "ボ", romanization: "bo" },
     );
   }
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableDiacritics && jp.gojuonSettings.enableRowHa) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableSubsets.diacritics.value && gojuonSettings.enableRows.rowHa.value) {
     letters.push(
       //
       { letter: "パ", romanization: "pa" },
@@ -354,7 +354,7 @@ export const getLetters = (): Letter[] => {
   }
 
   // Katakana - 拗音 Yoon
-  if (jp.gojuonSettings.enableKatakana && jp.gojuonSettings.enableRowYa && jp.gojuonSettings.enableYoon) {
+  if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowYa.value && gojuonSettings.enableSubsets.yoons.value) {
     letters.push(
       //
       { letter: "キャ", romanization: "kya" },

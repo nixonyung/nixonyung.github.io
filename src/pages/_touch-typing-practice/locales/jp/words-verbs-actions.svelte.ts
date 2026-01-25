@@ -1,5 +1,5 @@
 import type { JapaneseVerb, JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 // TODO: need to categorize?
 // Existence/Being: be, exist, belong, represent.
@@ -12,7 +12,7 @@ import { jp } from "./jp.svelte";
 export function appendVerbsActions(words: JapaneseWord[]) {
   const verbs: JapaneseVerb[] = [];
 
-  if (jp.flashcardSettings.enableVerbsActionsBodily) {
+  if (flashcardSettings.words.verbs.actions.bodily.value) {
     verbs.push(
       // rest
       { kanjis: ["生きる"], rareKanjis: ["活きる"], hiragana: "いきる", romanization: "ikiru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "be alive" },
@@ -56,7 +56,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableVerbsActionsIntellectual) {
+  if (flashcardSettings.words.verbs.actions.intellectual.value) {
     verbs.push(
       // knowing
       { hiragana: "わかる", preferredForm: "hiragana", kanjis: ["分かる", "解る", "判る", "分る"], romanization: "wakaru", verbGroup: "godan", verbIsTransitive: false, meaning: "understand", derivedMeanings: ["be able to"], exampleUsages: ["わかるよ (I understand!) (casual)", "わかりました (I understood) (polite)"] },
@@ -87,7 +87,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableVerbsActionsOwnership) {
+  if (flashcardSettings.words.verbs.actions.ownership.value) {
     verbs.push(
       // receiving
       { hiragana: "いる", preferredForm: "hiragana", kanjis: ["要る"], romanization: "iru", verbGroup: "godan", verbIsTransitive: false, meaning: "want" },
@@ -105,7 +105,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableVerbsActionsTranspositional) {
+  if (flashcardSettings.words.verbs.actions.transpositional.value) {
     verbs.push(
       { kanjis: ["行く", "往く"], hiragana: "いく", romanization: "iku", verbGroup: "godan", verbIsTransitive: false, meaning: "go", exampleUsages: ["東京に行く"] },
       { kanjis: ["会う", "逢う", "遭う"], rareKanjis: ["遇う"], hiragana: "あう", romanization: "au", verbGroup: "godan", verbIsTransitive: false, meaning: "meet" },
@@ -126,7 +126,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableVerbsActionsManeuvers) {
+  if (flashcardSettings.words.verbs.actions.maneuvers.value) {
     verbs.push(
       // holding
       { kanjis: ["取る"], hiragana: "とる", romanization: "toru", verbGroup: "godan", verbIsTransitive: true, meaning: "take / grab" },
@@ -171,7 +171,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableVerbsActionsActivities) {
+  if (flashcardSettings.words.verbs.actions.activities.value) {
     verbs.push(
       // generic
       { kanjis: ["働く"], hiragana: "はたらく", romanization: "hataraku", verbGroup: "godan", verbIsTransitive: false, meaning: "work" },
@@ -233,9 +233,14 @@ export function appendVerbsActions(words: JapaneseWord[]) {
     );
   }
 
-  for (const { kanjis, rareKanjis, hiragana, katakana, exampleUsages, preferredForm, romanization, meaning, derivedMeanings, question, answer, verbGroup, verbIsTransitive } of verbs) {
-    if (((jp.flashcardSettings.enableGodanVerbs && verbGroup === "godan") || (jp.flashcardSettings.enableIchidanVerbs && verbGroup === "ichidan") || (jp.flashcardSettings.enableIrregularVerbs && verbGroup === "irregular")) && ((jp.flashcardSettings.enableTransitiveVerbs && verbIsTransitive) || (jp.flashcardSettings.enableIntransitiveVerbs && !verbIsTransitive))) {
-      words.push({ kanjis, rareKanjis, hiragana, katakana, exampleUsages, preferredForm, romanization, meaning, derivedMeanings, question, answer });
-    }
+  for (const verb of verbs) {
+    if (flashcardSettings.enableGodanVerbs.value && verb.verbGroup !== "godan") continue;
+    if (flashcardSettings.enableIchidanVerbs.value && verb.verbGroup !== "ichidan") continue;
+    if (flashcardSettings.enableIrregularVerbs.value && verb.verbGroup !== "irregular") continue;
+
+    if (flashcardSettings.enableTransitiveVerbs.value && !verb.verbIsTransitive) continue;
+    if (flashcardSettings.enableIntransitiveVerbs.value && verb.verbIsTransitive) continue;
+
+    words.push(verb);
   }
 }

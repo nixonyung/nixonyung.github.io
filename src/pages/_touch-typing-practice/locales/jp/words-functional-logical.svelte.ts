@@ -1,12 +1,12 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendFunctionalLogical(words: JapaneseWord[]) {
   // TODO: ように
   // https://colanekojp.com.tw/blog_detail/66
   // https://www.sigure.tw/learn-japanese/grammar/n3/123
 
-  if (jp.flashcardSettings.enableFunctionalLogical) {
+  if (flashcardSettings.words.functional.logical.value) {
     words.push(
       // because
       { hiragana: "だって", romanization: "datte", meaning: "because (spoken, casual)" },

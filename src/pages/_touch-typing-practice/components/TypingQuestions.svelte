@@ -19,12 +19,13 @@
     keymap?: Keymap;
   } = $props();
 
-  const SETTINGS_SCHEMA = {
-    numQuestions: { paramKey: "numQuestions", defaultValue: 8 },
-    showRomanizations: { paramKey: "romanizations", defaultValue: false },
-  };
-  const settings = $state(initSettings(SETTINGS_SCHEMA));
-  useSyncSettings(SETTINGS_SCHEMA, settings);
+  const settings = $state(
+    initSettings({
+      numQuestions: { paramKey: "numQuestions", defaultValue: 8 },
+      showRomanizations: { paramKey: "romanizations", defaultValue: false },
+    }),
+  );
+  useSyncSettings(settings);
 
   type Question = {
     letter: string;
@@ -52,14 +53,14 @@
 
   function nextQuestion() {
     untrack(() => {
-      questions = Array.from({ length: settings.numQuestions }, () => questionsQueue.next());
+      questions = Array.from({ length: settings.numQuestions.value }, () => questionsQueue.next());
       inputs = [""];
     });
   }
 
   $effect.pre(() => {
     letters;
-    settings.numQuestions;
+    settings.numQuestions.value;
 
     nextQuestion();
   });
@@ -83,7 +84,7 @@
       } else {
         switch (key) {
           case " ":
-            if (inputs[inputs.length - 1] !== "" && inputs.length < settings.numQuestions) {
+            if (inputs[inputs.length - 1] !== "" && inputs.length < settings.numQuestions.value) {
               inputs.push("");
             }
             break;
@@ -110,8 +111,8 @@
 <div class="flex flex-col gap-3">
   <!-- settings -->
   <div class="flex items-center-safe gap-9">
-    <NumericInput bind:value={settings.numQuestions} min={1} label="Number of Questions" />
-    <CheckboxInput bind:checked={settings.showRomanizations} label="Show Romanizations" />
+    <NumericInput bind:value={settings.numQuestions.value} min={1} label="Number of Questions" />
+    <CheckboxInput bind:checked={settings.showRomanizations.value} label="Show Romanizations" />
   </div>
 
   <!-- SpeechSynthesis status -->
@@ -156,7 +157,7 @@
         </div>
         <!-- romanization -->
         <div class="h-6">
-          {#if question?.romanization && settings.showRomanizations}
+          {#if question?.romanization && settings.showRomanizations.value}
             ({question.romanization})
           {/if}
         </div>

@@ -1,8 +1,8 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendFunctionalLocational(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableFunctionalLocational) {
+  if (flashcardSettings.words.functional.locational.value) {
     words.push(
       // here / there
       { hiragana: "ここ", preferredForm: "hiragana", kanjis: ["此処"], rareKanjis: ["此所", "是", "茲", "爰"], romanization: "koko", meaning: "here / this place (close to speaker)" },

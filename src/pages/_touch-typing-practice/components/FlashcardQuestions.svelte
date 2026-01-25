@@ -30,42 +30,43 @@
     }[];
   } = $props();
 
-  const SETTINGS_SCHEMA = {
-    questionSettings: {
-      paramKey: "questionSettings",
-      defaultValue: schema.map(({ defaultPosition }) => defaultPosition === "question"),
-      arrayType: "boolean[]" as const,
-    },
-    optionSettings: {
-      paramKey: "optionSettings",
-      defaultValue: schema.map(({ defaultPosition }) => defaultPosition === "option"),
-      arrayType: "boolean[]" as const,
-    },
-    numOptions: { paramKey: "numOptions", defaultValue: 6 },
-    onlyPinned: { paramKey: "onlyPinned", defaultValue: false },
-    onlyUnpinned: { paramKey: "onlyUnpinned", defaultValue: false },
-    autoReadQuestion: { paramKey: "autoReadQuestion", defaultValue: false },
-    pinWhenWrong: { paramKey: "pinWhenWrong", defaultValue: true },
-  };
-  let settings = $state(initSettings(SETTINGS_SCHEMA));
-  useSyncSettings(SETTINGS_SCHEMA, settings);
+  const settings = $state(
+    initSettings({
+      questionSettings: {
+        paramKey: "questionSettings",
+        defaultValue: schema.map(({ defaultPosition }) => defaultPosition === "question"),
+        arrayType: "boolean[]" as const,
+      },
+      optionSettings: {
+        paramKey: "optionSettings",
+        defaultValue: schema.map(({ defaultPosition }) => defaultPosition === "option"),
+        arrayType: "boolean[]" as const,
+      },
+      numOptions: { paramKey: "numOptions", defaultValue: 6 },
+      onlyPinned: { paramKey: "onlyPinned", defaultValue: false },
+      onlyUnpinned: { paramKey: "onlyUnpinned", defaultValue: false },
+      autoReadQuestion: { paramKey: "autoReadQuestion", defaultValue: false },
+      pinWhenWrong: { paramKey: "pinWhenWrong", defaultValue: true },
+    }),
+  );
+  useSyncSettings(settings);
   $effect.pre(() => {
-    if (settings.onlyPinned) untrack(() => (settings.onlyUnpinned = false));
+    if (settings.onlyPinned.value) untrack(() => (settings.onlyUnpinned.value = false));
   });
   $effect.pre(() => {
-    if (settings.onlyUnpinned) untrack(() => (settings.onlyPinned = false));
+    if (settings.onlyUnpinned.value) untrack(() => (settings.onlyPinned.value = false));
   });
 
-  const isQuestionSettingsEmpty = $derived(!settings.questionSettings.some((is) => is));
-  const isOptionSettingsEmpty = $derived(!settings.optionSettings.some((is) => is));
+  const isQuestionSettingsEmpty = $derived(!settings.questionSettings.value.some((is) => is));
+  const isOptionSettingsEmpty = $derived(!settings.optionSettings.value.some((is) => is));
   $effect.pre(() => {
-    for (const [i, enabled] of settings.questionSettings.entries()) {
-      if (enabled) untrack(() => (settings.optionSettings[i] = false));
+    for (const [i, enabled] of settings.questionSettings.value.entries()) {
+      if (enabled) untrack(() => (settings.optionSettings.value[i] = false));
     }
   });
   $effect.pre(() => {
-    for (const [i, enabled] of settings.optionSettings.entries()) {
-      if (enabled) untrack(() => (settings.questionSettings[i] = false));
+    for (const [i, enabled] of settings.optionSettings.value.entries()) {
+      if (enabled) untrack(() => (settings.questionSettings.value[i] = false));
     }
   });
 
@@ -89,8 +90,8 @@
     const result: Question[] = [];
 
     for (const word of words) {
-      const questionEntries = wordToEntries(word, settings.questionSettings);
-      const answerEntries = wordToEntries(word, settings.optionSettings);
+      const questionEntries = wordToEntries(word, settings.questionSettings.value);
+      const answerEntries = wordToEntries(word, settings.optionSettings.value);
       if (questionEntries === undefined || answerEntries === undefined) continue;
 
       result.push({
@@ -135,7 +136,7 @@
       // (ref.) https://github.com/toss/es-toolkit/blob/3d75a713169c2db6fffe04121bc73ac0363d741e/src/array/shuffle.ts
       const indices = range(allQuestions.length);
       let i = 0;
-      while (options.length < settings.numOptions - 1 && i < indices.length) {
+      while (options.length < settings.numOptions.value - 1 && i < indices.length) {
         const j = randomInt(i, indices.length);
         [indices[i], indices[j]] = [indices[j], indices[i]];
         const idx = indices[i];
@@ -150,9 +151,13 @@
         if (optionStrs.has(answerEntriesStr)) continue;
 
         // filter out pinned/unpinned depending on settings
-        if (settings.onlyPinned && questionsQueue.numPinned && !questionsQueue.isPinned(idx))
+        if (settings.onlyPinned.value && questionsQueue.numPinned && !questionsQueue.isPinned(idx))
           continue;
-        if (settings.onlyUnpinned && questionsQueue.numUnpinned && questionsQueue.isPinned(idx))
+        if (
+          settings.onlyUnpinned.value &&
+          questionsQueue.numUnpinned &&
+          questionsQueue.isPinned(idx)
+        )
           continue;
 
         options.push(word.answerEntries);
@@ -168,8 +173,8 @@
 
   function nextQuestion() {
     question = questionsQueue.next({
-      onlyPinned: settings.onlyPinned,
-      onlyUnpinned: settings.onlyUnpinned,
+      onlyPinned: settings.onlyPinned.value,
+      onlyUnpinned: settings.onlyUnpinned.value,
     });
     genOptions();
   }
@@ -182,20 +187,20 @@
     question;
 
     showRomanization = false;
-    if (untrack(() => settings.autoReadQuestion)) {
+    if (untrack(() => settings.autoReadQuestion.value)) {
       tick().then(() => questionRef?.click());
     }
   });
 
   $effect.pre(() => {
     if (
-      (settings.onlyPinned && untrack(() => questionsQueue.numPinned)) ||
-      (settings.onlyUnpinned && untrack(() => questionsQueue.numUnpinned))
+      (settings.onlyPinned.value && untrack(() => questionsQueue.numPinned)) ||
+      (settings.onlyUnpinned.value && untrack(() => questionsQueue.numUnpinned))
     )
       untrack(() => nextQuestion());
   });
   $effect.pre(() => {
-    settings.numOptions;
+    settings.numOptions.value;
 
     untrack(() => genOptions());
   });
@@ -221,8 +226,8 @@
 
     {#each schema as { label }, i (label)}
       <div class="flex flex-col">
-        <CheckboxInput bind:checked={settings.questionSettings[i]} {label} />
-        <CheckboxInput bind:checked={settings.optionSettings[i]} {label} />
+        <CheckboxInput bind:checked={settings.questionSettings.value[i]} {label} />
+        <CheckboxInput bind:checked={settings.optionSettings.value[i]} {label} />
       </div>
     {/each}
 
@@ -232,13 +237,16 @@
     </div>
   </div>
   <div class="mt-3 flex flex-col gap-1.5">
-    <CheckboxInput bind:checked={settings.autoReadQuestion} label="Auto Read Question" />
-    <CheckboxInput bind:checked={settings.pinWhenWrong} label="Auto Pin When Wrong" />
+    <CheckboxInput bind:checked={settings.autoReadQuestion.value} label="Auto Read Question" />
+    <CheckboxInput bind:checked={settings.pinWhenWrong.value} label="Auto Pin When Wrong" />
     <div class="flex gap-9">
-      <CheckboxInput bind:checked={settings.onlyPinned} label="Only Use Pinned (if any)" />
-      <CheckboxInput bind:checked={settings.onlyUnpinned} label="Only Use Unpinned (if any)" />
+      <CheckboxInput bind:checked={settings.onlyPinned.value} label="Only Use Pinned (if any)" />
+      <CheckboxInput
+        bind:checked={settings.onlyUnpinned.value}
+        label="Only Use Unpinned (if any)"
+      />
     </div>
-    <NumericInput bind:value={settings.numOptions} label="Number of Options" min={2} />
+    <NumericInput bind:value={settings.numOptions.value} label="Number of Options" min={2} />
   </div>
 
   {#snippet entries(entries: Entry[])}
@@ -358,7 +366,7 @@
               nextQuestion();
             } else {
               isWrongOptions[i] = true;
-              if (settings.pinWhenWrong) {
+              if (settings.pinWhenWrong.value) {
                 questionsQueue.pin(question.idx);
               }
             }

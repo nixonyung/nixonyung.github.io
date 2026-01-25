@@ -1,8 +1,8 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendNounsVenues(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableNounsVenuesGeneric) {
+  if (flashcardSettings.words.nouns.venues.generic.value) {
     words.push(
       { kanjis: ["場所"], hiragana: "ばしょ", romanization: "basho", meaning: "place" },
       { kanjis: ["地方"], hiragana: "ちほう", romanization: "chihou", meaning: "area / region" },
@@ -17,7 +17,7 @@ export function appendNounsVenues(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsVenuesFacilities) {
+  if (flashcardSettings.words.nouns.venues.facilities.value) {
     words.push(
       { hiragana: "うち", preferredForm: "hiragana", kanjis: ["家"], romanization: "uchi", meaning: "home / my home" },
       { kanjis: ["家"], hiragana: "いえ", romanization: "ie", meaning: "home / house" },
@@ -37,7 +37,7 @@ export function appendNounsVenues(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsVenuesShops) {
+  if (flashcardSettings.words.nouns.venues.shops.value) {
     words.push(
       { kanjis: ["店"], hiragana: "みせ", romanization: "mise", meaning: "shop" },
       { kanjis: ["商店"], hiragana: "しょうてん", romanization: "shouten", meaning: "shop" },
@@ -49,14 +49,14 @@ export function appendNounsVenues(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsVenuesRegions) {
+  if (flashcardSettings.words.nouns.venues.regions.value) {
     words.push(
       //
       { kanjis: ["東京"], hiragana: "とうきょう", romanization: "toukyou", meaning: "tokyo" },
     );
   }
 
-  if (jp.flashcardSettings.enableNounsVenuesImaginary) {
+  if (flashcardSettings.words.nouns.venues.imaginary.value) {
     words.push(
       //
       { kanjis: ["天国"], hiragana: "てんごく", romanization: "tengoku", meaning: "heaven" },

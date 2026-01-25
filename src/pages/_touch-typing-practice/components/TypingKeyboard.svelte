@@ -37,7 +37,7 @@
         <span class="text-xl">{isShiftDown ? mappedUpperCaseKey : mappedKey}</span>
 
         <!-- key hint -->
-        {#if isShiftDown && mappedUpperCaseKey !== upperCaseKey}
+        {#if isShiftDown && mappedUpperCaseKey && mappedUpperCaseKey !== upperCaseKey}
           <span class="absolute top-0 left-1 text-xs font-light">{upperCaseKey}</span>
         {:else if !isShiftDown && mappedKey !== key}
           <span class="absolute top-0 left-1 text-xs font-light">{key}</span>

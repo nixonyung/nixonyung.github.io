@@ -1,10 +1,10 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 // TODO: https://jlptsensei.com/learn-japanese-grammar/japanese-%e3%81%84-adjectives-%e3%81%84%e5%bd%a2%e5%ae%b9%e8%a9%9e-meaning/
 
 export function appendAdjectives(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableAdjectives && jp.flashcardSettings.enableIAdjectives) {
+  if (flashcardSettings.words.adjectives.value && flashcardSettings.enableIAdjectives.value) {
     words.push(
       // positive
       { hiragana: "いい", romanization: "ii", meaning: "good (casual)" },
@@ -66,7 +66,7 @@ export function appendAdjectives(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableAdjectives && jp.flashcardSettings.enableNaAdjectives) {
+  if (flashcardSettings.words.adjectives.value && flashcardSettings.enableNaAdjectives.value) {
     words.push(
       // positive
       { kanjis: ["好き"], hiragana: "すき", romanization: "suki", meaning: "liked" },

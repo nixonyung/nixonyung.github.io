@@ -1,8 +1,8 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendNounsObjects(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableNounsObjectsGeneric) {
+  if (flashcardSettings.words.nouns.objects.generic.value) {
     words.push(
       //
       { kanjis: ["者"], hiragana: "もの", katakana: "モノ", romanization: "mono", meaning: "thing (person)" },
@@ -10,7 +10,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsObjectsBiological) {
+  if (flashcardSettings.words.nouns.objects.biological.value) {
     words.push(
       //
       { kanjis: ["手"], hiragana: "て", romanization: "te", meaning: "hand / arm" },
@@ -19,7 +19,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsObjectsNature) {
+  if (flashcardSettings.words.nouns.objects.nature.value) {
     words.push(
       { kanjis: ["天気"], hiragana: "てんき", romanization: "tenki", meaning: "weather" },
 
@@ -54,7 +54,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsObjectsFoodCuisine) {
+  if (flashcardSettings.words.nouns.objects.foodCuisine.value) {
     words.push(
       { kanjis: ["食事"], hiragana: "しょくじ", romanization: "shokuji", meaning: "meal" },
       { kanjis: ["ご飯", "御飯"], hiragana: "ごはん", romanization: "gohan", meaning: "meal / cooked rice" },
@@ -70,7 +70,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsObjectsFoodDishes) {
+  if (flashcardSettings.words.nouns.objects.foodDishes.value) {
     words.push(
       { kanjis: ["食べ物"], hiragana: "たべもの", romanization: "tabemono", meaning: "food" },
 
@@ -86,7 +86,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsObjectsFoodDrinks) {
+  if (flashcardSettings.words.nouns.objects.foodDrinks.value) {
     words.push(
       //
       { kanjis: ["茶"], hiragana: "ちゃ", romanization: "cha", meaning: "tea" },
@@ -96,7 +96,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsObjectsEquipments) {
+  if (flashcardSettings.words.nouns.objects.equipments.value) {
     words.push(
       { kanjis: ["金"], hiragana: "かね", romanization: "kane", meaning: "money" },
       { kanjis: ["お金", "御金"], hiragana: "おかね", romanization: "okane", meaning: "money (polite)" },
@@ -131,7 +131,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsObjectsTransportation) {
+  if (flashcardSettings.words.nouns.objects.transportation.value) {
     words.push(
       //
       { katakana: "バス", romanization: "basu", meaning: "bus" },

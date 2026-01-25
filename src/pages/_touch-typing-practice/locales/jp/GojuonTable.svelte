@@ -1,24 +1,50 @@
+<script lang="ts" module>
+  export const gojuonSettings = $state(
+    initSettings({
+      enableRows: {
+        rowA: { paramKey: "rowA", defaultValue: true },
+        rowKa: { paramKey: "rowKa", defaultValue: true },
+        rowSa: { paramKey: "rowSa", defaultValue: true },
+        rowTa: { paramKey: "rowTa", defaultValue: true },
+        rowNa: { paramKey: "rowNa", defaultValue: true },
+        rowHa: { paramKey: "rowHa", defaultValue: true },
+        rowMa: { paramKey: "rowMa", defaultValue: true },
+        rowYa: { paramKey: "rowYa", defaultValue: true },
+        rowRa: { paramKey: "rowRa", defaultValue: true },
+        rowWa: { paramKey: "rowWa", defaultValue: true },
+        rowN: { paramKey: "rowN", defaultValue: true },
+      },
+      enableSubsets: {
+        hiragana: { paramKey: "hiragana", defaultValue: true },
+        katakana: { paramKey: "katakana", defaultValue: true },
+        diacritics: { paramKey: "diacritics", defaultValue: true },
+        yoons: { paramKey: "yoons", defaultValue: true },
+      },
+      showOrigins: { paramKey: "gojuonOrigins", defaultValue: false },
+    }),
+  );
+</script>
+
 <script lang="ts">
   import CheckboxInput from "@/components/CheckboxInput.svelte";
   import ReferencesList from "@/components/ReferencesList.svelte";
-  import { useSyncSettings } from "../../../../lib/settings.svelte";
+  import { initSettings, useSyncSettings } from "@/lib/settings.svelte";
   import GojuonRow from "./GojuonRow.svelte";
-  import { jp } from "./jp.svelte";
 
-  useSyncSettings(jp.GOJUON_SETTINGS_SCHEMA, jp.gojuonSettings);
+  useSyncSettings(gojuonSettings);
 
   let isMousedown = $state(false);
-  let isSelectingRowA = $state(jp.gojuonSettings.enableRowA);
-  let isSelectingRowKa = $state(jp.gojuonSettings.enableRowKa);
-  let isSelectingRowSa = $state(jp.gojuonSettings.enableRowSa);
-  let isSelectingRowTa = $state(jp.gojuonSettings.enableRowTa);
-  let isSelectingRowNa = $state(jp.gojuonSettings.enableRowNa);
-  let isSelectingRowHa = $state(jp.gojuonSettings.enableRowHa);
-  let isSelectingRowMa = $state(jp.gojuonSettings.enableRowMa);
-  let isSelectingRowYa = $state(jp.gojuonSettings.enableRowYa);
-  let isSelectingRowRa = $state(jp.gojuonSettings.enableRowRa);
-  let isSelectingRowWa = $state(jp.gojuonSettings.enableRowWa);
-  let isSelectingRowN = $state(jp.gojuonSettings.enableRowN);
+  let isSelectingRowA = $state(gojuonSettings.enableRows.rowA.value);
+  let isSelectingRowKa = $state(gojuonSettings.enableRows.rowKa.value);
+  let isSelectingRowSa = $state(gojuonSettings.enableRows.rowSa.value);
+  let isSelectingRowTa = $state(gojuonSettings.enableRows.rowTa.value);
+  let isSelectingRowNa = $state(gojuonSettings.enableRows.rowNa.value);
+  let isSelectingRowHa = $state(gojuonSettings.enableRows.rowHa.value);
+  let isSelectingRowMa = $state(gojuonSettings.enableRows.rowMa.value);
+  let isSelectingRowYa = $state(gojuonSettings.enableRows.rowYa.value);
+  let isSelectingRowRa = $state(gojuonSettings.enableRows.rowRa.value);
+  let isSelectingRowWa = $state(gojuonSettings.enableRows.rowWa.value);
+  let isSelectingRowN = $state(gojuonSettings.enableRows.rowN.value);
   $effect.pre(() => {
     if (isMousedown) {
       isSelectingRowA = false;
@@ -33,17 +59,17 @@
       isSelectingRowWa = false;
       isSelectingRowN = false;
     } else {
-      jp.gojuonSettings.enableRowA = isSelectingRowA;
-      jp.gojuonSettings.enableRowKa = isSelectingRowKa;
-      jp.gojuonSettings.enableRowSa = isSelectingRowSa;
-      jp.gojuonSettings.enableRowTa = isSelectingRowTa;
-      jp.gojuonSettings.enableRowNa = isSelectingRowNa;
-      jp.gojuonSettings.enableRowHa = isSelectingRowHa;
-      jp.gojuonSettings.enableRowMa = isSelectingRowMa;
-      jp.gojuonSettings.enableRowYa = isSelectingRowYa;
-      jp.gojuonSettings.enableRowRa = isSelectingRowRa;
-      jp.gojuonSettings.enableRowWa = isSelectingRowWa;
-      jp.gojuonSettings.enableRowN = isSelectingRowN;
+      gojuonSettings.enableRows.rowA.value = isSelectingRowA;
+      gojuonSettings.enableRows.rowKa.value = isSelectingRowKa;
+      gojuonSettings.enableRows.rowSa.value = isSelectingRowSa;
+      gojuonSettings.enableRows.rowTa.value = isSelectingRowTa;
+      gojuonSettings.enableRows.rowNa.value = isSelectingRowNa;
+      gojuonSettings.enableRows.rowHa.value = isSelectingRowHa;
+      gojuonSettings.enableRows.rowMa.value = isSelectingRowMa;
+      gojuonSettings.enableRows.rowYa.value = isSelectingRowYa;
+      gojuonSettings.enableRows.rowRa.value = isSelectingRowRa;
+      gojuonSettings.enableRows.rowWa.value = isSelectingRowWa;
+      gojuonSettings.enableRows.rowN.value = isSelectingRowN;
     }
   });
 </script>
@@ -56,29 +82,32 @@
   }}
 />
 
-<!-- settings -->
+<!-- gojuonSettings -->
 <div class="flex flex-col gap-6">
   <div class="flex flex-col gap-1.5">
     <div class="flex items-center-safe gap-3">
       <CheckboxInput
-        bind:checked={jp.gojuonSettings.enableHiragana}
+        bind:checked={gojuonSettings.enableSubsets.hiragana.value}
         label="Enable Hiragana 平假名"
       />
       <CheckboxInput
-        bind:checked={jp.gojuonSettings.enableKatakana}
+        bind:checked={gojuonSettings.enableSubsets.katakana.value}
         label="Enable Katakana 片假名"
       />
     </div>
     <div class="flex items-center-safe gap-3">
       <CheckboxInput
-        bind:checked={jp.gojuonSettings.enableDiacritics}
+        bind:checked={gojuonSettings.enableSubsets.diacritics.value}
         label="Enable Dakuten 濁音 and Handakuten 半濁音"
       />
-      <CheckboxInput bind:checked={jp.gojuonSettings.enableYoon} label="Enable Yoon 拗音" />
+      <CheckboxInput
+        bind:checked={gojuonSettings.enableSubsets.yoons.value}
+        label="Enable Yoon 拗音"
+      />
     </div>
     <div class="flex items-center-safe gap-3">
       <CheckboxInput
-        bind:checked={jp.gojuonSettings.showOrigins}
+        bind:checked={gojuonSettings.showOrigins.value}
         label="Show Gojuon 五十音 Origins"
       />
     </div>
@@ -88,7 +117,7 @@
   <!-- (ref.) [片假名](https://www.wikiwand.com/zh-hk/articles/片假名) -->
   <div class="flex">
     <GojuonRow
-      bind:enabled={jp.gojuonSettings.enableRowN}
+      bind:enabled={gojuonSettings.enableRows.rowN.value}
       bind:isMousedown
       bind:isSelected={isSelectingRowN}
       label="n"
@@ -101,7 +130,7 @@
       ]}
     />
     <GojuonRow
-      bind:enabled={jp.gojuonSettings.enableRowWa}
+      bind:enabled={gojuonSettings.enableRows.rowWa.value}
       bind:isMousedown
       bind:isSelected={isSelectingRowWa}
       label="w"
@@ -114,7 +143,7 @@
       ]}
     />
     <GojuonRow
-      bind:enabled={jp.gojuonSettings.enableRowRa}
+      bind:enabled={gojuonSettings.enableRows.rowRa.value}
       bind:isMousedown
       bind:isSelected={isSelectingRowRa}
       label="r"
@@ -127,7 +156,7 @@
       ]}
     />
     <GojuonRow
-      bind:enabled={jp.gojuonSettings.enableRowYa}
+      bind:enabled={gojuonSettings.enableRows.rowYa.value}
       bind:isMousedown
       bind:isSelected={isSelectingRowYa}
       label="y"
@@ -140,7 +169,7 @@
       ]}
     />
     <GojuonRow
-      bind:enabled={jp.gojuonSettings.enableRowMa}
+      bind:enabled={gojuonSettings.enableRows.rowMa.value}
       bind:isMousedown
       bind:isSelected={isSelectingRowMa}
       label="m"
@@ -153,10 +182,10 @@
       ]}
     />
     <GojuonRow
-      bind:enabled={jp.gojuonSettings.enableRowHa}
+      bind:enabled={gojuonSettings.enableRows.rowHa.value}
       bind:isMousedown
       bind:isSelected={isSelectingRowHa}
-      label={jp.gojuonSettings.enableDiacritics ? "h/b/p" : "h"}
+      label={gojuonSettings.enableSubsets.diacritics ? "h/b/p" : "h"}
       gojuons={[
         { hiragana: "は", hiraganaOrigin: "波", katakana: "ハ", katakanaOrigin: "八" },
         { hiragana: "ひ", hiraganaOrigin: "比", katakana: "ヒ", katakanaOrigin: "比" },
@@ -166,7 +195,7 @@
       ]}
     />
     <GojuonRow
-      bind:enabled={jp.gojuonSettings.enableRowNa}
+      bind:enabled={gojuonSettings.enableRows.rowNa.value}
       bind:isMousedown
       bind:isSelected={isSelectingRowNa}
       label="n"
@@ -179,10 +208,10 @@
       ]}
     />
     <GojuonRow
-      bind:enabled={jp.gojuonSettings.enableRowTa}
+      bind:enabled={gojuonSettings.enableRows.rowTa.value}
       bind:isMousedown
       bind:isSelected={isSelectingRowTa}
-      label={jp.gojuonSettings.enableDiacritics ? "t/d" : "t"}
+      label={gojuonSettings.enableSubsets.diacritics ? "t/d" : "t"}
       gojuons={[
         { hiragana: "た", hiraganaOrigin: "太", katakana: "タ", katakanaOrigin: "多" },
         { hiragana: "ち", hiraganaOrigin: "知", katakana: "チ", katakanaOrigin: "千" },
@@ -192,10 +221,10 @@
       ]}
     />
     <GojuonRow
-      bind:enabled={jp.gojuonSettings.enableRowSa}
+      bind:enabled={gojuonSettings.enableRows.rowSa.value}
       bind:isMousedown
       bind:isSelected={isSelectingRowSa}
-      label={jp.gojuonSettings.enableDiacritics ? "s/z" : "s"}
+      label={gojuonSettings.enableSubsets.diacritics ? "s/z" : "s"}
       gojuons={[
         { hiragana: "さ", hiraganaOrigin: "左", katakana: "サ", katakanaOrigin: "散" },
         { hiragana: "し", hiraganaOrigin: "之", katakana: "シ", katakanaOrigin: "之" },
@@ -205,10 +234,10 @@
       ]}
     />
     <GojuonRow
-      bind:enabled={jp.gojuonSettings.enableRowKa}
+      bind:enabled={gojuonSettings.enableRows.rowKa.value}
       bind:isMousedown
       bind:isSelected={isSelectingRowKa}
-      label={jp.gojuonSettings.enableDiacritics ? "k/g" : "k"}
+      label={gojuonSettings.enableSubsets.diacritics ? "k/g" : "k"}
       gojuons={[
         { hiragana: "か", hiraganaOrigin: "加", katakana: "カ", katakanaOrigin: "加" },
         { hiragana: "き", hiraganaOrigin: "幾", katakana: "キ", katakanaOrigin: "幾" },
@@ -218,7 +247,7 @@
       ]}
     />
     <GojuonRow
-      bind:enabled={jp.gojuonSettings.enableRowA}
+      bind:enabled={gojuonSettings.enableRows.rowA.value}
       bind:isMousedown
       bind:isSelected={isSelectingRowA}
       label=""

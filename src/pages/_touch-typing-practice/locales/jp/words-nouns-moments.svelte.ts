@@ -1,8 +1,8 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendNounsMoments(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableNounsMomentsTimesOfDay) {
+  if (flashcardSettings.words.nouns.moments.timesOfDay.value) {
     words.push(
       { kanjis: ["朝"], hiragana: "あさ", romanization: "asa", meaning: "morning" },
       { kanjis: ["午前"], hiragana: "ごぜん", romanization: "gozen", meaning: "morning", exampleUsages: ["午前中"] },
@@ -16,7 +16,7 @@ export function appendNounsMoments(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsMomentsDaysOfWeek) {
+  if (flashcardSettings.words.nouns.moments.daysOfWeek.value) {
     words.push(
       //
       { kanjis: ["日曜日"], hiragana: "にちようび", romanization: "nichiyoubi", meaning: "Sunday" },
@@ -30,7 +30,7 @@ export function appendNounsMoments(words: JapaneseWord[]) {
   }
 
   // TODO: months
-  if (jp.flashcardSettings.enableNounsMomentsMonths) {
+  if (flashcardSettings.words.nouns.moments.months.value) {
     words.push(
       //
       { kanjis: ["１月", "一月"], hiragana: "いちがつ", romanization: "ichigatsu", meaning: "January" },
@@ -49,7 +49,7 @@ export function appendNounsMoments(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsMomentsSeasons) {
+  if (flashcardSettings.words.nouns.moments.seasons.value) {
     words.push(
       { kanjis: ["季節"], hiragana: "きせつ", romanization: "kisetsu", meaning: "season" },
 
@@ -60,7 +60,7 @@ export function appendNounsMoments(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsMomentsFestivals) {
+  if (flashcardSettings.words.nouns.moments.festivals.value) {
     words.push(
       { kanjis: ["誕生日"], hiragana: "たんじょうび", romanization: "tanjoubi", meaning: "birthday" },
 
@@ -68,7 +68,7 @@ export function appendNounsMoments(words: JapaneseWord[]) {
     );
   }
 
-  // if (jp.flashcardSettings.enableNounsMomentsMisc) {
+  // if (flashcardSettings.words.nouns.moments.misc.value) {
   //   words.push(
   //   );
   // }

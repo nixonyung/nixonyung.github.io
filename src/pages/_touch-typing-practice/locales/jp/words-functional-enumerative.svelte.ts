@@ -1,11 +1,11 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendFunctionalEnumerative(words: JapaneseWord[]) {
   // TODO: https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%AB
   // TODO: https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%AF
 
-  if (jp.flashcardSettings.enableFunctionalEnumerative) {
+  if (flashcardSettings.words.functional.enumerative.value) {
     words.push(
       // and
       { hiragana: "も", romanization: "mo", meaning: "and / also (non-exhausive)", exampleUsages: ["[Noun] も [Verb]", "[Noun] も [Noun] も [Verb]", "[Noun] も [Noun] も [Noun] も [Verb]"] },

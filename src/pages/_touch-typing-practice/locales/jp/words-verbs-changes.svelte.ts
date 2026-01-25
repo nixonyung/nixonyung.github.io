@@ -1,10 +1,10 @@
 import type { JapaneseVerb, JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendVerbsChanges(words: JapaneseWord[]) {
   const verbs: JapaneseVerb[] = [];
 
-  if (jp.flashcardSettings.enableVerbsChangesEnvironmenal) {
+  if (flashcardSettings.words.verbs.changes.environmenal.value) {
     verbs.push(
       //
       { kanjis: ["暮れる", "眩れる", "暗れる", "昏れる"], hiragana: "くれる", romanization: "kureru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "grow dark" },
@@ -15,14 +15,14 @@ export function appendVerbsChanges(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableVerbsChangesQuantitative) {
+  if (flashcardSettings.words.verbs.changes.quantitative.value) {
     verbs.push(
       //
       { kanjis: ["高まる"], hiragana: "たかまる", romanization: "takamaru", verbGroup: "godan", verbIsTransitive: false, meaning: "rise", derivedMeanings: ["swell"] },
     );
   }
 
-  if (jp.flashcardSettings.enableVerbsChangesResultative) {
+  if (flashcardSettings.words.verbs.changes.resultative.value) {
     verbs.push(
       { hiragana: "いける", katakana: "イケる", romanization: "ikeru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "go well (informal, slang)" },
       { kanjis: ["成功する"], hiragana: "せいこうする", romanization: "seikousuru", verbGroup: "irregular", verbIsTransitive: false, meaning: "succeed", exampleUsages: ["ビジネスで成功する"] },
@@ -42,9 +42,14 @@ export function appendVerbsChanges(words: JapaneseWord[]) {
     );
   }
 
-  for (const { kanjis, rareKanjis, hiragana, katakana, exampleUsages, preferredForm, romanization, meaning, derivedMeanings, question, answer, verbGroup, verbIsTransitive } of verbs) {
-    if (((verbGroup === "godan" && jp.flashcardSettings.enableGodanVerbs) || (verbGroup === "ichidan" && jp.flashcardSettings.enableIchidanVerbs) || (verbGroup === "irregular" && jp.flashcardSettings.enableIrregularVerbs)) && ((verbIsTransitive && jp.flashcardSettings.enableTransitiveVerbs) || (!verbIsTransitive && jp.flashcardSettings.enableIntransitiveVerbs))) {
-      words.push({ kanjis, rareKanjis, hiragana, katakana, exampleUsages, preferredForm, romanization, meaning, derivedMeanings, question, answer });
-    }
+  for (const verb of verbs) {
+    if (flashcardSettings.enableGodanVerbs.value && verb.verbGroup !== "godan") continue;
+    if (flashcardSettings.enableIchidanVerbs.value && verb.verbGroup !== "ichidan") continue;
+    if (flashcardSettings.enableIrregularVerbs.value && verb.verbGroup !== "irregular") continue;
+
+    if (flashcardSettings.enableTransitiveVerbs.value && !verb.verbIsTransitive) continue;
+    if (flashcardSettings.enableIntransitiveVerbs.value && verb.verbIsTransitive) continue;
+
+    words.push(verb);
   }
 }

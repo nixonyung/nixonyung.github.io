@@ -1,10 +1,10 @@
 import type { JapaneseVerb, JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendVerbsDescriptive(words: JapaneseWord[]) {
   const verbs: JapaneseVerb[] = [];
 
-  if (jp.flashcardSettings.enableVerbsDescriptiveBeing) {
+  if (flashcardSettings.words.verbs.descriptive.being.value) {
     verbs.push(
       //
       { kanjis: ["成る"], rareKanjis: ["為る"], hiragana: "なる", romanization: "naru", verbGroup: "godan", verbIsTransitive: false, meaning: "become (reaching a certain time/state)", exampleUsages: ["春になる", "暇になる"] },
@@ -19,7 +19,7 @@ export function appendVerbsDescriptive(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableVerbsDescriptiveExistence) {
+  if (flashcardSettings.words.verbs.descriptive.existence.value) {
     verbs.push(
       { hiragana: "いる", rareKanjis: ["居る"], romanization: "iru", verbGroup: "godan", verbIsTransitive: false, meaning: "exist (for living things)" },
       { hiragana: "ある", preferredForm: "hiragana", kanjis: ["有る", "在る"], romanization: "aru", verbGroup: "godan", verbIsTransitive: false, meaning: "exist (for non-living things)", exampleUsages: ["質問かあれば"] },
@@ -36,7 +36,7 @@ export function appendVerbsDescriptive(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableVerbsDescriptiveProcesses) {
+  if (flashcardSettings.words.verbs.descriptive.processes.value) {
     verbs.push(
       { hiragana: "する", rareKanjis: ["為る"], romanization: "suru", verbGroup: "irregular", verbIsTransitive: true, meaning: "do / carry out", derivedMeanings: ["choose", "pickpocket"], exampleUsages: ["せールをする (on sale)", "ゲームをする (play a game)", "これにします (choose this)"] },
       { hiragana: "やる", rareKanjis: ["遣る"], romanization: "yaru", verbGroup: "godan", verbIsTransitive: true, meaning: "undertake" },
@@ -51,9 +51,14 @@ export function appendVerbsDescriptive(words: JapaneseWord[]) {
     );
   }
 
-  for (const { kanjis, rareKanjis, hiragana, katakana, exampleUsages, preferredForm, romanization, meaning, derivedMeanings, question, answer, verbGroup, verbIsTransitive } of verbs) {
-    if (((verbGroup === "godan" && jp.flashcardSettings.enableGodanVerbs) || (verbGroup === "ichidan" && jp.flashcardSettings.enableIchidanVerbs) || (verbGroup === "irregular" && jp.flashcardSettings.enableIrregularVerbs)) && ((verbIsTransitive && jp.flashcardSettings.enableTransitiveVerbs) || (!verbIsTransitive && jp.flashcardSettings.enableIntransitiveVerbs))) {
-      words.push({ kanjis, rareKanjis, hiragana, katakana, exampleUsages, preferredForm, romanization, meaning, derivedMeanings, question, answer });
-    }
+  for (const verb of verbs) {
+    if (flashcardSettings.enableGodanVerbs.value && verb.verbGroup !== "godan") continue;
+    if (flashcardSettings.enableIchidanVerbs.value && verb.verbGroup !== "ichidan") continue;
+    if (flashcardSettings.enableIrregularVerbs.value && verb.verbGroup !== "irregular") continue;
+
+    if (flashcardSettings.enableTransitiveVerbs.value && !verb.verbIsTransitive) continue;
+    if (flashcardSettings.enableIntransitiveVerbs.value && verb.verbIsTransitive) continue;
+
+    words.push(verb);
   }
 }

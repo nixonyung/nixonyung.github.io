@@ -1,8 +1,8 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendRulesConjugations(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableRulesConjugationsStemForm) {
+  if (flashcardSettings.words.grammarRules.conjugations.stemForm.value) {
     words.push(
       // stem form: forming compound verbs
       { question: "会う -> stem", answer: "会い", romanization: "ai" },
@@ -22,7 +22,7 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableRulesConjugationsNaiForm) {
+  if (flashcardSettings.words.grammarRules.conjugations.naiForm.value) {
     words.push(
       // -nai: negative
       { question: "会う + ない", answer: "会わない", romanization: "awanai" },
@@ -43,7 +43,7 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableRulesConjugationsPassiveForm) {
+  if (flashcardSettings.words.grammarRules.conjugations.passiveForm.value) {
     words.push(
       // passive form: passive voice
       { question: "会う -> passive", answer: "会われる", romanization: "awareru" },
@@ -63,7 +63,7 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableRulesConjugationsCausativeForm) {
+  if (flashcardSettings.words.grammarRules.conjugations.causativeForm.value) {
     words.push(
       // -saseru: causative (forced / allowed) -> not on one's will
       { question: "会う -> causative", answer: "会わせる", romanization: "awaseru" },
@@ -83,7 +83,7 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableRulesConjugationsImperativeForm) {
+  if (flashcardSettings.words.grammarRules.conjugations.imperativeForm.value) {
     words.push(
       // imperative form: making commands
       { question: "会う -> imperative", answer: "会え", romanization: "ae" },
@@ -103,7 +103,7 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableRulesConjugationsConditionalForm) {
+  if (flashcardSettings.words.grammarRules.conjugations.conditionalForm.value) {
     words.push(
       // -ba: conditional
       { question: "会う -> conditional", answer: "会えば", romanization: "aeba" },
@@ -123,7 +123,7 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableRulesConjugationsPotentialForm) {
+  if (flashcardSettings.words.grammarRules.conjugations.potentialForm.value) {
     words.push(
       // -ba: conditional
       { question: "会う -> potential", answer: "会える", romanization: "aeru" },
@@ -147,7 +147,7 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableRulesConjugationsTaForm) {
+  if (flashcardSettings.words.grammarRules.conjugations.taForm.value) {
     words.push(
       // -ta: past tense
       { question: "会う + た", answer: "会った", romanization: "atta" },
@@ -168,7 +168,7 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableRulesConjugationsTeForm) {
+  if (flashcardSettings.words.grammarRules.conjugations.teForm.value) {
     words.push(
       // -te: linking verbs
       { question: "会う + て", answer: "会って", romanization: "atte" },
@@ -189,7 +189,7 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableRulesConjugationsVolitionalForm) {
+  if (flashcardSettings.words.grammarRules.conjugations.volitionalForm.value) {
     words.push(
       // volitional: "let's" / "shall we"
       { question: "会う -> volitional", answer: "会おう", romanization: "aou" },
@@ -209,7 +209,7 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableRulesConjugationsMisc) {
+  if (flashcardSettings.words.grammarRules.conjugations.misc.value) {
     words.push(
       // i-Adjs.
       { hiragana: "い", romanization: "i", meaning: "(i-adj. in present tense)", exampleUsages: ["[i-Adj.]-い"] },

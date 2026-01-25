@@ -1,8 +1,8 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendNounsAnimals(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableNounsAnimals) {
+  if (flashcardSettings.words.nouns.animals.value) {
     words.push(
       //
       { kanjis: ["猫"], hiragana: "ねこ", katakana: "ネコ", romanization: "neko", meaning: "cat" },

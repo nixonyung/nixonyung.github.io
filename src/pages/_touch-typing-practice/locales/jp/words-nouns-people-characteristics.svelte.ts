@@ -1,8 +1,8 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableNounsPeopleCharacteristicsGeneric) {
+  if (flashcardSettings.words.nouns.people.byCharacteristics.generic.value) {
     words.push(
       { kanjis: ["人"], hiragana: "ひと", katakana: "ヒト", romanization: "hito", meaning: "person" },
       { kanjis: ["人々", "人びと"], hiragana: "ひとびと", romanization: "hitobito", meaning: "people" },
@@ -13,7 +13,7 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsPeopleCharacteristicsGender) {
+  if (flashcardSettings.words.nouns.people.byCharacteristics.gender.value) {
     words.push(
       { kanjis: ["男"], hiragana: "おとこ", romanization: "otoko", meaning: "man" },
       { kanjis: ["男子"], hiragana: "だんし", romanization: "danshi", meaning: "man (formal)" },
@@ -32,7 +32,7 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsPeopleCharacteristicsAge) {
+  if (flashcardSettings.words.nouns.people.byCharacteristics.age.value) {
     words.push(
       { kanjis: ["成人"], hiragana: "せいじん", romanization: "seijin", meaning: "adult" },
       { kanjis: ["大人"], hiragana: "おとな", romanization: "otona", meaning: "grown-up" },
@@ -50,7 +50,7 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsPeopleCharacteristicsProfessions) {
+  if (flashcardSettings.words.nouns.people.byCharacteristics.professions.value) {
     words.push(
       { kanjis: ["食通"], hiragana: "しょくつう", romanization: "shokutsuu", meaning: "gourmet / foodie" },
       { katakana: "グルメ", romanization: "gurume", meaning: "gourmet" },
@@ -61,7 +61,7 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsPeopleCharacteristicsSocialStatus) {
+  if (flashcardSettings.words.nouns.people.byCharacteristics.socialStatus.value) {
     words.push(
       //
       { kanjis: ["先生"], hiragana: "せんせい", romanization: "sensei", meaning: "master / teacher" },

@@ -1,6 +1,7 @@
 <script lang="ts">
   import TypingQuestions from "../../components/TypingQuestions.svelte";
-  import { kr } from "./kr.svelte";
+  import { keymap } from "./keymap.svelte.ts";
+  import { letters } from "./letters.svelte.ts";
 </script>
 
-<TypingQuestions letters={kr.letters} keymap={kr.keymap} />
+<TypingQuestions {letters} {keymap} />

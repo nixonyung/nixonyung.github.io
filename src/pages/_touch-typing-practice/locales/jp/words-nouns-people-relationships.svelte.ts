@@ -1,8 +1,8 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableNounsPeopleRelationshipsParents) {
+  if (flashcardSettings.words.nouns.people.byRelationships.immediateFamily.parents.value) {
     words.push(
       { kanjis: ["父母"], hiragana: "ふぼ", romanization: "fubo", meaning: "parents (formal)" },
       { kanjis: ["父母"], hiragana: "ちちはは", romanization: "chichihaha", meaning: "my parents" },
@@ -23,7 +23,7 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsPeopleRelationshipsSiblings) {
+  if (flashcardSettings.words.nouns.people.byRelationships.immediateFamily.siblings.value) {
     words.push(
       { kanjis: ["兄弟姉妹"], hiragana: "きょうだいしまい", romanization: "kyoudaishimai", meaning: "siblings" },
       { kanjis: ["兄弟"], hiragana: "きょうだい", romanization: "kyoudai", meaning: "brothers" },
@@ -43,7 +43,7 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsPeopleRelationshipsSpouses) {
+  if (flashcardSettings.words.nouns.people.byRelationships.immediateFamily.spouses.value) {
     words.push(
       //
       { kanjis: ["夫", "良人"], hiragana: "おっと", romanization: "otto", meaning: "husband" },
@@ -56,7 +56,7 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsPeopleRelationshipsOffsprings) {
+  if (flashcardSettings.words.nouns.people.byRelationships.immediateFamily.offsprings.value) {
     words.push(
       { kanjis: ["お子さん"], hiragana: "おこさん", romanization: "okosan", meaning: "child" },
       { kanjis: ["お子様", "お子さま"], hiragana: "おこさま", romanization: "okosama", meaning: "child (very polite)" },
@@ -72,7 +72,7 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsPeopleRelationshipsGrandparents) {
+  if (flashcardSettings.words.nouns.people.byRelationships.immediateFamily.grandparents.value) {
     words.push(
       { kanjis: ["祖父母"], hiragana: "そふぼ", romanization: "sofubo", meaning: "grandparents" },
       { hiragana: "じじばば", preferredForm: "hiragana", kanjis: ["祖父祖母", "爺婆"], katakana: "ジジババ", romanization: "jijibaba", meaning: "old people (casual)" },
@@ -90,7 +90,7 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsPeopleRelationshipsExtendedFamily) {
+  if (flashcardSettings.words.nouns.people.byRelationships.extendedFamily.value) {
     words.push(
       { kanjis: ["曽祖父母"], hiragana: "そうそふぼ", romanization: "sousofubo", meaning: "great-grandparents" },
 
@@ -102,7 +102,7 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsPeopleRelationshipsChosenFamily) {
+  if (flashcardSettings.words.nouns.people.byRelationships.chosenFamily.value) {
     words.push(
       // in-laws
       { kanjis: ["義父母"], hiragana: "ぎふぼ", romanization: "gifubo", meaning: "parents-in-law" },
@@ -120,7 +120,7 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsPeopleRelationshipsFriends) {
+  if (flashcardSettings.words.nouns.people.byRelationships.friends.value) {
     words.push(
       //
       { kanjis: ["友達"], hiragana: "ともだち", romanization: "tomodachi", meaning: "friends (informal)" },
@@ -134,7 +134,7 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
     );
   }
 
-  if (jp.flashcardSettings.enableNounsPeopleRelationshipsFellows) {
+  if (flashcardSettings.words.nouns.people.byRelationships.fellows.value) {
     words.push(
       { kanjis: ["知り合い"], hiragana: "しりあい", romanization: "shiriai", meaning: "acquaintance" },
       { kanjis: ["仲間"], hiragana: "なかま", romanization: "nakama", meaning: "fellow / companion (informal)" },

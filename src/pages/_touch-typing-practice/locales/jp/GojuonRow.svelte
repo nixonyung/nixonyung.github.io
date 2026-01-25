@@ -1,6 +1,6 @@
 <script lang="ts">
   import { tick } from "svelte";
-  import { jp } from "./jp.svelte";
+  import { gojuonSettings } from "./GojuonTable.svelte";
 
   let {
     enabled = $bindable(),
@@ -64,11 +64,11 @@
         <div
           class={[
             "flex w-6 flex-col items-center-safe",
-            jp.gojuonSettings.enableHiragana ? "visible" : "invisible",
+            gojuonSettings.enableSubsets.hiragana.value ? "visible" : "invisible",
           ]}
         >
           <span>{gojuon?.hiragana}</span>
-          {#if gojuon?.hiraganaOrigin && jp.gojuonSettings.showOrigins}
+          {#if gojuon?.hiraganaOrigin && gojuonSettings.showOrigins.value}
             <span>({gojuon?.hiraganaOrigin})</span>
           {/if}
         </div>
@@ -76,11 +76,11 @@
         <div
           class={[
             "flex w-6 flex-col items-center-safe",
-            jp.gojuonSettings.enableKatakana ? "visible" : "invisible",
+            gojuonSettings.enableSubsets.katakana.value ? "visible" : "invisible",
           ]}
         >
           <span>{gojuon?.katakana}</span>
-          {#if gojuon?.katakanaOrigin && jp.gojuonSettings.showOrigins}
+          {#if gojuon?.katakanaOrigin && gojuonSettings.showOrigins.value}
             <span>({gojuon?.katakanaOrigin})</span>
           {/if}
         </div>

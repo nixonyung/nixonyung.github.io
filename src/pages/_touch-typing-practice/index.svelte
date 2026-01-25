@@ -7,17 +7,17 @@
   import JP from "./locales/jp/JP.svelte";
   import KR from "./locales/kr/KR.svelte";
 
-  // settings
-  const SETTINGS_SCHEMA = {
-    // values of lang should match codes from SpeechSynthesis
-    lang: { paramKey: "lang", defaultValue: <"en-US" | "ja-JP" | "ko-KR">"en-US" },
-  };
-  const settings = $state(initSettings(SETTINGS_SCHEMA));
-  useSyncSettings(SETTINGS_SCHEMA, settings);
+  const settings = $state(
+    initSettings({
+      // values of lang should match codes from SpeechSynthesis
+      lang: { paramKey: "lang", defaultValue: <"en-US" | "ja-JP" | "ko-KR">"en-US" },
+    }),
+  );
+  useSyncSettings(settings);
 
   $effect.pre(() => {
     speech.voice = speech.availableVoices.find(
-      ({ lang, name }) => lang === settings?.lang && name.startsWith("Google"),
+      ({ lang, name }) => lang === settings?.lang.value && name.startsWith("Google"),
     );
   });
 </script>
@@ -36,14 +36,18 @@
 
   <!-- settings -->
   <div class="flex items-center-safe gap-9">
-    <SelectInput bind:value={settings.lang} label="Lang" options={["en-US", "ja-JP", "ko-KR"]} />
+    <SelectInput
+      bind:value={settings.lang.value}
+      label="Lang"
+      options={["en-US", "ja-JP", "ko-KR"]}
+    />
   </div>
 
-  {#if settings.lang === "en-US"}
+  {#if settings.lang.value === "en-US"}
     <EN />
-  {:else if settings.lang === "ja-JP"}
+  {:else if settings.lang.value === "ja-JP"}
     <JP />
-  {:else if settings.lang === "ko-KR"}
+  {:else if settings.lang.value === "ko-KR"}
     <KR />
   {/if}
 </div>

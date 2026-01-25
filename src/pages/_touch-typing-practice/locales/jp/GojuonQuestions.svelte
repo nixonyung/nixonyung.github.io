@@ -13,11 +13,12 @@
     gojuons: Gojuon[];
   } = $props();
 
-  const SETTINGS_SCHEMA = {
-    numOptions: { paramKey: "numOptions", defaultValue: 4 },
-  };
-  const settings = $state(initSettings(SETTINGS_SCHEMA));
-  useSyncSettings(SETTINGS_SCHEMA, settings);
+  const settings = $state(
+    initSettings({
+      numOptions: { paramKey: "numOptions", defaultValue: 4 },
+    }),
+  );
+  useSyncSettings(settings);
 
   const questionsQueue = $derived(new QuestionsQueue(gojuons));
   let question: Gojuon | undefined = $state();
@@ -36,7 +37,10 @@
               row !== question?.gojuonPosition.row || col !== question?.gojuonPosition.col,
           )
           .map(({ letter }) => letter);
-        options = sampleSize(candidates, Math.min(candidates.length, settings.numOptions - 1));
+        options = sampleSize(
+          candidates,
+          Math.min(candidates.length, settings.numOptions.value - 1),
+        );
         options.splice(randomInt(options.length + 1), 0, question.letter);
       }
     });
@@ -44,7 +48,7 @@
 
   $effect.pre(() => {
     gojuons;
-    settings.numOptions;
+    settings.numOptions.value;
 
     nextQuestion();
   });
@@ -53,7 +57,7 @@
 <div class="flex flex-col gap-6">
   <!-- settings -->
   <div class="flex items-center-safe gap-9">
-    <NumericInput bind:value={settings.numOptions} label="Number of Options" min={1} />
+    <NumericInput bind:value={settings.numOptions.value} label="Number of Options" min={1} />
   </div>
 
   <!-- question -->

@@ -1,8 +1,8 @@
 import type { JapaneseWord } from "../../types";
-import { jp } from "./jp.svelte";
+import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendFunctionalChronological(words: JapaneseWord[]) {
-  if (jp.flashcardSettings.enableFunctionalChronological) {
+  if (flashcardSettings.words.functional.chronological.value) {
     words.push(
       // TODO: https://www.sigure.tw/learn-japanese/mix/difference/sorekara-korekara
 
