@@ -11,6 +11,8 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { kanjis: ["時", "刻", "秋"], hiragana: "とき", romanization: "toki", meaning: "at that time", exampleUsages: ["[Verb] 時、", "[Noun] の時、", "[na-Adj.] 時、", "[i-Adj.] 時、"] },
       // TODO: specific year / date
 
+      { kanjis: ["今"], hiragana: "いま", romanization: "ima", meaning: "now" },
+
       { kanjis: ["今朝"], hiragana: "けさ", romanization: "kesa", meaning: "this morning" },
       { kanjis: ["今朝"], hiragana: "こんちょう", romanization: "konchou", meaning: "this morning" },
 

@@ -90,9 +90,10 @@ export function appendVerbsActions(words: JapaneseWord[]) {
   if (jp.flashcardSettings.enableVerbsActionsOwnership) {
     verbs.push(
       // receiving
-      { hiragana: "もらう", preferredForm: "hiragana", kanjis: ["貰う"], romanization: "morau", verbGroup: "godan", verbIsTransitive: true, meaning: "receive" },
+      { hiragana: "いる", preferredForm: "hiragana", kanjis: ["要る"], romanization: "iru", verbGroup: "godan", verbIsTransitive: false, meaning: "want" },
       { hiragana: "くれる", rareKanjis: ["呉れる"], romanization: "kureru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "give to me / us" },
       { hiragana: "くださる", preferredForm: "hiragana", kanjis: ["下さる"], romanization: "kudasaru", verbGroup: "godan", verbIsTransitive: true, meaning: "bestow me / us (very polite)" },
+      { hiragana: "もらう", preferredForm: "hiragana", kanjis: ["貰う"], romanization: "morau", verbGroup: "godan", verbIsTransitive: true, meaning: "receive" },
       { kanjis: ["頼む"], rareKanjis: ["恃む", "憑む"], hiragana: "たのむ", romanization: "tanomu", verbGroup: "godan", verbIsTransitive: true, meaning: "depend", derivedMeanings: ["request"], exampleUsages: ["生活費を親に頼っている"] },
       { kanjis: ["買う"], hiragana: "かう", romanization: "kau", verbGroup: "godan", verbIsTransitive: true, meaning: "buy", exampleUsages: ["コーラを買う"] },
 
@@ -106,20 +107,22 @@ export function appendVerbsActions(words: JapaneseWord[]) {
 
   if (jp.flashcardSettings.enableVerbsActionsTranspositional) {
     verbs.push(
-      { kanjis: ["上がる"], rareKanjis: ["騰がる"], hiragana: "あがる", romanization: "agaru", verbGroup: "godan", verbIsTransitive: false, meaning: "rise" },
-
       { kanjis: ["行く", "往く"], hiragana: "いく", romanization: "iku", verbGroup: "godan", verbIsTransitive: false, meaning: "go", exampleUsages: ["東京に行く"] },
       { kanjis: ["会う", "逢う", "遭う"], rareKanjis: ["遇う"], hiragana: "あう", romanization: "au", verbGroup: "godan", verbIsTransitive: false, meaning: "meet" },
       { kanjis: ["訪問する"], hiragana: "ほうもんする", romanization: "houmonsuru", verbGroup: "irregular", verbIsTransitive: true, meaning: "visit" },
-
-      { kanjis: ["乗り出す"], hiragana: "のりだす", romanization: "noridasu", verbGroup: "godan", verbIsTransitive: true, meaning: "set out" },
       { kanjis: ["入る"], hiragana: "はいる", romanization: "hairu", verbGroup: "godan", verbIsTransitive: false, meaning: "enter" },
-      { kanjis: ["出る"], hiragana: "でる", romanization: "deru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "leave / exit" },
-      { kanjis: ["出かける"], hiragana: "でかける", romanization: "dekakeru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "go out" },
-      { kanjis: ["出て来る", "出てくる"], hiragana: "でてくる", romanization: "detekuru", verbGroup: "irregular", verbIsTransitive: false, meaning: "come out (towards speaker)" },
-      { kanjis: ["通る"], rareKanjis: ["透る", "徹る"], hiragana: "とおる", romanization: "tooru", verbGroup: "godan", verbIsTransitive: false, meaning: "pass through / travel" },
+      { kanjis: ["通る"], rareKanjis: ["透る", "徹る"], hiragana: "とおる", romanization: "tooru", verbGroup: "godan", verbIsTransitive: false, meaning: "pass through / go along" },
+      { kanjis: ["通う"], hiragana: "かよう", romanization: "kayou", verbGroup: "godan", verbIsTransitive: false, meaning: "regularly commute to" },
       { kanjis: ["戻る"], hiragana: "もどる", romanization: "modoru", verbGroup: "godan", verbIsTransitive: false, meaning: "return / go back" },
       { kanjis: ["帰る", "還る"], hiragana: "かえる", romanization: "kaeru", verbGroup: "godan", verbIsTransitive: false, meaning: "return home", exampleUsages: ["家に帰る"] },
+
+      { kanjis: ["出る"], hiragana: "でる", romanization: "deru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "leave / exit" },
+      { kanjis: ["出かける"], hiragana: "でかける", romanization: "dekakeru", verbGroup: "ichidan", verbIsTransitive: false, meaning: "start going out (for doing something)" },
+      { kanjis: ["出て来る", "出てくる"], hiragana: "でてくる", romanization: "detekuru", verbGroup: "irregular", verbIsTransitive: false, meaning: "come out (towards speaker)" },
+      { kanjis: ["乗り出す"], hiragana: "のりだす", romanization: "noridasu", verbGroup: "godan", verbIsTransitive: true, meaning: "set out / set sail", derivedMeanings: ["start a new venture"] },
+
+      { kanjis: ["上がる"], rareKanjis: ["騰がる"], hiragana: "あがる", romanization: "agaru", verbGroup: "godan", verbIsTransitive: false, meaning: "rise" },
+      { kanjis: ["行き来する"], hiragana: "ゆききする", romanization: "yukikisuru", verbGroup: "irregular", verbIsTransitive: false, meaning: "come and go" },
     );
   }
 

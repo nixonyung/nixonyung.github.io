@@ -141,6 +141,7 @@ export function appendExpressions(words: JapaneseWord[]) {
   if (jp.flashcardSettings.enableExpressionsMisc) {
     words.push(
       { hiragana: "もうありません", romanization: "mou arimasen", meaning: "aren't any left" },
+      { hiragana: "あと", romanization: "ato", meaning: "still have", exampleUsages: ["あと5秒"] },
 
       { hiragana: "どれにする?", romanization: "dore ni suru", meaning: "Which one are you going for?" },
 
