@@ -62,9 +62,9 @@ export type SettingsSchemaField = {
   | { arrayType: "boolean[]"; defaultValue: boolean[] }
 );
 
-type SettingsSchema = {
+interface SettingsSchema {
   [K: string]: SettingsSchemaField | SettingsSchema;
-};
+}
 
 type SettingsValue<Field extends SettingsSchemaField> = Field["defaultValue"] extends never[]
   ? Field["arrayType"] extends "string[]"
@@ -128,9 +128,9 @@ export function initSettings<Sc extends SettingsSchema>(schema: Sc): Settings<Sc
 
 type ResultSetting = Setting<SettingsSchemaField>;
 
-type ResultSettings = {
+interface ResultSettings {
   [K: string]: Setting<SettingsSchemaField> | ResultSettings;
-};
+}
 
 function isSetting(setting: ResultSetting | ResultSettings): setting is ResultSetting {
   return setting.paramKey !== undefined;

@@ -70,20 +70,20 @@
     }
   });
 
-  type Question = {
+  interface Question {
     word: TWord;
     questionEntries: Entry[];
     answerEntries: Entry[];
     pronunciation?: string;
     romanization?: string;
-  };
+  }
   function wordToEntries(word: TWord, settings: boolean[]) {
     const entries = range(settings.length)
       .filter((i) => settings[i])
       .map((i) => schema[i].valueFn(word));
     return entries.includes(undefined)
       ? undefined
-      : <Exclude<ReturnType<(typeof schema)[number]["valueFn"]>, undefined>[]>entries;
+      : (entries as Exclude<ReturnType<(typeof schema)[number]["valueFn"]>, undefined>[]);
   }
 
   const allQuestions = $derived.by(() => {

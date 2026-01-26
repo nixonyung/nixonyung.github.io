@@ -1,21 +1,21 @@
 export type Keymap = Record<string, string>;
 
-export type Letter = {
+export interface Letter {
   letter: string;
   actualPronunciation?: string;
 
   romanization?: string;
   actualInput?: string;
-};
+}
 
-export type Gojuon = Letter & {
+export interface Gojuon extends Letter {
   gojuonPosition: {
     row: number;
     col: number;
   };
-};
+}
 
-export type JapaneseWord = {
+export interface JapaneseWord {
   kanjis?: string[];
   rareKanjis?: string[];
   hiragana?: string;
@@ -30,12 +30,12 @@ export type JapaneseWord = {
 
   question?: string;
   answer?: string;
-};
+}
 
-export type JapaneseVerb = JapaneseWord & {
+export interface JapaneseVerb extends JapaneseWord {
   verbGroup: "godan" | "ichidan" | "irregular";
   // true | false
   verbIsTransitive: boolean;
-};
+}
 
 // TODO: JapaneseAdjective

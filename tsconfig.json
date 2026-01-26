@@ -1,11 +1,18 @@
 {
+  // (ref.) [Astro - Typescript - Setup](https://docs.astro.build/en/guides/typescript/#setup)
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"],
+
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+
+    // (ref.) [Svelte - TypeScript - tsconfig.json settings](https://svelte.dev/docs/svelte/typescript#tsconfig.json-settings)
+    "target": "esnext",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
   }
 }

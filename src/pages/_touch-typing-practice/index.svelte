@@ -10,7 +10,7 @@
   const settings = $state(
     initSettings({
       // values of lang should match codes from SpeechSynthesis
-      lang: { paramKey: "lang", defaultValue: <"en-US" | "ja-JP" | "ko-KR">"en-US" },
+      lang: { paramKey: "lang", defaultValue: "en-US" as "en-US" | "ja-JP" | "ko-KR" },
     }),
   );
   useSyncSettings(settings);

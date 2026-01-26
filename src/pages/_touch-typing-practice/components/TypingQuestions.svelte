@@ -27,12 +27,12 @@
   );
   useSyncSettings(settings);
 
-  type Question = {
+  interface Question {
     letter: string;
     pronunciation: string;
     romanization?: string;
     input: string;
-  };
+  }
   let questionsQueue = $derived(
     new QuestionsQueue(
       letters.map<Question>(({ letter, actualPronunciation, romanization, actualInput }) => ({

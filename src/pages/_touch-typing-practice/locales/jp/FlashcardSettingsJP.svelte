@@ -180,8 +180,12 @@
 
   useSyncSettings(flashcardSettings);
 
-  type BooleanSetting = { value: boolean };
-  type BooleanSettings = { [K: string]: BooleanSetting | BooleanSettings };
+  interface BooleanSetting {
+    value: boolean;
+  }
+  interface BooleanSettings {
+    [K: string]: BooleanSetting | BooleanSettings;
+  }
   function isSetting(setting: BooleanSetting | BooleanSettings): setting is BooleanSetting {
     return setting.value !== undefined;
   }

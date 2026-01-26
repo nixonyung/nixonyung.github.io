@@ -1,11 +1,11 @@
 <script lang="ts" module>
   import type { Snippet } from "svelte";
 
-  export type WithTooltipProps = {
+  export interface WithTooltipProps {
     tooltip?: string;
     customTooltip?: Snippet;
     disabled?: boolean;
-  };
+  }
 </script>
 
 <script lang="ts">

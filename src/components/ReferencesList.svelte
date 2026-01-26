@@ -1,7 +1,7 @@
 <script lang="ts" module>
-  type References = {
+  interface References {
     [K: string]: string | undefined | References;
-  };
+  }
 </script>
 
 <script lang="ts">

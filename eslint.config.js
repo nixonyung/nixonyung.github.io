@@ -15,7 +15,8 @@ export default defineConfig(
   includeIgnoreFile(gitignorePath),
 
   js.configs.recommended,
-  ts.configs.recommended,
+  ts.configs.strict,
+  ts.configs.stylistic,
   astro.configs.recommended,
   svelte.configs.recommended,
   prettier,
@@ -29,6 +30,9 @@ export default defineConfig(
       // typescript-eslint strongly recommend that you do not use the no-undef lint rule on TypeScript projects.
       // see: https://typescript-eslint.io/troubleshooting/faqs/eslint/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
       "no-undef": "off",
+
+      // false positives
+      "@typescript-eslint/no-non-null-assertion": "off",
     },
   },
 
@@ -45,6 +49,10 @@ export default defineConfig(
     rules: {
       // allow adding dependencies in effects
       "@typescript-eslint/no-unused-expressions": "off",
+
+      // false positives
+      "svelte/no-navigation-without-resolve": "off",
+      "svelte/prefer-svelte-reactivity": "off",
     },
   },
 );

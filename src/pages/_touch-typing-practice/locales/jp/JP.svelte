@@ -34,7 +34,7 @@
 
   const settings = $state(
     initSettings({
-      mode: { paramKey: "mode", defaultValue: <"typing" | "gojuonTable" | "flashcards">"typing" },
+      mode: { paramKey: "mode", defaultValue: "typing" as "typing" | "gojuonTable" | "flashcards" },
     }),
   );
   useSyncSettings(settings);
