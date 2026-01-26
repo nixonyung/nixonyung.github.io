@@ -1,4 +1,4 @@
-import { clone, random, range, shuffle } from "es-toolkit";
+import { clone, range, shuffle } from "es-toolkit";
 import { SvelteSet } from "svelte/reactivity";
 
 // used in QuestionsQueue, only need to support numbers
@@ -29,33 +29,45 @@ class Queue {
 }
 
 export class QuestionsQueue<Item extends object> {
-  items: Item[];
+  #items: Item[];
 
   #pinnedIdxs: SvelteSet<number>;
-  #pinnedIdxsQueue: Queue;
-  #unpinnedIdxsQueue: Queue;
+  #queue: Queue;
 
   constructor(items: Item[]) {
-    this.items = items;
+    this.#items = items;
 
     this.#pinnedIdxs = new SvelteSet();
-    this.#pinnedIdxsQueue = new Queue();
-    this.#unpinnedIdxsQueue = new Queue();
+    this.#queue = new Queue();
   }
 
   get numPinned() {
     return this.#pinnedIdxs.size;
   }
   get numUnpinned() {
-    return this.items.length - this.#pinnedIdxs.size;
+    return this.#items.length - this.#pinnedIdxs.size;
   }
 
   #idxToItem(idx: number): Item & { idx: number };
   #idxToItem(idx: number | undefined) {
-    return idx !== undefined ? clone({ ...this.items[idx], idx }) : undefined;
+    return idx !== undefined ? clone({ ...this.#items[idx], idx }) : undefined;
   }
-  get pinnedItems() {
-    return [...this.#pinnedIdxs].map((idx) => this.#idxToItem(idx));
+  items({
+    onlyPinned = false,
+    onlyUnpinned = false,
+  }: {
+    onlyPinned?: boolean | undefined;
+    onlyUnpinned?: boolean | undefined;
+  } = {}) {
+    return this.#queue.items
+      .filter((idx) =>
+        onlyPinned && this.numPinned
+          ? this.#pinnedIdxs.has(idx)
+          : onlyUnpinned && this.numUnpinned
+            ? !this.#pinnedIdxs.has(idx)
+            : true,
+      )
+      .map((idx) => this.#idxToItem(idx));
   }
 
   isPinned(idx: number) {
@@ -71,59 +83,53 @@ export class QuestionsQueue<Item extends object> {
     this.#pinnedIdxs = new SvelteSet();
   }
 
-  #resetPinnedQueue() {
-    this.#pinnedIdxsQueue = new Queue(shuffle([...this.#pinnedIdxs]));
-  }
-  #resetUnpinnedQueue() {
-    this.#unpinnedIdxsQueue = new Queue(
-      shuffle(range(this.items.length).filter((idx) => !this.#pinnedIdxs.has(idx))),
-    );
+  #resetQueue() {
+    this.#queue = new Queue(shuffle(range(this.#items.length)));
   }
   next({
     onlyPinned = false,
     onlyUnpinned = false,
   }: {
-    onlyPinned?: boolean;
-    onlyUnpinned?: boolean;
+    onlyPinned?: boolean | undefined;
+    onlyUnpinned?: boolean | undefined;
   } = {}) {
-    if (!this.items.length) return undefined;
+    if (!this.#items.length) return undefined;
 
-    if (onlyPinned && this.#pinnedIdxs.size) {
+    if (onlyPinned && this.numPinned) {
       while (true) {
-        const idx = this.#pinnedIdxsQueue.pop();
+        const idx = this.#queue.pop();
 
         if (idx === undefined) {
-          this.#resetPinnedQueue();
-          return this.#idxToItem(this.#pinnedIdxsQueue.pop()!);
+          // should run at most once after checking this.#items.length
+          this.#resetQueue();
+          continue;
         }
         if (this.#pinnedIdxs.has(idx)) {
+          // should always terminate after checking this.numPinned
           return this.#idxToItem(idx);
         }
       }
     }
 
-    if (onlyUnpinned && this.#pinnedIdxs.size < this.items.length) {
+    if (onlyUnpinned && this.numUnpinned) {
       while (true) {
-        const idx = this.#unpinnedIdxsQueue.pop();
+        const idx = this.#queue.pop();
 
         if (idx === undefined) {
-          this.#resetUnpinnedQueue();
-          return this.#idxToItem(this.#unpinnedIdxsQueue.pop()!);
+          // should run at most once after checking this.#items.length
+          this.#resetQueue();
+          continue;
         }
         if (!this.#pinnedIdxs.has(idx)) {
+          // should always terminate after checking this.numUnpinned
           return this.#idxToItem(idx);
         }
       }
     }
 
-    if (!this.#pinnedIdxsQueue.size && !this.#unpinnedIdxsQueue.size) {
-      this.#resetPinnedQueue();
-      this.#resetUnpinnedQueue();
+    if (!this.#queue.size) {
+      this.#resetQueue();
     }
-    return this.#idxToItem(
-      random(this.#pinnedIdxsQueue.size + this.#unpinnedIdxsQueue.size) < this.#pinnedIdxsQueue.size
-        ? this.#pinnedIdxsQueue.pop()!
-        : this.#unpinnedIdxsQueue.pop()!,
-    );
+    return this.#idxToItem(this.#queue.pop()!);
   }
 }

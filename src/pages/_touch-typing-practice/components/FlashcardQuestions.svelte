@@ -323,7 +323,7 @@
             <div
               class="invisible absolute top-0 right-0 z-10 flex translate-x-full translate-y-2 flex-col divide-y rounded bg-primary whitespace-nowrap ring group-hover/list:visible"
             >
-              {#each questionsQueue.pinnedItems as { questionEntries, answerEntries, romanization, idx } (idx)}
+              {#each questionsQueue.items( { onlyPinned: true }, ) as { questionEntries, answerEntries, romanization, idx } (idx)}
                 <button
                   class="group/item flex cursor-pointer items-center-safe gap-1.5 px-2 py-1.5"
                   onclick={() => {
