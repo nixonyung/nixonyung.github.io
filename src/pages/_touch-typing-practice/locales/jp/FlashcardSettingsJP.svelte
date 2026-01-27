@@ -176,6 +176,11 @@
   import CheckboxInput from "@/components/CheckboxInput.svelte";
   import Highlighted from "@/components/Highlighted.svelte";
   import ReferencesList from "@/components/ReferencesList.svelte";
+  import SettingsContainer from "@/components/SettingsContainer.svelte";
+  import SettingsRow from "@/components/SettingsRow.svelte";
+  import SettingsRows from "@/components/SettingsRows.svelte";
+  import SettingsRowsBordered from "@/components/SettingsRowsBordered.svelte";
+  import SettingsSection from "@/components/SettingsSection.svelte";
   import { initSettings, useSyncSettings } from "../../../../lib/settings.svelte";
 
   useSyncSettings(flashcardSettings);
@@ -224,44 +229,46 @@
   }}
 />
 
-<div class="flex max-w-dvw flex-col gap-3">
-  <div class="flex items-start gap-6">
-    <Highlighted onclick={onclick(flashcardSettings)}>(toggle all)</Highlighted>
-  </div>
+<SettingsContainer>
+  <Highlighted onclick={onclick(flashcardSettings)}>(toggle all)</Highlighted>
 
-  <div class="flex items-start gap-6">
-    <Highlighted onclick={onclick(flashcardSettings.words.pronouns)}>Pronouns:</Highlighted>
+  <SettingsSection>
+    <SettingsRow>
+      <Highlighted onclick={onclick(flashcardSettings.words.pronouns)}>Pronouns:</Highlighted>
+    </SettingsRow>
 
-    <div class="flex flex-col gap-y-1.5">
-      <div class="flex flex-wrap items-center-safe gap-x-3">
+    <SettingsRows>
+      <SettingsRow>
         <CheckboxInput bind:checked={flashcardSettings.words.pronouns.me.value} label="I" />
         <CheckboxInput bind:checked={flashcardSettings.words.pronouns.you.value} label="You" />
         <CheckboxInput bind:checked={flashcardSettings.words.pronouns.us.value} label="We" />
-      </div>
-      <div class="flex flex-wrap items-center-safe gap-x-3">
+      </SettingsRow>
+      <SettingsRow>
         <CheckboxInput bind:checked={flashcardSettings.words.pronouns.thatPerson.value} label="That Person" />
         <CheckboxInput bind:checked={flashcardSettings.words.pronouns.thosePeople.value} label="Those People" />
-      </div>
-      <div class="flex flex-wrap items-center-safe gap-x-3">
+      </SettingsRow>
+      <SettingsRow>
         <CheckboxInput bind:checked={flashcardSettings.words.pronouns.thatThing.value} label="That Thing" />
         <CheckboxInput bind:checked={flashcardSettings.words.pronouns.thoseThings.value} label="Those Things" />
-      </div>
-      <div class="flex flex-wrap items-center-safe gap-x-3">
+      </SettingsRow>
+      <SettingsRow>
         <CheckboxInput bind:checked={flashcardSettings.words.pronouns.reflective.value} label="Reflective" />
         <CheckboxInput bind:checked={flashcardSettings.words.pronouns.indefinite.value} label="Indefinite" />
-      </div>
-      <div class="flex flex-wrap items-center-safe gap-x-3">
+      </SettingsRow>
+      <SettingsRow>
         <CheckboxInput bind:checked={flashcardSettings.words.pronouns.interrogativeWho.value} label="Who?" />
         <CheckboxInput bind:checked={flashcardSettings.words.pronouns.interrogativeWhat.value} label="What?" />
-      </div>
-    </div>
-  </div>
+      </SettingsRow>
+    </SettingsRows>
+  </SettingsSection>
 
-  <div class="flex items-start gap-6">
-    <Highlighted onclick={onclick(flashcardSettings.words.nouns)}>Nouns:</Highlighted>
+  <SettingsSection>
+    <SettingsRow>
+      <Highlighted onclick={onclick(flashcardSettings.words.nouns)}>Nouns:</Highlighted>
+    </SettingsRow>
 
-    <div class="flex flex-col gap-y-1.5">
-      <div class="flex flex-wrap items-center-safe gap-x-3">
+    <SettingsRows>
+      <SettingsRow>
         <Highlighted onclick={onclick(flashcardSettings.words.nouns.people.byCharacteristics)}>People (by Characteristics):</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.generic.value} label="(generic)" />
@@ -269,12 +276,14 @@
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.age.value} label="Age" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.professions.value} label="Professions" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.socialStatus.value} label="Social Status" />
-      </div>
-      <div class="flex items-start gap-3">
-        <Highlighted onclick={onclick(flashcardSettings.words.nouns.people.byRelationships)}>People (by Relationships):</Highlighted>
+      </SettingsRow>
+      <SettingsSection>
+        <SettingsRow>
+          <Highlighted onclick={onclick(flashcardSettings.words.nouns.people.byRelationships)}>People (by Relationships):</Highlighted>
+        </SettingsRow>
 
-        <div class="flex flex-col gap-y-1.5">
-          <div class="flex flex-wrap items-center-safe gap-x-3">
+        <SettingsRows>
+          <SettingsRow>
             <Highlighted onclick={onclick(flashcardSettings.words.nouns.people.byRelationships.immediateFamily)}
               >Immediate Family:</Highlighted
             >
@@ -298,28 +307,28 @@
               bind:checked={flashcardSettings.words.nouns.people.byRelationships.immediateFamily.grandparents.value}
               label="Grandparents"
             />
-          </div>
-          <div class="flex flex-wrap items-center-safe gap-x-3">
+          </SettingsRow>
+          <SettingsRow>
             <CheckboxInput
               bind:checked={flashcardSettings.words.nouns.people.byRelationships.extendedFamily.value}
               label="Extended Family"
             />
-          </div>
-          <div class="flex flex-wrap items-center-safe gap-x-3">
+          </SettingsRow>
+          <SettingsRow>
             <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byRelationships.chosenFamily.value} label="Chosen Family" />
             <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byRelationships.friends.value} label="Friends" />
             <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byRelationships.fellows.value} label="Fellows" />
-          </div>
-        </div>
-      </div>
+          </SettingsRow>
+        </SettingsRows>
+      </SettingsSection>
 
-      <div class="flex flex-wrap items-center-safe gap-x-3">
+      <SettingsRow>
         <Highlighted onclick={onclick(flashcardSettings.words.nouns.animals)}>Animals:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.animals.value} label="(all)" />
-      </div>
+      </SettingsRow>
 
-      <div class="flex flex-wrap items-center-safe gap-x-3">
+      <SettingsRow>
         <Highlighted onclick={onclick(flashcardSettings.words.nouns.objects)}>Objects:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.generic.value} label="(generic)" />
@@ -330,8 +339,8 @@
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.foodDrinks.value} label="Drinks" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.equipments.value} label="Equipments" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.transportation.value} label="Transportation" />
-      </div>
-      <div class="flex flex-wrap items-center-safe gap-x-3">
+      </SettingsRow>
+      <SettingsRow>
         <Highlighted onclick={onclick(flashcardSettings.words.nouns.moments)}>Moments:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.timesOfDay.value} label="Times Of Day" />
@@ -340,8 +349,8 @@
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.seasons.value} label="Seasons" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.festivals.value} label="Festivals" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.misc.value} label="(misc.)" />
-      </div>
-      <div class="flex flex-wrap items-center-safe gap-x-3">
+      </SettingsRow>
+      <SettingsRow>
         <Highlighted onclick={onclick(flashcardSettings.words.nouns.venues)}>Venues:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.generic.value} label="(generic)" />
@@ -349,8 +358,8 @@
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.shops.value} label="Shops" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.regions.value} label="Regions" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.imaginary.value} label="Imaginary" />
-      </div>
-      <div class="flex flex-wrap items-center-safe gap-x-3">
+      </SettingsRow>
+      <SettingsRow>
         <Highlighted onclick={onclick(flashcardSettings.words.nouns.ideas)}>Ideas:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.life.value} label="Life" />
@@ -362,16 +371,18 @@
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.arts.value} label="Arts" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.activities.value} label="Activities" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.videoGames.value} label="Video Games" />
-      </div>
-    </div>
-  </div>
+      </SettingsRow>
+    </SettingsRows>
+  </SettingsSection>
 
-  <div class="flex items-start gap-6">
-    <Highlighted class="whitespace-nowrap" onclick={onclick(flashcardSettings.words.verbs)}>Verbs:</Highlighted>
+  <SettingsSection>
+    <SettingsRow>
+      <Highlighted class="whitespace-nowrap" onclick={onclick(flashcardSettings.words.verbs)}>Verbs:</Highlighted>
+    </SettingsRow>
 
-    <div class="flex flex-col gap-y-1.5">
-      <div class="mb-1 flex w-max flex-col gap-1.5 rounded p-1.5 whitespace-nowrap ring ring-primary-content/50">
-        <div class="flex items-center-safe gap-3">
+    <SettingsRows>
+      <SettingsRowsBordered>
+        <SettingsRow>
           <CheckboxInput
             bind:checked={flashcardSettings.enableTransitiveVerbs.value}
             label="Transitive 他動詞"
@@ -384,9 +395,9 @@
             tooltip="usually use が/は/に/で"
             disabled={allVerbsDisabled}
           />
-        </div>
+        </SettingsRow>
 
-        <div class="flex items-center-safe gap-3">
+        <SettingsRow>
           <CheckboxInput
             bind:checked={flashcardSettings.enableGodanVerbs.value}
             label="Godan 五段動詞"
@@ -405,10 +416,10 @@
             tooltip="ends with する / くる"
             disabled={allVerbsDisabled}
           />
-        </div>
-      </div>
+        </SettingsRow>
+      </SettingsRowsBordered>
 
-      <div class="flex flex-wrap items-center-safe gap-x-3">
+      <SettingsRow>
         <Highlighted onclick={onclick(flashcardSettings.words.verbs.actions)}>Actions:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.bodily.value} label="Bodily" />
@@ -417,114 +428,114 @@
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.transpositional.value} label="Transpositional" />
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.maneuvers.value} label="Maneuvers" />
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.activities.value} label="Activities" />
-      </div>
+      </SettingsRow>
 
-      <div class="flex flex-wrap items-center-safe gap-x-3">
+      <SettingsRow>
         <Highlighted onclick={onclick(flashcardSettings.words.verbs.descriptive)}>Descriptive:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.descriptive.being.value} label="Being" />
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.descriptive.existence.value} label="Existence" />
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.descriptive.processes.value} label="Processes" />
-      </div>
+      </SettingsRow>
 
-      <div class="flex flex-wrap items-center-safe gap-x-3">
+      <SettingsRow>
         <Highlighted onclick={onclick(flashcardSettings.words.verbs.changes)}>Changes:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.changes.environmenal.value} label="Environmenal" />
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.changes.quantitative.value} label="Quantitative" />
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.changes.resultative.value} label="Resultative" />
-      </div>
+      </SettingsRow>
 
-      <div class="flex flex-wrap items-center-safe gap-x-3">
+      <SettingsRow>
         <Highlighted onclick={onclick(flashcardSettings.words.verbs.auxiliary)}>Auxiliary:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.auxiliary.value} label="(all)" />
-      </div>
-    </div>
-  </div>
+      </SettingsRow>
+    </SettingsRows>
+  </SettingsSection>
 
-  <div class="flex items-start gap-6">
-    <Highlighted class="whitespace-nowrap" onclick={onclick(flashcardSettings.words.adjectives)}>Adjectives:</Highlighted>
+  <SettingsSection>
+    <SettingsRow>
+      <Highlighted class="whitespace-nowrap" onclick={onclick(flashcardSettings.words.adjectives)}>Adjectives:</Highlighted>
+    </SettingsRow>
 
-    <div class="flex flex-col gap-y-1.5">
-      <div class="mb-1 flex flex-col gap-1.5 rounded p-1.5 whitespace-nowrap ring ring-primary-content/50">
-        <div class="flex items-center-safe gap-3">
+    <SettingsRows>
+      <SettingsRowsBordered>
+        <SettingsRow>
           <CheckboxInput bind:checked={flashcardSettings.enableIAdjectives.value} label="い-adj." disabled={allAdjsDisabled} />
           <CheckboxInput bind:checked={flashcardSettings.enableNaAdjectives.value} label="な-adj." disabled={allAdjsDisabled} />
-        </div>
-      </div>
+        </SettingsRow>
+      </SettingsRowsBordered>
 
-      <div class="flex items-center-safe gap-3">
+      <SettingsRow>
         <CheckboxInput bind:checked={flashcardSettings.words.adjectives.value} label="(all)" />
-      </div>
-    </div>
-  </div>
+      </SettingsRow>
+    </SettingsRows>
+  </SettingsSection>
 
-  <div class="flex items-center-safe gap-6">
+  <SettingsRow>
     <Highlighted onclick={onclick(flashcardSettings.words.functional)}>Functional Words:</Highlighted>
 
-    <div class="flex flex-col gap-y-1.5">
-      <div class="flex flex-wrap items-center-safe gap-x-3">
-        <CheckboxInput bind:checked={flashcardSettings.words.functional.adpositions.value} label="Adpositions" />
-        <CheckboxInput bind:checked={flashcardSettings.words.functional.chronological.value} label="Chronological" />
-        <CheckboxInput bind:checked={flashcardSettings.words.functional.locational.value} label="Locational" />
-        <CheckboxInput bind:checked={flashcardSettings.words.functional.logical.value} label="Logical" />
-        <CheckboxInput bind:checked={flashcardSettings.words.functional.enumerative.value} label="Enumerative" />
-        <CheckboxInput bind:checked={flashcardSettings.words.functional.degree.value} label="Comparative" />
-        <CheckboxInput bind:checked={flashcardSettings.words.functional.manner.value} label="Manner" />
-      </div>
-    </div>
-  </div>
+    <CheckboxInput bind:checked={flashcardSettings.words.functional.adpositions.value} label="Adpositions" />
+    <CheckboxInput bind:checked={flashcardSettings.words.functional.chronological.value} label="Chronological" />
+    <CheckboxInput bind:checked={flashcardSettings.words.functional.locational.value} label="Locational" />
+    <CheckboxInput bind:checked={flashcardSettings.words.functional.logical.value} label="Logical" />
+    <CheckboxInput bind:checked={flashcardSettings.words.functional.enumerative.value} label="Enumerative" />
+    <CheckboxInput bind:checked={flashcardSettings.words.functional.degree.value} label="Comparative" />
+    <CheckboxInput bind:checked={flashcardSettings.words.functional.manner.value} label="Manner" />
+  </SettingsRow>
 
-  <div class="flex items-center-safe gap-6">
+  <SettingsRow>
     <Highlighted onclick={onclick(flashcardSettings.words.expressions)}>Expressions:</Highlighted>
 
-    <div class="flex flex-col gap-y-1.5">
-      <div class="flex items-center-safe gap-3">
-        <CheckboxInput bind:checked={flashcardSettings.words.expressions.appellations.value} label="Appellations" />
-        <CheckboxInput bind:checked={flashcardSettings.words.expressions.greetingsAndClosings.value} label="Greetings and Closings" />
-        <CheckboxInput bind:checked={flashcardSettings.words.expressions.softening.value} label="Softening" />
-        <CheckboxInput bind:checked={flashcardSettings.words.expressions.emphasis.value} label="Emphasis" />
-        <CheckboxInput bind:checked={flashcardSettings.words.expressions.agreeing.value} label="Agreeing" />
-        <CheckboxInput bind:checked={flashcardSettings.words.expressions.requests.value} label="Requests" />
-        <CheckboxInput bind:checked={flashcardSettings.words.expressions.surprised.value} label="Surprised" />
-        <CheckboxInput bind:checked={flashcardSettings.words.expressions.misc.value} label="(misc.)" />
-      </div>
-    </div>
-  </div>
+    <CheckboxInput bind:checked={flashcardSettings.words.expressions.appellations.value} label="Appellations" />
+    <CheckboxInput bind:checked={flashcardSettings.words.expressions.greetingsAndClosings.value} label="Greetings and Closings" />
+    <CheckboxInput bind:checked={flashcardSettings.words.expressions.softening.value} label="Softening" />
+    <CheckboxInput bind:checked={flashcardSettings.words.expressions.emphasis.value} label="Emphasis" />
+    <CheckboxInput bind:checked={flashcardSettings.words.expressions.agreeing.value} label="Agreeing" />
+    <CheckboxInput bind:checked={flashcardSettings.words.expressions.requests.value} label="Requests" />
+    <CheckboxInput bind:checked={flashcardSettings.words.expressions.surprised.value} label="Surprised" />
+    <CheckboxInput bind:checked={flashcardSettings.words.expressions.misc.value} label="(misc.)" />
+  </SettingsRow>
 
-  <div class="flex items-start gap-6">
-    <Highlighted onclick={onclick(flashcardSettings.words.grammarRules)}>Grammar Rules:</Highlighted>
+  <SettingsSection>
+    <SettingsRow>
+      <Highlighted onclick={onclick(flashcardSettings.words.grammarRules)}>Grammar Rules:</Highlighted>
+    </SettingsRow>
 
-    <div class="flex flex-col gap-y-1.5">
-      <div class="flex items-start gap-3">
-        <Highlighted onclick={onclick(flashcardSettings.words.grammarRules.conjugations)}>Verb Conjugations:</Highlighted>
+    <SettingsRows>
+      <SettingsSection>
+        <SettingsRow>
+          <Highlighted onclick={onclick(flashcardSettings.words.grammarRules.conjugations)}>Verb Conjugations:</Highlighted>
+        </SettingsRow>
 
-        <div class="flex flex-col gap-y-1.5">
-          <div class="flex flex-wrap items-center-safe gap-x-3">
+        <SettingsRows>
+          <SettingsRow>
             <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.stemForm.value} label="Stem" />
-          </div>
-          <div class="flex flex-wrap items-center-safe gap-x-3">
+          </SettingsRow>
+          <SettingsRow>
             <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.naiForm.value} label="ない" />
             <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.passiveForm.value} label="Passive" />
             <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.causativeForm.value} label="Causative" />
-          </div>
-          <div class="flex flex-wrap items-center-safe gap-x-3">
+          </SettingsRow>
+          <SettingsRow>
             <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.imperativeForm.value} label="Imperative" />
             <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.conditionalForm.value} label="Conditional" />
             <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.potentialForm.value} label="Potential" />
-          </div>
-          <div class="flex flex-wrap items-center-safe gap-x-3">
+          </SettingsRow>
+          <SettingsRow>
             <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.taForm.value} label="た" />
             <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.teForm.value} label="て" />
-          </div>
-          <div class="flex flex-wrap items-center-safe gap-x-3">
+          </SettingsRow>
+          <SettingsRow>
             <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.volitionalForm.value} label="Volitional" />
-          </div>
-        </div>
-      </div>
+          </SettingsRow>
+        </SettingsRows>
+      </SettingsSection>
 
-      <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.misc.value} label="(misc.)" />
-    </div>
-  </div>
-</div>
+      <SettingsRow>
+        <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.misc.value} label="(misc.)" />
+      </SettingsRow>
+    </SettingsRows>
+  </SettingsSection>
+</SettingsContainer>
