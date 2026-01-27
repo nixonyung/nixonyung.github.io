@@ -76,6 +76,14 @@ export const messages = {
     zh: "Languages Learner",
     en: "Languages Learner",
   },
+  indexMyMusicPlaylist: {
+    zh: "我的歌單",
+    en: "My Music Playlist",
+  },
+  indexIGTheatre: {
+    zh: "nixon.theatre",
+    en: "nixon.theatre",
+  },
   lastmod: {
     zh: "最後更新於",
     en: "Last updated on",

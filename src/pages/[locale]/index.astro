@@ -55,6 +55,14 @@ export const getStaticPaths = async () =>
           title: getLocalizedMessage("indexLanguagesLearner", Astro.currentLocale),
           href: "/languages-learner",
         },
+        {
+          title: getLocalizedMessage("indexMyMusicPlaylist", Astro.currentLocale),
+          href: "https://music.youtube.com/playlist?list=PLM0gG42nMMgUbvrC3dJIlCSC2vJoCeVt_",
+        },
+        {
+          title: getLocalizedMessage("indexIGTheatre", Astro.currentLocale),
+          href: "https://www.instagram.com/nixon.theatre",
+        },
       ]}
     />
   </WithProse>
