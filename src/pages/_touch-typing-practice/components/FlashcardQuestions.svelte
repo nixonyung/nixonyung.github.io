@@ -10,7 +10,7 @@
   import { onkeydown } from "@/lib/keyboard";
   import { QuestionsQueue } from "@/lib/questions-queue.svelte.ts";
   import { speech } from "@/lib/speech.svelte";
-  import { isEqual, randomInt, range, sortBy } from "es-toolkit";
+  import { isEqual, range } from "es-toolkit";
   import { tick, untrack } from "svelte";
   import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
 
@@ -70,13 +70,6 @@
     }
   });
 
-  interface Question {
-    word: TWord;
-    questionEntries: Entry[];
-    answerEntries: Entry[];
-    pronunciation?: string;
-    romanization?: string;
-  }
   function wordToEntries(word: TWord, settings: boolean[]) {
     const entries = range(settings.length)
       .filter((i) => settings[i])
@@ -86,15 +79,21 @@
       : (entries as Exclude<ReturnType<(typeof schema)[number]["valueFn"]>, undefined>[]);
   }
 
-  const allQuestions = $derived.by(() => {
-    const result: Question[] = [];
+  const questionsQueue = $derived.by(() => {
+    const questions: {
+      word: TWord;
+      questionEntries: Entry[];
+      answerEntries: Entry[];
+      pronunciation?: string;
+      romanization?: string;
+    }[] = [];
 
     for (const word of words) {
       const questionEntries = wordToEntries(word, settings.questionSettings.value);
       const answerEntries = wordToEntries(word, settings.optionSettings.value);
       if (questionEntries === undefined || answerEntries === undefined) continue;
 
-      result.push({
+      questions.push({
         word,
         questionEntries,
         answerEntries,
@@ -103,90 +102,48 @@
       });
     }
 
-    return result;
+    return new QuestionsQueue(questions);
   });
-
-  let questionsQueue = $state(new QuestionsQueue(allQuestions));
-  let question: (Question & { idx: number }) | undefined = $state();
-  let questionRef: Highlighted | undefined = $state();
-  let showRomanization = $state(false);
-
-  let options: Entry[][] = $state([]);
-  let isWrongOptions: boolean[] = $state([]);
-
+  let question: ReturnType<(typeof questionsQueue)["nextQuestion"]> = $state();
+  let options: ReturnType<(typeof questionsQueue)["genOptions"]> = $state([]);
   function entriesToStr(entries: Entry[]) {
     return entries.flat().join("|");
   }
   function genOptions() {
-    options = [];
-    if (question !== undefined) {
-      // from allQuestions, sample N elements (without replacement) with filtering
-      //
-      // problem: need to efficiently find a new unique element if the current one is filtered out
-      //
-      // inferior solutions:
-      //   - repeatedly call es-toolkit's `sampleSize` and filter until having enough elements
-      //     - will incorrectly return elements WITH replacement
-      //   - shuffle the whole array and pick until having N elements
-      //     - costly in time when the array is large
-
-      const optionStrs = new Set([entriesToStr(question.answerEntries)]);
-
-      // Fisher-Yates shuffle, from left-to-right, running on indices to avoid copying
-      // (ref.) https://github.com/toss/es-toolkit/blob/3d75a713169c2db6fffe04121bc73ac0363d741e/src/array/shuffle.ts
-      const indices = range(allQuestions.length);
-      let i = 0;
-      while (options.length < settings.numOptions.value - 1 && i < indices.length) {
-        const j = randomInt(i, indices.length);
-        [indices[i], indices[j]] = [indices[j], indices[i]];
-        const idx = indices[i];
-        const word = allQuestions[idx];
-        i++;
-
-        // filter out answers from other same-looking questions
-        if (isEqual(word.questionEntries, question.questionEntries)) continue;
-
-        // filter out same-looking options
-        const answerEntriesStr = entriesToStr(word.answerEntries);
-        if (optionStrs.has(answerEntriesStr)) continue;
-
-        // filter out pinned/unpinned depending on settings
-        if (settings.onlyPinned.value && questionsQueue.numPinned && !questionsQueue.isPinned(idx))
-          continue;
-        if (
-          settings.onlyUnpinned.value &&
-          questionsQueue.numUnpinned &&
-          questionsQueue.isPinned(idx)
-        )
-          continue;
-
-        options.push(word.answerEntries);
-        optionStrs.add(answerEntriesStr);
-      }
-
-      // add the real answer
-      options.push(question.answerEntries);
-    }
-    options = sortBy(options, [(entries) => entriesToStr(entries).toLowerCase()]);
-    isWrongOptions = Array(options.length).fill(false);
+    options = questionsQueue.genOptions(
+      question,
+      settings.numOptions.value,
+      {
+        onlyPinned: settings.onlyPinned.value,
+        onlyUnpinned: settings.onlyUnpinned.value,
+      },
+      // filter out answers from other same-looking questions
+      (question, option) => !isEqual(option.questionEntries, question.questionEntries),
+      // filter out same-looking options
+      (option) => entriesToStr(option.answerEntries),
+    );
   }
-
   function nextQuestion() {
-    question = questionsQueue.next({
+    question = questionsQueue.nextQuestion({
       onlyPinned: settings.onlyPinned.value,
       onlyUnpinned: settings.onlyUnpinned.value,
     });
     genOptions();
   }
-
   $effect.pre(() => {
-    questionsQueue = new QuestionsQueue(allQuestions);
+    questionsQueue;
+
     untrack(() => nextQuestion());
   });
+
+  let questionRef: Highlighted | undefined = $state();
+  let showRomanization = $state(false);
+  let isWrongOptions: boolean[] = $state([]);
   $effect.pre(() => {
     question;
 
     showRomanization = false;
+    isWrongOptions = Array(options.length).fill(false);
     if (untrack(() => settings.autoReadQuestion.value)) {
       tick().then(() => questionRef?.click());
     }
@@ -355,14 +312,14 @@
 
     <!-- options -->
     <div class="mt-6 flex flex-col gap-2">
-      {#each options as option, i (option)}
+      {#each options as option, i (entriesToStr(option.answerEntries))}
         <Highlighted
           vertical
           variant={isWrongOptions[i] ? "error" : "primary-lighter"}
           onclick={() => {
             if (!question) return;
 
-            if (isEqual(option, question.answerEntries)) {
+            if (isEqual(option.answerEntries, question.answerEntries)) {
               nextQuestion();
             } else {
               isWrongOptions[i] = true;
@@ -373,7 +330,7 @@
           }}
           disabled={isWrongOptions[i]}
         >
-          {@render entries(option)}
+          {@render entries(option.answerEntries)}
         </Highlighted>
       {/each}
     </div>

@@ -2,7 +2,6 @@
   import Highlighted from "@/components/Highlighted.svelte";
   import NumericInput from "@/components/NumericInput.svelte";
   import { QuestionsQueue } from "@/lib/questions-queue.svelte.ts";
-  import { randomInt, sampleSize } from "es-toolkit";
   import { untrack } from "svelte";
   import { initSettings, useSyncSettings } from "../../../../lib/settings.svelte";
   import type { Gojuon } from "../../types";
@@ -15,42 +14,38 @@
 
   const settings = $state(
     initSettings({
-      numOptions: { paramKey: "numOptions", defaultValue: 4 },
+      numOptions: { paramKey: "numOptions", defaultValue: 6 },
     }),
   );
   useSyncSettings(settings);
 
   const questionsQueue = $derived(new QuestionsQueue(gojuons));
-  let question: Gojuon | undefined = $state();
-  let options: string[] = $state([]);
+  let question: ReturnType<(typeof questionsQueue)["nextQuestion"]> = $state();
+  let options: ReturnType<(typeof questionsQueue)["genOptions"]> = $state([]);
 
-  function nextQuestion() {
-    untrack(() => {
-      question = questionsQueue.next();
-
-      if (question === undefined) {
-        options = [];
-      } else {
-        const candidates = gojuons
-          .filter(
-            ({ gojuonPosition: { row, col } }) =>
-              row !== question?.gojuonPosition.row || col !== question?.gojuonPosition.col,
-          )
-          .map(({ letter }) => letter);
-        options = sampleSize(
-          candidates,
-          Math.min(candidates.length, settings.numOptions.value - 1),
-        );
-        options.splice(randomInt(options.length + 1), 0, question.letter);
-      }
-    });
+  function genOptions() {
+    options = questionsQueue.genOptions(
+      question,
+      settings.numOptions.value,
+      {},
+      (question, { gojuonPosition: { row, col } }) =>
+        row !== question.gojuonPosition.row || col !== question.gojuonPosition.col,
+    );
   }
+  function nextQuestion() {
+    question = questionsQueue.nextQuestion();
+    genOptions();
+  }
+  $effect.pre(() => {
+    questionsQueue;
+
+    untrack(() => nextQuestion());
+  });
 
   $effect.pre(() => {
-    gojuons;
     settings.numOptions.value;
 
-    nextQuestion();
+    untrack(() => genOptions());
   });
 </script>
 
@@ -84,22 +79,24 @@
     {/each}
   </div>
 
-  <span>What is here?</span>
+  {#if question}
+    <span>What is here?</span>
 
-  <!-- options -->
-  <div class="flex flex-wrap items-center-safe gap-3">
-    {#each options as option (option)}
-      <Highlighted
-        onclick={() => {
-          if (option === question?.letter) {
-            nextQuestion();
-          }
-        }}
-      >
-        {option}
-      </Highlighted>
-    {/each}
-  </div>
+    <!-- options -->
+    <div class="flex flex-wrap items-center-safe gap-3">
+      {#each options as option (option)}
+        <Highlighted
+          onclick={() => {
+            if (option.letter === question!.letter) {
+              nextQuestion();
+            }
+          }}
+        >
+          {option.letter}
+        </Highlighted>
+      {/each}
+    </div>
+  {/if}
 
   <!-- padding -->
   <div class="h-[75dvh]"></div>

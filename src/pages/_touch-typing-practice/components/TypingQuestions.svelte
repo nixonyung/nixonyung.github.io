@@ -27,15 +27,9 @@
   );
   useSyncSettings(settings);
 
-  interface Question {
-    letter: string;
-    pronunciation: string;
-    romanization?: string;
-    input: string;
-  }
-  let questionsQueue = $derived(
+  const questionsQueue = $derived(
     new QuestionsQueue(
-      letters.map<Question>(({ letter, actualPronunciation, romanization, actualInput }) => ({
+      letters.map(({ letter, actualPronunciation, romanization, actualInput }) => ({
         letter,
         pronunciation: actualPronunciation ?? letter,
         romanization: romanization,
@@ -43,26 +37,29 @@
       })),
     ),
   );
-  let questions: (Question | undefined)[] = $state([]);
+  let questions: ReturnType<(typeof questionsQueue)["nextQuestion"]>[] = $state([]);
+
+  function nextQuestions() {
+    questions = Array.from({ length: settings.numQuestions.value }, () =>
+      questionsQueue.nextQuestion(),
+    );
+  }
+  $effect.pre(() => {
+    questionsQueue;
+    settings.numQuestions.value;
+
+    untrack(() => nextQuestions());
+  });
 
   let inputs = $state([""]);
   const isCorrects = $derived(
     questions.map((question, i) => question && inputs[i] === question.input),
   );
   const allCorrect = $derived(isCorrects.every((is) => is));
-
-  function nextQuestion() {
-    untrack(() => {
-      questions = Array.from({ length: settings.numQuestions.value }, () => questionsQueue.next());
-      inputs = [""];
-    });
-  }
-
   $effect.pre(() => {
-    letters;
-    settings.numQuestions.value;
+    questions;
 
-    nextQuestion();
+    inputs = [""];
   });
 </script>
 
@@ -75,7 +72,7 @@
           speech.speak(questions.map((question) => question?.pronunciation));
           break;
         case "Enter":
-          nextQuestion();
+          nextQuestions();
           break;
       }
     } else {
@@ -137,39 +134,41 @@
 
     {#snippet question(index: number)}
       {@const question = questions[index]}
-      {@const input = inputs[index]}
-      {@const isCorrect = isCorrects[index]}
 
-      <button
-        class={[
-          "relative flex w-16 flex-col items-center-safe rounded ring",
-          isCorrect ? "ring-green-400" : !!input && "ring-red-400",
-          allCorrect || index + 1 === inputs.length ? "opacity-100" : "opacity-50",
-          question?.pronunciation &&
-            speech.voice &&
-            (speech.isSpeaking ? "cursor-wait" : "cursor-pointer"),
-        ]}
-        onclick={() => speech.speak(question?.pronunciation)}
-      >
-        <!-- letter -->
-        <div class="grid h-12 place-items-center-safe">
-          <span class="text-xl">{question?.letter}</span>
-        </div>
-        <!-- romanization -->
-        <div class="h-6">
-          {#if question?.romanization && settings.showRomanizations.value}
-            ({question.romanization})
+      {#if question}
+        {@const { letter, pronunciation, romanization } = question}
+        {@const input = inputs[index]}
+        {@const isCorrect = isCorrects[index]}
+
+        <button
+          class={[
+            "relative flex w-16 flex-col items-center-safe rounded ring",
+            isCorrect ? "ring-green-400" : !!input && "ring-red-400",
+            allCorrect || index + 1 === inputs.length ? "opacity-100" : "opacity-50",
+            pronunciation && speech.voice && (speech.isSpeaking ? "cursor-wait" : "cursor-pointer"),
+          ]}
+          onclick={() => speech.speak(pronunciation)}
+        >
+          <!-- letter -->
+          <div class="grid h-12 place-items-center-safe">
+            <span class="text-xl">{letter}</span>
+          </div>
+          <!-- romanization -->
+          <div class="h-6">
+            {#if romanization && settings.showRomanizations.value}
+              ({romanization})
+            {/if}
+          </div>
+          <!-- input -->
+          <div class="h-6 w-full border-t border-primary-lighter">{input}</div>
+
+          <!-- pronunciation indicator -->
+          {#if pronunciation && speech.voice}
+            <span class="absolute top-0.5 right-0.5 icon-[heroicons--speaker-wave-solid] text-xs"
+            ></span>
           {/if}
-        </div>
-        <!-- input -->
-        <div class="h-6 w-full border-t border-primary-lighter">{input}</div>
-
-        <!-- pronunciation indicator -->
-        {#if question?.pronunciation && speech.voice}
-          <span class="absolute top-0.5 right-0.5 icon-[heroicons--speaker-wave-solid] text-xs"
-          ></span>
-        {/if}
-      </button>
+        </button>
+      {/if}
     {/snippet}
 
     {#each questions, index}
