@@ -30,7 +30,7 @@
         window.location.replace(window.location.pathname);
       }}
     >
-      Touch Typing Practice
+      Languages Learner
     </button>
   </h1>
 

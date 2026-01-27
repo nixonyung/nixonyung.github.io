@@ -5,15 +5,11 @@ import WithProse from "@/components/WithProse.astro";
 import { slugsOrdered } from "@/content.config";
 import { getLocalizedMessage, locales } from "@/i18n";
 import Layout from "@/layouts/Layout.astro";
-import dayjs from "dayjs";
-import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
 
 export const getStaticPaths = async () =>
   locales.map((locale) => ({
     params: { locale },
   }));
-
-dayjs.extend(isSameOrAfter);
 ---
 
 <Layout>
@@ -56,8 +52,8 @@ dayjs.extend(isSameOrAfter);
           lastmod: new Date(2025, 4, 17),
         },
         {
-          title: getLocalizedMessage("indexTouchTypingPractice", Astro.currentLocale),
-          href: "/touch-typing-practice",
+          title: getLocalizedMessage("indexLanguagesLearner", Astro.currentLocale),
+          href: "/languages-learner",
         },
       ]}
     />

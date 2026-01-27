@@ -72,9 +72,9 @@ export const messages = {
     zh: "LoL ARAM 精華片段",
     en: "LoL ARAM Highlights",
   },
-  indexTouchTypingPractice: {
-    zh: "Touch Typing Practice",
-    en: "Touch Typing Practice",
+  indexLanguagesLearner: {
+    zh: "Languages Learner",
+    en: "Languages Learner",
   },
   lastmod: {
     zh: "最後更新於",
