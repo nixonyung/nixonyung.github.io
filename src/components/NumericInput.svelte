@@ -24,8 +24,8 @@
   const disabled = $derived(disabledProp || min > max);
   const canDecrement = $derived(!disabled && value - step >= min);
   const canIncrement = $derived(!disabled && value + step <= max);
-  function clampValue() {
-    value = clamp(round(value, numDecimalPlaces), min, max);
+  function setValue(newValue: number) {
+    value = clamp(round(newValue, numDecimalPlaces), min, max);
   }
   $effect.pre(() => {
     if (!disabled) {
@@ -35,16 +35,13 @@
   });
 
   let isMousedown = $state(false);
-  let startScreenX = $state(0);
-  let prevValue = $state(value);
+  let valueBeforeDrag = $state(value);
+  let initScreenX = $state(0);
 </script>
 
 <svelte:window
   onmousemove={({ screenX }) => {
-    if (isMousedown) {
-      value = prevValue + Math.floor((screenX - startScreenX) / 16) * step;
-      clampValue();
-    }
+    if (isMousedown) setValue(valueBeforeDrag + Math.floor((screenX - initScreenX) / 16) * step);
   }}
   onmouseup={() => (isMousedown = false)}
 />
@@ -54,8 +51,8 @@
     class="flex cursor-ew-resize items-center-safe gap-1"
     onmousedown={({ screenX }) => {
       isMousedown = true;
-      startScreenX = screenX;
-      prevValue = value;
+      valueBeforeDrag = value;
+      initScreenX = screenX;
     }}
   >
     <span>{label}:</span>
@@ -67,10 +64,7 @@
     <button
       title="Decrement."
       class="not-disabled:cursor-pointer disabled:opacity-50"
-      onclick={() => {
-        value -= step;
-        clampValue();
-      }}
+      onclick={() => setValue(value - step)}
       disabled={!canDecrement}
     >
       <span class="icon-[heroicons--minus-circle] align-middle text-2xl"></span>
@@ -80,10 +74,7 @@
     <button
       title="Increment."
       class="not-disabled:cursor-pointer disabled:opacity-50"
-      onclick={() => {
-        value += step;
-        clampValue();
-      }}
+      onclick={() => setValue(value + step)}
       disabled={!canIncrement}
     >
       <span class="icon-[heroicons--plus-circle] align-middle text-2xl"></span>
