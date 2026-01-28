@@ -4,6 +4,7 @@
 
 <script lang="ts" generics="TWord extends object">
   import CheckboxInput from "@/components/CheckboxInput.svelte";
+  import FlashcardsList from "@/components/FlashcardsList.svelte";
   import Highlighted from "@/components/Highlighted.svelte";
   import KBD from "@/components/KBD.svelte";
   import NumericInput from "@/components/NumericInput.svelte";
@@ -150,16 +151,29 @@
   });
 
   $effect.pre(() => {
-    if (
-      (settings.onlyPinned.value && untrack(() => questionsQueue.numPinned)) ||
-      (settings.onlyUnpinned.value && untrack(() => questionsQueue.numUnpinned))
-    )
+    if (!settings.onlyPinned.value && !settings.onlyUnpinned.value) {
+      untrack(() => genOptions());
+    }
+    // assuming only either of onlyPinned and onlyUnpinned can be on
+    else if (!!questionsQueue.numPinned || !!questionsQueue.numUnpinned) {
       untrack(() => nextQuestion());
+    }
   });
   $effect.pre(() => {
     settings.numOptions.value;
 
     untrack(() => genOptions());
+  });
+
+  const questionsQueueItems = $derived.by(() => {
+    question;
+    settings.onlyPinned.value;
+    settings.onlyUnpinned.value;
+
+    return questionsQueue.items({
+      onlyPinned: settings.onlyPinned.value,
+      onlyUnpinned: settings.onlyUnpinned.value,
+    });
   });
 </script>
 
@@ -276,34 +290,45 @@
             {/if}
           </button>
 
-          {#if questionsQueue.numPinned}
-            <div
-              class="invisible absolute top-0 right-0 z-10 flex translate-x-full translate-y-2 flex-col divide-y rounded bg-primary whitespace-nowrap ring group-hover/list:visible"
-            >
-              {#each questionsQueue.items( { onlyPinned: true }, ) as { questionEntries, answerEntries, romanization, idx } (idx)}
-                <button
-                  class="group/item flex cursor-pointer items-center-safe gap-1.5 px-2 py-1.5"
-                  onclick={() => {
-                    questionsQueue.unpin(idx);
-                  }}
-                >
-                  <div class="flex flex-col items-start">
-                    <div class="flex gap-4.5">
-                      {@render entries(questionEntries)}
-                      {@render entries(answerEntries)}
-                    </div>
-                    {#if romanization}
-                      <span>{romanization}</span>
-                    {/if}
+          <!-- TODO: queueIdx should respect onlyPinned/onlyUnpinned -->
+          <!--
+            add/remove flashcards -> new Queue
+            end of queue -> resetQueue
+            pin/unpin (commit with nextQuestion) -> cleanQueue
+          -->
+
+          <!-- then add this back -->
+          <!-- focusedIdx={question!.queueIdx} -->
+          <FlashcardsList
+            length={questionsQueueItems.length}
+            class="invisible absolute top-0 right-0 z-10 translate-x-full translate-y-2 rounded bg-primary whitespace-nowrap ring group-hover/list:visible"
+          >
+            {#snippet row(i)}
+              {@const { questionEntries, answerEntries, romanization, idx } =
+                questionsQueueItems[i]}
+
+              <button
+                class="group/item flex w-full cursor-pointer items-center-safe gap-1.5 px-2 py-1.5"
+                onclick={() => {
+                  questionsQueue.unpin(idx);
+                }}
+              >
+                <div class="flex flex-col items-start">
+                  <div class="flex gap-4.5">
+                    {@render entries(questionEntries)}
+                    {@render entries(answerEntries)}
                   </div>
-                  <div class="grow"></div>
-                  <span
-                    class="invisible icon-[icon-park-outline--close-small] opacity-75 group-hover/item:visible"
-                  ></span>
-                </button>
-              {/each}
-            </div>
-          {/if}
+                  {#if romanization}
+                    <span>{romanization}</span>
+                  {/if}
+                </div>
+                <div class="grow"></div>
+                <span
+                  class="invisible icon-[icon-park-outline--close-small] opacity-75 group-hover/item:visible"
+                ></span>
+              </button>
+            {/snippet}
+          </FlashcardsList>
         </div>
       {/if}
     </div>
