@@ -1,5 +1,6 @@
 ---
 import HtmlHead from "@/components/HtmlHead.astro";
+import Scripts from "@/components/Scripts.astro";
 import WithIcon from "@/components/WithIcon.astro";
 import { getLocalizedMessage } from "@/i18n";
 import "@/styles.css";
@@ -84,5 +85,7 @@ const currSlug = Astro.url.pathname.split("/").slice(2).join("/");
         © 2023-{new Date().getFullYear()} Nixon Yung. All Rights Reserved.
       </div>
     </footer>
+
+    <Scripts />
   </body>
 </html>

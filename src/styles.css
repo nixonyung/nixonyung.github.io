@@ -3,16 +3,31 @@
 @plugin "@tailwindcss/typography";
 @plugin "@iconify/tailwind4";
 
+/*
+TODOs:
+  - refactor "white-content" vs "primary-content"
+  - refactor "primary-lighter" vs "primary/xx"
+  - rename "secondary-content" to "highlight"
+*/
+
+/* [OKLCH Color Picker & Converter](https://oklch.com/) */
+:root {
+  --_color-primary: oklch(90% 0.025 265);
+  --_color-primary-lighter: oklch(85% 0.05 265);
+  --_color-primary-content: oklch(40% 0.175 265);
+  --_color-secondary-content: oklch(87% 0.4 160);
+  --_color-white-content: oklch(15% 0.15 265);
+}
+[data-theme="dark"] {
+  --_color-primary: oklch(15% 0.0125 265);
+  --_color-primary-lighter: oklch(35% 0.05 265);
+  --_color-primary-content: oklch(80% 0.175 265);
+  --_color-secondary-content: oklch(80% 0.4 160);
+  --_color-white-content: oklch(93% 0 265);
+}
+
+/* (ref.) [Default theme variable reference](https://tailwindcss.com/docs/theme#default-theme-variable-reference) */
 @theme {
-  /* (ref.) [Default theme variable reference](https://tailwindcss.com/docs/theme#default-theme-variable-reference) */
-
-  /* [OKLCH Color Picker & Converter](https://oklch.com/) */
-  --color-white-content: oklch(93% 0 0);
-  --color-primary: oklch(15% 0.0125 265);
-  --color-primary-lighter: oklch(35% 0.05 265);
-  --color-primary-content: oklch(80% 0.175 265);
-  --color-secondary-content: oklch(80% 0.4 160);
-
   --font-heading: "Recursive", "LXGW WenKai TC", sans-serif;
   --font-heading--font-variation-settings: "CASL" 1;
   --font-content: "Recursive", "Noto Sans HK", sans-serif;
@@ -20,6 +35,13 @@
   --font-mono--font-variation-settings: "MONO" 0.7;
 
   --container-content: 56rem; /* 4xl */
+}
+@theme inline {
+  --color-primary: var(--_color-primary);
+  --color-primary-lighter: var(--_color-primary-lighter);
+  --color-primary-content: var(--_color-primary-content);
+  --color-secondary-content: var(--_color-secondary-content);
+  --color-white-content: var(--_color-white-content);
 }
 
 /* (ref.) [appearance-none utility does not hide input number arrows](https://github.com/tailwindlabs/tailwindcss/discussions/2173) */
