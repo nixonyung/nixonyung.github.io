@@ -18,17 +18,17 @@
     row: Snippet<[number]>;
   } = $props();
 
-  const numRows = $derived(Math.min(maxNumRows, length));
+  const numRows = $derived(Math.min(length, maxNumRows));
 
   let idx = $state(0);
   function setIdx(newIdx: number) {
     idx = clamp(newIdx, 0, length - numRows);
   }
   $effect.pre(() => {
-    if (focusedIdx !== undefined) setIdx(focusedIdx);
+    if (focusedIdx !== undefined) setIdx(focusedIdx - 1);
   });
 
-  const scrollTop = $derived(Math.min(length - numRows, idx));
+  const scrollTop = $derived(clamp(idx, 0, length - numRows));
 </script>
 
 <div
@@ -45,10 +45,12 @@
   <div class="relative">
     {#if focusedIdx !== undefined}
       <button
-        class="absolute top-0 w-full -translate-y-full cursor-pointer text-end"
-        onclick={() => (idx = focusedIdx)}
+        class="group/list-top absolute top-0 flex w-full -translate-y-full cursor-pointer items-center-safe rounded px-3 py-1.5 text-end hover:bg-primary-lighter/50"
+        onclick={() => setIdx(focusedIdx - 1)}
       >
-        {focusedIdx + 1} / {length}
+        <span class="text-sm opacity-50 group-hover/list-top:opacity-100">(return)</span>
+        <div class="grow"></div>
+        <span>{focusedIdx + 1} / {length}</span>
       </button>
     {/if}
 

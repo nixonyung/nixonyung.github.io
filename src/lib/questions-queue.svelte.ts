@@ -2,29 +2,46 @@ import { randomInt, range, shuffle, sortBy } from "es-toolkit";
 import { SvelteSet } from "svelte/reactivity";
 
 // used in QuestionsQueue, only need to support numbers
-class Queue {
-  items: number[];
-  idx: number;
+class IdxsQueue {
+  idxs: number[];
+  i: number;
 
-  constructor(items: number[] = []) {
-    this.items = items;
-    this.idx = 0;
+  constructor(idxs: number[]) {
+    this.idxs = idxs;
+    this.i = 0;
   }
 
   get isEmpty() {
-    return this.idx >= this.items.length;
+    return this.i >= this.idxs.length;
+  }
+
+  push(item: number) {
+    this.idxs.push(item);
   }
 
   get top(): number {
-    return this.items[this.idx];
+    return this.idxs[this.i];
   }
 
-  pop(): [number, number] | undefined {
-    if (this.idx >= this.items.length) return undefined;
+  pop() {
+    if (this.i >= this.idxs.length) return undefined;
 
-    const result = this.top;
-    this.idx++;
-    return [result, this.idx - 1];
+    const result = [this.top, this.i] as [number, number];
+    this.i++;
+    return result;
+  }
+
+  filter(predicate: (idx: number) => boolean) {
+    const newIdxs = [];
+    let newI = 0;
+    for (const [i, idx] of this.idxs.entries()) {
+      if (!predicate(idx)) continue;
+
+      newIdxs.push(idx);
+      if (i < this.i && newIdxs.length) newI++;
+    }
+    this.idxs = newIdxs;
+    this.i = newI;
   }
 }
 
@@ -34,20 +51,20 @@ type WithIndex<Item extends object> = Item & {
 type WithQueueIndex<Item extends object> = WithIndex<Item> & {
   queueIdx: number;
 };
-interface Settings {
-  onlyPinned?: boolean;
-  onlyUnpinned?: boolean;
+interface PinningSettings {
+  onlyPinned: boolean;
+  onlyUnpinned: boolean;
 }
 
 export class QuestionsQueue<Item extends object> {
   #items: Item[];
   #pinnedIdxs: SvelteSet<number>;
-  #queue: Queue;
+  #queue: IdxsQueue;
 
   constructor(items: Item[]) {
     this.#items = items;
     this.#pinnedIdxs = new SvelteSet();
-    this.#queue = new Queue(shuffle(range(items.length)));
+    this.#queue = new IdxsQueue(shuffle(range(items.length)));
   }
 
   get numPinned() {
@@ -60,19 +77,11 @@ export class QuestionsQueue<Item extends object> {
   #itemIdxToItem(itemIdx: number): WithIndex<Item> {
     return { ...this.#items[itemIdx], idx: itemIdx };
   }
-  items({ onlyPinned = false, onlyUnpinned = false }: Settings = {}): WithQueueIndex<Item>[] {
-    return this.#queue.items
-      .filter((itemIdx) =>
-        onlyPinned && this.numPinned
-          ? this.#pinnedIdxs.has(itemIdx)
-          : onlyUnpinned && this.numUnpinned
-            ? !this.#pinnedIdxs.has(itemIdx)
-            : true,
-      )
-      .map((itemIdx, queueIdx) => ({
-        ...this.#itemIdxToItem(itemIdx),
-        queueIdx,
-      }));
+  items(): WithQueueIndex<Item>[] {
+    return this.#queue.idxs.map((itemIdx, queueIdx) => ({
+      ...this.#itemIdxToItem(itemIdx),
+      queueIdx,
+    }));
   }
 
   isPinned(idx: number) {
@@ -88,78 +97,78 @@ export class QuestionsQueue<Item extends object> {
     this.#pinnedIdxs = new SvelteSet();
   }
 
-  #resetQueue() {
-    this.#queue = new Queue(shuffle(range(this.#items.length)));
+  #itemIdxIsValid(itemIdx: number, { onlyPinned, onlyUnpinned }: PinningSettings) {
+    return (
+      !(onlyPinned && !this.#pinnedIdxs.has(itemIdx)) &&
+      !(onlyUnpinned && this.#pinnedIdxs.has(itemIdx))
+    );
   }
-  nextQuestion({ onlyPinned = false, onlyUnpinned = false }: Settings = {}):
-    | WithQueueIndex<Item>
-    | undefined {
+  newQueue(settings: PinningSettings) {
+    this.#queue = new IdxsQueue(
+      shuffle(
+        range(this.#items.length).filter((itemIdx) => this.#itemIdxIsValid(itemIdx, settings)),
+      ),
+    );
+  }
+  filter(settings: PinningSettings) {
+    this.#queue.filter((itemIdx) => this.#itemIdxIsValid(itemIdx, settings));
+  }
+  #reset() {
+    this.#queue = new IdxsQueue(shuffle(this.#queue.idxs));
+  }
+
+  nextQuestion(): WithQueueIndex<Item> | undefined {
     if (!this.#items.length) return undefined;
 
-    // settings are valid only if a pinned/unpinned element exists
-    onlyPinned &&= !!this.numPinned;
-    onlyUnpinned &&= !!this.numUnpinned;
-
-    if (onlyPinned || onlyUnpinned) {
-      while (true) {
-        const top = this.#queue.pop();
-        if (top === undefined) {
-          // should run at most once
-          this.#resetQueue();
-          continue;
-        }
-
-        const [itemIdx, queueIdx] = top;
-        if (
-          (onlyPinned && this.#pinnedIdxs.has(itemIdx)) ||
-          (onlyUnpinned && !this.#pinnedIdxs.has(itemIdx))
-        )
-          return { ...this.#itemIdxToItem(itemIdx), queueIdx };
-      }
-    } else {
-      if (this.#queue.isEmpty) this.#resetQueue();
-      const [itemIdx, queueIdx] = this.#queue.pop()!;
-      return { ...this.#itemIdxToItem(itemIdx), queueIdx };
+    let top = this.#queue.pop();
+    if (top === undefined) {
+      this.#reset();
+      top = this.#queue.pop()!;
     }
+    const [itemIdx, queueIdx] = top;
+    return { ...this.#itemIdxToItem(itemIdx), queueIdx };
   }
 
-  genOptions(
-    question: WithIndex<Item> | undefined,
-    numOptions: number,
-    { onlyPinned = false, onlyUnpinned = false }: Settings = {},
-    filterFn?: (question: WithIndex<Item>, option: WithIndex<Item>) => boolean,
-    keyFn?: (option: WithIndex<Item>) => string,
-  ) {
+  genOptions({
+    question,
+    numOptions,
+    filterFn,
+    keyFn,
+  }: {
+    question: WithIndex<Item> | undefined;
+    numOptions: number;
+    filterFn?: (question: WithIndex<Item>, option: WithIndex<Item>) => boolean;
+    keyFn?: (option: WithIndex<Item>) => string;
+  }) {
     if (question === undefined || numOptions === 0) return [];
 
     // problem: sample N elements (without replacement) with filtering
     //
-    // constraint: need to efficiently find a new unique element if the current one is filtered out
+    // constraint: need to efficiently find a new UNIQUE element if the current one is filtered out
     //
     // inferior solutions:
     //   - repeatedly call es-toolkit's `sampleSize` and filter until having enough elements
     //     - will incorrectly return elements WITH replacement
     //   - shuffle the whole array and pick until having N elements
-    //     - costly in time when the array is large
+    //     - shuffling the whole array has an unneccessary time cost when the array is large
+
     const options: WithIndex<Item>[] = [];
     const keys = new Set([keyFn?.(question) ?? ""]);
 
-    // Fisher-Yates shuffle, from left-to-right, running on indices to avoid copying
+    // Fisher-Yates shuffle, from left-to-right
     // (ref.) https://github.com/toss/es-toolkit/blob/3d75a713169c2db6fffe04121bc73ac0363d741e/src/array/shuffle.ts
-    const indices = range(this.#items.length);
+    const idxs = [...this.#queue.idxs];
     let i = 0;
-    while (options.length < numOptions - 1 && i < indices.length) {
-      const j = randomInt(i, indices.length);
-      [indices[i], indices[j]] = [indices[j], indices[i]];
-      const idx = indices[i];
+    while (options.length < numOptions - 1 && i < idxs.length) {
+      const j = randomInt(i, idxs.length);
+      [idxs[i], idxs[j]] = [idxs[j], idxs[i]];
+      const idx = idxs[i];
       i++;
 
       if (idx === question.idx) continue;
       const option = this.#itemIdxToItem(idx);
 
       if (filterFn && !filterFn(question, option)) continue;
-      if (onlyPinned && this.numPinned && !this.isPinned(idx)) continue;
-      if (onlyUnpinned && this.numUnpinned && this.isPinned(idx)) continue;
 
       if (keyFn) {
         const key = keyFn(option);

@@ -111,24 +111,38 @@
     return entries.flat().join("|");
   }
   function genOptions() {
-    options = questionsQueue.genOptions(
+    options = questionsQueue.genOptions({
       question,
-      settings.numOptions.value,
-      {
-        onlyPinned: settings.onlyPinned.value,
-        onlyUnpinned: settings.onlyUnpinned.value,
-      },
+      numOptions: settings.numOptions.value,
       // filter out answers from other same-looking questions
-      (question, option) => !isEqual(option.questionEntries, question.questionEntries),
+      filterFn: (question, option) => !isEqual(option.questionEntries, question.questionEntries),
       // filter out same-looking options
-      (option) => entriesToStr(option.answerEntries),
-    );
+      keyFn: (option) => entriesToStr(option.answerEntries),
+    });
+  }
+  $effect.pre(() => {
+    settings.numOptions.value;
+
+    untrack(() => genOptions());
+  });
+
+  let isPinningModified = $state(false);
+  function togglePin(idx: number, val?: boolean) {
+    if (val === true) {
+      questionsQueue.pin(idx);
+    } else if (val === false) {
+      questionsQueue.unpin(idx);
+    } else if (questionsQueue.isPinned(idx)) {
+      questionsQueue.unpin(idx);
+    } else {
+      questionsQueue.pin(idx);
+    }
+
+    isPinningModified = true;
   }
   function nextQuestion() {
-    question = questionsQueue.nextQuestion({
-      onlyPinned: settings.onlyPinned.value,
-      onlyUnpinned: settings.onlyUnpinned.value,
-    });
+    if (isPinningModified) questionsQueue.filter({ onlyPinned, onlyUnpinned });
+    question = questionsQueue.nextQuestion();
     genOptions();
   }
   $effect.pre(() => {
@@ -140,40 +154,60 @@
   let questionRef: Highlighted | undefined = $state();
   let showRomanization = $state(false);
   let isWrongOptions: boolean[] = $state([]);
+  // settings are valid only if BOTH pinned/unpinned element exists
+  const onlyPinned = $derived(
+    settings.onlyPinned.value && !!questionsQueue.numPinned && !!questionsQueue.numUnpinned,
+  );
+  const onlyUnpinned = $derived(
+    settings.onlyUnpinned.value && !!questionsQueue.numPinned && !!questionsQueue.numUnpinned,
+  );
   $effect.pre(() => {
     question;
 
-    showRomanization = false;
-    isWrongOptions = Array(options.length).fill(false);
-    if (untrack(() => settings.autoReadQuestion.value)) {
-      tick().then(() => questionRef?.click());
-    }
-  });
-
-  $effect.pre(() => {
-    if (!settings.onlyPinned.value && !settings.onlyUnpinned.value) {
-      untrack(() => genOptions());
-    }
-    // assuming only either of onlyPinned and onlyUnpinned can be on
-    else if (!!questionsQueue.numPinned || !!questionsQueue.numUnpinned) {
-      untrack(() => nextQuestion());
-    }
+    untrack(() => {
+      showRomanization = false;
+      isWrongOptions = Array(options.length).fill(false);
+      isPinningModified = false;
+      if (settings.autoReadQuestion.value) {
+        tick().then(() => questionRef?.click());
+      }
+    });
   });
   $effect.pre(() => {
     settings.numOptions.value;
 
-    untrack(() => genOptions());
+    untrack(() => {
+      isWrongOptions = Array(options.length).fill(false);
+    });
+  });
+
+  let prevPinningSettings = $state({ onlyPinned, onlyUnpinned });
+  $effect.pre(() => {
+    settings.onlyPinned.value;
+    settings.onlyUnpinned.value;
+
+    untrack(() => {
+      if (
+        prevPinningSettings.onlyPinned === onlyPinned &&
+        prevPinningSettings.onlyUnpinned === onlyUnpinned
+      )
+        return;
+
+      if (!prevPinningSettings.onlyPinned && !prevPinningSettings.onlyUnpinned) {
+        questionsQueue.filter({ onlyPinned, onlyUnpinned });
+      } else {
+        questionsQueue.newQueue({ onlyPinned, onlyUnpinned });
+      }
+      nextQuestion();
+
+      prevPinningSettings = { onlyPinned, onlyUnpinned };
+    });
   });
 
   const questionsQueueItems = $derived.by(() => {
     question;
-    settings.onlyPinned.value;
-    settings.onlyUnpinned.value;
 
-    return questionsQueue.items({
-      onlyPinned: settings.onlyPinned.value,
-      onlyUnpinned: settings.onlyUnpinned.value,
-    });
+    return questionsQueue.items();
   });
 </script>
 
@@ -271,17 +305,11 @@
           <span class="ml-3">{question.romanization}</span>
         {/if}
 
-        <div class="group/list relative ml-6 cursor-default p-3">
+        <div class="group/list relative ml-6 p-3">
           <button
             title="Pin this question."
             class="grid size-10 cursor-pointer place-items-center-safe rounded-full text-primary-content hover:bg-primary-lighter"
-            onclick={() => {
-              if (questionsQueue.isPinned(question!.idx)) {
-                questionsQueue.unpin(question!.idx);
-              } else {
-                questionsQueue.pin(question!.idx);
-              }
-            }}
+            onclick={() => togglePin(question!.idx)}
           >
             {#if questionsQueue.isPinned(question!.idx)}
               <span class="icon-[icon-park-solid--pin]"></span>
@@ -290,41 +318,37 @@
             {/if}
           </button>
 
-          <!-- TODO: queueIdx should respect onlyPinned/onlyUnpinned -->
-          <!--
-            add/remove flashcards -> new Queue
-            end of queue -> resetQueue
-            pin/unpin (commit with nextQuestion) -> cleanQueue
-          -->
-
-          <!-- then add this back -->
-          <!-- focusedIdx={question!.queueIdx} -->
           <FlashcardsList
             length={questionsQueueItems.length}
-            class="invisible absolute top-0 right-0 z-10 translate-x-full translate-y-2 rounded bg-primary whitespace-nowrap ring group-hover/list:visible"
+            focusedIdx={question!.queueIdx}
+            class="invisible absolute top-0 right-0 z-10 translate-x-full translate-y-2 rounded bg-primary whitespace-nowrap opacity-0 ring transition-all duration-300 ease-out group-hover/list:visible group-hover/list:opacity-100"
           >
             {#snippet row(i)}
-              {@const { questionEntries, answerEntries, romanization, idx } =
-                questionsQueueItems[i]}
+              {@const { questionEntries, romanization, idx } = questionsQueueItems[i]}
 
               <button
                 class="group/item flex w-full cursor-pointer items-center-safe gap-1.5 px-2 py-1.5"
-                onclick={() => {
-                  questionsQueue.unpin(idx);
-                }}
+                onclick={() => togglePin(idx)}
               >
-                <div class="flex flex-col items-start">
-                  <div class="flex gap-4.5">
-                    {@render entries(questionEntries)}
-                    {@render entries(answerEntries)}
-                  </div>
+                <span>{i + 1}.</span>
+
+                <div class="ml-1.5 flex flex-col items-start">
+                  {@render entries(questionEntries)}
+
                   {#if romanization}
                     <span>{romanization}</span>
                   {/if}
                 </div>
-                <div class="grow"></div>
+
+                <div class="min-w-6 grow"></div>
+
                 <span
-                  class="invisible icon-[icon-park-outline--close-small] opacity-75 group-hover/item:visible"
+                  class={[
+                    "mr-1.5",
+                    questionsQueue.isPinned(idx)
+                      ? "icon-[icon-park-solid--pin]"
+                      : "icon-[icon-park-outline--pin] opacity-25 group-hover/item:opacity-75",
+                  ]}
                 ></span>
               </button>
             {/snippet}
@@ -348,9 +372,7 @@
               nextQuestion();
             } else {
               isWrongOptions[i] = true;
-              if (settings.pinWhenWrong.value) {
-                questionsQueue.pin(question.idx);
-              }
+              if (settings.pinWhenWrong.value) togglePin(question.idx, true);
             }
           }}
           disabled={isWrongOptions[i]}
