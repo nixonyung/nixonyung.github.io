@@ -22,7 +22,7 @@
       "flex items-center-safe gap-1",
       classList,
       !disabled
-        ? "cursor-pointer hover:brightness-150 hover:grayscale-50"
+        ? "cursor-pointer underline-offset-4 not-dark:hover:underline dark:hover:brightness-150 dark:hover:grayscale-50"
         : "line-through opacity-50",
     ]}
     onclick={() => (checked = !checked)}

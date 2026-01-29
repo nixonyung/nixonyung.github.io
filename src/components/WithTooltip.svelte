@@ -28,7 +28,7 @@
 
   {#if !disabled && (customTooltip || tooltip)}
     <div
-      class="invisible absolute -bottom-1.5 left-0 z-10 translate-y-full rounded bg-primary px-1.5 py-0.5 whitespace-nowrap ring brightness-150 group-hover/tooltip:visible"
+      class="invisible absolute -bottom-1.5 left-0 z-10 translate-y-full rounded bg-primary px-1.5 py-0.5 whitespace-nowrap ring brightness-120 group-hover/tooltip:visible dark:brightness-150"
     >
       {#if customTooltip}
         {@render customTooltip()}

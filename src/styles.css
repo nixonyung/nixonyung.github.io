@@ -3,29 +3,6 @@
 @plugin "@tailwindcss/typography";
 @plugin "@iconify/tailwind4";
 
-/*
-TODOs:
-  - refactor "white-content" vs "primary-content"
-  - refactor "primary-lighter" vs "primary/xx"
-  - rename "secondary-content" to "highlight"
-*/
-
-/* [OKLCH Color Picker & Converter](https://oklch.com/) */
-:root {
-  --_color-primary: oklch(90% 0.025 265);
-  --_color-primary-lighter: oklch(85% 0.05 265);
-  --_color-primary-content: oklch(40% 0.175 265);
-  --_color-secondary-content: oklch(87% 0.4 160);
-  --_color-white-content: oklch(15% 0.15 265);
-}
-[data-theme="dark"] {
-  --_color-primary: oklch(15% 0.0125 265);
-  --_color-primary-lighter: oklch(35% 0.05 265);
-  --_color-primary-content: oklch(80% 0.175 265);
-  --_color-secondary-content: oklch(80% 0.4 160);
-  --_color-white-content: oklch(93% 0 265);
-}
-
 /* (ref.) [Default theme variable reference](https://tailwindcss.com/docs/theme#default-theme-variable-reference) */
 @theme {
   --font-heading: "Recursive", "LXGW WenKai TC", sans-serif;
@@ -35,6 +12,30 @@ TODOs:
   --font-mono--font-variation-settings: "MONO" 0.7;
 
   --container-content: 56rem; /* 4xl */
+}
+
+/*
+TODOs:
+  - refactor "white-content" vs "primary-content" -> "content"?
+  - refactor "primary-lighter" vs "primary/xx" -> "highlighted"?
+  - rename "secondary-content" to "highlight"
+*/
+/* [OKLCH Color Picker & Converter](https://oklch.com/) */
+:root {
+  --_color-primary: oklch(95% 0.0175 265);
+  --_color-primary-lighter: oklch(85% 0.05 265);
+  --_color-primary-content: oklch(40% 0.175 265);
+  --_color-secondary-content: oklch(87% 0.4 160);
+  --_color-white-content: oklch(15% 0.15 265);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --_color-primary: oklch(15% 0.0125 265);
+    --_color-primary-lighter: oklch(35% 0.05 265);
+    --_color-primary-content: oklch(80% 0.175 265);
+    --_color-secondary-content: oklch(80% 0.4 160);
+    --_color-white-content: oklch(93% 0 265);
+  }
 }
 @theme inline {
   --color-primary: var(--_color-primary);
