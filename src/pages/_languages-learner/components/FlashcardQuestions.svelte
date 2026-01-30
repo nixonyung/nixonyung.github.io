@@ -171,7 +171,22 @@
     });
   }
   function nextQuestion() {
-    if (isPinningModified) questionsQueue.filter({ onlyPinned, onlyUnpinned });
+    if (isPinningModified) {
+      questionsQueue.filter({ onlyPinned, onlyUnpinned });
+    }
+
+    if (
+      prevPinningSettings.onlyPinned !== onlyPinned ||
+      prevPinningSettings.onlyUnpinned !== onlyUnpinned
+    ) {
+      if (!prevPinningSettings.onlyPinned && !prevPinningSettings.onlyUnpinned) {
+        questionsQueue.filter({ onlyPinned, onlyUnpinned });
+      } else {
+        questionsQueue.newQueue({ onlyPinned, onlyUnpinned });
+      }
+      prevPinningSettings = { onlyPinned, onlyUnpinned };
+    }
+
     question = questionsQueue.nextQuestion();
     genOptions();
   }
