@@ -8,10 +8,12 @@
   import Highlighted from "@/components/Highlighted.svelte";
   import KBD from "@/components/KBD.svelte";
   import NumericInput from "@/components/NumericInput.svelte";
+  import SearchBar from "@/components/SearchBar.svelte";
+  import SettingsRowsBordered from "@/components/SettingsRowsBordered.svelte";
   import { onkeydown } from "@/lib/keyboard";
   import { QuestionsQueue } from "@/lib/questions-queue.svelte.ts";
   import { speech } from "@/lib/speech.svelte";
-  import { isEqual, range } from "es-toolkit";
+  import { clamp, isEqual, range } from "es-toolkit";
   import { tick, untrack } from "svelte";
   import { initSettings, useSyncSettings } from "../../../lib/settings.svelte";
 
@@ -105,55 +107,6 @@
 
     return new QuestionsQueue(questions);
   });
-  let question: ReturnType<(typeof questionsQueue)["nextQuestion"]> = $state();
-  let options: ReturnType<(typeof questionsQueue)["genOptions"]> = $state([]);
-  function entriesToStr(entries: Entry[]) {
-    return entries.flat().join("|");
-  }
-  function genOptions() {
-    options = questionsQueue.genOptions({
-      question,
-      numOptions: settings.numOptions.value,
-      // filter out answers from other same-looking questions
-      filterFn: (question, option) => !isEqual(option.questionEntries, question.questionEntries),
-      // filter out same-looking options
-      keyFn: (option) => entriesToStr(option.answerEntries),
-    });
-  }
-  $effect.pre(() => {
-    settings.numOptions.value;
-
-    untrack(() => genOptions());
-  });
-
-  let isPinningModified = $state(false);
-  function togglePin(idx: number, val?: boolean) {
-    if (val === true) {
-      questionsQueue.pin(idx);
-    } else if (val === false) {
-      questionsQueue.unpin(idx);
-    } else if (questionsQueue.isPinned(idx)) {
-      questionsQueue.unpin(idx);
-    } else {
-      questionsQueue.pin(idx);
-    }
-
-    isPinningModified = true;
-  }
-  function nextQuestion() {
-    if (isPinningModified) questionsQueue.filter({ onlyPinned, onlyUnpinned });
-    question = questionsQueue.nextQuestion();
-    genOptions();
-  }
-  $effect.pre(() => {
-    questionsQueue;
-
-    untrack(() => nextQuestion());
-  });
-
-  let questionRef: Highlighted | undefined = $state();
-  let showRomanization = $state(false);
-  let isWrongOptions: boolean[] = $state([]);
   // settings are valid only if BOTH pinned/unpinned element exists
   const onlyPinned = $derived(
     settings.onlyPinned.value && !!questionsQueue.numPinned && !!questionsQueue.numUnpinned,
@@ -161,26 +114,6 @@
   const onlyUnpinned = $derived(
     settings.onlyUnpinned.value && !!questionsQueue.numPinned && !!questionsQueue.numUnpinned,
   );
-  $effect.pre(() => {
-    question;
-
-    untrack(() => {
-      showRomanization = false;
-      isWrongOptions = Array(options.length).fill(false);
-      isPinningModified = false;
-      if (settings.autoReadQuestion.value) {
-        tick().then(() => questionRef?.click());
-      }
-    });
-  });
-  $effect.pre(() => {
-    settings.numOptions.value;
-
-    untrack(() => {
-      isWrongOptions = Array(options.length).fill(false);
-    });
-  });
-
   let prevPinningSettings = $state({ onlyPinned, onlyUnpinned });
   $effect.pre(() => {
     settings.onlyPinned.value;
@@ -204,17 +137,242 @@
     });
   });
 
+  let isPinningModified = $state(false);
+  function togglePin(idx: number, val?: boolean) {
+    if (val === true) {
+      questionsQueue.pin(idx);
+    } else if (val === false) {
+      questionsQueue.unpin(idx);
+    } else if (questionsQueue.isPinned(idx)) {
+      questionsQueue.unpin(idx);
+    } else {
+      questionsQueue.pin(idx);
+    }
+
+    isPinningModified = true;
+  }
+
+  let question: ReturnType<(typeof questionsQueue)["nextQuestion"]> = $state();
+  let options: ReturnType<(typeof questionsQueue)["genOptions"]> = $state([]);
+  function entriesToStr(entries: Entry[]) {
+    return entries
+      .flat()
+      .map((entry) => entry.toLowerCase())
+      .join("|");
+  }
+  function genOptions() {
+    options = questionsQueue.genOptions({
+      question,
+      numOptions: settings.numOptions.value,
+      // filter out answers from other same-looking questions
+      filterFn: (question, option) => !isEqual(option.questionEntries, question.questionEntries),
+      // filter out same-looking options
+      keyFn: (option) => entriesToStr(option.answerEntries),
+    });
+  }
+  function nextQuestion() {
+    if (isPinningModified) questionsQueue.filter({ onlyPinned, onlyUnpinned });
+    question = questionsQueue.nextQuestion();
+    genOptions();
+  }
   const questionsQueueItems = $derived.by(() => {
     question;
 
     return questionsQueue.items();
   });
+  $effect.pre(() => {
+    questionsQueue;
+
+    untrack(() => nextQuestion());
+  });
+  $effect.pre(() => {
+    settings.numOptions.value;
+
+    untrack(() => genOptions());
+  });
+
+  let questionRef: Highlighted | undefined = $state();
+  let optionRefs: Highlighted[] = $state([]);
+  let pinButtonRef: Highlighted | undefined = $state();
+  let showRomanization = $state(false);
+  let areWrongOption: boolean[] = $state([]);
+
+  // the option idx selected by arrow motions
+  let optionSelectedIdx: number | undefined = $state();
+  function moveOptionSelectedIdx(motion: "up" | "down") {
+    const offset = motion === "down" ? 1 : -1;
+
+    optionSelectedIdx =
+      optionSelectedIdx !== undefined
+        ? clamp(optionSelectedIdx + offset, 0, settings.numOptions.value - 1)
+        : 0;
+    optionRefs[optionSelectedIdx!]?.scrollIntoView();
+  }
+
+  let isSearchMode = $state(false);
+  let searchInput = $state("");
+  const areOptionMatchingCommand = $derived.by(() => {
+    question;
+    searchInput;
+
+    return untrack(() => {
+      const result = Array.from({ length: options.length }, () => false);
+      if (!searchInput.trim()) return result;
+
+      for (const [optionIdx, option] of options.entries()) {
+        if (areWrongOption[optionIdx]) continue;
+
+        const optionVal = entriesToStr(option.answerEntries); // entriesToStr should return in all lowercase
+
+        // check if optionVal includes all characters from command while preserving ordering
+        // e.g.
+        //   optionVal=1234,   command=124  => return true
+        //            (12 4)
+        //   optionVal=1234,   command=421  => return false
+        //            (   421)
+        //   optionVal=123421, command=421  => return true
+        //            (   421)
+
+        let optionValIdx = 0;
+        let ok = true;
+        let isFullMatchingPrefix = true;
+        for (let i = 0; i < searchInput.length; i++) {
+          const ch = searchInput[i].toLowerCase();
+
+          isFullMatchingPrefix &&= optionVal[i] === ch;
+
+          // ignore whitespaces in searchInput
+          if (ch === " ") continue;
+          while (
+            optionValIdx < optionVal.length &&
+            optionVal[optionValIdx].toLowerCase() !== ch.toLowerCase()
+          )
+            optionValIdx++;
+
+          if (optionValIdx >= optionVal.length) {
+            ok = false;
+            break;
+          }
+          optionValIdx++;
+        }
+        // if there is a full match, only select the element
+        if (isFullMatchingPrefix && optionValIdx === optionVal.length)
+          return Array.from({ length: options.length }, (_, i) => i === optionIdx);
+        result[optionIdx] = ok;
+      }
+
+      return result;
+    });
+  });
+  const onlyMatchingOptionIdx = $derived.by(() => {
+    let onlyIdx: number | undefined = undefined;
+
+    for (const [i, is] of areOptionMatchingCommand.entries()) {
+      if (!is) continue;
+      if (onlyIdx !== undefined) return undefined;
+      onlyIdx = i;
+    }
+
+    return onlyIdx;
+  });
+
+  $effect.pre(() => {
+    question;
+
+    untrack(() => {
+      isPinningModified = false;
+      showRomanization = false;
+      optionSelectedIdx = undefined;
+      areWrongOption = Array.from({ length: options.length }, () => false);
+      isSearchMode = false;
+      if (settings.autoReadQuestion.value) {
+        tick().then(() => questionRef?.click());
+      }
+    });
+  });
+  $effect.pre(() => {
+    settings.numOptions.value;
+
+    untrack(() => {
+      areWrongOption = Array.from({ length: options.length }, () => false);
+    });
+  });
 </script>
 
 <svelte:window
-  onkeydown={onkeydown(({ key }) => {
-    if (key === "r") {
-      questionRef?.click();
+  onkeydown={onkeydown((ev) => {
+    if (!question) return;
+
+    const { key, ctrlKey } = ev;
+
+    if (isSearchMode) {
+      if (key.match(/^[ a-zA-Z0-9]$/)) {
+        searchInput += key;
+      } else {
+        switch (key) {
+          case " ":
+            const lastChar = searchInput.at(-1);
+            if (lastChar === undefined || lastChar !== " ") {
+              searchInput += " ";
+            }
+            break;
+
+          case "Backspace":
+            if (ctrlKey) {
+              searchInput = "";
+            } else {
+              searchInput = searchInput.slice(0, -1);
+            }
+            break;
+
+          case "Enter":
+            if (onlyMatchingOptionIdx !== undefined) {
+              optionRefs[onlyMatchingOptionIdx].click();
+              searchInput = "";
+            }
+            break;
+
+          case "Escape":
+            isSearchMode = false;
+            searchInput = "";
+        }
+      }
+    } else {
+      switch (key) {
+        case "ArrowDown":
+          ev.preventDefault();
+        case "j":
+          moveOptionSelectedIdx("down");
+          break;
+
+        case "ArrowUp":
+          ev.preventDefault();
+        case "k":
+          moveOptionSelectedIdx("up");
+          break;
+
+        case " ":
+        case "Enter":
+          if (optionSelectedIdx !== undefined) {
+            optionRefs[optionSelectedIdx]?.click();
+          }
+          break;
+
+        case "p":
+          pinButtonRef?.click();
+          break;
+
+        case "r":
+          questionRef?.click();
+          break;
+
+        case "f":
+          if (!ctrlKey) break;
+          ev.preventDefault();
+        case "/":
+          isSearchMode = true;
+          break;
+      }
     }
   })}
 />
@@ -270,11 +428,46 @@
     </div>
   {/snippet}
 
-  {#if !isQuestionSettingsEmpty && !isOptionSettingsEmpty}
-    <hr class="mt-6 opacity-50" />
+  <hr class="mt-6 opacity-50" />
 
+  <SettingsRowsBordered class="mt-6 gap-1.5 py-1.5">
+    <span>Keybindings:</span>
+    <span>
+      <KBD>r</KBD>
+      to read the question.
+    </span>
+    <span>
+      <KBD>p</KBD>
+      to pin/unpin the question.
+    </span>
+    <span>
+      <KBD><span class="icon-[icon-park-outline--arrow-up]"></span></KBD>
+      <span>+</span>
+      <KBD><span class="icon-[icon-park-outline--arrow-down]"></span></KBD>
+      <span class="mx-1">/</span>
+      <KBD>j</KBD>
+      <span>+</span>
+      <KBD>k</KBD>
+      to select an option.
+    </span>
+    <span>
+      <KBD>Ctrl</KBD>
+      <span>+</span>
+      <KBD>f</KBD>
+      <span class="mx-1">/</span>
+      <KBD>/</KBD>
+      to start Search mode (type to select an option,
+      <KBD>Esc</KBD> to exit).
+    </span>
+    <span>
+      <KBD>Enter</KBD>
+      to submit.
+    </span>
+  </SettingsRowsBordered>
+
+  {#if !isQuestionSettingsEmpty && !isOptionSettingsEmpty}
     <!-- question -->
-    <div class="mt-9 flex items-center-safe">
+    <div class="mt-12 flex items-center-safe">
       <span class="underline">Question:</span>
 
       {#if question}
@@ -295,10 +488,6 @@
               ></span>
             {/if}
           </div>
-
-          {#snippet customTooltip()}
-            <KBD label="r" /> to read the question.
-          {/snippet}
         </Highlighted>
 
         {#if showRomanization}
@@ -307,7 +496,7 @@
 
         <div class="group/list relative ml-6 p-3">
           <button
-            title="Pin this question."
+            bind:this={pinButtonRef}
             class="grid size-10 cursor-pointer place-items-center-safe rounded-full text-primary-content hover:bg-primary-lighter"
             onclick={() => togglePin(question!.idx)}
           >
@@ -360,22 +549,28 @@
     <div class="mt-9">Select the most appropriate one:</div>
 
     <!-- options -->
-    <div class="mt-6 flex flex-col gap-2">
+    <div class="mt-6 flex flex-col items-start gap-2">
       {#each options as option, i (entriesToStr(option.answerEntries))}
         <Highlighted
+          bind:this={optionRefs[i]}
           vertical
-          variant={isWrongOptions[i] ? "error" : "primary-lighter"}
+          variant={areWrongOption[i] ? "error" : "primary-lighter"}
+          class={[
+            "scroll-m-60",
+            (isSearchMode ? areOptionMatchingCommand[i] : i === optionSelectedIdx) &&
+              "outline-2 outline-primary-content/75",
+          ]}
           onclick={() => {
             if (!question) return;
 
             if (isEqual(option.answerEntries, question.answerEntries)) {
               nextQuestion();
             } else {
-              isWrongOptions[i] = true;
+              areWrongOption[i] = true;
               if (settings.pinWhenWrong.value) togglePin(question.idx, true);
             }
           }}
-          disabled={isWrongOptions[i]}
+          disabled={areWrongOption[i]}
         >
           {@render entries(option.answerEntries)}
         </Highlighted>
@@ -386,3 +581,9 @@
   <!-- padding -->
   <div class="h-[75dvh]"></div>
 </div>
+
+<SearchBar
+  bind:searchInput
+  bind:enabled={isSearchMode}
+  isInvalid={onlyMatchingOptionIdx === undefined}
+/>

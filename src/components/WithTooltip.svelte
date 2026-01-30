@@ -21,9 +21,14 @@
     class?: ClassValue;
     children: Snippet;
   } = $props();
+
+  let ref: HTMLDivElement | undefined = $state();
+  export function scrollIntoView() {
+    ref?.scrollIntoView({ block: "nearest" });
+  }
 </script>
 
-<div role="tooltip" class={["group/tooltip relative", classList]}>
+<div bind:this={ref} role="tooltip" class={["group/tooltip relative", classList]}>
   {@render children()}
 
   {#if !disabled && (customTooltip || tooltip)}

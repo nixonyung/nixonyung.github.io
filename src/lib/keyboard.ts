@@ -22,10 +22,13 @@ export function onkeydown<T extends Element>(
     if (document.activeElement instanceof HTMLElement) {
       document.activeElement.blur();
     }
-    if (key === " ") {
+    if (
       // prevent scrolling with Space
+      key === " " ||
+      // prevent pressing Tab to navigate elements
+      key === "Tab"
+    )
       ev.preventDefault();
-    }
 
     callback(ev);
   };

@@ -22,16 +22,20 @@
     children: Snippet;
   } = $props();
 
-  let ref: HTMLButtonElement | undefined = $state();
+  let ref: WithTooltip | undefined = $state();
+  let buttonRef: HTMLButtonElement | undefined = $state();
 
   export function click() {
-    ref?.click();
+    buttonRef?.click();
+  }
+  export function scrollIntoView() {
+    ref?.scrollIntoView();
   }
 </script>
 
-<WithTooltip {tooltip} {customTooltip} class={classList} {disabled}>
+<WithTooltip bind:this={ref} {tooltip} {customTooltip} class={classList} {disabled}>
   <button
-    bind:this={ref}
+    bind:this={buttonRef}
     class={[
       "flex w-fit gap-1 px-3 py-1",
       vertical ? "flex-col items-start" : "items-center-safe",

@@ -35,7 +35,7 @@
   class={classList}
   onwheel={(ev) => {
     if (ev.ctrlKey) return;
-    ev.stopImmediatePropagation();
+    ev.stopPropagation();
     ev.preventDefault();
 
     const step = ev.altKey ? Math.floor((numRows + 1) / 2) : 1;

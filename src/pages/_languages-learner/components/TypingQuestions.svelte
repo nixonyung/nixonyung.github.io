@@ -182,12 +182,12 @@
 
     {#if speech.voice}
       <button class="block" onclick={() => emitKeydown({ key: "r" })}>
-        <KBD label="r" /> to read all words
+        <KBD>r</KBD> to read all words
       </button>
     {/if}
 
     <button class="block" onclick={() => emitKeydown({ key: "Enter" })}>
-      <KBD label="Enter" /> to continue ...
+      <KBD>Enter</KBD> to continue ...
     </button>
   </div>
 
