@@ -151,7 +151,7 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
       { kanjis: ["同僚"], hiragana: "どうりょう", romanization: "douryou", meaning: "colleague (in similar position with you)" },
       { kanjis: ["部下"], hiragana: "ぶか", romanization: "buka", meaning: "subordinate" },
       { kanjis: ["上司"], hiragana: "じょうし", romanization: "joushi", meaning: "boss" },
-      { kanjis: ["監督"], hiragana: "かんとく", romanization: "kantoku", meaning: "supervisor" },
+      { kanjis: ["監督"], hiragana: "かんとく", romanization: "kantoku", meaning: "supervisor / director" },
       { kanjis: ["主管"], hiragana: "しゅかん", romanization: "shukan", meaning: "department head" },
       { kanjis: ["主任"], hiragana: "しゅにん", romanization: "shunin", meaning: "department head" },
       { kanjis: ["部長"], hiragana: "ぶちょう", romanization: "buchou", meaning: "department head" },

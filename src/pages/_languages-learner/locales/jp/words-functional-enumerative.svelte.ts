@@ -8,6 +8,7 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
   if (flashcardSettings.words.functional.enumerative.value) {
     words.push(
       // and
+      // TODO: move words that can replace は to adpositions?
       { hiragana: "も", romanization: "mo", meaning: "and / also (non-exhausive)", exampleUsages: ["[Noun] も [Verb]", "[Noun] も [Noun] も [Verb]", "[Noun] も [Noun] も [Noun] も [Verb]"] },
       { hiragana: "や", romanization: "ya", meaning: "and (non-exhausive, written)", exampleUsages: ["[Noun] や [Noun] ..."] },
 

@@ -16,15 +16,19 @@ export function appendVerbsDescriptive(words: JapaneseWord[]) {
       { kanjis: ["含む", "銜む"], hiragana: "ふくむ", romanization: "fukumu", verbGroup: "godan", verbIsTransitive: true, meaning: "contain", exampleUsages: ["A を B に含む (B contains A)"] },
 
       { kanjis: ["関連する"], rareKanjis: ["関聯"], hiragana: "かんれんする", romanization: "kanrensuru", verbGroup: "irregular", verbIsTransitive: false, meaning: "relate" },
+
+      // TODO: will?
+      { kanjis: ["目指す"], rareKanjis: ["目差す"], hiragana: "めざす", romanization: "mezasu", verbGroup: "godan", verbIsTransitive: true, meaning: "aim at", exampleUsages: ["xxx を目指して設立しました (founded for xxx)"] },
     );
   }
 
   if (flashcardSettings.words.verbs.descriptive.existence.value) {
     verbs.push(
-      { hiragana: "いる", rareKanjis: ["居る"], romanization: "iru", verbGroup: "godan", verbIsTransitive: false, meaning: "exist (for living things)" },
+      { hiragana: "いる", rareKanjis: ["居る"], romanization: "iru", verbGroup: "godan", verbIsTransitive: false, meaning: "exist (for living things)", exampleUsages: ["xxx に入っていました (was starting to perform xxx)"] },
       { hiragana: "ある", preferredForm: "hiragana", kanjis: ["有る", "在る"], romanization: "aru", verbGroup: "godan", verbIsTransitive: false, meaning: "exist (for non-living things)", exampleUsages: ["質問かあれば"] },
 
       { kanjis: ["来る"], hiragana: "くる", romanization: "kuru", verbGroup: "irregular", verbIsTransitive: false, meaning: "come (spatially / temporally)" },
+      { kanjis: ["設立する"], hiragana: "せつりつ", romanization: "setsuritsu", verbGroup: "irregular", verbIsTransitive: true, meaning: "to found" },
 
       { kanjis: ["暮らす", "暮す"], hiragana: "くらす", romanization: "kurasu", verbGroup: "godan", verbIsTransitive: false, meaning: "live / get along" },
       { kanjis: ["死ぬ"], hiragana: "しぬ", romanization: "shinu", verbGroup: "godan", verbIsTransitive: false, meaning: "die" },

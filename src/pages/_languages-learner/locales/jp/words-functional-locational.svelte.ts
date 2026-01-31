@@ -2,6 +2,7 @@ import type { JapaneseWord } from "../../types";
 import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
 export function appendFunctionalLocational(words: JapaneseWord[]) {
+  // TODO: treat as nouns?
   if (flashcardSettings.words.functional.locational.value) {
     words.push(
       // here / there
@@ -44,6 +45,8 @@ export function appendFunctionalLocational(words: JapaneseWord[]) {
       { kanjis: ["遠く"], hiragana: "とおく", romanization: "tooku", meaning: "afar" },
       { kanjis: ["内"], hiragana: "うち", romanization: "uchi", meaning: "inside" },
       { kanjis: ["中"], hiragana: "なか", romanization: "naka", meaning: "middle / centre", derivedMeanings: ["inside"] },
+
+      { hiragana: "ところ", preferredForm: "hiragana", kanjis: ["所"], romanization: "tokoro", meaning: "nearby", derivedMeanings: ["recently"], exampleUsages: ["家を出たところ"] },
 
       // interrogative
       { hiragana: "どこ", preferredForm: "hiragana", kanjis: ["何処", "何所"], romanization: "doko", meaning: "where", exampleUsages: ["[Noun] はどこですか？", "どこが [Noun] ですか？"] },

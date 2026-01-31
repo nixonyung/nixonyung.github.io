@@ -71,10 +71,12 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["親子"], hiragana: "おやこ", romanization: "oyako", meaning: "parent and child" },
       { kanjis: ["親子"], hiragana: "しんし", romanization: "shinshi", meaning: "parent and child" },
       { kanjis: ["子孫"], hiragana: "しそん", romanization: "shison", meaning: "descendants" },
+
       { kanjis: ["世代"], hiragana: "せだい", romanization: "sedai", meaning: "generation" },
       { kanjis: ["相続"], hiragana: "そうぞく", romanization: "souzoku", meaning: "succession" },
       { kanjis: ["相続人"], hiragana: "そうぞくにん", romanization: "souzokunin", meaning: "heir" },
       { kanjis: ["継承"], hiragana: "けいしょう", romanization: "keishou", meaning: "inheritance" },
+      { kanjis: ["所属"], hiragana: "しょぞく", romanization: "shozoku", meaning: "belonging to", exampleUsages: ["所属メンバー"] },
 
       { kanjis: ["親密"], hiragana: "しんみつ", romanization: "shinmitsu", meaning: "intimacy" },
       { kanjis: ["親しみ"], hiragana: "したしみ", romanization: "shitashimi", meaning: "familarity" },
@@ -128,6 +130,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { hiragana: "こと", preferredForm: "hiragana", kanjis: ["事"], romanization: "koto", meaning: "matter / business" },
       { kanjis: ["事業"], hiragana: "じぎょう", romanization: "jigyou", meaning: "career" },
       { kanjis: ["仕事"], hiragana: "しごと", romanization: "shigoto", meaning: "work" },
+      { kanjis: ["作業"], hiragana: "さぎょう", romanization: "sagyou", meaning: "task", exampleUsages: ["絵コンテ作業"] },
+      { kanjis: ["会社"], hiragana: "かいしゃ", romanization: "kaisha", meaning: "company" },
       { kanjis: ["企業"], hiragana: "きぎょう", romanization: "kigyou", meaning: "enterprise" },
       { kanjis: ["成功"], hiragana: "せいこう", romanization: "seikou", meaning: "success" },
 
@@ -178,8 +182,10 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["方式"], hiragana: "ほうしき", romanization: "houshiki", meaning: "way / method" },
       { kanjis: ["やり方", "遣り方"], hiragana: "やりかた", romanization: "yarikata", meaning: "way of doing" },
       { kanjis: ["手順"], hiragana: "てじゅん", romanization: "tejun", meaning: "procedures" },
+      { katakana: "ステップ", romanization: "suteppu", meaning: "step" },
 
       { kanjis: ["索引"], hiragana: "さくいん", romanization: "sakuin", meaning: "index" },
+      { katakana: "マッピング", romanization: "mappingu", meaning: "mapping (creating associations)" },
       { katakana: "カテゴリ", romanization: "kategori", meaning: "category" },
       { katakana: "キーワード", romanization: "kiiwaado", meaning: "keyword" },
       { katakana: "ポイント", romanization: "pointo", meaning: "point" },
@@ -238,6 +244,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
     words.push(
       // drawings
       { kanjis: ["漫画"], hiragana: "まんが", katakana: "マンガ", romanization: "manga", meaning: "manga" },
+      { katakana: "コンテ", romanization: "konte", meaning: 'storyboard ("continuity")' },
+      { kanjis: ["絵コンテ", "画コンテ"], hiragana: "えコンテ", romanization: "ekonte", meaning: 'storyboard ("continuity")' },
 
       // music
       { katakana: "アニメソング", romanization: "anime songu", meaning: "anime song" },
@@ -256,6 +264,9 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { katakana: "サッカー", romanization: "sakkaa", meaning: "soccer" },
 
       { kanjis: ["世界一周"], hiragana: "せかいいっしゅう", romanization: "sekaiisshuu", meaning: "round-the-world trip" },
+
+      { kanjis: ["撮影"], hiragana: "さつえい", romanization: "satsuei", meaning: "photography", derivedMeanings: ["filming"] },
+      { kanjis: ["密着"], hiragana: "みっちゃく", romanization: "micchaku", meaning: "sticking closely", exampleUsages: ["密着撮影"] },
     );
   }
 
@@ -272,6 +283,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { katakana: "マテリアル", romanization: "materiaru", meaning: "material" },
       { katakana: "アイテム", romanization: "aitemu", meaning: "item" },
       { katakana: "オプション", romanization: "opushon", meaning: "option" },
+      { katakana: "レイド", romanization: "reido", meaning: "raid" },
     );
   }
 }

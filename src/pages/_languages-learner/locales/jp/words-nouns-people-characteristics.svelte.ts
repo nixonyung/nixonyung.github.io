@@ -58,6 +58,7 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
       { katakana: "カメラマン", romanization: "kameraman", meaning: "cameraman" },
 
       { katakana: "メーカー", romanization: "meekaa", meaning: "maker" },
+      { katakana: "アニメーター", romanization: "animeetaa", meaning: "animator" },
     );
   }
 

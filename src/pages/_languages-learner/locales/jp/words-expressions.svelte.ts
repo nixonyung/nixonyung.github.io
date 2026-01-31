@@ -76,6 +76,7 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "だから", romanization: "dakara", meaning: "Told you already!" },
 
       { hiragana: "どうも", romanization: "doumo", meaning: "very", exampleUsages: ["どうも ありがとう ございます (thank you very much)"] },
+      { hiragana: "もちろん", preferredForm: "hiragana", kanjis: ["勿論"], romanization: "mochiron", meaning: "of course", exampleUsages: ["もちろん！", "A はもちろん B も ... (B ..., not to mention A)"] },
       { kanjis: ["本当に"], hiragana: "ほんとうに", romanization: "hontouni", meaning: "really" },
 
       { hiragana: "〇〇んです", romanization: "-n desu", meaning: "it is because (spoken, polite)", exampleUsages: ["[Clause] んです。"] },

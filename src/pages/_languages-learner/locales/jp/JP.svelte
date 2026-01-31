@@ -45,6 +45,8 @@
   const words = $derived.by(() => {
     const words: JapaneseWord[] = [];
 
+    // TODO: compound words (e.g. prefixes and suffixes)
+
     appendPronouns(words);
     appendNounsPeopleByCharacteristics(words);
     appendNounsPeopleByRelationships(words);
