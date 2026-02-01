@@ -44,6 +44,8 @@ export function appendVerbsDescriptive(words: JapaneseWord[]) {
     verbs.push(
       { hiragana: "する", rareKanjis: ["為る"], romanization: "suru", verbGroup: "irregular", verbIsTransitive: true, meaning: "do / carry out", derivedMeanings: ["choose", "pickpocket"], exampleUsages: ["せールをする (on sale)", "ゲームをする (play a game)", "これにします (choose this)"] },
       { hiragana: "やる", rareKanjis: ["遣る"], romanization: "yaru", verbGroup: "godan", verbIsTransitive: true, meaning: "undertake" },
+      { kanjis: ["試す"], rareKanjis: ["験す"], hiragana: "ためす", romanization: "tamesu", verbGroup: "godan", verbIsTransitive: true, meaning: "try (casual)" },
+      { kanjis: ["試みる"], hiragana: "こころみる", romanization: "kokoromiru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "try (formal)" },
       { kanjis: ["待つ"], rareKanjis: ["俟つ"], hiragana: "まつ", romanization: "matsu", verbGroup: "godan", verbIsTransitive: false, meaning: "wait" },
       { kanjis: ["急ぐ"], hiragana: "いそぐ", romanization: "isogu", verbGroup: "godan", verbIsTransitive: false, meaning: "hurry" },
       { kanjis: ["起こす", "起す"], hiragana: "おこす", romanization: "okosu", verbGroup: "godan", verbIsTransitive: true, meaning: "cause / start", derivedMeanings: ["wake someone up", "raise", "set up", "vitalize"] },

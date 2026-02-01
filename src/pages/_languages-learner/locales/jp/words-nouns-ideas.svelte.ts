@@ -45,6 +45,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["女装"], hiragana: "じょそう", romanization: "josou", meaning: "women's clothing" },
 
       { kanjis: ["難度"], hiragana: "なんど", romanization: "nando", meaning: "difficulty" },
+      { kanjis: ["挑戦"], hiragana: "ちょうせん", romanization: "chousen", meaning: "challenge" },
       { kanjis: ["邪魔"], hiragana: "じゃま", romanization: "jama", meaning: "obstacle" },
       { kanjis: ["我慢"], hiragana: "がまん", katakana: "ガマン", romanization: "gaman", meaning: "endurance" },
 
@@ -159,6 +160,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["決定"], hiragana: "けってい", romanization: "kettei", meaning: "decision" },
       { kanjis: ["説得"], hiragana: "せっとく", romanization: "settoku", meaning: "persuasion" },
       { kanjis: ["譲歩"], hiragana: "じょうほ", romanization: "jouho", meaning: "concession" },
+      { kanjis: ["中止"], hiragana: "ちゅうし", romanization: "chuushi", meaning: "termination / cancellation" },
 
       { kanjis: ["積もり", "積り"], hiragana: "つもり", romanization: "tsumori", meaning: "plan / intention" },
       { kanjis: ["約束"], hiragana: "やくそく", romanization: "yakusoku", meaning: "promise" },
@@ -198,6 +200,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["述語"], hiragana: "じゅつご", romanization: "jutsugo", meaning: "predicate (verb and object)" },
       { katakana: "フレーズ", romanization: "fureezu", meaning: "phrase" },
       { kanjis: ["例文"], hiragana: "れいぶん", romanization: "reibun", meaning: "example sentence" },
+      { kanjis: ["例", "様"], hiragana: "ためし", romanization: "tameshi", meaning: "example / precedent" },
       { kanjis: ["否定文"], hiragana: "ひていぶん", romanization: "hiteibun", meaning: "negative sentence" },
 
       { kanjis: ["意味"], hiragana: "いみ", romanization: "imi", meaning: "meaning" },
@@ -264,6 +267,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { katakana: "サッカー", romanization: "sakkaa", meaning: "soccer" },
 
       { kanjis: ["世界一周"], hiragana: "せかいいっしゅう", romanization: "sekaiisshuu", meaning: "round-the-world trip" },
+
+      { kanjis: ["試合"], hiragana: "しあい", romanization: "shiai", meaning: "match / contest" },
 
       { kanjis: ["撮影"], hiragana: "さつえい", romanization: "satsuei", meaning: "photography", derivedMeanings: ["filming"] },
       { kanjis: ["密着"], hiragana: "みっちゃく", romanization: "micchaku", meaning: "sticking closely", exampleUsages: ["密着撮影"] },

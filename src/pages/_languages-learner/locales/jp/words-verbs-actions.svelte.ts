@@ -185,6 +185,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["準備する"], hiragana: "じゅんびする", romanization: "junbisuru", verbGroup: "irregular", verbIsTransitive: true, meaning: "prepare" },
       { kanjis: ["暇する"], hiragana: "ひまする", romanization: "himasuru", verbGroup: "irregular", verbIsTransitive: false, meaning: "be free / be unoccupied" },
       { kanjis: ["機能する"], hiragana: "きのうする", romanization: "kinousuru", verbGroup: "irregular", verbIsTransitive: false, meaning: "function" },
+      { kanjis: ["作る", "造る", "創る"], hiragana: "つくる", romanization: "tsukuru", verbGroup: "godan", verbIsTransitive: true, meaning: "make / create / produce" },
       { kanjis: ["生み出す", "産み出す"], hiragana: "うみだす", romanization: "umidasu", verbGroup: "godan", verbIsTransitive: true, meaning: "produce" },
 
       // athletic
@@ -230,6 +231,11 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["居住する"], hiragana: "きょじゅうする", romanization: "kyojuusuru", verbGroup: "irregular", verbIsTransitive: false, meaning: "reside" },
 
       { kanjis: ["乗る"], hiragana: "のる", katakana: "ノる", romanization: "noru", verbGroup: "godan", verbIsTransitive: false, meaning: "get on (transportation)", exampleUsages: ["電車に乗った"] },
+
+      { kanjis: ["貯める"], hiragana: "ためる", romanization: "tameru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "save money" },
+      { kanjis: ["貯まる"], hiragana: "たまる", romanization: "tamaru", verbGroup: "godan", verbIsTransitive: false, meaning: "accumulate / grow on its own" },
+      { kanjis: ["貯金する"], hiragana: "ちょきんする", romanization: "chokinsuru", verbGroup: "irregular", verbIsTransitive: true, meaning: "save money" },
+      { kanjis: ["貯蔵する"], hiragana: "ちょぞうする", romanization: "chozousuru", verbGroup: "irregular", verbIsTransitive: true, meaning: "store" },
     );
   }
 

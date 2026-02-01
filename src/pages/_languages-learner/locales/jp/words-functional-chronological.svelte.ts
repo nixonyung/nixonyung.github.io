@@ -69,7 +69,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { kanjis: ["晴れ", "晴"], hiragana: "はれ", romanization: "hare", meaning: "good weather", derivedMeanings: ["when the weather is good"] },
 
       // definite duration
-      { kanjis: ["二週間", "２週間"], hiragana: "にしゅうかん", romanization: "nishuukan", meaning: "two weeks", exampleUsages: ["二週間で [Clause]"] },
+      { kanjis: ["二週間", "２週間"], hiragana: "にしゅうかん", romanization: "nishuukan", meaning: "two weeks" },
 
       // indefinite duration
       // TODO: for a while, since Monday, since 1990, briefly, temporarily, permanently, all day
@@ -89,7 +89,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { kanjis: ["多くの場合"], hiragana: "おおくのばあい", romanization: "ookunobaai", meaning: "in many cases (written)" },
       { hiragana: "いつも", preferredForm: "hiragana", kanjis: ["何時も"], romanization: "itsumo", meaning: "always", exampleUsages: ["{[Noun] は} いつも [Verb / Adj.]"] },
       { hiragana: "また", preferredForm: "hiragana", kanjis: ["又"], rareKanjis: ["亦", "復"], romanization: "mata", meaning: "again" },
-      { hiragana: "ばかり", rareKanjis: ["許り", "許"], romanization: "bakari", meaning: "just / freshly (emphasizing the feeling)", exampleUsages: ["2025年に設立されたばかり"] },
+
       // interrogative point in time
       { hiragana: "いつ", preferredForm: "hiragana", kanjis: ["何時"], romanization: "itsu", meaning: "when" },
       { kanjis: ["何時"], hiragana: "なんじ", romanization: "nanji", meaning: "what hour" },

@@ -26,6 +26,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["雲"], hiragana: "くも", romanization: "kumo", meaning: "cloud" },
       { kanjis: ["海"], hiragana: "うみ", romanization: "umi", meaning: "sea" },
       { kanjis: ["雨"], hiragana: "あめ", romanization: "ame", meaning: "rain" },
+      { kanjis: ["台風", "颱風"], hiragana: "たいふう", romanization: "taifuu", meaning: "typhoon" },
 
       { kanjis: ["夕暮れ"], hiragana: "ゆうぐれ", romanization: "yuugure", meaning: "twilight" },
       { kanjis: ["夕陽"], hiragana: "せきよう", romanization: "sekiyou", meaning: "the setting sun" },
@@ -63,6 +64,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["晩ご飯", "晩ごはん", "晩御飯"], hiragana: "ばんごはん", romanization: "bangohan", meaning: "dinner" },
 
       { kanjis: ["料理"], hiragana: "りょうり", romanization: "ryouri", meaning: "dish" },
+      { kanjis: ["弁当"], hiragana: "べんとう", romanization: "bentou", meaning: "Japanese box lunch" },
       { kanjis: ["和食"], hiragana: "わしょく", romanization: "washoku", meaning: "Japanese cuisine" },
       { kanjis: ["洋食"], hiragana: "ようしょく", romanization: "youshoku", meaning: "Western cuisine" },
 

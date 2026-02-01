@@ -65,6 +65,8 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { hiragana: "-たい", romanization: "-tai", meaning: "wanted to", exampleUsages: ["[Verb-stem] たい", "したい"] },
       { kanjis: ["-易い"], hiragana: "-やすい", romanization: "-yasui", meaning: "easy to (in terms of any kind of effort)", exampleUsages: ["[Verb-stem] 易い", "話しやすい (easy to talk with / easy to find and talk)", "酔いやすい (get drunk easily)"] },
       { kanjis: ["-難い", "-悪い"], hiragana: "-にくい", romanization: "-nikui", meaning: "hard to (in terms of any kind of effort)", exampleUsages: ["[Verb-stem] 難い", "使いにくい (hard to use)", "車酔いしにくい (doesn't get car sick easily)"] },
+
+      { hiragana: "ためしがない", preferredForm: "hiragana", kanjis: ["例がない"], romanization: "tameshiganai", meaning: "have never been done", exampleUsages: ["[Verb-ta] ためしがないですよ"] },
     );
   }
 
@@ -74,6 +76,7 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { kanjis: ["好き"], hiragana: "すき", romanization: "suki", meaning: "liked" },
       { kanjis: ["不思議"], hiragana: "ふしぎ", romanization: "fushigi", meaning: "amazing" },
       { kanjis: ["結構"], hiragana: "けっこう", romanization: "kekkou", meaning: "excellent (formal)", derivedMeanings: ["politely decline (fine with myself)"] },
+      { kanjis: ["完全"], hiragana: "かんぜん", romanization: "kanzen", meaning: "perfect / complete" },
 
       { kanjis: ["綺麗", "奇麗"], hiragana: "きれい", katakana: "キレイ", romanization: "kirei", meaning: "pretty" },
       { kanjis: ["親切"], rareKanjis: ["深切"], hiragana: "しんせつ", romanization: "shinsetsu", meaning: "considerate" },
