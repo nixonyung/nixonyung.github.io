@@ -220,10 +220,12 @@
       "TAKOBOTO (English dictionary)": "https://takoboto.jp/",
       "Weblio (native dictionary)": "https://www.weblio.jp/",
     },
-    "Verb Conjugations": {
-      "Verb Conjugation - Tofugu": "https://www.tofugu.com/japanese-grammar/verb-conjugation-groups/",
-      "Japanese conjugation - revision sheet":
-        "https://www.wikiwand.com/en/articles/Japanese_conjugation#/media/File:AMB_Japanese_Verbs.pdf",
+    Guides: {
+      "Verb Conjugations": {
+        "Verb Conjugation - Tofugu": "https://www.tofugu.com/japanese-grammar/verb-conjugation-groups/",
+        "Japanese conjugation revision sheet - Wikipedia":
+          "https://www.wikiwand.com/en/articles/Japanese_conjugation#/media/File:AMB_Japanese_Verbs.pdf",
+      },
     },
     "Google Search with AI Overview": undefined,
   }}

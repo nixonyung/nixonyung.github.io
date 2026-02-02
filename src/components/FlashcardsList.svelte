@@ -3,6 +3,7 @@
 
   import { clamp } from "es-toolkit";
   import type { Snippet } from "svelte";
+  import Icon from "./Icon.svelte";
 
   let {
     length,
@@ -63,9 +64,10 @@
             {@render row(dataIdx)}
 
             {#if dataIdx === focusedIdx}
-              <span
-                class="absolute top-1/2 left-0 z-10 icon-[icon-park-solid--right-one] -translate-x-full -translate-y-1/2"
-              ></span>
+              <Icon
+                icon="icon-[icon-park-solid--right-one]"
+                class="absolute top-1/2 left-0 z-10 -translate-x-full -translate-y-1/2"
+              />
             {/if}
           </div>
         {/if}

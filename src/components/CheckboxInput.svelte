@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { ClassValue } from "svelte/elements";
+  import Icon from "./Icon.svelte";
   import WithTooltip, { type WithTooltipProps } from "./WithTooltip.svelte";
 
   let {
@@ -28,15 +29,10 @@
     onclick={() => (checked = !checked)}
     {disabled}
   >
-    <span
-      class={[
-        "text-sm",
-        checked
-          ? "icon-[icon-park-solid--check-one]"
-          : "icon-[icon-park-outline--round] opacity-50",
-      ]}
-    >
-    </span>
+    <Icon
+      icon={checked ? "icon-[icon-park-solid--check-one]" : "icon-[icon-park-outline--round]"}
+      class={["text-sm", !checked && "opacity-50"]}
+    />
     <span>{label}</span>
   </button>
 </WithTooltip>

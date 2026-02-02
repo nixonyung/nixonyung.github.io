@@ -1,6 +1,7 @@
 <script lang="ts">
   import { clamp, round } from "es-toolkit";
   import type { ClassValue } from "svelte/elements";
+  import Icon from "./Icon.svelte";
 
   let {
     value = $bindable(),
@@ -67,7 +68,7 @@
       onclick={() => setValue(value - step)}
       disabled={!canDecrement}
     >
-      <span class="icon-[heroicons--minus-circle] align-middle text-2xl"></span>
+      <Icon icon="icon-[heroicons--minus-circle]" class="align-middle text-xl" />
     </button>
 
     <!-- increment button -->
@@ -77,7 +78,7 @@
       onclick={() => setValue(value + step)}
       disabled={!canIncrement}
     >
-      <span class="icon-[heroicons--plus-circle] align-middle text-2xl"></span>
+      <Icon icon="icon-[heroicons--plus-circle]" class="align-middle text-xl" />
     </button>
   </div>
 </div>

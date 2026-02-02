@@ -6,6 +6,7 @@
   import CheckboxInput from "@/components/CheckboxInput.svelte";
   import FlashcardsList from "@/components/FlashcardsList.svelte";
   import Highlighted from "@/components/Highlighted.svelte";
+  import Icon from "@/components/Icon.svelte";
   import KBD from "@/components/KBD.svelte";
   import NumericInput from "@/components/NumericInput.svelte";
   import SearchBar from "@/components/SearchBar.svelte";
@@ -446,7 +447,7 @@
   <hr class="mt-6 opacity-50" />
 
   <SettingsRowsBordered class="mt-6 gap-1.5 py-1.5">
-    <span>Keybindings:</span>
+    <span class="underline underline-offset-2">Keybindings:</span>
     <span>
       <KBD>r</KBD>
       to read the question.
@@ -456,9 +457,9 @@
       to pin/unpin the question.
     </span>
     <span>
-      <KBD><span class="icon-[icon-park-outline--arrow-up]"></span></KBD>
+      <KBD noPadding><Icon icon="icon-[icon-park-outline--arrow-up]" /></KBD>
       <span>+</span>
-      <KBD><span class="icon-[icon-park-outline--arrow-down]"></span></KBD>
+      <KBD noPadding><Icon icon="icon-[icon-park-outline--arrow-down]" /></KBD>
       <span class="mx-1">/</span>
       <KBD>j</KBD>
       <span>+</span>
@@ -483,7 +484,7 @@
   {#if !isQuestionSettingsEmpty && !isOptionSettingsEmpty}
     <!-- question -->
     <div class="mt-12 flex items-center-safe">
-      <span class="underline">Question:</span>
+      <span class="underline underline-offset-2">Question:</span>
 
       {#if question}
         <Highlighted
@@ -499,8 +500,10 @@
 
             <!-- pronunciation indicator -->
             {#if question.pronunciation && speech.voice}
-              <span class="absolute top-0 -right-1.5 icon-[heroicons--speaker-wave-solid] text-xs"
-              ></span>
+              <Icon
+                icon="icon-[heroicons--speaker-wave-solid]"
+                class="absolute top-0 -right-1.5 text-xs"
+              />
             {/if}
           </div>
         </Highlighted>
@@ -516,9 +519,9 @@
             onclick={() => togglePin(question!.idx)}
           >
             {#if questionsQueue.isPinned(question!.idx)}
-              <span class="icon-[icon-park-solid--pin]"></span>
+              <Icon icon="icon-[icon-park-solid--pin]" />
             {:else}
-              <span class="icon-[icon-park-outline--pin] opacity-75"></span>
+              <Icon icon="icon-[icon-park-outline--pin]" class="opacity-75" />
             {/if}
           </button>
 
@@ -546,14 +549,14 @@
 
                 <div class="min-w-6 grow"></div>
 
-                <span
-                  class={[
-                    "mr-1.5",
-                    questionsQueue.isPinned(idx)
-                      ? "icon-[icon-park-solid--pin]"
-                      : "icon-[icon-park-outline--pin] opacity-25 group-hover/item:opacity-75",
-                  ]}
-                ></span>
+                {#if questionsQueue.isPinned(idx)}
+                  <Icon icon="icon-[icon-park-solid--pin]" class="mr-1.5" />
+                {:else}
+                  <Icon
+                    icon="icon-[icon-park-outline--pin]"
+                    class="mr-1.5 opacity-25 group-hover/item:opacity-75"
+                  />
+                {/if}
               </button>
             {/snippet}
           </FlashcardsList>

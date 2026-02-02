@@ -77,7 +77,7 @@
 <div class="flex flex-col gap-9">
   <TabsInput
     bind:value={settings.mode.value}
-    label="Select Mode"
+    label="Mode"
     valueToLabel={{
       typing: "Typing",
       gojuonTable: "Gojuon Table",

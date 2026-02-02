@@ -1,5 +1,6 @@
 <script lang="ts">
   import Highlighted from "@/components/Highlighted.svelte";
+  import Icon from "@/components/Icon.svelte";
   import NumericInput from "@/components/NumericInput.svelte";
   import { QuestionsQueue } from "@/lib/questions-queue.svelte.ts";
   import { untrack } from "svelte";
@@ -24,13 +25,12 @@
   let options: ReturnType<(typeof questionsQueue)["genOptions"]> = $state([]);
 
   function genOptions() {
-    options = questionsQueue.genOptions(
+    options = questionsQueue.genOptions({
       question,
-      settings.numOptions.value,
-      {},
-      (question, { gojuonPosition: { row, col } }) =>
+      numOptions: settings.numOptions.value,
+      filterFn: (question, { gojuonPosition: { row, col } }) =>
         row !== question.gojuonPosition.row || col !== question.gojuonPosition.col,
-    );
+    });
   }
   function nextQuestion() {
     question = questionsQueue.nextQuestion();
@@ -56,22 +56,23 @@
   </div>
 
   <!-- question -->
-  <div class="flex flex-col">
+  <div class="flex w-fit flex-col border">
     {#each { length: 5 }, colIdx}
       <div class="flex">
         {#each { length: 11 }, rowIdx}
           <div
             class={[
-              "relative size-12 ring",
+              "relative size-12 border",
               10 - rowIdx === question?.gojuonPosition.row &&
                 colIdx === question?.gojuonPosition.col &&
                 "bg-primary-lighter",
             ]}
           >
             {#if 10 - rowIdx === question?.gojuonPosition.row && colIdx === question?.gojuonPosition.col}
-              <span
-                class="absolute -right-1 -bottom-3 icon-[heroicons--arrow-up-16-solid] -scale-x-75 scale-y-150 -rotate-30 text-3xl text-red-600"
-              ></span>
+              <Icon
+                icon="icon-[heroicons--arrow-up-16-solid]"
+                class="absolute -right-1 -bottom-3 -scale-x-75 scale-y-150 -rotate-30 text-3xl text-red-600"
+              />
             {/if}
           </div>
         {/each}

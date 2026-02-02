@@ -22,7 +22,9 @@
   });
 </script>
 
-<div class="flex min-h-dvh flex-col gap-3 px-4 pt-2 pb-6">
+<div
+  class="flex min-h-dvh w-fit min-w-full touch-manipulation flex-col gap-3 bg-primary px-4 pt-2 pb-6 font-content tracking-tight text-primary-content"
+>
   <h1>
     <button
       class="mt-3 mb-6 cursor-pointer text-xl underline underline-offset-4"

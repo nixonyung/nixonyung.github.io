@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { ClassValue } from "svelte/elements";
+  import Icon from "./Icon.svelte";
 
   let {
     searchInput = $bindable(""),
@@ -25,7 +26,7 @@
     class={[
       "fixed right-0 bottom-0 left-0 flex items-center-safe gap-1.5 bg-primary-lighter px-1.5",
       classList,
-      isInvalid && "bg-red-950",
+      isInvalid && "bg-red-300 dark:bg-red-950",
     ]}
   >
     <span>Search:</span>
@@ -37,7 +38,7 @@
         enabled = false;
       }}
     >
-      <span class="icon-[icon-park-solid--close-one]"></span>
+      <Icon icon="icon-[icon-park-solid--close-one]" class="align-middle" />
     </button>
   </div>
 {/if}

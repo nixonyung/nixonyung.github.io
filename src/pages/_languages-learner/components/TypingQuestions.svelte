@@ -1,6 +1,7 @@
 <script lang="ts">
   import CheckboxInput from "@/components/CheckboxInput.svelte";
   import Highlighted from "@/components/Highlighted.svelte";
+  import Icon from "@/components/Icon.svelte";
   import KBD from "@/components/KBD.svelte";
   import NumericInput from "@/components/NumericInput.svelte";
   import { emitKeydown, onkeydown } from "@/lib/keyboard";
@@ -22,7 +23,7 @@
   const settings = $state(
     initSettings({
       numQuestions: { paramKey: "numQuestions", defaultValue: 8 },
-      showRomanizations: { paramKey: "romanizations", defaultValue: false },
+      showRomanizations: { paramKey: "showRomanizations", defaultValue: false },
     }),
   );
   useSyncSettings(settings);
@@ -116,9 +117,9 @@
   <div class="flex items-center-safe gap-9">
     <Highlighted class={speech.voice === undefined ? "text-red-700" : "text-green-700"}>
       <span>SpeechSynthesis:</span>
-      <span
-        class={speech.voice === undefined ? "icon-[heroicons--x-mark]" : "icon-[heroicons--check]"}
-      ></span>
+      <Icon
+        icon={speech.voice === undefined ? "icon-[heroicons--x-mark]" : "icon-[heroicons--check]"}
+      />
     </Highlighted>
 
     {#if speech.err}
@@ -130,7 +131,7 @@
 
   <!-- questions -->
   <div class="flex items-center-safe gap-3">
-    <span class="underline">Questions:</span>
+    <span class="underline underline-offset-2">Questions:</span>
 
     {#snippet question(index: number)}
       {@const question = questions[index]}

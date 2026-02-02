@@ -10,7 +10,7 @@ import LanguagesLearnerComponent from "./_languages-learner/index.svelte";
     <HtmlHead title={getLocalizedMessage("indexLanguagesLearner", Astro.currentLocale)} />
   </head>
 
-  <body class="min-w-content touch-manipulation bg-primary text-primary-content">
+  <body>
     <LanguagesLearnerComponent client:only="svelte" />
   </body>
 </html>
