@@ -73,6 +73,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
 
       // indefinite duration
       // TODO: for a while, since Monday, since 1990, briefly, temporarily, permanently, all day
+      { kanjis: ["直ちに"], hiragana: "ただちに", romanization: "tadachini", meaning: "at once" },
       { hiragana: "から", romanization: "kara", meaning: "(introducing precedent:) since", exampleUsages: ["[Noun (time/place)] から [Verb]"] },
       { hiragana: "まで", romanization: "made", meaning: "(introducing termination:) until", exampleUsages: ["[Noun (time/place)] まで [Verb]", "最後まで"] },
       { hiragana: "〇〇から〇〇まで", romanization: "kara, made", meaning: "from (time) to (time)", exampleUsages: ["[Noun (time/place)] から [Noun (time/place)] まで [Verb]"] },
@@ -89,6 +90,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { kanjis: ["多くの場合"], hiragana: "おおくのばあい", romanization: "ookunobaai", meaning: "in many cases (written)" },
       { hiragana: "いつも", preferredForm: "hiragana", kanjis: ["何時も"], romanization: "itsumo", meaning: "always", exampleUsages: ["{[Noun] は} いつも [Verb / Adj.]"] },
       { hiragana: "また", preferredForm: "hiragana", kanjis: ["又"], rareKanjis: ["亦", "復"], romanization: "mata", meaning: "again" },
+      { kanjis: ["一度も", "１度も"], hiragana: "いちども", romanization: "ichidomo", meaning: "never", exampleUsages: ["ただの一度も [Clause]"] },
 
       // interrogative point in time
       { hiragana: "いつ", preferredForm: "hiragana", kanjis: ["何時"], romanization: "itsu", meaning: "when" },

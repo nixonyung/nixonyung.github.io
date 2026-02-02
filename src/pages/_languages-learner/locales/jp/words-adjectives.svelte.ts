@@ -12,10 +12,11 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { kanjis: ["面白い"], hiragana: "おもしろい", romanization: "omoshiroi", meaning: "interesting" },
       { hiragana: "すごい", preferredForm: "hiragana", kanjis: ["凄い"], katakana: "スゴイ", romanization: "sugoi", meaning: "amazing / terrible" },
       { kanjis: ["素晴らしい"], hiragana: "すばらしい", romanization: "subarashii", meaning: "magnificent" },
+      { kanjis: ["正しい"], hiragana: "ただしい", romanization: "tadashii", meaning: "correct" },
       { hiragana: "かわいい", preferredForm: "hiragana", kanjis: ["可愛い"], romanization: "kawaii", meaning: "cute" },
       { kanjis: ["優しい"], hiragana: "やさしい", romanization: "yasashii", meaning: "kind / gentle" },
       { kanjis: ["親しい"], hiragana: "したしい", romanization: "shitashii", meaning: "intimate" },
-      { kanjis: ["仲がいい", "仲が良い"], hiragana: "なかがいい", romanization: "nakagaii", meaning: "on good terms" },
+      { kanjis: ["仲がいい", "仲が良い"], hiragana: "なかがいい", romanization: "nakagaii", meaning: "being close / on good terms" },
       { kanjis: ["頭がいい", "頭が良い"], hiragana: "あたまがいい", romanization: "atamagaii", meaning: "smart" },
       { kanjis: ["頭が良い", "頭がよい"], hiragana: "あたまがよい", romanization: "atamagayoi", meaning: "smart" },
       { kanjis: ["美味しい"], hiragana: "おいしい", romanization: "oishii", meaning: "delicious" },
@@ -65,8 +66,6 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { hiragana: "-たい", romanization: "-tai", meaning: "wanted to", exampleUsages: ["[Verb-stem] たい", "したい"] },
       { kanjis: ["-易い"], hiragana: "-やすい", romanization: "-yasui", meaning: "easy to (in terms of any kind of effort)", exampleUsages: ["[Verb-stem] 易い", "話しやすい (easy to talk with / easy to find and talk)", "酔いやすい (get drunk easily)"] },
       { kanjis: ["-難い", "-悪い"], hiragana: "-にくい", romanization: "-nikui", meaning: "hard to (in terms of any kind of effort)", exampleUsages: ["[Verb-stem] 難い", "使いにくい (hard to use)", "車酔いしにくい (doesn't get car sick easily)"] },
-
-      { hiragana: "ためしがない", preferredForm: "hiragana", kanjis: ["例がない"], romanization: "tameshiganai", meaning: "have never been done", exampleUsages: ["[Verb-ta] ためしがないですよ"] },
     );
   }
 
@@ -89,6 +88,8 @@ export function appendAdjectives(words: JapaneseWord[]) {
 
       // neutral / it depends
       { kanjis: ["眠そう"], hiragana: "ねむそう", romanization: "nemusou", meaning: "sleepy-looking" },
+
+      { kanjis: ["直接"], hiragana: "ちょくせつ", romanization: "chokusetsu", meaning: "direct" },
 
       { kanjis: ["暇"], rareKanjis: ["閑"], hiragana: "ひま", romanization: "hima", meaning: "free / unoccupied" },
 

@@ -13,6 +13,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
 
       { kanjis: ["気持ち", "気持"], hiragana: "きもち", romanization: "kimochi", meaning: "feeling" },
       { kanjis: ["気分"], hiragana: "きぶん", romanization: "kibun", meaning: "mood" },
+      { kanjis: ["直感", "直観"], hiragana: "ちょっかん", romanization: "chokkan", meaning: "intuition" },
 
       // living
       { kanjis: ["健康"], hiragana: "けんこう", romanization: "kenkou", meaning: "health" },
@@ -20,6 +21,9 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["栄養", "営養"], hiragana: "えいよう", romanization: "eiyou", meaning: "nutrition" },
       { kanjis: ["昼寝"], hiragana: "ひるね", romanization: "hirune", meaning: "afternoon nap" },
       { kanjis: ["疲れ"], hiragana: "つかれ", romanization: "tsukare", meaning: "tiredness" },
+
+      { hiragana: "ただ", preferredForm: "hiragana", kanjis: ["只", "唯", "徒", "但", "常"], romanization: "tada", meaning: "ordinary / common / usual", exampleUsages: ["ただの [Noun] (an ordinary xxx)"] },
+      { hiragana: "こと", preferredForm: "hiragana", kanjis: ["事"], romanization: "koto", meaning: "thing / event / matter / situation" },
 
       { kanjis: ["暮らし", "暮し"], hiragana: "くらし", romanization: "kurashi", meaning: "the way of living" },
       { kanjis: ["一人暮らし", "１人暮らし"], rareKanjis: ["独り暮らし"], hiragana: "ひとりぐらし", romanization: "hitorigurashi", meaning: "the state of living alone" },
@@ -128,7 +132,6 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["役割"], hiragana: "やくわり", romanization: "yakuwari", meaning: "role" },
       { kanjis: ["機能"], hiragana: "きのう", romanization: "kinou", meaning: "function" },
 
-      { hiragana: "こと", preferredForm: "hiragana", kanjis: ["事"], romanization: "koto", meaning: "matter / business" },
       { kanjis: ["事業"], hiragana: "じぎょう", romanization: "jigyou", meaning: "career" },
       { kanjis: ["仕事"], hiragana: "しごと", romanization: "shigoto", meaning: "work" },
       { kanjis: ["作業"], hiragana: "さぎょう", romanization: "sagyou", meaning: "task", exampleUsages: ["絵コンテ作業"] },
@@ -163,6 +166,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["中止"], hiragana: "ちゅうし", romanization: "chuushi", meaning: "termination / cancellation" },
 
       { kanjis: ["積もり", "積り"], hiragana: "つもり", romanization: "tsumori", meaning: "plan / intention" },
+      { kanjis: ["直通"], hiragana: "ちょくつう", romanization: "chokutsuu", meaning: "the quality of going to destination directly" },
       { kanjis: ["約束"], hiragana: "やくそく", romanization: "yakusoku", meaning: "promise" },
       { kanjis: ["検査"], hiragana: "けんさ", romanization: "kensa", meaning: "inspection" },
       { katakana: "コンビニエンス", romanization: "konbiniensu", meaning: "convenience" },
@@ -184,6 +188,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["方式"], hiragana: "ほうしき", romanization: "houshiki", meaning: "way / method" },
       { kanjis: ["やり方", "遣り方"], hiragana: "やりかた", romanization: "yarikata", meaning: "way of doing" },
       { kanjis: ["手順"], hiragana: "てじゅん", romanization: "tejun", meaning: "procedures" },
+      { kanjis: ["直後"], hiragana: "ちょくご", romanization: "chokugo", meaning: "immediately following" },
       { katakana: "ステップ", romanization: "suteppu", meaning: "step" },
 
       { kanjis: ["索引"], hiragana: "さくいん", romanization: "sakuin", meaning: "index" },
@@ -230,6 +235,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
 
       { kanjis: ["間"], hiragana: "あいだ", romanization: "aida", meaning: "gap / distance" },
       { kanjis: ["距離"], hiragana: "きょり", romanization: "kyori", meaning: "distance" },
+      { kanjis: ["直径"], hiragana: "ちょっけい", romanization: "chokkei", meaning: "diameter" },
 
       { kanjis: ["分脈"], hiragana: "ぶんみゃく", romanization: "bunmyaku", meaning: "branch / fork", exampleUsages: ["(branches of a family tree)", "(physical branches)"] },
     );
@@ -267,6 +273,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { katakana: "サッカー", romanization: "sakkaa", meaning: "soccer" },
 
       { kanjis: ["世界一周"], hiragana: "せかいいっしゅう", romanization: "sekaiisshuu", meaning: "round-the-world trip" },
+      { kanjis: ["ただ乗り", "タダ乗り"], rareKanjis: ["只乗り"], hiragana: "ただのり", romanization: "tadanori", meaning: "free loading" },
 
       { kanjis: ["試合"], hiragana: "しあい", romanization: "shiai", meaning: "match / contest" },
 

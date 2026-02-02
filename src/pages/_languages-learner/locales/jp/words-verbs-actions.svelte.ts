@@ -168,6 +168,11 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["擦る", "擂る"], rareKanjis: ["摩る", "磨る"], hiragana: "する", romanization: "suru", verbGroup: "godan", verbIsTransitive: true, meaning: "rub" },
       { kanjis: ["交える", "混える", "雑える"], hiragana: "まじえる", romanization: "majieru", verbGroup: "ichidan", verbIsTransitive: true, meaning: "mix" },
       { kanjis: ["梳く"], hiragana: "すく", romanization: "suku", verbGroup: "godan", verbIsTransitive: true, meaning: "comb" },
+
+      // transformative
+      { kanjis: ["直る"], hiragana: "なおる", romanization: "naoru", verbGroup: "godan", verbIsTransitive: false, meaning: "put right / sit properly", derivedMeanings: ["fix / repair"] },
+      { kanjis: ["立ち直る", "立ちなおる", "立直る"], hiragana: "たちなおる", romanization: "tachinaoru", verbGroup: "godan", verbIsTransitive: false, meaning: "regain one's footing" },
+      { kanjis: ["開き直る"], hiragana: "ひらきなおる", romanization: "hirakinaoru", verbGroup: "godan", verbIsTransitive: false, meaning: "be defiant", derivedMeanings: ["fight back"] },
     );
   }
 

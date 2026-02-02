@@ -42,10 +42,8 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
       { hiragana: "よう", romanization: "you", meaning: "let's", exampleUsages: ["... [Verb-よう]。"] },
 
       // -ta
-      { hiragana: "たことがある", romanization: "-ta koto ga aru", meaning: "have done xxx (casual)", exampleUsages: ["[Verb-た] ことがある ..."] },
-      { hiragana: "たことがあります", romanization: "-ta koto ga arimasu", meaning: "have done xxx (polite)", exampleUsages: ["[Verb-た] ことがあります ..."] },
-      { hiragana: "たことがない", romanization: "-ta koto ga nai", meaning: "haven't done xxx (casual)", exampleUsages: ["[Verb-た] ことがない ..."] },
-      { hiragana: "たことがありません", romanization: "-ta koto ga arimasen", meaning: "haven't done xxx (polite)", exampleUsages: ["[Verb-た] ことがありません ..."] },
+      { hiragana: "ためしがない", preferredForm: "hiragana", kanjis: ["例がない"], romanization: "tameshiganai", meaning: "never accomplished", exampleUsages: ["[Verb-ta] ためしがないですよ"] },
+      { hiragana: "たことがある", romanization: "-ta koto ga aru", meaning: "has been done", exampleUsages: ["[Verb-ta] ことがある ..."] },
 
       // -te (-te [Verb])
       { hiragana: "-て", romanization: "-te", meaning: "please (spoken, casual)", exampleUsages: ["[Verb-て]！"] },

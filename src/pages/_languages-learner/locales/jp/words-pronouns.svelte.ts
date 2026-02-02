@@ -146,7 +146,7 @@ export function appendPronouns(words: JapaneseWord[]) {
       { kanjis: ["何事", "何ごと"], hiragana: "なにごと", romanization: "nanigoto", meaning: "what situation" },
       { hiragana: "どれ", rareKanjis: ["何れ"], romanization: "dore", meaning: "which" },
       { hiragana: "どの", rareKanjis: ["何の"], romanization: "dono", meaning: "which of", exampleUsages: ["どの [Noun]"] },
-      { hiragana: "どんな", romanization: "nna", meaning: "what kind of", exampleUsages: ["どんな [Noun] ..."] },
+      { hiragana: "どんな", romanization: "donna", meaning: "what kind of", exampleUsages: ["どんな [Noun] ..."] },
 
       { hiragana: "どうする", romanization: "dousuru", meaning: "what to do" },
     );
