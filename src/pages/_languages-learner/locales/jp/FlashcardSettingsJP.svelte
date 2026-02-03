@@ -51,11 +51,13 @@
             foodDrinks: { paramKey: "drinks", defaultValue: true },
             equipments: { paramKey: "equipments", defaultValue: true },
             transportation: { paramKey: "infrastructure", defaultValue: true },
+            arts: { paramKey: "arts", defaultValue: true },
           },
 
           moments: {
             timesOfDay: { paramKey: "timesOfDay", defaultValue: true },
             daysOfWeek: { paramKey: "daysOfWeek", defaultValue: true },
+            daysOfMonth: { paramKey: "daysOfMonth", defaultValue: true },
             months: { paramKey: "months", defaultValue: true },
             seasons: { paramKey: "seasons", defaultValue: true },
             festivals: { paramKey: "festivals", defaultValue: true },
@@ -77,7 +79,6 @@
             narration: { paramKey: "narration", defaultValue: true },
             math: { paramKey: "math", defaultValue: true },
             science: { paramKey: "science", defaultValue: true },
-            arts: { paramKey: "arts", defaultValue: true },
             activities: { paramKey: "activitiesNouns", defaultValue: true },
             videoGames: { paramKey: "videoGames", defaultValue: true },
           },
@@ -99,7 +100,6 @@
           },
           changes: {
             environmenal: { paramKey: "environ", defaultValue: true },
-            quantitative: { paramKey: "quant", defaultValue: true },
             resultative: { paramKey: "resultative", defaultValue: true },
           },
 
@@ -341,6 +341,7 @@
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.foodDrinks.value} label="Drinks" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.equipments.value} label="Equipments" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.transportation.value} label="Transportation" />
+        <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.arts.value} label="Arts" />
       </SettingsRow>
       <SettingsRow>
         <Highlighted onclick={onclick(flashcardSettings.words.nouns.moments)}>Moments:</Highlighted>
@@ -370,7 +371,6 @@
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.narration.value} label="Narration" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.math.value} label="Math" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.science.value} label="Science" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.arts.value} label="Arts" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.activities.value} label="Activities" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.videoGames.value} label="Video Games" />
       </SettingsRow>
@@ -444,7 +444,6 @@
         <Highlighted onclick={onclick(flashcardSettings.words.verbs.changes)}>Changes:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.changes.environmenal.value} label="Environmenal" />
-        <CheckboxInput bind:checked={flashcardSettings.words.verbs.changes.quantitative.value} label="Quantitative" />
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.changes.resultative.value} label="Resultative" />
       </SettingsRow>
 

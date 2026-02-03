@@ -52,15 +52,14 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "よ", romanization: "yo", meaning: "don't you know? (spoken, casual)", exampleUsages: ["[Clause] よ。", "[Clause] だよ。", "[Clause] よね。"] },
       { hiragana: "ね", romanization: "ne", meaning: "isn't it? (expressing feelings, spoken, casual)", exampleUsages: ["... ですね。", "[Adj.] ね。"] },
       // TODO: yone
+
       { hiragana: "なあ", romanization: "naa", meaning: '("I think") - wow / I wonder (casual)', exampleUsages: ["[Clause] なあ。"] },
 
       { hiragana: "ちょっと", rareKanjis: ["一寸"], katakana: "チョット", romanization: "chotto", meaning: "a bit (casual, intensity)", exampleUsages: ["ちょっと難し", "あとちょっと (just a bit more)"] },
-
       { kanjis: ["多分"], hiragana: "たぶん", romanization: "tabun", meaning: "probably" },
 
       { hiragana: "と思う。", romanization: "to omou", meaning: "I think (casual)", exampleUsages: ["[Clause] と思う。", "[Clause] と思います。", "[Clause] と思っている。"] },
       { hiragana: "と思わない？", romanization: "to omowanai", meaning: "don't you think? (casual)", exampleUsages: ["[Verb] と思わない？", "[Noun] だと思わない？", "[i-Adj.] と思わない？", "[na-Adj.] だと思わない？"] },
-
       { hiragana: "ということだ", preferredForm: "hiragana", kanjis: ["と言うことだ"], romanization: "toiukotoda", meaning: "as rumoured" },
       { hiragana: "って", romanization: "tte", meaning: "as someone said / as I heard", derivedMeanings: ["you really mean it?"], exampleUsages: ["すごいって (I heard it is amazing)", "って言っていた (it is said that)"] },
     );
@@ -75,7 +74,7 @@ export function appendExpressions(words: JapaneseWord[]) {
 
       { hiragana: "だから", romanization: "dakara", meaning: "Told you already!" },
 
-      { hiragana: "どうも", romanization: "doumo", meaning: "very", exampleUsages: ["どうも ありがとう ございます (thank you very much)"] },
+      { hiragana: "どうも", romanization: "doumo", meaning: "very", derivedMeanings: ["thanks"], exampleUsages: ["どうもありがとうございます (thank you very much)"] },
       { hiragana: "もちろん", preferredForm: "hiragana", kanjis: ["勿論"], romanization: "mochiron", meaning: "of course", exampleUsages: ["もちろん！", "A はもちろん B も ... (B ..., not to mention A)"] },
       { kanjis: ["本当に"], hiragana: "ほんとうに", romanization: "hontouni", meaning: "really" },
 
@@ -112,6 +111,7 @@ export function appendExpressions(words: JapaneseWord[]) {
     words.push(
       //
       { hiragana: "ください", preferredForm: "hiragana", kanjis: ["下さい"], romanization: "kudasai", meaning: "please give me (polite)", exampleUsages: ["お [Noun] をください。", "[Noun] を {(counter)} ください。"] },
+      { hiragana: "どうぞ", romanization: "douso", meaning: "please / kindly" },
       { hiragana: "ほしい", preferredForm: "hiragana", kanjis: ["欲しい"], romanization: "hoshii", meaning: "I want xxx (casual)", exampleUsages: ["[Noun] がほしいです。"] },
       { hiragana: "ませんか？", romanization: "masen ka", meaning: "will you?", exampleUsages: ["[Verb-ます (dropped)] ませんか？"] },
       { hiragana: "ましょうか？", romanization: "mashou ka", meaning: "shall I? (assuming yes)", exampleUsages: ["[Verb-ます (dropped)] ましょうか？"] },

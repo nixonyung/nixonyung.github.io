@@ -128,13 +128,15 @@ export function appendPronouns(words: JapaneseWord[]) {
       { kanjis: ["何にも"], hiragana: "なににも", romanization: "naninimo", meaning: "everything (in negative sentence)" },
       { kanjis: ["何事も", "何ごとも"], hiragana: "なにごとも", romanization: "nanigotomo", meaning: "everything" },
       { kanjis: ["全て"], rareKanjis: ["総て", "凡て", "惣て", "渾て"], hiragana: "すべて", romanization: "subete", meaning: "everything / all" },
+      { kanjis: ["他", "外"], hiragana: "ほか", romanization: "hoka", meaning: "the other one" },
     );
   }
 
   if (flashcardSettings.words.pronouns.interrogativeWho.value) {
     words.push(
       //
-      { kanjis: ["誰"], hiragana: "だれ", romanization: "dare", meaning: "who" },
+      { kanjis: ["誰"], hiragana: "だれ", romanization: "dare", meaning: "who (casual)" },
+      { hiragana: "どなた", preferredForm: "hiragana", kanjis: ["何方"], romanization: "donata", meaning: "who (formal)" },
       { kanjis: ["何者", "何もの"], hiragana: "なにもの", romanization: "nanimono", meaning: "what kind of person" },
     );
   }
@@ -144,7 +146,7 @@ export function appendPronouns(words: JapaneseWord[]) {
       { hiragana: "なに", preferredForm: "hiragana", kanjis: ["何"], katakana: "ナニ", romanization: "nani", meaning: "what" },
       { kanjis: ["何の"], hiragana: "なんの", romanization: "nanno", meaning: "what kind of" },
       { kanjis: ["何事", "何ごと"], hiragana: "なにごと", romanization: "nanigoto", meaning: "what situation" },
-      { hiragana: "どれ", rareKanjis: ["何れ"], romanization: "dore", meaning: "which" },
+      { hiragana: "どれ", rareKanjis: ["何れ"], romanization: "dore", meaning: "which (of 3 or more)" },
       { hiragana: "どの", rareKanjis: ["何の"], romanization: "dono", meaning: "which of", exampleUsages: ["どの [Noun]"] },
       { hiragana: "どんな", romanization: "donna", meaning: "what kind of", exampleUsages: ["どんな [Noun] ..."] },
 

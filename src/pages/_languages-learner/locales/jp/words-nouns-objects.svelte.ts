@@ -13,7 +13,12 @@ export function appendNounsObjects(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.objects.biological.value) {
     words.push(
       //
+      { kanjis: ["頭"], hiragana: "あたま", romanization: "atama", meaning: "head" },
+      { kanjis: ["髪"], hiragana: "かみ", romanization: "kami", meaning: "hair" },
+      { kanjis: ["鼻"], hiragana: "はな", romanization: "hana", meaning: "nose" },
+      { kanjis: ["歯"], hiragana: "は", romanization: "ha", meaning: "tooth" },
       { kanjis: ["手"], hiragana: "て", romanization: "te", meaning: "hand / arm" },
+      { kanjis: ["足", "脚", "肢"], hiragana: "あし", romanization: "ashi", meaning: "foot / leg" },
       { kanjis: ["お腹"], rareKanjis: ["お中"], hiragana: "おなか", romanization: "onaka", meaning: "belly / stomach" },
       { katakana: "ティアー", romanization: "tiaa", meaning: "tear" },
     );
@@ -76,12 +81,21 @@ export function appendNounsObjects(words: JapaneseWord[]) {
     words.push(
       { kanjis: ["食べ物"], hiragana: "たべもの", romanization: "tabemono", meaning: "food" },
 
-      { kanjis: ["寿司", "鮨"], rareKanjis: ["鮓"], hiragana: "すし", romanization: "sushi", meaning: "sushi" },
+      { kanjis: ["肉"], hiragana: "にく", romanization: "niku", meaning: "meat" },
+      { kanjis: ["鶏肉"], hiragana: "とりにく", romanization: "toriniku", meaning: "chicken meat" },
+      { kanjis: ["豚肉"], hiragana: "ぶたにく", romanization: "butaniku", meaning: "pork" },
+      { kanjis: ["牛肉"], hiragana: "ぎゅうにく", romanization: "gyuuniku", meaning: "beef" },
 
-      { kanjis: ["野菜"], hiragana: "やさい", romanization: "yasai", meaning: "vegetables", derivedMeanings: ["marijuana"] },
+      { kanjis: ["野菜"], hiragana: "やさい", romanization: "yasai", meaning: "vegetables" },
+
+      { kanjis: ["牛乳"], hiragana: "ぎゅうにゅう", romanization: "gyuunyuu", meaning: "cow's milk" },
+      { katakana: "バター", romanization: "bataa", meaning: "butter" },
+
+      { kanjis: ["寿司", "鮨"], rareKanjis: ["鮓"], hiragana: "すし", romanization: "sushi", meaning: "sushi" },
       { katakana: "カレー", romanization: "karii", meaning: "curry" },
 
       // dessert
+      { kanjis: ["飴"], hiragana: "あめ", romanization: "ame", meaning: "(hard) candy" },
       { kanjis: ["綿菓子"], hiragana: "わたがし", romanization: "watagashi", meaning: "cotton candy" },
       { katakana: "ケーキ", romanization: "keeki", meaning: "cake" },
       { katakana: "プリン", romanization: "purin", meaning: "pudding" },
@@ -105,40 +119,88 @@ export function appendNounsObjects(words: JapaneseWord[]) {
 
       { kanjis: ["服"], hiragana: "ふく", romanization: "fuku", meaning: "clothes" },
       { kanjis: ["衣類"], hiragana: "いるい", romanization: "irui", meaning: "clothes" },
+      { kanjis: ["帽子"], hiragana: "ぼうし", romanization: "boushi", meaning: "hat" },
       { katakana: "シャツ", romanization: "shatsu", meaning: "shirt" },
       { katakana: "ボタン", romanization: "botan", meaning: "button (clothing / machinery)" },
+      { katakana: "ハンカチ", romanization: "hankachi", meaning: "handkerchief" },
 
       { katakana: "トイレットペーパー", romanization: "toirettopeepaa", meaning: "toilet paper" },
 
-      { kanjis: ["箱"], rareKanjis: ["函", "匣", "筥", "筐", "凾"], hiragana: "はこ", katakana: "ハコ", romanization: "hako", meaning: "box" },
-      { kanjis: ["袋"], rareKanjis: ["嚢"], hiragana: "ふくろ", romanization: "fukuro", meaning: "bag" },
+      { kanjis: ["箸"], hiragana: "はし", romanization: "hashi", meaning: "chopsticks" },
+      { katakana: "フォーク", romanization: "fooku", meaning: "fork" },
+
       { hiragana: "かばん", preferredForm: "hiragana", katakana: "カバン", kanjis: ["鞄"], romanization: "kaban", meaning: "bag / basket" },
+      { kanjis: ["器"], hiragana: "うつわ", romanization: "utsuwa", meaning: "container / vessel" },
+      { kanjis: ["箱"], rareKanjis: ["函", "匣", "筥", "筐", "凾"], hiragana: "はこ", katakana: "ハコ", romanization: "hako", meaning: "box" },
+      { kanjis: ["本棚"], hiragana: "ほんだな", romanization: "hondana", meaning: "bookshelf" },
+      { kanjis: ["袋"], rareKanjis: ["嚢"], hiragana: "ふくろ", romanization: "fukuro", meaning: "bag" },
+      { kanjis: ["碗"], rareKanjis: ["盌"], hiragana: "わん", romanization: "wan", meaning: "bowl" },
+      { kanjis: ["茶碗", "茶わん"], hiragana: "ちゃわん", romanization: "chawan", meaning: "tea cup" },
+      { kanjis: ["灰皿"], hiragana: "はいざら", romanization: "haizara", meaning: "ashtray" },
 
       { kanjis: ["傘"], hiragana: "かさ", romanization: "kasa", meaning: "umbrella" },
 
-      { kanjis: ["本"], hiragana: "ほん", romanization: "hon", meaning: "book" },
-
-      { katakana: "カメラ", romanization: "kamera", meaning: "camera" },
-      { katakana: "キャメラ", romanization: "kyamera", meaning: "camera" },
-      { katakana: "スマートフォン", romanization: "sumaatofon", meaning: "smartphone" },
-      { katakana: "スマホ", romanization: "sumaho", meaning: "smartphone" },
-
-      { kanjis: ["地図"], hiragana: "ちず", romanization: "chizu", meaning: "map" },
-
+      { kanjis: ["紙"], hiragana: "かみ", romanization: "kami", meaning: "paper" },
       { kanjis: ["切符"], hiragana: "きっぷ", romanization: "kippu", meaning: "ticket" },
       { katakana: "チケット", romanization: "chiketto", meaning: "ticket" },
+      { kanjis: ["地図"], hiragana: "ちず", romanization: "chizu", meaning: "map" },
+      { kanjis: ["壁紙"], hiragana: "かべがみ", romanization: "kabegami", meaning: "wallpaper", derivedMeanings: ["background image"] },
+      { kanjis: ["葉書", "葉書き"], rareKanjis: ["端書", "端書き", "羽書"], hiragana: "はがき", romanization: "hagaki", meaning: "postcard" },
+      { kanjis: ["封筒"], hiragana: "ふうとう", romanization: "fuutou", meaning: "envelope" },
+      { kanjis: ["本"], hiragana: "ほん", romanization: "hon", meaning: "book" },
 
-      { katakana: "ロボット", romanization: "robotto", meaning: "robot" },
+      { katakana: "ボールペン", romanization: "boorupen", meaning: "ballpoint pen" },
+
+      { kanjis: ["電気"], hiragana: "でんき", romanization: "denki", meaning: "electricity" },
       { kanjis: ["電池"], hiragana: "でんち", romanization: "denchi", meaning: "battery" },
+      { kanjis: ["電話"], hiragana: "でんわ", romanization: "denwa", meaning: "telephone", derivedMeanings: ["phone call"] },
+      { katakana: "スマートフォン", romanization: "sumaatofon", meaning: "smartphone" },
+      { katakana: "スマホ", romanization: "sumaho", meaning: "smartphone" },
+      { katakana: "カメラ", romanization: "kamera", meaning: "camera" },
+      { katakana: "キャメラ", romanization: "kyamera", meaning: "camera" },
+      { katakana: "ロボット", romanization: "robotto", meaning: "robot" },
+
+      { kanjis: ["番号"], hiragana: "ばんごう", romanization: "bangou", meaning: "series of digits" },
+      { kanjis: ["文章"], hiragana: "ぶんしょう", romanization: "bunshou", meaning: "article" },
+
+      // musical instruments
+      { katakana: "ギター", romanization: "kitaa", meaning: "guitar" },
     );
   }
 
   if (flashcardSettings.words.nouns.objects.transportation.value) {
     words.push(
       //
+      { katakana: "エスカレーター", romanization: "esukareetaa", meaning: "escalator" },
+      { katakana: "エレベーター", romanization: "erebeetaa", meaning: "elevator" },
+
       { katakana: "バス", romanization: "basu", meaning: "bus" },
       { kanjis: ["電車"], hiragana: "でんしゃ", romanization: "densha", meaning: "train" },
-      // TODO: escalator, elevator
+      { kanjis: ["地下鉄"], hiragana: "ちかてつ", romanization: "chikatetsu", meaning: "subway" },
+
+      { kanjis: ["飛行機"], hiragana: "ひこうき", romanization: "hikouki", meaning: "airplane" },
+    );
+  }
+
+  if (flashcardSettings.words.nouns.objects.arts.value) {
+    words.push(
+      // drawings
+      { kanjis: ["絵", "画"], hiragana: "え", romanization: "e", meaning: "picture" },
+      { kanjis: ["絵画"], hiragana: "かいが", romanization: "kaiga", meaning: "painting" },
+      { kanjis: ["写真"], hiragana: "しゃしん", romanization: "shashin", meaning: "photograph" },
+      { kanjis: ["漫画"], hiragana: "まんが", katakana: "マンガ", romanization: "manga", meaning: "manga" },
+      { katakana: "コンテ", romanization: "konte", meaning: 'storyboard ("continuity")', exampleUsages: ["絵コンテ / 画コンテ"] },
+
+      // music
+      { katakana: "アニメソング", romanization: "anime songu", meaning: "anime song" },
+      { katakana: "アニソン", romanization: "anison", meaning: "anime song" },
+      { katakana: "メドレー", romanization: "medorii", meaning: "medley" },
+
+      // cinematic
+      { kanjis: ["映画"], hiragana: "えいが", romanization: "eiga", meaning: "movie" },
+      { katakana: "フィルム", romanization: "firumu", meaning: "film" },
+      { katakana: "アニメ", romanization: "anime", meaning: "anime" },
+      { katakana: "アニメーション", romanization: "animeeshon", meaning: "animation" },
     );
   }
 }

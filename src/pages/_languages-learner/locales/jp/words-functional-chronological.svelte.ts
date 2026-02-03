@@ -17,11 +17,11 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { kanjis: ["今朝"], hiragana: "けさ", romanization: "kesa", meaning: "this morning" },
       { kanjis: ["今朝"], hiragana: "こんちょう", romanization: "konchou", meaning: "this morning" },
 
-      { kanjis: ["日"], hiragana: "ひ", romanization: "hi", meaning: "day" },
-      { kanjis: ["この日"], hiragana: "このひ", romanization: "konohi", meaning: "this day (emphasizing importance)" },
+      { kanjis: ["日"], hiragana: "ひ", romanization: "hi", meaning: "day", exampleUsages: ["この日 (this day, emphasizing importance)"] },
       { kanjis: ["今日"], hiragana: "きょう", romanization: "kyou", meaning: "today" },
       { kanjis: ["昨日"], hiragana: "きのう", romanization: "kinou", meaning: "yesterday" },
       { kanjis: ["明日"], hiragana: "あした", romanization: "ashita", meaning: "tomorrow" },
+      { kanjis: ["明後日"], hiragana: "あさって", romanization: "asatte", meaning: "the day after tomorrow" },
       { kanjis: ["この間"], hiragana: "このあいだ", romanization: "konoaida", meaning: "some other day" },
       { kanjis: ["初日"], hiragana: "しょにち", romanization: "shonichi", meaning: "the first day" },
 
@@ -40,6 +40,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { kanjis: ["また今度"], hiragana: "またこんど", romanization: "matakondo", meaning: "next time" },
       { kanjis: ["次"], hiragana: "つぎ", romanization: "tsugi", meaning: "next", exampleUsages: ["次のステップ"] },
       { kanjis: ["次回"], hiragana: "じかい", romanization: "jikai", meaning: "next time" },
+      { kanjis: ["初めて", "始めて", "甫めて"], hiragana: "はじめて", romanization: "hajimete", meaning: "for the first time" },
 
       { kanjis: ["前"], hiragana: "まえ", romanization: "mae", meaning: "previously (root word)" },
       { kanjis: ["以前"], rareKanjis: ["已前"], hiragana: "いぜん", romanization: "izen", meaning: "the past" },

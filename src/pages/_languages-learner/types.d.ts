@@ -33,9 +33,10 @@ export interface JapaneseWord {
 }
 
 export interface JapaneseVerb extends JapaneseWord {
-  verbGroup: "godan" | "ichidan" | "irregular";
-  // true | false
+  verbGroup: "Godan" | "Ichidan" | "Irregular";
   verbIsTransitive: boolean;
 }
 
-// TODO: JapaneseAdjective
+export interface JapaneseAdjective extends JapaneseWord {
+  adjGroup: "I" | "Na";
+}

@@ -5,12 +5,13 @@ export function appendNounsMoments(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.moments.timesOfDay.value) {
     words.push(
       { kanjis: ["朝"], hiragana: "あさ", romanization: "asa", meaning: "morning" },
-      { kanjis: ["午前"], hiragana: "ごぜん", romanization: "gozen", meaning: "morning", exampleUsages: ["午前中"] },
       { katakana: "モーニング", romanization: "mooningu", meaning: "morning" },
+      { kanjis: ["午前"], hiragana: "ごぜん", romanization: "gozen", meaning: "morning", exampleUsages: ["午前中"] },
 
       { kanjis: ["昼", "午"], hiragana: "ひる", romanization: "hiru", meaning: "noon" },
-      { kanjis: ["夕方", "夕がた"], hiragana: "ゆうがた", romanization: "yuugata", meaning: "dusk" },
+      { kanjis: ["午後"], hiragana: "ごご", romanization: "gogo", meaning: "afternoon" },
 
+      { kanjis: ["夕方", "夕がた"], hiragana: "ゆうがた", romanization: "yuugata", meaning: "dusk" },
       { kanjis: ["晩"], hiragana: "ばん", romanization: "ban", meaning: "evening" },
       { kanjis: ["夜"], hiragana: "よる", romanization: "yoru", meaning: "night" },
     );
@@ -29,7 +30,13 @@ export function appendNounsMoments(words: JapaneseWord[]) {
     );
   }
 
-  // TODO: months
+  if (flashcardSettings.words.nouns.moments.daysOfMonth.value) {
+    words.push(
+      //
+      { kanjis: ["２日", "二日"], hiragana: "ふつか", romanization: "futsuka", meaning: "2nd day of month" },
+    );
+  }
+
   if (flashcardSettings.words.nouns.moments.months.value) {
     words.push(
       //

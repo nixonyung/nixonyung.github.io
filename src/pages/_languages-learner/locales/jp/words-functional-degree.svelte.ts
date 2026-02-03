@@ -11,7 +11,8 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { hiragana: "めっちゃ", rareKanjis: ["滅茶"], romanization: "meccha", meaning: "very (casual, slang)" },
       { kanjis: ["非常に"], hiragana: "ひじょうに", romanization: "hijouni", meaning: "very (formal)" },
       { kanjis: ["大変", "大へん"], hiragana: "たいへん", romanization: "taihen", meaning: "very (formal, negative / sorry)" },
-      { kanjis: ["超"], hiragana: "ちょう", romanization: "chou", meaning: "super", exampleUsages: ["超xx"] },
+      { kanjis: ["大-"], hiragana: "だい", romanization: "dai-", meaning: "big / greatly", exampleUsages: ["大歓迎", "大家族"] },
+      { kanjis: ["超-"], hiragana: "ちょう", romanization: "chou-", meaning: "super", exampleUsages: ["超xx"] },
       { kanjis: ["極めて"], hiragana: "きわめて", romanization: "kiwamete", meaning: "extremely (formal)" },
       { kanjis: ["大いに"], hiragana: "おおいに", romanization: "ooini", meaning: "extremely (written, exaggerated)" },
 
@@ -27,22 +28,23 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       // superlative
       { kanjis: ["最も", "尤も"], hiragana: "もっとも", romanization: "mottomo", meaning: "the most" },
       { kanjis: ["一番", "１番"], hiragana: "いちばん", romanization: "ichiban", meaning: "xxx is the most xxx", exampleUsages: ["[Noun] は(が) 一番 [Verb / Adj.] です。"] },
-
-      // degree
-      { kanjis: ["何らか", "何等か"], hiragana: "なんらか", romanization: "nanraka", meaning: "somewhat" },
       { kanjis: ["何より"], hiragana: "なにより", romanization: "naniyori", meaning: "above anything else" },
+
+      // indefinite quantities (proportions)
+      { kanjis: ["何らか", "何等か"], hiragana: "なんらか", romanization: "nanraka", meaning: "somewhat" },
       { kanjis: ["何も"], hiragana: "なにも", romanization: "nanimo", meaning: "not at all" },
       { kanjis: ["何も"], hiragana: "なんも", romanization: "nanmo", meaning: "not at all (spoken)" },
-
-      // proportions
+      { kanjis: ["丁度"], hiragana: "ちょうど", romanization: "choudo", meaning: "exactly" },
       { hiragana: "だけ", preferredForm: "hiragana", kanjis: ["丈"], romanization: "dake", meaning: "only (in its entirety)" },
       { kanjis: ["全部"], hiragana: "ぜんぶ", romanization: "zenbu", meaning: "all (concrete items)" },
       { hiragana: "すべて", kanjis: ["全て"], rareKanjis: ["総て", "凡て", "惣て", "渾て"], romanization: "subete", meaning: "all (formal, for abstract concepts)" },
       { kanjis: ["全体"], hiragana: "ぜんたい", romanization: "zentai", meaning: "the whole thing (written, for abstract concepts)", exampleUsages: ["[Noun] 全体"] },
+      { kanjis: ["半分"], hiragana: "はんぶん", romanization: "hanbun", meaning: "half" },
       { hiragana: "ほとんど", preferredForm: "hiragana", kanjis: ["殆ど"], romanization: "hotondo", meaning: "most of" },
+      { hiragana: "だんだん", preferredForm: "hiragana", kanjis: ["段々", "段段"], romanization: "dandan", meaning: "gradually" },
       // TODO: each
 
-      // quantity
+      // definite quantities
       { kanjis: ["少し"], rareKanjis: ["寡し", "些し"], hiragana: "すこし", romanization: "sukoshi", meaning: "a little (amount)" },
       { hiragana: "もっと", romanization: "motto", meaning: "even more" },
       { kanjis: ["多く"], hiragana: "おおく", romanization: "ooku", meaning: "many / much" },
@@ -57,6 +59,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       // TODO: counters
       { kanjis: ["一杯", "１杯"], hiragana: "いっぱい", romanization: "ippai", meaning: "one cup", derivedMeanings: ["full / many / much"] },
       { kanjis: ["一周"], hiragana: "いっしゅう", romanization: "isshuu", meaning: "one lap" },
+      { katakana: "グラム", rareKanjis: ["瓦"], romanization: "guramu", meaning: "gram" },
 
       // interrogative
       { kanjis: ["何人"], hiragana: "なんにん", romanization: "nannin", meaning: "how many people" },

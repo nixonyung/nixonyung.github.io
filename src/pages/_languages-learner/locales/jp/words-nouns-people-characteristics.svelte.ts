@@ -4,12 +4,12 @@ import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.people.byCharacteristics.generic.value) {
     words.push(
+      //
       { kanjis: ["人"], hiragana: "ひと", katakana: "ヒト", romanization: "hito", meaning: "person" },
       { kanjis: ["人々", "人びと"], hiragana: "ひとびと", romanization: "hitobito", meaning: "people" },
       { kanjis: ["他人"], hiragana: "たにん", romanization: "tanin", meaning: "others" },
       { kanjis: ["人物"], hiragana: "じんぶつ", romanization: "jinbutsu", meaning: "character / a notable person" },
-
-      { kanjis: ["一人", "１人", "独り"], hiragana: "ひとり", romanization: "hitori", meaning: "one person" },
+      { kanjis: ["外国人"], hiragana: "がいこくじん", romanization: "gaikokujin", meaning: "foreigner" },
     );
   }
 
@@ -52,6 +52,8 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.nouns.people.byCharacteristics.professions.value) {
     words.push(
+      { kanjis: ["学生"], hiragana: "がくせい", romanization: "gakusei", meaning: "student" },
+
       { kanjis: ["食通"], hiragana: "しょくつう", romanization: "shokutsuu", meaning: "gourmet / foodie" },
       { katakana: "グルメ", romanization: "gurume", meaning: "gourmet" },
 
