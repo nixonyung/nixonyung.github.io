@@ -68,6 +68,7 @@
             generic: { paramKey: "genericVenues", defaultValue: true },
             facilities: { paramKey: "facilities", defaultValue: true },
             shops: { paramKey: "shops", defaultValue: true },
+            communities: { paramKey: "communities", defaultValue: true },
             regions: { paramKey: "regions", defaultValue: true },
             imaginary: { paramKey: "imagVenues", defaultValue: true },
           },
@@ -119,7 +120,19 @@
         // Origin: Describes where something is from (e.g., Italian, American, Chinese, Southern).
         // Material: Describes what something is made of (e.g., wooden, silk, metal, plastic).
         // Purpose: Describes what the noun is used for, often a noun functioning as an adjective (e.g., cooking in "cooking pot", running in "running shoes", tennis in "tennis shoes").
-        adjectives: { paramKey: "adjs", defaultValue: true },
+        // adjectives: { paramKey: "adjs", defaultValue: true },
+        adjectives: {
+          affections: { paramKey: "affections", defaultValue: true },
+          sensations: { paramKey: "sensations", defaultValue: true },
+          appearances: { paramKey: "appearances", defaultValue: true },
+          skillfulness: { paramKey: "skillfulness", defaultValue: true },
+          personalities: { paramKey: "personalities", defaultValue: true },
+          descriptive: { paramKey: "descriptiveAdjs", defaultValue: true },
+          chronological: { paramKey: "chronologicalAdjs", defaultValue: true },
+          locational: { paramKey: "locationalAdjs", defaultValue: true },
+          measurements: { paramKey: "measurements", defaultValue: true },
+          miscellaneous: { paramKey: "miscAdjs", defaultValue: true },
+        },
 
         functional: {
           adpositions: { paramKey: "adpositions", defaultValue: true },
@@ -469,7 +482,16 @@
       </SettingsRowsBordered>
 
       <SettingsRow>
-        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.value} label="(all)" />
+        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.affections.value} label="Affections" />
+        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.sensations.value} label="Sensations" />
+        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.appearances.value} label="Appearances" />
+        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.skillfulness.value} label="Skillfulness" />
+        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.personalities.value} label="Personalities" />
+        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.descriptive.value} label="Descriptive" />
+        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.chronological.value} label="Chronological" />
+        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.locational.value} label="Locational" />
+        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.measurements.value} label="Measurements" />
+        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.miscellaneous.value} label="(misc.)" />
       </SettingsRow>
     </SettingsRows>
   </SettingsSection>

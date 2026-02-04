@@ -44,14 +44,15 @@ export function appendVerbsDescriptive(words: JapaneseWord[]) {
     verbs.push(
       { hiragana: "する", rareKanjis: ["為る"], romanization: "suru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "do / carry out", derivedMeanings: ["choose", "pickpocket"], exampleUsages: ["せールをする (on sale)", "ゲームをする (play a game)", "これにします (choose this)"] },
       { hiragana: "やる", rareKanjis: ["遣る"], romanization: "yaru", verbGroup: "Godan", verbIsTransitive: true, meaning: "undertake" },
-      { kanjis: ["試す"], rareKanjis: ["験す"], hiragana: "ためす", romanization: "tamesu", verbGroup: "Godan", verbIsTransitive: true, meaning: "try (casual)" },
-      { kanjis: ["試みる"], hiragana: "こころみる", romanization: "kokoromiru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "try (formal)" },
-      { kanjis: ["待つ"], rareKanjis: ["俟つ"], hiragana: "まつ", romanization: "matsu", verbGroup: "Godan", verbIsTransitive: false, meaning: "wait" },
-      { kanjis: ["急ぐ"], hiragana: "いそぐ", romanization: "isogu", verbGroup: "Godan", verbIsTransitive: false, meaning: "hurry" },
+      { kanjis: ["取り掛かる", "取りかかる"], hiragana: "とりかかる", romanization: "torikakaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "start" },
       { kanjis: ["起こす", "起す"], hiragana: "おこす", romanization: "okosu", verbGroup: "Godan", verbIsTransitive: true, meaning: "cause / start", derivedMeanings: ["wake someone up", "raise", "set up", "vitalize"] },
       { kanjis: ["起こる", "起る"], hiragana: "おこる", romanization: "okoru", verbGroup: "Godan", verbIsTransitive: false, meaning: "occur" },
       { kanjis: ["始まる"], hiragana: "はじまる", romanization: "hajimaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "begin", exampleUsages: ["で始まる"] },
+
+      { kanjis: ["待つ"], rareKanjis: ["俟つ"], hiragana: "まつ", romanization: "matsu", verbGroup: "Godan", verbIsTransitive: false, meaning: "wait" },
       { kanjis: ["頑張る"], hiragana: "がんばる", romanization: "ganbaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "persist / keep up" },
+      { kanjis: ["急ぐ"], hiragana: "いそぐ", romanization: "isogu", verbGroup: "Godan", verbIsTransitive: false, meaning: "hurry" },
+
       { kanjis: ["終わる", "終る"], rareKanjis: ["了る", "卒る", "畢る", "竟る"], hiragana: "おわる", romanization: "owaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "finish", exampleUsages: ["で終わる", "宿題終わった"] },
       { hiragana: "しまう", rareKanjis: ["仕舞う", "終う", "了う", "蔵う"], romanization: "shimau", verbGroup: "Godan", verbIsTransitive: true, meaning: "finish", derivedMeanings: ["shut down", "put away"] },
     );

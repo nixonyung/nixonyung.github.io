@@ -12,6 +12,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["人生観"], hiragana: "じんせいかん", romanization: "jinseikan", meaning: "view of life" },
       { kanjis: ["見晴らし"], hiragana: "みはらし", romanization: "miharashi", meaning: "view" },
 
+      { kanjis: ["時間"], hiragana: "じかん", romanization: "jikan", meaning: "time" },
       { kanjis: ["二十歳"], hiragana: "はたち", romanization: "hatachi", meaning: "20 years old" },
 
       { kanjis: ["気持ち", "気持"], hiragana: "きもち", romanization: "kimochi", meaning: "feeling" },
@@ -115,8 +116,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["学習"], hiragana: "がくしゅう", romanization: "gakushuu", meaning: "study" },
       { kanjis: ["勉強"], hiragana: "べんきょう", romanization: "benkyou", meaning: "dedication", derivedMeanings: ["study"] },
       { kanjis: ["習得", "修得"], hiragana: "しゅうとく", romanization: "shuutoku", meaning: "mastering a skill" },
-      { kanjis: ["授業"], hiragana: "じゅぎょう", romanization: "jugyou", meaning: "class" },
-      { kanjis: ["授業中"], hiragana: "じゅぎょうちゅう", romanization: "jugyouchuu", meaning: "in class" },
+      { kanjis: ["授業"], hiragana: "じゅぎょう", romanization: "jugyou", meaning: "lesson" },
+      { kanjis: ["授業中"], hiragana: "じゅぎょうちゅう", romanization: "jugyouchuu", meaning: "in lesson" },
       { katakana: "クラス", romanization: "kurasu", meaning: "class" },
       { kanjis: ["質問"], hiragana: "しつもん", romanization: "shitsumon", meaning: "inquiry" },
       { kanjis: ["宿題"], hiragana: "しゅくだい", romanization: "shukudai", meaning: "homework" },
@@ -215,18 +216,6 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["日本語"], hiragana: "にほんご", romanization: "nihongo", meaning: "the Japanese language" },
       { kanjis: ["中国語"], hiragana: "ちゅうごくご", romanization: "chuugokugo", meaning: "the Chinese language" },
       { kanjis: ["英語"], hiragana: "えいご", romanization: "eigo", meaning: "the English language" },
-
-      { kanjis: ["辞書"], hiragana: "じしょ", romanization: "jisho", meaning: "dictionary" },
-      { kanjis: ["辞典"], hiragana: "じてん", romanization: "jiten", meaning: "dictionary" },
-      { kanjis: ["事典"], hiragana: "じてん", romanization: "jiten", meaning: "encyclopedia" },
-      { kanjis: ["字典"], hiragana: "じてん", romanization: "jiten", meaning: "Kanji dictionary" },
-      { kanjis: ["文字典"], hiragana: "もじてん", romanization: "mojiten", meaning: "Kanji dictionary" },
-
-      { kanjis: ["索引"], hiragana: "さくいん", romanization: "sakuin", meaning: "index" },
-      { katakana: "マッピング", romanization: "mappingu", meaning: "mapping (creating associations)" },
-      { katakana: "カテゴリ", romanization: "kategori", meaning: "category" },
-      { katakana: "キーワード", romanization: "kiiwaado", meaning: "keyword" },
-      { katakana: "ポイント", romanization: "pointo", meaning: "point" },
     );
   }
 
@@ -271,6 +260,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["ただ乗り", "タダ乗り"], rareKanjis: ["只乗り"], hiragana: "ただのり", romanization: "tadanori", meaning: "free loading" },
 
       { kanjis: ["試合"], hiragana: "しあい", romanization: "shiai", meaning: "match / contest" },
+
+      { kanjis: ["買い物", "買物"], hiragana: "かいもの", romanization: "kaimono", meaning: "shopping" },
 
       { kanjis: ["撮影"], hiragana: "さつえい", romanization: "satsuei", meaning: "photography", derivedMeanings: ["filming"] },
       { kanjis: ["密着"], hiragana: "みっちゃく", romanization: "micchaku", meaning: "sticking closely", exampleUsages: ["密着撮影"] },

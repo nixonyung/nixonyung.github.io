@@ -8,6 +8,7 @@ export function appendNounsAnimals(words: JapaneseWord[]) {
       { kanjis: ["動物"], hiragana: "どうぶつ", romanization: "doubutsu", meaning: "animal" },
 
       { kanjis: ["猫"], hiragana: "ねこ", katakana: "ネコ", romanization: "neko", meaning: "cat" },
+      { kanjis: ["犬", "狗"], hiragana: "いぬ", katakana: "イヌ", romanization: "inu", meaning: "dog" },
     );
   }
 }

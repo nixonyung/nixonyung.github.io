@@ -93,6 +93,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { hiragana: "くれる", rareKanjis: ["呉れる"], romanization: "kureru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "give to me / us" },
       { hiragana: "くださる", preferredForm: "hiragana", kanjis: ["下さる"], romanization: "kudasaru", verbGroup: "Godan", verbIsTransitive: true, meaning: "bestow me / us (very polite)" },
       { hiragana: "もらう", preferredForm: "hiragana", kanjis: ["貰う"], romanization: "morau", verbGroup: "Godan", verbIsTransitive: true, meaning: "receive" },
+      { hiragana: "かかる", preferredForm: "hiragana", kanjis: ["掛かる", "掛る"], rareKanjis: ["懸かる", "懸る"], romanization: "kakaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "take (time/money/resource)", derivedMeanings: ["hang"] },
       { kanjis: ["頼む"], rareKanjis: ["恃む", "憑む"], hiragana: "たのむ", romanization: "tanomu", verbGroup: "Godan", verbIsTransitive: true, meaning: "depend", derivedMeanings: ["request"], exampleUsages: ["生活費を親に頼っている"] },
       { kanjis: ["買う"], hiragana: "かう", romanization: "kau", verbGroup: "Godan", verbIsTransitive: true, meaning: "buy", exampleUsages: ["コーラを買う"] },
 
@@ -191,8 +192,10 @@ export function appendVerbsActions(words: JapaneseWord[]) {
   if (flashcardSettings.words.verbs.actions.activities.value) {
     verbs.push(
       // generic
-      { kanjis: ["働く"], hiragana: "はたらく", romanization: "hataraku", verbGroup: "Godan", verbIsTransitive: false, meaning: "work" },
       { kanjis: ["遊ぶ"], hiragana: "あそぶ", romanization: "asobu", verbGroup: "Godan", verbIsTransitive: false, meaning: "play (games / sports)", derivedMeanings: ["have fun"] },
+      { kanjis: ["試す"], rareKanjis: ["験す"], hiragana: "ためす", romanization: "tamesu", verbGroup: "Godan", verbIsTransitive: true, meaning: "try (casual)" },
+      { kanjis: ["試みる"], hiragana: "こころみる", romanization: "kokoromiru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "try (formal)" },
+      { kanjis: ["働く"], hiragana: "はたらく", romanization: "hataraku", verbGroup: "Godan", verbIsTransitive: false, meaning: "work" },
       { kanjis: ["扱う"], hiragana: "あつかう", romanization: "atsukau", verbGroup: "Godan", verbIsTransitive: true, meaning: "deal / handle" },
       { kanjis: ["挙げる"], hiragana: "あげる", romanization: "ageru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "propose / suggest", derivedMeanings: ["hold an event"] },
       { kanjis: ["用いる"], hiragana: "もちいる", romanization: "mochiiru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "use / utilize" },

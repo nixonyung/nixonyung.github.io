@@ -8,23 +8,12 @@ export function appendNounsVenues(words: JapaneseWord[]) {
       { kanjis: ["地方"], hiragana: "ちほう", romanization: "chihou", meaning: "area / region" },
       { kanjis: ["名所"], hiragana: "などころ", romanization: "nadokoro", meaning: "famous place" },
 
-      { kanjis: ["穴", "孔"], hiragana: "あな", romanization: "ana", meaning: "hole / pit" },
       { kanjis: ["周辺"], hiragana: "しゅうへん", romanization: "shuuhen", meaning: "neighboring area" },
 
-      // indoor locations
-      { kanjis: ["出口"], hiragana: "でぐち", romanization: "deguchi", meaning: "exit / way out" },
-      { katakana: "ドア", romanization: "doa", meaning: "door" },
-      { kanjis: ["玄関"], hiragana: "げんかん", romanization: "genkan", meaning: "entrance" },
+      // shapes
+      { kanjis: ["穴", "孔"], hiragana: "あな", romanization: "ana", meaning: "hole / pit" },
       { kanjis: ["壁"], hiragana: "かべ", romanization: "kabe", meaning: "wall" },
-
-      // societies
-      { kanjis: ["道", "途", "路", "径"], hiragana: "みち", romanization: "michi", meaning: "road / path" },
-      { kanjis: ["村"], hiragana: "むら", romanization: "mura", meaning: "village" },
-      { kanjis: ["都市"], hiragana: "とし", romanization: "toshi", meaning: "city" },
-      { kanjis: ["国", "邦"], hiragana: "くに", romanization: "kuni", meaning: "country" },
-
-      { kanjis: ["地元"], hiragana: "じもと", romanization: "jimoto", meaning: "home area", exampleUsages: ["地元の"] },
-      { kanjis: ["外国"], hiragana: "がいこく", romanization: "gaikoku", meaning: "foreign country" },
+      { kanjis: ["角"], hiragana: "かど", romanization: "kado", meaning: "corner" },
     );
   }
 
@@ -42,7 +31,14 @@ export function appendNounsVenues(words: JapaneseWord[]) {
       { kanjis: ["家"], hiragana: "いえ", romanization: "ie", meaning: "home / house" },
       { katakana: "アパート", romanization: "apaato", meaning: "apartment" },
 
+      { katakana: "ドア", romanization: "doa", meaning: "door" },
+      { kanjis: ["玄関"], hiragana: "げんかん", romanization: "genkan", meaning: "entrance" },
+      { kanjis: ["入り口", "入口"], hiragana: "いりぐち", romanization: "iriguchi", meaning: "entrance" },
+      { kanjis: ["出口"], hiragana: "でぐち", romanization: "deguchi", meaning: "exit / way out" },
+
+      { kanjis: ["階段"], hiragana: "かいだん", romanization: "kaidan", meaning: "stairs" },
       { kanjis: ["橋"], hiragana: "はし", romanization: "hashi", meaning: "bridge" },
+      { kanjis: ["池"], hiragana: "いけ", romanization: "ike", meaning: "pond" },
       { hiragana: "ほとり", preferredForm: "hiragana", kanjis: ["辺", "畔"], romanization: "hotori", meaning: "shore" },
 
       { kanjis: ["学校"], hiragana: "がっこう", romanization: "gakkou", meaning: "school" },
@@ -71,6 +67,19 @@ export function appendNounsVenues(words: JapaneseWord[]) {
       { katakana: "コンビニ", romanization: "konbini", meaning: "convenience store" },
       { katakana: "ホテル", romanization: "hoteru", meaning: "hotel" },
       { kanjis: ["映画館"], hiragana: "えいがかん", romanization: "eigakan", meaning: "movie theatre" },
+    );
+  }
+
+  if (flashcardSettings.words.nouns.venues.communities.value) {
+    words.push(
+      //
+      { kanjis: ["道", "途", "路", "径"], hiragana: "みち", romanization: "michi", meaning: "road / path" },
+      { kanjis: ["村"], hiragana: "むら", romanization: "mura", meaning: "village" },
+      { kanjis: ["都市"], hiragana: "とし", romanization: "toshi", meaning: "city" },
+      { kanjis: ["国", "邦"], hiragana: "くに", romanization: "kuni", meaning: "country" },
+
+      { kanjis: ["地元"], hiragana: "じもと", romanization: "jimoto", meaning: "home area", exampleUsages: ["地元の"] },
+      { kanjis: ["外国"], hiragana: "がいこく", romanization: "gaikoku", meaning: "foreign country" },
     );
   }
 

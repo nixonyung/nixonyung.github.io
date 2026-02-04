@@ -61,6 +61,9 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
 
       { katakana: "メーカー", romanization: "meekaa", meaning: "maker" },
       { katakana: "アニメーター", romanization: "animeetaa", meaning: "animator" },
+
+      { kanjis: ["医者"], hiragana: "いしゃ", romanization: "isha", meaning: "doctor" },
+      { kanjis: ["医師"], hiragana: "いし", romanization: "ishi (formal)", meaning: "doctor" },
     );
   }
 

@@ -42,19 +42,24 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { kanjis: ["半分"], hiragana: "はんぶん", romanization: "hanbun", meaning: "half" },
       { hiragana: "ほとんど", preferredForm: "hiragana", kanjis: ["殆ど"], romanization: "hotondo", meaning: "most of" },
       { hiragana: "だんだん", preferredForm: "hiragana", kanjis: ["段々", "段段"], romanization: "dandan", meaning: "gradually" },
-      // TODO: each
-
-      // definite quantities
       { kanjis: ["少し"], rareKanjis: ["寡し", "些し"], hiragana: "すこし", romanization: "sukoshi", meaning: "a little (amount)" },
       { hiragana: "もっと", romanization: "motto", meaning: "even more" },
       { kanjis: ["多く"], hiragana: "おおく", romanization: "ooku", meaning: "many / much" },
       { kanjis: ["大分"], hiragana: "だいぶ", romanization: "daibu", meaning: "a lot" },
       { hiragana: "たくさん", preferredForm: "hiragana", kanjis: ["沢山"], romanization: "takusan", meaning: "a lot / much", exampleUsages: ["たくさん勉強します"] },
       { hiragana: "まだまだ", preferredForm: "hiragana", kanjis: ["未だ未だ"], romanization: "madamada", meaning: "not done yet" },
+      { hiragana: "いくつか", preferredForm: "hiragana", kanjis: ["幾つか"], romanization: "ikutsuka", meaning: "some / a few" },
+      { hiragana: "いくつも", preferredForm: "hiragana", kanjis: ["幾つも"], romanization: "ikutsumo", meaning: "many / much" },
+      { hiragana: "いくらか", preferredForm: "hiragana", kanjis: ["幾らか"], romanization: "ikuraka", meaning: "some / a little" },
+      { hiragana: "いくらも", preferredForm: "hiragana", kanjis: ["幾らも"], romanization: "ikuramo", meaning: "many" },
       { hiragana: "うんと", romanization: "unto", meaning: "much (spoken, used by women)" },
       { hiragana: "ほとんど", preferredForm: "hiragana", kanjis: ["殆ど"], rareKanjis: ["幾ど"], romanization: "hotondo", meaning: "nearly all" },
+      // TODO: each
+
+      // definite quantities
       // TODO: numbers
       { kanjis: ["二つ"], hiragana: "ふたつ", romanization: "futatsu", meaning: "two", exampleUsages: ["二つの [Noun]"] },
+      { kanjis: ["１００円"], hiragana: "ひゃくえん", romanization: "hyakuen", meaning: "100 yen" },
       { kanjis: ["就き"], hiragana: "つき", romanization: "tsuki", meaning: "per" },
       // TODO: counters
       { kanjis: ["一杯", "１杯"], hiragana: "いっぱい", romanization: "ippai", meaning: "one cup", derivedMeanings: ["full / many / much"] },
@@ -63,6 +68,8 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
 
       // interrogative
       { kanjis: ["何人"], hiragana: "なんにん", romanization: "nannin", meaning: "how many people" },
+      { hiragana: "いくつ", preferredForm: "hiragana", kanjis: ["幾つ"], romanization: "ikutsu", meaning: "how many" },
+      { hiragana: "いくら", preferredForm: "hiragana", kanjis: ["幾ら"], romanization: "ikura", meaning: "how much" },
       { kanjis: ["何度"], hiragana: "なんど", romanization: "nando", meaning: "how many times / how many degrees" },
     );
   }
