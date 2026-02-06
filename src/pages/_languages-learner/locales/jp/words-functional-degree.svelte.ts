@@ -57,14 +57,22 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       // TODO: each
 
       // definite quantities
-      // TODO: numbers
+      // TODO: numbers / counters
+      { kanjis: ["千", "阡", "仟"], hiragana: "せん", romanization: "sen", meaning: "thousand (1,000)" },
+      { kanjis: ["万"], hiragana: "まん", romanization: "man", meaning: "ten thousand (10,000)" },
+      { kanjis: ["零"], hiragana: "れい", romanization: "rei", meaning: "zero" },
       { kanjis: ["二つ"], hiragana: "ふたつ", romanization: "futatsu", meaning: "two", exampleUsages: ["二つの [Noun]"] },
+      { kanjis: ["一人", "独り"], hiragana: "ひとり", romanization: "hitori", meaning: "one person" },
+      { kanjis: ["二人"], hiragana: "ふたり", romanization: "futari", meaning: "two people" },
       { kanjis: ["１００円"], hiragana: "ひゃくえん", romanization: "hyakuen", meaning: "100 yen" },
-      { kanjis: ["就き"], hiragana: "つき", romanization: "tsuki", meaning: "per" },
-      // TODO: counters
       { kanjis: ["一杯", "１杯"], hiragana: "いっぱい", romanization: "ippai", meaning: "one cup", derivedMeanings: ["full / many / much"] },
       { kanjis: ["一周"], hiragana: "いっしゅう", romanization: "isshuu", meaning: "one lap" },
-      { katakana: "グラム", rareKanjis: ["瓦"], romanization: "guramu", meaning: "gram" },
+      { kanjis: ["就き"], hiragana: "つき", romanization: "tsuki", meaning: "per" },
+      { kanjis: ["もう一度"], hiragana: "もういちど", romanization: "mouichido", meaning: "once more / again" },
+      { katakana: "メートル", rareKanjis: ["米"], romanization: "meetoru", meaning: "meter (m)" },
+      { katakana: "キロメートル", rareKanjis: ["粁"], romanization: "kiromeetoru", meaning: "kilometer (km)" },
+      { katakana: "グラム", rareKanjis: ["瓦"], romanization: "guramu", meaning: "gram (g)" },
+      { katakana: "キログラム", rareKanjis: ["瓩"], romanization: "kiroguramu", meaning: "kilogram (kg)" },
 
       // interrogative
       { kanjis: ["何人"], hiragana: "なんにん", romanization: "nannin", meaning: "how many people" },

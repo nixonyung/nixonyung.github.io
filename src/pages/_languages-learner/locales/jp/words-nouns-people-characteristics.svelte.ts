@@ -62,6 +62,9 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
       { katakana: "メーカー", romanization: "meekaa", meaning: "maker" },
       { katakana: "アニメーター", romanization: "animeetaa", meaning: "animator" },
 
+      { kanjis: ["警官"], hiragana: "けいかん", romanization: "keikan", meaning: "police officer" },
+      { hiragana: "おまわりさん", preferredForm: "hiragana", kanjis: ["お巡りさん"], romanization: "omawarisan", meaning: "police officer (spoken)" },
+
       { kanjis: ["医者"], hiragana: "いしゃ", romanization: "isha", meaning: "doctor" },
       { kanjis: ["医師"], hiragana: "いし", romanization: "ishi (formal)", meaning: "doctor" },
     );
@@ -73,6 +76,7 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
       { kanjis: ["先生"], hiragana: "せんせい", romanization: "sensei", meaning: "master / teacher" },
       { kanjis: ["親方"], hiragana: "おやかた", romanization: "oyakata", meaning: "master / boss" },
       { kanjis: ["大家"], hiragana: "たいか", romanization: "taika", meaning: "authority (known for expertise)" },
+      { kanjis: ["生徒"], hiragana: "せいと", romanization: "seito", meaning: "pupil" },
     );
   }
 }

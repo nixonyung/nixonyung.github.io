@@ -46,13 +46,14 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.people.byRelationships.immediateFamily.spouses.value) {
     words.push(
       //
-      { kanjis: ["夫", "良人"], hiragana: "おっと", romanization: "otto", meaning: "husband" },
       { kanjis: ["良人"], hiragana: "りょうじん", romanization: "ryoujin", meaning: "husband" },
       { kanjis: ["主人"], hiragana: "しゅじん", romanization: "shujin", meaning: "master / owner", derivedMeanings: ["husband"] },
       { kanjis: ["旦那", "檀那"], hiragana: "だんな", romanization: "danna", meaning: "master / owner", derivedMeanings: ["husband (casual)"] },
+      { kanjis: ["夫", "良人"], hiragana: "おっと", romanization: "otto", meaning: "my husband" },
 
-      { kanjis: ["妻"], hiragana: "つま", romanization: "tsuma", meaning: "wife" },
+      { kanjis: ["奥さん"], hiragana: "おくさん", romanization: "okusan", meaning: "wife" },
       { kanjis: ["夫人"], hiragana: "ふじん", romanization: "fujin", meaning: "wife / Mrs xxx" },
+      { kanjis: ["妻"], hiragana: "つま", romanization: "tsuma", meaning: "my wife" },
     );
   }
 
@@ -94,7 +95,8 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
     words.push(
       { kanjis: ["曽祖父母"], hiragana: "そうそふぼ", romanization: "sousofubo", meaning: "great-grandparents" },
 
-      // TODO: 叔父 uncle, 叔母 aunt
+      { kanjis: ["伯父さん", "叔父さん", "小父さん"], hiragana: "おじさん", romanization: "ojisan", meaning: "uncle" },
+      { kanjis: ["伯母さん", "叔母さん"], hiragana: "おばさん", romanization: "obasan", meaning: "aunt" },
 
       { hiragana: "いとこ", preferredForm: "hiragana", kanjis: ["従兄弟"], romanization: "itoko", meaning: "cousins (male)" },
       { hiragana: "いとこ", preferredForm: "hiragana", kanjis: ["従姉妹"], romanization: "itoko", meaning: "cousins (female)" },

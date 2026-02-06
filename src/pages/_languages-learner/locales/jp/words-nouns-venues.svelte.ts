@@ -14,6 +14,7 @@ export function appendNounsVenues(words: JapaneseWord[]) {
       { kanjis: ["穴", "孔"], hiragana: "あな", romanization: "ana", meaning: "hole / pit" },
       { kanjis: ["壁"], hiragana: "かべ", romanization: "kabe", meaning: "wall" },
       { kanjis: ["角"], hiragana: "かど", romanization: "kado", meaning: "corner" },
+      { kanjis: ["廊下"], hiragana: "ろうか", romanization: "rouka", meaning: "corridor" },
     );
   }
 
@@ -24,6 +25,7 @@ export function appendNounsVenues(words: JapaneseWord[]) {
       { katakana: "ベッド", romanization: "beddo", meaning: "bed" },
       { kanjis: ["台所"], hiragana: "だいどころ", romanization: "daidokoro", meaning: "kitchen" },
       { katakana: "キッチン", romanization: "kitchin", meaning: "kitchen" },
+      { kanjis: ["お手洗い", "御手洗"], hiragana: "おてあらい", romanization: "otearai", meaning: "toilet" },
       { katakana: "トイレ", romanization: "toire", meaning: "toilet" },
       { katakana: "トイレット", romanization: "toiretto", meaning: "toilet" },
 
@@ -31,20 +33,29 @@ export function appendNounsVenues(words: JapaneseWord[]) {
       { kanjis: ["家"], hiragana: "いえ", romanization: "ie", meaning: "home / house" },
       { katakana: "アパート", romanization: "apaato", meaning: "apartment" },
 
+      { kanjis: ["戸"], hiragana: "と", romanization: "to", meaning: "door (sliding) / shutter" },
       { katakana: "ドア", romanization: "doa", meaning: "door" },
-      { kanjis: ["玄関"], hiragana: "げんかん", romanization: "genkan", meaning: "entrance" },
+      { kanjis: ["門"], hiragana: "もん", romanization: "mon", meaning: "gate" },
       { kanjis: ["入り口", "入口"], hiragana: "いりぐち", romanization: "iriguchi", meaning: "entrance" },
+      { kanjis: ["玄関"], hiragana: "げんかん", romanization: "genkan", meaning: "entrance" },
       { kanjis: ["出口"], hiragana: "でぐち", romanization: "deguchi", meaning: "exit / way out" },
-
+      { kanjis: ["窓"], rareKanjis: ["窗", "牖", "牕"], hiragana: "まど", romanization: "mado", meaning: "window" },
       { kanjis: ["階段"], hiragana: "かいだん", romanization: "kaidan", meaning: "stairs" },
+
+      { kanjis: ["公園"], hiragana: "こうえん", romanization: "kouen", meaning: "park" },
+      { kanjis: ["庭"], hiragana: "にわ", romanization: "niwa", meaning: "garden" },
+      { kanjis: ["庭園"], hiragana: "ていえん", romanization: "teien", meaning: "garden / park" },
       { kanjis: ["橋"], hiragana: "はし", romanization: "hashi", meaning: "bridge" },
       { kanjis: ["池"], hiragana: "いけ", romanization: "ike", meaning: "pond" },
+      { katakana: "プール", romanization: "puuru", meaning: "(swimming) pool" },
       { hiragana: "ほとり", preferredForm: "hiragana", kanjis: ["辺", "畔"], romanization: "hotori", meaning: "shore" },
+
+      { kanjis: ["交番"], hiragana: "こうばん", romanization: "kouban", meaning: "police box" },
+      { kanjis: ["警察署"], hiragana: "けいさつしょ", romanization: "keisatsusho", meaning: "police station" },
 
       { kanjis: ["学校"], hiragana: "がっこう", romanization: "gakkou", meaning: "school" },
       { kanjis: ["大学"], hiragana: "だいがく", romanization: "daigaku", meaning: "university" },
       { kanjis: ["教室"], hiragana: "きょうしつ", romanization: "kyoushitsu", meaning: "classroom" },
-
       { kanjis: ["遊び場"], hiragana: "あそびば", romanization: "asobiba", meaning: "playground" },
 
       { kanjis: ["銀行"], hiragana: "ぎんこう", romanization: "ginkou", meaning: "bank" },
@@ -63,10 +74,12 @@ export function appendNounsVenues(words: JapaneseWord[]) {
       { kanjis: ["商店"], hiragana: "しょうてん", romanization: "shouten", meaning: "shop" },
       { kanjis: ["屋", "家"], hiragana: "や", romanization: "ya", meaning: "house", derivedMeanings: ["shop"], exampleUsages: ["砂利屋"] },
       { katakana: "デパート", romanization: "depaato", meaning: "department", derivedMeanings: ["department store"] },
+      { katakana: "レストラン", romanization: "resutoran", meaning: "retaurant" },
 
+      { kanjis: ["喫茶店"], hiragana: "きっさてん", romanization: "kissaten", meaning: "cafe" },
+      { kanjis: ["映画館"], hiragana: "えいがかん", romanization: "eigakan", meaning: "movie theatre" },
       { katakana: "コンビニ", romanization: "konbini", meaning: "convenience store" },
       { katakana: "ホテル", romanization: "hoteru", meaning: "hotel" },
-      { kanjis: ["映画館"], hiragana: "えいがかん", romanization: "eigakan", meaning: "movie theatre" },
     );
   }
 
@@ -75,6 +88,7 @@ export function appendNounsVenues(words: JapaneseWord[]) {
       //
       { kanjis: ["道", "途", "路", "径"], hiragana: "みち", romanization: "michi", meaning: "road / path" },
       { kanjis: ["村"], hiragana: "むら", romanization: "mura", meaning: "village" },
+      { kanjis: ["町", "街"], hiragana: "まち", romanization: "machi", meaning: "town / main street" },
       { kanjis: ["都市"], hiragana: "とし", romanization: "toshi", meaning: "city" },
       { kanjis: ["国", "邦"], hiragana: "くに", romanization: "kuni", meaning: "country" },
 

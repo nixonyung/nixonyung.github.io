@@ -145,6 +145,10 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "どう", romanization: "dou", meaning: "how is xxx? (casual)", exampleUsages: ["[Noun] はどうですか？"] },
       { hiragana: "いかが", preferredForm: "hiragana", kanjis: ["如何"], romanization: "ikaga", meaning: "how is xxx? (formal)" },
 
+      { hiragana: "こんな-", romanization: "konna-", meaning: "like this" },
+
+      { hiragana: "さあ", romanization: "saa", meaning: "come on" },
+
       { hiragana: "もうありません", romanization: "mou arimasen", meaning: "aren't any left" },
       { hiragana: "あと", romanization: "ato", meaning: "still have", exampleUsages: ["あと5秒"] },
 

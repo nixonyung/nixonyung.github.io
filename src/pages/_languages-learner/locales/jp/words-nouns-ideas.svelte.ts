@@ -21,21 +21,19 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["元気"], hiragana: "げんき", romanization: "genki", meaning: "living energy" },
 
       // living
+      { kanjis: ["暮らし", "暮し"], hiragana: "くらし", romanization: "kurashi", meaning: "the way of living", exampleUsages: ["一人暮らし"] },
+      { hiragana: "ただ", preferredForm: "hiragana", kanjis: ["只", "唯", "徒", "但", "常"], romanization: "tada", meaning: "ordinary / common / usual", exampleUsages: ["ただの [Noun] (an ordinary xxx)"] },
+
       { kanjis: ["健康"], hiragana: "けんこう", romanization: "kenkou", meaning: "health" },
       { kanjis: ["長寿"], hiragana: "ちょうじゅ", romanization: "chouju", meaning: "longevity" },
       { kanjis: ["栄養", "営養"], hiragana: "えいよう", romanization: "eiyou", meaning: "nutrition" },
       { kanjis: ["昼寝"], hiragana: "ひるね", romanization: "hirune", meaning: "afternoon nap" },
 
-      { hiragana: "ただ", preferredForm: "hiragana", kanjis: ["只", "唯", "徒", "但", "常"], romanization: "tada", meaning: "ordinary / common / usual", exampleUsages: ["ただの [Noun] (an ordinary xxx)"] },
       { hiragana: "こと", preferredForm: "hiragana", kanjis: ["事"], romanization: "koto", meaning: "thing / event / matter / situation" },
-
-      { kanjis: ["暮らし", "暮し"], hiragana: "くらし", romanization: "kurashi", meaning: "the way of living" },
-      { kanjis: ["一人", "独り"], hiragana: "ひとり", romanization: "hitori", meaning: "one person" },
-      { kanjis: ["一人暮らし"], rareKanjis: ["独り暮らし"], hiragana: "ひとりぐらし", romanization: "hitorigurashi", meaning: "the state of living alone" },
-      { kanjis: ["二人"], hiragana: "ふたり", romanization: "futari", meaning: "two people" },
 
       { kanjis: ["病気"], hiragana: "びょうき", romanization: "byouki", meaning: "illness" },
       { kanjis: ["疲れ"], hiragana: "つかれ", romanization: "tsukare", meaning: "tiredness" },
+      { kanjis: ["風邪"], hiragana: "かぜ", romanization: "kaze", meaning: "cold / flu" },
       { kanjis: ["車酔い"], hiragana: "くるまよい", romanization: "kurumayoi", meaning: "car sickness" },
 
       { kanjis: ["死"], hiragana: "し", romanization: "shi", meaning: "death" },
@@ -57,7 +55,9 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["男装"], hiragana: "だんそう", romanization: "dansou", meaning: "men's clothing" },
       { kanjis: ["女装"], hiragana: "じょそう", romanization: "josou", meaning: "women's clothing" },
 
-      { kanjis: ["難度"], hiragana: "なんど", romanization: "nando", meaning: "difficulty" },
+      { kanjis: ["困難"], hiragana: "こんなん", romanization: "konnan", meaning: "difficulty / problem" },
+      { kanjis: ["問題"], hiragana: "もんだい", romanization: "mondai", meaning: "question", derivedMeanings: ["problem"] },
+      { kanjis: ["難度"], hiragana: "なんど", romanization: "nando", meaning: "degree of difficulty" },
       { kanjis: ["挑戦"], hiragana: "ちょうせん", romanization: "chousen", meaning: "challenge" },
       { kanjis: ["邪魔"], hiragana: "じゃま", romanization: "jama", meaning: "obstacle" },
       { kanjis: ["我慢"], hiragana: "がまん", katakana: "ガマン", romanization: "gaman", meaning: "endurance" },
@@ -75,6 +75,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.ideas.socialConstructs.value) {
     words.push(
       { kanjis: ["家族"], hiragana: "かぞく", romanization: "kazoku", meaning: "family / clan" },
+      { kanjis: ["家庭"], hiragana: "かてい", romanization: "katei", meaning: "family / household" },
       { kanjis: ["親戚"], hiragana: "しんせき", romanization: "shinseki", meaning: "relatives" },
       { kanjis: ["親類"], hiragana: "しんるい", romanization: "shinrui", meaning: "relatives (formal)" },
       { kanjis: ["肉親"], hiragana: "にくしん", romanization: "nikushin", meaning: "blood relatives" },
@@ -91,6 +92,9 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["相続人"], hiragana: "そうぞくにん", romanization: "souzokunin", meaning: "heir" },
       { kanjis: ["継承"], hiragana: "けいしょう", romanization: "keishou", meaning: "inheritance" },
       { kanjis: ["所属"], hiragana: "しょぞく", romanization: "shozoku", meaning: "belonging to", exampleUsages: ["所属メンバー"] },
+
+      { kanjis: ["大勢"], hiragana: "おおぜい", romanization: "oozei", meaning: "crowd of people" },
+      { katakana: "パーティー", romanization: "paatii", meaning: "party" },
 
       { kanjis: ["親密"], hiragana: "しんみつ", romanization: "shinmitsu", meaning: "intimacy" },
       { kanjis: ["親しみ"], hiragana: "したしみ", romanization: "shitashimi", meaning: "familarity" },
@@ -112,8 +116,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["休養"], hiragana: "きゅうよう", romanization: "kyuuyou", meaning: "recuperation / rest" },
 
       { kanjis: ["教育"], hiragana: "きょういく", romanization: "kyouiku", meaning: "education" },
-      { kanjis: ["留学"], hiragana: "りゅうがく", romanization: "ryuugaku", meaning: "studying abroad" },
       { kanjis: ["学習"], hiragana: "がくしゅう", romanization: "gakushuu", meaning: "study" },
+      { kanjis: ["練習"], hiragana: "れんしゅう", romanization: "renshuu", meaning: "practice" },
       { kanjis: ["勉強"], hiragana: "べんきょう", romanization: "benkyou", meaning: "dedication", derivedMeanings: ["study"] },
       { kanjis: ["習得", "修得"], hiragana: "しゅうとく", romanization: "shuutoku", meaning: "mastering a skill" },
       { kanjis: ["授業"], hiragana: "じゅぎょう", romanization: "jugyou", meaning: "lesson" },
@@ -126,9 +130,13 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { katakana: "テスト", romanization: "tesuto", meaning: "test / exam" },
       { katakana: "ランキング", romanization: "rankingu", meaning: "ranking" },
       { kanjis: ["部活"], hiragana: "ぶかつ", romanization: "bukatsu", meaning: "club activities" },
+      { kanjis: ["夏休み"], hiragana: "なつやすみ", romanization: "natsuyasumi", meaning: "summer holiday" },
+      { kanjis: ["留学"], hiragana: "りゅうがく", romanization: "ryuugaku", meaning: "studying abroad" },
+      { kanjis: ["留学生"], hiragana: "りゅうがくせい", romanization: "ryuugakusei", meaning: "overseas student" },
 
       // TODO: trading
       { kanjis: ["本物"], hiragana: "ほんもの", romanization: "honmono", meaning: "the original thing" },
+      { katakana: "コピー", romanization: "kohii", meaning: "a copy", derivedMeanings: ["a photocopy"] },
       { kanjis: ["余り"], hiragana: "あまり", romanization: "amari", meaning: "remains" },
       { kanjis: ["借金"], hiragana: "しゃっきん", romanization: "shakkin", meaning: "debt" },
       { katakana: "せール", romanization: "seeru", meaning: "sale" },
@@ -156,11 +164,15 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.nouns.ideas.decisionMaking.value) {
     words.push(
+      { kanjis: ["情報"], hiragana: "じょうほう", romanization: "jouhou", meaning: "information" },
+      { kanjis: ["知らせ"], rareKanjis: ["報せ"], hiragana: "しらせ", romanization: "shirase", meaning: "news" },
+      { katakana: "ニュース", romanization: "nyuusu", meaning: "news" },
+      { kanjis: ["報道"], hiragana: "ほうどう", romanization: "houdou", meaning: "news report" },
+      { kanjis: ["資料"], hiragana: "しりょう", romanization: "shiryou", meaning: "data / documents" },
+      { katakana: "データ", romanization: "deeta", meaning: "data" },
       { kanjis: ["意見"], hiragana: "いけん", romanization: "iken", meaning: "opinion" },
       { kanjis: ["見方"], hiragana: "みかた", romanization: "mikata", meaning: "point of view" },
       { hiragana: "おすすめ", preferredForm: "hiragana", kanjis: ["お勧め", "お薦め"], rareKanjis: ["お奨め"], katakana: "オススメ", romanization: "osusume", meaning: "recommendation" },
-      { kanjis: ["知らせ"], rareKanjis: ["報せ"], hiragana: "しらせ", romanization: "shirase", meaning: "news" },
-      // TODO: data, information
 
       { kanjis: ["一致"], hiragana: "いっち", romanization: "icchi", meaning: "match" },
       { kanjis: ["区別"], hiragana: "くべつ", romanization: "kubetsu", meaning: "difference" },
@@ -230,6 +242,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["距離"], hiragana: "きょり", romanization: "kyori", meaning: "distance" },
       { kanjis: ["辺"], hiragana: "へん", romanization: "hen", meaning: "side" },
       { kanjis: ["直径"], hiragana: "ちょっけい", romanization: "chokkei", meaning: "diameter" },
+      { kanjis: ["交差点"], rareKanjis: ["交叉点"], hiragana: "こうさてん", romanization: "kousaten", meaning: "intersection" },
 
       { kanjis: ["方"], hiragana: "ほう", romanization: "hou", meaning: "direction" },
       { kanjis: ["方向"], hiragana: "ほうこう", romanization: "houkou", meaning: "direction" },
@@ -254,17 +267,22 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.ideas.activities.value) {
     words.push(
       //
-      { katakana: "サッカー", romanization: "sakkaa", meaning: "soccer" },
-
-      { kanjis: ["世界一周"], hiragana: "せかいいっしゅう", romanization: "sekaiisshuu", meaning: "round-the-world trip" },
-      { kanjis: ["ただ乗り", "タダ乗り"], rareKanjis: ["只乗り"], hiragana: "ただのり", romanization: "tadanori", meaning: "free loading" },
-
-      { kanjis: ["試合"], hiragana: "しあい", romanization: "shiai", meaning: "match / contest" },
+      { kanjis: ["風呂"], hiragana: "ふろ", romanization: "furo", meaning: "a bath" },
+      { kanjis: ["手洗い", "手洗"], hiragana: "てあらい", romanization: "tearai", meaning: "washing hands" },
 
       { kanjis: ["買い物", "買物"], hiragana: "かいもの", romanization: "kaimono", meaning: "shopping" },
 
       { kanjis: ["撮影"], hiragana: "さつえい", romanization: "satsuei", meaning: "photography", derivedMeanings: ["filming"] },
       { kanjis: ["密着"], hiragana: "みっちゃく", romanization: "micchaku", meaning: "sticking closely", exampleUsages: ["密着撮影"] },
+
+      { kanjis: ["散歩"], hiragana: "さんぽ", romanization: "sanpo", meaning: "walk" },
+      { kanjis: ["旅行"], hiragana: "りょこう", romanization: "ryokou", meaning: "travel" },
+      { kanjis: ["世界一周"], hiragana: "せかいいっしゅう", romanization: "sekaiisshuu", meaning: "round-the-world trip" },
+      { kanjis: ["ただ乗り", "タダ乗り"], rareKanjis: ["只乗り"], hiragana: "ただのり", romanization: "tadanori", meaning: "free loading" },
+
+      { katakana: "サッカー", romanization: "sakkaa", meaning: "soccer" },
+      { kanjis: ["試合"], hiragana: "しあい", romanization: "shiai", meaning: "match / contest" },
+      { katakana: "マッチ", romanization: "macchi", meaning: "macchi" },
     );
   }
 

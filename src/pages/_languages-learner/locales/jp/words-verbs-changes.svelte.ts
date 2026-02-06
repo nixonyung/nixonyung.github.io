@@ -7,7 +7,8 @@ export function appendVerbsChanges(words: JapaneseWord[]) {
   if (flashcardSettings.words.verbs.changes.environmenal.value) {
     verbs.push(
       //
-      { kanjis: ["晴れる", "霽れる"], hiragana: "はれる", romanization: "hareru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "be sunny" },
+      { kanjis: ["晴れる", "霽れる"], hiragana: "はれる", romanization: "hareru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "become sunny" },
+      { kanjis: ["曇る"], hiragana: "はれる", romanization: "kumoru", verbGroup: "Godan", verbIsTransitive: false, meaning: "become cloudy" },
       { kanjis: ["暮れる", "眩れる", "暗れる", "昏れる"], hiragana: "くれる", romanization: "kureru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "grow dark" },
       { kanjis: ["降り出す"], hiragana: "ふりだす", romanization: "furidasu", verbGroup: "Godan", verbIsTransitive: false, meaning: "start raining" },
 
@@ -26,6 +27,7 @@ export function appendVerbsChanges(words: JapaneseWord[]) {
       { kanjis: ["外れる"], hiragana: "はずれる", romanization: "hazureru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "miss (not hit)" },
       { kanjis: ["空く"], hiragana: "すく", romanization: "suku", verbGroup: "Godan", verbIsTransitive: false, meaning: "empty / thin out" },
       { kanjis: ["消す"], hiragana: "けす", romanization: "kesu", verbGroup: "Godan", verbIsTransitive: true, meaning: "erase / turn off" },
+      { kanjis: ["消える"], hiragana: "きえる", romanization: "kieru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "disappear" },
       { kanjis: ["閉じる"], hiragana: "とじる", romanization: "tojiru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "close / shut" },
 
       { kanjis: ["親しむ"], hiragana: "したしむ", romanization: "shitashimu", verbGroup: "Godan", verbIsTransitive: false, meaning: "befriend" },
@@ -34,6 +36,8 @@ export function appendVerbsChanges(words: JapaneseWord[]) {
 
       { kanjis: ["興す"], hiragana: "おこす", romanization: "okosu", verbGroup: "Godan", verbIsTransitive: true, meaning: "vitalize" },
       { kanjis: ["養う"], hiragana: "やしなう", romanization: "yashinau", verbGroup: "Godan", verbIsTransitive: true, meaning: "foster" },
+
+      // TODO: 差す
     );
   }
 

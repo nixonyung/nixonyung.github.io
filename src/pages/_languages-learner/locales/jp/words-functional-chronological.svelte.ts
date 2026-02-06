@@ -7,19 +7,22 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
     words.push(
       // TODO: https://www.sigure.tw/learn-japanese/mix/difference/sorekara-korekara
 
+      { kanjis: ["時", "刻", "秋"], hiragana: "とき", romanization: "toki", meaning: "at that time", exampleUsages: ["[Verb] 時、", "[Noun] の時、", "[na-Adj.] 時、", "[i-Adj.] 時、"] },
+
       // definite point in time
       // TODO: today, tomorrow, yesterday, tonight, now, then, last week, on September 11, in 2008, immediately
-      { kanjis: ["時", "刻", "秋"], hiragana: "とき", romanization: "toki", meaning: "at that time", exampleUsages: ["[Verb] 時、", "[Noun] の時、", "[na-Adj.] 時、", "[i-Adj.] 時、"] },
       // TODO: specific year / date
 
       { kanjis: ["今"], hiragana: "いま", romanization: "ima", meaning: "now" },
 
       { kanjis: ["今朝"], hiragana: "けさ", romanization: "kesa", meaning: "this morning" },
-      { kanjis: ["今朝"], hiragana: "こんちょう", romanization: "konchou", meaning: "this morning" },
+      { kanjis: ["今晩"], hiragana: "こんばん", romanization: "konban", meaning: "tonight" },
+      { kanjis: ["今夜"], hiragana: "こんや", romanization: "konya", meaning: "tonight (the entire night, written)" },
 
       { kanjis: ["日"], hiragana: "ひ", romanization: "hi", meaning: "day", exampleUsages: ["この日 (this day, emphasizing importance)"] },
-      { kanjis: ["今日"], hiragana: "きょう", romanization: "kyou", meaning: "today" },
+      { kanjis: ["一昨日"], hiragana: "おととい", romanization: "ototoi", meaning: "the day before yesterday" },
       { kanjis: ["昨日"], hiragana: "きのう", romanization: "kinou", meaning: "yesterday" },
+      { kanjis: ["今日"], hiragana: "きょう", romanization: "kyou", meaning: "today" },
       { kanjis: ["明日"], hiragana: "あした", romanization: "ashita", meaning: "tomorrow" },
       { kanjis: ["明後日"], hiragana: "あさって", romanization: "asatte", meaning: "the day after tomorrow" },
       { kanjis: ["この間"], hiragana: "このあいだ", romanization: "konoaida", meaning: "some other day" },
@@ -31,11 +34,19 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { kanjis: ["前週"], hiragana: "ぜんしゅう", romanization: "zenshuu", meaning: "last week" },
       { kanjis: ["来週"], hiragana: "らいしゅう", romanization: "raishuu", meaning: "next week" },
 
-      { kanjis: ["今年"], hiragana: "ことし", romanization: "kotoshi", meaning: "this year" },
+      { kanjis: ["先月"], hiragana: "せんげつ", romanization: "sengetsu", meaning: "last month" },
+      { kanjis: ["今月"], hiragana: "こんげつ", romanization: "kongetsu", meaning: "this month" },
+      { kanjis: ["来月"], hiragana: "らいげつ", romanization: "raigetsu", meaning: "next month" },
+
+      { kanjis: ["一昨年"], hiragana: "おととし", romanization: "ototoshi", meaning: "the year before last" },
+      { kanjis: ["去年"], hiragana: "きょねん", romanization: "kyonen", meaning: "last year" },
       { kanjis: ["昨年"], hiragana: "さくねん", romanization: "sakunen", meaning: "last year (formal)" },
+      { kanjis: ["今年"], hiragana: "ことし", romanization: "kotoshi", meaning: "this year" },
       { kanjis: ["来年"], hiragana: "らいねん", romanization: "rainen", meaning: "next year" },
+      { kanjis: ["再来年"], hiragana: "さらいねん", romanization: "sarainen", meaning: "the year after next" },
 
       { kanjis: ["今回"], hiragana: "こんかい", romanization: "konkai", meaning: "this time" },
+      { kanjis: ["今期"], hiragana: "こんき", romanization: "konki", meaning: "this session / this term" },
       { kanjis: ["今度"], hiragana: "こんど", romanization: "kondo", meaning: "this time" },
       { kanjis: ["また今度"], hiragana: "またこんど", romanization: "matakondo", meaning: "next time" },
       { kanjis: ["次"], hiragana: "つぎ", romanization: "tsugi", meaning: "next", exampleUsages: ["次のステップ"] },
@@ -67,14 +78,19 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { hiragana: "そろそろ", katakana: "ソロソロ", romanization: "sorosoro", meaning: "soon" },
       { kanjis: ["即"], hiragana: "そく", romanization: "soku", meaning: "at once / immediately" },
 
-      { kanjis: ["晴れ", "晴"], hiragana: "はれ", romanization: "hare", meaning: "good weather", derivedMeanings: ["when the weather is good"] },
-
       // definite duration
       { kanjis: ["二週間", "２週間"], hiragana: "にしゅうかん", romanization: "nishuukan", meaning: "two weeks" },
 
       // indefinite duration
       // TODO: for a while, since Monday, since 1990, briefly, temporarily, permanently, all day
+      { kanjis: ["直に"], hiragana: "じきに", romanization: "jikini", meaning: "directly / straightforward" },
+      { kanjis: ["直ぐ"], hiragana: "すぐ", romanization: "sugu", meaning: "direct / straightforward" },
+      { kanjis: ["直接"], hiragana: "ちょくせつ", romanization: "chokusetsu", meaning: "direct / straightforward (formal)" },
+      { kanjis: ["早々", "早早"], hiragana: "はやばや", romanization: "hayabaya", meaning: "promptly" },
+      { hiragana: "どんどん", katakana: "ドンドン", romanization: "dondon", meaning: "(drumming sound) / quickly" },
+
       { kanjis: ["直ちに"], hiragana: "ただちに", romanization: "tadachini", meaning: "at once" },
+
       { hiragana: "から", romanization: "kara", meaning: "(introducing precedent:) since", exampleUsages: ["[Noun (time/place)] から [Verb]"] },
       { hiragana: "まで", romanization: "made", meaning: "(introducing termination:) until", exampleUsages: ["[Noun (time/place)] まで [Verb]", "最後まで"] },
       { hiragana: "〇〇から〇〇まで", romanization: "kara, made", meaning: "from (time) to (time)", exampleUsages: ["[Noun (time/place)] から [Noun (time/place)] まで [Verb]"] },
@@ -85,6 +101,12 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
 
       // definite frequency
       // TODO: daily, weekly, monthly, annually, every day, twice a week
+      { kanjis: ["毎朝"], hiragana: "まいあさ", romanization: "maiasa", meaning: "every morning" },
+      { kanjis: ["毎晩"], hiragana: "まいばん", romanization: "maiban", meaning: "every night" },
+      { kanjis: ["毎日"], hiragana: "まいにち", romanization: "mainichi", meaning: "every day" },
+      { kanjis: ["毎週"], hiragana: "まいしゅう", romanization: "maishuu", meaning: "every week" },
+      { kanjis: ["毎月"], hiragana: "まいつき", romanization: "maitsuki", meaning: "every month" },
+      { kanjis: ["毎年"], hiragana: "まいとし", romanization: "maitoshi", meaning: "every year" },
 
       // indefinite frequency
       // TODO: always, usually, often, sometimes, rarely, seldom, never, occasionally
