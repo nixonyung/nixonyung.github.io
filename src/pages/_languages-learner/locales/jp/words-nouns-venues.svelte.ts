@@ -4,11 +4,12 @@ import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 export function appendNounsVenues(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.venues.generic.value) {
     words.push(
+      { kanjis: ["所", "処"], hiragana: "ところ", romanization: "tokoro", meaning: "place" },
       { kanjis: ["場所"], hiragana: "ばしょ", romanization: "basho", meaning: "place" },
       { kanjis: ["地方"], hiragana: "ちほう", romanization: "chihou", meaning: "area / region" },
       { kanjis: ["名所"], hiragana: "などころ", romanization: "nadokoro", meaning: "famous place" },
 
-      { kanjis: ["周辺"], hiragana: "しゅうへん", romanization: "shuuhen", meaning: "neighboring area" },
+      { kanjis: ["建物"], hiragana: "たてもの", romanization: "tatemono", meaning: "building" },
 
       // shapes
       { kanjis: ["穴", "孔"], hiragana: "あな", romanization: "ana", meaning: "hole / pit" },
@@ -50,35 +51,41 @@ export function appendNounsVenues(words: JapaneseWord[]) {
       { katakana: "プール", romanization: "puuru", meaning: "(swimming) pool" },
       { hiragana: "ほとり", preferredForm: "hiragana", kanjis: ["辺", "畔"], romanization: "hotori", meaning: "shore" },
 
-      { kanjis: ["交番"], hiragana: "こうばん", romanization: "kouban", meaning: "police box" },
-      { kanjis: ["警察署"], hiragana: "けいさつしょ", romanization: "keisatsusho", meaning: "police station" },
-
       { kanjis: ["学校"], hiragana: "がっこう", romanization: "gakkou", meaning: "school" },
       { kanjis: ["大学"], hiragana: "だいがく", romanization: "daigaku", meaning: "university" },
       { kanjis: ["教室"], hiragana: "きょうしつ", romanization: "kyoushitsu", meaning: "classroom" },
       { kanjis: ["遊び場"], hiragana: "あそびば", romanization: "asobiba", meaning: "playground" },
+      { kanjis: ["図書館"], hiragana: "としょかん", romanization: "toshokan", meaning: "library" },
+
+      { kanjis: ["事務所"], hiragana: "じむしょ", romanization: "jimusho", meaning: "office" },
+      { kanjis: ["郵便局"], hiragana: "ゆうびんきょく", romanization: "yuubinkyoku", meaning: "post office" },
+
+      { kanjis: ["空港"], hiragana: "くうこう", romanization: "kuukou", meaning: "airport" },
+      { kanjis: ["駅"], hiragana: "えき", romanization: "eki", meaning: "train station" },
+
+      { kanjis: ["交番"], hiragana: "こうばん", romanization: "kouban", meaning: "police box" },
+      { kanjis: ["警察署"], hiragana: "けいさつしょ", romanization: "keisatsusho", meaning: "police station" },
 
       { kanjis: ["銀行"], hiragana: "ぎんこう", romanization: "ginkou", meaning: "bank" },
       { kanjis: ["病院"], hiragana: "びょういん", romanization: "byouin", meaning: "hospital" },
 
-      { kanjis: ["事務所"], hiragana: "じむしょ", romanization: "jimusho", meaning: "office" },
-
-      { kanjis: ["空港"], hiragana: "くうこう", romanization: "kuukou", meaning: "airport" },
-      { kanjis: ["駅"], hiragana: "えき", romanization: "eki", meaning: "train station" },
+      { kanjis: ["大使館"], hiragana: "たいしかん", romanization: "taishikan", meaning: "embassy" },
     );
   }
 
   if (flashcardSettings.words.nouns.venues.shops.value) {
     words.push(
-      { kanjis: ["店"], hiragana: "みせ", romanization: "mise", meaning: "shop" },
+      { kanjis: ["店"], hiragana: "みせ", romanization: "mise", meaning: "shop", derivedMeanings: ["restaurant"] },
+      { kanjis: ["屋", "家"], hiragana: "や", romanization: "ya", meaning: "house", derivedMeanings: ["shop / store / restaurant"], exampleUsages: ["砂利屋"] },
       { kanjis: ["商店"], hiragana: "しょうてん", romanization: "shouten", meaning: "shop" },
-      { kanjis: ["屋", "家"], hiragana: "や", romanization: "ya", meaning: "house", derivedMeanings: ["shop"], exampleUsages: ["砂利屋"] },
-      { katakana: "デパート", romanization: "depaato", meaning: "department", derivedMeanings: ["department store"] },
-      { katakana: "レストラン", romanization: "resutoran", meaning: "retaurant" },
 
+      { kanjis: ["食堂"], hiragana: "しょくどう", romanization: "shokudou", meaning: "canteen / cafeteria" },
+      { katakana: "レストラン", romanization: "resutoran", meaning: "restaurant" },
+      { kanjis: ["八百屋"], hiragana: "やおや", romanization: "yaoya", meaning: "greengrocer", derivedMeanings: ["jack of all trades"] },
       { kanjis: ["喫茶店"], hiragana: "きっさてん", romanization: "kissaten", meaning: "cafe" },
       { kanjis: ["映画館"], hiragana: "えいがかん", romanization: "eigakan", meaning: "movie theatre" },
       { katakana: "コンビニ", romanization: "konbini", meaning: "convenience store" },
+      { katakana: "デパート", romanization: "depaato", meaning: "department", derivedMeanings: ["department store"] },
       { katakana: "ホテル", romanization: "hoteru", meaning: "hotel" },
     );
   }
@@ -93,6 +100,7 @@ export function appendNounsVenues(words: JapaneseWord[]) {
       { kanjis: ["国", "邦"], hiragana: "くに", romanization: "kuni", meaning: "country" },
 
       { kanjis: ["地元"], hiragana: "じもと", romanization: "jimoto", meaning: "home area", exampleUsages: ["地元の"] },
+      { kanjis: ["周辺"], hiragana: "しゅうへん", romanization: "shuuhen", meaning: "neighboring area" },
       { kanjis: ["外国"], hiragana: "がいこく", romanization: "gaikoku", meaning: "foreign country" },
     );
   }

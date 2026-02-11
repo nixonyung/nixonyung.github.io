@@ -55,6 +55,7 @@ export function appendVerbsDescriptive(words: JapaneseWord[]) {
 
       { kanjis: ["終わる", "終る"], rareKanjis: ["了る", "卒る", "畢る", "竟る"], hiragana: "おわる", romanization: "owaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "finish", exampleUsages: ["で終わる", "宿題終わった"] },
       { hiragana: "しまう", rareKanjis: ["仕舞う", "終う", "了う", "蔵う"], romanization: "shimau", verbGroup: "Godan", verbIsTransitive: true, meaning: "finish", derivedMeanings: ["shut down", "put away"] },
+      { kanjis: ["着く"], hiragana: "つく", romanization: "tsuku", verbGroup: "Godan", verbIsTransitive: false, meaning: "arrive / reach" },
     );
   }
 

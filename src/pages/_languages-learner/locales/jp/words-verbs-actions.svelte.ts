@@ -25,6 +25,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["飲む", "呑む"], hiragana: "のむ", romanization: "nomu", verbGroup: "Godan", verbIsTransitive: true, meaning: "drink / swallow" },
       { kanjis: ["噛む", "咬む"], rareKanjis: ["嚙む", "嚼む"], hiragana: "かむ", romanization: "kamu", verbGroup: "Godan", verbIsTransitive: true, meaning: "bite / chew" },
       { kanjis: ["吹く"], hiragana: "ふく", romanization: "fuku", verbGroup: "Godan", verbIsTransitive: false, meaning: "blow" },
+      { kanjis: ["吸う", "喫う"], hiragana: "すう", romanization: "suu", verbGroup: "Godan", verbIsTransitive: true, meaning: "breathe in / suck", derivedMeanings: ["smoke"] },
       // TODO: scream, shout
 
       // nose
@@ -33,7 +34,9 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       // muscular
       { kanjis: ["動く"], hiragana: "うごく", romanization: "ugoku", verbGroup: "Godan", verbIsTransitive: false, meaning: "move", derivedMeanings: ["operate"] },
       { kanjis: ["動き出す", "動きだす"], hiragana: "うごきだす", romanization: "ugokidasu", verbGroup: "Godan", verbIsTransitive: false, meaning: "start moving" },
+      { kanjis: ["止まる", "留まる", "停まる", "駐まる", "止る", "留る"], hiragana: "とまる", romanization: "tomaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "stop (moving / doing)" },
       { kanjis: ["立つ"], hiragana: "たつ", romanization: "tatsu", verbGroup: "Godan", verbIsTransitive: false, meaning: "stand up" },
+      { kanjis: ["座る", "据わる"], rareKanjis: ["坐る"], hiragana: "すわる", romanization: "suwaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "sit" },
       { kanjis: ["寄る"], hiragana: "よる", romanization: "yoru", verbGroup: "Godan", verbIsTransitive: false, meaning: "lean towards" },
       { kanjis: ["蹴る"], hiragana: "ける", romanization: "keru", verbGroup: "Godan", verbIsTransitive: true, meaning: "kick" },
 
@@ -53,6 +56,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { hiragana: "わかる", preferredForm: "hiragana", kanjis: ["分かる", "解る", "判る", "分る"], romanization: "wakaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "understand", derivedMeanings: ["be able to"], exampleUsages: ["わかるよ (I understand!) (casual)", "わかりました (I understood) (polite)"] },
       { kanjis: ["知る", "識る"], hiragana: "しる", romanization: "shiru", verbGroup: "Godan", verbIsTransitive: true, meaning: "know / acquire", exampleUsages: ["知っている (I know)"] },
       { kanjis: ["出来る"], hiragana: "できる", romanization: "dekiru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "can do", derivedMeanings: ["ready"] },
+      { kanjis: ["忘れる"], hiragana: "わすれる", romanization: "wasureru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "forget" },
 
       // learning
       { kanjis: ["学ぶ"], hiragana: "まなぶ", romanization: "manabu", verbGroup: "Godan", verbIsTransitive: true, meaning: "learn" },
@@ -71,7 +75,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["言う", "云う", "謂う"], hiragana: "いう", romanization: "iu", verbGroup: "Godan", verbIsTransitive: true, meaning: "say / utter" },
       { kanjis: ["話す"], rareKanjis: ["咄す"], hiragana: "はなす", romanization: "hanasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "talk / converse" },
       { hiragana: "しゃべる", kanjis: ["喋る"], romanization: "shaberu", verbGroup: "Godan", verbIsTransitive: true, meaning: "chatter (casual)" },
-      { kanjis: ["呼ぶ"], rareKanjis: ["喚ぶ"], hiragana: "よぶ", romanization: "yobu", verbGroup: "Godan", verbIsTransitive: true, meaning: "call / address" },
+      { kanjis: ["呼ぶ"], rareKanjis: ["喚ぶ"], hiragana: "よぶ", romanization: "yobu", verbGroup: "Godan", verbIsTransitive: true, meaning: "call / address", derivedMeanings: ["invite"] },
       { kanjis: ["挙げる"], hiragana: "あげる", romanization: "ageru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "propose / suggest", derivedMeanings: ["hold an event"] },
       { kanjis: ["答える"], hiragana: "こたえる", romanization: "kotaeru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "answer / reply" },
       { kanjis: ["語る"], hiragana: "かたる", romanization: "kataru", verbGroup: "Godan", verbIsTransitive: true, meaning: "narrate / tell a story" },
@@ -90,7 +94,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { hiragana: "くださる", preferredForm: "hiragana", kanjis: ["下さる"], romanization: "kudasaru", verbGroup: "Godan", verbIsTransitive: true, meaning: "bestow me / us (very polite)" },
       { hiragana: "もらう", preferredForm: "hiragana", kanjis: ["貰う"], romanization: "morau", verbGroup: "Godan", verbIsTransitive: true, meaning: "receive" },
       { hiragana: "かかる", preferredForm: "hiragana", kanjis: ["掛かる", "掛る"], rareKanjis: ["懸かる", "懸る"], romanization: "kakaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "take (time/money/resource)", derivedMeanings: ["hang"] },
-      { kanjis: ["頼む"], rareKanjis: ["恃む", "憑む"], hiragana: "たのむ", romanization: "tanomu", verbGroup: "Godan", verbIsTransitive: true, meaning: "depend", derivedMeanings: ["request"], exampleUsages: ["生活費を親に頼っている"] },
+      { kanjis: ["頼む"], rareKanjis: ["恃む", "憑む"], hiragana: "たのむ", romanization: "tanomu", verbGroup: "Godan", verbIsTransitive: true, meaning: "request", derivedMeanings: ["rely"], exampleUsages: ["生活費を親に頼っている"] },
       { kanjis: ["買う"], hiragana: "かう", romanization: "kau", verbGroup: "Godan", verbIsTransitive: true, meaning: "buy", exampleUsages: ["コーラを買う"] },
       { kanjis: ["借りる"], hiragana: "かりる", romanization: "kariru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "borrow" },
 
@@ -99,6 +103,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { hiragana: "なくす", preferredForm: "hiragana", kanjis: ["無くす"], romanization: "nakusu", verbGroup: "Godan", verbIsTransitive: true, meaning: "lose something" },
       { kanjis: ["返す", "反す"], hiragana: "かえす", romanization: "kaesu", verbGroup: "Godan", verbIsTransitive: true, meaning: "give back" },
       { kanjis: ["譲る"], hiragana: "ゆずる", romanization: "yuzuru", verbGroup: "Godan", verbIsTransitive: true, meaning: "concede" },
+      { kanjis: ["売る"], hiragana: "うる", romanization: "uru", verbGroup: "Godan", verbIsTransitive: true, meaning: "sell" },
       { kanjis: ["払う"], rareKanjis: ["掃う"], hiragana: "はらう", romanization: "harau", verbGroup: "Godan", verbIsTransitive: true, meaning: "pay" },
       { kanjis: ["貸す", "藉す"], hiragana: "かす", romanization: "kasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "lend" },
     );
@@ -107,6 +112,8 @@ export function appendVerbsActions(words: JapaneseWord[]) {
   if (flashcardSettings.words.verbs.actions.transpositional.value) {
     verbs.push(
       { kanjis: ["行く", "往く"], hiragana: "いく", romanization: "iku", verbGroup: "Godan", verbIsTransitive: false, meaning: "go", exampleUsages: ["東京に行く"] },
+      { kanjis: ["渡す"], hiragana: "わたす", romanization: "watasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "go across (a river)", derivedMeanings: ["hand over"] },
+      { kanjis: ["渡る"], hiragana: "わたる", romanization: "wataru", verbGroup: "Godan", verbIsTransitive: false, meaning: "go across (a river)" },
       { kanjis: ["会う", "逢う", "遭う"], rareKanjis: ["遇う"], hiragana: "あう", romanization: "au", verbGroup: "Godan", verbIsTransitive: false, meaning: "meet" },
       { kanjis: ["訪問する"], hiragana: "ほうもんする", romanization: "houmonsuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "visit" },
       { kanjis: ["入る"], hiragana: "はいる", romanization: "hairu", verbGroup: "Godan", verbIsTransitive: false, meaning: "enter" },
@@ -192,7 +199,11 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["開く", "空く", "明く"], hiragana: "あく", romanization: "aku", verbGroup: "Godan", verbIsTransitive: false, meaning: "open / make space" },
       { kanjis: ["開く"], hiragana: "ひらく", romanization: "hiraku", verbGroup: "Godan", verbIsTransitive: true, meaning: "open / unfold", exampleUsages: ["ドアを開く (turn the door)"] },
       { kanjis: ["開ける"], hiragana: "ひらける", romanization: "hirakeru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "open / unfold", derivedMeanings: ["open for business"] },
+      { kanjis: ["閉じる"], hiragana: "とじる", romanization: "tojiru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "close / shut" },
+      { kanjis: ["閉める"], hiragana: "しめる", romanization: "shimeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "close / shut" },
+      { kanjis: ["閉まる", "締まる"], rareKanjis: ["緊まる"], hiragana: "しまる", romanization: "shimaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "be closed / be shut" },
 
+      { kanjis: ["締める"], hiragana: "しめる", romanization: "shimeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "tie / fasten" },
       { kanjis: ["弾く"], hiragana: "はじく", romanization: "hajiku", verbGroup: "Godan", verbIsTransitive: true, meaning: "flick", derivedMeanings: ["snap", "repel", "pluck strings"] },
     );
   }
@@ -206,6 +217,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
 
       { kanjis: ["遊ぶ"], hiragana: "あそぶ", romanization: "asobu", verbGroup: "Godan", verbIsTransitive: false, meaning: "play (games / sports)", derivedMeanings: ["have fun"] },
       { kanjis: ["働く"], hiragana: "はたらく", romanization: "hataraku", verbGroup: "Godan", verbIsTransitive: false, meaning: "work" },
+      { kanjis: ["勤める", "務める"], hiragana: "つとめる", romanization: "tsutomeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "work for / be employed at" },
       { kanjis: ["扱う"], hiragana: "あつかう", romanization: "atsukau", verbGroup: "Godan", verbIsTransitive: true, meaning: "deal / handle" },
       { kanjis: ["用いる"], hiragana: "もちいる", romanization: "mochiiru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "use / utilize" },
       { kanjis: ["使う", "遣う"], hiragana: "つかう", romanization: "tsukau", verbGroup: "Godan", verbIsTransitive: true, meaning: "employ / use (as a tool)" },
@@ -216,6 +228,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["機能する"], hiragana: "きのうする", romanization: "kinousuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "function" },
       { kanjis: ["作る", "造る", "創る"], hiragana: "つくる", romanization: "tsukuru", verbGroup: "Godan", verbIsTransitive: true, meaning: "make / create / produce" },
       { kanjis: ["生み出す", "産み出す"], hiragana: "うみだす", romanization: "umidasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "produce" },
+      { kanjis: ["惹く"], hiragana: "ひく", romanization: "hiku", verbGroup: "Godan", verbIsTransitive: true, meaning: "draw attention" },
 
       // athletic
       { kanjis: ["歩く"], hiragana: "あるく", romanization: "aruku", verbGroup: "Godan", verbIsTransitive: false, meaning: "walk" },
@@ -231,6 +244,9 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["舞う"], hiragana: "まう", romanization: "mau", verbGroup: "Godan", verbIsTransitive: false, meaning: "whirling dance", derivedMeanings: ["dance"] },
       { kanjis: ["踊る"], hiragana: "おどる", romanization: "odoru", verbGroup: "Godan", verbIsTransitive: false, meaning: "hopping dance", derivedMeanings: ["dance", "leap"] },
 
+      // artistic
+      { kanjis: ["歌う", "唄う", "詠う"], rareKanjis: ["唱う"], hiragana: "うたう", romanization: "utau", verbGroup: "Godan", verbIsTransitive: true, meaning: "sing" },
+
       // games
       { kanjis: ["賭ける"], hiragana: "かける", romanization: "kakeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "gamble" },
       { kanjis: ["予測する"], hiragana: "よそくする", romanization: "yosokusuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "predict" },
@@ -240,7 +256,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
 
       // using tools
       { kanjis: ["着る"], hiragana: "きる", romanization: "kiru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "wear (tops)", exampleUsages: ["服を着る"] },
-      { kanjis: ["履く", "穿く"], rareKanjis: ["佩く", "着く", "帯く"], hiragana: "はく", romanization: "haku", verbGroup: "Godan", verbIsTransitive: true, meaning: "wear (pants)" },
+      { kanjis: ["履く", "穿く"], rareKanjis: ["佩く", "帯く"], hiragana: "はく", romanization: "haku", verbGroup: "Godan", verbIsTransitive: true, meaning: "wear (pants)" },
       { kanjis: ["脱ぐ"], hiragana: "ぬぐ", romanization: "nugu", verbGroup: "Godan", verbIsTransitive: true, meaning: "take off (clothes)" },
 
       { kanjis: ["浴びる"], hiragana: "あびる", romanization: "abiru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "bathe" },
@@ -267,6 +283,8 @@ export function appendVerbsActions(words: JapaneseWord[]) {
 
       { kanjis: ["乗る"], hiragana: "のる", katakana: "ノる", romanization: "noru", verbGroup: "Godan", verbIsTransitive: false, meaning: "get on (transportation)", exampleUsages: ["電車に乗った"] },
 
+      { kanjis: ["撮る", "録る"], hiragana: "とる", romanization: "toru", verbGroup: "Godan", verbIsTransitive: true, meaning: "take (a photo) / film" },
+
       { kanjis: ["貯める"], hiragana: "ためる", romanization: "tameru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "save money" },
       { kanjis: ["貯まる"], hiragana: "たまる", romanization: "tamaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "accumulate / grow on its own" },
       { kanjis: ["貯金する"], hiragana: "ちょきんする", romanization: "chokinsuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "save money" },
@@ -274,8 +292,9 @@ export function appendVerbsActions(words: JapaneseWord[]) {
 
       // (misc.)
       { kanjis: ["歓迎する"], hiragana: "かんげいする", romanization: "kangeisuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "welcome" },
-      { kanjis: ["惹く"], hiragana: "ひく", romanization: "hiku", verbGroup: "Godan", verbIsTransitive: true, meaning: "draw attention" },
-      { kanjis: ["困る"], hiragana: "こまる", romanization: "komaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "be troubled / have difficulty" },
+
+      { kanjis: ["生む", "産む"], hiragana: "うむ", romanization: "umu", verbGroup: "Godan", verbIsTransitive: true, meaning: "give birth / lay (eggs)" },
+      { kanjis: ["生まれる", "産まれる"], hiragana: "うまれる", romanization: "umareru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "be born" },
     );
   }
 

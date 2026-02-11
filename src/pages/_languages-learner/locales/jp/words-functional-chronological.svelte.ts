@@ -18,6 +18,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { kanjis: ["今朝"], hiragana: "けさ", romanization: "kesa", meaning: "this morning" },
       { kanjis: ["今晩"], hiragana: "こんばん", romanization: "konban", meaning: "tonight" },
       { kanjis: ["今夜"], hiragana: "こんや", romanization: "konya", meaning: "tonight (the entire night, written)" },
+      { kanjis: ["昨夜"], hiragana: "ゆうべ", romanization: "yuube", meaning: "last night (the entire night, written)" },
 
       { kanjis: ["日"], hiragana: "ひ", romanization: "hi", meaning: "day", exampleUsages: ["この日 (this day, emphasizing importance)"] },
       { kanjis: ["一昨日"], hiragana: "おととい", romanization: "ototoi", meaning: "the day before yesterday" },
@@ -83,13 +84,6 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
 
       // indefinite duration
       // TODO: for a while, since Monday, since 1990, briefly, temporarily, permanently, all day
-      { kanjis: ["直に"], hiragana: "じきに", romanization: "jikini", meaning: "directly / straightforward" },
-      { kanjis: ["直ぐ"], hiragana: "すぐ", romanization: "sugu", meaning: "direct / straightforward" },
-      { kanjis: ["直接"], hiragana: "ちょくせつ", romanization: "chokusetsu", meaning: "direct / straightforward (formal)" },
-      { kanjis: ["早々", "早早"], hiragana: "はやばや", romanization: "hayabaya", meaning: "promptly" },
-      { hiragana: "どんどん", katakana: "ドンドン", romanization: "dondon", meaning: "(drumming sound) / quickly" },
-
-      { kanjis: ["直ちに"], hiragana: "ただちに", romanization: "tadachini", meaning: "at once" },
 
       { hiragana: "から", romanization: "kara", meaning: "(introducing precedent:) since", exampleUsages: ["[Noun (time/place)] から [Verb]"] },
       { hiragana: "まで", romanization: "made", meaning: "(introducing termination:) until", exampleUsages: ["[Noun (time/place)] まで [Verb]", "最後まで"] },
@@ -110,6 +104,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
 
       // indefinite frequency
       // TODO: always, usually, often, sometimes, rarely, seldom, never, occasionally
+      { kanjis: ["時々", "時時"], hiragana: "ときどき", romanization: "tokidoki", meaning: "sometimes / occasionally" },
       { kanjis: ["多くの場合"], hiragana: "おおくのばあい", romanization: "ookunobaai", meaning: "in many cases (written)" },
       { hiragana: "いつも", preferredForm: "hiragana", kanjis: ["何時も"], romanization: "itsumo", meaning: "always", exampleUsages: ["{[Noun] は} いつも [Verb / Adj.]"] },
       { hiragana: "また", preferredForm: "hiragana", kanjis: ["又"], rareKanjis: ["亦", "復"], romanization: "mata", meaning: "again" },

@@ -12,34 +12,36 @@ export function appendFunctionalLocational(words: JapaneseWord[]) {
 
       // this way / that way
       { hiragana: "こっち", preferredForm: "hiragana", kanjis: ["此方"], romanization: "kocchi", meaning: "here / this way (close to speaker)" },
-      { hiragana: "こちら", preferredForm: "hiragana", kanjis: ["此方"], romanization: "kochira", meaning: "here / this way (close to speaker) (politely)" },
+      { hiragana: "こちら", preferredForm: "hiragana", kanjis: ["此方"], romanization: "kochira", meaning: "here / this way (close to speaker) (polite)" },
       { hiragana: "そっち", preferredForm: "hiragana", kanjis: ["其方"], romanization: "socchi", meaning: "that way (distant from speaker, close to listener)" },
-      { hiragana: "そちら", preferredForm: "hiragana", kanjis: ["其方"], romanization: "sochira", meaning: "that way (distant from speaker, close to listener) (politely)" },
+      { hiragana: "そちら", preferredForm: "hiragana", kanjis: ["其方"], romanization: "sochira", meaning: "that way (distant from speaker, close to listener) (polite)" },
       { hiragana: "かなた", preferredForm: "hiragana", kanjis: ["彼方"], romanization: "kanata", meaning: "that other side (distant from both speaker and listener)" },
-      { hiragana: "あちら", preferredForm: "hiragana", kanjis: ["彼方"], romanization: "achira", meaning: "that other side (distant from both speaker and listener) (politely)" },
+      { hiragana: "あちら", preferredForm: "hiragana", kanjis: ["彼方"], romanization: "achira", meaning: "that other side (distant from both speaker and listener) (polite)" },
 
       // directions
-      { kanjis: ["前"], hiragana: "まえ", romanization: "mae", meaning: "front" },
-      { kanjis: ["後"], hiragana: "あと", romanization: "ato", meaning: "back" },
-      { kanjis: ["前後"], hiragana: "ぜんご", romanization: "zengo", meaning: "front and back" },
-      // TODO: up, down
+      { kanjis: ["上"], hiragana: "うえ", romanization: "ue", meaning: "up / above" },
+      { kanjis: ["下"], hiragana: "した", romanization: "shita", meaning: "down / below" },
       { kanjis: ["左"], hiragana: "ひだり", romanization: "hidari", meaning: "left" },
       { kanjis: ["右"], hiragana: "みぎ", romanization: "migi", meaning: "right" },
+      { kanjis: ["前"], hiragana: "まえ", romanization: "mae", meaning: "front" },
+      { kanjis: ["後ろ"], hiragana: "うしろ", romanization: "ushiro", meaning: "back / behind" },
+      { kanjis: ["前後"], hiragana: "ぜんご", romanization: "zengo", meaning: "front and back" },
+      { katakana: "トップ", romanization: "toppu", meaning: "top" },
 
-      { kanjis: ["真ん中"], hiragana: "まんなか", romanization: "mannaka", meaning: "center" },
-      { kanjis: ["向こう"], hiragana: "むこう", romanization: "mukou", meaning: "over there / the other side" },
-      { kanjis: ["向こう側", "向う側"], hiragana: "むこうがわ", romanization: "mukougawa", meaning: "over there / the other side" },
       { kanjis: ["東"], hiragana: "ひがし", romanization: "higashi", meaning: "east" },
       { kanjis: ["南"], hiragana: "みなみ", romanization: "minami", meaning: "south" },
       { kanjis: ["西"], hiragana: "にし", romanization: "nishi", meaning: "west" },
       { kanjis: ["北"], hiragana: "きた", romanization: "kita", meaning: "north" },
 
-      // relative positions
-      { kanjis: ["側", "傍"], hiragana: "そば", romanization: "soba", meaning: "nearby" },
-      { kanjis: ["隣"], hiragana: "となり", romanization: "tonari", meaning: "immediate neighbor" },
-      { kanjis: ["末"], hiragana: "すえ", romanization: "sue", meaning: "end / tip / last part" },
+      { kanjis: ["真ん中"], hiragana: "まんなか", romanization: "mannaka", meaning: "center" },
 
-      { katakana: "トップ", romanization: "toppu", meaning: "top" },
+      // relative positions
+      { hiragana: "そば", preferredForm: "hiragana", kanjis: ["側", "傍", "端"], romanization: "soba", meaning: "nearby" },
+      { kanjis: ["隣"], hiragana: "となり", romanization: "tonari", meaning: "immediate neighboring" },
+      { kanjis: ["末"], hiragana: "すえ", romanization: "sue", meaning: "end / tip / last part" },
+      { kanjis: ["外"], hiragana: "そと", romanization: "soto", meaning: "outside / exterior" },
+      { kanjis: ["向こう"], hiragana: "むこう", romanization: "mukou", meaning: "over there / the other side" },
+      { kanjis: ["向こう側", "向う側"], hiragana: "むこうがわ", romanization: "mukougawa", meaning: "over there / the other side" },
 
       { kanjis: ["近く"], hiragana: "ちかく", romanization: "chikaku", meaning: "nearby" },
       { kanjis: ["遠く"], hiragana: "とおく", romanization: "tooku", meaning: "afar" },

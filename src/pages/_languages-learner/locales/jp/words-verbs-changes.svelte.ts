@@ -22,13 +22,13 @@ export function appendVerbsChanges(words: JapaneseWord[]) {
       { hiragana: "いける", katakana: "イケる", romanization: "ikeru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "go well (informal, slang)" },
       { kanjis: ["成功する"], hiragana: "せいこうする", romanization: "seikousuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "succeed", exampleUsages: ["ビジネスで成功する"] },
       { kanjis: ["大当たりする", "大当りする"], hiragana: "おおあたりする", romanization: "ooatarisuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "win big / jackpot" },
+      { kanjis: ["困る"], hiragana: "こまる", romanization: "komaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "be troubled / have difficulty" },
 
       { kanjis: ["当たる", "当る", "中る", "中たる"], hiragana: "あたる", romanization: "ataru", verbGroup: "Godan", verbIsTransitive: false, meaning: "hit (not miss)" },
       { kanjis: ["外れる"], hiragana: "はずれる", romanization: "hazureru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "miss (not hit)" },
       { kanjis: ["空く"], hiragana: "すく", romanization: "suku", verbGroup: "Godan", verbIsTransitive: false, meaning: "empty / thin out" },
       { kanjis: ["消す"], hiragana: "けす", romanization: "kesu", verbGroup: "Godan", verbIsTransitive: true, meaning: "erase / turn off" },
       { kanjis: ["消える"], hiragana: "きえる", romanization: "kieru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "disappear" },
-      { kanjis: ["閉じる"], hiragana: "とじる", romanization: "tojiru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "close / shut" },
 
       { kanjis: ["親しむ"], hiragana: "したしむ", romanization: "shitashimu", verbGroup: "Godan", verbIsTransitive: false, meaning: "befriend" },
       { kanjis: ["知られる"], hiragana: "しられる", romanization: "shirareru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "be known", exampleUsages: ["xxxで知られる (known for xxx)"] },

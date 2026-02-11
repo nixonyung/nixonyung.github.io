@@ -68,7 +68,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["暇"], rareKanjis: ["遑"], hiragana: "いとま", romanization: "itoma", meaning: "time off (formal)" },
       { kanjis: ["余暇"], hiragana: "よか", romanization: "yoka", meaning: "leisure" },
       { kanjis: ["休暇"], hiragana: "きゅうか", romanization: "kyuuka", meaning: "vacation" },
-      { kanjis: ["お休み"], hiragana: "おやすみ", romanization: "oyasumi", meaning: "day off", derivedMeanings: ["sleep / rest"] },
+      { kanjis: ["休み"], hiragana: "やすみ", romanization: "yasumi", meaning: "day off", derivedMeanings: ["sleep / rest"] },
     );
   }
 
@@ -249,6 +249,9 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["方角"], hiragana: "ほうがく", romanization: "hougaku", meaning: "direction" },
       { kanjis: ["向き"], hiragana: "むき", romanization: "muki", meaning: "orientation" },
 
+      { kanjis: ["縦", "竪", "経"], hiragana: "たて", romanization: "tate", meaning: "the vertical xxx" },
+      { kanjis: ["横"], hiragana: "よこ", romanization: "yoko", meaning: "the horizontal xxx" },
+
       { kanjis: ["完全-"], hiragana: "かんぜん", romanization: "kanzen-", meaning: "perfect / complete" },
       { kanjis: ["半-"], hiragana: "はん", romanization: "han-", meaning: "half- / semi-" },
 
@@ -267,8 +270,12 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.ideas.activities.value) {
     words.push(
       //
-      { kanjis: ["風呂"], hiragana: "ふろ", romanization: "furo", meaning: "a bath" },
+      { kanjis: ["洗濯"], hiragana: "せんたく", romanization: "sentaku", meaning: "laundry / washing" },
       { kanjis: ["手洗い", "手洗"], hiragana: "てあらい", romanization: "tearai", meaning: "washing hands" },
+      { kanjis: ["風呂"], hiragana: "ふろ", romanization: "furo", meaning: "a bath" },
+      { katakana: "シャワー", romanization: "shawaa", meaning: "shower" },
+
+      { kanjis: ["掃除"], hiragana: "そうじ", romanization: "souji", meaning: "cleaning / sweeping", exampleUsages: ["大掃除"] },
 
       { kanjis: ["買い物", "買物"], hiragana: "かいもの", romanization: "kaimono", meaning: "shopping" },
 
@@ -280,6 +287,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["世界一周"], hiragana: "せかいいっしゅう", romanization: "sekaiisshuu", meaning: "round-the-world trip" },
       { kanjis: ["ただ乗り", "タダ乗り"], rareKanjis: ["只乗り"], hiragana: "ただのり", romanization: "tadanori", meaning: "free loading" },
 
+      { katakana: "スポーツ", romanization: "supootsu", meaning: "sports" },
       { katakana: "サッカー", romanization: "sakkaa", meaning: "soccer" },
       { kanjis: ["試合"], hiragana: "しあい", romanization: "shiai", meaning: "match / contest" },
       { katakana: "マッチ", romanization: "macchi", meaning: "macchi" },
