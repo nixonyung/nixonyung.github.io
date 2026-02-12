@@ -8,6 +8,8 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["者"], hiragana: "もの", katakana: "モノ", romanization: "mono", meaning: "thing (person)" },
       { kanjis: ["物"], hiragana: "もの", katakana: "モノ", romanization: "mono", meaning: "thing (object)" },
 
+      { hiragana: "こと", preferredForm: "hiragana", kanjis: ["事"], romanization: "koto", meaning: "thing / event / matter / situation" },
+
       { kanjis: ["空"], rareKanjis: ["虚"], hiragana: "から", katakana: "カラ", romanization: "kara", meaning: "emptiness" },
     );
   }
@@ -60,9 +62,6 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["種"], hiragana: "たね", romanization: "tane", meaning: "seed" },
       { kanjis: ["砂利"], hiragana: "じゃり", romanization: "jari", meaning: "gravel / pebbles" },
 
-      { kanjis: ["声"], hiragana: "こえ", romanization: "koe", meaning: "voice" },
-      { kanjis: ["音"], hiragana: "おと", romanization: "oto", meaning: "sound / musical note" },
-
       { kanjis: ["色"], hiragana: "いろ", romanization: "iro", meaning: "color", derivedMeanings: ["facial expression", "personality"] },
       { kanjis: ["白"], hiragana: "しろ", romanization: "shiro", meaning: "white" },
       { kanjis: ["灰色"], hiragana: "はいいろ", romanization: "haiiro", meaning: "gray" },
@@ -81,6 +80,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.nouns.objects.foodCuisine.value) {
     words.push(
+      { kanjis: ["食"], hiragana: "しょく", romanization: "shoku", meaning: "food / eating (root word)" },
       { kanjis: ["食事"], hiragana: "しょくじ", romanization: "shokuji", meaning: "meal" },
       { kanjis: ["ご飯", "御飯"], hiragana: "ごはん", romanization: "gohan", meaning: "meal / cooked rice" },
       { kanjis: ["朝ご飯", "朝ごはん", "朝御飯"], hiragana: "あさごはん", romanization: "asagohan", meaning: "breakfast" },
@@ -149,38 +149,58 @@ export function appendNounsObjects(words: JapaneseWord[]) {
 
       { katakana: "コーヒー", romanization: "koohii", meaning: "coffee" },
       { katakana: "コーラ", romanization: "coola", meaning: "coke" },
+      { katakana: "ジュース", romanization: "juusu", meaning: "juice" },
+    );
+  }
+
+  if (flashcardSettings.words.nouns.objects.outfits.value) {
+    words.push(
+      // clothes
+      { kanjis: ["服"], hiragana: "ふく", romanization: "fuku", meaning: "clothes" },
+      { kanjis: ["衣類"], hiragana: "いるい", romanization: "irui", meaning: "clothes" },
+
+      { katakana: "シャツ", romanization: "shatsu", meaning: "shirt" },
+      { katakana: "ワイシャツ", romanization: "waishatsu", meaning: "(business) white shirt" },
+      { kanjis: ["背広"], hiragana: "せびろ", romanization: "sebiro", meaning: "business suit" },
+
+      { kanjis: ["上着", "上衣"], rareKanjis: ["表着"], hiragana: "うわぎ", romanization: "uwagi", meaning: "coat / jacket / outerwear" },
+      { katakana: "セーター", romanization: "seetaa", meaning: "sweater" },
+      { katakana: "コート", romanization: "kooto", meaning: "coat" },
+
+      { katakana: "ズボン", rareKanjis: ["洋袴", "段袋"], romanization: "zubon", meaning: "trousers / pants" },
+      // TODO: pants, trousers
+      { katakana: "スカート", romanization: "sukaato", meaning: "skirt" },
+      { kanjis: ["靴"], rareKanjis: ["沓", "履", "鞋"], hiragana: "くつ", romanization: "kutsu", meaning: "shoes" },
+      { katakana: "スリッパ", romanization: "surippa", meaning: "slippers" },
+      { kanjis: ["靴下"], rareKanjis: ["沓下"], hiragana: "くつした", romanization: "kutsushita", meaning: "socks" },
+
+      // accessories
+      { kanjis: ["帽子"], hiragana: "ぼうし", romanization: "boushi", meaning: "hat" },
+      { kanjis: ["眼鏡"], hiragana: "メガネ", romanization: "megane", meaning: "glasses" },
+      { katakana: "ネクタイ", romanization: "nekutai", meaning: "necktie" },
+      { katakana: "ハンカチ", romanization: "hankachi", meaning: "handkerchief" },
+      { katakana: "ボタン", romanization: "botan", meaning: "button (clothing / machinery)" },
+      { katakana: "ポケット", romanization: "poketto", meaning: "pocket" },
+      { kanjis: ["香水"], hiragana: "こうすい", romanization: "kousui", meaning: "perfume" },
+
+      // clothing styles
+      { kanjis: ["和服"], hiragana: "わふく", romanization: "wafuku", meaning: "Japanese-style clothes" },
+      { kanjis: ["洋服"], hiragana: "ようふく", romanization: "youfuku", meaning: "Western-style clothes" },
     );
   }
 
   if (flashcardSettings.words.nouns.objects.equipments.value) {
     words.push(
+      { kanjis: ["道具"], hiragana: "どうぐ", romanization: "dougu", meaning: "tool" },
+      { kanjis: ["用具"], hiragana: "ようぐ", romanization: "yougu", meaning: "tool" },
+      { kanjis: ["工具"], hiragana: "こうぐ", romanization: "kougu", meaning: "tool" },
+
+      { kanjis: ["機械", "器械"], hiragana: "きかい", romanization: "kikai", meaning: "machine / machinery" },
+
       { kanjis: ["金"], hiragana: "かね", romanization: "kane", meaning: "money" },
       { kanjis: ["お金", "御金"], hiragana: "おかね", romanization: "okane", meaning: "money (polite)" },
 
       { kanjis: ["荷物"], hiragana: "にもつ", romanization: "nimotsu", meaning: "luggage" },
-
-      { kanjis: ["服"], hiragana: "ふく", romanization: "fuku", meaning: "clothes" },
-      { kanjis: ["和服"], hiragana: "わふく", romanization: "wafuku", meaning: "Japanese-style clothes" },
-      { kanjis: ["洋服"], hiragana: "ようふく", romanization: "youfuku", meaning: "Western-style clothes" },
-      { kanjis: ["衣類"], hiragana: "いるい", romanization: "irui", meaning: "clothes" },
-      { katakana: "シャツ", romanization: "shatsu", meaning: "shirt" },
-      { katakana: "ワイシャツ", romanization: "waishatsu", meaning: "(business) white shirt" },
-      { katakana: "セーター", romanization: "seetaa", meaning: "sweater" },
-      { kanjis: ["上着", "上衣"], rareKanjis: ["表着"], hiragana: "うわぎ", romanization: "uwagi", meaning: "coat / jacket / outerwear" },
-      { katakana: "コート", romanization: "kooto", meaning: "coat" },
-      { kanjis: ["背広"], hiragana: "せびろ", romanization: "sebiro", meaning: "business suit" },
-      { katakana: "スカート", romanization: "sukaato", meaning: "skirt" },
-      // TODO: pants, trousers
-      { katakana: "ズボン", rareKanjis: ["洋袴", "段袋"], romanization: "zubon", meaning: "trousers / pants" },
-      { kanjis: ["靴"], rareKanjis: ["沓", "履", "鞋"], hiragana: "くつ", romanization: "kutsu", meaning: "shoes" },
-      { katakana: "スリッパ", romanization: "surippa", meaning: "slippers" },
-      { kanjis: ["靴下"], rareKanjis: ["沓下"], hiragana: "くつした", romanization: "kutsushita", meaning: "socks" },
-      { kanjis: ["帽子"], hiragana: "ぼうし", romanization: "boushi", meaning: "hat" },
-      { kanjis: ["眼鏡"], hiragana: "メガネ", romanization: "megane", meaning: "glasses" },
-      { katakana: "ネクタイ", romanization: "nekutai", meaning: "necktie" },
-      { katakana: "ボタン", romanization: "botan", meaning: "button (clothing / machinery)" },
-      { katakana: "ハンカチ", romanization: "hankachi", meaning: "handkerchief" },
-      { katakana: "ポケット", romanization: "poketto", meaning: "pocket" },
 
       { kanjis: ["石鹸", "石けん"], hiragana: "せっけん", romanization: "sekken", meaning: "soap" },
       { katakana: "トイレットペーパー", romanization: "toirettopeepaa", meaning: "toilet paper" },
@@ -315,9 +335,11 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { katakana: "コンテ", romanization: "konte", meaning: 'storyboard ("continuity")', exampleUsages: ["絵コンテ / 画コンテ"] },
 
       // music
+      { kanjis: ["音"], hiragana: "おと", romanization: "oto", meaning: "sound / musical note" },
       { kanjis: ["音楽"], hiragana: "おんがく", romanization: "ongaku", meaning: "music" },
-      { kanjis: ["歌", "唄", "詩"], hiragana: "うた", romanization: "uta", meaning: "song / singing" },
       { katakana: "ミュージック", romanization: "myuujikku", meaning: "music" },
+      { kanjis: ["声"], hiragana: "こえ", romanization: "koe", meaning: "voice" },
+      { kanjis: ["歌", "唄", "詩"], hiragana: "うた", romanization: "uta", meaning: "song / singing" },
       { katakana: "アニメソング", romanization: "anime songu", meaning: "anime song" },
       { katakana: "アニソン", romanization: "anison", meaning: "anime song" },
       { katakana: "メドレー", romanization: "medorii", meaning: "medley" },

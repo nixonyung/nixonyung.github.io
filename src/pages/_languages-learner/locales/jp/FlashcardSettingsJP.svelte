@@ -49,6 +49,7 @@
             foodCuisine: { paramKey: "cuisine", defaultValue: true },
             foodDishes: { paramKey: "dishes", defaultValue: true },
             foodDrinks: { paramKey: "drinks", defaultValue: true },
+            outfits: { paramKey: "outfits", defaultValue: true },
             equipments: { paramKey: "equipments", defaultValue: true },
             transportation: { paramKey: "infrastructure", defaultValue: true },
             arts: { paramKey: "arts", defaultValue: true },
@@ -164,6 +165,7 @@
           appellations: { paramKey: "appellations", defaultValue: true },
           greetingsAndClosings: { paramKey: "greetNClose", defaultValue: true },
           softening: { paramKey: "softening", defaultValue: true },
+          thanksAndApologies: { paramKey: "thanksNApologies", defaultValue: true },
           emphasis: { paramKey: "emphasis", defaultValue: true },
           agreeing: { paramKey: "agreeing", defaultValue: true },
           requests: { paramKey: "requests", defaultValue: true },
@@ -352,6 +354,7 @@
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.foodCuisine.value} label="Cuisine" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.foodDishes.value} label="Dishes" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.foodDrinks.value} label="Drinks" />
+        <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.outfits.value} label="Outfits" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.equipments.value} label="Equipments" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.transportation.value} label="Transportation" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.arts.value} label="Arts" />
@@ -514,6 +517,7 @@
     <CheckboxInput bind:checked={flashcardSettings.words.expressions.appellations.value} label="Appellations" />
     <CheckboxInput bind:checked={flashcardSettings.words.expressions.greetingsAndClosings.value} label="Greetings and Closings" />
     <CheckboxInput bind:checked={flashcardSettings.words.expressions.softening.value} label="Softening" />
+    <CheckboxInput bind:checked={flashcardSettings.words.expressions.thanksAndApologies.value} label="Thanks and Apologies" />
     <CheckboxInput bind:checked={flashcardSettings.words.expressions.emphasis.value} label="Emphasis" />
     <CheckboxInput bind:checked={flashcardSettings.words.expressions.agreeing.value} label="Agreeing" />
     <CheckboxInput bind:checked={flashcardSettings.words.expressions.requests.value} label="Requests" />

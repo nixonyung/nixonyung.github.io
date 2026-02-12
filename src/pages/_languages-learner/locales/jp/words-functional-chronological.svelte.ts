@@ -77,7 +77,6 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { hiragana: "すでに", preferredForm: "hiragana", kanjis: ["既に"], rareKanjis: ["已に"], romanization: "sudeni", meaning: "already" },
 
       { hiragana: "そろそろ", katakana: "ソロソロ", romanization: "sorosoro", meaning: "soon" },
-      { kanjis: ["即"], hiragana: "そく", romanization: "soku", meaning: "at once / immediately" },
 
       // definite duration
       { kanjis: ["二週間", "２週間"], hiragana: "にしゅうかん", romanization: "nishuukan", meaning: "two weeks" },
@@ -104,7 +103,8 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
 
       // indefinite frequency
       // TODO: always, usually, often, sometimes, rarely, seldom, never, occasionally
-      { kanjis: ["時々", "時時"], hiragana: "ときどき", romanization: "tokidoki", meaning: "sometimes / occasionally" },
+      { kanjis: ["時に"], hiragana: "ときに", romanization: "tokini", meaning: "sometimes (situationally)" },
+      { kanjis: ["時々", "時時"], hiragana: "ときどき", romanization: "tokidoki", meaning: "sometimes (regularly)" },
       { kanjis: ["多くの場合"], hiragana: "おおくのばあい", romanization: "ookunobaai", meaning: "in many cases (written)" },
       { hiragana: "いつも", preferredForm: "hiragana", kanjis: ["何時も"], romanization: "itsumo", meaning: "always", exampleUsages: ["{[Noun] は} いつも [Verb / Adj.]"] },
       { hiragana: "また", preferredForm: "hiragana", kanjis: ["又"], rareKanjis: ["亦", "復"], romanization: "mata", meaning: "again" },

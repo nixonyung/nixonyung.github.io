@@ -32,18 +32,27 @@ export function appendExpressions(words: JapaneseWord[]) {
       // TODO: good morning, good afternoon, good evening
       { hiragana: "おはこんばんちは", romanization: "ohakonbanchiwa", meaning: "(good morning/afternoon/evening)", derivedMeanings: ["good day (spoken, casual)"] },
       { hiragana: "みなさん、こんにちは", romanization: "minasan konnichiwa", meaning: "Hello everyone (spoken, casual)" },
-      { hiragana: "すみません", romanization: "sumimasen", meaning: "Sorry / Excuse me. (polite)" },
-      { kanjis: ["失礼します"], hiragana: "しつれいします", romanization: "shitsureishimasu", meaning: "Excuse me / Pardon me.", exampleUsages: ["失礼しました"] },
+      { hiragana: "ようこそ", romanization: "youkoso", meaning: "welcome" },
       { kanjis: ["お帰りなさい"], hiragana: "おかえりなさい", romanization: "okaerinasai", meaning: "Welcome home." },
 
+      { hiragana: "おやすみなさい", preferredForm: "hiragana", kanjis: ["お休みなさい"], romanization: "oyasumi", meaning: "Good night." },
+      { hiragana: "またね", preferredForm: "hiragana", kanjis: ["又ね"], romanization: "matane", meaning: "See you later!" },
+    );
+  }
+
+  if (flashcardSettings.words.expressions.thanksAndApologies.value) {
+    words.push(
+      //
       { hiragana: "ありがとう", preferredForm: "hiragana", kanjis: ["有難う", "有り難う"], romanization: "arigatou", meaning: "Thank you." },
       { hiragana: "ありがとうございます", preferredForm: "hiragana", kanjis: ["有難うございます", "有り難うございます", "有難う御座います", "ありがとう御座います", "有り難う御座います"], romanization: "arigatougozaimasu", meaning: "Thank you very much. (formal)", exampleUsages: ["ありがとうございました"] },
       { kanjis: ["お疲れ様です"], hiragana: "おつかれさまです", romanization: "otsukaresama desu", meaning: "Good work! / You are working hard!", exampleUsages: ["お疲れ様でした"] },
       { kanjis: ["ご苦労様", "ご苦労さま", "御苦労様", "御苦労さま"], hiragana: "ごくろうさま", romanization: "gokurousama", meaning: "That's great work! (to lower-status)" },
-      { hiragana: "おやすみなさい", preferredForm: "hiragana", kanjis: ["お休みなさい"], romanization: "oyasumi", meaning: "Good night." },
-      { hiragana: "またね", preferredForm: "hiragana", kanjis: ["又ね"], romanization: "matane", meaning: "See you later!" },
       { kanjis: ["見てくれて、ありがとう"], hiragana: "みてくれて、ありがとう", romanization: "mite kurete, arigatou", meaning: "Thanks for watching" },
       { hiragana: "ごちそうさまでした", preferredForm: "hiragana", kanjis: ["ご馳走様でした", "ご馳走さまでした", "御馳走様でした"], romanization: "gochisousamadeshita", meaning: "Thank you for the meal." },
+
+      { hiragana: "すみません", romanization: "sumimasen", meaning: "sorry", derivedMeanings: ["excuse me"] },
+      { kanjis: ["申し訳ございません"], hiragana: "もうしわけございません", romanization: "moushiwakegozaimasen", meaning: "sorry (very polite)" },
+      { kanjis: ["失礼します"], hiragana: "しつれいします", romanization: "shitsureishimasu", meaning: "excuse me / pardon me" },
     );
   }
 
@@ -58,8 +67,6 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "ちょっと", rareKanjis: ["一寸"], katakana: "チョット", romanization: "chotto", meaning: "a bit (casual, intensity)", exampleUsages: ["ちょっと難し", "あとちょっと (just a bit more)"] },
       { kanjis: ["多分"], hiragana: "たぶん", romanization: "tabun", meaning: "probably" },
 
-      { hiragana: "と思う。", romanization: "to omou", meaning: "I think (casual)", exampleUsages: ["[Clause] と思う。", "[Clause] と思います。", "[Clause] と思っている。"] },
-      { hiragana: "と思わない？", romanization: "to omowanai", meaning: "don't you think? (casual)", exampleUsages: ["[Verb] と思わない？", "[Noun] だと思わない？", "[i-Adj.] と思わない？", "[na-Adj.] だと思わない？"] },
       { hiragana: "ということだ", preferredForm: "hiragana", kanjis: ["と言うことだ"], romanization: "toiukotoda", meaning: "as rumoured" },
       { hiragana: "って", romanization: "tte", meaning: "as someone said / as I heard", derivedMeanings: ["you really mean it?"], exampleUsages: ["すごいって (I heard it is amazing)", "って言っていた (it is said that)"] },
     );
@@ -81,9 +88,13 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "〇〇んです", romanization: "-n desu", meaning: "it is because (spoken, polite)", exampleUsages: ["[Clause] んです。"] },
       { hiragana: "〇〇のです", romanization: "-no desu", meaning: "it is because (written, polite)", exampleUsages: ["[Clause] のです。"] },
 
-      { kanjis: ["と言うことは", "と言う事は"], hiragana: "ということは", romanization: "toiukotowa", meaning: "if that's true" },
       { hiragana: "それでは", romanization: "soredewa", meaning: "well then (spoken, formal)" },
       { hiragana: "じゃあ", romanization: "zyaa", meaning: "well then (spoken, casual)" },
+      { kanjis: ["と言うことは", "と言う事は"], hiragana: "ということは", romanization: "toiukotowa", meaning: "if that's true" },
+
+      { kanjis: ["と思う"], hiragana: "とおもう", romanization: "to omou", meaning: "I think (casual)", exampleUsages: ["[Clause] と思う。", "[Clause] と思います。", "[Clause] と思っている。"] },
+      { kanjis: ["と思わない？"], hiragana: "とおもわない", romanization: "to omowanai", meaning: "don't you think? (casual)", exampleUsages: ["[Verb] と思わない？", "[Noun] だと思わない？", "[i-Adj.] と思わない？", "[na-Adj.] だと思わない？"] },
+      { kanjis: ["お話したいと思います"], hiragana: "おはなしたいとおもいます", romanization: "ohanashitai to omoimasu", meaning: "I would like to talk about" },
     );
   }
 

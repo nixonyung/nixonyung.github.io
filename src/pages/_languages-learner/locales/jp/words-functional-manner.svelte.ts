@@ -4,7 +4,7 @@ import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 export function appendFunctionalManner(words: JapaneseWord[]) {
   if (flashcardSettings.words.functional.manner.value) {
     words.push(
-      { kanjis: ["良く", "善く", "能く", "好く", "克く"], hiragana: "よく", romanization: "yoku", meaning: "nicely / properly / skillfully" },
+      { kanjis: ["良く", "善く", "能く", "好く", "克く"], hiragana: "よく", romanization: "yoku", meaning: "nicely / skillfully", derivedMeanings: ["properly"] },
 
       { kanjis: ["一緒に"], hiragana: "いっしょに", romanization: "isshoni", meaning: "together {with xxx}", exampleUsages: ["一緒に [Verb]", "[Noun] と 一緒に [Verb]。"] },
 
@@ -12,7 +12,10 @@ export function appendFunctionalManner(words: JapaneseWord[]) {
       { kanjis: ["直ぐ"], hiragana: "すぐ", romanization: "sugu", meaning: "direct / straightforward", exampleUsages: ["直ぐに"] },
       { kanjis: ["直接"], hiragana: "ちょくせつ", romanization: "chokusetsu", meaning: "direct / straightforward (formal)" },
       { kanjis: ["直ちに"], hiragana: "ただちに", romanization: "tadachini", meaning: "at once" },
+      // TODO: 早速なんですが
+      { kanjis: ["早速"], hiragana: "さっそく", romanization: "sassoku", meaning: "immediately" },
       { kanjis: ["早々", "早早"], hiragana: "はやばや", romanization: "hayabaya", meaning: "promptly" },
+      { kanjis: ["即"], hiragana: "そく", romanization: "soku", meaning: "at once / immediately" },
 
       { hiragana: "ゆっくり", romanization: "yukkuri", meaning: "slowly / leisurely" },
 

@@ -29,8 +29,6 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["栄養", "営養"], hiragana: "えいよう", romanization: "eiyou", meaning: "nutrition" },
       { kanjis: ["昼寝"], hiragana: "ひるね", romanization: "hirune", meaning: "afternoon nap" },
 
-      { hiragana: "こと", preferredForm: "hiragana", kanjis: ["事"], romanization: "koto", meaning: "thing / event / matter / situation" },
-
       { kanjis: ["病気"], hiragana: "びょうき", romanization: "byouki", meaning: "illness" },
       { kanjis: ["疲れ"], hiragana: "つかれ", romanization: "tsukare", meaning: "tiredness" },
       { kanjis: ["風邪"], hiragana: "かぜ", romanization: "kaze", meaning: "cold / flu" },
@@ -63,6 +61,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["我慢"], hiragana: "がまん", katakana: "ガマン", romanization: "gaman", meaning: "endurance" },
 
       { kanjis: ["真面目"], hiragana: "まじめ", katakana: "マジメ", romanization: "majime", meaning: "truthfulness" },
+
+      { kanjis: ["匂い", "臭い"], hiragana: "におい", romanization: "nioi", meaning: "scent / odour" },
 
       { kanjis: ["暇"], rareKanjis: ["閑"], hiragana: "ひま", romanization: "hima", meaning: "spare time" },
       { kanjis: ["暇"], rareKanjis: ["遑"], hiragana: "いとま", romanization: "itoma", meaning: "time off (formal)" },
@@ -154,7 +154,9 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["作業"], hiragana: "さぎょう", romanization: "sagyou", meaning: "task", exampleUsages: ["絵コンテ作業"] },
       { kanjis: ["会社"], hiragana: "かいしゃ", romanization: "kaisha", meaning: "company" },
       { kanjis: ["企業"], hiragana: "きぎょう", romanization: "kigyou", meaning: "enterprise" },
+      { kanjis: ["競争"], hiragana: "きょうそう", romanization: "kyousou", meaning: "competition / rivalry" },
       { kanjis: ["成功"], hiragana: "せいこう", romanization: "seikou", meaning: "success" },
+      { kanjis: ["失敗"], hiragana: "しっぱい", romanization: "shippai", meaning: "failure" },
 
       { kanjis: ["離別"], hiragana: "りべつ", romanization: "ribetsu", meaning: "separation (of relationships)" },
       { kanjis: ["分離"], hiragana: "ぶんり", romanization: "bunri", meaning: "detachment" },
@@ -180,11 +182,17 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["違い"], hiragana: "ちがい", romanization: "chigai", meaning: "difference" },
       { kanjis: ["関連"], rareKanjis: ["関聯"], hiragana: "かんれん", romanization: "kanren", meaning: "relation" },
 
+      { kanjis: ["思い", "想い", "念い"], hiragana: "おもい", romanization: "omoi", meaning: "thought" },
       { kanjis: ["選択"], hiragana: "せんたく", romanization: "sentaku", meaning: "choice" },
       { kanjis: ["決定"], hiragana: "けってい", romanization: "kettei", meaning: "decision" },
       { kanjis: ["説得"], hiragana: "せっとく", romanization: "settoku", meaning: "persuasion" },
       { kanjis: ["譲歩"], hiragana: "じょうほ", romanization: "jouho", meaning: "concession" },
+      { kanjis: ["同意"], hiragana: "どうい", romanization: "doui", meaning: "agreement" },
       { kanjis: ["中止"], hiragana: "ちゅうし", romanization: "chuushi", meaning: "termination / cancellation" },
+
+      { kanjis: ["-向け"], hiragana: "むけ", romanization: "muke", meaning: "intended for xxx" },
+      { kanjis: ["行方"], hiragana: "ゆくえ", romanization: "yukue", meaning: "destination / current direction" },
+      { katakana: "コンセプト", romanization: "konseputo", meaning: "concept / notion" },
 
       { kanjis: ["積もり", "積り"], hiragana: "つもり", romanization: "tsumori", meaning: "plan / intention" },
       { kanjis: ["直通"], hiragana: "ちょくつう", romanization: "chokutsuu", meaning: "the quality of going to destination directly" },
@@ -197,24 +205,20 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.ideas.narration.value) {
     words.push(
       { kanjis: ["話"], hiragana: "はなし", romanization: "hanashi", meaning: "conversation" },
-      { kanjis: ["語り"], hiragana: "かたり", romanization: "katari", meaning: "detailed speech (literary)" },
-
-      { kanjis: ["言葉"], rareKanjis: ["詞", "辞"], hiragana: "ことば", romanization: "kotoba", meaning: "word", derivedMeanings: ["language"], exampleUsages: ['"xxx" という言葉 (the word "xxx")'] },
       { kanjis: ["語"], hiragana: "ご", romanization: "go", meaning: "word" },
+      { kanjis: ["言葉"], rareKanjis: ["詞", "辞"], hiragana: "ことば", romanization: "kotoba", meaning: "word", derivedMeanings: ["language"], exampleUsages: ['"xxx" という言葉 (the word "xxx")'] },
       { katakana: "ワード", romanization: "woodo", meaning: "word" },
       { kanjis: ["言"], hiragana: "げん", romanization: "gen", meaning: "statement" },
       { kanjis: ["述語"], hiragana: "じゅつご", romanization: "jutsugo", meaning: "predicate (verb and object)" },
       { katakana: "フレーズ", romanization: "fureezu", meaning: "phrase" },
-      { kanjis: ["例文"], hiragana: "れいぶん", romanization: "reibun", meaning: "example sentence" },
-      { kanjis: ["例", "様"], hiragana: "ためし", romanization: "tameshi", meaning: "example / precedent" },
-      { kanjis: ["否定文"], hiragana: "ひていぶん", romanization: "hiteibun", meaning: "negative sentence" },
 
       { kanjis: ["意味"], hiragana: "いみ", romanization: "imi", meaning: "meaning" },
 
-      { kanjis: ["背景"], hiragana: "はいけい", romanization: "haikei", meaning: "background" },
-      { kanjis: ["前後関係"], hiragana: "ぜんごかんけい", romanization: "zengokankei", meaning: "context" },
-      { kanjis: ["文脈"], hiragana: "ぶんみゃく", romanization: "bunmyaku", meaning: "context" },
-      { kanjis: ["脈絡"], hiragana: "みゃくらく", romanization: "myakuraku", meaning: "context" },
+      { kanjis: ["例文"], hiragana: "れいぶん", romanization: "reibun", meaning: "example sentence" },
+      { kanjis: ["例", "様"], hiragana: "ためし", romanization: "tameshi", meaning: "example / precedent" },
+      { kanjis: ["否定文"], hiragana: "ひていぶん", romanization: "hiteibun", meaning: "negative sentence" },
+      { kanjis: ["語り"], hiragana: "かたり", romanization: "katari", meaning: "detailed speech (literary)" },
+      { kanjis: ["自己紹介"], hiragana: "じこしょうかい", romanization: "jikoshoukai", meaning: "self-introduction" },
 
       { kanjis: ["方"], hiragana: "かた", romanization: "kata", meaning: "way / method", exampleUsages: ["[Noun] の [Verb-ます (dropped)] 方"] },
       { kanjis: ["仕方"], hiragana: "しかた", romanization: "shikata", meaning: "way / method" },
@@ -228,6 +232,12 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["日本語"], hiragana: "にほんご", romanization: "nihongo", meaning: "the Japanese language" },
       { kanjis: ["中国語"], hiragana: "ちゅうごくご", romanization: "chuugokugo", meaning: "the Chinese language" },
       { kanjis: ["英語"], hiragana: "えいご", romanization: "eigo", meaning: "the English language" },
+
+      { kanjis: ["背景"], hiragana: "はいけい", romanization: "haikei", meaning: "background" },
+      { kanjis: ["前後関係"], hiragana: "ぜんごかんけい", romanization: "zengokankei", meaning: "context" },
+      { kanjis: ["文脈"], hiragana: "ぶんみゃく", romanization: "bunmyaku", meaning: "context" },
+      { kanjis: ["脈絡"], hiragana: "みゃくらく", romanization: "myakuraku", meaning: "context" },
+      { kanjis: ["理由"], hiragana: "りゆう", romanization: "riyuu", meaning: "reason" },
     );
   }
 
@@ -259,10 +269,10 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
     );
   }
 
+  // TODO: to engineering?
   if (flashcardSettings.words.nouns.ideas.science.value) {
     words.push(
       //
-      // TODO: to engineering?
       { katakana: "デジタル", romanization: "dezitaru", meaning: "digital" },
     );
   }
@@ -280,11 +290,15 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["買い物", "買物"], hiragana: "かいもの", romanization: "kaimono", meaning: "shopping" },
 
       { kanjis: ["撮影"], hiragana: "さつえい", romanization: "satsuei", meaning: "photography", derivedMeanings: ["filming"] },
-      { kanjis: ["密着"], hiragana: "みっちゃく", romanization: "micchaku", meaning: "sticking closely", exampleUsages: ["密着撮影"] },
+      { kanjis: ["配信"], hiragana: "はいしん", romanization: "haishin", meaning: "broadcast / streaming", derivedMeanings: ["filming"] },
 
       { kanjis: ["散歩"], hiragana: "さんぽ", romanization: "sanpo", meaning: "walk" },
       { kanjis: ["旅行"], hiragana: "りょこう", romanization: "ryokou", meaning: "travel" },
       { kanjis: ["世界一周"], hiragana: "せかいいっしゅう", romanization: "sekaiisshuu", meaning: "round-the-world trip" },
+      { kanjis: ["密着"], hiragana: "みっちゃく", romanization: "micchaku", meaning: "sticking closely", exampleUsages: ["密着撮影"] },
+
+      { kanjis: ["出発"], hiragana: "しゅっぱつ", romanization: "shuppatsu", meaning: "departure / setting off" },
+
       { kanjis: ["ただ乗り", "タダ乗り"], rareKanjis: ["只乗り"], hiragana: "ただのり", romanization: "tadanori", meaning: "free loading" },
 
       { katakana: "スポーツ", romanization: "supootsu", meaning: "sports" },

@@ -41,6 +41,9 @@ export function appendNounsVenues(words: JapaneseWord[]) {
       { kanjis: ["玄関"], hiragana: "げんかん", romanization: "genkan", meaning: "entrance" },
       { kanjis: ["出口"], hiragana: "でぐち", romanization: "deguchi", meaning: "exit / way out" },
       { kanjis: ["窓"], rareKanjis: ["窗", "牖", "牕"], hiragana: "まど", romanization: "mado", meaning: "window" },
+
+      { kanjis: ["道", "途", "路", "径"], hiragana: "みち", romanization: "michi", meaning: "road / path" },
+      { kanjis: ["歩道"], hiragana: "ほどう", romanization: "hodou", meaning: "walkway" },
       { kanjis: ["階段"], hiragana: "かいだん", romanization: "kaidan", meaning: "stairs" },
 
       { kanjis: ["公園"], hiragana: "こうえん", romanization: "kouen", meaning: "park" },
@@ -93,7 +96,6 @@ export function appendNounsVenues(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.venues.communities.value) {
     words.push(
       //
-      { kanjis: ["道", "途", "路", "径"], hiragana: "みち", romanization: "michi", meaning: "road / path" },
       { kanjis: ["村"], hiragana: "むら", romanization: "mura", meaning: "village" },
       { kanjis: ["町", "街"], hiragana: "まち", romanization: "machi", meaning: "town / main street" },
       { kanjis: ["都市"], hiragana: "とし", romanization: "toshi", meaning: "city" },

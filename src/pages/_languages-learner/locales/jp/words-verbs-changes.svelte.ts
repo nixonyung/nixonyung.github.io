@@ -14,6 +14,7 @@ export function appendVerbsChanges(words: JapaneseWord[]) {
 
       { kanjis: ["咲く"], hiragana: "さく", romanization: "saku", verbGroup: "Godan", verbIsTransitive: false, meaning: "bloom", exampleUsages: ["花が咲く"] },
       { kanjis: ["荒ぶ", "進ぶ"], hiragana: "すさぶ", romanization: "susabu", verbGroup: "Godan", verbIsTransitive: false, meaning: "grow wild" },
+      { kanjis: ["乾く"], hiragana: "かわく", romanization: "kawaku", verbGroup: "Godan", verbIsTransitive: false, meaning: "get dry" },
     );
   }
 

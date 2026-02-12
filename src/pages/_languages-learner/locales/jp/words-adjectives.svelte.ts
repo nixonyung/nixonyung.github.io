@@ -13,7 +13,6 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { kanjis: ["良い", "好い", "善い"], rareKanjis: ["佳い", "吉い", "宜い"], hiragana: "よい", romanization: "yoi", adjGroup: "I", meaning: "good (formal)" },
       { kanjis: ["大丈夫"], hiragana: "だいじょうぶ", romanization: "daijoubu", adjGroup: "Na", meaning: "fine / alright", derivedMeanings: ["safe"] },
       { kanjis: ["好き"], hiragana: "すき", romanization: "suki", adjGroup: "Na", meaning: "liked" },
-      { hiragana: "したい", romanization: "shitai", adjGroup: "I", meaning: "wanted to do" },
       { hiragana: "-たい", romanization: "-tai", adjGroup: "I", meaning: "wanted to", exampleUsages: ["[Verb-stem] たい", "したい"] },
 
       { kanjis: ["大切"], hiragana: "たいせつ", romanization: "taisetsu", adjGroup: "Na", meaning: "important / significant" },
@@ -47,7 +46,9 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { kanjis: ["辛い"], hiragana: "からい", romanization: "karai", adjGroup: "I", meaning: "spicy" },
       { kanjis: ["美味しい"], hiragana: "おいしい", romanization: "oishii", adjGroup: "I", meaning: "delicious" },
       { kanjis: ["美味い", "旨い"], hiragana: "うまい", romanization: "umai", adjGroup: "I", meaning: "delicious (masculine)" },
+
       { kanjis: ["不味い"], hiragana: "まずい", romanization: "mazui", adjGroup: "I", meaning: "bad tasting", derivedMeanings: ["unskillful", "unattractive"] },
+      { kanjis: ["臭い"], hiragana: "くさい", romanization: "kusai", adjGroup: "I", meaning: "smelly" },
 
       // temperatures
       { kanjis: ["暑い"], hiragana: "あつい", romanization: "atsui", adjGroup: "I", meaning: "hot (weather)" },
@@ -62,7 +63,8 @@ export function appendAdjectives(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.adjectives.appearances.value) {
     adjs.push(
-      { kanjis: ["綺麗", "奇麗"], hiragana: "きれい", katakana: "キレイ", romanization: "kirei", adjGroup: "Na", meaning: "pretty" },
+      { kanjis: ["綺麗", "奇麗"], hiragana: "きれい", katakana: "キレイ", romanization: "kirei", adjGroup: "Na", meaning: "beautiful / pretty" },
+      { kanjis: ["美しい"], rareKanjis: ["愛しい"], hiragana: "うつくしい", romanization: "utsukushii", adjGroup: "I", meaning: "beautiful / pretty" },
       { hiragana: "かわいい", preferredForm: "hiragana", kanjis: ["可愛い"], romanization: "kawaii", adjGroup: "I", meaning: "cute" },
       { kanjis: ["眠そう"], hiragana: "ねむそう", romanization: "nemusou", adjGroup: "Na", meaning: "sleepy-looking" },
       { kanjis: ["汚い"], rareKanjis: ["穢い"], hiragana: "きたない", romanization: "kitanai", adjGroup: "I", meaning: "dirty" },
@@ -132,6 +134,10 @@ export function appendAdjectives(words: JapaneseWord[]) {
   if (flashcardSettings.words.adjectives.descriptive.value) {
     adjs.push(
       //
+      { kanjis: ["同じ"], hiragana: "おなじ", romanization: "onaji", adjGroup: "Na", meaning: "identical", exampleUsages: ["[Noun] は [Noun] におなじ [Verb]"] },
+
+      { kanjis: ["活発"], rareKanjis: ["活溌", "活潑"], hiragana: "かっぱつ", romanization: "kappatsu", adjGroup: "Na", meaning: "lively / actively", exampleUsages: ["[Noun] は [Noun] におなじ [Verb]"] },
+
       { kanjis: ["暇"], rareKanjis: ["閑"], hiragana: "ひま", romanization: "hima", adjGroup: "Na", meaning: "free / unoccupied" },
       { kanjis: ["暇がない", "暇が無い"], hiragana: "ひまがない", romanization: "himaganai", adjGroup: "I", meaning: "busy" },
       { kanjis: ["忙しい"], hiragana: "いそがしい", romanization: "isogashii", adjGroup: "I", meaning: "busy" },
@@ -194,7 +200,7 @@ export function appendAdjectives(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.adjectives.miscellaneous.value) {
     adjs.push(
-      { kanjis: ["同じ"], hiragana: "おなじ", romanization: "onaji", adjGroup: "Na", meaning: "identical", exampleUsages: ["[Noun] は [Noun] におなじ [Verb]"] },
+      { hiragana: "したい", romanization: "shitai", adjGroup: "I", meaning: "would like to" },
 
       { hiragana: "いろいろ", preferredForm: "hiragana", kanjis: ["色々", "色色"], romanization: "iroiro", adjGroup: "Na", meaning: "various" },
     );

@@ -19,10 +19,11 @@ export function appendVerbsActions(words: JapaneseWord[]) {
 
       // ears
       { kanjis: ["聞く", "聴く"], hiragana: "きく", romanization: "kiku", verbGroup: "Godan", verbIsTransitive: true, meaning: "hear / listen", derivedMeanings: ["ask"] },
+      { kanjis: ["聞かす"], hiragana: "きかす", romanization: "kikasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "let someone hear / inform", derivedMeanings: ["ask"] },
 
       // mouth
       { kanjis: ["食べる"], hiragana: "たべる", romanization: "taberu", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "eat" },
-      { kanjis: ["飲む", "呑む"], hiragana: "のむ", romanization: "nomu", verbGroup: "Godan", verbIsTransitive: true, meaning: "drink / swallow" },
+      { kanjis: ["飲む", "呑む"], hiragana: "のむ", romanization: "nomu", verbGroup: "Godan", verbIsTransitive: true, meaning: "drink / swallow", exampleUsages: ["お酒を飲む"] },
       { kanjis: ["噛む", "咬む"], rareKanjis: ["嚙む", "嚼む"], hiragana: "かむ", romanization: "kamu", verbGroup: "Godan", verbIsTransitive: true, meaning: "bite / chew" },
       { kanjis: ["吹く"], hiragana: "ふく", romanization: "fuku", verbGroup: "Godan", verbIsTransitive: false, meaning: "blow" },
       { kanjis: ["吸う", "喫う"], hiragana: "すう", romanization: "suu", verbGroup: "Godan", verbIsTransitive: true, meaning: "breathe in / suck", derivedMeanings: ["smoke"] },
@@ -74,10 +75,12 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       // communicative
       { kanjis: ["言う", "云う", "謂う"], hiragana: "いう", romanization: "iu", verbGroup: "Godan", verbIsTransitive: true, meaning: "say / utter" },
       { kanjis: ["話す"], rareKanjis: ["咄す"], hiragana: "はなす", romanization: "hanasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "talk / converse" },
+      { kanjis: ["謝る"], hiragana: "あやまる", romanization: "ayamaru", verbGroup: "Godan", verbIsTransitive: true, meaning: "apologize", derivedMeanings: ["refuse"] },
       { hiragana: "しゃべる", kanjis: ["喋る"], romanization: "shaberu", verbGroup: "Godan", verbIsTransitive: true, meaning: "chatter (casual)" },
       { kanjis: ["呼ぶ"], rareKanjis: ["喚ぶ"], hiragana: "よぶ", romanization: "yobu", verbGroup: "Godan", verbIsTransitive: true, meaning: "call / address", derivedMeanings: ["invite"] },
       { kanjis: ["挙げる"], hiragana: "あげる", romanization: "ageru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "propose / suggest", derivedMeanings: ["hold an event"] },
       { kanjis: ["答える"], hiragana: "こたえる", romanization: "kotaeru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "answer / reply" },
+      { kanjis: ["同意する"], hiragana: "どういする", romanization: "douisuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "agree" },
       { kanjis: ["語る"], hiragana: "かたる", romanization: "kataru", verbGroup: "Godan", verbIsTransitive: true, meaning: "narrate / tell a story" },
       { kanjis: ["伺う"], hiragana: "うかがう", romanization: "ukagau", verbGroup: "Godan", verbIsTransitive: true, meaning: "inquire" },
       { kanjis: ["習う"], hiragana: "ならう", romanization: "narau", verbGroup: "Godan", verbIsTransitive: true, meaning: "take lesson / learn from a teacher" },
@@ -132,7 +135,10 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["上がる"], rareKanjis: ["騰がる"], hiragana: "あがる", romanization: "agaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "rise" },
       { kanjis: ["高まる"], hiragana: "たかまる", romanization: "takamaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "rise", derivedMeanings: ["swell"] },
       { kanjis: ["上る", "登る", "昇る"], hiragana: "のぼる", romanization: "noboru", verbGroup: "Godan", verbIsTransitive: false, meaning: "climb / ascend" },
+      // TODO: https://japanese.stackexchange.com/questions/96493/what-is-the-difference-between-%e8%bb%a2%e3%81%b6-%e3%81%93%e3%82%8d%e3%81%b6-and-%e8%90%bd%e3%81%a1%e3%82%8b-%e3%81%8a%e3%81%a1%e3%82%8b/96496#96496
       { kanjis: ["降る"], hiragana: "ふる", romanization: "furu", verbGroup: "Godan", verbIsTransitive: false, meaning: "fall" },
+      { kanjis: ["転ぶ"], hiragana: "ころぶ", romanization: "korobu", verbGroup: "Godan", verbIsTransitive: false, meaning: "fall" },
+      { kanjis: ["落ちる", "墜ちる"], hiragana: "おちる", romanization: "ochiru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "fall / collapse" },
       { kanjis: ["降りる", "下りる"], hiragana: "おりる", romanization: "oriru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "come down / descend" },
     );
   }
@@ -141,7 +147,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
     verbs.push(
       // holding
       { kanjis: ["取る"], hiragana: "とる", romanization: "toru", verbGroup: "Godan", verbIsTransitive: true, meaning: "take / grab" },
-      { kanjis: ["持つ"], hiragana: "もつ", romanization: "motsu", verbGroup: "Godan", verbIsTransitive: true, meaning: "hold / carry" },
+      { kanjis: ["持つ"], hiragana: "もつ", romanization: "motsu", verbGroup: "Godan", verbIsTransitive: true, meaning: "hold / carry", derivedMeanings: ["possess / maintain"] },
       { kanjis: ["強いる"], hiragana: "しいる", romanization: "shiiru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "force / press" },
       { kanjis: ["押す"], hiragana: "おす", romanization: "osu", verbGroup: "Godan", verbIsTransitive: true, meaning: "push / press down", exampleUsages: ["ボタンを押す"] },
       { kanjis: ["放す"], hiragana: "はなす", romanization: "hanasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "release" },

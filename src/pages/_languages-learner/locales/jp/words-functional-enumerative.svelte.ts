@@ -20,10 +20,6 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
 
       { hiragana: "し", romanization: "shi", meaning: "and (non-exhausive, spoken)", exampleUsages: ["[Clause] し、 [Clause]"] },
 
-      { hiragana: "など", preferredForm: "hiragana", kanjis: ["等", "抔"], romanization: "nado", meaning: "etc. (written)", exampleUsages: ["A、B、C など ..."] },
-      { hiragana: "など", preferredForm: "hiragana", kanjis: ["等", "抔"], romanization: "nado", meaning: "etc. (written)", exampleUsages: ["A、B、C など ..."] },
-      { hiragana: "などなど", preferredForm: "hiragana", kanjis: ["等など"], romanization: "nadonado", meaning: "et cetera (written, formal)" },
-
       // or
       { hiragana: "か", romanization: "ka", meaning: "or (listing options)", exampleUsages: ["[Noun] か [Noun] か ...", "[Noun] か [Noun] ..."] },
 
@@ -44,6 +40,14 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
 
       { hiragana: "のに", romanization: "noni", meaning: "even though (... something still happen unexpectedly)", exampleUsages: ["[Clause] のに、 [Clause]。"] },
       { hiragana: "もっとも", rareKanjis: ["尤も"], romanization: "mottomo", meaning: "most importantly" },
+
+      // absolute ordering
+      { kanjis: ["次いで"], hiragana: "ついで", romanization: "tsuide", meaning: "secondly" },
+
+      // etc.
+      { hiragana: "など", preferredForm: "hiragana", kanjis: ["等", "抔"], romanization: "nado", meaning: "etc. (written)", exampleUsages: ["A、B、C など ..."] },
+      { hiragana: "など", preferredForm: "hiragana", kanjis: ["等", "抔"], romanization: "nado", meaning: "etc. (written)", exampleUsages: ["A、B、C など ..."] },
+      { hiragana: "などなど", preferredForm: "hiragana", kanjis: ["等など"], romanization: "nadonado", meaning: "et cetera (written, formal)" },
     );
   }
 }
