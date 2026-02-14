@@ -18,7 +18,6 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
 
       // comparative - with expectations
       { hiragana: "かなり", rareKanjis: ["可也", "可成り", "可なり", "可成"], romanization: "kanari", meaning: "quite (better than expected)" },
-      { hiragana: "なかなか", preferredForm: "hiragana", kanjis: ["中々", "中中"], rareKanjis: ["仲々", "仲仲", "却々", "却却"], romanization: "nakanaka", meaning: "decently (better than expected)" },
       { hiragana: "すごく", preferredForm: "hiragana", kanjis: ["凄く"], romanization: "sugoku", meaning: "very (casual, better than expected)" },
       { hiragana: "ずいぶん", preferredForm: "hiragana", kanjis: ["随分", "ずい分"], romanization: "zuibun", meaning: "very (better than expected)" },
 
@@ -34,6 +33,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { kanjis: ["何らか", "何等か"], hiragana: "なんらか", romanization: "nanraka", meaning: "somewhat" },
       { kanjis: ["何も"], hiragana: "なにも", romanization: "nanimo", meaning: "not at all" },
       { kanjis: ["何も"], hiragana: "なんも", romanization: "nanmo", meaning: "not at all (spoken)" },
+      { hiragana: "あまり", romanization: "amari", meaning: "not much" },
       { kanjis: ["丁度"], hiragana: "ちょうど", romanization: "choudo", meaning: "exactly" },
       { hiragana: "だけ", preferredForm: "hiragana", kanjis: ["丈"], romanization: "dake", meaning: "only (in its entirety)" },
       { kanjis: ["全部"], hiragana: "ぜんぶ", romanization: "zenbu", meaning: "all (concrete items)" },
@@ -58,6 +58,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
 
       // definite quantities
       // TODO: numbers / counters
+      // TODO: https://www.tofugu.com/japanese/japanese-counters-list/
       { kanjis: ["千", "阡", "仟"], hiragana: "せん", romanization: "sen", meaning: "thousand (1,000)" },
       { kanjis: ["万"], hiragana: "まん", romanization: "man", meaning: "ten thousand (10,000)" },
       { kanjis: ["零"], hiragana: "れい", romanization: "rei", meaning: "zero" },
@@ -65,6 +66,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { kanjis: ["二つ"], hiragana: "ふたつ", romanization: "futatsu", meaning: "two", exampleUsages: ["二つの [Noun]"] },
       { kanjis: ["一人", "独り"], hiragana: "ひとり", romanization: "hitori", meaning: "one person" },
       { kanjis: ["二人"], hiragana: "ふたり", romanization: "futari", meaning: "two people" },
+      { kanjis: ["歳", "才"], hiragana: "さい", romanization: "sai", meaning: "xxx years old" },
       { kanjis: ["１００円"], hiragana: "ひゃくえん", romanization: "hyakuen", meaning: "100 yen" },
       { kanjis: ["一杯", "１杯"], hiragana: "いっぱい", romanization: "ippai", meaning: "one cup", derivedMeanings: ["full / many / much"] },
       { kanjis: ["一周"], hiragana: "いっしゅう", romanization: "isshuu", meaning: "one lap" },

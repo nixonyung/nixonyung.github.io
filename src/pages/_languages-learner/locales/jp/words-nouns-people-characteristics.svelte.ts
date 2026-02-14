@@ -53,6 +53,7 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.people.byCharacteristics.professions.value) {
     words.push(
       { kanjis: ["学生"], hiragana: "がくせい", romanization: "gakusei", meaning: "student" },
+      { kanjis: ["教師"], hiragana: "きょうし", romanization: "kyoushi", meaning: "teacher / instructor" },
 
       { kanjis: ["食通"], hiragana: "しょくつう", romanization: "shokutsuu", meaning: "gourmet / foodie" },
       { katakana: "グルメ", romanization: "gurume", meaning: "gourmet" },
@@ -73,7 +74,6 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.people.byCharacteristics.socialStatus.value) {
     words.push(
       //
-      { kanjis: ["先生"], hiragana: "せんせい", romanization: "sensei", meaning: "master / teacher" },
       { kanjis: ["親方"], hiragana: "おやかた", romanization: "oyakata", meaning: "master / boss" },
       { kanjis: ["大家"], hiragana: "たいか", romanization: "taika", meaning: "authority (known for expertise)" },
       { kanjis: ["生徒"], hiragana: "せいと", romanization: "seito", meaning: "pupil" },

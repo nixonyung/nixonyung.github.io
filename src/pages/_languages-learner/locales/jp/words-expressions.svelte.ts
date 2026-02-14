@@ -11,13 +11,17 @@ export function appendExpressions(words: JapaneseWord[]) {
   // TODO: noni
   // TODO: Shika, Bakari, Nomi
   // TODO: proverbs
+  // TODO: Teineigo, Sonkeigo, and Kenjougo
 
   if (flashcardSettings.words.expressions.appellations.value) {
     words.push(
+      // TODO: https://www.tofugu.com/japanese-grammar/honorific-prefix-o-go/
+      // TODO: https://www.wikiwand.com/en/articles/Japanese_honorifics
       { hiragana: "〇〇さん", romanization: "san", meaning: "Mr/Mrs/Miss/Ms xxx" },
       { kanjis: ["〇〇様"], rareKanjis: ["〇〇方", "〇〇状"], hiragana: "〇〇さま", romanization: "sama", meaning: "Mr/Mrs/Miss/Ms xxx (very formal)", exampleUsages: ["(addressing higher status people / customers)"] },
       { kanjis: ["〇〇君"], hiragana: "〇〇くん", romanization: "kun", meaning: "(addressing younger males)" },
       { hiragana: "〇〇ちゃん", romanization: "chan", meaning: "(addressing girls / children / pets, cute)" },
+      { kanjis: ["先生"], hiragana: "せんせい", romanization: "sensei", meaning: "master / teacher (addressing them)" },
 
       { hiragana: "お〇〇", preferredForm: "hiragana", kanjis: ["御-"], romanization: "o", meaning: "(honorific for native Japanese words)", exampleUsages: ["お[Noun]", "(addressing family members polite)", "(talking about others' family members)"] },
       { hiragana: "ご〇〇", preferredForm: "hiragana", kanjis: ["御-"], romanization: "go", meaning: "(honorific for Chinese-derived words)", exampleUsages: ["ご[Noun]"] },
@@ -29,28 +33,39 @@ export function appendExpressions(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.expressions.greetingsAndClosings.value) {
     words.push(
-      // TODO: good morning, good afternoon, good evening
-      { hiragana: "おはこんばんちは", romanization: "ohakonbanchiwa", meaning: "(good morning/afternoon/evening)", derivedMeanings: ["good day (spoken, casual)"] },
-      { hiragana: "みなさん、こんにちは", romanization: "minasan konnichiwa", meaning: "Hello everyone (spoken, casual)" },
-      { hiragana: "ようこそ", romanization: "youkoso", meaning: "welcome" },
-      { kanjis: ["お帰りなさい"], hiragana: "おかえりなさい", romanization: "okaerinasai", meaning: "Welcome home." },
+      { hiragana: "おはよう", preferredForm: "hiragana", kanjis: ["お早う"], romanization: "ohayou", meaning: "good morning." },
+      { hiragana: "おはようございます", preferredForm: "hiragana", kanjis: ["お早うございます"], romanization: "ohayougozaimasu", meaning: "good morning (polite)" },
+      { hiragana: "こんにちは", preferredForm: "hiragana", kanjis: ["今日は"], romanization: "konnichiha", meaning: "good afternoon", exampleUsages: ["みなさん、こんにちは (Hello everyone!)"] },
+      { hiragana: "こんばんは", preferredForm: "hiragana", kanjis: ["今晩は"], romanization: "konbanha", meaning: "good evening" },
+      { hiragana: "おはこんばんちは", romanization: "ohakonbanchiwa", meaning: "hello (spoken, casual)" },
+      { hiragana: "もしもし", romanization: "moshimoshi", meaning: "hello (on a phone)" },
 
-      { hiragana: "おやすみなさい", preferredForm: "hiragana", kanjis: ["お休みなさい"], romanization: "oyasumi", meaning: "Good night." },
-      { hiragana: "またね", preferredForm: "hiragana", kanjis: ["又ね"], romanization: "matane", meaning: "See you later!" },
+      { hiragana: "ようこそ", romanization: "youkoso", meaning: "welcome" },
+      { kanjis: ["お帰りなさい"], hiragana: "おかえりなさい", romanization: "okaerinasai", meaning: "welcome home" },
+      { hiragana: "いらっしゃいませ", romanization: "irasshaimase", meaning: "welcome (to a shop / restaurant)" },
+
+      { hiragana: "はじめまして", preferredForm: "hiragana", kanjis: ["初めまして", "始めまして"], romanization: "hajimemashite", meaning: "nice to meet you (for the first time)" },
+
+      { hiragana: "じゃあね", romanization: "jaane", meaning: "bye (casual)" },
+      { hiragana: "またね", preferredForm: "hiragana", kanjis: ["又ね"], romanization: "matane", meaning: "see you later (casual)" },
+      { kanjis: ["また次回お会いしましょう"], hiragana: "またじかいおあいしましょう", romanization: "matajikai oaishimashou", meaning: "see you next time (polite)" },
+      { hiragana: "さよなら", romanization: "sayonara", meaning: "farewell" },
+      { hiragana: "おやすみ", preferredForm: "hiragana", kanjis: ["お休み"], romanization: "oyasumi", meaning: "good night (going to sleep)", exampleUsages: ["お休みなさい"] },
     );
   }
 
   if (flashcardSettings.words.expressions.thanksAndApologies.value) {
     words.push(
       //
-      { hiragana: "ありがとう", preferredForm: "hiragana", kanjis: ["有難う", "有り難う"], romanization: "arigatou", meaning: "Thank you." },
-      { hiragana: "ありがとうございます", preferredForm: "hiragana", kanjis: ["有難うございます", "有り難うございます", "有難う御座います", "ありがとう御座います", "有り難う御座います"], romanization: "arigatougozaimasu", meaning: "Thank you very much. (formal)", exampleUsages: ["ありがとうございました"] },
-      { kanjis: ["お疲れ様です"], hiragana: "おつかれさまです", romanization: "otsukaresama desu", meaning: "Good work! / You are working hard!", exampleUsages: ["お疲れ様でした"] },
-      { kanjis: ["ご苦労様", "ご苦労さま", "御苦労様", "御苦労さま"], hiragana: "ごくろうさま", romanization: "gokurousama", meaning: "That's great work! (to lower-status)" },
-      { kanjis: ["見てくれて、ありがとう"], hiragana: "みてくれて、ありがとう", romanization: "mite kurete, arigatou", meaning: "Thanks for watching" },
-      { hiragana: "ごちそうさまでした", preferredForm: "hiragana", kanjis: ["ご馳走様でした", "ご馳走さまでした", "御馳走様でした"], romanization: "gochisousamadeshita", meaning: "Thank you for the meal." },
+      { hiragana: "ありがとう", preferredForm: "hiragana", kanjis: ["有難う", "有り難う"], romanization: "arigatou", meaning: "thank you" },
+      { hiragana: "ありがとうございます", preferredForm: "hiragana", kanjis: ["有難うございます", "有り難うございます", "有難う御座います", "ありがとう御座います", "有り難う御座います"], romanization: "arigatougozaimasu", meaning: "thank you very much (formal)", exampleUsages: ["ありがとうございました"] },
+      { hiragana: "おかげさま", preferredForm: "hiragana", kanjis: ["お陰様", "お蔭様", "おかげ様", "お陰さま"], romanization: "okagesama", meaning: "thanks to you" },
+      { kanjis: ["お疲れ様です"], hiragana: "おつかれさまです", romanization: "otsukaresama desu", meaning: "good work! / you are working hard!", exampleUsages: ["お疲れ様でした"] },
+      { kanjis: ["ご苦労様", "ご苦労さま", "御苦労様", "御苦労さま"], hiragana: "ごくろうさま", romanization: "gokurousama", meaning: "that's great work! (to lower-status)" },
+      { kanjis: ["見てくれて、ありがとう"], hiragana: "みてくれて、ありがとう", romanization: "mite kurete, arigatou", meaning: "thanks for watching" },
+      { hiragana: "ごちそうさまでした", preferredForm: "hiragana", kanjis: ["ご馳走様でした", "ご馳走さまでした", "御馳走様でした"], romanization: "gochisousamadeshita", meaning: "thank you for the meal" },
 
-      { hiragana: "すみません", romanization: "sumimasen", meaning: "sorry", derivedMeanings: ["excuse me"] },
+      { hiragana: "すみません", romanization: "sumimasen", meaning: "sorry", derivedMeanings: ["excuse me"], exampleUsages: ["あの、すみません。"] },
       { kanjis: ["申し訳ございません"], hiragana: "もうしわけございません", romanization: "moushiwakegozaimasen", meaning: "sorry (very polite)" },
       { kanjis: ["失礼します"], hiragana: "しつれいします", romanization: "shitsureishimasu", meaning: "excuse me / pardon me" },
     );
@@ -103,7 +118,7 @@ export function appendExpressions(words: JapaneseWord[]) {
       //
       { hiragana: "はい", romanization: "sou", meaning: "yes / I see", derivedMeanings: ["(I am listening)"] },
       { hiragana: "ええ", romanization: "ee", meaning: "yes (casual)" },
-      { hiragana: "そう", rareKanjis: ["然う"], romanization: "sou", meaning: "(agree)" },
+      { hiragana: "そう", rareKanjis: ["然う"], romanization: "sou", meaning: "(agree)", exampleUsages: ["はい、そうです。"] },
       { hiragana: "そうか", romanization: "souka", meaning: "I see" },
       { hiragana: "そうですね", romanization: "soudesune", meaning: "you're right (polite)", derivedMeanings: ["isn't it"] },
       { hiragana: "いいな", romanization: "iina", meaning: "that's nice" },
@@ -122,12 +137,22 @@ export function appendExpressions(words: JapaneseWord[]) {
     words.push(
       //
       { hiragana: "ください", preferredForm: "hiragana", kanjis: ["下さい"], romanization: "kudasai", meaning: "please give me (polite)", exampleUsages: ["お [Noun] をください。", "[Noun] を {(counter)} ください。"] },
-      { hiragana: "どうぞ", romanization: "douso", meaning: "please / kindly" },
       { hiragana: "ほしい", preferredForm: "hiragana", kanjis: ["欲しい"], romanization: "hoshii", meaning: "I want xxx (casual)", exampleUsages: ["[Noun] がほしいです。"] },
-      { hiragana: "ませんか？", romanization: "masen ka", meaning: "will you?", exampleUsages: ["[Verb-ます (dropped)] ませんか？"] },
-      { hiragana: "ましょうか？", romanization: "mashou ka", meaning: "shall I? (assuming yes)", exampleUsages: ["[Verb-ます (dropped)] ましょうか？"] },
+      { kanjis: ["お願いします"], hiragana: "おねがいします", romanization: "onegaishimasu", meaning: "please! (very polite)" },
+
       { kanjis: ["急いで"], hiragana: "いそいで", romanization: "isoide", meaning: "hurry up!" },
       { hiragana: "まだですか？", preferredForm: "hiragana", kanjis: ["未だですか？"], romanization: "madadesuka", meaning: "not done yet?" },
+    );
+  }
+
+  if (flashcardSettings.words.expressions.offerings.value) {
+    words.push(
+      //
+      { hiragana: "さあ", romanization: "saa", meaning: "come on (casual)" },
+      { hiragana: "どうぞ", romanization: "douzo", meaning: "please go ahead (polite)" },
+
+      { hiragana: "どれにする？", romanization: "dore ni suru", meaning: "Which one are you going for?" },
+      { hiragana: "何ができますか？", romanization: "naniga dekimasuka", meaning: "What can I do?" },
     );
   }
 
@@ -143,6 +168,7 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "え？", romanization: "e", meaning: "oh? / eh?" },
       { hiragana: "まじ？", romanization: "maji", meaning: "seriously? (informal)" },
       { kanjis: ["何？"], hiragana: "なに？", romanization: "nani", meaning: "what?" },
+      { kanjis: ["何してるの？"], hiragana: "なにしてるの？", romanization: "nani shiteruno", meaning: "what are you doing?" },
       { kanjis: ["何それ？"], hiragana: "なにそれ", romanization: "nanisore", meaning: "what the?!" },
       { kanjis: ["何ですか？"], hiragana: "なんですか？", romanization: "nandesuka", meaning: "what is it? (polite)" },
       { kanjis: ["何なのか？"], hiragana: "なんなのか？", romanization: "nannanoka", meaning: "what is this about?" },
@@ -158,12 +184,8 @@ export function appendExpressions(words: JapaneseWord[]) {
 
       { hiragana: "こんな-", romanization: "konna-", meaning: "like this" },
 
-      { hiragana: "さあ", romanization: "saa", meaning: "come on" },
-
       { hiragana: "もうありません", romanization: "mou arimasen", meaning: "aren't any left" },
       { hiragana: "あと", romanization: "ato", meaning: "still have", exampleUsages: ["あと5秒"] },
-
-      { hiragana: "どれにする?", romanization: "dore ni suru", meaning: "Which one are you going for?" },
 
       { hiragana: "〇〇のが〇〇", romanization: "no ga", meaning: "xxx is doing it xxx-ly", exampleUsages: ["... [Verb] のが [Adj.] です。", "... [Verb] のが上手/下手 です。", "... [Verb] のが好き/嫌い です。", "... [Verb] のが速い/遅い です。", "... [Verb] のが難しい/易しい です。"] },
 

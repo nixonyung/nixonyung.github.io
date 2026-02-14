@@ -26,6 +26,7 @@ export function appendFunctionalManner(words: JapaneseWord[]) {
 
       // onomatopoeias
       { hiragana: "どんどん", katakana: "ドンドン", romanization: "dondon", meaning: "(drumming sound) / quickly" },
+      { hiragana: "ぼちぼち", romanization: "bochibochi", meaning: "(water dripping sound) leisurely / gradually", derivedMeanings: ["so-so"] },
       { hiragana: "すやすや", romanization: "suyasuya", meaning: "(sleeping sound, quietly)" },
       { hiragana: "ぷるぷる", katakana: "プルプル", romanization: "purupuru", meaning: "(trembling sound)" },
     );

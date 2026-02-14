@@ -25,6 +25,7 @@ export function appendVerbsDescriptive(words: JapaneseWord[]) {
   if (flashcardSettings.words.verbs.descriptive.existence.value) {
     verbs.push(
       { hiragana: "いる", rareKanjis: ["居る"], romanization: "iru", verbGroup: "Godan", verbIsTransitive: false, meaning: "exist (for living things)", exampleUsages: ["xxx に入っていました (was starting to perform xxx)"] },
+      { hiragana: "いる", preferredForm: "hiragana", kanjis: ["要る"], romanization: "iru", verbGroup: "Godan", verbIsTransitive: false, meaning: "is needed / is necessary" },
       { hiragana: "ある", preferredForm: "hiragana", kanjis: ["有る", "在る"], romanization: "aru", verbGroup: "Godan", verbIsTransitive: false, meaning: "exist (for non-living things)", exampleUsages: ["質問かあれば"] },
 
       { kanjis: ["来る"], hiragana: "くる", romanization: "kuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "come (spatially / temporally)" },

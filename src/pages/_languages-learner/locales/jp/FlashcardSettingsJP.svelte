@@ -169,6 +169,7 @@
           emphasis: { paramKey: "emphasis", defaultValue: true },
           agreeing: { paramKey: "agreeing", defaultValue: true },
           requests: { paramKey: "requests", defaultValue: true },
+          offerings: { paramKey: "offerings", defaultValue: true },
           surprised: { paramKey: "surprised", defaultValue: true },
           misc: { paramKey: "miscExpr", defaultValue: true },
         },
@@ -521,6 +522,7 @@
     <CheckboxInput bind:checked={flashcardSettings.words.expressions.emphasis.value} label="Emphasis" />
     <CheckboxInput bind:checked={flashcardSettings.words.expressions.agreeing.value} label="Agreeing" />
     <CheckboxInput bind:checked={flashcardSettings.words.expressions.requests.value} label="Requests" />
+    <CheckboxInput bind:checked={flashcardSettings.words.expressions.offerings.value} label="Offerings" />
     <CheckboxInput bind:checked={flashcardSettings.words.expressions.surprised.value} label="Surprised" />
     <CheckboxInput bind:checked={flashcardSettings.words.expressions.misc.value} label="(misc.)" />
   </SettingsRow>

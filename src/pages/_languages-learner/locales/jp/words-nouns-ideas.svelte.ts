@@ -15,10 +15,11 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["時間"], hiragana: "じかん", romanization: "jikan", meaning: "time" },
       { kanjis: ["二十歳"], hiragana: "はたち", romanization: "hatachi", meaning: "20 years old" },
 
-      { kanjis: ["気持ち", "気持"], hiragana: "きもち", romanization: "kimochi", meaning: "feeling" },
+      { kanjis: ["感じ"], hiragana: "かんじ", romanization: "kanji", meaning: "feeling / sense / impression" },
+      { kanjis: ["気持ち", "気持"], hiragana: "きもち", romanization: "kimochi", meaning: "feeling (emotional)" },
       { kanjis: ["気分"], hiragana: "きぶん", romanization: "kibun", meaning: "mood" },
-      { kanjis: ["気持ち", "気持"], hiragana: "きもち", romanization: "kimochi", meaning: "feeling" },
       { kanjis: ["元気"], hiragana: "げんき", romanization: "genki", meaning: "living energy" },
+      { kanjis: ["調子"], hiragana: "ちょうし", romanization: "choushi", meaning: "pitch / tone", derivedMeanings: ["mood", "condition"] },
 
       // living
       { kanjis: ["暮らし", "暮し"], hiragana: "くらし", romanization: "kurashi", meaning: "the way of living", exampleUsages: ["一人暮らし"] },
@@ -93,21 +94,22 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["継承"], hiragana: "けいしょう", romanization: "keishou", meaning: "inheritance" },
       { kanjis: ["所属"], hiragana: "しょぞく", romanization: "shozoku", meaning: "belonging to", exampleUsages: ["所属メンバー"] },
 
-      { kanjis: ["大勢"], hiragana: "おおぜい", romanization: "oozei", meaning: "crowd of people" },
-      { katakana: "パーティー", romanization: "paatii", meaning: "party" },
-
-      { kanjis: ["親密"], hiragana: "しんみつ", romanization: "shinmitsu", meaning: "intimacy" },
-      { kanjis: ["親しみ"], hiragana: "したしみ", romanization: "shitashimi", meaning: "familarity" },
-      { kanjis: ["親善"], hiragana: "しんぜん", romanization: "shinzen", meaning: "goodwill" },
-
       { kanjis: ["名前"], hiragana: "なまえ", romanization: "namae", meaning: "name" },
       { kanjis: ["姓名"], hiragana: "せいめい", romanization: "seimei", meaning: "full name" },
       { kanjis: ["氏名"], hiragana: "しめい", romanization: "shimei", meaning: "full name (formal)" },
       { kanjis: ["苗字", "名字"], hiragana: "みょうじ", romanization: "myouji", meaning: "surname" },
 
+      { kanjis: ["親密"], hiragana: "しんみつ", romanization: "shinmitsu", meaning: "intimacy" },
+      { kanjis: ["親しみ"], hiragana: "したしみ", romanization: "shitashimi", meaning: "familarity" },
+      { kanjis: ["親善"], hiragana: "しんぜん", romanization: "shinzen", meaning: "goodwill" },
+
       { kanjis: ["世界"], hiragana: "せかい", romanization: "sekai", meaning: "the world" },
       { kanjis: ["社会"], hiragana: "しゃかい", romanization: "shakai", meaning: "society" },
       { kanjis: ["場合"], hiragana: "ばあい", romanization: "baai", meaning: "occasion" },
+      { kanjis: ["大勢"], hiragana: "おおぜい", romanization: "oozei", meaning: "crowd of people" },
+      { katakana: "パーティー", romanization: "paatii", meaning: "party" },
+
+      { kanjis: ["出身"], hiragana: "しゅっしん", romanization: "shusshin", meaning: "one's origin (home country/parentage/education)", exampleUsages: ["私は東京出身です。"] },
 
       { kanjis: ["育児"], hiragana: "いくじ", romanization: "ikuji", meaning: "childcare" },
       { kanjis: ["養成"], hiragana: "ようせい", romanization: "yousei", meaning: "development" },

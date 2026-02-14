@@ -92,7 +92,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
   if (flashcardSettings.words.verbs.actions.ownership.value) {
     verbs.push(
       // receiving
-      { hiragana: "いる", preferredForm: "hiragana", kanjis: ["要る"], romanization: "iru", verbGroup: "Godan", verbIsTransitive: false, meaning: "want" },
+      { kanjis: ["得る", "獲る"], hiragana: "える", romanization: "eru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "get / gain / obtain" },
       { hiragana: "くれる", rareKanjis: ["呉れる"], romanization: "kureru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "give to me / us" },
       { hiragana: "くださる", preferredForm: "hiragana", kanjis: ["下さる"], romanization: "kudasaru", verbGroup: "Godan", verbIsTransitive: true, meaning: "bestow me / us (very polite)" },
       { hiragana: "もらう", preferredForm: "hiragana", kanjis: ["貰う"], romanization: "morau", verbGroup: "Godan", verbIsTransitive: true, meaning: "receive" },
