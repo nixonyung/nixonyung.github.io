@@ -3,9 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "build": "astro build",
-    "preview": "astro build && astro preview",
+    "preview": "astro build && astro preview --host",
     "astro": "astro",
     "check": "eslint . && svelte-check"
   },
