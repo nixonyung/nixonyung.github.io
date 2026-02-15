@@ -140,6 +140,8 @@ export function appendAdjectives(words: JapaneseWord[]) {
   if (flashcardSettings.words.adjectives.descriptive.value) {
     adjs.push(
       //
+      { katakana: "リアル", romanization: "riaru", adjGroup: "Na", meaning: "real" },
+
       { kanjis: ["同じ"], hiragana: "おなじ", romanization: "onaji", adjGroup: "Na", meaning: "identical", exampleUsages: ["[Noun] は [Noun] におなじ [Verb]"] },
 
       { kanjis: ["活発"], rareKanjis: ["活溌", "活潑"], hiragana: "かっぱつ", romanization: "kappatsu", adjGroup: "Na", meaning: "lively / actively", exampleUsages: ["[Noun] は [Noun] におなじ [Verb]"] },

@@ -8,8 +8,6 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["者"], hiragana: "もの", katakana: "モノ", romanization: "mono", meaning: "thing (person)" },
       { kanjis: ["物"], hiragana: "もの", katakana: "モノ", romanization: "mono", meaning: "thing (object)" },
 
-      { hiragana: "こと", preferredForm: "hiragana", kanjis: ["事"], romanization: "koto", meaning: "thing / event / matter / situation" },
-
       { kanjis: ["空"], rareKanjis: ["虚"], hiragana: "から", katakana: "カラ", romanization: "kara", meaning: "emptiness" },
     );
   }
@@ -260,6 +258,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { katakana: "ノート", romanization: "nooto", meaning: "notebook", derivedMeanings: ["(verb) take note", "musical note", "notebook (computer)"] },
       { kanjis: ["メモ帳"], hiragana: "メモちょう", romanization: "memochou", meaning: "memo book" },
       { kanjis: ["日記"], hiragana: "にっき", romanization: "nikki", meaning: "diary" },
+      { kanjis: ["教科書"], hiragana: "きょうかしょ", romanization: "kyoukasho", meaning: "textbook" },
       { kanjis: ["字引", "字引き"], hiragana: "じびき", romanization: "jibiki", meaning: "dictionary" },
       { kanjis: ["辞書"], hiragana: "じしょ", romanization: "jisho", meaning: "dictionary" },
       { kanjis: ["辞典"], hiragana: "じてん", romanization: "jiten", meaning: "dictionary" },

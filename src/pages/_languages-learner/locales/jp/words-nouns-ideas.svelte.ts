@@ -14,6 +14,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
 
       { kanjis: ["時間"], hiragana: "じかん", romanization: "jikan", meaning: "time" },
       { kanjis: ["二十歳"], hiragana: "はたち", romanization: "hatachi", meaning: "20 years old" },
+      { kanjis: ["年中", "年じゅう"], hiragana: "ねんじゅう", romanization: "nenjuu", meaning: "throughout the year" },
 
       { kanjis: ["感じ"], hiragana: "かんじ", romanization: "kanji", meaning: "feeling / sense / impression" },
       { kanjis: ["気持ち", "気持"], hiragana: "きもち", romanization: "kimochi", meaning: "feeling (emotional)" },
@@ -21,12 +22,15 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["元気"], hiragana: "げんき", romanization: "genki", meaning: "living energy" },
       { kanjis: ["調子"], hiragana: "ちょうし", romanization: "choushi", meaning: "pitch / tone", derivedMeanings: ["mood", "condition"] },
 
-      // living
+      { kanjis: ["生活"], hiragana: "せいかつ", romanization: "seikatsu", meaning: "living" },
       { kanjis: ["暮らし", "暮し"], hiragana: "くらし", romanization: "kurashi", meaning: "the way of living", exampleUsages: ["一人暮らし"] },
+      { kanjis: ["日常"], hiragana: "にちじょう", romanization: "nichijou", meaning: "daily", exampleUsages: ["日常生活"] },
       { hiragana: "ただ", preferredForm: "hiragana", kanjis: ["只", "唯", "徒", "但", "常"], romanization: "tada", meaning: "ordinary / common / usual", exampleUsages: ["ただの [Noun] (an ordinary xxx)"] },
 
       { kanjis: ["健康"], hiragana: "けんこう", romanization: "kenkou", meaning: "health" },
       { kanjis: ["長寿"], hiragana: "ちょうじゅ", romanization: "chouju", meaning: "longevity" },
+      { kanjis: ["療養"], hiragana: "りょうよう", romanization: "ryouyou", meaning: "convalescence" },
+      { kanjis: ["休養"], hiragana: "きゅうよう", romanization: "kyuuyou", meaning: "recuperation / rest" },
       { kanjis: ["栄養", "営養"], hiragana: "えいよう", romanization: "eiyou", meaning: "nutrition" },
       { kanjis: ["昼寝"], hiragana: "ひるね", romanization: "hirune", meaning: "afternoon nap" },
 
@@ -35,10 +39,12 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["風邪"], hiragana: "かぜ", romanization: "kaze", meaning: "cold / flu" },
       { kanjis: ["車酔い"], hiragana: "くるまよい", romanization: "kurumayoi", meaning: "car sickness" },
 
+      { kanjis: ["泣き"], hiragana: "なき", romanization: "naki", meaning: "crying" },
+
       { kanjis: ["死"], hiragana: "し", romanization: "shi", meaning: "death" },
       { kanjis: ["死去"], hiragana: "しきょ", romanization: "shikyo", meaning: "passing away (formal)" },
 
-      { kanjis: ["泣き"], hiragana: "なき", romanization: "naki", meaning: "crying" },
+      { kanjis: ["思い出", "想い出"], hiragana: "おもいで", romanization: "omoide", meaning: "memory" },
 
       // gender
       { kanjis: ["性"], hiragana: "せい", romanization: "sei", meaning: "sex / nature of a person", derivedMeanings: ["gender"] },
@@ -70,6 +76,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["余暇"], hiragana: "よか", romanization: "yoka", meaning: "leisure" },
       { kanjis: ["休暇"], hiragana: "きゅうか", romanization: "kyuuka", meaning: "vacation" },
       { kanjis: ["休み"], hiragana: "やすみ", romanization: "yasumi", meaning: "day off", derivedMeanings: ["sleep / rest"] },
+      { katakana: "リラックス", romanization: "rirakkusu", meaning: "relax" },
     );
   }
 
@@ -109,16 +116,15 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["大勢"], hiragana: "おおぜい", romanization: "oozei", meaning: "crowd of people" },
       { katakana: "パーティー", romanization: "paatii", meaning: "party" },
 
+      { kanjis: ["文化"], hiragana: "ぶんか", romanization: "bunka", meaning: "culture" },
       { kanjis: ["出身"], hiragana: "しゅっしん", romanization: "shusshin", meaning: "one's origin (home country/parentage/education)", exampleUsages: ["私は東京出身です。"] },
-
-      { kanjis: ["育児"], hiragana: "いくじ", romanization: "ikuji", meaning: "childcare" },
-      { kanjis: ["養成"], hiragana: "ようせい", romanization: "yousei", meaning: "development" },
       { kanjis: ["教養"], hiragana: "きょうよう", romanization: "kyouyou", meaning: "manner" },
-      { kanjis: ["療養"], hiragana: "りょうよう", romanization: "ryouyou", meaning: "convalescence" },
-      { kanjis: ["休養"], hiragana: "きゅうよう", romanization: "kyuuyou", meaning: "recuperation / rest" },
+      { katakana: "マナー", romanization: "manaa", meaning: "manner", exampleUsages: ["食事マナー"] },
 
-      { kanjis: ["教育"], hiragana: "きょういく", romanization: "kyouiku", meaning: "education" },
       { kanjis: ["学習"], hiragana: "がくしゅう", romanization: "gakushuu", meaning: "study" },
+      { kanjis: ["教育"], hiragana: "きょういく", romanization: "kyouiku", meaning: "education" },
+      { kanjis: ["養成"], hiragana: "ようせい", romanization: "yousei", meaning: "development" },
+      { kanjis: ["育児"], hiragana: "いくじ", romanization: "ikuji", meaning: "childcare" },
       { kanjis: ["練習"], hiragana: "れんしゅう", romanization: "renshuu", meaning: "practice" },
       { kanjis: ["勉強"], hiragana: "べんきょう", romanization: "benkyou", meaning: "dedication", derivedMeanings: ["study"] },
       { kanjis: ["習得", "修得"], hiragana: "しゅうとく", romanization: "shuutoku", meaning: "mastering a skill" },
@@ -222,6 +228,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["語り"], hiragana: "かたり", romanization: "katari", meaning: "detailed speech (literary)" },
       { kanjis: ["自己紹介"], hiragana: "じこしょうかい", romanization: "jikoshoukai", meaning: "self-introduction" },
 
+      { katakana: "エピソード", romanization: "episoodo", meaning: "episode" },
+
       { kanjis: ["方"], hiragana: "かた", romanization: "kata", meaning: "way / method", exampleUsages: ["[Noun] の [Verb-ます (dropped)] 方"] },
       { kanjis: ["仕方"], hiragana: "しかた", romanization: "shikata", meaning: "way / method" },
       { kanjis: ["方法"], hiragana: "ほうほう", romanization: "houhou", meaning: "way / method" },
@@ -282,6 +290,9 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.ideas.activities.value) {
     words.push(
       //
+      { hiragana: "こと", preferredForm: "hiragana", kanjis: ["事"], romanization: "koto", meaning: "thing / event / matter / situation" },
+      { kanjis: ["行事"], hiragana: "ぎょうじ", romanization: "gyouji", meaning: "event" },
+
       { kanjis: ["洗濯"], hiragana: "せんたく", romanization: "sentaku", meaning: "laundry / washing" },
       { kanjis: ["手洗い", "手洗"], hiragana: "てあらい", romanization: "tearai", meaning: "washing hands" },
       { kanjis: ["風呂"], hiragana: "ふろ", romanization: "furo", meaning: "a bath" },

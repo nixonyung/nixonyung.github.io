@@ -39,6 +39,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["立つ"], hiragana: "たつ", romanization: "tatsu", verbGroup: "Godan", verbIsTransitive: false, meaning: "stand up" },
       { kanjis: ["座る", "据わる"], rareKanjis: ["坐る"], hiragana: "すわる", romanization: "suwaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "sit" },
       { kanjis: ["寄る"], hiragana: "よる", romanization: "yoru", verbGroup: "Godan", verbIsTransitive: false, meaning: "lean towards" },
+      { kanjis: ["向かう", "向う"], hiragana: "むかう", romanization: "mukau", verbGroup: "Godan", verbIsTransitive: false, meaning: "face (in direction)", exampleUsages: ["机に向かって"] },
       { kanjis: ["蹴る"], hiragana: "ける", romanization: "keru", verbGroup: "Godan", verbIsTransitive: true, meaning: "kick" },
 
       // feelings
@@ -147,7 +148,9 @@ export function appendVerbsActions(words: JapaneseWord[]) {
     verbs.push(
       // holding
       { kanjis: ["取る"], hiragana: "とる", romanization: "toru", verbGroup: "Godan", verbIsTransitive: true, meaning: "take / grab" },
+      { kanjis: ["取り上げる"], hiragana: "とりあげる", romanization: "toriageru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "pick up", derivedMeanings: ["come up with (an idea) / cover"] },
       { kanjis: ["持つ"], hiragana: "もつ", romanization: "motsu", verbGroup: "Godan", verbIsTransitive: true, meaning: "hold / carry", derivedMeanings: ["possess / maintain"] },
+      { kanjis: ["載る"], hiragana: "のる", romanization: "noru", verbGroup: "Godan", verbIsTransitive: false, meaning: "carry", derivedMeanings: ["imprint", "record / store"] },
       { kanjis: ["強いる"], hiragana: "しいる", romanization: "shiiru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "force / press" },
       { kanjis: ["押す"], hiragana: "おす", romanization: "osu", verbGroup: "Godan", verbIsTransitive: true, meaning: "push / press down", exampleUsages: ["ボタンを押す"] },
       { kanjis: ["放す"], hiragana: "はなす", romanization: "hanasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "release" },
@@ -205,6 +208,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["開く", "空く", "明く"], hiragana: "あく", romanization: "aku", verbGroup: "Godan", verbIsTransitive: false, meaning: "open / make space" },
       { kanjis: ["開く"], hiragana: "ひらく", romanization: "hiraku", verbGroup: "Godan", verbIsTransitive: true, meaning: "open / unfold", exampleUsages: ["ドアを開く (turn the door)"] },
       { kanjis: ["開ける"], hiragana: "ひらける", romanization: "hirakeru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "open / unfold", derivedMeanings: ["open for business"] },
+      { kanjis: ["広げる", "拡げる"], hiragana: "ひろげる", romanization: "hirogeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "spread / extend", exampleUsages: ["教科書を広げて勉強する (open the textbook and study)"] },
       { kanjis: ["閉じる"], hiragana: "とじる", romanization: "tojiru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "close / shut" },
       { kanjis: ["閉める"], hiragana: "しめる", romanization: "shimeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "close / shut" },
       { kanjis: ["閉まる", "締まる"], rareKanjis: ["緊まる"], hiragana: "しまる", romanization: "shimaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "be closed / be shut" },

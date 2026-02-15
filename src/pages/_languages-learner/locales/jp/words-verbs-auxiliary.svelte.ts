@@ -71,6 +71,7 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
       { hiragana: "ておく", romanization: "-te oku", meaning: "(I am going to)" },
       { hiragana: "てもいい", preferredForm: "hiragana", kanjis: ["ても良い"], romanization: "-te moii", meaning: "you can / can I?" },
       { hiragana: "てくれる", romanization: "-te kureru", meaning: "give to me", exampleUsages: ["譲ってくれた"] },
+      { hiragana: "てもらいたい", romanization: "-te moraitai", meaning: "want to" },
       // TODO: -te shimau
 
       // TODO: -たい (-tai): desire
