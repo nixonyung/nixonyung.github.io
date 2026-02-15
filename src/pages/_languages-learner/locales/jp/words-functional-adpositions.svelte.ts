@@ -4,7 +4,7 @@ import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 export function appendFunctionalAdpositions(words: JapaneseWord[]) {
   if (flashcardSettings.words.functional.adpositions.value) {
     words.push(
-      { hiragana: "は", romanization: "wa", meaning: "(known subject marker)", exampleUsages: ["[Noun] は ..."] },
+      { hiragana: "は", romanization: "wa", meaning: "(known subject marker)", exampleUsages: ["[Noun] は ...", "(place) には"] },
       { hiragana: "が", romanization: "ga", meaning: "(new subject marker)", derivedMeanings: ["(signaling contrasting info, written)"], exampleUsages: ["[Noun] が ...", "[Clause] が、 [Clause]"] },
       { hiragana: "を", romanization: "o", meaning: "(object marker)", exampleUsages: ["[Noun (object)] を [Verb (transitive)] ..."] },
       { hiragana: "の", romanization: "no", meaning: "(nominalization)", derivedMeanings: ["(forming noun clause)", "(possession marker)"], exampleUsages: ["[Verb] の ...", "[Adj.] の ...", "[Noun] の [Noun] ...", "だれの [Noun] ですか？ (which of xxx do you want?)", "絵コンテ作業の最終調整"] },

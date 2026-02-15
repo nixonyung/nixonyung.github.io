@@ -107,7 +107,6 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { kanjis: ["時々", "時時"], hiragana: "ときどき", romanization: "tokidoki", meaning: "sometimes (regularly)" },
       { kanjis: ["多くの場合"], hiragana: "おおくのばあい", romanization: "ookunobaai", meaning: "in many cases (written)" },
       { hiragana: "いつも", preferredForm: "hiragana", kanjis: ["何時も"], romanization: "itsumo", meaning: "always", exampleUsages: ["{[Noun] は} いつも [Verb / Adj.]"] },
-      { hiragana: "また", preferredForm: "hiragana", kanjis: ["又"], rareKanjis: ["亦", "復"], romanization: "mata", meaning: "again" },
       { kanjis: ["一度も", "１度も"], hiragana: "いちども", romanization: "ichidomo", meaning: "never", exampleUsages: ["ただの一度も [Clause]"] },
 
       // interrogative point in time

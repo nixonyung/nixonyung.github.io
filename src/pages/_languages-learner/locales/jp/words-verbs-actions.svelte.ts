@@ -49,6 +49,10 @@ export function appendVerbsActions(words: JapaneseWord[]) {
 
       { kanjis: ["驚く"], hiragana: "おどろく", romanization: "odoroku", verbGroup: "Godan", verbIsTransitive: false, meaning: "be surprised" },
       { kanjis: ["落ち着く", "落ちつく", "落着く"], rareKanjis: ["落ち付く"], hiragana: "おちつく", romanization: "ochitsuku", verbGroup: "Godan", verbIsTransitive: false, meaning: "calm down" },
+
+      // (misc.)
+      { kanjis: ["生む", "産む"], hiragana: "うむ", romanization: "umu", verbGroup: "Godan", verbIsTransitive: true, meaning: "give birth / lay (eggs)" },
+      { kanjis: ["生まれる", "産まれる"], hiragana: "うまれる", romanization: "umareru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "be born" },
     );
   }
 
@@ -106,6 +110,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["与える"], hiragana: "あたえる", romanization: "ataeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "give / assign (polite)" },
       { hiragana: "なくす", preferredForm: "hiragana", kanjis: ["無くす"], romanization: "nakusu", verbGroup: "Godan", verbIsTransitive: true, meaning: "lose something" },
       { kanjis: ["返す", "反す"], hiragana: "かえす", romanization: "kaesu", verbGroup: "Godan", verbIsTransitive: true, meaning: "give back" },
+      { kanjis: ["届ける"], hiragana: "とどける", romanization: "todokeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "deliver (goods/services/lessons)" },
       { kanjis: ["譲る"], hiragana: "ゆずる", romanization: "yuzuru", verbGroup: "Godan", verbIsTransitive: true, meaning: "concede" },
       { kanjis: ["売る"], hiragana: "うる", romanization: "uru", verbGroup: "Godan", verbIsTransitive: true, meaning: "sell" },
       { kanjis: ["払う"], rareKanjis: ["掃う"], hiragana: "はらう", romanization: "harau", verbGroup: "Godan", verbIsTransitive: true, meaning: "pay" },
@@ -199,6 +204,8 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["鳴く", "啼く"], hiragana: "なく", romanization: "naku", verbGroup: "Godan", verbIsTransitive: false, meaning: "make sound like an animal" },
 
       // transformative
+      { kanjis: ["調整する"], hiragana: "ちょうせいする", romanization: "chouseisuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "adjust" },
+
       { kanjis: ["直る"], hiragana: "なおる", romanization: "naoru", verbGroup: "Godan", verbIsTransitive: false, meaning: "put right / sit properly", derivedMeanings: ["fix / repair"] },
       { kanjis: ["曲がる", "曲る"], hiragana: "まがる", romanization: "magaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "bend", derivedMeanings: ["fix / repair"] },
       { kanjis: ["立ち直る", "立ちなおる", "立直る"], hiragana: "たちなおる", romanization: "tachinaoru", verbGroup: "Godan", verbIsTransitive: false, meaning: "regain one's footing" },
@@ -239,6 +246,10 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["作る", "造る", "創る"], hiragana: "つくる", romanization: "tsukuru", verbGroup: "Godan", verbIsTransitive: true, meaning: "make / create / produce" },
       { kanjis: ["生み出す", "産み出す"], hiragana: "うみだす", romanization: "umidasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "produce" },
       { kanjis: ["惹く"], hiragana: "ひく", romanization: "hiku", verbGroup: "Godan", verbIsTransitive: true, meaning: "draw attention" },
+
+      // acting
+      { kanjis: ["表現する"], hiragana: "ひょうげんする", romanization: "hyougensuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "express" },
+      { kanjis: ["歓迎する"], hiragana: "かんげいする", romanization: "kangeisuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "welcome" },
 
       // athletic
       { kanjis: ["歩く"], hiragana: "あるく", romanization: "aruku", verbGroup: "Godan", verbIsTransitive: false, meaning: "walk" },
@@ -299,12 +310,6 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["貯まる"], hiragana: "たまる", romanization: "tamaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "accumulate / grow on its own" },
       { kanjis: ["貯金する"], hiragana: "ちょきんする", romanization: "chokinsuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "save money" },
       { kanjis: ["貯蔵する"], hiragana: "ちょぞうする", romanization: "chozousuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "store" },
-
-      // (misc.)
-      { kanjis: ["歓迎する"], hiragana: "かんげいする", romanization: "kangeisuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "welcome" },
-
-      { kanjis: ["生む", "産む"], hiragana: "うむ", romanization: "umu", verbGroup: "Godan", verbIsTransitive: true, meaning: "give birth / lay (eggs)" },
-      { kanjis: ["生まれる", "産まれる"], hiragana: "うまれる", romanization: "umareru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "be born" },
     );
   }
 

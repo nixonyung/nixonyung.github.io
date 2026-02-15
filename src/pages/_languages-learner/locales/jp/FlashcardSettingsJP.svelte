@@ -24,6 +24,7 @@
               age: { paramKey: "age", defaultValue: true },
               professions: { paramKey: "professions", defaultValue: true },
               socialStatus: { paramKey: "socialStatus", defaultValue: true },
+              nationalities: { paramKey: "nationalities", defaultValue: true },
             },
             byRelationships: {
               immediateFamily: {
@@ -294,6 +295,7 @@
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.age.value} label="Age" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.professions.value} label="Professions" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.socialStatus.value} label="Social Status" />
+        <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.nationalities.value} label="Nationalities" />
       </SettingsRow>
       <SettingsSection>
         <SettingsRow>

@@ -82,8 +82,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.nouns.ideas.socialConstructs.value) {
     words.push(
-      { kanjis: ["家族"], hiragana: "かぞく", romanization: "kazoku", meaning: "family / clan" },
-      { kanjis: ["家庭"], hiragana: "かてい", romanization: "katei", meaning: "family / household" },
+      { kanjis: ["家族"], hiragana: "かぞく", romanization: "kazoku", meaning: "family" },
+      { kanjis: ["家庭"], hiragana: "かてい", romanization: "katei", meaning: "household" },
       { kanjis: ["親戚"], hiragana: "しんせき", romanization: "shinseki", meaning: "relatives" },
       { kanjis: ["親類"], hiragana: "しんるい", romanization: "shinrui", meaning: "relatives (formal)" },
       { kanjis: ["肉親"], hiragana: "にくしん", romanization: "nikushin", meaning: "blood relatives" },
@@ -276,6 +276,10 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["半-"], hiragana: "はん", romanization: "han-", meaning: "half- / semi-" },
 
       { kanjis: ["分脈"], hiragana: "ぶんみゃく", romanization: "bunmyaku", meaning: "branch / fork", exampleUsages: ["(branches of a family tree)", "(physical branches)"] },
+
+      // motion
+      { kanjis: ["速さ", "早さ"], hiragana: "はやさ", romanization: "hayasa", meaning: "speed" },
+      { katakana: "スピード", romanization: "supiido", meaning: "speed", exampleUsages: ["話すスピード"] },
     );
   }
 
@@ -292,6 +296,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       //
       { hiragana: "こと", preferredForm: "hiragana", kanjis: ["事"], romanization: "koto", meaning: "thing / event / matter / situation" },
       { kanjis: ["行事"], hiragana: "ぎょうじ", romanization: "gyouji", meaning: "event" },
+
+      { kanjis: ["お届け"], hiragana: "おとどけ", romanization: "otodoke", meaning: "delivery (of goods/services/lessons)" },
 
       { kanjis: ["洗濯"], hiragana: "せんたく", romanization: "sentaku", meaning: "laundry / washing" },
       { kanjis: ["手洗い", "手洗"], hiragana: "てあらい", romanization: "tearai", meaning: "washing hands" },

@@ -140,6 +140,7 @@ export function appendAdjectives(words: JapaneseWord[]) {
   if (flashcardSettings.words.adjectives.descriptive.value) {
     adjs.push(
       //
+      { kanjis: ["自然"], hiragana: "しぜん", romanization: "shizen", adjGroup: "Na", meaning: "natural" },
       { katakana: "リアル", romanization: "riaru", adjGroup: "Na", meaning: "real" },
 
       { kanjis: ["同じ"], hiragana: "おなじ", romanization: "onaji", adjGroup: "Na", meaning: "identical", exampleUsages: ["[Noun] は [Noun] におなじ [Verb]"] },
@@ -211,7 +212,10 @@ export function appendAdjectives(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.adjectives.miscellaneous.value) {
     adjs.push(
-      { hiragana: "したい", romanization: "shitai", adjGroup: "I", meaning: "would like to" },
+      // TODO: used like -suru?
+      { hiragana: "-したい", romanization: "shitai", adjGroup: "I", meaning: "wanted to do" },
+
+      { hiragana: "-ような", preferredForm: "hiragana", kanjis: ["様な"], romanization: "youna", adjGroup: "Na", meaning: "similarly (conceptually)" },
 
       { hiragana: "いろいろ", preferredForm: "hiragana", kanjis: ["色々", "色色"], romanization: "iroiro", adjGroup: "Na", meaning: "various" },
     );

@@ -107,9 +107,8 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "じゃあ", romanization: "zyaa", meaning: "well then (spoken, casual)" },
       { kanjis: ["と言うことは", "と言う事は"], hiragana: "ということは", romanization: "toiukotowa", meaning: "if that's true" },
 
-      { kanjis: ["と思う"], hiragana: "とおもう", romanization: "to omou", meaning: "I think (casual)", exampleUsages: ["[Clause] と思う。", "[Clause] と思います。", "[Clause] と思っている。"] },
+      { kanjis: ["と思う"], hiragana: "とおもう", romanization: "to omou", meaning: "I think (casual)", exampleUsages: ["[Clause] と思う (xxx, I think)", "[Clause] と思います (xxx, I am thinking about that right now)", "[Clause] お話したいと思います (I would like to talk about)", "[Clause] と思っています (I am going/planning to)"] },
       { kanjis: ["と思わない？"], hiragana: "とおもわない", romanization: "to omowanai", meaning: "don't you think? (casual)", exampleUsages: ["[Verb] と思わない？", "[Noun] だと思わない？", "[i-Adj.] と思わない？", "[na-Adj.] だと思わない？"] },
-      { kanjis: ["お話したいと思います"], hiragana: "おはなしたいとおもいます", romanization: "ohanashitai to omoimasu", meaning: "I would like to talk about" },
     );
   }
 

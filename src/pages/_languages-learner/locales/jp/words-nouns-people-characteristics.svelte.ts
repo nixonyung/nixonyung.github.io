@@ -79,4 +79,10 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
       { kanjis: ["生徒"], hiragana: "せいと", romanization: "seito", meaning: "pupil" },
     );
   }
+  if (flashcardSettings.words.nouns.people.byCharacteristics.nationalities.value) {
+    words.push(
+      //
+      { kanjis: ["日本人"], hiragana: "にほんじん", romanization: "nihonjin", meaning: "Japanese people", exampleUsages: ["日本人の友達"] },
+    );
+  }
 }
