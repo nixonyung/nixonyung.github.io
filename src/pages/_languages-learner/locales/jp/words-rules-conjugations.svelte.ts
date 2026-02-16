@@ -4,7 +4,7 @@ import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 export function appendRulesConjugations(words: JapaneseWord[]) {
   if (flashcardSettings.words.grammarRules.conjugations.stemForm.value) {
     words.push(
-      // stem form: forming compound verbs
+      // stem form: forming compound verbs / act as noun prefixes
       { question: "会う -> stem", answer: "会い", romanization: "ai" },
       { question: "書く -> stem", answer: "書き", romanization: "kaki" },
       { question: "泳ぐ -> stem", answer: "泳ぎ", romanization: "oyogi" },

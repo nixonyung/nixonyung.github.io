@@ -48,7 +48,7 @@ export function appendVerbsDescriptive(words: JapaneseWord[]) {
       { kanjis: ["取り掛かる", "取りかかる"], hiragana: "とりかかる", romanization: "torikakaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "start" },
       { kanjis: ["起こす", "起す"], hiragana: "おこす", romanization: "okosu", verbGroup: "Godan", verbIsTransitive: true, meaning: "cause / start", derivedMeanings: ["wake someone up", "raise", "set up", "vitalize"] },
       { kanjis: ["起こる", "起る"], hiragana: "おこる", romanization: "okoru", verbGroup: "Godan", verbIsTransitive: false, meaning: "occur" },
-      { kanjis: ["始まる"], hiragana: "はじまる", romanization: "hajimaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "begin", exampleUsages: ["で始まる"] },
+      { kanjis: ["始まる"], hiragana: "はじまる", romanization: "hajimaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "begin", exampleUsages: ["で始まる", "を始める時 (when xxx start)"] },
       { kanjis: ["出発する"], hiragana: "しゅっぱつする", romanization: "shuppatsusuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "depart / set off" },
 
       { kanjis: ["待つ"], rareKanjis: ["俟つ"], hiragana: "まつ", romanization: "matsu", verbGroup: "Godan", verbIsTransitive: false, meaning: "wait" },

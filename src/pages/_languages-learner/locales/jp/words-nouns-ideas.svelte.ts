@@ -76,7 +76,6 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["余暇"], hiragana: "よか", romanization: "yoka", meaning: "leisure" },
       { kanjis: ["休暇"], hiragana: "きゅうか", romanization: "kyuuka", meaning: "vacation" },
       { kanjis: ["休み"], hiragana: "やすみ", romanization: "yasumi", meaning: "day off", derivedMeanings: ["sleep / rest"] },
-      { katakana: "リラックス", romanization: "rirakkusu", meaning: "relax" },
     );
   }
 
@@ -125,7 +124,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["教育"], hiragana: "きょういく", romanization: "kyouiku", meaning: "education" },
       { kanjis: ["養成"], hiragana: "ようせい", romanization: "yousei", meaning: "development" },
       { kanjis: ["育児"], hiragana: "いくじ", romanization: "ikuji", meaning: "childcare" },
-      { kanjis: ["練習"], hiragana: "れんしゅう", romanization: "renshuu", meaning: "practice" },
+      { kanjis: ["練習"], hiragana: "れんしゅう", romanization: "renshuu", meaning: "practice", exampleUsages: [""] },
       { kanjis: ["勉強"], hiragana: "べんきょう", romanization: "benkyou", meaning: "dedication", derivedMeanings: ["study"] },
       { kanjis: ["習得", "修得"], hiragana: "しゅうとく", romanization: "shuutoku", meaning: "mastering a skill" },
       { kanjis: ["授業"], hiragana: "じゅぎょう", romanization: "jugyou", meaning: "lesson" },
@@ -193,6 +192,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["思い", "想い", "念い"], hiragana: "おもい", romanization: "omoi", meaning: "thought" },
       { kanjis: ["選択"], hiragana: "せんたく", romanization: "sentaku", meaning: "choice" },
       { kanjis: ["決定"], hiragana: "けってい", romanization: "kettei", meaning: "decision" },
+      { kanjis: ["計画"], hiragana: "けいかく", romanization: "keikaku", meaning: "a plan (implementation)" },
+      { kanjis: ["企画"], hiragana: "きかく", romanization: "kikaku", meaning: "a plan (visionary)" },
       { kanjis: ["説得"], hiragana: "せっとく", romanization: "settoku", meaning: "persuasion" },
       { kanjis: ["譲歩"], hiragana: "じょうほ", romanization: "jouho", meaning: "concession" },
       { kanjis: ["同意"], hiragana: "どうい", romanization: "doui", meaning: "agreement" },
@@ -240,6 +241,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { katakana: "ステップ", romanization: "suteppu", meaning: "step" },
 
       { kanjis: ["日本語"], hiragana: "にほんご", romanization: "nihongo", meaning: "the Japanese language" },
+      { hiragana: "ひらがな", preferredForm: "hiragana", kanjis: ["平仮名"], romanization: "hiragana", meaning: "hiragana" },
+      { hiragana: "かたかな", katakana: "カタカナ", preferredForm: "katakana", kanjis: ["片仮名"], romanization: "katakana", meaning: "katakana" },
       { kanjis: ["中国語"], hiragana: "ちゅうごくご", romanization: "chuugokugo", meaning: "the Chinese language" },
       { kanjis: ["英語"], hiragana: "えいご", romanization: "eigo", meaning: "the English language" },
 
@@ -297,6 +300,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { hiragana: "こと", preferredForm: "hiragana", kanjis: ["事"], romanization: "koto", meaning: "thing / event / matter / situation" },
       { kanjis: ["行事"], hiragana: "ぎょうじ", romanization: "gyouji", meaning: "event" },
 
+      { katakana: "リスニング", romanization: "risuningu", meaning: "listening", exampleUsages: ["リスニングの練習"] },
+
       { kanjis: ["お届け"], hiragana: "おとどけ", romanization: "otodoke", meaning: "delivery (of goods/services/lessons)" },
 
       { kanjis: ["洗濯"], hiragana: "せんたく", romanization: "sentaku", meaning: "laundry / washing" },
@@ -312,6 +317,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["配信"], hiragana: "はいしん", romanization: "haishin", meaning: "broadcast / streaming", derivedMeanings: ["filming"] },
 
       { kanjis: ["散歩"], hiragana: "さんぽ", romanization: "sanpo", meaning: "walk" },
+      { kanjis: ["通勤"], hiragana: "つうきん", romanization: "tsuukin", meaning: "commuting to work" },
       { kanjis: ["旅行"], hiragana: "りょこう", romanization: "ryokou", meaning: "travel" },
       { kanjis: ["世界一周"], hiragana: "せかいいっしゅう", romanization: "sekaiisshuu", meaning: "round-the-world trip" },
       { kanjis: ["密着"], hiragana: "みっちゃく", romanization: "micchaku", meaning: "sticking closely", exampleUsages: ["密着撮影"] },

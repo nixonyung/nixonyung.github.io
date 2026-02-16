@@ -124,6 +124,7 @@
         // Purpose: Describes what the noun is used for, often a noun functioning as an adjective (e.g., cooking in "cooking pot", running in "running shoes", tennis in "tennis shoes").
         // adjectives: { paramKey: "adjs", defaultValue: true },
         adjectives: {
+          judgements: { paramKey: "judgements", defaultValue: true },
           affections: { paramKey: "affections", defaultValue: true },
           sensations: { paramKey: "sensations", defaultValue: true },
           appearances: { paramKey: "appearances", defaultValue: true },
@@ -488,6 +489,7 @@
       </SettingsRowsBordered>
 
       <SettingsRow>
+        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.judgements.value} label="Judgements" />
         <CheckboxInput bind:checked={flashcardSettings.words.adjectives.affections.value} label="Affections" />
         <CheckboxInput bind:checked={flashcardSettings.words.adjectives.sensations.value} label="Sensations" />
         <CheckboxInput bind:checked={flashcardSettings.words.adjectives.appearances.value} label="Appearances" />

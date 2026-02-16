@@ -84,6 +84,7 @@ export function appendExpressions(words: JapaneseWord[]) {
 
       { hiragana: "ということだ", preferredForm: "hiragana", kanjis: ["と言うことだ"], romanization: "toiukotoda", meaning: "as rumoured" },
       { hiragana: "って", romanization: "tte", meaning: "as someone said / as I heard", derivedMeanings: ["you really mean it?"], exampleUsages: ["すごいって (I heard it is amazing)", "って言っていた (it is said that)"] },
+      { hiragana: "よれば", romanization: "yoreba", meaning: "as heard from", exampleUsages: ["憲法によれば"] },
     );
   }
 
@@ -136,7 +137,6 @@ export function appendExpressions(words: JapaneseWord[]) {
     words.push(
       //
       { hiragana: "ください", preferredForm: "hiragana", kanjis: ["下さい"], romanization: "kudasai", meaning: "please give me (polite)", exampleUsages: ["お [Noun] をください。", "[Noun] を {(counter)} ください。"] },
-      { hiragana: "ほしい", preferredForm: "hiragana", kanjis: ["欲しい"], romanization: "hoshii", meaning: "I want xxx (casual)", exampleUsages: ["[Noun] がほしいです。"] },
       { kanjis: ["お願いします"], hiragana: "おねがいします", romanization: "onegaishimasu", meaning: "please! (very polite)" },
 
       { kanjis: ["急いで"], hiragana: "いそいで", romanization: "isoide", meaning: "hurry up!" },
@@ -182,9 +182,6 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "いかが", preferredForm: "hiragana", kanjis: ["如何"], romanization: "ikaga", meaning: "how is xxx? (formal)" },
 
       { hiragana: "こんな-", romanization: "konna-", meaning: "like this" },
-
-      { hiragana: "もうありません", romanization: "mou arimasen", meaning: "aren't any left" },
-      { hiragana: "あと", romanization: "ato", meaning: "still have", exampleUsages: ["あと5秒"] },
 
       { hiragana: "〇〇のが〇〇", romanization: "no ga", meaning: "xxx is doing it xxx-ly", exampleUsages: ["... [Verb] のが [Adj.] です。", "... [Verb] のが上手/下手 です。", "... [Verb] のが好き/嫌い です。", "... [Verb] のが速い/遅い です。", "... [Verb] のが難しい/易しい です。"] },
 

@@ -85,7 +85,7 @@ export function appendPronouns(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.pronouns.thatThing.value) {
     words.push(
-      { hiragana: "これ", rareKanjis: ["此れ", "是", "之", "維", "惟"], romanization: "kore", meaning: "this (close to speaker)" },
+      { hiragana: "これ", rareKanjis: ["此れ", "是", "之", "維", "惟"], romanization: "kore", meaning: "this (close to speaker)", exampleUsages: ["これは (about this, ...)"] },
       { hiragana: "それ", rareKanjis: ["其れ"], romanization: "sore", meaning: "that (distant from speaker, close to listener)" },
       { hiragana: "あれ", rareKanjis: ["彼", "彼れ"], romanization: "are", meaning: "that (distant from both speaker and listener)" },
 

@@ -6,37 +6,39 @@ import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 export function appendAdjectives(words: JapaneseWord[]) {
   const adjs: JapaneseAdjective[] = [];
 
-  if (flashcardSettings.words.adjectives.affections.value) {
+  if (flashcardSettings.words.adjectives.judgements.value) {
     adjs.push(
-      // positive
       { hiragana: "いい", romanization: "ii", adjGroup: "I", meaning: "good (casual)" },
       { kanjis: ["良い", "好い", "善い"], rareKanjis: ["佳い", "吉い", "宜い"], hiragana: "よい", romanization: "yoi", adjGroup: "I", meaning: "good (formal)" },
       { hiragana: "なかなか", preferredForm: "hiragana", kanjis: ["中々", "中中"], rareKanjis: ["仲々", "仲仲", "却々", "却却"], adjGroup: "Na", romanization: "nakanaka", meaning: "quite / decently (surprisingly)" },
-      { kanjis: ["絶好調"], hiragana: "ぜっこうちょう", romanization: "zekkouchou", adjGroup: "Na", meaning: "feeling great" },
-      { kanjis: ["好き"], hiragana: "すき", romanization: "suki", adjGroup: "Na", meaning: "liked" },
 
+      { kanjis: ["大丈夫"], hiragana: "だいじょうぶ", romanization: "daijoubu", adjGroup: "Na", meaning: "fine / alright", derivedMeanings: ["safe"] },
       { kanjis: ["大切"], hiragana: "たいせつ", romanization: "taisetsu", adjGroup: "Na", meaning: "important / significant" },
-      { kanjis: ["楽しい"], rareKanjis: ["愉しい"], hiragana: "たのしい", romanization: "tanoshii", adjGroup: "I", meaning: "enjoyable / fun", derivedMeanings: ["useful / handy"] },
       { kanjis: ["便利"], hiragana: "べんり", romanization: "benri", adjGroup: "Na", meaning: "convenient", derivedMeanings: ["useful / handy"] },
 
-      // negative
       { kanjis: ["悪い"], hiragana: "わるい", romanization: "warui", adjGroup: "I", meaning: "bad" },
       { hiragana: "だめ", preferredForm: "hiragana", katakana: "ダメ", kanjis: ["駄目"], romanization: "dame", adjGroup: "Na", meaning: "no good", derivedMeanings: ["not allowed"] },
       { hiragana: "やばい", romanization: "yabai", adjGroup: "I", meaning: "terrible / crap" },
       { hiragana: "まあまあ", romanization: "maamaa", adjGroup: "Na", meaning: "so-so" },
+
+      { kanjis: ["怖い", "恐い"], hiragana: "こわい", romanization: "kowai", adjGroup: "I", meaning: "scary" },
+      { kanjis: ["危ない"], hiragana: "あぶない", romanization: "abunai", adjGroup: "I", meaning: "dangerous" },
+    );
+  }
+
+  if (flashcardSettings.words.adjectives.affections.value) {
+    adjs.push(
+      { kanjis: ["好き"], hiragana: "すき", romanization: "suki", adjGroup: "Na", meaning: "liked" },
+      { hiragana: "ほしい", preferredForm: "hiragana", kanjis: ["欲しい"], romanization: "hoshii", adjGroup: "I", meaning: "wanted to" },
+      { kanjis: ["絶好調"], hiragana: "ぜっこうちょう", romanization: "zekkouchou", adjGroup: "Na", meaning: "feeling great" },
+      { kanjis: ["嬉しい"], hiragana: "うれしい", romanization: "ureshii", adjGroup: "I", meaning: "happy / delighted" },
+      { kanjis: ["楽しい"], rareKanjis: ["愉しい"], hiragana: "たのしい", romanization: "tanoshii", adjGroup: "I", meaning: "enjoyable / fun", derivedMeanings: ["useful / handy"] },
+
       { kanjis: ["嫌い"], hiragana: "きらい", romanization: "kirai", adjGroup: "Na", meaning: "disliked / hated" },
       { kanjis: ["嫌"], hiragana: "いや", romanization: "iya", adjGroup: "Na", meaning: "don't want (temporary feeling)" },
-
       { hiragana: "うるさい", preferredForm: "hiragana", kanjis: ["煩い"], romanization: "urusai", adjGroup: "I", meaning: "annoying / noisy" },
       { kanjis: ["煩わしい"], hiragana: "わずらわしい", romanization: "wazurawashii", adjGroup: "I", meaning: "annoying / troublesome" },
       { hiragana: "つまらない", preferredForm: "hiragana", kanjis: ["詰らない", "詰まらない"], romanization: "tsumaranai", adjGroup: "I", meaning: "boring" },
-      { kanjis: ["怖い", "恐い"], hiragana: "こわい", romanization: "kowai", adjGroup: "I", meaning: "scary" },
-      { kanjis: ["危ない"], hiragana: "あぶない", romanization: "abunai", adjGroup: "I", meaning: "dangerous" },
-
-      // neutral
-      { kanjis: ["大丈夫"], hiragana: "だいじょうぶ", romanization: "daijoubu", adjGroup: "Na", meaning: "fine / alright", derivedMeanings: ["safe"] },
-
-      { hiragana: "-たい", romanization: "-tai", adjGroup: "I", meaning: "wanted to", exampleUsages: ["[Verb-stem] たい", "したい"] },
     );
   }
 

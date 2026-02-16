@@ -65,15 +65,14 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { kanjis: ["この前"], rareKanjis: ["此の前"], hiragana: "このまえ", romanization: "konomae", meaning: "last time" },
 
       { kanjis: ["前に"], hiragana: "まえに", romanization: "maeni", meaning: "before xxx", exampleUsages: ["[Noun] の前に ...", "[Verb-る] 前に ..."] },
-      { kanjis: ["後で"], hiragana: "あとで", romanization: "atode", meaning: "after xxx (informal)", exampleUsages: ["[Noun] の後で ...", "[Verb-た] 後で ..."] },
-      { kanjis: ["後に"], hiragana: "あとに", romanization: "atoni", meaning: "after xxx (formal)", exampleUsages: ["[Noun] の後に ...", "[Verb-た] 後に ..."] },
+      { kanjis: ["後"], hiragana: "あと", romanization: "ato", meaning: "afterwards", derivedMeanings: ["(time) left", "behind (locational)"], exampleUsages: ["あとに (after that, formal)", "あとで (after that, informal)", "あと5秒 (5s left)", "あとは (next up)"] },
 
       { kanjis: ["前もって"], rareKanjis: ["前以て"], hiragana: "まえもって", romanization: "maemotte", meaning: "in advance" },
       { kanjis: ["予め"], hiragana: "あらかじめ", romanization: "arakajime", meaning: "in advance" },
       { kanjis: ["最後"], hiragana: "さいご", romanization: "saigo", meaning: "the end" },
       { kanjis: ["最終"], hiragana: "さいしゅう", romanization: "saishuu", meaning: "the last / final", exampleUsages: ["最終回", "最終調整"] },
 
-      { hiragana: "もう", romanization: "mou", meaning: "already / not anymore", exampleUsages: ["もう宿題終わった", "もう [Noun (time)] ...", "[Noun] はもう ...", "もう [Verb]"] },
+      { hiragana: "もう", romanization: "mou", meaning: "already / not anymore", exampleUsages: ["もう宿題終わった", "もうありません (there is nothing left)", "もう [Noun (time)] ...", "[Noun] はもう ...", "もう [Verb]"] },
       { hiragana: "すでに", preferredForm: "hiragana", kanjis: ["既に"], rareKanjis: ["已に"], romanization: "sudeni", meaning: "already" },
 
       { hiragana: "そろそろ", katakana: "ソロソロ", romanization: "sorosoro", meaning: "soon" },

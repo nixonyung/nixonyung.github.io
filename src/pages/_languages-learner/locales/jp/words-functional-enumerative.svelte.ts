@@ -18,15 +18,19 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
 
       { hiragana: "か", romanization: "ka", meaning: "or (listing options)", exampleUsages: ["[Noun] か [Noun] か ...", "[Noun] か [Noun] ..."] },
 
-      { hiragana: "など", preferredForm: "hiragana", kanjis: ["等", "抔"], romanization: "nado", meaning: "etc. (written)", exampleUsages: ["A、B、C など ..."] },
-      { hiragana: "など", preferredForm: "hiragana", kanjis: ["等", "抔"], romanization: "nado", meaning: "etc. (written)", exampleUsages: ["A、B、C など ..."] },
-      { hiragana: "などなど", preferredForm: "hiragana", kanjis: ["等など"], romanization: "nadonado", meaning: "et cetera (written, formal)" },
-
       { kanjis: ["例えば"], hiragana: "たとえば", romanization: "tatoeba", meaning: "for example" },
 
       { hiragana: "も", romanization: "mo", meaning: "and (non-exhausive)", exampleUsages: ["[Noun] も [Verb] (xx and me do ...)", "[Noun] も [Noun] も [Verb]", "[Noun] も [Noun] も [Noun] も [Verb]"] },
       { hiragana: "や", romanization: "ya", meaning: "and (non-exhausive, written)", exampleUsages: ["[Noun] や [Noun] ..."] },
-      { hiragana: "し", romanization: "shi", meaning: "and (non-exhausive, spoken)", exampleUsages: ["[Clause] し、 [Clause]"] },
+
+      { hiragana: "し", romanization: "shi", meaning: "not only, and also", exampleUsages: ["[Clause] し、 [Clause]"] },
+
+      // ellipsis
+      { hiragana: "など", preferredForm: "hiragana", kanjis: ["等", "抔"], romanization: "nado", meaning: "etc. (written)", exampleUsages: ["A、B、C など ..."] },
+      { hiragana: "など", preferredForm: "hiragana", kanjis: ["等", "抔"], romanization: "nado", meaning: "etc. (written)", exampleUsages: ["A、B、C など ..."] },
+      { hiragana: "などなど", preferredForm: "hiragana", kanjis: ["等など"], romanization: "nadonado", meaning: "et cetera (written, formal)" },
+
+      { hiragana: "とにかく", romanization: "tonikaku", meaning: "anyway (omitting)" },
 
       // with contrast
       { hiragana: "けど", romanization: "kedo", meaning: "but (spoken, casual)", exampleUsages: ["[Clause] けど、 [Clause]。", "[Noun] は [Adj.] けど [Adj.]。", "...。 けど、 [Clause]。"] },
@@ -47,6 +51,7 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
       { kanjis: ["〇〇の中で〇〇が一番〇〇"], hiragana: "〇〇のなかで〇〇がいちばん〇〇", romanization: "-no naka de 〇〇 ga ichiban", meaning: "in xxx, xxx is the most xxx", exampleUsages: ["[Noun] の中で [Noun] が 一番 ..."] },
 
       // ordering
+      { hiragana: "あとは", romanization: "atowa", meaning: "next up" },
       { kanjis: ["次いで"], hiragana: "ついで", romanization: "tsuide", meaning: "secondly" },
       { hiragana: "また", preferredForm: "hiragana", kanjis: ["又"], rareKanjis: ["亦", "復"], romanization: "mata", meaning: "moreover / once again" },
     );

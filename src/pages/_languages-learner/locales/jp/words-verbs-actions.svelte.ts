@@ -67,7 +67,6 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       // learning
       { kanjis: ["学ぶ"], hiragana: "まなぶ", romanization: "manabu", verbGroup: "Godan", verbIsTransitive: true, meaning: "learn" },
       { kanjis: ["勉強する"], hiragana: "べんきょうする", romanization: "benkyousuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "study", exampleUsages: ["日本語を勉強します"] },
-      { kanjis: ["練習する"], hiragana: "れんしゅうする", romanization: "renshuusuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "practice" },
       { kanjis: ["認める"], hiragana: "みとめる", romanization: "mitomeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "recognize" },
       { kanjis: ["覚える"], rareKanjis: ["憶える"], hiragana: "おぼえる", romanization: "oboeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "memorize" },
 
@@ -231,14 +230,17 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["試す"], rareKanjis: ["験す"], hiragana: "ためす", romanization: "tamesu", verbGroup: "Godan", verbIsTransitive: true, meaning: "try (casual)" },
       { kanjis: ["試みる"], hiragana: "こころみる", romanization: "kokoromiru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "try (formal)" },
       { kanjis: ["見せる"], hiragana: "みせる", romanization: "miseru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "show / display" },
+      { kanjis: ["示す"], hiragana: "しめす", romanization: "shimesu", verbGroup: "Godan", verbIsTransitive: true, meaning: "demonstrate / exemplify" },
 
       { kanjis: ["遊ぶ"], hiragana: "あそぶ", romanization: "asobu", verbGroup: "Godan", verbIsTransitive: false, meaning: "play (games / sports)", derivedMeanings: ["have fun"] },
+      { katakana: "リラックスする", romanization: "rirakkususuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "to relax", exampleUsages: ["リラックスして聞く"] },
       { kanjis: ["働く"], hiragana: "はたらく", romanization: "hataraku", verbGroup: "Godan", verbIsTransitive: false, meaning: "work" },
       { kanjis: ["勤める", "務める"], hiragana: "つとめる", romanization: "tsutomeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "work for / be employed at" },
       { kanjis: ["扱う"], hiragana: "あつかう", romanization: "atsukau", verbGroup: "Godan", verbIsTransitive: true, meaning: "deal / handle" },
       { kanjis: ["用いる"], hiragana: "もちいる", romanization: "mochiiru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "use / utilize" },
       { kanjis: ["使う", "遣う"], hiragana: "つかう", romanization: "tsukau", verbGroup: "Godan", verbIsTransitive: true, meaning: "employ / use (as a tool)" },
       { kanjis: ["参加する"], hiragana: "さんかする", romanization: "sankasuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "participate" },
+      { kanjis: ["完了する"], hiragana: "かんりょうする", romanization: "kanryousuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "to complete / finish", exampleUsages: ["練習を完了する"] },
       { kanjis: ["過ごす", "過す"], hiragana: "すごす", romanization: "sugosu", verbGroup: "Godan", verbIsTransitive: true, meaning: "spend / spend time" },
       { kanjis: ["準備する"], hiragana: "じゅんびする", romanization: "junbisuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "prepare" },
       { kanjis: ["暇する"], hiragana: "ひまする", romanization: "himasuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "be free / be unoccupied" },

@@ -50,6 +50,8 @@ export function appendFunctionalLocational(words: JapaneseWord[]) {
 
       { hiragana: "ところ", preferredForm: "hiragana", kanjis: ["所"], romanization: "tokoro", meaning: "nearby", derivedMeanings: ["recently"], exampleUsages: ["家を出たところ"] },
 
+      { kanjis: ["途中"], hiragana: "とちゅう", romanization: "tochuu", meaning: "on the way", exampleUsages: ["通勤途中"] },
+
       // interrogative
       { hiragana: "どこ", preferredForm: "hiragana", kanjis: ["何処", "何所"], romanization: "doko", meaning: "where", exampleUsages: ["[Noun] はどこですか？", "どこが [Noun] ですか？"] },
       { hiragana: "どこら", preferredForm: "hiragana", kanjis: ["何処ら"], romanization: "dokora", meaning: "whereabouts (casual)" },

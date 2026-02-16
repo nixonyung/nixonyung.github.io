@@ -12,7 +12,7 @@ export function appendFunctionalLogical(words: JapaneseWord[]) {
       { hiragana: "だって", romanization: "datte", meaning: "because (spoken, casual)" },
       { hiragana: "なぜなら", preferredForm: "hiragana", kanjis: ["何故なら"], romanization: "nazenara", meaning: "because (formal)" },
       { hiragana: "なぜならば", preferredForm: "hiragana", kanjis: ["何故ならば"], romanization: "nazenaraba", meaning: "because (formal)" },
-      { hiragana: "から", romanization: "kara", meaning: "because of (casual)", derivedMeanings: ["(who did the action)"], exampleUsages: ["[Clause ending with Verb] から [Clause]", "[Clause ending with Noun] だから [Clause]", "[Clause ending with i-Adj.] から [Clause]", "[Clause ending with na-Adj.] だから [Clause]"] },
+      { hiragana: "から", romanization: "kara", meaning: "since / so", derivedMeanings: ["thanks to (someone)"] },
       // TODO: only use with volitional verbs
       { hiragana: "ために", preferredForm: "hiragana", kanjis: ["為に"], romanization: "tameni", meaning: "so (purpose)", exampleUsages: ["[Clause] ために [Clause]", "テストに合格するために ...", "家族のために ...", "この日のために ..."] },
       { hiragana: "ように", preferredForm: "hiragana", kanjis: ["様に"], romanization: "youni", meaning: "so (desired state)", exampleUsages: ["[Clause] ように [Clause]", "日本語て漫画が読めるように ..."] },
@@ -20,7 +20,7 @@ export function appendFunctionalLogical(words: JapaneseWord[]) {
       { hiragana: "のせいで", rareKanjis: ["の所為で"], romanization: "noseide", meaning: "due to", exampleUsages: ["[Noun] のせいで [Clause]"] },
 
       // conditional
-      { hiragana: "たら", romanization: "tara", meaning: "if so (uncertain / imaginary)", derivedMeanings: ["and then (making request / what should be done)", "when (what also happened)"], exampleUsages: ["[Clause] たら [Clause]", "暇になったら"] },
+      { hiragana: "たら", romanization: "tara", meaning: "if so (uncertain / imaginary)", derivedMeanings: ["when/after (chronologically)"], exampleUsages: ["暇になったら"] },
       { hiragana: "ば", romanization: "ba", meaning: "if that's what you want", exampleUsages: ["[Clause] ば [Clause]", "どうすれば [Clause]"] },
       { hiragana: "なら", preferredForm: "hiragana", romanization: "nara", meaning: "in that case (explicitly echoing what is just spoken)", derivedMeanings: ["if that's true (making assumption by observation)"], exampleUsages: ["[Clause] なら / のなら / んなら [Clause]"] },
       { hiragana: "ならば", preferredForm: "hiragana", romanization: "naraba", meaning: "in that case (formal)" },
@@ -38,6 +38,7 @@ export function appendFunctionalLogical(words: JapaneseWord[]) {
 
       { hiragana: "そう", rareKanjis: ["然う"], romanization: "sou", meaning: "like what is just said" },
       { kanjis: ["同じく"], hiragana: "おなじく", romanization: "onajiku", meaning: "likewise" },
+      { kanjis: ["通り"], hiragana: "とおり", romanization: "toori", meaning: "in accordance with", exampleUsages: ["その通り (exactly like what you said)", "憲法の通り (according to the constitution)"] },
 
       // interrogative
       { hiragana: "どうして", rareKanjis: ["如何して"], romanization: "doushite", meaning: "why / how / what happened", exampleUsages: ["どうして [Clause]？", "[Noun] はどうして [Verb]？"] },

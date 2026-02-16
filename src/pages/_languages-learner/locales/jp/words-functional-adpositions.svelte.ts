@@ -17,6 +17,7 @@ export function appendFunctionalAdpositions(words: JapaneseWord[]) {
 
       { hiragana: "か", romanization: "ka", meaning: "(question marker)", exampleUsages: ["[Clause] か？"] },
       { hiragana: "の", romanization: "no", meaning: "how? / really? (spoken)", exampleUsages: ["学生なの？"] },
+      { hiragana: "かな", romanization: "kana", meaning: "I wonder", exampleUsages: ["[Clause] かな？"] },
       { hiragana: "し", romanization: "shi", meaning: "because of that (spoken)", exampleUsages: ["だって、子供だし。"] },
 
       // TODO: changing word forms

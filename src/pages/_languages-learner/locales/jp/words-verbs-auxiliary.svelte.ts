@@ -8,6 +8,12 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
   if (flashcardSettings.words.verbs.auxiliary.value) {
     words.push(
       // (dictionary)
+      { hiragana: "です", romanization: "desu", meaning: "be / is" },
+      { hiragana: "だ", romanization: "da", meaning: "be / is (spoken, casual)" },
+      { hiragana: "である", romanization: "dearu", meaning: "be / is (written, formal)" },
+
+      { hiragana: "たい", romanization: "tai", meaning: "wanted to", exampleUsages: ["[Verb-stem] たい", "したい"] },
+
       { kanjis: ["方がいい", "方が良い", "ほうが良い"], hiragana: "ほうがいい", romanization: "hougaii (spoken/written)", meaning: "should xxx", exampleUsages: ["[Verb] 方がいい ..."] },
       { kanjis: ["方が良い", "ほうが良い", "方がよい"], hiragana: "ほうがよい", romanization: "hougayoi (slightly more written)", meaning: "should xxx", exampleUsages: ["[Verb] 方が良い ..."] },
 
@@ -32,7 +38,7 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
       { hiragana: "(ます) すぎました", preferredForm: "hiragana", kanjis: ["過ぎました"], romanization: "sugimashita", meaning: "too much (past tense, polite)", exampleUsages: ["[Verb-ます (dropped)] すぎました。", "[i-Adj. (dropped)] すぎました。", "[na-Adj.] すぎました。"] },
       { hiragana: "(ます) たくない", romanization: "takunai", meaning: "I don't want to xxx (casual)", exampleUsages: ["[Verb--ます (dropped)] たくない。"] },
       { hiragana: "たがる", romanization: "tagaru", meaning: "(appearring wanted to)", exampleUsages: ["[Verb-stem] たがる"] },
-      { hiragana: "ながら", rareKanjis: ["乍ら"], romanization: "nagara", meaning: "while", exampleUsages: ["[Verb-stem] ながら"] },
+      { hiragana: "(Verb-stem) ながら", rareKanjis: ["乍ら"], romanization: "nagara", meaning: "while doing xxx", exampleUsages: ["[Verb-stem] ながら"] },
       { hiragana: "なさい", preferredForm: "hiragana", kanjis: ["為さい"], romanization: "nasai", meaning: "(imperative, polite)", exampleUsages: ["[Verb-stem] なさい"] },
       { kanjis: ["(ます) に行く"], hiragana: "(ます) にいく", romanization: "ni iku", meaning: "I am going to xxx (casual)", exampleUsages: ["[Verb-ます (dropped)] に行く。"] },
       { kanjis: ["(ます) に行きます"], hiragana: "(ます) にいきません", romanization: "ni ikimasen", meaning: "I am going to xxx (polite)", exampleUsages: ["[Verb-ます (dropped)] に行きます。"] },
@@ -48,30 +54,32 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
       { hiragana: "たことがある", romanization: "-ta koto ga aru", meaning: "has been done", exampleUsages: ["[Verb-ta] ことがある ..."] },
 
       // -te (-te [Verb])
-      { hiragana: "-て", romanization: "-te", meaning: "please (spoken, casual)", exampleUsages: ["[Verb-て]！"] },
-      { hiragana: "ている", romanization: "-te iru", meaning: "is doing xxx / xxx is still ongoing (active voice, casual)", exampleUsages: ["[Verb-て] いる ..."] },
-      { hiragana: "ています", romanization: "-te imasu", meaning: "is doing xxx / xxx is still ongoing (active voice, polite)", exampleUsages: ["[Verb-て] います ..."] },
-      { hiragana: "ていない", romanization: "-te inai", meaning: "is not doing / xxx is still ongoing (active voice, casual)", exampleUsages: ["[Verb-て] いない ..."] },
-      { hiragana: "ていません", romanization: "-te imasen", meaning: "is not doing / xxx is still ongoing (active voice, polite)", exampleUsages: ["[Verb-て] いません ..."] },
-      { hiragana: "てある", romanization: "-te aru", meaning: "xxx has been done (passive voice, casual)", exampleUsages: ["[Verb-て] ある ..."] },
-      { hiragana: "てあります", romanization: "-te arimasu", meaning: "xxx has been done (passive voice, polite)", exampleUsages: ["[Verb-て] あります ..."] },
-      { hiragana: "てない", romanization: "-te nai", meaning: "xxx has not been done (passive voice, casual)", exampleUsages: ["[Verb-て] ない ..."] },
-      { hiragana: "てありません", romanization: "-te arimasen", meaning: "xxx has not been done (passive voice, polite)", exampleUsages: ["[Verb-て] ありません ..."] },
-      { hiragana: "ても", romanization: "-temo", meaning: "even if", exampleUsages: ["[Verb]-ても [Clause]"] },
-      { hiragana: "てもいいです", romanization: "-temo ii desu", meaning: "you can xxx", exampleUsages: ["[Verb-て] もいいです", "[Verb-て] もいいですか？", "[Noun] てもいいです", "[i-Adj. (dropped)] もいいです", "[na-Adj.] てもいいです"] },
-      { hiragana: "てください", romanization: "-te kudasai", meaning: "please do xxx", exampleUsages: ["[Verb-て] ください ..."] },
+      { hiragana: "[Verb-て]", romanization: "-te", meaning: "please (spoken, casual)", exampleUsages: ["[Verb-て]！"] },
+      { hiragana: "[Verb-て] ください", romanization: "-te kudasai", meaning: "please do xxx (polite)" },
       { hiragana: "てはいけない", romanization: "-te wa ikenai", meaning: "must not (written, casual)", exampleUsages: ["[Verb-て] はいけない。"] },
-      { hiragana: "ではいけません", romanization: "-te wa ikemasen", meaning: "must not (written, polite)", exampleUsages: ["[Verb-て] はいけません。"] },
+      { hiragana: "てはいけません", romanization: "-te wa ikemasen", meaning: "must not (written, polite)", exampleUsages: ["[Verb-て] はいけません。"] },
       { hiragana: "(て) ちゃだめ", romanization: "cha dame", meaning: "should not / must not xxx! (spoken, casual)", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)だめ"] },
       { hiragana: "(て) ちゃいけない", romanization: "cha ikenai", meaning: "should not / must not xxx (spoken, casual)", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)いけない"] },
       { hiragana: "(て) ちゃいけません", romanization: "cha ikemasen", meaning: "should not / must not xxx (spoken, polite)", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)いけません"] },
+      { hiragana: "てもらいたい", romanization: "-te moraitai", meaning: "want to" },
+      { hiragana: "[Verb-て] くれる", romanization: "-te kureru", meaning: "give to me", exampleUsages: ["譲ってくれた"] },
+      // TODO: https://colanekojp.com.tw/classroom_detail/210
+      // TODO: https://jlptsensei.com/learn-japanese-grammar/%E3%81%A6%E3%82%82%E3%82%89%E3%81%86-te-morau-%E3%81%A6%E3%82%82%E3%82%89%E3%81%84%E3%81%9F%E3%81%84-te-moraitai-meaning/
+      { hiragana: "[Verb-て] もらう", romanization: "-te morau", meaning: "xxx to me", exampleUsages: ["聞いてもう (kindly listen to me)"] },
+      { hiragana: "[Verb-て] もらえる", romanization: "-te moraeru", meaning: "xxx for me" },
+
+      { hiragana: "[Verb-て] いる", romanization: "-te iru", meaning: "(continuous tense)" },
+      { hiragana: "ておく", romanization: "-te oku", meaning: "(I am going to)" },
+
+      { hiragana: "[Verb-て] ある", romanization: "-te aru", meaning: "(perfect tense)" },
       { hiragana: "(て) ちゃった", romanization: "chatta", meaning: "completely done", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)だめ"] },
+
+      { hiragana: "[Verb-て] も", romanization: "-te mo", meaning: "even if" },
+      { hiragana: "[Verb-て] もいい", romanization: "-temo ii", meaning: "is okay / acceptable", exampleUsages: ["[Verb-て] もいいです", "[Verb-て] もいいですか？"] },
+
       { hiragana: "てから", romanization: "-te kara", meaning: "(introducing precedent:) xxx and immediately after", exampleUsages: ["[Verb-て] から ..."] },
       { hiragana: "てくる", romanization: "-te kiru", meaning: "(continuous, towards a moment)" },
-      { hiragana: "ておく", romanization: "-te oku", meaning: "(I am going to)" },
-      { hiragana: "てもいい", preferredForm: "hiragana", kanjis: ["ても良い"], romanization: "-te moii", meaning: "you can / can I?" },
-      { hiragana: "てくれる", romanization: "-te kureru", meaning: "give to me", exampleUsages: ["譲ってくれた"] },
-      { hiragana: "てもらいたい", romanization: "-te moraitai", meaning: "want to" },
+
       // TODO: -te shimau
 
       // TODO: -たい (-tai): desire
