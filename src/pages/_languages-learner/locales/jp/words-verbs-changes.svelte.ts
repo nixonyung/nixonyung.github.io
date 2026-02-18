@@ -15,6 +15,8 @@ export function appendVerbsChanges(words: JapaneseWord[]) {
       { kanjis: ["咲く"], hiragana: "さく", romanization: "saku", verbGroup: "Godan", verbIsTransitive: false, meaning: "bloom", exampleUsages: ["花が咲く"] },
       { kanjis: ["荒ぶ", "進ぶ"], hiragana: "すさぶ", romanization: "susabu", verbGroup: "Godan", verbIsTransitive: false, meaning: "grow wild" },
       { kanjis: ["乾く"], hiragana: "かわく", romanization: "kawaku", verbGroup: "Godan", verbIsTransitive: false, meaning: "get dry" },
+
+      { kanjis: ["込む"], hiragana: "こむ", romanization: "komu", verbGroup: "Godan", verbIsTransitive: false, meaning: "be crowded" },
     );
   }
 
@@ -37,6 +39,7 @@ export function appendVerbsChanges(words: JapaneseWord[]) {
 
       { kanjis: ["興す"], hiragana: "おこす", romanization: "okosu", verbGroup: "Godan", verbIsTransitive: true, meaning: "vitalize" },
       { kanjis: ["養う"], hiragana: "やしなう", romanization: "yashinau", verbGroup: "Godan", verbIsTransitive: true, meaning: "foster" },
+      { kanjis: ["込める", "籠める"], hiragana: "こめる", romanization: "komeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "load (a gun) / charge (electrically)", derivedMeanings: ["put effort/emotions into (a project)"], exampleUsages: ["心を込める (wholeheartedly do)", "... という思いを込めています (do with the thought of ...)"] },
 
       // TODO: 差す
     );

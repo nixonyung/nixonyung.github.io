@@ -22,6 +22,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["口"], hiragana: "くち", romanization: "kuchi", meaning: "mouth" },
       { kanjis: ["鼻"], hiragana: "はな", romanization: "hana", meaning: "nose" },
       { kanjis: ["髪"], hiragana: "かみ", romanization: "kami", meaning: "hair" },
+      { kanjis: ["瞼", "目蓋", "眼蓋"], hiragana: "まぶた", romanization: "mabuta", meaning: "eyelid" },
       { kanjis: ["歯"], hiragana: "は", romanization: "ha", meaning: "tooth" },
       { kanjis: ["手"], hiragana: "て", romanization: "te", meaning: "hand / arm" },
       { kanjis: ["肩"], hiragana: "かた", romanization: "kata", meaning: "shoulder" },
@@ -118,6 +119,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       // seasoning
       { kanjis: ["塩"], hiragana: "しお", romanization: "shio", meaning: "salt" },
       { kanjis: ["砂糖"], hiragana: "さとう", romanization: "satou", meaning: "sugar" },
+      { katakana: "ジャム", romanization: "jamu", meaning: "jam" },
       // dairy
       { kanjis: ["牛乳"], hiragana: "ぎゅうにゅう", romanization: "gyuunyuu", meaning: "cow's milk" },
       { katakana: "バター", romanization: "bataa", meaning: "butter" },
@@ -225,7 +227,9 @@ export function appendNounsObjects(words: JapaneseWord[]) {
 
       // containers
       { hiragana: "かばん", preferredForm: "hiragana", katakana: "カバン", kanjis: ["鞄"], romanization: "kaban", meaning: "bag / basket" },
-      { kanjis: ["器"], hiragana: "うつわ", romanization: "utsuwa", meaning: "container / vessel" },
+      { kanjis: ["器"], hiragana: "うつわ", romanization: "utsuwa", meaning: "device / instrument", derivedMeanings: ["container / vessel"] },
+      { kanjis: ["容器"], hiragana: "ようき", romanization: "youki", meaning: "container / vessel" },
+      { kanjis: ["入れ物", "容れ物"], hiragana: "いれもの", romanization: "iremono", meaning: "container / case" },
       { kanjis: ["箱"], rareKanjis: ["函", "匣", "筥", "筐", "凾"], hiragana: "はこ", katakana: "ハコ", romanization: "hako", meaning: "box" },
       { kanjis: ["袋"], rareKanjis: ["嚢"], hiragana: "ふくろ", romanization: "fukuro", meaning: "bag" },
       { kanjis: ["碗"], rareKanjis: ["盌"], hiragana: "わん", romanization: "wan", meaning: "bowl" },
@@ -309,6 +313,8 @@ export function appendNounsObjects(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.objects.transportation.value) {
     words.push(
       //
+      { kanjis: ["交通"], hiragana: "こうつう", romanization: "koutsuu", meaning: "traffic / transportation" },
+
       { katakana: "エスカレーター", romanization: "esukareetaa", meaning: "escalator" },
       { katakana: "エレベーター", romanization: "erebeetaa", meaning: "elevator" },
 
@@ -319,6 +325,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { katakana: "タクシー", romanization: "takushii", meaning: "taxi" },
       { kanjis: ["電車"], hiragana: "でんしゃ", romanization: "densha", meaning: "train" },
       { kanjis: ["地下鉄"], hiragana: "ちかてつ", romanization: "chikatetsu", meaning: "subway" },
+      { kanjis: ["路線"], hiragana: "ろせん", romanization: "rosen", meaning: "route (bus/train/airplane)" },
 
       { kanjis: ["飛行機"], hiragana: "ひこうき", romanization: "hikouki", meaning: "airplane" },
     );
@@ -348,6 +355,9 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { katakana: "フィルム", romanization: "firumu", meaning: "film" },
       { katakana: "アニメ", romanization: "anime", meaning: "anime" },
       { katakana: "アニメーション", romanization: "animeeshon", meaning: "animation" },
+
+      // shows
+      { katakana: "ポッドキャスト", romanization: "poddokyasuto", meaning: "podcast" },
     );
   }
 }

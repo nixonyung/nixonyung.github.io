@@ -14,15 +14,14 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
       { hiragana: "とか", romanization: "toka", meaning: "and (non-exhausive, spoken)" },
       { hiragana: "といった", preferredForm: "hiragana", kanjis: ["と言った"], romanization: "toitta", meaning: "etc." },
 
-      { hiragana: "たり", romanization: "tari", meaning: "and (listing actions / targets)", exampleUsages: ["[Verb-た] り ...", "[Noun] だったり ...", "[i-Adj. (dropped)] だったり ...", "[na-Adj.] だったり ..."] },
-
       { hiragana: "か", romanization: "ka", meaning: "or (listing options)", exampleUsages: ["[Noun] か [Noun] か ...", "[Noun] か [Noun] ..."] },
 
       { kanjis: ["例えば"], hiragana: "たとえば", romanization: "tatoeba", meaning: "for example" },
 
-      { hiragana: "も", romanization: "mo", meaning: "and (non-exhausive)", exampleUsages: ["[Noun] も [Verb] (xx and me do ...)", "[Noun] も [Noun] も [Verb]", "[Noun] も [Noun] も [Noun] も [Verb]"] },
+      { hiragana: "も", romanization: "mo", meaning: "and (non-exhausive)", exampleUsages: ["A も ... (A and me ...)", "A も B も C も ..."] },
       { hiragana: "や", romanization: "ya", meaning: "and (non-exhausive, written)", exampleUsages: ["[Noun] や [Noun] ..."] },
 
+      { hiragana: "にも", romanization: "nimo", meaning: "also", exampleUsages: ["[Noun] 、[Noun] にも ..."] },
       { hiragana: "し", romanization: "shi", meaning: "not only, and also", exampleUsages: ["[Clause] し、 [Clause]"] },
 
       // ellipsis

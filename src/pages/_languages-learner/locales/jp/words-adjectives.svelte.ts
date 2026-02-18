@@ -11,6 +11,9 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { hiragana: "いい", romanization: "ii", adjGroup: "I", meaning: "good (casual)" },
       { kanjis: ["良い", "好い", "善い"], rareKanjis: ["佳い", "吉い", "宜い"], hiragana: "よい", romanization: "yoi", adjGroup: "I", meaning: "good (formal)" },
       { hiragana: "なかなか", preferredForm: "hiragana", kanjis: ["中々", "中中"], rareKanjis: ["仲々", "仲仲", "却々", "却却"], adjGroup: "Na", romanization: "nakanaka", meaning: "quite / decently (surprisingly)" },
+      { kanjis: ["立派"], hiragana: "りっぱ", romanization: "rippa", adjGroup: "Na", meaning: "splendid / elegant" },
+      { kanjis: ["結構"], hiragana: "けっこう", romanization: "kekkou", adjGroup: "Na", meaning: "excellent (formal)", derivedMeanings: ["politely decline (fine with myself)"] },
+      { kanjis: ["素晴らしい"], hiragana: "すばらしい", romanization: "subarashii", adjGroup: "I", meaning: "magnificent" },
 
       { kanjis: ["大丈夫"], hiragana: "だいじょうぶ", romanization: "daijoubu", adjGroup: "Na", meaning: "fine / alright", derivedMeanings: ["safe"] },
       { kanjis: ["大切"], hiragana: "たいせつ", romanization: "taisetsu", adjGroup: "Na", meaning: "important / significant" },
@@ -23,6 +26,7 @@ export function appendAdjectives(words: JapaneseWord[]) {
 
       { kanjis: ["怖い", "恐い"], hiragana: "こわい", romanization: "kowai", adjGroup: "I", meaning: "scary" },
       { kanjis: ["危ない"], hiragana: "あぶない", romanization: "abunai", adjGroup: "I", meaning: "dangerous" },
+      { kanjis: ["極道"], rareKanjis: ["獄道"], hiragana: "ごくどう", romanization: "gokudou", adjGroup: "Na", meaning: "wicked / immoral" },
     );
   }
 
@@ -33,6 +37,10 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { kanjis: ["絶好調"], hiragana: "ぜっこうちょう", romanization: "zekkouchou", adjGroup: "Na", meaning: "feeling great" },
       { kanjis: ["嬉しい"], hiragana: "うれしい", romanization: "ureshii", adjGroup: "I", meaning: "happy / delighted" },
       { kanjis: ["楽しい"], rareKanjis: ["愉しい"], hiragana: "たのしい", romanization: "tanoshii", adjGroup: "I", meaning: "enjoyable / fun", derivedMeanings: ["useful / handy"] },
+      { kanjis: ["楽しみ"], rareKanjis: ["愉しみ"], hiragana: "たのしみ", romanization: "tanoshimi", adjGroup: "Na", meaning: "looking forward to" },
+      { hiragana: "-したい", romanization: "shitai", adjGroup: "I", meaning: "wanted to do" },
+      { kanjis: ["面白い"], hiragana: "おもしろい", romanization: "omoshiroi", adjGroup: "I", meaning: "interesting" },
+      { kanjis: ["不思議"], hiragana: "ふしぎ", romanization: "fushigi", adjGroup: "Na", meaning: "amazing" },
 
       { kanjis: ["嫌い"], hiragana: "きらい", romanization: "kirai", adjGroup: "Na", meaning: "disliked / hated" },
       { kanjis: ["嫌"], hiragana: "いや", romanization: "iya", adjGroup: "Na", meaning: "don't want (temporary feeling)" },
@@ -78,6 +86,7 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { kanjis: ["汚い"], rareKanjis: ["穢い"], hiragana: "きたない", romanization: "kitanai", adjGroup: "I", meaning: "dirty" },
 
       { kanjis: ["明るい"], hiragana: "あかるい", romanization: "akarui", adjGroup: "I", meaning: "bright" },
+      { kanjis: ["眩しい"], hiragana: "まぶしい", romanization: "mabushii", adjGroup: "I", meaning: "dazzling / radiant" },
       { kanjis: ["暗い"], rareKanjis: ["昏い", "冥い", "闇い"], hiragana: "くらい", romanization: "kurai", adjGroup: "I", meaning: "dark / gloomy" },
 
       { kanjis: ["黒い"], hiragana: "くろい", romanization: "kuroi", adjGroup: "I", meaning: "black" },
@@ -94,30 +103,32 @@ export function appendAdjectives(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.adjectives.skillfulness.value) {
     adjs.push(
+      // competence
+      { hiragana: "すごい", preferredForm: "hiragana", kanjis: ["凄い"], katakana: "スゴイ", romanization: "sugoi", adjGroup: "I", meaning: "amazing / terrible" },
       { kanjis: ["上手い", "巧い"], rareKanjis: ["美い"], hiragana: "うまい", romanization: "umai", adjGroup: "I", meaning: "skillful" },
       { kanjis: ["上手"], hiragana: "じょうず", romanization: "jouzu", adjGroup: "Na", meaning: "skilled", exampleUsages: ["日本語が上手"] },
-      { kanjis: ["下手"], hiragana: "へた", romanization: "heta", adjGroup: "Na", meaning: "unskilled" },
+      { kanjis: ["強い"], hiragana: "つよい", romanization: "tsuyoi", adjGroup: "I", meaning: "strong / tough" },
+      { kanjis: ["易しい"], hiragana: "やさしい", romanization: "yasashii", adjGroup: "I", meaning: "easy" },
+      { kanjis: ["-易い"], hiragana: "-やすい", romanization: "-yasui", adjGroup: "I", meaning: "easy to (in terms of any kind of effort)", exampleUsages: ["[Verb-stem] 易い", "話しやすい (easy to talk with / easy to find and talk)", "酔いやすい (get drunk easily)"] },
+      { hiragana: "もっともらしい", preferredForm: "hiragana", kanjis: ["尤もらしい"], romanization: "mottomorashii", adjGroup: "I", meaning: "plausible" },
 
+      { kanjis: ["下手"], hiragana: "へた", romanization: "heta", adjGroup: "Na", meaning: "unskilled" },
+      { kanjis: ["弱い"], hiragana: "よわい", romanization: "yowai", adjGroup: "I", meaning: "weak / fragile" },
+      { kanjis: ["難しい"], hiragana: "むずかしい", romanization: "muzukashii", adjGroup: "I", meaning: "difficult" },
+      { kanjis: ["-難い", "-悪い"], hiragana: "-にくい", romanization: "-nikui", adjGroup: "I", meaning: "hard to (in terms of any kind of effort)", exampleUsages: ["[Verb-stem] 難い", "使いにくい (hard to use)", "車酔いしにくい (doesn't get car sick easily)"] },
+      { kanjis: ["無理"], hiragana: "むり", katakana: "ムリ", romanization: "muri", adjGroup: "Na", meaning: "unreasonable" },
+      { kanjis: ["不可能"], hiragana: "ふかのう", romanization: "fukanou", adjGroup: "Na", meaning: "impossible" },
+
+      // correctness
       { kanjis: ["正しい"], hiragana: "ただしい", romanization: "tadashii", adjGroup: "I", meaning: "correct" },
       { hiragana: "いけない", romanization: "ikenai", adjGroup: "I", meaning: "wrong" },
       { hiragana: "つたない", preferredForm: "hiragana", kanjis: ["拙い"], romanization: "tsutanai", adjGroup: "I", meaning: "poor quality" },
 
-      { kanjis: ["強い"], hiragana: "つよい", romanization: "tsuyoi", adjGroup: "I", meaning: "strong / tough" },
-      { kanjis: ["弱い"], hiragana: "よわい", romanization: "yowai", adjGroup: "I", meaning: "weak / fragile" },
-      { hiragana: "すごい", preferredForm: "hiragana", kanjis: ["凄い"], katakana: "スゴイ", romanization: "sugoi", adjGroup: "I", meaning: "amazing / terrible" },
-      { kanjis: ["面白い"], hiragana: "おもしろい", romanization: "omoshiroi", adjGroup: "I", meaning: "interesting" },
-      { kanjis: ["不思議"], hiragana: "ふしぎ", romanization: "fushigi", adjGroup: "Na", meaning: "amazing" },
-      { kanjis: ["立派"], hiragana: "りっぱ", romanization: "rippa", adjGroup: "Na", meaning: "splendid / elegant" },
-      { kanjis: ["結構"], hiragana: "けっこう", romanization: "kekkou", adjGroup: "Na", meaning: "excellent (formal)", derivedMeanings: ["politely decline (fine with myself)"] },
-      { kanjis: ["素晴らしい"], hiragana: "すばらしい", romanization: "subarashii", adjGroup: "I", meaning: "magnificent" },
-
-      { kanjis: ["易しい"], hiragana: "やさしい", romanization: "yasashii", adjGroup: "I", meaning: "easy" },
-      { kanjis: ["-易い"], hiragana: "-やすい", romanization: "-yasui", adjGroup: "I", meaning: "easy to (in terms of any kind of effort)", exampleUsages: ["[Verb-stem] 易い", "話しやすい (easy to talk with / easy to find and talk)", "酔いやすい (get drunk easily)"] },
-      { kanjis: ["難しい"], hiragana: "むずかしい", romanization: "muzukashii", adjGroup: "I", meaning: "difficult" },
-      { kanjis: ["-難い", "-悪い"], hiragana: "-にくい", romanization: "-nikui", adjGroup: "I", meaning: "hard to (in terms of any kind of effort)", exampleUsages: ["[Verb-stem] 難い", "使いにくい (hard to use)", "車酔いしにくい (doesn't get car sick easily)"] },
-      { hiragana: "もっともらしい", preferredForm: "hiragana", kanjis: ["尤もらしい"], romanization: "mottomorashii", adjGroup: "I", meaning: "plausible" },
-      { kanjis: ["無理"], hiragana: "むり", katakana: "ムリ", romanization: "muri", adjGroup: "Na", meaning: "unreasonable" },
-      { kanjis: ["不可能"], hiragana: "ふかのう", romanization: "fukanou", adjGroup: "Na", meaning: "impossible" },
+      // complexity
+      { kanjis: ["複雑"], hiragana: "ふくざつ", romanization: "fukuzatsu", adjGroup: "Na", meaning: "complex" },
+      { kanjis: ["手の込んだ"], hiragana: "てのこんだ", romanization: "tenokonda", adjGroup: "Na", meaning: "complex / elaborate" },
+      { kanjis: ["精巧"], hiragana: "せいこう", romanization: "seikou", adjGroup: "Na", meaning: "exquisite" },
+      { kanjis: ["入念"], hiragana: "にゅうねん", romanization: "nyuunen", adjGroup: "Na", meaning: "careful" },
     );
   }
 
@@ -215,7 +226,6 @@ export function appendAdjectives(words: JapaneseWord[]) {
   if (flashcardSettings.words.adjectives.miscellaneous.value) {
     adjs.push(
       // TODO: used like -suru?
-      { hiragana: "-したい", romanization: "shitai", adjGroup: "I", meaning: "wanted to do" },
 
       { hiragana: "-ような", preferredForm: "hiragana", kanjis: ["様な"], romanization: "youna", adjGroup: "Na", meaning: "similarly (conceptually)" },
 

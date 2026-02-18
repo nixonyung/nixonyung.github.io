@@ -109,6 +109,7 @@ export function appendPronouns(words: JapaneseWord[]) {
       ///
       { kanjis: ["自分"], hiragana: "じぶん", romanization: "jibun", meaning: "myself / yourself / oneself / himself / herself", derivedMeanings: ["the speaker's side"] },
       { kanjis: ["自分たち", "自分達"], hiragana: "じぶんたち", romanization: "jibuntachi", meaning: "ourselves / themselves" },
+      { kanjis: ["-自身"], hiragana: "じしん", romanization: "jishin", meaning: "oneself", exampleUsages: ["私自身"] },
 
       { kanjis: ["相手"], hiragana: "あいて", romanization: "aite", meaning: "the other party", derivedMeanings: ["the listener's side"] },
     );

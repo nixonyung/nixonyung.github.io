@@ -4,6 +4,9 @@ import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 export function appendFunctionalManner(words: JapaneseWord[]) {
   if (flashcardSettings.words.functional.manner.value) {
     words.push(
+      { kanjis: ["通じて"], hiragana: "つうじて", romanization: "tsuujite", meaning: "via / through", exampleUsages: ["このポッドキャストを通じて知る (know through this podcast)"] },
+      { hiragana: "について", rareKanjis: ["に就いて"], romanization: "nitsuite", meaning: "regarding", exampleUsages: ["文化や生活について知れる"] },
+
       { kanjis: ["良く", "善く", "能く", "好く", "克く"], hiragana: "よく", romanization: "yoku", meaning: "nicely / skillfully", derivedMeanings: ["properly"] },
 
       { kanjis: ["一緒に"], hiragana: "いっしょに", romanization: "isshoni", meaning: "together {with xxx}", exampleUsages: ["一緒に [Verb]", "[Noun] と 一緒に [Verb]。"] },

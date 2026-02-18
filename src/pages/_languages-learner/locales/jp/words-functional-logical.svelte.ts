@@ -16,12 +16,10 @@ export function appendFunctionalLogical(words: JapaneseWord[]) {
       // TODO: only use with volitional verbs
       { hiragana: "ために", preferredForm: "hiragana", kanjis: ["為に"], romanization: "tameni", meaning: "so (purpose)", exampleUsages: ["[Clause] ために [Clause]", "テストに合格するために ...", "家族のために ...", "この日のために ..."] },
       { hiragana: "ように", preferredForm: "hiragana", kanjis: ["様に"], romanization: "youni", meaning: "so (desired state)", exampleUsages: ["[Clause] ように [Clause]", "日本語て漫画が読めるように ..."] },
-      { hiragana: "ので", romanization: "node", meaning: "because of (what cause, written)", exampleUsages: ["[Clause ending with Verb] ので ...", "[Clause ending with Noun] なので ...", "[Clause ending with i-Adj.] ので ...", "[Clause ending with na-Adj.] なので ...", "なので、..."] },
+      { hiragana: "ので", romanization: "node", meaning: "because of (what cause, written)", exampleUsages: ["[Verb / i-Adj.] ので ...", "[Noun / na-Adj.] なので ...", "なので、..."] },
       { hiragana: "のせいで", rareKanjis: ["の所為で"], romanization: "noseide", meaning: "due to", exampleUsages: ["[Noun] のせいで [Clause]"] },
 
       // conditional
-      { hiragana: "たら", romanization: "tara", meaning: "if so (uncertain / imaginary)", derivedMeanings: ["when/after (chronologically)"], exampleUsages: ["暇になったら"] },
-      { hiragana: "ば", romanization: "ba", meaning: "if that's what you want", exampleUsages: ["[Clause] ば [Clause]", "どうすれば [Clause]"] },
       { hiragana: "なら", preferredForm: "hiragana", romanization: "nara", meaning: "in that case (explicitly echoing what is just spoken)", derivedMeanings: ["if that's true (making assumption by observation)"], exampleUsages: ["[Clause] なら / のなら / んなら [Clause]"] },
       { hiragana: "ならば", preferredForm: "hiragana", romanization: "naraba", meaning: "in that case (formal)" },
       { hiragana: "なければ", preferredForm: "hiragana", kanjis: ["無ければ"], romanization: "nakereba", meaning: "if not" },

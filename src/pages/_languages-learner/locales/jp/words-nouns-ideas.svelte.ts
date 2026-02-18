@@ -37,10 +37,14 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["病気"], hiragana: "びょうき", romanization: "byouki", meaning: "illness" },
       { kanjis: ["疲れ"], hiragana: "つかれ", romanization: "tsukare", meaning: "tiredness" },
       { kanjis: ["風邪"], hiragana: "かぜ", romanization: "kaze", meaning: "cold / flu" },
+      { kanjis: ["頭痛"], hiragana: "ずつう", romanization: "zutsuu", meaning: "headache" },
       { kanjis: ["車酔い"], hiragana: "くるまよい", romanization: "kurumayoi", meaning: "car sickness" },
 
       { kanjis: ["泣き"], hiragana: "なき", romanization: "naki", meaning: "crying" },
 
+      { kanjis: ["離別"], hiragana: "りべつ", romanization: "ribetsu", meaning: "separation (of relationships)" },
+      { kanjis: ["分離"], hiragana: "ぶんり", romanization: "bunri", meaning: "detachment" },
+      { kanjis: ["隔離"], hiragana: "かくり", romanization: "kakuri", meaning: "quarantine" },
       { kanjis: ["死"], hiragana: "し", romanization: "shi", meaning: "death" },
       { kanjis: ["死去"], hiragana: "しきょ", romanization: "shikyo", meaning: "passing away (formal)" },
 
@@ -65,7 +69,10 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["難度"], hiragana: "なんど", romanization: "nando", meaning: "degree of difficulty" },
       { kanjis: ["挑戦"], hiragana: "ちょうせん", romanization: "chousen", meaning: "challenge" },
       { kanjis: ["邪魔"], hiragana: "じゃま", romanization: "jama", meaning: "obstacle" },
+      { kanjis: ["厄難"], hiragana: "やくなん", romanization: "yakunan", meaning: "calamity" },
+
       { kanjis: ["我慢"], hiragana: "がまん", katakana: "ガマン", romanization: "gaman", meaning: "endurance" },
+      { kanjis: ["上達"], hiragana: "じょうたつ", romanization: "joutatsu", meaning: "improvement" },
 
       { kanjis: ["真面目"], hiragana: "まじめ", katakana: "マジメ", romanization: "majime", meaning: "truthfulness" },
 
@@ -100,7 +107,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["継承"], hiragana: "けいしょう", romanization: "keishou", meaning: "inheritance" },
       { kanjis: ["所属"], hiragana: "しょぞく", romanization: "shozoku", meaning: "belonging to", exampleUsages: ["所属メンバー"] },
 
-      { kanjis: ["名前"], hiragana: "なまえ", romanization: "namae", meaning: "name" },
+      { kanjis: ["名前"], hiragana: "なまえ", romanization: "namae", meaning: "name", exampleUsages: ["名前にしました (choose this name)"] },
       { kanjis: ["姓名"], hiragana: "せいめい", romanization: "seimei", meaning: "full name" },
       { kanjis: ["氏名"], hiragana: "しめい", romanization: "shimei", meaning: "full name (formal)" },
       { kanjis: ["苗字", "名字"], hiragana: "みょうじ", romanization: "myouji", meaning: "surname" },
@@ -114,6 +121,10 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["場合"], hiragana: "ばあい", romanization: "baai", meaning: "occasion" },
       { kanjis: ["大勢"], hiragana: "おおぜい", romanization: "oozei", meaning: "crowd of people" },
       { katakana: "パーティー", romanization: "paatii", meaning: "party" },
+
+      { kanjis: ["連絡"], rareKanjis: ["聯絡"], hiragana: "れんらく", romanization: "renraku", meaning: "contacting" },
+      { kanjis: ["通信"], hiragana: "つうしん", romanization: "tsuushin", meaning: "telecommunications" },
+      { katakana: "コミュニケーション", romanization: "komunikeeshon", meaning: "communication" },
 
       { kanjis: ["文化"], hiragana: "ぶんか", romanization: "bunka", meaning: "culture" },
       { kanjis: ["出身"], hiragana: "しゅっしん", romanization: "shusshin", meaning: "one's origin (home country/parentage/education)", exampleUsages: ["私は東京出身です。"] },
@@ -153,7 +164,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { katakana: "チームワーク", romanization: "chiimuwaaku", meaning: "teamwork" },
       { katakana: "グループ", romanization: "guruupu", meaning: "group" },
       { katakana: "メンバー", romanization: "menbaa", meaning: "member" },
-      { kanjis: ["役割"], hiragana: "やくわり", romanization: "yakuwari", meaning: "role" },
+      { kanjis: ["役割"], hiragana: "やくわり", romanization: "yakuwari", meaning: "role / duty" },
       { kanjis: ["機能"], hiragana: "きのう", romanization: "kinou", meaning: "function" },
 
       { kanjis: ["事業"], hiragana: "じぎょう", romanization: "jigyou", meaning: "career" },
@@ -165,15 +176,17 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["成功"], hiragana: "せいこう", romanization: "seikou", meaning: "success" },
       { kanjis: ["失敗"], hiragana: "しっぱい", romanization: "shippai", meaning: "failure" },
 
-      { kanjis: ["離別"], hiragana: "りべつ", romanization: "ribetsu", meaning: "separation (of relationships)" },
-      { kanjis: ["分離"], hiragana: "ぶんり", romanization: "bunri", meaning: "detachment" },
-      { kanjis: ["隔離"], hiragana: "かくり", romanization: "kakuri", meaning: "quarantine" },
+      { kanjis: ["地位"], hiragana: "ちい", romanization: "chii", meaning: "social status" },
+      { kanjis: ["権限"], hiragana: "けんげん", romanization: "kengen", meaning: "authority" },
+      { kanjis: ["許可"], hiragana: "きょか", romanization: "kyoka", meaning: "permission" },
     );
   }
 
   if (flashcardSettings.words.nouns.ideas.decisionMaking.value) {
     words.push(
+      // info
       { kanjis: ["情報"], hiragana: "じょうほう", romanization: "jouhou", meaning: "information" },
+      { kanjis: ["知識"], rareKanjis: ["智識"], hiragana: "ちしき", romanization: "chishiki", meaning: "knowledge" },
       { kanjis: ["知らせ"], rareKanjis: ["報せ"], hiragana: "しらせ", romanization: "shirase", meaning: "news" },
       { katakana: "ニュース", romanization: "nyuusu", meaning: "news" },
       { kanjis: ["報道"], hiragana: "ほうどう", romanization: "houdou", meaning: "news report" },
@@ -189,15 +202,18 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["違い"], hiragana: "ちがい", romanization: "chigai", meaning: "difference" },
       { kanjis: ["関連"], rareKanjis: ["関聯"], hiragana: "かんれん", romanization: "kanren", meaning: "relation" },
 
+      // thoughts
       { kanjis: ["思い", "想い", "念い"], hiragana: "おもい", romanization: "omoi", meaning: "thought" },
+      { kanjis: ["考え"], hiragana: "かんがえ", romanization: "kangae", meaning: "thinking / reasoning" },
       { kanjis: ["選択"], hiragana: "せんたく", romanization: "sentaku", meaning: "choice" },
       { kanjis: ["決定"], hiragana: "けってい", romanization: "kettei", meaning: "decision" },
       { kanjis: ["計画"], hiragana: "けいかく", romanization: "keikaku", meaning: "a plan (implementation)" },
       { kanjis: ["企画"], hiragana: "きかく", romanization: "kikaku", meaning: "a plan (visionary)" },
-      { kanjis: ["説得"], hiragana: "せっとく", romanization: "settoku", meaning: "persuasion" },
-      { kanjis: ["譲歩"], hiragana: "じょうほ", romanization: "jouho", meaning: "concession" },
-      { kanjis: ["同意"], hiragana: "どうい", romanization: "doui", meaning: "agreement" },
-      { kanjis: ["中止"], hiragana: "ちゅうし", romanization: "chuushi", meaning: "termination / cancellation" },
+      { kanjis: ["戦略"], hiragana: "せんりゃく", romanization: "senryaku", meaning: "strategy / tactics" },
+      { kanjis: ["作戦", "策戦"], hiragana: "さくせん", romanization: "sakusen", meaning: "strategy / tactics" },
+      { katakana: "ストラテジー", romanization: "sutoratejii", meaning: "strategy" },
+      { kanjis: ["戦法"], hiragana: "せんぽう", romanization: "senpou", meaning: "the study of war" },
+      { kanjis: ["対策"], hiragana: "たいさく", romanization: "taisaku", meaning: "countermeasure" },
 
       { kanjis: ["-向け"], hiragana: "むけ", romanization: "muke", meaning: "intended for xxx" },
       { kanjis: ["行方"], hiragana: "ゆくえ", romanization: "yukue", meaning: "destination / current direction" },
@@ -213,22 +229,40 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.nouns.ideas.narration.value) {
     words.push(
-      { kanjis: ["話"], hiragana: "はなし", romanization: "hanashi", meaning: "conversation" },
+      // a word
       { kanjis: ["語"], hiragana: "ご", romanization: "go", meaning: "word" },
       { kanjis: ["言葉"], rareKanjis: ["詞", "辞"], hiragana: "ことば", romanization: "kotoba", meaning: "word", derivedMeanings: ["language"], exampleUsages: ['"xxx" という言葉 (the word "xxx")'] },
       { katakana: "ワード", romanization: "woodo", meaning: "word" },
+      { kanjis: ["単語"], hiragana: "たんご", romanization: "tango", meaning: "a vocabulary item", derivedMeanings: ["word"] },
+      { kanjis: ["語彙"], hiragana: "ごい", romanization: "goi", meaning: "vocabulary / lexicon" },
+      { katakana: "ボキャブラリー", romanization: "bokaburarii", meaning: "vocabulary" },
+
+      // words
+      { kanjis: ["文字"], hiragana: "もじ", romanization: "moji", meaning: "letters" },
+      { kanjis: ["語句"], hiragana: "ごく", romanization: "goku", meaning: "phrase" },
+      { katakana: "フレーズ", romanization: "fureezu", meaning: "phrase" },
       { kanjis: ["言"], hiragana: "げん", romanization: "gen", meaning: "statement" },
       { kanjis: ["述語"], hiragana: "じゅつご", romanization: "jutsugo", meaning: "predicate (verb and object)" },
-      { katakana: "フレーズ", romanization: "fureezu", meaning: "phrase" },
 
-      { kanjis: ["意味"], hiragana: "いみ", romanization: "imi", meaning: "meaning" },
-
-      { kanjis: ["例文"], hiragana: "れいぶん", romanization: "reibun", meaning: "example sentence" },
-      { kanjis: ["例", "様"], hiragana: "ためし", romanization: "tameshi", meaning: "example / precedent" },
+      // words functions
       { kanjis: ["否定文"], hiragana: "ひていぶん", romanization: "hiteibun", meaning: "negative sentence" },
+      { kanjis: ["例", "様"], hiragana: "ためし", romanization: "tameshi", meaning: "example / precedent" },
+      { kanjis: ["例文"], hiragana: "れいぶん", romanization: "reibun", meaning: "example sentence" },
+
+      // dictionary entry
+      { kanjis: ["読み"], hiragana: "よみ", romanization: "yomi", meaning: "pronunciation" },
+      { kanjis: ["品詞"], hiragana: "ひんし", romanization: "hinshi", meaning: "part of speech" },
+      { kanjis: ["意味"], hiragana: "いみ", romanization: "imi", meaning: "meaning" },
+      { kanjis: ["直訳"], hiragana: "ちょくやく", romanization: "chokuyaku", meaning: "literal translation" },
+
+      // piece of writing(?)
+      { kanjis: ["話"], hiragana: "はなし", romanization: "hanashi", meaning: "conversation" },
+      { kanjis: ["対話"], hiragana: "たいわ", romanization: "taiwa", meaning: "conversation / dialogue" },
       { kanjis: ["語り"], hiragana: "かたり", romanization: "katari", meaning: "detailed speech (literary)" },
       { kanjis: ["自己紹介"], hiragana: "じこしょうかい", romanization: "jikoshoukai", meaning: "self-introduction" },
-
+      { kanjis: ["説得"], hiragana: "せっとく", romanization: "settoku", meaning: "persuasion" },
+      { kanjis: ["譲歩"], hiragana: "じょうほ", romanization: "jouho", meaning: "concession" },
+      { kanjis: ["同意"], hiragana: "どうい", romanization: "doui", meaning: "agreement" },
       { katakana: "エピソード", romanization: "episoodo", meaning: "episode" },
 
       { kanjis: ["方"], hiragana: "かた", romanization: "kata", meaning: "way / method", exampleUsages: ["[Noun] の [Verb-ます (dropped)] 方"] },
@@ -246,11 +280,14 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["中国語"], hiragana: "ちゅうごくご", romanization: "chuugokugo", meaning: "the Chinese language" },
       { kanjis: ["英語"], hiragana: "えいご", romanization: "eigo", meaning: "the English language" },
 
+      { kanjis: ["言い換え", "言い替え", "言替え", "言換え"], hiragana: "いいかえ", romanization: "iikae", meaning: "rephrasing" },
+
       { kanjis: ["背景"], hiragana: "はいけい", romanization: "haikei", meaning: "background" },
       { kanjis: ["前後関係"], hiragana: "ぜんごかんけい", romanization: "zengokankei", meaning: "context" },
       { kanjis: ["文脈"], hiragana: "ぶんみゃく", romanization: "bunmyaku", meaning: "context" },
       { kanjis: ["脈絡"], hiragana: "みゃくらく", romanization: "myakuraku", meaning: "context" },
       { kanjis: ["理由"], hiragana: "りゆう", romanization: "riyuu", meaning: "reason" },
+      { kanjis: ["説明"], hiragana: "せつめい", romanization: "setsumei", meaning: "explanation" },
     );
   }
 
@@ -261,6 +298,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["上昇"], hiragana: "じょうしょう", romanization: "joushou", meaning: "ascend" },
 
       // geometry
+      { kanjis: ["線"], hiragana: "せん", romanization: "sen", meaning: "line" },
       { kanjis: ["間"], hiragana: "あいだ", romanization: "aida", meaning: "gap / distance" },
       { kanjis: ["距離"], hiragana: "きょり", romanization: "kyori", meaning: "distance" },
       { kanjis: ["辺"], hiragana: "へん", romanization: "hen", meaning: "side" },
@@ -274,9 +312,12 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
 
       { kanjis: ["縦", "竪", "経"], hiragana: "たて", romanization: "tate", meaning: "the vertical xxx" },
       { kanjis: ["横"], hiragana: "よこ", romanization: "yoko", meaning: "the horizontal xxx" },
+      { kanjis: ["行"], hiragana: "ぎょう", romanization: "gyou", meaning: "row", derivedMeanings: ["a line of text"] },
+      { kanjis: ["列"], hiragana: "れつ", romanization: "retsu", meaning: "column", derivedMeanings: ["a queue"] },
 
       { kanjis: ["完全-"], hiragana: "かんぜん", romanization: "kanzen-", meaning: "perfect / complete" },
       { kanjis: ["半-"], hiragana: "はん", romanization: "han-", meaning: "half- / semi-" },
+      { kanjis: ["満杯"], hiragana: "まんぱい", romanization: "manpai", meaning: "full", exampleUsages: ["満杯にする"] },
 
       { kanjis: ["分脈"], hiragana: "ぶんみゃく", romanization: "bunmyaku", meaning: "branch / fork", exampleUsages: ["(branches of a family tree)", "(physical branches)"] },
 
@@ -291,6 +332,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
     words.push(
       //
       { katakana: "デジタル", romanization: "dezitaru", meaning: "digital" },
+      { kanjis: ["伝送"], katakana: "でんそう", romanization: "densou", meaning: "transmission" },
     );
   }
 
@@ -299,6 +341,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       //
       { hiragana: "こと", preferredForm: "hiragana", kanjis: ["事"], romanization: "koto", meaning: "thing / event / matter / situation" },
       { kanjis: ["行事"], hiragana: "ぎょうじ", romanization: "gyouji", meaning: "event" },
+      { kanjis: ["中止"], hiragana: "ちゅうし", romanization: "chuushi", meaning: "termination / cancellation" },
 
       { katakana: "リスニング", romanization: "risuningu", meaning: "listening", exampleUsages: ["リスニングの練習"] },
 

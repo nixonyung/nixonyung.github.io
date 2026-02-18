@@ -125,7 +125,7 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.grammarRules.conjugations.potentialForm.value) {
     words.push(
-      // -ba: conditional
+      // -eru: potential ("can" / "be able to")
       { question: "会う -> potential", answer: "会える", romanization: "aeru" },
       { question: "書く -> potential", answer: "書ける", romanization: "kakeru" },
       { question: "泳ぐ -> potential", answer: "泳げる", romanization: "oyogeru" },
@@ -171,6 +171,8 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
   if (flashcardSettings.words.grammarRules.conjugations.teForm.value) {
     words.push(
       // -te: linking verbs
+
+      // Godan verbs
       { question: "会う + て", answer: "会って", romanization: "atte" },
       { question: "書く + て", answer: "書いて", romanization: "kaite" },
       { question: "行く + て (special case)", answer: "行って", romanization: "itte" },
@@ -181,11 +183,19 @@ export function appendRulesConjugations(words: JapaneseWord[]) {
       { question: "学ぶ + て", answer: "学んで", romanization: "manande" },
       { question: "休む + て", answer: "休んで", romanization: "yasunde" },
       { question: "割る + て", answer: "割って", romanization: "watte" },
+
+      // Ichidan verbs
       { question: "食べる + て", answer: "食べて", romanization: "tabete" },
       { question: "起きる + て", answer: "起きて", romanization: "okite" },
       { question: "閉じる + て", answer: "閉じて", romanization: "tojite" },
+
+      // Irregular verbs
       { question: "来る + て", answer: "来て", romanization: "kite" },
       { question: "する + て", answer: "して", romanization: "shite" },
+
+      // Adj.
+      { question: "甘い + て", answer: "甘くて", romanization: "amakute" },
+      { question: "静かな + て", answer: "静かて", romanization: "shizukate" },
     );
   }
 

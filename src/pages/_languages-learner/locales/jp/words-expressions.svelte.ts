@@ -26,7 +26,8 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "お〇〇", preferredForm: "hiragana", kanjis: ["御-"], romanization: "o", meaning: "(honorific for native Japanese words)", exampleUsages: ["お[Noun]", "(addressing family members polite)", "(talking about others' family members)"] },
       { hiragana: "ご〇〇", preferredForm: "hiragana", kanjis: ["御-"], romanization: "go", meaning: "(honorific for Chinese-derived words)", exampleUsages: ["ご[Noun]"] },
 
-      { hiragana: "という", romanization: "toiu", meaning: "called", exampleUsages: ["[Name] と言う [Thing] (the [Thing] named [Name])"] },
+      { hiragana: "という", preferredForm: "hiragana", kanjis: ["と言う"], romanization: "to iu", meaning: "called", exampleUsages: ["[Name] という [Thing] (the [Thing] named [Name])", "... という思い"] },
+      { hiragana: "っていう", romanization: "tte iu", meaning: "called (spoken)", exampleUsages: ["この [Name] っていうのは ..."] },
       // TODO: について
     );
   }
@@ -107,9 +108,6 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "それでは", romanization: "soredewa", meaning: "well then (spoken, formal)" },
       { hiragana: "じゃあ", romanization: "zyaa", meaning: "well then (spoken, casual)" },
       { kanjis: ["と言うことは", "と言う事は"], hiragana: "ということは", romanization: "toiukotowa", meaning: "if that's true" },
-
-      { kanjis: ["と思う"], hiragana: "とおもう", romanization: "to omou", meaning: "I think (casual)", exampleUsages: ["[Clause] と思う (xxx, I think)", "[Clause] と思います (xxx, I am thinking about that right now)", "[Clause] お話したいと思います (I would like to talk about)", "[Clause] と思っています (I am going/planning to)"] },
-      { kanjis: ["と思わない？"], hiragana: "とおもわない", romanization: "to omowanai", meaning: "don't you think? (casual)", exampleUsages: ["[Verb] と思わない？", "[Noun] だと思わない？", "[i-Adj.] と思わない？", "[na-Adj.] だと思わない？"] },
     );
   }
 
@@ -121,8 +119,9 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "そう", rareKanjis: ["然う"], romanization: "sou", meaning: "(agree)", exampleUsages: ["はい、そうです。"] },
       { hiragana: "そうか", romanization: "souka", meaning: "I see" },
       { hiragana: "そうですね", romanization: "soudesune", meaning: "you're right (polite)", derivedMeanings: ["isn't it"] },
-      { hiragana: "いいな", romanization: "iina", meaning: "that's nice" },
-      { hiragana: "わかりました", romanization: "wakarimashita", meaning: "understood" },
+      { hiragana: "いいな", romanization: "iina", meaning: "that's nice (casual)" },
+      { hiragana: "そういうことか", preferredForm: "hiragana", kanjis: ["そういう事か"], romanization: "souiukotoka", meaning: "I get it now (casual)" },
+      { hiragana: "わかりました", romanization: "wakarimashita", meaning: "understood (polite)" },
 
       { hiragana: "いいえ", romanization: "iie", meaning: "no (formal) / don't mention it" },
       { hiragana: "いや", preferredForm: "hiragana", kanjis: ["否"], romanization: "iya", meaning: "no" },
@@ -139,6 +138,8 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "ください", preferredForm: "hiragana", kanjis: ["下さい"], romanization: "kudasai", meaning: "please give me (polite)", exampleUsages: ["お [Noun] をください。", "[Noun] を {(counter)} ください。"] },
       { kanjis: ["お願いします"], hiragana: "おねがいします", romanization: "onegaishimasu", meaning: "please! (very polite)" },
 
+      { kanjis: ["是非"], hiragana: "ぜひ", romanization: "zehi", meaning: "please by all means (polite)", exampleUsages: ["ぜひ、(request) たら嬉しいです"] },
+
       { kanjis: ["急いで"], hiragana: "いそいで", romanization: "isoide", meaning: "hurry up!" },
       { hiragana: "まだですか？", preferredForm: "hiragana", kanjis: ["未だですか？"], romanization: "madadesuka", meaning: "not done yet?" },
     );
@@ -152,6 +153,9 @@ export function appendExpressions(words: JapaneseWord[]) {
 
       { hiragana: "どれにする？", romanization: "dore ni suru", meaning: "Which one are you going for?" },
       { hiragana: "何ができますか？", romanization: "naniga dekimasuka", meaning: "What can I do?" },
+
+      { kanjis: ["と思う"], hiragana: "とおもう", romanization: "to omou", meaning: "I think (casual)", exampleUsages: ["[Clause] と思う (xxx, I think)", "[Clause] と思います (xxx, I am thinking about that right now)", "[Clause] お話したいと思います (I would like to talk about)", "[Clause] と思っています (I am going/planning to)"] },
+      { kanjis: ["と思わない？"], hiragana: "とおもわない", romanization: "to omowanai", meaning: "don't you think? (casual)", exampleUsages: ["[Verb] と思わない？", "[Noun] だと思わない？", "[i-Adj.] と思わない？", "[na-Adj.] だと思わない？"] },
     );
   }
 
@@ -178,6 +182,9 @@ export function appendExpressions(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.expressions.misc.value) {
     words.push(
+      { kanjis: ["どういう意味ですか？"], hiragana: "どういういみですか", romanization: "douiu imi desuka", meaning: "what does it mean?" },
+      { kanjis: ["これはなんて言いますか？"], hiragana: "なんていいますか", romanization: "nande iimasuka", meaning: "how do you say this?", exampleUsages: ["[Noun] はどうですか？"] },
+
       { hiragana: "どう", romanization: "dou", meaning: "how is xxx? (casual)", exampleUsages: ["[Noun] はどうですか？"] },
       { hiragana: "いかが", preferredForm: "hiragana", kanjis: ["如何"], romanization: "ikaga", meaning: "how is xxx? (formal)" },
 
@@ -192,6 +199,9 @@ export function appendExpressions(words: JapaneseWord[]) {
       { kanjis: ["仕方がない"], hiragana: "しかたがない", romanization: "shikataganai", meaning: "It can't be helped" },
 
       { kanjis: ["日本へようこそ！"], hiragana: "にほんへようこそ！", romanization: "nihon e youkoso", meaning: "Welcome to Japan!" },
+
+      // quoting
+      { kanjis: ["と書いてある"], hiragana: "とかいてある", romanization: "tokaitearu", meaning: "written like that (in dictionary/...)" },
     );
   }
 }
