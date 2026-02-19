@@ -10,9 +10,8 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
       // listing
       // TODO: move words that can replace は to adpositions?
 
-      { hiragana: "と", romanization: "to", meaning: "and (exhausive)", derivedMeanings: ["with me", "and then (facts/habits)", "when (what also happened)"], exampleUsages: ["[Noun] と [Noun] [Verb] ... (and)", "[Noun] と [Verb] ... (with me)", "[Clause] と [Clause] (and then / when)"] },
+      { hiragana: "と", romanization: "to", meaning: "and (exhausive)", derivedMeanings: ["together with", "if/when (facts/habits/general truths)"], exampleUsages: ["[Noun] と [Noun] [Verb] ... (and)", "[Noun] と [Verb] ... (doing xxx with xxx)", "[Clause] と、[Clause] (and then / when)"] },
       { hiragana: "とか", romanization: "toka", meaning: "and (non-exhausive, spoken)" },
-      { hiragana: "といった", preferredForm: "hiragana", kanjis: ["と言った"], romanization: "toitta", meaning: "etc." },
 
       { hiragana: "か", romanization: "ka", meaning: "or (listing options)", exampleUsages: ["[Noun] か [Noun] か ...", "[Noun] か [Noun] ..."] },
 
@@ -29,6 +28,7 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
       { hiragana: "など", preferredForm: "hiragana", kanjis: ["等", "抔"], romanization: "nado", meaning: "etc. (written)", exampleUsages: ["A、B、C など ..."] },
       { hiragana: "などなど", preferredForm: "hiragana", kanjis: ["等など"], romanization: "nadonado", meaning: "et cetera (written, formal)" },
 
+      { hiragana: "といった", preferredForm: "hiragana", kanjis: ["と言った"], romanization: "toitta", meaning: "etc." },
       { hiragana: "とにかく", romanization: "tonikaku", meaning: "anyway (omitting)" },
 
       // with contrast

@@ -154,6 +154,7 @@ export function appendAdjectives(words: JapaneseWord[]) {
     adjs.push(
       //
       { kanjis: ["自然"], hiragana: "しぜん", romanization: "shizen", adjGroup: "Na", meaning: "natural" },
+      { katakana: "ナチュラル", romanization: "nachuraru", adjGroup: "Na", meaning: "natural" },
       { katakana: "リアル", romanization: "riaru", adjGroup: "Na", meaning: "real" },
 
       { kanjis: ["同じ"], hiragana: "おなじ", romanization: "onaji", adjGroup: "Na", meaning: "identical", exampleUsages: ["[Noun] は [Noun] におなじ [Verb]"] },
@@ -187,6 +188,8 @@ export function appendAdjectives(words: JapaneseWord[]) {
       //
       { kanjis: ["近い"], hiragana: "ちかい", romanization: "chikai", adjGroup: "I", meaning: "near" },
       { kanjis: ["遠い"], hiragana: "とおい", romanization: "tooi", adjGroup: "I", meaning: "far" },
+
+      { katakana: "ネイティブ", romanization: "neitibu", adjGroup: "Na", meaning: "native" },
     );
   }
 

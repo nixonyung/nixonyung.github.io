@@ -76,6 +76,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { hiragana: "すでに", preferredForm: "hiragana", kanjis: ["既に"], rareKanjis: ["已に"], romanization: "sudeni", meaning: "already" },
 
       { hiragana: "そろそろ", katakana: "ソロソロ", romanization: "sorosoro", meaning: "soon" },
+      { hiragana: "どうしても", rareKanjis: ["如何しても"], romanization: "doushitemo", meaning: "eventually / no matter what" },
 
       // definite duration
       { kanjis: ["二週間", "２週間"], hiragana: "にしゅうかん", romanization: "nishuukan", meaning: "two weeks" },

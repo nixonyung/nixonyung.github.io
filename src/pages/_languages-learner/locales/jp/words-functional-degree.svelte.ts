@@ -8,6 +8,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
     words.push(
       // comparative
       { hiragana: "とても", rareKanjis: ["迚も"], romanization: "totemo", meaning: "very", exampleUsages: ["とても [Adj.]", "とても [Verb]"] },
+      { hiragana: "とっても", rareKanjis: ["迚も"], romanization: "tottemo", meaning: "very", exampleUsages: ["とても [Adj.]", "とても [Verb]"] },
       { hiragana: "めっちゃ", rareKanjis: ["滅茶"], romanization: "meccha", meaning: "very (casual, slang)" },
       { kanjis: ["非常に"], hiragana: "ひじょうに", romanization: "hijouni", meaning: "very (formal)" },
       { kanjis: ["大変", "大へん"], hiragana: "たいへん", romanization: "taihen", meaning: "very (formal, negative / sorry)" },

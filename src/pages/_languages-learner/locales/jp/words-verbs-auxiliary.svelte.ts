@@ -12,7 +12,7 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
       { hiragana: "だ", romanization: "da", meaning: "be / is (spoken, casual)" },
       { hiragana: "である", romanization: "dearu", meaning: "be / is (written, formal)" },
 
-      { hiragana: "たい", romanization: "tai", meaning: "wanted to", exampleUsages: ["[Verb-stem] たい", "したい"] },
+      { hiragana: "たい", romanization: "tai", meaning: "wanted to", exampleUsages: ["[Verb-stem] たい", "したい", "なりたかった (wanted to become)"] },
 
       { kanjis: ["方がいい", "方が良い", "ほうが良い"], hiragana: "ほうがいい", romanization: "hougaii (spoken/written)", meaning: "should xxx", exampleUsages: ["[Verb] 方がいい ..."] },
       { kanjis: ["方が良い", "ほうが良い", "方がよい"], hiragana: "ほうがよい", romanization: "hougayoi (slightly more written)", meaning: "should xxx", exampleUsages: ["[Verb] 方が良い ..."] },
@@ -48,7 +48,7 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
 
       // -ta
       { hiragana: "たら", romanization: "tara", meaning: "and after that", derivedMeanings: ["back when", "if so (uncertain / imaginary)"], exampleUsages: ["暇になったら (if/when free)"] },
-      { hiragana: "たり", romanization: "tari", meaning: "and meanwhile", exampleUsages: ["[Verb-た] たり、[Verb-た] たりするのが好きなんです"] },
+      { hiragana: "たり", romanization: "tari", meaning: "and meanwhile", exampleUsages: ["[Verb]、[Verb-た] たり ...", "[Verb-た] たり、[Verb-た] たりするのが好きなんです"] },
       { hiragana: "ためしがない", preferredForm: "hiragana", kanjis: ["例がない"], romanization: "tameshiganai", meaning: "never accomplished", exampleUsages: ["[Verb-ta] ためしがないですよ"] },
       { hiragana: "たことがある", romanization: "-ta koto ga aru", meaning: "has been done", exampleUsages: ["[Verb-ta] ことがある ..."] },
 

@@ -40,6 +40,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["頭痛"], hiragana: "ずつう", romanization: "zutsuu", meaning: "headache" },
       { kanjis: ["車酔い"], hiragana: "くるまよい", romanization: "kurumayoi", meaning: "car sickness" },
 
+      { kanjis: ["表現"], hiragana: "ひょうげん", romanization: "hyougen", meaning: "expression / representation" },
+
       { kanjis: ["泣き"], hiragana: "なき", romanization: "naki", meaning: "crying" },
 
       { kanjis: ["離別"], hiragana: "りべつ", romanization: "ribetsu", meaning: "separation (of relationships)" },
@@ -74,6 +76,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["我慢"], hiragana: "がまん", katakana: "ガマン", romanization: "gaman", meaning: "endurance" },
       { kanjis: ["上達"], hiragana: "じょうたつ", romanization: "joutatsu", meaning: "improvement" },
 
+      { kanjis: ["実際"], hiragana: "じっさい", romanization: "jissai", meaning: "actuality", exampleUsages: ["実際に [Verb Clause]..."] },
       { kanjis: ["真面目"], hiragana: "まじめ", katakana: "マジメ", romanization: "majime", meaning: "truthfulness" },
 
       { kanjis: ["匂い", "臭い"], hiragana: "におい", romanization: "nioi", meaning: "scent / odour" },
