@@ -72,11 +72,14 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { kanjis: ["最後"], hiragana: "さいご", romanization: "saigo", meaning: "the end" },
       { kanjis: ["最終"], hiragana: "さいしゅう", romanization: "saishuu", meaning: "the last / final", exampleUsages: ["最終回", "最終調整"] },
 
-      { hiragana: "もう", romanization: "mou", meaning: "already / not anymore / another", exampleUsages: ["もう宿題終わった", "もうありません (there is nothing left)", "もう [Noun (time)] ...", "[Noun] はもう ... (xxx is already xxx)", "もう [Verb]"] },
-      { hiragana: "すでに", preferredForm: "hiragana", kanjis: ["既に"], rareKanjis: ["已に"], romanization: "sudeni", meaning: "already" },
+      { hiragana: "もう", romanization: "mou", meaning: "already (casual)", exampleUsages: ["もう5年前", "もう宿題終わった (I have already finished my homework)", "もうありません (there is nothing left)"] },
+      { hiragana: "すでに", preferredForm: "hiragana", kanjis: ["既に"], rareKanjis: ["已に"], romanization: "sudeni", meaning: "already (formal)" },
+
+      { hiragana: "ずっと", romanization: "zutto", meaning: "the whole time", exampleUsages: ["5年前からずっと [Verb Clause]"] },
 
       { hiragana: "そろそろ", katakana: "ソロソロ", romanization: "sorosoro", meaning: "soon" },
       { hiragana: "どうしても", rareKanjis: ["如何しても"], romanization: "doushitemo", meaning: "eventually / no matter what" },
+      { hiragana: "ようやく", rareKanjis: ["漸く"], romanization: "youyaku", meaning: "finally" },
 
       // definite duration
       { kanjis: ["二週間", "２週間"], hiragana: "にしゅうかん", romanization: "nishuukan", meaning: "two weeks" },

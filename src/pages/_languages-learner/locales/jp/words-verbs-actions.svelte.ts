@@ -51,6 +51,8 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["驚く"], hiragana: "おどろく", romanization: "odoroku", verbGroup: "Godan", verbIsTransitive: false, meaning: "be surprised" },
       { kanjis: ["落ち着く", "落ちつく", "落着く"], rareKanjis: ["落ち付く"], hiragana: "おちつく", romanization: "ochitsuku", verbGroup: "Godan", verbIsTransitive: false, meaning: "calm down" },
 
+      { kanjis: ["後悔する"], hiragana: "こうかいする", romanization: "koukaisuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "regret" },
+
       // (misc.)
       { kanjis: ["生む", "産む"], hiragana: "うむ", romanization: "umu", verbGroup: "Godan", verbIsTransitive: true, meaning: "give birth / lay (eggs)" },
       { kanjis: ["生まれる", "産まれる"], hiragana: "うまれる", romanization: "umareru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "be born" },
@@ -275,6 +277,8 @@ export function appendVerbsActions(words: JapaneseWord[]) {
 
       // artistic
       { kanjis: ["歌う", "唄う", "詠う"], rareKanjis: ["唱う"], hiragana: "うたう", romanization: "utau", verbGroup: "Godan", verbIsTransitive: true, meaning: "sing" },
+      { kanjis: ["録音する"], hiragana: "ろくおんする", romanization: "rokuonsuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "record (voice)" },
+      { kanjis: ["録画する"], hiragana: "ろくがする", romanization: "rokugasuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "record (video)" },
 
       // games
       { kanjis: ["賭ける"], hiragana: "かける", romanization: "kakeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "gamble" },

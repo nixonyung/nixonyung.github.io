@@ -10,7 +10,7 @@ export function appendAdjectives(words: JapaneseWord[]) {
     adjs.push(
       { hiragana: "いい", romanization: "ii", adjGroup: "I", meaning: "good (casual)" },
       { kanjis: ["良い", "好い", "善い"], rareKanjis: ["佳い", "吉い", "宜い"], hiragana: "よい", romanization: "yoi", adjGroup: "I", meaning: "good (formal)" },
-      { hiragana: "なかなか", preferredForm: "hiragana", kanjis: ["中々", "中中"], rareKanjis: ["仲々", "仲仲", "却々", "却却"], adjGroup: "Na", romanization: "nakanaka", meaning: "quite / decently (surprisingly)" },
+      { hiragana: "なかなか", preferredForm: "hiragana", kanjis: ["中々", "中中"], rareKanjis: ["仲々", "仲仲", "却々", "却却"], adjGroup: "Na", romanization: "nakanaka", meaning: "quite / decent (surprisingly)", exampleUsages: ["なかなかです"] },
       { kanjis: ["立派"], hiragana: "りっぱ", romanization: "rippa", adjGroup: "Na", meaning: "splendid / elegant" },
       { kanjis: ["結構"], hiragana: "けっこう", romanization: "kekkou", adjGroup: "Na", meaning: "excellent (formal)", derivedMeanings: ["politely decline (fine with myself)"] },
       { kanjis: ["素晴らしい"], hiragana: "すばらしい", romanization: "subarashii", adjGroup: "I", meaning: "magnificent" },

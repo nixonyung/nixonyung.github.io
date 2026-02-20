@@ -77,6 +77,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["上達"], hiragana: "じょうたつ", romanization: "joutatsu", meaning: "improvement" },
 
       { kanjis: ["実際"], hiragana: "じっさい", romanization: "jissai", meaning: "actuality", exampleUsages: ["実際に [Verb Clause]..."] },
+      { kanjis: ["絶対"], hiragana: "ぜったい", romanization: "zettai", meaning: "absoluteness", exampleUsages: ["絶対に [Verb Clause]..."] },
       { kanjis: ["真面目"], hiragana: "まじめ", katakana: "マジメ", romanization: "majime", meaning: "truthfulness" },
 
       { kanjis: ["匂い", "臭い"], hiragana: "におい", romanization: "nioi", meaning: "scent / odour" },

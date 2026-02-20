@@ -36,6 +36,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { kanjis: ["何も"], hiragana: "なんも", romanization: "nanmo", meaning: "not at all (spoken)" },
       { hiragana: "あまり", romanization: "amari", meaning: "not much" },
       { kanjis: ["丁度"], hiragana: "ちょうど", romanization: "choudo", meaning: "exactly" },
+      { hiragana: "くらい", romanization: "kurai", meaning: "around", exampleUsages: ["5年前くらいから"] },
       { hiragana: "だけ", preferredForm: "hiragana", kanjis: ["丈"], romanization: "dake", meaning: "only (in its entirety)" },
       { hiragana: "いっぱい", romanization: "ippai", meaning: "fully / as much as possible", exampleUsages: ["いっぱいにする (make into full)"] },
       { kanjis: ["全部"], hiragana: "ぜんぶ", romanization: "zenbu", meaning: "all (concrete items)" },

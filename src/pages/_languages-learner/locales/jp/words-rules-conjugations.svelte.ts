@@ -1,6 +1,8 @@
 import type { JapaneseWord } from "../../types";
 import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
 
+// TODO: reverse Q&A
+
 export function appendRulesConjugations(words: JapaneseWord[]) {
   if (flashcardSettings.words.grammarRules.conjugations.stemForm.value) {
     words.push(

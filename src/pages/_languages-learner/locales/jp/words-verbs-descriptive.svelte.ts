@@ -44,7 +44,7 @@ export function appendVerbsDescriptive(words: JapaneseWord[]) {
   if (flashcardSettings.words.verbs.descriptive.processes.value) {
     verbs.push(
       { hiragana: "する", rareKanjis: ["為る"], romanization: "suru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "do / carry out", derivedMeanings: ["choose", "pickpocket"], exampleUsages: ["せールをする (on sale)", "ゲームをする (play a game)", "これにします (choose this)", "[Noun] にする (make into xxx)", "日本語学習をもっと楽しいものにしたい"] },
-      { hiragana: "やる", rareKanjis: ["遣る"], romanization: "yaru", verbGroup: "Godan", verbIsTransitive: true, meaning: "undertake" },
+      { hiragana: "やる", rareKanjis: ["遣る"], romanization: "yaru", verbGroup: "Godan", verbIsTransitive: true, meaning: "undertake / initiate (casual)", exampleUsages: ["YouTubeをやったい"] },
       { kanjis: ["取り掛かる", "取りかかる"], hiragana: "とりかかる", romanization: "torikakaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "start" },
       { kanjis: ["起こす", "起す"], hiragana: "おこす", romanization: "okosu", verbGroup: "Godan", verbIsTransitive: true, meaning: "cause / start", derivedMeanings: ["wake someone up", "raise", "set up", "vitalize"] },
       { kanjis: ["起こる", "起る"], hiragana: "おこる", romanization: "okoru", verbGroup: "Godan", verbIsTransitive: false, meaning: "occur" },
