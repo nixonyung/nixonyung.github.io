@@ -15,10 +15,22 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
 
       { kanjis: ["今"], hiragana: "いま", romanization: "ima", meaning: "now" },
 
+      { kanjis: ["暁"], hiragana: "あけがた", romanization: "akegata", meaning: "dawn" },
+      { kanjis: ["昨暁"], hiragana: "さくぎょう", romanization: "sakugyou", meaning: "yesterday dawn" },
+      { kanjis: ["今暁"], hiragana: "こんぎょう", romanization: "kongyou", meaning: "today's dawn" },
+
+      { kanjis: ["夜明け"], hiragana: "よあけ", romanization: "yoake", meaning: "daybreak", exampleUsages: ["明日の夜明け "] },
+      { kanjis: ["明け方"], hiragana: "あかつき", romanization: "akatsuki", meaning: "dawn / sunrising", exampleUsages: ["明日の明け方 "] },
+
+      { kanjis: ["昨朝"], hiragana: "さくちょう", romanization: "sakuchou", meaning: "yesterday morning" },
       { kanjis: ["今朝"], hiragana: "けさ", romanization: "kesa", meaning: "this morning" },
+      { kanjis: ["明朝"], hiragana: "みょうちょう", romanization: "myouchou", meaning: "tomorrow morning" },
+
       { kanjis: ["今晩"], hiragana: "こんばん", romanization: "konban", meaning: "tonight" },
-      { kanjis: ["今夜"], hiragana: "こんや", romanization: "konya", meaning: "tonight (the entire night, written)" },
+
       { kanjis: ["昨夜"], hiragana: "ゆうべ", romanization: "yuube", meaning: "last night (the entire night, written)" },
+      { kanjis: ["今夜"], hiragana: "こんや", romanization: "konya", meaning: "tonight (the entire night, written)" },
+      { kanjis: ["明夜"], hiragana: "みょうや", romanization: "myouya", meaning: "tomorrow night (the entire night, written)" },
 
       { kanjis: ["日"], hiragana: "ひ", romanization: "hi", meaning: "day", exampleUsages: ["この日 (this day, emphasizing importance)"] },
       { kanjis: ["一昨日"], hiragana: "おととい", romanization: "ototoi", meaning: "the day before yesterday" },

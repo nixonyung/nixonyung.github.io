@@ -60,6 +60,7 @@ export function appendAdjectives(words: JapaneseWord[]) {
       // tastes
       { kanjis: ["甘い"], hiragana: "あまい", romanization: "amai", adjGroup: "I", meaning: "sweet (taste)", derivedMeanings: ["sweet (music)"] },
       { kanjis: ["辛い"], hiragana: "からい", romanization: "karai", adjGroup: "I", meaning: "spicy" },
+      { kanjis: ["塩辛い"], rareKanjis: ["鹹い"], hiragana: "しおからい", romanization: "shiokarai", adjGroup: "I", meaning: "salty" },
       { kanjis: ["美味しい"], hiragana: "おいしい", romanization: "oishii", adjGroup: "I", meaning: "delicious" },
       { kanjis: ["美味い", "旨い"], hiragana: "うまい", romanization: "umai", adjGroup: "I", meaning: "delicious (masculine)" },
 
@@ -164,7 +165,7 @@ export function appendAdjectives(words: JapaneseWord[]) {
 
       { kanjis: ["暇"], rareKanjis: ["閑"], hiragana: "ひま", romanization: "hima", adjGroup: "Na", meaning: "free / unoccupied" },
       { kanjis: ["暇がない", "暇が無い"], hiragana: "ひまがない", romanization: "himaganai", adjGroup: "I", meaning: "busy" },
-      { kanjis: ["忙しい"], hiragana: "いそがしい", romanization: "isogashii", adjGroup: "I", meaning: "busy" },
+      { kanjis: ["忙しい"], hiragana: "いそがしい", romanization: "isogashii", adjGroup: "I", meaning: "busy / occupied" },
       { kanjis: ["賑やか"], hiragana: "にぎやか", romanization: "nigiyaka", adjGroup: "Na", meaning: "bustling" },
       { kanjis: ["騒がしい"], hiragana: "さわがしい", romanization: "sawagashii", adjGroup: "I", meaning: "noisy / boisterous" },
       { kanjis: ["有名"], hiragana: "ゆうめい", romanization: "yuumei", adjGroup: "Na", meaning: "famous / well-known" },

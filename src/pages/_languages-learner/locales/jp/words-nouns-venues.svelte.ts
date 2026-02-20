@@ -21,7 +21,11 @@ export function appendNounsVenues(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.nouns.venues.facilities.value) {
     words.push(
-      { kanjis: ["部屋"], hiragana: "へや", romanization: "heya", meaning: "room" },
+      { hiragana: "うち", preferredForm: "hiragana", kanjis: ["家"], romanization: "uchi", meaning: "home / my home" },
+      { kanjis: ["家"], hiragana: "いえ", romanization: "ie", meaning: "home / house" },
+      { katakana: "アパート", romanization: "apaato", meaning: "apartment" },
+
+      { kanjis: ["部屋"], hiragana: "へや", romanization: "heya", meaning: "room", derivedMeanings: ["apartment"] },
       { kanjis: ["居室"], hiragana: "きょしつ", romanization: "kyoshitsu", meaning: "living room" },
       { katakana: "ベッド", romanization: "beddo", meaning: "bed" },
       { kanjis: ["台所"], hiragana: "だいどころ", romanization: "daidokoro", meaning: "kitchen" },
@@ -29,10 +33,7 @@ export function appendNounsVenues(words: JapaneseWord[]) {
       { kanjis: ["お手洗い", "御手洗"], hiragana: "おてあらい", romanization: "otearai", meaning: "toilet" },
       { katakana: "トイレ", romanization: "toire", meaning: "toilet" },
       { katakana: "トイレット", romanization: "toiretto", meaning: "toilet" },
-
-      { hiragana: "うち", preferredForm: "hiragana", kanjis: ["家"], romanization: "uchi", meaning: "home / my home" },
-      { kanjis: ["家"], hiragana: "いえ", romanization: "ie", meaning: "home / house" },
-      { katakana: "アパート", romanization: "apaato", meaning: "apartment" },
+      { katakana: "シャワー", romanization: "shawaa", meaning: "shower" },
 
       { kanjis: ["戸"], hiragana: "と", romanization: "to", meaning: "door (sliding) / shutter" },
       { katakana: "ドア", romanization: "doa", meaning: "door" },
@@ -44,12 +45,16 @@ export function appendNounsVenues(words: JapaneseWord[]) {
 
       { kanjis: ["道", "途", "路", "径"], hiragana: "みち", romanization: "michi", meaning: "road / path" },
       { kanjis: ["歩道"], hiragana: "ほどう", romanization: "hodou", meaning: "walkway" },
+      { kanjis: ["十字路"], hiragana: "じゅうじろ", romanization: "juujiro", meaning: "crossroad" },
+      { kanjis: ["交差路"], rareKanjis: ["交叉路"], hiragana: "こうさろ", romanization: "kousaro", meaning: "intersecting roads" },
+      { kanjis: ["交差点"], rareKanjis: ["交叉点"], hiragana: "こうさてん", romanization: "kousaten", meaning: "crossing (of a crossroad)" },
       { kanjis: ["階段"], hiragana: "かいだん", romanization: "kaidan", meaning: "stairs" },
 
       { kanjis: ["公園"], hiragana: "こうえん", romanization: "kouen", meaning: "park" },
       { kanjis: ["庭"], hiragana: "にわ", romanization: "niwa", meaning: "garden" },
       { kanjis: ["庭園"], hiragana: "ていえん", romanization: "teien", meaning: "garden / park" },
       { kanjis: ["橋"], hiragana: "はし", romanization: "hashi", meaning: "bridge" },
+      { katakana: "ブリッジ", romanization: "burijji", meaning: "bridge" },
       { kanjis: ["池"], hiragana: "いけ", romanization: "ike", meaning: "pond" },
       { katakana: "プール", romanization: "puuru", meaning: "(swimming) pool" },
       { hiragana: "ほとり", preferredForm: "hiragana", kanjis: ["辺", "畔"], romanization: "hotori", meaning: "shore" },

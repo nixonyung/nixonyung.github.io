@@ -17,6 +17,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       //
       { kanjis: ["体", "身体"], rareKanjis: ["躯", "躰"], hiragana: "からだ", romanization: "karada", meaning: "body" },
       { kanjis: ["頭"], hiragana: "あたま", romanization: "atama", meaning: "head" },
+      { kanjis: ["顔", "貌"], hiragana: "かお", romanization: "kao", meaning: "face", derivedMeanings: ["expression"] },
       { kanjis: ["目", "眼"], hiragana: "め", romanization: "me", meaning: "eye" },
       { kanjis: ["耳"], hiragana: "みみ", romanization: "mimi", meaning: "ear" },
       { kanjis: ["口"], hiragana: "くち", romanization: "kuchi", meaning: "mouth" },
@@ -56,10 +57,13 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["台風", "颱風"], hiragana: "たいふう", romanization: "taifuu", meaning: "typhoon" },
 
       { kanjis: ["山"], hiragana: "やま", romanization: "yama", meaning: "mountain / hill" },
+      { kanjis: ["岩", "巌", "磐"], hiragana: "いわ", romanization: "iwa", meaning: "rock / boulder" },
+      { kanjis: ["石"], hiragana: "いし", romanization: "ishi", meaning: "rock / stone" },
+      { kanjis: ["砂利"], hiragana: "じゃり", romanization: "jari", meaning: "gravel / pebbles" },
+
       { kanjis: ["木", "樹"], hiragana: "き", romanization: "ki", meaning: "tree", derivedMeanings: ["wood"] },
       { kanjis: ["花", "華"], hiragana: "はな", romanization: "hana", meaning: "flower" },
       { kanjis: ["種"], hiragana: "たね", romanization: "tane", meaning: "seed" },
-      { kanjis: ["砂利"], hiragana: "じゃり", romanization: "jari", meaning: "gravel / pebbles" },
 
       { kanjis: ["色"], hiragana: "いろ", romanization: "iro", meaning: "color", derivedMeanings: ["facial expression", "personality"] },
       { kanjis: ["白"], hiragana: "しろ", romanization: "shiro", meaning: "white" },
@@ -111,7 +115,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["果物"], hiragana: "くだもの", romanization: "kudamono", meaning: "fruit" },
 
       { kanjis: ["麺麭", "麪包", "麵麭"], hiragana: "めんぽう", romanization: "menpou", meaning: "bread" },
-      { katakana: "パン", romanization: "pan", meaning: "bread (bun)" },
+      { katakana: "パン", romanization: "pan", meaning: "bun / bread" },
 
       { kanjis: ["寿司", "鮨"], rareKanjis: ["鮓"], hiragana: "すし", romanization: "sushi", meaning: "sushi" },
       { katakana: "カレー", romanization: "karee", meaning: "curry" },
@@ -167,16 +171,19 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { katakana: "セーター", romanization: "seetaa", meaning: "sweater" },
       { katakana: "コート", romanization: "kooto", meaning: "coat" },
 
-      { katakana: "ズボン", rareKanjis: ["洋袴", "段袋"], romanization: "zubon", meaning: "trousers / pants" },
-      // TODO: pants, trousers
+      { katakana: "ズボン", rareKanjis: ["洋袴", "段袋"], romanization: "zubon", meaning: "trousers / pants", exampleUsages: ["長ズボン"] },
+      { katakana: "パンツ", romanization: "pantsu", meaning: "underpants" },
+      { katakana: "トラウザーズ", romanization: "torauzaazu", meaning: "trousers" },
       { katakana: "スカート", romanization: "sukaato", meaning: "skirt" },
+
       { kanjis: ["靴"], rareKanjis: ["沓", "履", "鞋"], hiragana: "くつ", romanization: "kutsu", meaning: "shoes" },
       { katakana: "スリッパ", romanization: "surippa", meaning: "slippers" },
       { kanjis: ["靴下"], rareKanjis: ["沓下"], hiragana: "くつした", romanization: "kutsushita", meaning: "socks" },
 
       // accessories
       { kanjis: ["帽子"], hiragana: "ぼうし", romanization: "boushi", meaning: "hat" },
-      { kanjis: ["眼鏡"], hiragana: "メガネ", romanization: "megane", meaning: "glasses" },
+      { katakana: "メガネ", preferredForm: "katakana", kanjis: ["眼鏡"], hiragana: "めがね", romanization: "megane", meaning: "glasses" },
+      { kanjis: ["眼鏡"], hiragana: "がんきょう", romanization: "gankyou", meaning: "glasses (literarily)" },
       { katakana: "ネクタイ", romanization: "nekutai", meaning: "necktie" },
       { katakana: "ハンカチ", romanization: "hankachi", meaning: "handkerchief" },
       { katakana: "ボタン", romanization: "botan", meaning: "button (clothing / machinery)" },
@@ -195,20 +202,23 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["用具"], hiragana: "ようぐ", romanization: "yougu", meaning: "tool" },
       { kanjis: ["工具"], hiragana: "こうぐ", romanization: "kougu", meaning: "tool" },
 
+      { kanjis: ["荷物"], hiragana: "にもつ", romanization: "nimotsu", meaning: "luggage" },
+
       { kanjis: ["機械", "器械"], hiragana: "きかい", romanization: "kikai", meaning: "machine / machinery" },
 
+      // money / currencies
       { kanjis: ["金"], hiragana: "かね", romanization: "kane", meaning: "money" },
       { kanjis: ["お金", "御金"], hiragana: "おかね", romanization: "okane", meaning: "money (polite)" },
-
-      { kanjis: ["荷物"], hiragana: "にもつ", romanization: "nimotsu", meaning: "luggage" },
 
       { kanjis: ["石鹸", "石けん"], hiragana: "せっけん", romanization: "sekken", meaning: "soap" },
       { katakana: "トイレットペーパー", romanization: "toirettopeepaa", meaning: "toilet paper" },
 
       { kanjis: ["薬"], hiragana: "くすり", romanization: "kusuri", meaning: "medicine" },
 
+      // engineering tools
       { katakana: "テープ", romanization: "teepu", meaning: "tape" },
 
+      // utensils
       { kanjis: ["箸"], hiragana: "はし", romanization: "hashi", meaning: "chopsticks" },
       { katakana: "スプーン", romanization: "supuun", meaning: "spoon" },
       { katakana: "フォーク", romanization: "fooku", meaning: "fork" },
@@ -216,9 +226,13 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { katakana: "カップ", romanization: "kappu", meaning: "cup" },
       { katakana: "コップ", rareKanjis: ["洋杯"], romanization: "koppu", meaning: "wine glass" },
 
-      { kanjis: ["椅子"], hiragana: "いす", romanization: "isu", meaning: "chair" },
+      // furniture
+      { kanjis: ["家具"], hiragana: "かぐ", romanization: "kagu", meaning: "furniture" },
       { kanjis: ["机"], hiragana: "つくえ", romanization: "tsukue", meaning: "desk" },
       { katakana: "テーブル", romanization: "teeburu", meaning: "table" },
+      { kanjis: ["椅子"], hiragana: "いす", romanization: "isu", meaning: "chair" },
+      { katakana: "ソファ", romanization: "sofaa", meaning: "sofa" },
+      { kanjis: ["本棚"], hiragana: "ほんだな", romanization: "hondana", meaning: "bookshelf" },
 
       // gadgets
       { kanjis: ["財布"], hiragana: "さいふ", romanization: "saifu", meaning: "wallet" },
@@ -239,7 +253,6 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["皿"], rareKanjis: ["盤"], hiragana: "さら", romanization: "sara", meaning: "dish / plate" },
       { kanjis: ["灰皿"], hiragana: "はいざら", romanization: "haizara", meaning: "ashtray" },
       { kanjis: ["棚"], hiragana: "たな", romanization: "tana", meaning: "shelf / rack" },
-      { kanjis: ["本棚"], hiragana: "ほんだな", romanization: "hondana", meaning: "bookshelf" },
       { katakana: "ポスト", romanization: "posuto", meaning: "postbox (post)" },
 
       // paper-based
@@ -257,7 +270,6 @@ export function appendNounsObjects(words: JapaneseWord[]) {
 
       // books
       { kanjis: ["本"], hiragana: "ほん", romanization: "hon", meaning: "book" },
-      { katakana: "ページ", preferredForm: "katakana", kanjis: ["頁"], romanization: "peeji", meaning: "page" },
       { kanjis: ["手帳", "手帖"], hiragana: "てちょう", romanization: "techou", meaning: "notebook" },
       { katakana: "ノート", romanization: "nooto", meaning: "notebook", derivedMeanings: ["(verb) take note", "musical note", "notebook (computer)"] },
       { kanjis: ["メモ帳"], hiragana: "メモちょう", romanization: "memochou", meaning: "memo book" },
@@ -271,7 +283,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["文字典"], hiragana: "もじてん", romanization: "mojiten", meaning: "Kanji dictionary" },
       { kanjis: ["雑誌"], hiragana: "ざっし", romanization: "zasshi", meaning: "magazine" },
 
-      // pen
+      // pens
       { kanjis: ["万年筆"], hiragana: "まんねんひつ", romanization: "mannenhitsu", meaning: "fountain pen" },
       { katakana: "ペン", romanization: "pen", meaning: "pen" },
       { katakana: "ボールペン", romanization: "boorupen", meaning: "ballpoint pen" },
@@ -288,6 +300,9 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { katakana: "キャメラ", romanization: "kyamera", meaning: "camera" },
       { katakana: "ロボット", romanization: "robotto", meaning: "robot" },
       { katakana: "ラジオ", romanization: "rajio", meaning: "radio" },
+      { kanjis: ["録音機"], hiragana: "ろくおんき", romanization: "rokuonki", meaning: "tape recorder" },
+      { katakana: "テープレコーダー", romanization: "teepurekoodaa", meaning: "tape recorder" },
+      { katakana: "カセット", romanization: "kasetto", meaning: "cassette" },
       { katakana: "テレビ", romanization: "terebi", meaning: "television" },
       { katakana: "ストーブ", romanization: "sutoobu", meaning: "stove" },
       { kanjis: ["冷蔵庫"], hiragana: "れいぞうこ", romanization: "reizouko", meaning: "refrigerator" },

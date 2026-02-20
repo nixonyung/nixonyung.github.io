@@ -9,13 +9,13 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
       { kanjis: ["両親"], hiragana: "りょうしん", romanization: "ryoushin", meaning: "parents" },
       { kanjis: ["親"], hiragana: "おや", romanization: "oya", meaning: "parents" },
 
-      { kanjis: ["父さん"], hiragana: "とうさん", romanization: "tousan", meaning: "father" },
+      { kanjis: ["お父さん"], hiragana: "おとうさん", romanization: "otousan", meaning: "father" },
       { kanjis: ["父"], hiragana: "ちち", romanization: "chichi", meaning: "my father" },
       { kanjis: ["父親"], hiragana: "ちちおや", romanization: "chichioya", meaning: "my father (formal)" },
       { kanjis: ["老爺"], hiragana: "おやじ", romanization: "oyaji", meaning: "father (very casual, used by old-fashioned men)", derivedMeanings: ["old man (very casual)"] },
       { katakana: "パパ", romanization: "papa", meaning: "father (casual)" },
 
-      { kanjis: ["母さん"], hiragana: "かあさん", romanization: "kaasan", meaning: "mother" },
+      { kanjis: ["お母さん"], hiragana: "おかあさん", romanization: "okaasan", meaning: "mother" },
       { kanjis: ["母"], hiragana: "はは", romanization: "haha", meaning: "my mother" },
       { kanjis: ["母親"], hiragana: "ははおや", romanization: "hahaoya", meaning: "my mother (formal)" },
       { kanjis: ["お袋"], hiragana: "おふくろ", romanization: "ofukuro", meaning: "mother (very casual, used by old-fashioned men)" },
@@ -29,13 +29,13 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
       { kanjis: ["兄弟"], hiragana: "きょうだい", romanization: "kyoudai", meaning: "brothers" },
       { kanjis: ["姉妹"], hiragana: "しまい", romanization: "shimai", meaning: "sisters" },
 
-      { kanjis: ["兄さん"], hiragana: "にいさん", romanization: "niisan", meaning: "elder brother" },
+      { kanjis: ["お兄さん"], hiragana: "おにいさん", romanization: "oniisan", meaning: "elder brother" },
       { kanjis: ["兄"], hiragana: "あに", romanization: "ani", meaning: "my elder brother" },
 
-      { kanjis: ["姉さん"], hiragana: "ねえさん", romanization: "neesan", meaning: "elder sister" },
+      { kanjis: ["お姉さん"], hiragana: "おねえさん", romanization: "oneesan", meaning: "elder sister" },
       { kanjis: ["姉"], hiragana: "あね", romanization: "ane", meaning: "my elder sister" },
 
-      { kanjis: ["弟さん"], hiragana: "おとうとさん", romanization: "otoutosan", meaning: "younger brother" },
+      { kanjis: ["お弟さん"], hiragana: "おとうとさん", romanization: "otoutosan", meaning: "younger brother" },
       { kanjis: ["弟"], hiragana: "おとうと", romanization: "otouto", meaning: "my younger brother" },
 
       { kanjis: ["妹さん"], hiragana: "いもうとさん", romanization: "imoutosan", meaning: "younger sister" },
@@ -46,8 +46,8 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.people.byRelationships.immediateFamily.spouses.value) {
     words.push(
       //
+      { kanjis: ["ご主人"], hiragana: "ごしゅじん", romanization: "go shujin", meaning: "master / owner", derivedMeanings: ["husband"] },
       { kanjis: ["良人"], hiragana: "りょうじん", romanization: "ryoujin", meaning: "husband" },
-      { kanjis: ["主人"], hiragana: "しゅじん", romanization: "shujin", meaning: "master / owner", derivedMeanings: ["husband"] },
       { kanjis: ["旦那", "檀那"], hiragana: "だんな", romanization: "danna", meaning: "master / owner", derivedMeanings: ["husband (casual)"] },
       { kanjis: ["夫", "良人"], hiragana: "おっと", romanization: "otto", meaning: "my husband" },
 
@@ -78,13 +78,13 @@ export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
       { kanjis: ["祖父母"], hiragana: "そふぼ", romanization: "sofubo", meaning: "grandparents" },
       { hiragana: "じじばば", preferredForm: "hiragana", kanjis: ["祖父祖母", "爺婆"], katakana: "ジジババ", romanization: "jijibaba", meaning: "old people (casual)" },
 
-      { kanjis: ["爺さん"], rareKanjis: ["祖父さん"], hiragana: "じいさん", romanization: "jiisan", meaning: "grandfather" },
+      { kanjis: ["お爺さん"], rareKanjis: ["祖父さん"], hiragana: "おじいさん", romanization: "ojiisan", meaning: "grandfather" },
       { kanjis: ["お爺ちゃま", "お祖父ちゃま"], hiragana: "おじいちゃま", romanization: "ojiichama", meaning: "grandfather (used by child)" },
       { kanjis: ["祖父"], hiragana: "そふ", romanization: "sofu", meaning: "my grandfather (formal)" },
       { kanjis: ["祖父"], hiragana: "じじ", romanization: "jiji", meaning: "my grandfather (very casual)" },
       { katakana: "グランパ", romanization: "gulanpa", meaning: "grandpa" },
 
-      { kanjis: ["婆ちゃん"], rareKanjis: ["祖母ちゃん"], hiragana: "ばあちゃん", romanization: "baachan", meaning: "grandmother" },
+      { kanjis: ["お婆ちゃん"], rareKanjis: ["祖母ちゃん"], hiragana: "おばあちゃん", romanization: "obaachan", meaning: "grandmother" },
       { hiragana: "そぼ", romanization: "sobo", meaning: "my grandmother" },
       { hiragana: "ばば", romanization: "baba", meaning: "my grandmother (very casual)" },
       { katakana: "グランマ", romanization: "gulanma", meaning: "grandma" },

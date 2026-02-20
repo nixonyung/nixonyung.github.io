@@ -13,7 +13,6 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["見晴らし"], hiragana: "みはらし", romanization: "miharashi", meaning: "view" },
 
       { kanjis: ["時間"], hiragana: "じかん", romanization: "jikan", meaning: "time" },
-      { kanjis: ["二十歳"], hiragana: "はたち", romanization: "hatachi", meaning: "20 years old" },
       { kanjis: ["年中", "年じゅう"], hiragana: "ねんじゅう", romanization: "nenjuu", meaning: "throughout the year" },
 
       { kanjis: ["感じ"], hiragana: "かんじ", romanization: "kanji", meaning: "feeling / sense / impression" },
@@ -164,10 +163,12 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { katakana: "せール", romanization: "seeru", meaning: "sale" },
       { katakana: "プレゼント", romanization: "purezento", meaning: "present" },
 
+      { kanjis: ["団体"], hiragana: "だんたい", romanization: "dantai", meaning: "group / team / organization" },
       { katakana: "チーム", romanization: "chiimu", meaning: "team" },
       { katakana: "チームワーク", romanization: "chiimuwaaku", meaning: "teamwork" },
       { katakana: "グループ", romanization: "guruupu", meaning: "group" },
       { katakana: "メンバー", romanization: "menbaa", meaning: "member" },
+
       { kanjis: ["役割"], hiragana: "やくわり", romanization: "yakuwari", meaning: "role / duty" },
       { kanjis: ["機能"], hiragana: "きのう", romanization: "kinou", meaning: "function" },
 
@@ -359,6 +360,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["掃除"], hiragana: "そうじ", romanization: "souji", meaning: "cleaning / sweeping", exampleUsages: ["大掃除"] },
 
       { kanjis: ["買い物", "買物"], hiragana: "かいもの", romanization: "kaimono", meaning: "shopping" },
+      { katakana: "パーティー", romanization: "paatii", meaning: "party" },
 
       { kanjis: ["撮影"], hiragana: "さつえい", romanization: "satsuei", meaning: "photography", derivedMeanings: ["filming"] },
       { kanjis: ["配信"], hiragana: "はいしん", romanization: "haishin", meaning: "broadcast / streaming", derivedMeanings: ["filming"] },

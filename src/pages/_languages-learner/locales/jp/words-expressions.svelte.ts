@@ -41,11 +41,13 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "おはこんばんちは", romanization: "ohakonbanchiwa", meaning: "hello (spoken, casual)" },
       { hiragana: "もしもし", romanization: "moshimoshi", meaning: "hello (on a phone)" },
 
+      { hiragana: "はじめまして", preferredForm: "hiragana", kanjis: ["初めまして", "始めまして"], romanization: "hajimemashite", meaning: "nice to meet you (for the first time)" },
       { hiragana: "ようこそ", romanization: "youkoso", meaning: "welcome" },
       { kanjis: ["お帰りなさい"], hiragana: "おかえりなさい", romanization: "okaerinasai", meaning: "welcome home" },
       { hiragana: "いらっしゃいませ", romanization: "irasshaimase", meaning: "welcome (to a shop / restaurant)" },
+      { hiragana: "どうぞよろしく", romanization: "douzo yoroshiku", meaning: "please treat me well (to new colleagues)" },
 
-      { hiragana: "はじめまして", preferredForm: "hiragana", kanjis: ["初めまして", "始めまして"], romanization: "hajimemashite", meaning: "nice to meet you (for the first time)" },
+      { kanjis: ["お元気ですか？"], hiragana: "おげんきですか？", romanization: "ogenkidesuka", meaning: "how are you doing?" },
 
       { hiragana: "じゃあね", romanization: "jaane", meaning: "bye (casual)" },
       { hiragana: "またね", preferredForm: "hiragana", kanjis: ["又ね"], romanization: "matane", meaning: "see you later (casual)" },
@@ -61,12 +63,20 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "ありがとう", preferredForm: "hiragana", kanjis: ["有難う", "有り難う"], romanization: "arigatou", meaning: "thank you" },
       { hiragana: "ありがとうございます", preferredForm: "hiragana", kanjis: ["有難うございます", "有り難うございます", "有難う御座います", "ありがとう御座います", "有り難う御座います"], romanization: "arigatougozaimasu", meaning: "thank you very much (formal)", exampleUsages: ["ありがとうございました"] },
       { hiragana: "おかげさま", preferredForm: "hiragana", kanjis: ["お陰様", "お蔭様", "おかげ様", "お陰さま"], romanization: "okagesama", meaning: "thanks to you" },
+
       { kanjis: ["お疲れ様です"], hiragana: "おつかれさまです", romanization: "otsukaresama desu", meaning: "good work! / you are working hard!", exampleUsages: ["お疲れ様でした"] },
       { kanjis: ["ご苦労様", "ご苦労さま", "御苦労様", "御苦労さま"], hiragana: "ごくろうさま", romanization: "gokurousama", meaning: "that's great work! (to lower-status)" },
-      { kanjis: ["見てくれて、ありがとう"], hiragana: "みてくれて、ありがとう", romanization: "mite kurete, arigatou", meaning: "thanks for watching" },
-      { hiragana: "ごちそうさまでした", preferredForm: "hiragana", kanjis: ["ご馳走様でした", "ご馳走さまでした", "御馳走様でした"], romanization: "gochisousamadeshita", meaning: "thank you for the meal" },
+      { hiragana: "こちらこそ", romanization: "kochirakoso", meaning: "it is I who should say so" },
+      { hiragana: "どういたしまして", preferredForm: "hiragana", kanjis: ["どう致しまして"], romanization: "douitashimashite", meaning: "you are welcome" },
 
-      { hiragana: "すみません", romanization: "sumimasen", meaning: "sorry", derivedMeanings: ["excuse me"], exampleUsages: ["あの、すみません。"] },
+      { kanjis: ["見てくれて、ありがとう"], hiragana: "みてくれて、ありがとう", romanization: "mite kurete, arigatou", meaning: "thanks for watching" },
+
+      { hiragana: "いただきます", preferredForm: "hiragana", kanjis: ["頂きます"], romanization: "itadakimasu", meaning: "thank you for the meal (before the meal)" },
+      { hiragana: "ごちそうさまでした", preferredForm: "hiragana", kanjis: ["ご馳走様でした", "ご馳走さまでした", "御馳走様でした"], romanization: "gochisousamadeshita", meaning: "thank you for the meal (after the meal)" },
+
+      { hiragana: "すみません", romanization: "sumimasen", meaning: "sorry / excuse me", exampleUsages: ["あの、すみません。"] },
+      { hiragana: "ごめん", preferredForm: "hiragana", kanjis: ["御免", "ご免"], romanization: "gomen", meaning: "sorry / excuse me (casual)" },
+      { hiragana: "ごめんなさい", preferredForm: "hiragana", kanjis: ["御免なさい", "ご免なさい"], romanization: "gomennasai", meaning: "sorry / excuse me" },
       { kanjis: ["申し訳ございません"], hiragana: "もうしわけございません", romanization: "moushiwakegozaimasen", meaning: "sorry (very polite)" },
       { kanjis: ["失礼します"], hiragana: "しつれいします", romanization: "shitsureishimasu", meaning: "excuse me / pardon me" },
     );
@@ -137,7 +147,7 @@ export function appendExpressions(words: JapaneseWord[]) {
       //
       { hiragana: "ください", preferredForm: "hiragana", kanjis: ["下さい"], romanization: "kudasai", meaning: "please give me (polite)", exampleUsages: ["お [Noun] をください。", "[Noun] を {(counter)} ください。"] },
       { kanjis: ["お願いします"], hiragana: "おねがいします", romanization: "onegaishimasu", meaning: "please! (very polite)" },
-
+      { hiragana: "どうぞ", romanization: "douzo", meaning: "please", exampleUsages: ["どうぞ (please go ahead)"] },
       { kanjis: ["是非"], hiragana: "ぜひ", romanization: "zehi", meaning: "please by all means (polite)", exampleUsages: ["ぜひ、(request) たら嬉しいです"] },
 
       { kanjis: ["急いで"], hiragana: "いそいで", romanization: "isoide", meaning: "hurry up!" },
@@ -149,7 +159,6 @@ export function appendExpressions(words: JapaneseWord[]) {
     words.push(
       //
       { hiragana: "さあ", romanization: "saa", meaning: "come on (casual)" },
-      { hiragana: "どうぞ", romanization: "douzo", meaning: "please go ahead (polite)" },
 
       { hiragana: "どれにする？", romanization: "dore ni suru", meaning: "Which one are you going for?" },
       { hiragana: "何ができますか？", romanization: "naniga dekimasuka", meaning: "What can I do?" },

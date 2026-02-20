@@ -83,6 +83,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
 
       // communicative
       { kanjis: ["言う", "云う", "謂う"], hiragana: "いう", romanization: "iu", verbGroup: "Godan", verbIsTransitive: true, meaning: "say / utter" },
+      { kanjis: ["申す"], hiragana: "もうす", romanization: "mousu", verbGroup: "Godan", verbIsTransitive: true, meaning: "say (humbly)" },
       { kanjis: ["話す"], rareKanjis: ["咄す"], hiragana: "はなす", romanization: "hanasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "talk / converse" },
       { kanjis: ["謝る"], hiragana: "あやまる", romanization: "ayamaru", verbGroup: "Godan", verbIsTransitive: true, meaning: "apologize", derivedMeanings: ["refuse"] },
       { hiragana: "しゃべる", kanjis: ["喋る"], romanization: "shaberu", verbGroup: "Godan", verbIsTransitive: true, meaning: "chatter (casual)" },

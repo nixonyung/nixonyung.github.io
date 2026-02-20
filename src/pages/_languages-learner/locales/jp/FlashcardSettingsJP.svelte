@@ -232,6 +232,9 @@
   const allAdjsDisabled = $derived(!settingsSome(flashcardSettings.words.adjectives, true));
 </script>
 
+<!-- TODO: JLPT Sensei -->
+<!-- TODO: books -->
+<!-- TODO: GPT-OSS -->
 <ReferencesList
   references={{
     Dictionaries: {
