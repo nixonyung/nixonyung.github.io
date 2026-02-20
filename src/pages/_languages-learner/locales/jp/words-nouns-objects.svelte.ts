@@ -189,6 +189,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { katakana: "ボタン", romanization: "botan", meaning: "button (clothing / machinery)" },
       { katakana: "ポケット", romanization: "poketto", meaning: "pocket" },
       { kanjis: ["香水"], hiragana: "こうすい", romanization: "kousui", meaning: "perfume" },
+      { katakana: "ウィッグ", romanization: "wiggu", meaning: "wig" },
 
       // clothing styles
       { kanjis: ["和服"], hiragana: "わふく", romanization: "wafuku", meaning: "Japanese-style clothes" },

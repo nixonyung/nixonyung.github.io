@@ -35,7 +35,7 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { kanjis: ["好き"], hiragana: "すき", romanization: "suki", adjGroup: "Na", meaning: "liked" },
       { hiragana: "ほしい", preferredForm: "hiragana", kanjis: ["欲しい"], romanization: "hoshii", adjGroup: "I", meaning: "wanted to" },
       { kanjis: ["絶好調"], hiragana: "ぜっこうちょう", romanization: "zekkouchou", adjGroup: "Na", meaning: "feeling great" },
-      { kanjis: ["嬉しい"], hiragana: "うれしい", romanization: "ureshii", adjGroup: "I", meaning: "happy / delighted" },
+      { kanjis: ["嬉しい"], hiragana: "うれしい", romanization: "ureshii", adjGroup: "I", meaning: "happy / delighted", derivedMeanings: ["please do xxx for me (polite)"] },
       { kanjis: ["楽しい"], rareKanjis: ["愉しい"], hiragana: "たのしい", romanization: "tanoshii", adjGroup: "I", meaning: "enjoyable / fun", derivedMeanings: ["useful / handy"] },
       { kanjis: ["楽しみ"], rareKanjis: ["愉しみ"], hiragana: "たのしみ", romanization: "tanoshimi", adjGroup: "Na", meaning: "looking forward to" },
       { hiragana: "-したい", romanization: "shitai", adjGroup: "I", meaning: "wanted to do" },
@@ -112,6 +112,7 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { kanjis: ["易しい"], hiragana: "やさしい", romanization: "yasashii", adjGroup: "I", meaning: "easy" },
       { kanjis: ["-易い"], hiragana: "-やすい", romanization: "-yasui", adjGroup: "I", meaning: "easy to (in terms of any kind of effort)", exampleUsages: ["[Verb-stem] 易い", "話しやすい (easy to talk with / easy to find and talk)", "酔いやすい (get drunk easily)"] },
       { hiragana: "もっともらしい", preferredForm: "hiragana", kanjis: ["尤もらしい"], romanization: "mottomorashii", adjGroup: "I", meaning: "plausible" },
+      { kanjis: ["可能"], hiragana: "かのう", romanization: "kanou", adjGroup: "Na", meaning: "possible", exampleUsages: ["[Noun] 可能です"] },
 
       { kanjis: ["下手"], hiragana: "へた", romanization: "heta", adjGroup: "Na", meaning: "unskilled" },
       { kanjis: ["弱い"], hiragana: "よわい", romanization: "yowai", adjGroup: "I", meaning: "weak / fragile" },
@@ -203,7 +204,9 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { kanjis: ["小さい"], hiragana: "ちいさい", romanization: "chiisai", adjGroup: "I", meaning: "small / tiny" },
 
       { kanjis: ["長い", "永い"], hiragana: "ながい", romanization: "nagai", adjGroup: "I", meaning: "long (length)", derivedMeanings: ["long (duration)"] },
+      { katakana: "ロング", romanization: "rongu", adjGroup: "Na", meaning: "long" },
       { kanjis: ["短い"], hiragana: "みじかい", romanization: "mijikai", adjGroup: "I", meaning: "short (length)", derivedMeanings: ["short (duration)"] },
+      { katakana: "ショート", romanization: "shooto", adjGroup: "Na", meaning: "short" },
 
       { kanjis: ["重い"], hiragana: "おもい", romanization: "omoi", adjGroup: "I", meaning: "heavy" },
       { kanjis: ["軽い"], hiragana: "かるい", romanization: "karui", adjGroup: "I", meaning: "light" },

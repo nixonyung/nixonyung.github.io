@@ -148,7 +148,7 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "ください", preferredForm: "hiragana", kanjis: ["下さい"], romanization: "kudasai", meaning: "please give me (polite)", exampleUsages: ["お [Noun] をください。", "[Noun] を {(counter)} ください。"] },
       { kanjis: ["お願いします"], hiragana: "おねがいします", romanization: "onegaishimasu", meaning: "please! (very polite)" },
       { hiragana: "どうぞ", romanization: "douzo", meaning: "please", exampleUsages: ["どうぞ (please go ahead)"] },
-      { kanjis: ["是非"], hiragana: "ぜひ", romanization: "zehi", meaning: "please by all means (polite)", exampleUsages: ["ぜひ、(request) たら嬉しいです"] },
+      { kanjis: ["是非"], hiragana: "ぜひ", romanization: "zehi", meaning: "by all means (polite)", exampleUsages: ["ぜひ、(request) たら嬉しいです"] },
 
       { kanjis: ["急いで"], hiragana: "いそいで", romanization: "isoide", meaning: "hurry up!" },
       { hiragana: "まだですか？", preferredForm: "hiragana", kanjis: ["未だですか？"], romanization: "madadesuka", meaning: "not done yet?" },

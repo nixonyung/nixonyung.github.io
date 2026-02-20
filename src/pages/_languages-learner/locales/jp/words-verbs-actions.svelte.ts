@@ -253,14 +253,15 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["準備する"], hiragana: "じゅんびする", romanization: "junbisuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "prepare" },
       { kanjis: ["暇する"], hiragana: "ひまする", romanization: "himasuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "be free / be unoccupied" },
       { kanjis: ["機能する"], hiragana: "きのうする", romanization: "kinousuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "function" },
-      { kanjis: ["作る", "造る", "創る"], hiragana: "つくる", romanization: "tsukuru", verbGroup: "Godan", verbIsTransitive: true, meaning: "make / create / produce" },
+      { kanjis: ["作る", "造る", "創る"], hiragana: "つくる", romanization: "tsukuru", verbGroup: "Godan", verbIsTransitive: true, meaning: "make / create / produce", exampleUsages: ["コンテンツを作っていきたい"] },
       { kanjis: ["生み出す", "産み出す"], hiragana: "うみだす", romanization: "umidasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "produce" },
       { kanjis: ["惹く"], hiragana: "ひく", romanization: "hiku", verbGroup: "Godan", verbIsTransitive: true, meaning: "draw attention" },
 
       // acting
       { kanjis: ["表現する"], hiragana: "ひょうげんする", romanization: "hyougensuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "express" },
       { kanjis: ["歓迎する"], hiragana: "かんげいする", romanization: "kangeisuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "welcome" },
-      { kanjis: ["役に立つ", "役にたつ"], hiragana: "やくにたつ", romanization: "yakunitatsu", verbGroup: "Godan", verbIsTransitive: false, meaning: "be helpful", exampleUsages: ["[people] の役に立つ (be helpful to xxx)"] },
+      { kanjis: ["役に立つ", "役にたつ"], hiragana: "やくにたつ", romanization: "yakunitatsu", verbGroup: "Godan", verbIsTransitive: false, meaning: "be helpful", exampleUsages: ["[people] の役に立つ (be helpful to xxx)", "皆さんの役に立つコンテンツ"] },
+      { kanjis: ["応援する"], hiragana: "おうえんする", romanization: "ouensuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "support / assist", exampleUsages: ["応援してくれる (support me)"] },
 
       // athletic
       { kanjis: ["歩く"], hiragana: "あるく", romanization: "aruku", verbGroup: "Godan", verbIsTransitive: false, meaning: "walk" },

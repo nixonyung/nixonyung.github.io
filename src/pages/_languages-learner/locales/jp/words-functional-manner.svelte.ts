@@ -6,6 +6,7 @@ export function appendFunctionalManner(words: JapaneseWord[]) {
     words.push(
       { kanjis: ["通じて"], hiragana: "つうじて", romanization: "tsuujite", meaning: "via / through", exampleUsages: ["[Noun] を通じて [Clause]", "このポッドキャストを通じて知る (know about xxx through this podcast)"] },
       { hiragana: "について", rareKanjis: ["に就いて"], romanization: "nitsuite", meaning: "regarding", exampleUsages: ["文化や生活について知れる"] },
+      { hiragana: "でも", romanization: "demo", meaning: "regardless", exampleUsages: ["[Interrogative word] でも (regardless of xxx)", "どちらの期間でも (regardless of the two periods)"] },
 
       { kanjis: ["良く", "善く", "能く", "好く", "克く"], hiragana: "よく", romanization: "yoku", meaning: "nicely / skillfully", derivedMeanings: ["properly"] },
       { hiragana: "なかなか", preferredForm: "hiragana", kanjis: ["中々", "中中"], rareKanjis: ["仲々", "仲仲", "却々", "却却"], romanization: "nakanaka", meaning: "hardly", exampleUsages: ["なかなか勇気が出ない"] },

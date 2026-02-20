@@ -72,7 +72,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       // indefinite point in time
       // TODO: soon, later, early, recently, already, yet, still, before, afterward, eventually
       { hiragana: "そして", romanization: "soshite", meaning: "and then", exampleUsages: ["...。 そして ..."] },
-      { hiragana: "それから", romanization: "sorekara", meaning: "after that", exampleUsages: ["...。 それから ...", "あなたはそれから ...？"] },
+      { hiragana: "それから", romanization: "sorekara", meaning: "after that", exampleUsages: ["あなたはそれから ..."] },
       { kanjis: ["先に"], rareKanjis: ["曩に"], hiragana: "さきに", romanization: "sakini", meaning: "previously" },
       { kanjis: ["この前"], rareKanjis: ["此の前"], hiragana: "このまえ", romanization: "konomae", meaning: "last time" },
 

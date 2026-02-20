@@ -66,7 +66,8 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
       // TODO: https://colanekojp.com.tw/classroom_detail/210
       // TODO: https://jlptsensei.com/learn-japanese-grammar/%E3%81%A6%E3%82%82%E3%82%89%E3%81%86-te-morau-%E3%81%A6%E3%82%82%E3%82%89%E3%81%84%E3%81%9F%E3%81%84-te-moraitai-meaning/
       { hiragana: "[Verb-て] もらう", romanization: "-te morau", meaning: "xxx to me", exampleUsages: ["聞いてもう (kindly listen to me)"] },
-      { hiragana: "[Verb-て] もらえる", romanization: "-te moraeru", meaning: "xxx for me", exampleUsages: ["すみません、もう少しゆっくり話してもらえますか？(Sorry, would you please speak a bit slower?)"] },
+      { hiragana: "[Verb-て] もらえる", romanization: "-te moraeru", meaning: "xxx for me (polite)", exampleUsages: ["すみません、もう少しゆっくり話してもらえますか？(Sorry, would you please speak a bit slower?)"] },
+      { hiragana: "[Verb-て] いただく", romanization: "-te itadaku", meaning: "xxx for me (formal)" },
 
       { hiragana: "[Verb-て] いる", romanization: "-te iru", meaning: "(continuous tense)" },
       { hiragana: "[Verb-て] いたら", romanization: "-te itara", meaning: "and meanwhile", derivedMeanings: ["while it was happening", "if happening (uncertain / imaginary)"] },
@@ -76,7 +77,7 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
 
       { hiragana: "ておく", romanization: "-te oku", meaning: "(I am going to)" },
 
-      { hiragana: "[Verb-て] も", romanization: "-te mo", meaning: "even if" },
+      { hiragana: "[Verb-て] も", romanization: "-te mo", meaning: "even if / even though" },
 
       { hiragana: "[Verb-て] もいい", romanization: "-te mo ii", meaning: "is okay / acceptable", exampleUsages: ["[Verb-て] もいいです", "[Verb-て] もいいですか？"] },
       { hiragana: "[Verb-て] ほしい", preferredForm: "hiragana", kanjis: ["[Verb-て] 欲しい"], romanization: "-te hoshii", meaning: "wanting to" },

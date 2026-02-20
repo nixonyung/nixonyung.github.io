@@ -13,6 +13,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["見晴らし"], hiragana: "みはらし", romanization: "miharashi", meaning: "view" },
 
       { kanjis: ["時間"], hiragana: "じかん", romanization: "jikan", meaning: "time" },
+      { kanjis: ["期間"], hiragana: "きかん", romanization: "kikan", meaning: "period (of time)" },
       { kanjis: ["年中", "年じゅう"], hiragana: "ねんじゅう", romanization: "nenjuu", meaning: "throughout the year" },
 
       { kanjis: ["感じ"], hiragana: "かんじ", romanization: "kanji", meaning: "feeling / sense / impression" },
@@ -206,6 +207,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["差別"], hiragana: "さべつ", romanization: "sabetsu", meaning: "difference" },
       { kanjis: ["違い"], hiragana: "ちがい", romanization: "chigai", meaning: "difference" },
       { kanjis: ["関連"], rareKanjis: ["関聯"], hiragana: "かんれん", romanization: "kanren", meaning: "relation" },
+      { kanjis: ["対応"], hiragana: "たいおう", romanization: "taiou", meaning: "correspondence" },
 
       // thoughts
       { kanjis: ["思い", "想い", "念い"], hiragana: "おもい", romanization: "omoi", meaning: "thought" },
@@ -260,7 +262,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["意味"], hiragana: "いみ", romanization: "imi", meaning: "meaning" },
       { kanjis: ["直訳"], hiragana: "ちょくやく", romanization: "chokuyaku", meaning: "literal translation" },
 
-      // piece of writing(?)
+      // piece of writing(?) / copywriting
       { kanjis: ["話"], hiragana: "はなし", romanization: "hanashi", meaning: "conversation" },
       { kanjis: ["対話"], hiragana: "たいわ", romanization: "taiwa", meaning: "conversation / dialogue" },
       { kanjis: ["語り"], hiragana: "かたり", romanization: "katari", meaning: "detailed speech (literary)" },
@@ -268,9 +270,15 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["説得"], hiragana: "せっとく", romanization: "settoku", meaning: "persuasion" },
       { kanjis: ["譲歩"], hiragana: "じょうほ", romanization: "jouho", meaning: "concession" },
       { kanjis: ["同意"], hiragana: "どうい", romanization: "doui", meaning: "agreement" },
+      { kanjis: ["参考"], hiragana: "さんこう", romanization: "sankou", meaning: "reference" },
       { katakana: "エピソード", romanization: "episoodo", meaning: "episode" },
+      { kanjis: ["内容"], katakana: "ないよう", romanization: "naiyou", meaning: "content" },
+      { katakana: "コンテント", romanization: "kontento", meaning: "content" },
+      { kanjis: ["題"], katakana: "だい", romanization: "dai", meaning: "title / theme" },
+      { kanjis: ["名称"], katakana: "めいしょう", romanization: "meishou", meaning: "name / title" },
+      { katakana: "タイトル", romanization: "taitoru", meaning: "title" },
 
-      { kanjis: ["方"], hiragana: "かた", romanization: "kata", meaning: "way / method", exampleUsages: ["[Noun] の [Verb-ます (dropped)] 方"] },
+      { kanjis: ["方"], hiragana: "かた", romanization: "kata", meaning: "way / method", exampleUsages: ["[Noun] の [Verb-ます (dropped)] 方", "ポッドキャストの使い方"] },
       { kanjis: ["仕方"], hiragana: "しかた", romanization: "shikata", meaning: "way / method" },
       { kanjis: ["方法"], hiragana: "ほうほう", romanization: "houhou", meaning: "way / method" },
       { kanjis: ["方式"], hiragana: "ほうしき", romanization: "houshiki", meaning: "way / method" },
@@ -346,9 +354,11 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       //
       { hiragana: "こと", preferredForm: "hiragana", kanjis: ["事"], romanization: "koto", meaning: "thing / event / matter / situation" },
       { kanjis: ["行事"], hiragana: "ぎょうじ", romanization: "gyouji", meaning: "event" },
+      { kanjis: ["予約"], hiragana: "よやく", romanization: "yoyaku", meaning: "reservation" },
       { kanjis: ["中止"], hiragana: "ちゅうし", romanization: "chuushi", meaning: "termination / cancellation" },
 
       { katakana: "リスニング", romanization: "risuningu", meaning: "listening", exampleUsages: ["リスニングの練習"] },
+      { katakana: "シャドーイング", romanization: "shadooingu", meaning: "shadowing (a language learning technique)" },
 
       { kanjis: ["お届け"], hiragana: "おとどけ", romanization: "otodoke", meaning: "delivery (of goods/services/lessons)" },
 
