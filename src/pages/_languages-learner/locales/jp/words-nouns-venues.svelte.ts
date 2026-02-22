@@ -116,6 +116,7 @@ export function appendNounsVenues(words: JapaneseWord[]) {
     words.push(
       //
       { kanjis: ["東京"], hiragana: "とうきょう", romanization: "toukyou", meaning: "tokyo" },
+      { hiragana: "アメリカ", romanization: "amerika", meaning: "america" },
     );
   }
 

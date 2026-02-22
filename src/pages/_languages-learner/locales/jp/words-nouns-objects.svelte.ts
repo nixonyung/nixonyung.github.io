@@ -361,6 +361,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["音楽"], hiragana: "おんがく", romanization: "ongaku", meaning: "music" },
       { katakana: "ミュージック", romanization: "myuujikku", meaning: "music" },
       { kanjis: ["声"], hiragana: "こえ", romanization: "koe", meaning: "voice" },
+      { kanjis: ["音声"], hiragana: "おんせい", romanization: "onsei", meaning: "speech sound (as a data)" },
       { kanjis: ["歌", "唄", "詩"], hiragana: "うた", romanization: "uta", meaning: "song / singing" },
       { katakana: "アニメソング", romanization: "anime songu", meaning: "anime song" },
       { katakana: "アニソン", romanization: "anison", meaning: "anime song" },
@@ -371,6 +372,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { katakana: "フィルム", romanization: "firumu", meaning: "film" },
       { katakana: "アニメ", romanization: "anime", meaning: "anime" },
       { katakana: "アニメーション", romanization: "animeeshon", meaning: "animation" },
+      { katakana: "ドラマ", romanization: "dorama", meaning: "drama (TV shows / stage play)" },
 
       // shows
       { katakana: "ポッドキャスト", romanization: "poddokyasuto", meaning: "podcast" },

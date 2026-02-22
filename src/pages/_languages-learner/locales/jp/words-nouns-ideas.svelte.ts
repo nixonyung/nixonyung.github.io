@@ -153,7 +153,6 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { katakana: "ランキング", romanization: "rankingu", meaning: "ranking" },
       { kanjis: ["部活"], hiragana: "ぶかつ", romanization: "bukatsu", meaning: "club activities" },
       { kanjis: ["夏休み"], hiragana: "なつやすみ", romanization: "natsuyasumi", meaning: "summer holiday" },
-      { kanjis: ["留学"], hiragana: "りゅうがく", romanization: "ryuugaku", meaning: "studying abroad" },
       { kanjis: ["留学生"], hiragana: "りゅうがくせい", romanization: "ryuugakusei", meaning: "overseas student" },
 
       // TODO: trading
@@ -280,7 +279,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
 
       { kanjis: ["方"], hiragana: "かた", romanization: "kata", meaning: "way / method", exampleUsages: ["[Noun] の [Verb-ます (dropped)] 方", "ポッドキャストの使い方"] },
       { kanjis: ["仕方"], hiragana: "しかた", romanization: "shikata", meaning: "way / method" },
-      { kanjis: ["方法"], hiragana: "ほうほう", romanization: "houhou", meaning: "way / method" },
+      { kanjis: ["方法"], hiragana: "ほうほう", romanization: "houhou", meaning: "way / method", exampleUsages: ["勉強方法"] },
       { kanjis: ["方式"], hiragana: "ほうしき", romanization: "houshiki", meaning: "way / method" },
       { kanjis: ["やり方", "遣り方"], hiragana: "やりかた", romanization: "yarikata", meaning: "way of doing" },
       { kanjis: ["手順"], hiragana: "てじゅん", romanization: "tejun", meaning: "procedures" },
@@ -346,6 +345,9 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       //
       { katakana: "デジタル", romanization: "dezitaru", meaning: "digital" },
       { kanjis: ["伝送"], katakana: "でんそう", romanization: "densou", meaning: "transmission" },
+
+      { katakana: "インプット", romanization: "inputto", meaning: "input" },
+      { katakana: "アウトプット", romanization: "autoputto", meaning: "output" },
     );
   }
 

@@ -49,6 +49,7 @@ export function appendFunctionalLocational(words: JapaneseWord[]) {
       { kanjis: ["中"], hiragana: "なか", romanization: "naka", meaning: "middle / centre", derivedMeanings: ["inside"] },
 
       { hiragana: "ところ", preferredForm: "hiragana", kanjis: ["所"], romanization: "tokoro", meaning: "nearby", derivedMeanings: ["recently"], exampleUsages: ["家を出たところ"] },
+      { kanjis: ["周りに"], hiragana: "まわりに", romanization: "mawarini", meaning: "surrounding" },
 
       { kanjis: ["途中"], hiragana: "とちゅう", romanization: "tochuu", meaning: "on the way", exampleUsages: ["通勤途中"] },
 

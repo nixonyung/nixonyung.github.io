@@ -123,6 +123,7 @@ export function appendAdjectives(words: JapaneseWord[]) {
 
       // correctness
       { kanjis: ["正しい"], hiragana: "ただしい", romanization: "tadashii", adjGroup: "I", meaning: "correct" },
+      { kanjis: ["効果的"], hiragana: "こうかてき", romanization: "koukateki", adjGroup: "Na", meaning: "effective" },
       { hiragana: "いけない", romanization: "ikenai", adjGroup: "I", meaning: "wrong" },
       { hiragana: "つたない", preferredForm: "hiragana", kanjis: ["拙い"], romanization: "tsutanai", adjGroup: "I", meaning: "poor quality" },
 

@@ -98,6 +98,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { kanjis: ["-人"], hiragana: "にん", romanization: "nin", meaning: "(counter for people)" },
       { kanjis: ["-匹", "-疋"], hiragana: "ひき", romanization: "hiki", meaning: "(counter for small animals)" },
       { kanjis: ["-歳", "-才"], hiragana: "さい", romanization: "sai", meaning: "(counter for age)", exampleUsages: ['二十歳("hatachi")'] },
+      { kanjis: ["-ヶ月", "ヵ月", "カ月", "か月", "ケ月", "箇月"], rareKanjis: ["個月"], hiragana: "かげつ", romanization: "kagetsu", meaning: "(counter for months)", exampleUsages: ["9ヶ月"] },
       { kanjis: ["-回"], hiragana: "かい", romanization: "kai", meaning: "(counter for occurrences)" },
       { kanjis: ["-度"], hiragana: "ど", romanization: "do", meaning: "(counter for occurrences / temperature / angle)" },
       { katakana: "-ページ", preferredForm: "katakana", kanjis: ["-頁"], romanization: "peeji", meaning: "page (counter for pages)" },

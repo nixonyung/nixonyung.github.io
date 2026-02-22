@@ -45,7 +45,7 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "ようこそ", romanization: "youkoso", meaning: "welcome" },
       { kanjis: ["お帰りなさい"], hiragana: "おかえりなさい", romanization: "okaerinasai", meaning: "welcome home" },
       { hiragana: "いらっしゃいませ", romanization: "irasshaimase", meaning: "welcome (to a shop / restaurant)" },
-      { hiragana: "どうぞよろしく", romanization: "douzo yoroshiku", meaning: "please treat me well (to new colleagues)" },
+      { hiragana: "よろしく", romanization: "yoroshiku", meaning: "pleased to meet you / please treat me well", exampleUsages: ["どうぞよろしく (polite)", "よろしくね"] },
 
       { kanjis: ["お元気ですか？"], hiragana: "おげんきですか？", romanization: "ogenkidesuka", meaning: "how are you doing?" },
 
@@ -198,6 +198,8 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "いかが", preferredForm: "hiragana", kanjis: ["如何"], romanization: "ikaga", meaning: "how is xxx? (formal)" },
 
       { hiragana: "こんな-", romanization: "konna-", meaning: "like this" },
+
+      { hiragana: "ことがある", preferredForm: "hiragana", kanjis: ["事がある"], romanization: "kotogaaru", meaning: "have occurred", exampleUsages: ["[Verb-ta] ことがある", "アメリカに留学したことがあるんです"] },
 
       { hiragana: "〇〇のが〇〇", romanization: "no ga", meaning: "xxx is doing it xxx-ly", exampleUsages: ["... [Verb] のが [Adj.] です。", "... [Verb] のが上手/下手 です。", "... [Verb] のが好き/嫌い です。", "... [Verb] のが速い/遅い です。", "... [Verb] のが難しい/易しい です。"] },
 

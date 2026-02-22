@@ -23,7 +23,7 @@ export function appendFunctionalLogical(words: JapaneseWord[]) {
       { hiragana: "なら", preferredForm: "hiragana", romanization: "nara", meaning: "in that case (explicitly echoing what is just spoken)", derivedMeanings: ["if that's true (making assumption by observation)"], exampleUsages: ["[Clause] なら / のなら / んなら [Clause]"] },
       { hiragana: "ならば", preferredForm: "hiragana", romanization: "naraba", meaning: "in that case (formal)" },
       { hiragana: "なければ", preferredForm: "hiragana", kanjis: ["無ければ"], romanization: "nakereba", meaning: "if not" },
-      { hiragana: "もし", preferredForm: "hiragana", kanjis: ["若し"], romanization: "moshi", meaning: "if (hypothetical)" },
+      { hiragana: "もし", preferredForm: "hiragana", kanjis: ["若し"], romanization: "moshi", meaning: "if (hypothetical)", exampleUsages: ["もし [Clause]", "もし [Clause] たら"] },
       { hiragana: "とも", romanization: "tomo", meaning: "even if" },
 
       // how (indefinite)

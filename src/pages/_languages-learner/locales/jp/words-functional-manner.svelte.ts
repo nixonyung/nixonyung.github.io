@@ -12,6 +12,7 @@ export function appendFunctionalManner(words: JapaneseWord[]) {
       { hiragana: "なかなか", preferredForm: "hiragana", kanjis: ["中々", "中中"], rareKanjis: ["仲々", "仲仲", "却々", "却却"], romanization: "nakanaka", meaning: "hardly", exampleUsages: ["なかなか勇気が出ない"] },
 
       { kanjis: ["一緒に"], hiragana: "いっしょに", romanization: "isshoni", meaning: "together {with xxx}", exampleUsages: ["一緒に [Verb]", "[Noun] と 一緒に [Verb]。"] },
+      { kanjis: ["同時に"], hiragana: "どうじに", romanization: "doujini", meaning: "at the same time", exampleUsages: ["[Noun] も [Noun] も 同時に [Verb]"] },
 
       { kanjis: ["直に"], hiragana: "じきに", romanization: "jikini", meaning: "directly / straightforward" },
       { kanjis: ["直ぐ"], hiragana: "すぐ", romanization: "sugu", meaning: "direct / straightforward", exampleUsages: ["直ぐに"] },
