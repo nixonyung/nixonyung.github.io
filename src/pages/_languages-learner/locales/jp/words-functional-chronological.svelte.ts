@@ -74,6 +74,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { hiragana: "そして", romanization: "soshite", meaning: "and then", exampleUsages: ["...。 そして ..."] },
       { hiragana: "それから", romanization: "sorekara", meaning: "after that", exampleUsages: ["あなたはそれから ..."] },
       { kanjis: ["先に"], rareKanjis: ["曩に"], hiragana: "さきに", romanization: "sakini", meaning: "previously" },
+      { hiragana: "かつて", rareKanjis: ["嘗て", "曾て", "曽て", "都て"], romanization: "katsute", meaning: "formerly (formal)", exampleUsages: ["かつては [Clause]"] },
       { kanjis: ["この前"], rareKanjis: ["此の前"], hiragana: "このまえ", romanization: "konomae", meaning: "last time" },
 
       { kanjis: ["前に"], hiragana: "まえに", romanization: "maeni", meaning: "before xxx", exampleUsages: ["[Noun] の前に ...", "[Verb-る] 前に ..."] },
@@ -115,9 +116,22 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { kanjis: ["毎週"], hiragana: "まいしゅう", romanization: "maishuu", meaning: "every week" },
       { kanjis: ["毎月"], hiragana: "まいつき", romanization: "maitsuki", meaning: "every month" },
       { kanjis: ["毎年"], hiragana: "まいとし", romanization: "maitoshi", meaning: "every year" },
+      // TODO: 〜に一回
 
       // indefinite frequency
       // TODO: always, usually, often, sometimes, rarely, seldom, never, occasionally
+      /*
+      いつも (Itsumo): Always
+      たいてい (Taitei): Usually, mostly
+      よく (Yoku): Often, frequently
+      しばしば (Shibashiba): Frequently, often (slightly formal)
+      ときどき (Tokidoki): Sometimes
+      たまに (Tamani): Occasionally, once in a while
+      めったに...ない (Mettani...nai): Rarely, seldom
+      あまり...ません (Amari...masen): Not very often, not much
+      ぜんぜん...ません (Zenzen...masen): Never, not at all
+      ほとんど...ない (Hotondo...nai): Almost never, hardly
+      */
       { kanjis: ["時に"], hiragana: "ときに", romanization: "tokini", meaning: "sometimes (situationally)" },
       { kanjis: ["時々", "時時"], hiragana: "ときどき", romanization: "tokidoki", meaning: "sometimes (regularly)" },
       { kanjis: ["多くの場合"], hiragana: "おおくのばあい", romanization: "ookunobaai", meaning: "in many cases (written)" },

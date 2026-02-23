@@ -9,15 +9,16 @@ export function appendFunctionalLogical(words: JapaneseWord[]) {
   if (flashcardSettings.words.functional.logical.value) {
     words.push(
       // because
+      { hiragana: "ので", romanization: "node", meaning: "because", exampleUsages: ["(reason) ので/なので [Clause]"] },
       { hiragana: "だって", romanization: "datte", meaning: "because (spoken, casual)" },
+      { hiragana: "から", romanization: "kara", meaning: "since / so (casual)", derivedMeanings: ["thanks to (someone)"] },
+      { hiragana: "ため", preferredForm: "hiragana", kanjis: ["為"], romanization: "tame", meaning: "because", exampleUsages: ["(reason) ため [Clause]", "[Noun] のための [Noun]"] },
+      { hiragana: "のせいで", rareKanjis: ["の所為で"], romanization: "noseide", meaning: "due to", exampleUsages: ["[Noun] のせいで [Clause]"] },
       { hiragana: "なぜなら", preferredForm: "hiragana", kanjis: ["何故なら"], romanization: "nazenara", meaning: "because (formal)" },
       { hiragana: "なぜならば", preferredForm: "hiragana", kanjis: ["何故ならば"], romanization: "nazenaraba", meaning: "because (formal)" },
-      { hiragana: "から", romanization: "kara", meaning: "since / so", derivedMeanings: ["thanks to (someone)"] },
-      // TODO: only use with volitional verbs
-      { hiragana: "ために", preferredForm: "hiragana", kanjis: ["為に"], romanization: "tameni", meaning: "so (purpose)", exampleUsages: ["[Clause] ために [Clause]", "テストに合格するために ...", "家族のために ...", "この日のために ..."] },
-      { hiragana: "ように", preferredForm: "hiragana", kanjis: ["様に"], romanization: "youni", meaning: "so (desired state)", exampleUsages: ["[Clause] ように [Clause]", "日本語て漫画が読めるように ..."] },
-      { hiragana: "ので", romanization: "node", meaning: "because of (what cause, written)", exampleUsages: ["[Verb / i-Adj.] ので ...", "[Noun / na-Adj.] なので ...", "なので、..."] },
-      { hiragana: "のせいで", rareKanjis: ["の所為で"], romanization: "noseide", meaning: "due to", exampleUsages: ["[Noun] のせいで [Clause]"] },
+
+      { hiragana: "ために", preferredForm: "hiragana", kanjis: ["為に"], romanization: "tameni", meaning: "for the sake of (purpose)", exampleUsages: ["(action)[Verb-dictionary] ために (goal)[Clause]", "テストに合格するために ...", "家族のために ...", "この日のために ..."] },
+      { hiragana: "ように", preferredForm: "hiragana", kanjis: ["様に"], romanization: "youni", meaning: "for the sake of (hope)", exampleUsages: ["(action)[Verb-potential] ように (hope)[Clause]", "日本語て漫画が読めるように ..."] },
 
       // conditional
       { hiragana: "なら", preferredForm: "hiragana", romanization: "nara", meaning: "in that case (explicitly echoing what is just spoken)", derivedMeanings: ["if that's true (making assumption by observation)"], exampleUsages: ["[Clause] なら / のなら / んなら [Clause]"] },

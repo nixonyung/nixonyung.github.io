@@ -96,9 +96,11 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { kanjis: ["青い", "蒼い"], rareKanjis: ["碧い"], hiragana: "あおい", romanization: "aoi", adjGroup: "I", meaning: "blue" },
       { kanjis: ["黄色い"], hiragana: "きいろい", romanization: "kiiroi", adjGroup: "I", meaning: "yellow" },
 
+      // TODO: confirm "youna"
       { hiragana: "-そう", romanization: "-sou", adjGroup: "Na", meaning: "(appearing like, by feeling)", exampleUsages: ["あなたは眠そうだね", "[Noun] は [Adj. (feeling)] そう"] },
       { hiragana: "-みたい", romanization: "-midai", adjGroup: "Na", meaning: "(appearing like, by appearance)", exampleUsages: ["本物みたい", "[Noun] みたい", "[Verb] みたい", "[Verb-ta] みたい", "[Verb-te] いるみたい"] },
       { hiragana: "-らしい", romanization: "-rashii", adjGroup: "I", meaning: "(appearing like, by characteristic)", exampleUsages: ["あなたらしいね", "[Noun] らしい"] },
+      { hiragana: "-ような", preferredForm: "hiragana", kanjis: ["様な"], romanization: "youna", adjGroup: "Na", meaning: "similarly (conceptually)" },
     );
   }
 
@@ -234,8 +236,6 @@ export function appendAdjectives(words: JapaneseWord[]) {
   if (flashcardSettings.words.adjectives.miscellaneous.value) {
     adjs.push(
       // TODO: used like -suru?
-
-      { hiragana: "-ような", preferredForm: "hiragana", kanjis: ["様な"], romanization: "youna", adjGroup: "Na", meaning: "similarly (conceptually)" },
 
       { hiragana: "いろいろ", preferredForm: "hiragana", kanjis: ["色々", "色色"], romanization: "iroiro", adjGroup: "Na", meaning: "various" },
     );

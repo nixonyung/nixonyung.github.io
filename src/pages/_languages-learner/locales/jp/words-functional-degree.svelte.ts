@@ -31,6 +31,41 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { kanjis: ["何より"], hiragana: "なにより", romanization: "naniyori", meaning: "above anything else" },
 
       // indefinite quantities (proportions)
+      /*
+      Small or Few Quantities:
+      Sukoshi / Sukoshidake (少し / 少しだけ): A little, a few
+      Sukoshi-zutsu (少しずつ): Little by little, bit by bit
+      Sukuna-me (少なめ): A little less/small amount
+      Ikuraka (いくらか): Some, a bit, a certain amount
+      Shōshō (少々): A few, a little (formal)
+
+      Moderate or Some Quantities:
+      Ikutsuka (いくつか): A few, several, some
+      Iku-ba-ka (幾ばくか): Some, a small amount
+      Soko-soko (そこそこ): Moderate, just enough
+      Ichibu (一部): A part, some
+
+      Large or Many Quantities:
+      Takusan (たくさん): A lot, many, plenty
+      Ooi (多い): Many, numerous
+      Ippai (いっぱい): Full, a lot
+      Kanari / Kanari no (かなり / かなりの): A great deal of, quite a lot
+      Tairyō / Tairyō no (大量 / 大量の): Large quantity, massive amount
+      Hōfu / Hōfuna (豊富 / 豊富な): Abundance, plenty
+      Mori-dakusan (盛り沢山): A lot, plenty, overloaded
+      Tappuri (たっぷり): Generous amount, full
+      Oozei / Oozei no (大勢 / 大勢の): Many people
+      Ikuta (幾多): Numerous, many
+      Musū / Musū no (無数 / 無数の): Countless, innumerable
+      Bakudai / Bakudaina (莫大 / 莫大な): Huge, immense, vast
+      Bōdai / Bōdaina (膨大 / 膨大な): Enormous, huge
+
+      Complete or Total Quantities:
+      Zenbu / Subete (全部 / 全て): Everything, all
+      Marugoto (丸ごと): Entirely, whole
+      Zentai / Zentai no (全体 / 全体の): Whole, entire
+      Manpuku (満腹): Full stomach
+      */
       { kanjis: ["幾-"], hiragana: "いく", romanization: "iku", meaning: "a few", exampleUsages: ["幾つ"] },
       { kanjis: ["何らか", "何等か"], hiragana: "なんらか", romanization: "nanraka", meaning: "somewhat" },
       { kanjis: ["何も"], hiragana: "なにも", romanization: "nanimo", meaning: "not at all" },
@@ -58,6 +93,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { hiragana: "いくらも", preferredForm: "hiragana", kanjis: ["幾らも"], romanization: "ikuramo", meaning: "many" },
       { hiragana: "うんと", romanization: "unto", meaning: "much (spoken, used by women)" },
       { hiragana: "ほとんど", preferredForm: "hiragana", kanjis: ["殆ど"], rareKanjis: ["幾ど"], romanization: "hotondo", meaning: "nearly all" },
+      { hiragana: "まるで", preferredForm: "hiragana", kanjis: ["丸で"], romanization: "marude", meaning: "completely" },
       // TODO: each
 
       // definite quantities - numbers

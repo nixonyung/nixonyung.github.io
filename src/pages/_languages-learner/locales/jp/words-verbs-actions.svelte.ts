@@ -7,7 +7,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
   if (flashcardSettings.words.verbs.actions.bodily.value) {
     verbs.push(
       // rest
-      { kanjis: ["生きる"], rareKanjis: ["活きる"], hiragana: "いきる", romanization: "ikiru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "be alive" },
+      { kanjis: ["生きる"], rareKanjis: ["活きる"], hiragana: "いきる", romanization: "ikiru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "be alive", exampleUsages: ["生きている (being alive)"] },
       { kanjis: ["起きる"], hiragana: "おきる", romanization: "okiru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "wake up", exampleUsages: ["早く起きられる (can wake up early)"] },
       { kanjis: ["寝る"], rareKanjis: ["寐る"], hiragana: "ねる", romanization: "neru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "go to bed" },
       { kanjis: ["寝込む", "寝こむ"], hiragana: "ねこむ", romanization: "nekomu", verbGroup: "Godan", verbIsTransitive: false, meaning: "staying in bed" },

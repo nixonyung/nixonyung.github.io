@@ -38,7 +38,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.objects.nature.value) {
     words.push(
       { kanjis: ["天気"], hiragana: "てんき", romanization: "tenki", meaning: "weather" },
-      { kanjis: ["晴れ", "晴"], hiragana: "はれ", romanization: "hare", meaning: "good weather (sunny, warm)", derivedMeanings: ["when the weather is good"] },
+      { kanjis: ["晴れ", "晴"], hiragana: "はれ", romanization: "hare", meaning: "sunny (warm) / good weather" },
       { kanjis: ["曇り", "曇"], hiragana: "くもり", romanization: "kumori", meaning: "cloudy weather" },
       { kanjis: ["暑さ"], hiragana: "あつさ", romanization: "atsusa", meaning: "hotness" },
 
@@ -61,7 +61,10 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["石"], hiragana: "いし", romanization: "ishi", meaning: "rock / stone" },
       { kanjis: ["砂利"], hiragana: "じゃり", romanization: "jari", meaning: "gravel / pebbles" },
 
-      { kanjis: ["木", "樹"], hiragana: "き", romanization: "ki", meaning: "tree", derivedMeanings: ["wood"] },
+      { kanjis: ["木"], hiragana: "き", romanization: "ki", meaning: "wood" },
+      { kanjis: ["樹"], hiragana: "き", romanization: "ki", meaning: "tree" },
+      { kanjis: ["林"], hiragana: "はやし", romanization: "hayashi", meaning: "woods" },
+      { kanjis: ["森", "杜"], hiragana: "もり", romanization: "mori", meaning: "forest" },
       { kanjis: ["花", "華"], hiragana: "はな", romanization: "hana", meaning: "flower" },
       { kanjis: ["種"], hiragana: "たね", romanization: "tane", meaning: "seed" },
 
@@ -85,7 +88,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
     words.push(
       { kanjis: ["食"], hiragana: "しょく", romanization: "shoku", meaning: "food / eating (root word)" },
       { kanjis: ["食事"], hiragana: "しょくじ", romanization: "shokuji", meaning: "meal" },
-      { kanjis: ["ご飯", "御飯"], hiragana: "ごはん", romanization: "gohan", meaning: "meal / cooked rice" },
+      { kanjis: ["ご飯", "御飯"], hiragana: "ごはん", romanization: "gohan", meaning: "meal", derivedMeanings: ["cooked rice"] },
       { kanjis: ["朝ご飯", "朝ごはん", "朝御飯"], hiragana: "あさごはん", romanization: "asagohan", meaning: "breakfast" },
       { kanjis: ["昼ご飯", "昼ごはん", "昼御飯"], hiragana: "ひるごはん", romanization: "hirugohan", meaning: "lunch" },
       { kanjis: ["晩ご飯", "晩ごはん", "晩御飯"], hiragana: "ばんごはん", romanization: "bangohan", meaning: "dinner" },
@@ -103,6 +106,9 @@ export function appendNounsObjects(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.objects.foodDishes.value) {
     words.push(
       { kanjis: ["食べ物"], hiragana: "たべもの", romanization: "tabemono", meaning: "food" },
+
+      { kanjis: ["米"], hiragana: "こめ", romanization: "kome", meaning: "(uncooked) rice" },
+      { kanjis: ["飯"], hiragana: "めし", romanization: "meshi", meaning: "cooked rice" },
 
       { kanjis: ["肉"], hiragana: "にく", romanization: "niku", meaning: "meat" },
       { kanjis: ["鶏肉"], hiragana: "とりにく", romanization: "toriniku", meaning: "chicken meat" },
@@ -152,7 +158,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["酒"], hiragana: "さけ", romanization: "sake", meaning: "alcohol" },
 
       { katakana: "コーヒー", romanization: "koohii", meaning: "coffee" },
-      { katakana: "コーラ", romanization: "coola", meaning: "coke" },
+      { katakana: "コーラ", romanization: "coola", meaning: "cola / coke" },
       { katakana: "ジュース", romanization: "juusu", meaning: "juice" },
     );
   }
@@ -171,9 +177,10 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { katakana: "セーター", romanization: "seetaa", meaning: "sweater" },
       { katakana: "コート", romanization: "kooto", meaning: "coat" },
 
-      { katakana: "ズボン", rareKanjis: ["洋袴", "段袋"], romanization: "zubon", meaning: "trousers / pants", exampleUsages: ["長ズボン"] },
-      { katakana: "パンツ", romanization: "pantsu", meaning: "underpants" },
-      { katakana: "トラウザーズ", romanization: "torauzaazu", meaning: "trousers" },
+      { kanjis: ["下着"], hiragana: "したぎ", romanization: "shitagi", meaning: "pants / trousers" },
+      { katakana: "パンツ", romanization: "pantsu", meaning: "pants / trousers" },
+      { katakana: "ズボン", rareKanjis: ["洋袴", "段袋"], romanization: "zubon", meaning: "pants / trousers", exampleUsages: ["長ズボン"] },
+      { katakana: "トラウザーズ", romanization: "torauzaazu", meaning: "pants / trousers" },
       { katakana: "スカート", romanization: "sukaato", meaning: "skirt" },
 
       { kanjis: ["靴"], rareKanjis: ["沓", "履", "鞋"], hiragana: "くつ", romanization: "kutsu", meaning: "shoes" },
