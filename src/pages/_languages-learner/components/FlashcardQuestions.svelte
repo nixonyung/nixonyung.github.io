@@ -165,9 +165,11 @@
     options = questionsQueue.genOptions({
       question,
       numOptions: settings.numOptions.value,
-      // filter out answers from other same-looking questions
-      filterFn: (question, option) => !isEqual(option.questionEntries, question.questionEntries),
-      // filter out same-looking options
+      // filter out answers from other same-looking or same-sounding questions
+      filterFn: (question, option) =>
+        !isEqual(option.questionEntries, question.questionEntries) &&
+        !isEqual(option.romanization, question.romanization),
+      // make options unique in looks
       keyFn: (option) => entriesToStr(option.answerEntries),
     });
   }
@@ -567,31 +569,38 @@
     <div class="mt-9">Select the most appropriate one:</div>
 
     <!-- options -->
-    <div class="mt-6 flex flex-col items-start gap-2">
+    <div class="mt-6 flex flex-col items-start gap-3">
       {#each options as option, i (entriesToStr(option.answerEntries))}
-        <Highlighted
-          bind:this={optionRefs[i]}
-          vertical
-          variant={areWrongOption[i] ? "error" : "primary-lighter"}
-          class={[
-            "scroll-m-60",
-            (isSearchMode ? areOptionMatchingCommand[i] : i === optionSelectedIdx) &&
-              "outline-2 outline-primary-content/75",
-          ]}
-          onclick={() => {
-            if (!question) return;
+        <div class="flex items-center-safe gap-3">
+          <Highlighted
+            bind:this={optionRefs[i]}
+            vertical
+            variant={areWrongOption[i] ? "error" : "primary-lighter"}
+            class={[
+              "scroll-m-60",
+              (isSearchMode ? areOptionMatchingCommand[i] : i === optionSelectedIdx) &&
+                "outline-2 outline-primary-content/75",
+            ]}
+            onclick={() => {
+              if (!question) return;
 
-            if (isEqual(option.answerEntries, question.answerEntries)) {
-              nextQuestion();
-            } else {
-              areWrongOption[i] = true;
-              if (settings.pinWhenWrong.value) togglePin(question.idx, true);
-            }
-          }}
-          disabled={areWrongOption[i]}
-        >
-          {@render entries(option.answerEntries)}
-        </Highlighted>
+              if (isEqual(option.answerEntries, question.answerEntries)) {
+                nextQuestion();
+              } else if (areWrongOption[i]) {
+                speech.speak(option.pronunciation);
+              } else {
+                areWrongOption[i] = true;
+                if (settings.pinWhenWrong.value) togglePin(question.idx, true);
+              }
+            }}
+          >
+            {@render entries(option.answerEntries)}
+          </Highlighted>
+
+          {#if areWrongOption[i]}
+            {option.romanization}
+          {/if}
+        </div>
       {/each}
     </div>
   {/if}
