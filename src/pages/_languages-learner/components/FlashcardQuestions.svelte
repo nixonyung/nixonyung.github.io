@@ -163,12 +163,13 @@
     options = questionsQueue.genOptions({
       question,
       numOptions: settings.numOptions.value,
-      // filter out answers from other same-looking or same-sounding questions
-      filterFn: (question, option) =>
-        !isEqual(option.questionEntries, question.questionEntries) &&
-        !isEqual(option.romanization, question.romanization),
-      // make options unique in looks
-      keyFn: (option) => entriesToStr(option.answerEntries),
+      keyFns: [
+        // filter out options with the same look or pronunciation as the answer
+        (option) => entriesToStr(option.answerEntries),
+        (option) => option.romanization,
+        // filter out options from other same-looking questions
+        (option) => entriesToStr(option.questionEntries),
+      ],
     });
   }
   function nextQuestion() {

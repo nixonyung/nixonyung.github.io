@@ -132,62 +132,80 @@ export class QuestionsQueue<Item extends object> {
   genOptions({
     question,
     numOptions,
-    filterFn,
-    keyFn,
+    keyFns = [],
   }: {
     question: WithIndex<Item> | undefined;
     numOptions: number;
-    filterFn?: (question: WithIndex<Item>, option: WithIndex<Item>) => boolean;
-    keyFn?: (option: WithIndex<Item>) => string;
+    keyFns?: ((option: WithIndex<Item>) => string | number | undefined)[];
   }) {
     if (question === undefined || numOptions === 0) return [];
 
-    // problem: sample N elements (without replacement) with filtering
-    //
-    // constraint: need to efficiently find a new UNIQUE element if the current one is filtered out
-    //
-    // inferior solutions:
-    //   - repeatedly call es-toolkit's `sampleSize` and filter until having enough elements
-    //     - will incorrectly return elements WITH replacement
-    //   - shuffle the whole array and pick until having N elements
-    //     - shuffling the whole array has an unneccessary time cost when the array is large
+    /*
 
-    const options: WithIndex<Item>[] = [];
-    const keys = new Set([keyFn?.(question) ?? ""]);
+    Problem Statement:
+
+    sample N elements (without replacement) WITH filtering
+
+
+    Constraints:
+
+    - need to efficiently find a new UNIQUE element if the current one is filtered out
+
+
+    Inferior Solutions:
+
+    - repeatedly call es-toolkit's `sampleSize` and filter until having enough elements
+      - cons: will incorrectly return elements WITH replacement
+
+    - shuffle the whole array and pick until having N elements
+      - cons: shuffling the whole array has an unneccessary time cost when the array is large
+
+    */
+
+    const optionsWithKeys: {
+      option: WithIndex<Item>;
+      keys: ReturnType<(typeof keyFns)[number]>[];
+    }[] = [];
+    const keyss = keyFns.map((keyFn) => {
+      const key = keyFn(question);
+      return new Set(key ? [key] : []);
+    });
 
     // Fisher-Yates shuffle, from left-to-right
     // (ref.) https://github.com/toss/es-toolkit/blob/3d75a713169c2db6fffe04121bc73ac0363d741e/src/array/shuffle.ts
     const idxs = [...this.#queue.idxs];
     let i = 0;
-    while (options.length < numOptions - 1 && i < idxs.length) {
+    while (optionsWithKeys.length < numOptions - 1 && i < idxs.length) {
       const j = randomInt(i, idxs.length);
       [idxs[i], idxs[j]] = [idxs[j], idxs[i]];
       const idx = idxs[i];
       i++;
 
       if (idx === question.idx) continue;
+
       const option = this.#itemIdxToItem(idx);
+      const keys = keyFns.map((keyFn) => keyFn(option));
+      if (keys.some((key, i) => key && keyss[i].has(key))) continue;
 
-      if (filterFn && !filterFn(question, option)) continue;
-
-      if (keyFn) {
-        const key = keyFn(option);
-        if (keys.has(key)) continue;
-
-        options.push(option);
-        keys.add(key);
-      } else {
-        options.push(option);
+      optionsWithKeys.push({ option, keys });
+      for (const [i, key] of keys.entries()) {
+        if (key) keyss[i].add(key);
       }
     }
 
     // add the real answer
-    if (keyFn) {
-      options.push(question);
-      return sortBy(options, [(option) => keyFn(option)]);
-    } else {
-      options.splice(randomInt(options.length + 1), 0, question);
-      return options;
-    }
+    optionsWithKeys.splice(randomInt(optionsWithKeys.length + 1), 0, {
+      option: question,
+      keys: keyFns.map((keyFn) => keyFn(question)),
+    });
+
+    return sortBy(
+      optionsWithKeys,
+      range(keyFns.length).map(
+        (i) =>
+          ({ keys }) =>
+            keys[i],
+      ),
+    ).map(({ option }) => option);
   }
 }
