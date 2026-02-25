@@ -29,11 +29,15 @@ function decodeSetting(encoded: string, type: "number"): number;
 function decodeSetting(encoded: string, type: "boolean"): boolean;
 function decodeSetting(
   encoded: string,
+  type: "string[]" | "number[]" | "boolean[]",
+): string[] | number[] | boolean[];
+function decodeSetting(
+  encoded: string,
   type: "string" | "number" | "boolean" | "string[]" | "number[]" | "boolean[]",
 ): string | number | boolean | string[] | number[] | boolean[];
 function decodeSetting(
   encoded: string,
-  type: "string" | "number" | "boolean" | "string[]" | "number[]" | "boolean[]" = "string",
+  type: "string" | "number" | "boolean" | "string[]" | "number[]" | "boolean[]",
 ): string | number | boolean | string[] | number[] | boolean[] {
   switch (type) {
     case "string":
@@ -51,67 +55,61 @@ function decodeSetting(
   }
 }
 
-export type SettingsSchemaField = {
+export interface SettingsSchemaField {
   paramKey: string;
-} & (
-  | { arrayType?: undefined; defaultValue: string }
-  | { arrayType?: undefined; defaultValue: number }
-  | { arrayType?: undefined; defaultValue: boolean }
-  | { arrayType: "string[]"; defaultValue: string[] }
-  | { arrayType: "number[]"; defaultValue: number[] }
-  | { arrayType: "boolean[]"; defaultValue: boolean[] }
-);
-
-interface SettingsSchema {
-  [K: string]: SettingsSchemaField | SettingsSchema;
+  defaultValue: string | number | boolean | string[] | number[] | boolean[];
 }
 
-type SettingsValue<Field extends SettingsSchemaField> = Field["defaultValue"] extends never[]
-  ? Field["arrayType"] extends "string[]"
-    ? string[]
-    : Field["arrayType"] extends "number[]"
-      ? number[]
-      : Field["arrayType"] extends "boolean[]"
-        ? boolean[]
-        : never
-  : Field["defaultValue"] extends true | false
-    ? boolean
-    : Field["defaultValue"];
+interface SettingsSchema {
+  [K: string]: SettingsSchema | SettingsSchemaField;
+}
 
-type Setting<SchemaField extends SettingsSchemaField> = Omit<
+type TSettingsValue<Field extends SettingsSchemaField> = Field["defaultValue"] extends boolean
+  ? boolean
+  : Field["defaultValue"];
+
+type TSetting<SchemaField extends SettingsSchemaField> = Omit<
   SchemaField,
   "defaultValue" | "value"
 > & {
-  defaultValue: SettingsValue<SchemaField>;
-  value: SettingsValue<SchemaField>;
+  defaultValue: TSettingsValue<SchemaField>;
+  value: TSettingsValue<SchemaField>;
 };
 
-type Settings<Sc extends SettingsSchema> = {
-  [K in keyof Sc]: Sc[K] extends SettingsSchemaField
-    ? Setting<Sc[K]>
-    : Sc[K] extends SettingsSchema
-      ? Settings<Sc[K]>
+type TSettings<Sc extends SettingsSchema> = {
+  [K in keyof Sc]: Sc[K] extends SettingsSchema
+    ? TSettings<Sc[K]>
+    : Sc[K] extends SettingsSchemaField
+      ? TSetting<Sc[K]>
       : never;
 };
 
 function readSetting(field: {
   paramKey: SettingsSchemaField["paramKey"];
-  arrayType?: SettingsSchemaField["arrayType"];
   defaultValue: SettingsSchemaField["defaultValue"];
 }) {
   const encoded = searchParams.get(field.paramKey);
-  return encoded !== null
-    ? decodeSetting(
-        encoded,
-        field.arrayType ?? (typeof field.defaultValue as "string" | "number" | "boolean"),
-      )
-    : cloneDeep(field.defaultValue);
+  if (encoded === null) return cloneDeep(field.defaultValue);
+
+  if (Array.isArray(field.defaultValue)) {
+    if (field.defaultValue.length === 0) return [];
+
+    const arrayType =
+      `${typeof field.defaultValue[0] as "string" | "number" | "boolean"}[]` as const;
+    const decoded = decodeSetting(encoded, arrayType);
+    // arrays in settings should be conceptually fixed in size, so invalidate mismatching-length arrays
+    if (decoded.length !== field.defaultValue.length) return cloneDeep(field.defaultValue);
+
+    return decoded;
+  } else {
+    return decodeSetting(encoded, typeof field.defaultValue as "string" | "number" | "boolean");
+  }
 }
 
 function isSchemaField(field: SettingsSchema | SettingsSchemaField): field is SettingsSchemaField {
   return field.paramKey !== undefined;
 }
-export function initSettings<Sc extends SettingsSchema>(schema: Sc): Settings<Sc> {
+export function initSettings<Sc extends SettingsSchema>(schema: Sc): TSettings<Sc> {
   return Object.fromEntries(
     Object.entries(schema).map(([key, field]) => [
       key,
@@ -123,35 +121,34 @@ export function initSettings<Sc extends SettingsSchema>(schema: Sc): Settings<Sc
           }
         : initSettings(field),
     ]),
-  ) as Settings<Sc>;
+  ) as TSettings<Sc>;
 }
 
-type ResultSetting = Setting<SettingsSchemaField>;
+type Setting = TSetting<SettingsSchemaField>;
 
-interface ResultSettings {
-  [K: string]: Setting<SettingsSchemaField> | ResultSettings;
+interface Settings {
+  [K: string]: Settings | Setting;
 }
 
-function isSetting(setting: ResultSetting | ResultSettings): setting is ResultSetting {
+function isSetting(setting: Settings | Setting): setting is Setting {
   return setting.paramKey !== undefined;
 }
 function settingsForEach(
-  settings: ResultSetting | ResultSettings,
-  callbackFn: (setting: ResultSetting) => void,
+  settings: Settings | Setting,
+  callbackFn: ((setting: Setting) => Setting["value"]) | ((setting: Setting) => void),
 ) {
   if (isSetting(settings)) {
     const result = callbackFn(settings);
-    if (result !== undefined) {
-      settings.value = result;
-    }
-  } else {
-    for (const setting of Object.values(settings)) {
-      settingsForEach(setting, callbackFn);
-    }
+    if (result !== undefined) settings.value = result;
+    return;
+  }
+
+  for (const setting of Object.values(settings)) {
+    settingsForEach(setting, callbackFn);
   }
 }
 
-export function useSyncSettings(settings: ResultSettings) {
+export function useSyncSettings(settings: Settings) {
   // read settings from URL
   onMount(() => {
     settingsForEach(settings, (setting) => readSetting(setting));

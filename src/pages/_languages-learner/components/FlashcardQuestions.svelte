@@ -39,12 +39,10 @@
       questionSettings: {
         paramKey: "questionSettings",
         defaultValue: schema.map(({ defaultPosition }) => defaultPosition === "question"),
-        arrayType: "boolean[]" as const,
       },
       optionSettings: {
         paramKey: "optionSettings",
         defaultValue: schema.map(({ defaultPosition }) => defaultPosition === "option"),
-        arrayType: "boolean[]" as const,
       },
       numOptions: { paramKey: "numOptions", defaultValue: 6 },
       onlyPinned: { paramKey: "onlyPinned", defaultValue: false },
