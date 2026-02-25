@@ -5,7 +5,6 @@
   import TypingQuestions from "../../components/TypingQuestions.svelte";
   import type { JapaneseWord } from "../../types";
   import FlashcardSettingsJP from "./FlashcardSettingsJP.svelte";
-  import GojuonQuestions from "./GojuonQuestions.svelte";
   import GojuonTable from "./GojuonTable.svelte";
   import { getKeymap } from "./keymap.svelte";
   import { getGojuons, getLetters } from "./letters.svelte";
@@ -34,7 +33,7 @@
 
   const settings = $state(
     initSettings({
-      mode: { paramKey: "mode", defaultValue: "typing" as "typing" | "gojuonTable" | "flashcards" },
+      mode: { paramKey: "mode", defaultValue: "typing" as "typing" | "flashcards" },
     }),
   );
   useSyncSettings(settings);
@@ -80,7 +79,6 @@
     label="Mode"
     valueToLabel={{
       typing: "Typing",
-      gojuonTable: "Gojuon Table",
       flashcards: "Flashcards",
     }}
   />
@@ -88,9 +86,6 @@
   {#if settings.mode.value === "typing"}
     <GojuonTable />
     <TypingQuestions {letters} {keymap} />
-  {:else if settings.mode.value === "gojuonTable"}
-    <GojuonTable />
-    <GojuonQuestions {gojuons} />
   {:else if settings.mode.value === "flashcards"}
     <FlashcardSettingsJP />
     <FlashcardQuestions
