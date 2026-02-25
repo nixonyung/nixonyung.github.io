@@ -1,39 +1,25 @@
 export const speech = new (class {
   availableVoices: SpeechSynthesisVoice[] = $state([]);
 
-  voice: SpeechSynthesisVoice | undefined = $state();
-  isSpeaking = $state(false);
-  err: SpeechSynthesisErrorEvent | undefined = $state();
+  voice: SpeechSynthesisVoice | null = $state(null);
+  rate = 0.8;
 
-  speak(letters: (string | undefined)[] | string | undefined) {
-    if (letters === undefined || speech.voice === undefined || speech.isSpeaking) return false;
+  setLang(lang: string) {
+    this.voice =
+      this.availableVoices.find(
+        (voice) => voice.lang === lang && voice.name.startsWith("Google"),
+      ) ?? null;
+  }
 
-    if (typeof letters === "string") {
-      letters = [letters];
-    }
+  speak(letter: string | undefined) {
+    if (!this.voice) return;
 
-    speech.isSpeaking = true;
-    for (const [i, letter] of letters.entries()) {
-      if (letters === undefined) continue;
+    const utter = new SpeechSynthesisUtterance(letter);
+    utter.voice = speech.voice;
+    utter.rate = this.rate;
 
-      const utter = new SpeechSynthesisUtterance(letter);
-      utter.voice = speech.voice;
-      utter.rate = 0.8;
-      utter.onstart = () => {
-        if (i === 0) speech.isSpeaking = true;
-      };
-      utter.onend = () => {
-        if (i === letters.length - 1) speech.isSpeaking = false;
-      };
-      utter.onerror = (err) => {
-        speech.err = err;
-        speech.isSpeaking = false;
-      };
-
-      speechSynthesis.speak(utter);
-    }
-
-    return true;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utter);
   }
 })();
 

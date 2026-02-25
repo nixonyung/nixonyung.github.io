@@ -1,11 +1,14 @@
 <script lang="ts">
   import { emitKeydown } from "@/lib/keyboard";
+  import type { ClassValue } from "svelte/elements";
   import type { Keymap } from "../types";
 
   const {
     keymap,
+    class: classList,
   }: {
     keymap?: Keymap;
+    class?: ClassValue;
   } = $props();
 
   let isShiftDown = $state(false);
@@ -20,7 +23,7 @@
   }}
 />
 
-<div class="w-fit p-2 ring ring-primary-lighter">
+<div class={["w-fit p-2 ring ring-primary-lighter", classList]}>
   <div class="flex flex-col gap-2">
     {#snippet key(key: string)}
       {@const upperCaseKey = key.toUpperCase()}
@@ -85,14 +88,6 @@
       {@render key("j")}
       {@render key("k")}
       {@render key("l")}
-
-      <!-- Enter -->
-      <button
-        class="ml-4 w-24 rounded border border-dashed opacity-50"
-        onclick={() => emitKeydown({ key: "Enter" })}
-      >
-        Enter
-      </button>
     </div>
 
     <!-- row 3 -->

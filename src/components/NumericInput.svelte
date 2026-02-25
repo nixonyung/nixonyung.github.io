@@ -47,9 +47,9 @@
   onmouseup={() => (isMousedown = false)}
 />
 
-<div class={["flex items-center-safe gap-1", classList]}>
+<div class={["flex items-center-safe", disabled && "opacity-50", classList]}>
   <button
-    class="flex cursor-ew-resize items-center-safe gap-1"
+    class={[!disabled && "cursor-ew-resize"]}
     onmousedown={({ screenX }) => {
       isMousedown = true;
       valueBeforeDrag = value;
@@ -57,28 +57,26 @@
     }}
   >
     <span>{label}:</span>
-    <span class="min-w-8 text-start">{value}</span>
+    <span class="ml-1 min-w-8 text-start">{value}</span>
   </button>
 
-  <div>
-    <!-- decrement button -->
-    <button
-      title="Decrement."
-      class="not-disabled:cursor-pointer disabled:opacity-50"
-      onclick={() => setValue(value - step)}
-      disabled={!canDecrement}
-    >
-      <Icon icon="icon-[heroicons--minus-circle]" class="align-middle text-xl" />
-    </button>
+  <!-- decrement button -->
+  <button
+    title="decrease {label}"
+    class="ml-3 not-disabled:cursor-pointer"
+    onclick={() => setValue(value - step)}
+    disabled={!canDecrement}
+  >
+    <Icon icon="icon-[heroicons--minus-circle]" class="align-middle text-xl" />
+  </button>
 
-    <!-- increment button -->
-    <button
-      title="Increment."
-      class="not-disabled:cursor-pointer disabled:opacity-50"
-      onclick={() => setValue(value + step)}
-      disabled={!canIncrement}
-    >
-      <Icon icon="icon-[heroicons--plus-circle]" class="align-middle text-xl" />
-    </button>
-  </div>
+  <!-- increment button -->
+  <button
+    title="increase {label}"
+    class="ml-1 not-disabled:cursor-pointer"
+    onclick={() => setValue(value + step)}
+    disabled={!canIncrement}
+  >
+    <Icon icon="icon-[heroicons--plus-circle]" class="align-middle text-xl" />
+  </button>
 </div>

@@ -78,7 +78,12 @@
 
 <ReferencesList
   references={{
-    平文式羅馬字: "https://www.wikiwand.com/zh-hk/articles/平文式罗马字#罗马字表",
+    "平文式羅馬字 - Wikipedia":
+      "https://zh.wikipedia.org/zh-hk/%E5%B9%B3%E6%96%87%E5%BC%8F%E7%BD%97%E9%A9%AC%E5%AD%97#%E7%BD%97%E9%A9%AC%E5%AD%97%E8%A1%A8",
+    "平假名 - 由來 - Wikipedia":
+      "https://zh.wikipedia.org/zh-hk/%E5%B9%B3%E5%81%87%E5%90%8D#%E5%B9%B3%E5%81%87%E5%90%8D%E4%B8%80%E8%A7%88",
+    "片假名 - 由來 - Wikipedia":
+      "https://zh.wikipedia.org/zh-hk/%E7%89%87%E5%81%87%E5%90%8D#%E7%89%87%E5%81%87%E5%90%8D%E4%B8%80%E8%A7%88",
   }}
 />
 
@@ -113,8 +118,6 @@
     </div>
   </div>
 
-  <!-- (ref.) [平假名](https://www.wikiwand.com/zh-hk/articles/平假名) -->
-  <!-- (ref.) [片假名](https://www.wikiwand.com/zh-hk/articles/片假名) -->
   <div class="flex">
     <GojuonRow
       bind:enabled={gojuonSettings.enableRows.rowN.value}

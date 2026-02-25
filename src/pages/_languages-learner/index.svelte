@@ -1,4 +1,5 @@
 <script lang="ts">
+  import NumericInput from "@/components/NumericInput.svelte";
   import SelectInput from "@/components/SelectInput.svelte";
   import { speech } from "@/lib/speech.svelte";
   import "@/styles.css";
@@ -11,14 +12,15 @@
     initSettings({
       // values of lang should match codes from SpeechSynthesis
       lang: { paramKey: "lang", defaultValue: "en-US" as "en-US" | "ja-JP" | "ko-KR" },
+      speechRate: { paramKey: "speechRate", defaultValue: speech.rate },
     }),
   );
   useSyncSettings(settings);
-
   $effect.pre(() => {
-    speech.voice = speech.availableVoices.find(
-      ({ lang, name }) => lang === settings?.lang.value && name.startsWith("Google"),
-    );
+    speech.setLang(settings.lang.value);
+  });
+  $effect.pre(() => {
+    speech.rate = settings.speechRate.value;
   });
 </script>
 
@@ -43,6 +45,17 @@
       label="Lang"
       options={["en-US", "ja-JP", "ko-KR"]}
     />
+    <NumericInput
+      bind:value={settings.speechRate.value}
+      label="Speech Rate"
+      min={0.6}
+      max={1.2}
+      step={0.2}
+      disabled={!speech.voice}
+    />
+    {#if !speech.voice}
+      <span class="-ml-6 text-red-700">SpeechSynthesis is not available.</span>
+    {/if}
   </div>
 
   {#if settings.lang.value === "en-US"}

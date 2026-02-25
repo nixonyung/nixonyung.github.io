@@ -431,7 +431,7 @@
 
   {#snippet entries(entries: Entry[])}
     <div class="flex flex-col items-start">
-      {#each entries as entry (entry)}
+      {#each entries as entry}
         {#if typeof entry === "string"}
           <span>{entry}</span>
         {:else if Array.isArray(entry) && entry.length}
@@ -496,7 +496,7 @@
             speech.speak(question!.pronunciation);
           }}
         >
-          <div class={["relative", speech.voice && "pr-3", speech.isSpeaking && "cursor-wait"]}>
+          <div class={["relative", speech.voice && "pr-3"]}>
             {@render entries(question.questionEntries)}
 
             <!-- pronunciation indicator -->
