@@ -5,23 +5,15 @@
   let {
     searchInput = $bindable(""),
     class: classList,
-    enabled = $bindable(false),
     isInvalid: isInvalid = false,
   }: {
     searchInput: string;
     class?: ClassValue;
-    enabled?: boolean;
     isInvalid?: boolean;
   } = $props();
-
-  $effect.pre(() => {
-    if (!enabled) {
-      searchInput = "";
-    }
-  });
 </script>
 
-{#if enabled}
+{#if searchInput}
   <div
     class={[
       "fixed right-0 bottom-0 left-0 flex items-center-safe gap-1.5 bg-primary-lighter px-1.5",
@@ -35,7 +27,7 @@
       title="Close"
       class="cursor-pointer px-2 py-1.5"
       onclick={() => {
-        enabled = false;
+        searchInput = "";
       }}
     >
       <Icon icon="icon-[icon-park-solid--close-one]" class="align-middle" />

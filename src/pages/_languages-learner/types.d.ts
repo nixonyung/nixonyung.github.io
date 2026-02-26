@@ -20,10 +20,9 @@ export interface JapaneseWord {
   rareKanjis?: string[];
   hiragana?: string;
   katakana?: string;
-  exampleUsages?: string[];
-  // TODO: to `preferHiragana`
   preferredForm?: "kanji" | "hiragana" | "katakana";
-  romanization?: string;
+  romanization: string;
+  exampleUsages?: string[];
 
   meaning?: string;
   derivedMeanings?: string[];

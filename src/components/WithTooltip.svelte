@@ -24,7 +24,7 @@
 
   let ref: HTMLDivElement | undefined = $state();
   export function scrollIntoView() {
-    ref?.scrollIntoView({ block: "nearest" });
+    ref?.scrollIntoView({ block: "nearest", inline: "nearest" });
   }
 </script>
 

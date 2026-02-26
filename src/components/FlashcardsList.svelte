@@ -7,7 +7,7 @@
 
   let {
     length,
-    maxNumRows = 5,
+    maxNumRows = 11,
     focusedIdx,
     class: classList,
     row,

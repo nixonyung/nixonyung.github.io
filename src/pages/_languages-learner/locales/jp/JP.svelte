@@ -89,65 +89,44 @@
   {:else if settings.mode.value === "flashcards"}
     <FlashcardSettingsJP />
     <FlashcardQuestions
-      {words}
-      wordToPronunciationFn={({ hiragana, katakana, kanjis, romanization }) =>
-        hiragana ?? katakana ?? kanjis?.[0] ?? romanization}
-      wordToRomanizationFn={({ romanization }) => romanization}
-      schema={[
-        {
-          label: "kanji",
-          valueFn: ({ kanjis, rareKanjis }) => {
-            const values = [...(kanjis ?? []), ...(rareKanjis ?? [])];
-            return values.length ? values.join(" / ") : undefined;
-          },
+      flashcards={words.map(
+        ({
+          preferredForm,
+          kanjis,
+          rareKanjis,
+          hiragana,
+          katakana,
+          romanization,
+          meaning,
+          derivedMeanings,
+          exampleUsages,
+        }) => {
+          let question: string = "";
+          let pronunciation: string = "";
+          switch (true) {
+            case preferredForm === "kanji" || (preferredForm === undefined && !!kanjis?.length):
+              question = [...kanjis!, ...(rareKanjis ?? [])].join(" / ");
+              pronunciation = [`${hiragana ?? katakana}`, `(${romanization})`].join(" ");
+              break;
+            case preferredForm === "hiragana" || (preferredForm === undefined && !kanjis?.length):
+              question = [hiragana!, ...(kanjis ?? []), ...(rareKanjis ?? [])].join(" / ");
+              pronunciation = `(${romanization})`;
+              break;
+            case preferredForm === "katakana" || (preferredForm === undefined && !kanjis?.length):
+              question = [katakana!, ...(kanjis ?? []), ...(rareKanjis ?? [])].join(" / ");
+              pronunciation = `(${romanization})`;
+              break;
+          }
+
+          return {
+            question,
+            answer: [meaning, ...(derivedMeanings ?? [])].join(" / "),
+            notes: exampleUsages ?? [],
+            utterance: hiragana ?? katakana ?? kanjis?.[0] ?? rareKanjis?.[0] ?? romanization,
+            pronunciation,
+          };
         },
-        {
-          label: "kana",
-          valueFn: ({ hiragana, katakana }) => {
-            const values = [hiragana, katakana].filter((kana) => kana !== undefined);
-            return values.length ? values.join(" / ") : undefined;
-          },
-        },
-        {
-          label: "preferred written form",
-          valueFn: ({ kanjis, hiragana, katakana, preferredForm }) => {
-            switch (preferredForm) {
-              case "kanji":
-                return kanjis?.join(" / ");
-              case "hiragana":
-                return hiragana;
-              case "katakana":
-                return katakana;
-              case undefined:
-                return kanjis?.join(" / ") ?? hiragana ?? katakana ?? "";
-            }
-          },
-          defaultPosition: "question",
-        },
-        {
-          label: "example usages",
-          valueFn: ({ exampleUsages }) => exampleUsages ?? [],
-          defaultPosition: "question",
-        },
-        {
-          label: "meaning",
-          valueFn: ({ meaning }) => meaning,
-          defaultPosition: "option",
-        },
-        {
-          label: "derived meanings",
-          valueFn: ({ derivedMeanings }) => derivedMeanings ?? [],
-          defaultPosition: "option",
-        },
-        {
-          label: "grammar question",
-          valueFn: ({ question }) => question,
-        },
-        {
-          label: "grammar answer",
-          valueFn: ({ answer }) => answer,
-        },
-      ]}
+      )}
     />
   {/if}
 </div>

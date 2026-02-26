@@ -244,8 +244,7 @@
     Guides: {
       "Verb Conjugations": {
         "Verb Conjugation - Tofugu": "https://www.tofugu.com/japanese-grammar/verb-conjugation-groups/",
-        "Japanese conjugation revision sheet - Wikipedia":
-          "https://www.wikiwand.com/en/articles/Japanese_conjugation#/media/File:AMB_Japanese_Verbs.pdf",
+        "Japanese conjugation revision sheet - Wikipedia": "https://en.wikipedia.org/wiki/File:AMB_Japanese_Verbs.pdf",
       },
     },
     "Google Search with AI Overview": undefined,

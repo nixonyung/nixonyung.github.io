@@ -3,8 +3,6 @@ import type { Gojuon, Letter } from "../../types";
 import { gojuonSettings } from "./GojuonTable.svelte";
 
 export function getGojuons(): Gojuon[] {
-  // (ref.) [平文式羅馬字](https://www.wikiwand.com/zh-hk/articles/平文式罗马字#罗马字表)
-
   const gojuons: Gojuon[] = [];
 
   // 平假名 Hiragana
@@ -217,8 +215,6 @@ export function getGojuons(): Gojuon[] {
 }
 
 export const getLetters = (): Letter[] => {
-  // (ref.) [平文式羅馬字](https://www.wikiwand.com/zh-hk/articles/平文式罗马字#罗马字表)
-
   const letters: Letter[] = cloneDeep(getGojuons());
 
   // Hiragana - 濁音 Dakuten and 半濁音 Handakuten

@@ -1,16 +1,21 @@
 <script lang="ts">
-  import type { Snippet } from "@astrojs/svelte/svelte-shims.d.ts";
   import type { ClassValue } from "svelte/elements";
+  import Icon from "./Icon.svelte";
 
   const {
-    noPadding = false,
+    text,
+    icon,
     class: classList,
-    children,
   }: {
-    noPadding?: boolean;
+    text?: string;
+    icon?: string;
     class?: ClassValue;
-    children: Snippet;
   } = $props();
 </script>
 
-<kbd class={["rounded font-mono ring", !noPadding && "px-1", classList]}>{@render children()}</kbd>
+{#if text}
+  <kbd class={["rounded font-mono ring", text && "px-1", classList]}>{text}</kbd>
+{/if}
+{#if icon}
+  <kbd class={["rounded font-mono ring", classList]}><Icon {icon} /></kbd>
+{/if}
