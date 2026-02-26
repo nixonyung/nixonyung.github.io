@@ -206,9 +206,9 @@ export function appendNounsObjects(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.nouns.objects.equipments.value) {
     words.push(
-      { kanjis: ["道具"], hiragana: "どうぐ", romanization: "dougu", meaning: "tool" },
-      { kanjis: ["用具"], hiragana: "ようぐ", romanization: "yougu", meaning: "tool" },
-      { kanjis: ["工具"], hiragana: "こうぐ", romanization: "kougu", meaning: "tool" },
+      { kanjis: ["道具"], hiragana: "どうぐ", romanization: "dougu", meaning: "tool / gadget / prop" },
+      { kanjis: ["用具"], hiragana: "ようぐ", romanization: "yougu", meaning: "tool / equipment" },
+      { kanjis: ["工具"], hiragana: "こうぐ", romanization: "kougu", meaning: "tool / equipment (engineering)" },
 
       { kanjis: ["荷物"], hiragana: "にもつ", romanization: "nimotsu", meaning: "luggage" },
 
@@ -261,7 +261,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["皿"], rareKanjis: ["盤"], hiragana: "さら", romanization: "sara", meaning: "dish / plate" },
       { kanjis: ["灰皿"], hiragana: "はいざら", romanization: "haizara", meaning: "ashtray" },
       { kanjis: ["棚"], hiragana: "たな", romanization: "tana", meaning: "shelf / rack" },
-      { katakana: "ポスト", romanization: "posuto", meaning: "postbox (post)" },
+      { katakana: "ポスト", romanization: "posuto", meaning: "postbox" },
 
       // paper-based
       { kanjis: ["紙"], hiragana: "かみ", romanization: "kami", meaning: "paper" },
@@ -298,7 +298,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
 
       // electronics
       { kanjis: ["電気"], hiragana: "でんき", romanization: "denki", meaning: "electricity" },
-      { kanjis: ["電池"], hiragana: "でんち", romanization: "denchi", meaning: "battery" },
+      { kanjis: ["電池"], hiragana: "でんち", romanization: "denchi", meaning: "battery / cell" },
       { kanjis: ["時計"], rareKanjis: ["土圭"], hiragana: "とけい", romanization: "tokei", meaning: "clock / watch" },
       { kanjis: ["電話"], hiragana: "でんわ", romanization: "denwa", meaning: "telephone", derivedMeanings: ["phone call"] },
       { katakana: "スマートフォン", romanization: "sumaatofon", meaning: "smartphone" },
@@ -357,8 +357,9 @@ export function appendNounsObjects(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.objects.arts.value) {
     words.push(
       // drawings
-      { kanjis: ["絵", "画"], hiragana: "え", romanization: "e", meaning: "picture" },
-      { kanjis: ["絵画"], hiragana: "かいが", romanization: "kaiga", meaning: "painting" },
+      { kanjis: ["図"], hiragana: "ず", romanization: "zu", meaning: "picture" },
+      { kanjis: ["絵", "画"], hiragana: "え", romanization: "e", meaning: "drawing / painting" },
+      { kanjis: ["絵画"], hiragana: "かいが", romanization: "kaiga", meaning: "drawing / painting" },
       { kanjis: ["写真"], hiragana: "しゃしん", romanization: "shashin", meaning: "photograph" },
       { kanjis: ["漫画"], hiragana: "まんが", katakana: "マンガ", romanization: "manga", meaning: "manga" },
       { katakana: "コンテ", romanization: "konte", meaning: 'storyboard ("continuity")', exampleUsages: ["絵コンテ / 画コンテ"] },

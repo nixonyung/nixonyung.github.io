@@ -11,7 +11,7 @@ export function appendFunctionalLogical(words: JapaneseWord[]) {
       // because
       { hiragana: "ので", romanization: "node", meaning: "because", exampleUsages: ["(reason) ので/なので [Clause]"] },
       { hiragana: "だって", romanization: "datte", meaning: "because (spoken, casual)" },
-      { hiragana: "から", romanization: "kara", meaning: "since / so (casual)", derivedMeanings: ["thanks to (someone)"] },
+      { hiragana: "から", romanization: "kara", meaning: "since / so (casual)", derivedMeanings: ["because I think/feel ...", "thanks to someone"] },
       { hiragana: "ため", preferredForm: "hiragana", kanjis: ["為"], romanization: "tame", meaning: "because", exampleUsages: ["(reason) ため [Clause]", "[Noun] のための [Noun]"] },
       { hiragana: "のせいで", rareKanjis: ["の所為で"], romanization: "noseide", meaning: "due to", exampleUsages: ["[Noun] のせいで [Clause]"] },
       { hiragana: "なぜなら", preferredForm: "hiragana", kanjis: ["何故なら"], romanization: "nazenara", meaning: "because (formal)" },
