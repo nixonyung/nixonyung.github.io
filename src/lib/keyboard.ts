@@ -7,9 +7,10 @@ export function onkeydown<T extends Element>(
     const { key, ctrlKey, metaKey } = ev;
 
     if (
-      // ignore refresh (Ctrl-r / Cmd-r)
-      ((ctrlKey || metaKey) && (key === "r" || key === "R")) ||
-      // use default behaviour when modifying settings
+      // ignore refresh (Ctrl-r / Cmd-r), copy and paste (Ctrl-c/v / Cmd-c/v)
+      ((ctrlKey || metaKey) &&
+        (key === "r" || key === "R" || key === "c" || key === "C" || key === "v" || key === "V")) ||
+      // use default behaviour in input elements
       document.activeElement instanceof HTMLInputElement
     ) {
       return;

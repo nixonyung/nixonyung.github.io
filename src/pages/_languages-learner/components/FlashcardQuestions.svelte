@@ -257,19 +257,16 @@
   onkeydown={onkeydown((ev) => {
     if (!question) return;
 
-    const { key, ctrlKey, altKey } = ev;
+    const { key, ctrlKey, altKey, metaKey } = ev;
 
     switch (true) {
       // search input
-      case !!key.match(/^[a-z0-9/()\[\]]$/):
+      case !!key.match(/^[a-z0-9/()\[\]]$/) && !ctrlKey && !altKey && !metaKey:
         searchInput += key;
 
         break;
-      case key === " ":
-        const lastChar = searchInput.at(-1);
-        if (lastChar === undefined || lastChar !== " ") {
-          searchInput += " ";
-        }
+      case key === " " && searchInput.length !== 0:
+        if (searchInput.at(-1) !== " ") searchInput += " ";
 
         break;
       case key === "Backspace" && !ctrlKey:
@@ -282,14 +279,14 @@
         break;
 
       // manually select option
-      case key === "ArrowDown":
+      case key === "ArrowDown" || key === "J":
         ev.preventDefault();
         ev.stopPropagation();
 
         moveOptionSelectedIdx("down");
 
         break;
-      case key === "ArrowUp":
+      case key === "ArrowUp" || key === "K":
         ev.preventDefault();
         ev.stopPropagation();
 
@@ -298,7 +295,7 @@
         break;
 
       // submit
-      case key === "Enter":
+      case key === "Enter" || (key === " " && searchInput.length === 0):
         ev.preventDefault();
         ev.stopPropagation();
 
@@ -311,19 +308,18 @@
 
         break;
 
-      // speech
-      case key === "R":
-        ev.preventDefault();
-        ev.stopPropagation();
+      // hide question
+      case key === "H":
+        settings.onlySpeech.value = !settings.onlySpeech.value;
 
+        break;
+      // speak
+      case key === "R":
         speechBtnRef?.click();
 
         break;
       // pin
       case key === "P":
-        ev.preventDefault();
-        ev.stopPropagation();
-
         pinBtnRef?.click();
 
         break;
@@ -341,8 +337,16 @@
     <span class="mt-3">Selecting an option:</span>
     <span class="ml-3">
       <KBD icon="icon-[icon-park-outline--arrow-up]" />
-      <span>+</span>
+      <span>,</span>
       <KBD icon="icon-[icon-park-outline--arrow-down]" />
+      <span class="mx-1">/</span>
+      <KBD text="Shift" />
+      <span>+</span>
+      <KBD text="j" />
+      <span>,</span>
+      <KBD text="Shift" />
+      <span>+</span>
+      <KBD text="k" />
       to select an option, ...
     </span>
     <span class="ml-3">
@@ -356,10 +360,18 @@
     </span>
     <span>
       <KBD text="Enter" />
-      to submit.
+      <span class="mx-1">/</span>
+      <KBD text="Space" />
+      (only when not searching) to submit.
     </span>
 
     <span class="mt-3">
+      <KBD text="Shift" />
+      <span>+</span>
+      <KBD text="h" />
+      to toggle show/hide question.
+    </span>
+    <span>
       <KBD text="Shift" />
       <span>+</span>
       <KBD text="r" />
