@@ -31,6 +31,7 @@ export function appendFunctionalManner(words: JapaneseWord[]) {
       { hiragana: "せっせと", romanization: "setseto", meaning: "diligently / industriously", exampleUsages: ["せっせと勉強します"] },
 
       // onomatopoeias
+      { hiragana: "わくわく", katakana: "ワクワク", romanization: "wakuwaku", meaning: "exciting" },
       { hiragana: "どんどん", katakana: "ドンドン", romanization: "dondon", meaning: "(drumming sound) / quickly" },
       { hiragana: "ぼちぼち", romanization: "bochibochi", meaning: "(water dripping sound) leisurely / gradually", derivedMeanings: ["so-so"] },
       { hiragana: "すやすや", romanization: "suyasuya", meaning: "(sleeping sound, quietly)" },

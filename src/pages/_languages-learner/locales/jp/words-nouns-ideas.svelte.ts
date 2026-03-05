@@ -43,8 +43,9 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["表現"], hiragana: "ひょうげん", romanization: "hyougen", meaning: "expression / representation" },
 
       { kanjis: ["泣き"], hiragana: "なき", romanization: "naki", meaning: "crying" },
+      { kanjis: ["眼差し", "目差し", "目差", "眼指"], hiragana: "まなざし", romanization: "manazashi", meaning: "a gaze", exampleUsages: ["優しい眼差し"] },
 
-      { kanjis: ["離別"], hiragana: "りべつ", romanization: "ribetsu", meaning: "separation (of relationships)" },
+      { kanjis: ["離別"], hiragana: "りべつ", romanization: "ribetsu", meaning: "parting (of relationships)" },
       { kanjis: ["分離"], hiragana: "ぶんり", romanization: "bunri", meaning: "detachment" },
       { kanjis: ["隔離"], hiragana: "かくり", romanization: "kakuri", meaning: "quarantine" },
       { kanjis: ["死"], hiragana: "し", romanization: "shi", meaning: "death" },
@@ -78,7 +79,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
 
       { kanjis: ["実際"], hiragana: "じっさい", romanization: "jissai", meaning: "actuality", exampleUsages: ["実際に [Verb Clause]..."] },
       { kanjis: ["絶対"], hiragana: "ぜったい", romanization: "zettai", meaning: "absoluteness", exampleUsages: ["絶対に [Verb Clause]..."] },
-      { kanjis: ["真面目"], hiragana: "まじめ", katakana: "マジメ", romanization: "majime", meaning: "truthfulness" },
+      { kanjis: ["真相"], hiragana: "しんそう", romanization: "マジメ", meaning: "truth" },
+      { kanjis: ["真面目"], hiragana: "まじめ", katakana: "マジメ", romanization: "majime", meaning: "one's true self" },
 
       { kanjis: ["匂い", "臭い"], hiragana: "におい", romanization: "nioi", meaning: "scent / odour" },
 
