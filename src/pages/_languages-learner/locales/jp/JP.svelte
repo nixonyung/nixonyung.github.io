@@ -7,7 +7,7 @@
   import FlashcardSettingsJP from "./FlashcardSettingsJP.svelte";
   import GojuonTable from "./GojuonTable.svelte";
   import { getKeymap } from "./keymap.svelte";
-  import { getGojuons, getLetters } from "./letters.svelte";
+  import { getLetters } from "./letters.svelte";
   import { appendAdjectives } from "./words-adjectives.svelte";
   import { appendExpressions } from "./words-expressions.svelte";
   import { appendFunctionalAdpositions } from "./words-functional-adpositions.svelte";
@@ -40,7 +40,6 @@
 
   const keymap = $derived(getKeymap());
   const letters = $derived(getLetters());
-  const gojuons = $derived(getGojuons());
   const words = $derived.by(() => {
     const words: JapaneseWord[] = [];
 
@@ -101,8 +100,8 @@
           derivedMeanings,
           exampleUsages,
         }) => {
-          let question: string = "";
-          let pronunciation: string = "";
+          let question = "";
+          let pronunciation = "";
           switch (true) {
             case preferredForm === "kanji" || (preferredForm === undefined && !!kanjis?.length):
               question = [...kanjis!, ...(rareKanjis ?? [])].join(" / ");

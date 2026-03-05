@@ -163,7 +163,6 @@
     optionRefs[optionSelectedIdx!]?.scrollIntoView();
   }
 
-  let isSearchMode = $state(false);
   let searchInput = $state("");
   const areOptionMatchingCommand = $derived.by(() => {
     question;
@@ -238,7 +237,6 @@
       showPronunciation = false;
       optionSelectedIdx = undefined;
       areWrongOption = Array.from({ length: options.length }, () => false);
-      isSearchMode = false;
       if (settings.onlySpeech.value) {
         tick().then(() => speechBtnRef?.click());
       }
@@ -261,7 +259,7 @@
 
     switch (true) {
       // search input
-      case !!key.match(/^[a-z0-9/()\[\]]$/) && !ctrlKey && !altKey && !metaKey:
+      case !!key.match(/^[a-z0-9/()[\]]$/) && !ctrlKey && !altKey && !metaKey:
         searchInput += key;
 
         break;
@@ -496,7 +494,7 @@
           variant={areWrongOption[i] ? "error" : "primary-lighter"}
           class={[
             "scroll-m-60",
-            (!!searchInput ? areOptionMatchingCommand[i] : i === optionSelectedIdx) &&
+            (searchInput ? areOptionMatchingCommand[i] : i === optionSelectedIdx) &&
               "outline-2 outline-primary-content/75",
           ]}
           onclick={() => {
