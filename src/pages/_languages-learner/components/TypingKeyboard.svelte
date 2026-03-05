@@ -1,14 +1,13 @@
 <script lang="ts">
   import { emitKeydown } from "@/lib/keyboard";
-  import type { ClassValue } from "svelte/elements";
   import type { Keymap } from "../types";
 
   const {
     keymap,
-    class: classList,
+    includeNumbers,
   }: {
-    keymap?: Keymap;
-    class?: ClassValue;
+    keymap: Keymap | undefined;
+    includeNumbers: boolean;
   } = $props();
 
   let isShiftDown = $state(false);
@@ -23,49 +22,51 @@
   }}
 />
 
-<div class={["w-fit p-2 ring ring-primary-lighter", classList]}>
+<div class="w-fit px-6 py-3 ring ring-primary-lighter">
   <div class="flex flex-col gap-2">
-    {#snippet key(key: string)}
-      {@const upperCaseKey = key.toUpperCase()}
-      {@const mappedKey = keymap ? keymap[key] : key}
-      {@const mappedUpperCaseKey = keymap ? keymap[upperCaseKey] : upperCaseKey}
+    {#snippet key(ch: string)}
+      {@const upperCaseCh = ch.toUpperCase()}
+      {@const mappedCh = keymap ? keymap[ch] : ch}
+      {@const mappedUpperCaseCh = keymap ? keymap[upperCaseCh] : upperCaseCh}
 
       <button
         class="relative grid size-12 place-items-center-safe rounded ring ring-primary-content"
         onclick={() => {
-          emitKeydown({ key: isShiftDown ? upperCaseKey : key });
+          emitKeydown({ key: isShiftDown ? upperCaseCh : ch });
           isShiftDown = false;
         }}
       >
-        <span class="text-xl">{isShiftDown ? mappedUpperCaseKey : mappedKey}</span>
+        <span class="text-xl">{isShiftDown ? mappedUpperCaseCh : mappedCh}</span>
 
         <!-- key hint -->
-        {#if isShiftDown && mappedUpperCaseKey && mappedUpperCaseKey !== upperCaseKey}
-          <span class="absolute top-0 left-1 text-xs font-light">{upperCaseKey}</span>
-        {:else if !isShiftDown && mappedKey !== key}
-          <span class="absolute top-0 left-1 text-xs font-light">{key}</span>
+        {#if isShiftDown && mappedUpperCaseCh && mappedUpperCaseCh !== upperCaseCh}
+          <span class="absolute top-0 left-1 text-xs font-light">{upperCaseCh}</span>
+        {:else if !isShiftDown && mappedCh !== ch}
+          <span class="absolute top-0 left-1 text-xs font-light">{ch}</span>
         {/if}
 
         <!-- bump -->
-        {#if key === "f" || key === "j"}
+        {#if ch === "f" || ch === "j"}
           <div class="absolute bottom-1.5 w-2.5 border-b"></div>
         {/if}
       </button>
     {/snippet}
 
-    <!-- row 1 -->
+    {#if includeNumbers}
+      <!-- row 1234 -->
+      <div class="flex gap-1">
+        {#each ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"] as ch (ch)}
+          {@render key(ch)}
+        {/each}
+      </div>
+    {/if}
+
+    <!-- row QWER -->
     <div class="flex gap-1">
       <div class="w-6"></div>
-      {@render key("q")}
-      {@render key("w")}
-      {@render key("e")}
-      {@render key("r")}
-      {@render key("t")}
-      {@render key("y")}
-      {@render key("u")}
-      {@render key("i")}
-      {@render key("o")}
-      {@render key("p")}
+      {#each ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"] as ch (ch)}
+        {@render key(ch)}
+      {/each}
 
       <!-- Backspace -->
       <button
@@ -76,21 +77,15 @@
       </button>
     </div>
 
-    <!-- row 2 -->
+    <!-- row ASDF -->
     <div class="flex gap-1">
       <div class="w-12"></div>
-      {@render key("a")}
-      {@render key("s")}
-      {@render key("d")}
-      {@render key("f")}
-      {@render key("g")}
-      {@render key("h")}
-      {@render key("j")}
-      {@render key("k")}
-      {@render key("l")}
+      {#each ["a", "s", "d", "f", "g", "h", "j", "k", "l"] as ch (ch)}
+        {@render key(ch)}
+      {/each}
     </div>
 
-    <!-- row 3 -->
+    <!-- row ZXCV -->
     <div class="flex gap-1">
       <!-- Shift -->
       <button
@@ -103,13 +98,9 @@
         Shift
       </button>
 
-      {@render key("z")}
-      {@render key("x")}
-      {@render key("c")}
-      {@render key("v")}
-      {@render key("b")}
-      {@render key("n")}
-      {@render key("m")}
+      {#each ["z", "x", "c", "v", "b", "n", "m"] as ch (ch)}
+        {@render key(ch)}
+      {/each}
     </div>
 
     <!-- Space -->

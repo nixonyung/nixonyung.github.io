@@ -16,14 +16,17 @@
   const {
     letters,
     keymap,
+    includeNumbers = false,
   }: {
     letters: Letter[];
     keymap?: Keymap;
+    includeNumbers?: boolean;
   } = $props();
 
   const settings = $state(
     initSettings({
       speakOnCorrect: { paramKey: "speakOnCorrect", defaultValue: false },
+      ignoreTypos: { paramKey: "ignoreTypos", defaultValue: false },
     }),
   );
   useSyncSettings(settings);
@@ -61,7 +64,9 @@
 
 <svelte:window
   onkeydown={onkeydown(({ key, ctrlKey, metaKey }) => {
-    if (key.match(/^[a-zA-Z]$/)) {
+    if (key.match(/^[0-9a-zA-Z]$/)) {
+      if (settings.ignoreTypos.value && key !== questions.top?.input[input.length]) return;
+
       input += key;
       if (input === questions.top?.input) {
         if (settings.speakOnCorrect.value) {
@@ -84,11 +89,10 @@
 />
 
 <div>
-  <hr class="mt-3 opacity-50" />
-
   <!-- settings -->
-  <div class="mt-6 flex items-center-safe gap-9">
-    <CheckboxInput bind:checked={settings.speakOnCorrect.value} label="Auto speak on correct" />
+  <div class="flex items-center-safe gap-4.5">
+    <CheckboxInput bind:checked={settings.speakOnCorrect.value} label="auto speak on correct" />
+    <CheckboxInput bind:checked={settings.ignoreTypos.value} label="ignore typos" />
   </div>
 
   <hr class="mt-6 opacity-50" />
@@ -145,7 +149,7 @@
     })}
     {#each questions
       .items()
-      .slice(0, prevQuestion !== undefined ? NUM_QUESTIONS - 1 : NUM_QUESTIONS) as q, i}
+      .slice(0, prevQuestion !== undefined ? NUM_QUESTIONS - 1 : NUM_QUESTIONS) as q, i (i)}
       {@render question({
         question: q,
         isCurr: i === 0,
@@ -153,5 +157,6 @@
     {/each}
   </div>
 
-  <TypingKeyboard {keymap} class="mt-9" />
+  <div class="h-9"></div>
+  <TypingKeyboard {keymap} {includeNumbers} />
 </div>
