@@ -25,16 +25,19 @@
 
   const settings = $state(
     initSettings({
-      speakOnCorrect: { paramKey: "speakOnCorrect", defaultValue: false },
+      hideLayout: { paramKey: "hideLayout", defaultValue: false },
+      showCorrectKey: { paramKey: "showCorrectKey", defaultValue: false },
       ignoreTypos: { paramKey: "ignoreTypos", defaultValue: false },
+      speakOnCorrect: { paramKey: "speakOnCorrect", defaultValue: false },
     }),
   );
   useSyncSettings(settings);
 
   const questionsQueue = $derived(
     new QuestionsQueue(
-      letters.map(({ letter, actualPronunciation, romanization, actualInput }) => ({
+      letters.map(({ letter, svgPath: svg, actualPronunciation, romanization, actualInput }) => ({
         letter,
+        svgPath: svg,
         pronunciation: actualPronunciation ?? letter,
         romanization: romanization,
         input: actualInput ?? romanization ?? letter,
@@ -91,8 +94,10 @@
 <div>
   <!-- settings -->
   <div class="flex items-center-safe gap-4.5">
-    <CheckboxInput bind:checked={settings.speakOnCorrect.value} label="auto speak on correct" />
+    <CheckboxInput bind:checked={settings.hideLayout.value} label="hide keyboard layout" />
+    <CheckboxInput bind:checked={settings.showCorrectKey.value} label="show correct key" />
     <CheckboxInput bind:checked={settings.ignoreTypos.value} label="ignore typos" />
+    <CheckboxInput bind:checked={settings.speakOnCorrect.value} label="auto speak on correct" />
   </div>
 
   <hr class="mt-6 opacity-50" />
@@ -112,16 +117,23 @@
       {#if question}
         <button
           class={[
-            "relative flex w-16 flex-col items-center-safe rounded ring",
-            isPrev ? "ring-green-400" : isCurr && !!input && "ring-red-400",
-            isCurr ? "opacity-100" : "opacity-50",
+            "relative flex w-fit min-w-16 flex-col items-center-safe rounded px-1 ring",
+            isPrev ? "scale-75 opacity-50 ring-green-400" : isCurr && !!input && "ring-red-400",
             question.pronunciation && speech.voice && "cursor-pointer",
           ]}
           onclick={() => speech.speak(question.pronunciation)}
         >
           <!-- letter -->
           <div class="grid h-12 place-items-center-safe">
-            <span class="text-xl">{question.letter}</span>
+            {#if question.svgPath}
+              <img
+                src={question.svgPath}
+                alt={question.letter}
+                class="h-10 brightness-125 contrast-200 dark:hue-rotate-180 dark:invert-100"
+              />
+            {:else}
+              <span class="text-3xl">{question.letter}</span>
+            {/if}
           </div>
           <!-- romanization -->
           <div class="h-6">
@@ -158,5 +170,11 @@
   </div>
 
   <div class="h-9"></div>
-  <TypingKeyboard {keymap} {includeNumbers} />
+  <TypingKeyboard
+    {keymap}
+    {includeNumbers}
+    hideLayout={settings.hideLayout.value}
+    showCorrectKey={settings.showCorrectKey.value}
+    correctKey={questions.top?.input[input.length]}
+  />
 </div>

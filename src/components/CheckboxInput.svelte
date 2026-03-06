@@ -7,6 +7,7 @@
     checked = $bindable(),
     label,
     tooltip,
+    customTooltip,
     class: classList,
     disabled,
   }: WithTooltipProps & {
@@ -17,7 +18,7 @@
   } = $props();
 </script>
 
-<WithTooltip {tooltip} {disabled}>
+<WithTooltip {tooltip} {customTooltip} {disabled}>
   <button
     class={[
       "flex items-center-safe gap-1",

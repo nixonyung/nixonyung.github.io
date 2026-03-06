@@ -5,9 +5,17 @@
   const {
     keymap,
     includeNumbers,
+    hideLayout,
+    showCorrectKey,
+    correctKey,
   }: {
     keymap: Keymap | undefined;
+
     includeNumbers: boolean;
+    hideLayout: boolean;
+
+    showCorrectKey: boolean;
+    correctKey?: string;
   } = $props();
 
   let isShiftDown = $state(false);
@@ -30,13 +38,18 @@
       {@const mappedUpperCaseCh = keymap ? keymap[upperCaseCh] : upperCaseCh}
 
       <button
-        class="relative grid size-12 place-items-center-safe rounded ring ring-primary-content"
+        class={[
+          "relative grid size-12 place-items-center-safe rounded ring ring-primary-content",
+          showCorrectKey && ch === correctKey && "bg-green-400/25",
+        ]}
         onclick={() => {
           emitKeydown({ key: isShiftDown ? upperCaseCh : ch });
           isShiftDown = false;
         }}
       >
-        <span class="text-xl">{isShiftDown ? mappedUpperCaseCh : mappedCh}</span>
+        {#if !hideLayout}
+          <span class="text-xl">{isShiftDown ? mappedUpperCaseCh : mappedCh}</span>
+        {/if}
 
         <!-- key hint -->
         {#if isShiftDown && mappedUpperCaseCh && mappedUpperCaseCh !== upperCaseCh}

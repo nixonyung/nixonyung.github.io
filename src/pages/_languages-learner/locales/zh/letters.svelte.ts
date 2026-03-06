@@ -1,0 +1,693 @@
+import type { Letter } from "../../types";
+
+import { letterSettings } from "./ZH.svelte";
+
+// (ref.) [倉頡輸入法/輔助字形](https://zh.wikibooks.org/zh-hk/%E5%80%89%E9%A0%A1%E8%BC%B8%E5%85%A5%E6%B3%95/%E8%BC%94%E5%8A%A9%E5%AD%97%E5%BD%A2)
+export function getLetters() {
+  const letters: Letter[] = [];
+
+  letters.push({ letter: "日", actualInput: "a" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "日", svgPath: "/zh/a/Cjem-a0-1.svg", actualInput: "a" },
+      { letter: "日", svgPath: "/zh/a/Cjem-a0-2.svg", actualInput: "a" },
+      { letter: "日", svgPath: "/zh/a/Cjem-a0-3.svg", actualInput: "a" },
+      { letter: "日", svgPath: "/zh/a/Cjem-a1-1.svg", actualInput: "a" },
+      { letter: "日", svgPath: "/zh/a/Cjem-a2-1.svg", actualInput: "a" },
+      { letter: "日", svgPath: "/zh/a/Cjem-a3-1.svg", actualInput: "a" },
+      { letter: "日", svgPath: "/zh/a/Cjem-a3-2.svg", actualInput: "a" },
+      { letter: "日", svgPath: "/zh/a/Cjem-a3-3.svg", actualInput: "a" },
+      { letter: "日", svgPath: "/zh/a/Cjem-a3-4.svg", actualInput: "a" },
+      { letter: "日", svgPath: "/zh/a/Cjem-a3-5.svg", actualInput: "a" },
+    );
+  }
+
+  letters.push({ letter: "月", actualInput: "b" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "月", svgPath: "/zh/b/Cjem-b1-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b2-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b3-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b6-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b6-2.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b7-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b8-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b8-2.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b9-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b10-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b11-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b11-2.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b11-3.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b11-4.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b11-5.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b12-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b13-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b13-2.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b14-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b15-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b16-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b17-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b17-2.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b17-3.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b17-4.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b19-1.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b19-2.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b19-3.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b19-4.svg", actualInput: "b" },
+      { letter: "月", svgPath: "/zh/b/Cjem-b20-1.svg", actualInput: "b" },
+    );
+  }
+
+  letters.push({ letter: "金", actualInput: "c" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "金", svgPath: "/zh/c/Cjem-c0-1.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c0-2.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c1-1.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c1-2.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c1-3.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c2-1.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c2-2.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c2-3.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c2-4.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c2-5.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c3-1.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c3-2.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c4-1.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c5-1.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c5-2.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c6-1.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c6-2.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c6-3.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c6-4.svg", actualInput: "c" },
+      { letter: "金", svgPath: "/zh/c/Cjem-c6-5.svg", actualInput: "c" },
+    );
+  }
+
+  letters.push({ letter: "木", actualInput: "d" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "木", svgPath: "/zh/d/Cjem-d0-1.svg", actualInput: "d" },
+      { letter: "木", svgPath: "/zh/d/Cjem-d1-1.svg", actualInput: "d" },
+      { letter: "木", svgPath: "/zh/d/Cjem-d1-2.svg", actualInput: "d" },
+      { letter: "木", svgPath: "/zh/d/Cjem-d2-2.svg", actualInput: "d" },
+      { letter: "木", svgPath: "/zh/d/Cjem-d3-1.svg", actualInput: "d" },
+      { letter: "木", svgPath: "/zh/d/Cjem-d3-2.svg", actualInput: "d" },
+      { letter: "木", svgPath: "/zh/d/Cjem-d3-3.svg", actualInput: "d" },
+      { letter: "木", svgPath: "/zh/d/Cjem-d3-4.svg", actualInput: "d" },
+      { letter: "木", svgPath: "/zh/d/Cjem-d4-1.svg", actualInput: "d" },
+      { letter: "木", svgPath: "/zh/d/Cjem-d5-1.svg", actualInput: "d" },
+      { letter: "木", svgPath: "/zh/d/Cjem-d6-1.svg", actualInput: "d" },
+      { letter: "木", svgPath: "/zh/d/Cjem-d6-2.svg", actualInput: "d" },
+      { letter: "木", svgPath: "/zh/d/Cjem-d6-3.svg", actualInput: "d" },
+      { letter: "木", svgPath: "/zh/d/Cjem-d6-4.svg", actualInput: "d" },
+      { letter: "木", svgPath: "/zh/d/Cjem-d7-1.svg", actualInput: "d" },
+    );
+  }
+
+  letters.push({ letter: "水", actualInput: "e" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "水", svgPath: "/zh/e/Cjem-e0-1.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e0-2.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e0-3.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e0-4.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e1-1.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e2-1.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e2-2.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e2-3.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e2-4.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e2-5.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e4-1.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e4-2.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e4-3.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e4-4.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e4-5.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e6-1.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e7-1.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e7-2.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e7-3.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-e8-1.svg", actualInput: "e" },
+    );
+  }
+  if (letterSettings.enableAuxiliaryShapes.value && letterSettings.enableV5.value) {
+    letters.push(
+      //
+      { letter: "水", svgPath: "/zh/e/Cjem-5e-1.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-5e-2.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-5e-3.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-5e-4.svg", actualInput: "e" },
+      { letter: "水", svgPath: "/zh/e/Cjem-5e-5.svg", actualInput: "e" },
+    );
+  }
+
+  letters.push({ letter: "火", actualInput: "f" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "火", svgPath: "/zh/f/Cjem-f0-1.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f0-2.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f0-3.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f1-1.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f1-2.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f2-1.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f2-2.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f2-3.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f2-4.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f2-5.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f3-2.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f4-1.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f4-2.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f4-3.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f4-4.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f5-1.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f5-2.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f5-5.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f6-1.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f7-1.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f8-1.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f8-2.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f8-3.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f8-4.svg", actualInput: "f" },
+      { letter: "火", svgPath: "/zh/f/Cjem-f9-1.svg ", actualInput: "f" },
+    );
+  }
+
+  letters.push({ letter: "土", actualInput: "g" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "土", svgPath: "/zh/g/Cjem-g0-1.svg", actualInput: "g" },
+      { letter: "土", svgPath: "/zh/g/Cjem-g0-2.svg", actualInput: "g" },
+      { letter: "土", svgPath: "/zh/g/Cjem-g0-3.svg", actualInput: "g" },
+      { letter: "土", svgPath: "/zh/g/Cjem-g1-1.svg", actualInput: "g" },
+      { letter: "土", svgPath: "/zh/g/Cjem-g1-2.svg", actualInput: "g" },
+      { letter: "土", svgPath: "/zh/g/Cjem-g2-1.svg", actualInput: "g" },
+      { letter: "土", svgPath: "/zh/g/Cjem-g2-2.svg", actualInput: "g" },
+      { letter: "土", svgPath: "/zh/g/Cjem-g2-3.svg", actualInput: "g" },
+      { letter: "土", svgPath: "/zh/g/Cjem-g2-4.svg", actualInput: "g" },
+      { letter: "土", svgPath: "/zh/g/Cjem-g3-1.svg", actualInput: "g" },
+    );
+  }
+
+  letters.push({ letter: "竹", actualInput: "h" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "竹", svgPath: "/zh/h/Cjem-h0-1.svg", actualInput: "h" },
+      { letter: "竹", svgPath: "/zh/h/Cjem-h1-1.svg", actualInput: "h" },
+      { letter: "竹", svgPath: "/zh/h/Cjem-h1-2.svg", actualInput: "h" },
+      { letter: "竹", svgPath: "/zh/h/Cjem-h1-3.svg", actualInput: "h" },
+      { letter: "竹", svgPath: "/zh/h/Cjem-h1-4.svg", actualInput: "h" },
+      { letter: "竹", svgPath: "/zh/h/Cjem-h2-1.svg", actualInput: "h" },
+      { letter: "竹", svgPath: "/zh/h/Cjem-h2-2.svg", actualInput: "h" },
+      { letter: "竹", svgPath: "/zh/h/Cjem-h3-1.svg", actualInput: "h" },
+      { letter: "竹", svgPath: "/zh/h/Cjem-h3-2.svg", actualInput: "h" },
+      { letter: "竹", svgPath: "/zh/h/Cjem-h5-1.svg", actualInput: "h" },
+      { letter: "竹", svgPath: "/zh/h/Cjem-h6-1.svg", actualInput: "h" },
+      { letter: "竹", svgPath: "/zh/h/Cjem-h6-2.svg", actualInput: "h" },
+      { letter: "竹", svgPath: "/zh/h/Cjem-h6-3.svg", actualInput: "h" },
+      { letter: "竹", svgPath: "/zh/h/Cjem-h6-4.svg", actualInput: "h" },
+      { letter: "竹", svgPath: "/zh/h/Cjem-h6-5.svg", actualInput: "h" },
+    );
+  }
+
+  letters.push({ letter: "戈", actualInput: "i" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "戈", svgPath: "/zh/i/Cjem-i0-1.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i0-2.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i0-3.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i0-4.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i0-5.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i1-1.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i1-3.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i1-4.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i2-1.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i2-2.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i2-3.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i2-4.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i2-5.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i3-1.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i3-2.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i3-3.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i3-4.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i3-5.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i4-1.svg", actualInput: "i" },
+      { letter: "戈", svgPath: "/zh/i/Cjem-i4-2.svg", actualInput: "i" },
+    );
+  }
+
+  letters.push({ letter: "十", actualInput: "j" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "十", svgPath: "/zh/j/Cjem-j0-1.svg", actualInput: "j" },
+      { letter: "十", svgPath: "/zh/j/Cjem-j0-2.svg", actualInput: "j" },
+      { letter: "十", svgPath: "/zh/j/Cjem-j0-3.svg", actualInput: "j" },
+      { letter: "十", svgPath: "/zh/j/Cjem-j1-1.svg", actualInput: "j" },
+      { letter: "十", svgPath: "/zh/j/Cjem-j1-2.svg", actualInput: "j" },
+      { letter: "十", svgPath: "/zh/j/Cjem-j2-1.svg", actualInput: "j" },
+      { letter: "十", svgPath: "/zh/j/Cjem-j2-2.svg", actualInput: "j" },
+      { letter: "十", svgPath: "/zh/j/Cjem-j2-3.svg", actualInput: "j" },
+      { letter: "十", svgPath: "/zh/j/Cjem-j2-4.svg", actualInput: "j" },
+      { letter: "十", svgPath: "/zh/j/Cjem-j2-5.svg", actualInput: "j" },
+    );
+  }
+
+  letters.push({ letter: "大", actualInput: "k" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "大", svgPath: "/zh/k/Cjem-k0-1.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k0-2.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k0-3.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k0-4.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k1-1.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k2-1.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k2-2.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k2-3.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k2-4.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k2-5.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k3-1.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k3-2.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k3-3.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k3-4.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k3-5.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k4-1.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k4-2.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k5-1.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k5-2.svg", actualInput: "k" },
+      { letter: "大", svgPath: "/zh/k/Cjem-k5-3.svg", actualInput: "k" },
+    );
+  }
+
+  letters.push({ letter: "中", actualInput: "l" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "中", svgPath: "/zh/l/Cjem-l0-1.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l0-2.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l0-3.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l0-4.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l0-5.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l1-1.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l2-1.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l2-2.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l2-3.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l2-4.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l3-1.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l3-2.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l3-3.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l3-4.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l4-1.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l6-1.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l6-2.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l6-3.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l6-4.svg", actualInput: "l" },
+      { letter: "中", svgPath: "/zh/l/Cjem-l6-5.svg", actualInput: "l" },
+    );
+  }
+
+  letters.push({ letter: "一", actualInput: "m" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "一", svgPath: "/zh/m/Cjem-m0-1.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m0-2.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m0-3.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m0-4.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m0-5.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m1-1.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m1-3.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m1-4.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m1-6.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m2-1.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m2-2.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m2-3.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m2-4.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m2-5.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m3-1.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m3-2.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m3-3.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m3-4.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m3-5.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m4-1.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m4-2.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m4-3.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m4-4.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m5-1.svg", actualInput: "m" },
+      { letter: "一", svgPath: "/zh/m/Cjem-m6-1.svg", actualInput: "m" },
+    );
+  }
+
+  letters.push({ letter: "弓", actualInput: "n" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "弓", svgPath: "/zh/n/Cjem-n0-1.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n0-2.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n0-3.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n0-4.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n0-5.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n1-1.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n1-2.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n1-3.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n1-4.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n1-5.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n3-1.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n4-1.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n4-2.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n4-3.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n5-1.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n5-2.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n7-1.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n8-1.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n9-1.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n10-1.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n10-2.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n11-1.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n11-2.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjem-n12-1.svg", actualInput: "n" },
+      { letter: "弓", svgPath: "/zh/n/Cjrm-n12.svg", actualInput: "n" },
+    );
+  }
+
+  letters.push({ letter: "人", actualInput: "o" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "人", svgPath: "/zh/o/Cjem-o1-1.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o2-1.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o3-1.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o4-1.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o5-1.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o6-1.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o6-2.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o6-3.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o6-4.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o6-5.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o7-1.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o7-3.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o7-4.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o8-1.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o8-3.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o9-1.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o9-2.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o10-1.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o10-2.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o10-3.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o11-1.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o11-3.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o12-1.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o12-2.svg", actualInput: "o" },
+      { letter: "人", svgPath: "/zh/o/Cjem-o14-1.svg", actualInput: "o" },
+    );
+  }
+
+  letters.push({ letter: "心", actualInput: "p" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "心", svgPath: "/zh/p/Cjem-p0-1.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p0-2.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p0-3.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p0-4.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p0-5.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p1-1.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p1-2.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p1-3.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p1-4.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p1-5.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p2-1.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p2-2.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p2-3.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p2-4.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p2-5.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p4-1.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p5-1.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p6-1.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p6-2.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p9-1.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p10-1.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p10-2.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p10-3.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p11-1.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p12-1.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p13-1.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p13-2.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p13-3.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p13-4.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p14-1.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p15-2.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p15-3.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p16-1.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p16-2.svg", actualInput: "p" },
+      { letter: "心", svgPath: "/zh/p/Cjem-p17-1.svg", actualInput: "p" },
+    );
+  }
+
+  letters.push({ letter: "手", actualInput: "q" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "手", svgPath: "/zh/q/Cjem-q0-1.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q0-2.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q0-3.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q0-4.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q0-5.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q1-1.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q1-2.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q1-3.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q1-4.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q1-5.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q3-1.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q3-2.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q3-3.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q4-1.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q4-2.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q5-1.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q5-2.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q5-3.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q5-4.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q5-5.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q7-1.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q7-2.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q7-3.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q8-1.svg", actualInput: "q" },
+      { letter: "手", svgPath: "/zh/q/Cjem-q8-2.svg", actualInput: "q" },
+    );
+  }
+
+  letters.push({ letter: "口", actualInput: "r" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "口", svgPath: "/zh/r/Cjem-r0-1.svg", actualInput: "r" },
+      { letter: "口", svgPath: "/zh/r/Cjem-r0-2.svg", actualInput: "r" },
+      { letter: "口", svgPath: "/zh/r/Cjem-r0-3.svg", actualInput: "r" },
+      { letter: "口", svgPath: "/zh/r/Cjem-r0-4.svg", actualInput: "r" },
+      { letter: "口", svgPath: "/zh/r/Cjem-r0-5.svg", actualInput: "r" },
+    );
+  }
+
+  letters.push({ letter: "尸", actualInput: "s" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "尸", svgPath: "/zh/s/Cjem-s0-1.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s0-2.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s0-3.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s0-4.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s0-5.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s2-1.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s2-2.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s2-3.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s2-4.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s2-5.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s3-1.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s4-1.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s4-2.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s5-1.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s5-2.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s6-1.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s6-2.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s6-3.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s7-1.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s8-1.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s9-1.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s9-2.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s10-1.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s10-2.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-s10-3.svg", actualInput: "s" },
+    );
+  }
+  if (letterSettings.enableAuxiliaryShapes.value && letterSettings.enableV5.value) {
+    letters.push(
+      //
+      { letter: "尸", svgPath: "/zh/s/Cjem-5s-1.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-5s-2.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-5s-3.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-5s-4.svg", actualInput: "s" },
+      { letter: "尸", svgPath: "/zh/s/Cjem-5s-5.svg", actualInput: "s" },
+    );
+  }
+
+  letters.push({ letter: "廿", actualInput: "t" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "廿", svgPath: "/zh/t/Cjem-t0-1.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t0-2.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t0-3.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t0-4.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t0-5.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t1-1.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t1-2.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t1-3.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t1-4.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t1-5.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t3-1.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t5-1.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t7-1.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t8-1.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t9-1.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t10-1.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t10-2.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t10-3.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t11-1.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t11-2.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t12-1.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t12-2.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t12-3.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t12-4.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t13-1.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t13-2.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t13-3.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t13-4.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t15-1.svg", actualInput: "t" },
+      { letter: "廿", svgPath: "/zh/t/Cjem-t16-1.svg", actualInput: "t" },
+    );
+  }
+
+  letters.push({ letter: "山", actualInput: "u" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "山", svgPath: "/zh/u/Cjem-u0-1.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u0-2.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u0-3.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u0-4.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u0-5.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u1-1.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u1-2.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u1-3.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u1-4.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u1-6.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u2-1.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u2-2.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u2-3.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u3-1.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u4-1.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u4-2.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u4-3.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u4-4.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u5-1.svg", actualInput: "u" },
+      { letter: "山", svgPath: "/zh/u/Cjem-u5-2.svg", actualInput: "u" },
+    );
+  }
+
+  letters.push({ letter: "女", actualInput: "v" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "女", svgPath: "/zh/v/Cjem-v0-1.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v0-2.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v1-1.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v1-2.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v1-3.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v2-1.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v2-2.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v2-3.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v4-1.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v4-2.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v5-1.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v5-2.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v6-1.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v6-2.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v6-3.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v7-1.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v8-1.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v8-2.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v8-3.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v8-4.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v9-1.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v9-2.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v9-3.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v9-4.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v9-5.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v10-1.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v10-2.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v10-3.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v10-4.svg", actualInput: "v" },
+      { letter: "女", svgPath: "/zh/v/Cjem-v10-5.svg", actualInput: "v" },
+    );
+  }
+
+  letters.push({ letter: "田", actualInput: "w" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "田", svgPath: "/zh/w/Cjem-w0-1.svg", actualInput: "w" },
+      { letter: "田", svgPath: "/zh/w/Cjem-w0-2.svg", actualInput: "w" },
+      { letter: "田", svgPath: "/zh/w/Cjem-w0-3.svg", actualInput: "w" },
+      { letter: "田", svgPath: "/zh/w/Cjem-w0-4.svg", actualInput: "w" },
+      { letter: "田", svgPath: "/zh/w/Cjem-w0-5.svg", actualInput: "w" },
+      { letter: "田", svgPath: "/zh/w/Cjem-w1-1.svg", actualInput: "w" },
+      { letter: "田", svgPath: "/zh/w/Cjem-w1-2.svg", actualInput: "w" },
+      { letter: "田", svgPath: "/zh/w/Cjem-w2-1.svg", actualInput: "w" },
+      { letter: "田", svgPath: "/zh/w/Cjem-w2-2.svg", actualInput: "w" },
+      { letter: "田", svgPath: "/zh/w/Cjem-w2-3.svg", actualInput: "w" },
+      { letter: "田", svgPath: "/zh/w/Cjem-w3-1.svg", actualInput: "w" },
+      { letter: "田", svgPath: "/zh/w/Cjem-w3-2.svg", actualInput: "w" },
+      { letter: "田", svgPath: "/zh/w/Cjem-w3-3.svg", actualInput: "w" },
+      { letter: "田", svgPath: "/zh/w/Cjem-w3-4.svg", actualInput: "w" },
+      { letter: "田", svgPath: "/zh/w/Cjem-w3-5.svg", actualInput: "w" },
+    );
+  }
+
+  letters.push({ letter: "卜", actualInput: "y" });
+  if (letterSettings.enableAuxiliaryShapes.value) {
+    letters.push(
+      //
+      { letter: "卜", svgPath: "/zh/y/Cjem-y0-1.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y0-2.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y1-1.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y1-2.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y1-3.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y2-1.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y2-2.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y2-3.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y3-1.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y4-1.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y6-1.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y6-3.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y6-4.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y6-5.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y6-7.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y7-1.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y7-2.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y7-3.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y7-4.svg", actualInput: "y" },
+      { letter: "卜", svgPath: "/zh/y/Cjem-y7-5.svg", actualInput: "y" },
+    );
+  }
+
+  return letters;
+}
