@@ -22,6 +22,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["元気"], hiragana: "げんき", romanization: "genki", meaning: "living energy" },
       { kanjis: ["調子"], hiragana: "ちょうし", romanization: "choushi", meaning: "pitch / tone", derivedMeanings: ["mood", "condition"] },
 
+      { kanjis: ["生まれ"], hiragana: "うまれ", romanization: "umare", meaning: "birth / birthplace" },
       { kanjis: ["生活"], hiragana: "せいかつ", romanization: "seikatsu", meaning: "living" },
       { kanjis: ["暮らし", "暮し"], hiragana: "くらし", romanization: "kurashi", meaning: "the way of living", exampleUsages: ["一人暮らし"] },
       { kanjis: ["日常"], hiragana: "にちじょう", romanization: "nichijou", meaning: "daily", exampleUsages: ["日常生活"] },

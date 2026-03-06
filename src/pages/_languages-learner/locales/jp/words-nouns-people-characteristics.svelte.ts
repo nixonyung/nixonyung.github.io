@@ -55,6 +55,7 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
       { kanjis: ["学生"], hiragana: "がくせい", romanization: "gakusei", meaning: "student" },
       { kanjis: ["教師"], hiragana: "きょうし", romanization: "kyoushi", meaning: "teacher / instructor" },
 
+      { katakana: "シェフ", romanization: "shefu", meaning: "chef" },
       { kanjis: ["食通"], hiragana: "しょくつう", romanization: "shokutsuu", meaning: "gourmet / foodie" },
       { katakana: "グルメ", romanization: "gurume", meaning: "gourmet" },
 

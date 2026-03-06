@@ -1,221 +1,214 @@
-import { cloneDeep } from "es-toolkit";
-import type { Gojuon, Letter } from "../../types";
+import type { Letter } from "../../types";
 import { gojuonSettings } from "./GojuonTable.svelte";
 
-export function getGojuons(): Gojuon[] {
-  const gojuons: Gojuon[] = [];
+export function getLetters() {
+  const letters: Letter[] = [];
 
   // 平假名 Hiragana
   if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowA.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "あ", romanization: "a", gojuonPosition: { row: 0, col: 0 } },
-      { letter: "い", romanization: "i", gojuonPosition: { row: 0, col: 1 } },
-      { letter: "う", romanization: "u", gojuonPosition: { row: 0, col: 2 } },
-      { letter: "え", romanization: "e", gojuonPosition: { row: 0, col: 3 } },
-      { letter: "お", romanization: "o", gojuonPosition: { row: 0, col: 4 } },
+      { letter: "あ", romanization: "a" },
+      { letter: "い", romanization: "i" },
+      { letter: "う", romanization: "u" },
+      { letter: "え", romanization: "e" },
+      { letter: "お", romanization: "o" },
     );
   }
   if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowKa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "か", romanization: "ka", gojuonPosition: { row: 1, col: 0 } },
-      { letter: "き", romanization: "ki", gojuonPosition: { row: 1, col: 1 } },
-      { letter: "く", romanization: "ku", gojuonPosition: { row: 1, col: 2 } },
-      { letter: "け", romanization: "ke", gojuonPosition: { row: 1, col: 3 } },
-      { letter: "こ", romanization: "ko", gojuonPosition: { row: 1, col: 4 } },
+      { letter: "か", romanization: "ka" },
+      { letter: "き", romanization: "ki" },
+      { letter: "く", romanization: "ku" },
+      { letter: "け", romanization: "ke" },
+      { letter: "こ", romanization: "ko" },
     );
   }
   if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowSa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "さ", romanization: "sa", gojuonPosition: { row: 2, col: 0 } },
-      { letter: "し", romanization: "shi", gojuonPosition: { row: 2, col: 1 } },
-      { letter: "す", romanization: "su", gojuonPosition: { row: 2, col: 2 } },
-      { letter: "せ", romanization: "se", gojuonPosition: { row: 2, col: 3 } },
-      { letter: "そ", romanization: "so", gojuonPosition: { row: 2, col: 4 } },
+      { letter: "さ", romanization: "sa" },
+      { letter: "し", romanization: "shi" },
+      { letter: "す", romanization: "su" },
+      { letter: "せ", romanization: "se" },
+      { letter: "そ", romanization: "so" },
     );
   }
   if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowTa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "た", romanization: "ta", gojuonPosition: { row: 3, col: 0 } },
-      { letter: "ち", romanization: "chi", gojuonPosition: { row: 3, col: 1 } },
-      { letter: "つ", romanization: "tsu", gojuonPosition: { row: 3, col: 2 } },
-      { letter: "て", romanization: "te", gojuonPosition: { row: 3, col: 3 } },
-      { letter: "と", romanization: "to", gojuonPosition: { row: 3, col: 4 } },
+      { letter: "た", romanization: "ta" },
+      { letter: "ち", romanization: "chi" },
+      { letter: "つ", romanization: "tsu" },
+      { letter: "て", romanization: "te" },
+      { letter: "と", romanization: "to" },
     );
   }
   if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowNa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "な", romanization: "na", gojuonPosition: { row: 4, col: 0 } },
-      { letter: "に", romanization: "ni", gojuonPosition: { row: 4, col: 1 } },
-      { letter: "ぬ", romanization: "nu", gojuonPosition: { row: 4, col: 2 } },
-      { letter: "ね", romanization: "ne", gojuonPosition: { row: 4, col: 3 } },
-      { letter: "の", romanization: "no", gojuonPosition: { row: 4, col: 4 } },
+      { letter: "な", romanization: "na" },
+      { letter: "に", romanization: "ni" },
+      { letter: "ぬ", romanization: "nu" },
+      { letter: "ね", romanization: "ne" },
+      { letter: "の", romanization: "no" },
     );
   }
   if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowHa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "は", romanization: "ha", gojuonPosition: { row: 5, col: 0 } },
-      { letter: "ひ", romanization: "hi", gojuonPosition: { row: 5, col: 1 } },
-      { letter: "ふ", romanization: "fu", gojuonPosition: { row: 5, col: 2 } },
-      { letter: "へ", romanization: "he", gojuonPosition: { row: 5, col: 3 } },
-      { letter: "ほ", romanization: "ho", gojuonPosition: { row: 5, col: 4 } },
+      { letter: "は", romanization: "ha" },
+      { letter: "ひ", romanization: "hi" },
+      { letter: "ふ", romanization: "fu" },
+      { letter: "へ", romanization: "he" },
+      { letter: "ほ", romanization: "ho" },
     );
   }
   if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowMa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "ま", romanization: "ma", gojuonPosition: { row: 6, col: 0 } },
-      { letter: "み", romanization: "mi", gojuonPosition: { row: 6, col: 1 } },
-      { letter: "む", romanization: "mu", gojuonPosition: { row: 6, col: 2 } },
-      { letter: "め", romanization: "me", gojuonPosition: { row: 6, col: 3 } },
-      { letter: "も", romanization: "mo", gojuonPosition: { row: 6, col: 4 } },
+      { letter: "ま", romanization: "ma" },
+      { letter: "み", romanization: "mi" },
+      { letter: "む", romanization: "mu" },
+      { letter: "め", romanization: "me" },
+      { letter: "も", romanization: "mo" },
     );
   }
   if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowYa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "や", romanization: "ya", gojuonPosition: { row: 7, col: 0 } },
-      { letter: "ゆ", romanization: "yu", gojuonPosition: { row: 7, col: 2 } },
-      { letter: "よ", romanization: "yo", gojuonPosition: { row: 7, col: 4 } },
+      { letter: "や", romanization: "ya" },
+      { letter: "ゆ", romanization: "yu" },
+      { letter: "よ", romanization: "yo" },
     );
   }
   if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowRa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "ら", romanization: "ra", gojuonPosition: { row: 8, col: 0 } },
-      { letter: "り", romanization: "ri", gojuonPosition: { row: 8, col: 1 } },
-      { letter: "る", romanization: "ru", gojuonPosition: { row: 8, col: 2 } },
-      { letter: "れ", romanization: "re", gojuonPosition: { row: 8, col: 3 } },
-      { letter: "ろ", romanization: "ro", gojuonPosition: { row: 8, col: 4 } },
+      { letter: "ら", romanization: "ra" },
+      { letter: "り", romanization: "ri" },
+      { letter: "る", romanization: "ru" },
+      { letter: "れ", romanization: "re" },
+      { letter: "ろ", romanization: "ro" },
     );
   }
   if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowWa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "わ", romanization: "wa", gojuonPosition: { row: 9, col: 0 } },
-      { letter: "を", romanization: "o", gojuonPosition: { row: 9, col: 4 } },
+      { letter: "わ", romanization: "wa" },
+      { letter: "を", romanization: "o" },
     );
   }
   if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableRows.rowN.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "ん", romanization: "n", gojuonPosition: { row: 10, col: 0 } },
+      { letter: "ん", romanization: "n" },
     );
   }
 
   // 片假名 Katakana
   if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowA.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "ア", romanization: "a", gojuonPosition: { row: 0, col: 0 } },
-      { letter: "イ", romanization: "i", gojuonPosition: { row: 0, col: 1 } },
-      { letter: "ウ", romanization: "u", gojuonPosition: { row: 0, col: 2 } },
-      { letter: "エ", romanization: "e", gojuonPosition: { row: 0, col: 3 } },
-      { letter: "オ", romanization: "o", gojuonPosition: { row: 0, col: 4 } },
+      { letter: "ア", romanization: "a" },
+      { letter: "イ", romanization: "i" },
+      { letter: "ウ", romanization: "u" },
+      { letter: "エ", romanization: "e" },
+      { letter: "オ", romanization: "o" },
     );
   }
   if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowKa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "カ", romanization: "ka", gojuonPosition: { row: 1, col: 0 } },
-      { letter: "キ", romanization: "ki", gojuonPosition: { row: 1, col: 1 } },
-      { letter: "ク", romanization: "ku", gojuonPosition: { row: 1, col: 2 } },
-      { letter: "ケ", romanization: "ke", gojuonPosition: { row: 1, col: 3 } },
-      { letter: "コ", romanization: "ko", gojuonPosition: { row: 1, col: 4 } },
+      { letter: "カ", romanization: "ka" },
+      { letter: "キ", romanization: "ki" },
+      { letter: "ク", romanization: "ku" },
+      { letter: "ケ", romanization: "ke" },
+      { letter: "コ", romanization: "ko" },
     );
   }
   if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowSa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "サ", romanization: "sa", gojuonPosition: { row: 2, col: 0 } },
-      { letter: "シ", romanization: "shi", gojuonPosition: { row: 2, col: 1 } },
-      { letter: "ス", romanization: "su", gojuonPosition: { row: 2, col: 2 } },
-      { letter: "セ", romanization: "se", gojuonPosition: { row: 2, col: 3 } },
-      { letter: "ソ", romanization: "so", gojuonPosition: { row: 2, col: 4 } },
+      { letter: "サ", romanization: "sa" },
+      { letter: "シ", romanization: "shi" },
+      { letter: "ス", romanization: "su" },
+      { letter: "セ", romanization: "se" },
+      { letter: "ソ", romanization: "so" },
     );
   }
   if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowTa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "タ", romanization: "ta", gojuonPosition: { row: 3, col: 0 } },
-      { letter: "チ", romanization: "chi", gojuonPosition: { row: 3, col: 1 } },
-      { letter: "ツ", romanization: "tsu", gojuonPosition: { row: 3, col: 2 } },
-      { letter: "テ", romanization: "te", gojuonPosition: { row: 3, col: 3 } },
-      { letter: "ト", romanization: "to", gojuonPosition: { row: 3, col: 4 } },
+      { letter: "タ", romanization: "ta" },
+      { letter: "チ", romanization: "chi" },
+      { letter: "ツ", romanization: "tsu" },
+      { letter: "テ", romanization: "te" },
+      { letter: "ト", romanization: "to" },
     );
   }
   if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowNa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "ナ", romanization: "na", gojuonPosition: { row: 4, col: 0 } },
-      { letter: "ニ", romanization: "ni", gojuonPosition: { row: 4, col: 1 } },
-      { letter: "ヌ", romanization: "nu", gojuonPosition: { row: 4, col: 2 } },
-      { letter: "ネ", romanization: "ne", gojuonPosition: { row: 4, col: 3 } },
-      { letter: "ノ", romanization: "no", gojuonPosition: { row: 4, col: 4 } },
+      { letter: "ナ", romanization: "na" },
+      { letter: "ニ", romanization: "ni" },
+      { letter: "ヌ", romanization: "nu" },
+      { letter: "ネ", romanization: "ne" },
+      { letter: "ノ", romanization: "no" },
     );
   }
   if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowHa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "ハ", romanization: "ha", gojuonPosition: { row: 5, col: 0 } },
-      { letter: "ヒ", romanization: "hi", gojuonPosition: { row: 5, col: 1 } },
-      { letter: "フ", romanization: "fu", gojuonPosition: { row: 5, col: 2 } },
-      { letter: "ヘ", romanization: "he", gojuonPosition: { row: 5, col: 3 } },
-      { letter: "ホ", romanization: "ho", gojuonPosition: { row: 5, col: 4 } },
+      { letter: "ハ", romanization: "ha" },
+      { letter: "ヒ", romanization: "hi" },
+      { letter: "フ", romanization: "fu" },
+      { letter: "ヘ", romanization: "he" },
+      { letter: "ホ", romanization: "ho" },
     );
   }
   if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowMa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "マ", romanization: "ma", gojuonPosition: { row: 6, col: 0 } },
-      { letter: "ミ", romanization: "mi", gojuonPosition: { row: 6, col: 1 } },
-      { letter: "ム", romanization: "mu", gojuonPosition: { row: 6, col: 2 } },
-      { letter: "メ", romanization: "me", gojuonPosition: { row: 6, col: 3 } },
-      { letter: "モ", romanization: "mo", gojuonPosition: { row: 6, col: 4 } },
+      { letter: "マ", romanization: "ma" },
+      { letter: "ミ", romanization: "mi" },
+      { letter: "ム", romanization: "mu" },
+      { letter: "メ", romanization: "me" },
+      { letter: "モ", romanization: "mo" },
     );
   }
   if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowYa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "ヤ", romanization: "ya", gojuonPosition: { row: 7, col: 0 } },
-      { letter: "ユ", romanization: "yu", gojuonPosition: { row: 7, col: 2 } },
-      { letter: "ヨ", romanization: "yo", gojuonPosition: { row: 7, col: 4 } },
+      { letter: "ヤ", romanization: "ya" },
+      { letter: "ユ", romanization: "yu" },
+      { letter: "ヨ", romanization: "yo" },
     );
   }
   if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowRa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "ラ", romanization: "ra", gojuonPosition: { row: 8, col: 0 } },
-      { letter: "リ", romanization: "ri", gojuonPosition: { row: 8, col: 1 } },
-      { letter: "ル", romanization: "ru", gojuonPosition: { row: 8, col: 2 } },
-      { letter: "レ", romanization: "re", gojuonPosition: { row: 8, col: 3 } },
-      { letter: "ロ", romanization: "ro", gojuonPosition: { row: 8, col: 4 } },
+      { letter: "ラ", romanization: "ra" },
+      { letter: "リ", romanization: "ri" },
+      { letter: "ル", romanization: "ru" },
+      { letter: "レ", romanization: "re" },
+      { letter: "ロ", romanization: "ro" },
     );
   }
   if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowWa.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "ワ", romanization: "wa", gojuonPosition: { row: 9, col: 0 } },
-      { letter: "ヲ", romanization: "o", gojuonPosition: { row: 9, col: 4 } },
+      { letter: "ワ", romanization: "wa" },
+      { letter: "ヲ", romanization: "o" },
     );
   }
   if (gojuonSettings.enableSubsets.katakana.value && gojuonSettings.enableRows.rowN.value) {
-    gojuons.push(
+    letters.push(
       //
-      { letter: "ン", romanization: "n", gojuonPosition: { row: 10, col: 0 } },
+      { letter: "ン", romanization: "n" },
     );
   }
-
-  return gojuons;
-}
-
-export const getLetters = (): Letter[] => {
-  const letters: Letter[] = cloneDeep(getGojuons());
 
   // Hiragana - 濁音 Dakuten and 半濁音 Handakuten
   if (gojuonSettings.enableSubsets.hiragana.value && gojuonSettings.enableSubsets.diacritics.value && gojuonSettings.enableRows.rowKa.value) {
@@ -378,4 +371,4 @@ export const getLetters = (): Letter[] => {
   }
 
   return letters;
-};
+}

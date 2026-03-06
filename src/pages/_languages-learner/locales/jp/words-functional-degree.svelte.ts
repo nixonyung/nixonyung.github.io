@@ -130,6 +130,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       // TODO: https://www.tofugu.com/japanese/japanese-counters-list/
       { hiragana: "-つ", rareKanjis: ["-箇", "個"], romanization: "tsu", meaning: "(general purpose counter)", exampleUsages: ['二つ("futatsu") の [Noun]'] },
       { kanjis: ["-個"], rareKanjis: ["-箇"], hiragana: "こ", romanization: "ko", meaning: "(counter for objects)" },
+      { kanjis: ["-件"], hiragana: "けん", romanization: "ken", meaning: "(counter for item/matter/case/mails)" },
       { kanjis: ["-番"], hiragana: "ばん", romanization: "ban", meaning: "(enumeration in a series)" },
       { kanjis: ["-人"], hiragana: "にん", romanization: "nin", meaning: "(counter for people)" },
       { kanjis: ["-匹", "-疋"], hiragana: "ひき", romanization: "hiki", meaning: "(counter for small animals)" },

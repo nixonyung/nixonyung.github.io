@@ -119,6 +119,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { hiragana: "なくす", preferredForm: "hiragana", kanjis: ["無くす"], romanization: "nakusu", verbGroup: "Godan", verbIsTransitive: true, meaning: "lose something" },
       { kanjis: ["返す", "反す"], hiragana: "かえす", romanization: "kaesu", verbGroup: "Godan", verbIsTransitive: true, meaning: "give back" },
       { kanjis: ["届ける"], hiragana: "とどける", romanization: "todokeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "deliver (goods/services/lessons)" },
+      { kanjis: ["届く"], hiragana: "とどく", romanization: "todoku", verbGroup: "Godan", verbIsTransitive: false, meaning: "reach / be delivered (goods/services/lessons)" },
       { kanjis: ["譲る"], hiragana: "ゆずる", romanization: "yuzuru", verbGroup: "Godan", verbIsTransitive: true, meaning: "concede" },
       { kanjis: ["売る"], hiragana: "うる", romanization: "uru", verbGroup: "Godan", verbIsTransitive: true, meaning: "sell" },
       { kanjis: ["払う"], rareKanjis: ["掃う"], hiragana: "はらう", romanization: "harau", verbGroup: "Godan", verbIsTransitive: true, meaning: "pay" },

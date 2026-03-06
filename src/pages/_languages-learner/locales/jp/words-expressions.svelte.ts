@@ -28,7 +28,8 @@ export function appendExpressions(words: JapaneseWord[]) {
 
       { hiragana: "という", preferredForm: "hiragana", kanjis: ["と言う"], romanization: "to iu", meaning: "called", exampleUsages: ["[Name] という [Thing] (the [Thing] named [Name])", "... という思い"] },
       { hiragana: "っていう", romanization: "tte iu", meaning: "called (spoken)", exampleUsages: ["この [Name] っていうのは ..."] },
-      // TODO: について
+
+      { hiragana: "について", rareKanjis: ["に就いて"], romanization: "nitsuite", meaning: "about / regarding", exampleUsages: ["[Noun] について", "[Noun] について [Noun]", "文化や生活について知れる"] },
     );
   }
 
@@ -92,6 +93,8 @@ export function appendExpressions(words: JapaneseWord[]) {
 
       { hiragana: "ちょっと", rareKanjis: ["一寸"], katakana: "チョット", romanization: "chotto", meaning: "a bit (casual, intensity)", exampleUsages: ["ちょっと難し", "あとちょっと (just a bit more)"] },
       { kanjis: ["多分"], hiragana: "たぶん", romanization: "tabun", meaning: "probably" },
+
+      { hiragana: "それにしても", romanization: "sorenishitemo", meaning: "nevertheless" },
 
       { hiragana: "ということだ", preferredForm: "hiragana", kanjis: ["と言うことだ"], romanization: "toiukotoda", meaning: "as rumoured" },
       { hiragana: "って", romanization: "tte", meaning: "as someone said / as I heard", derivedMeanings: ["you really mean it?"], exampleUsages: ["すごいって (I heard it is amazing)", "って言っていた (it is said that)"] },

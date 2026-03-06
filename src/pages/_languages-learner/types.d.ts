@@ -9,13 +9,6 @@ export interface Letter {
   actualInput?: string;
 }
 
-export interface Gojuon extends Letter {
-  gojuonPosition: {
-    row: number;
-    col: number;
-  };
-}
-
 export interface JapaneseWord {
   kanjis?: string[];
   rareKanjis?: string[];
