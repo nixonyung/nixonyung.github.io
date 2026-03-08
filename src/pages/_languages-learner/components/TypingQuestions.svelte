@@ -19,7 +19,7 @@
     includeNumbers = false,
   }: {
     letters: Letter[];
-    keymap?: Keymap;
+    keymap: Keymap;
     includeNumbers?: boolean;
   } = $props();
 
@@ -50,16 +50,16 @@
   let input = $state("");
 
   function nextQuestion() {
-    prevQuestion = questions.push(questionsQueue.nextQuestion());
+    prevQuestion = questions.top;
+    questions.push(questionsQueue.nextQuestion());
     input = "";
   }
   $effect.pre(() => {
     questionsQueue;
 
     untrack(() => {
-      for (let i = 0; i < NUM_QUESTIONS; i++) {
-        nextQuestion();
-      }
+      questions = new CircularQueue<Question>(NUM_QUESTIONS);
+      for (let i = 0; i < NUM_QUESTIONS; i++) nextQuestion();
       prevQuestion = undefined;
     });
   });
@@ -105,7 +105,7 @@
   <div class="mt-6 flex items-center-safe gap-3">
     <span class="underline underline-offset-2">Questions:</span>
 
-    {#snippet question({
+    {#snippet questionView({
       question,
       isCurr = false,
       isPrev = false,
@@ -155,15 +155,15 @@
       {/if}
     {/snippet}
 
-    {@render question({
+    {@render questionView({
       question: prevQuestion,
       isPrev: true,
     })}
     {#each questions
       .items()
-      .slice(0, prevQuestion !== undefined ? NUM_QUESTIONS - 1 : NUM_QUESTIONS) as q, i (i)}
-      {@render question({
-        question: q,
+      .slice(0, prevQuestion !== undefined ? NUM_QUESTIONS - 1 : NUM_QUESTIONS) as question, i (i)}
+      {@render questionView({
+        question,
         isCurr: i === 0,
       })}
     {/each}

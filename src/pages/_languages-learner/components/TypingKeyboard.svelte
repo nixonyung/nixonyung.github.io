@@ -9,7 +9,7 @@
     showCorrectKey,
     correctKey,
   }: {
-    keymap: Keymap | undefined;
+    keymap: Keymap;
 
     includeNumbers: boolean;
     hideLayout: boolean;
@@ -33,9 +33,8 @@
 <div class="w-fit px-6 py-3 ring ring-primary-lighter">
   <div class="flex flex-col gap-2">
     {#snippet key(ch: string)}
-      {@const upperCaseCh = ch.toUpperCase()}
-      {@const mappedCh = keymap ? keymap[ch] : ch}
-      {@const mappedUpperCaseCh = keymap ? keymap[upperCaseCh] : upperCaseCh}
+      {@const chEmit = isShiftDown ? ch.toUpperCase() : ch}
+      {@const chDisplay = keymap[chEmit]}
 
       <button
         class={[
@@ -43,19 +42,19 @@
           showCorrectKey && ch === correctKey && "bg-green-400/25",
         ]}
         onclick={() => {
-          emitKeydown({ key: isShiftDown ? upperCaseCh : ch });
+          if (chDisplay) emitKeydown({ key: chEmit });
           isShiftDown = false;
         }}
       >
-        {#if !hideLayout}
-          <span class="text-xl">{isShiftDown ? mappedUpperCaseCh : mappedCh}</span>
-        {/if}
+        <span class="text-xl">
+          {hideLayout ? "·" : chDisplay}
+        </span>
 
         <!-- key hint -->
-        {#if isShiftDown && mappedUpperCaseCh && mappedUpperCaseCh !== upperCaseCh}
-          <span class="absolute top-0 left-1 text-xs font-light">{upperCaseCh}</span>
-        {:else if !isShiftDown && mappedCh !== ch}
-          <span class="absolute top-0 left-1 text-xs font-light">{ch}</span>
+        {#if chDisplay && chDisplay !== chEmit}
+          <span class="absolute top-0 left-1 text-xs font-light">
+            {chEmit}
+          </span>
         {/if}
 
         <!-- bump -->

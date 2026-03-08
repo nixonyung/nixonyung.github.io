@@ -11,13 +11,9 @@ export class CircularQueue<Item> {
     this.#i = 0;
   }
 
-  push(item: Item): Item | undefined {
-    const prevItem: Item | undefined = this.#items[this.#i];
-
+  push(item: Item) {
     this.#items[this.#i] = item;
     this.#i = (this.#i + 1) % this.#size;
-
-    return prevItem;
   }
 
   get top(): Item | undefined {

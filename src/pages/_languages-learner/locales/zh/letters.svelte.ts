@@ -6,8 +6,10 @@ import { letterSettings } from "./ZH.svelte";
 export function getLetters() {
   const letters: Letter[] = [];
 
-  letters.push({ letter: "日", actualInput: "a" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.philosophical.value) {
+    letters.push({ letter: "日", actualInput: "a" });
+  }
+  if (letterSettings.enableRows.philosophical.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "日", svgPath: "/zh/a/Cjem-a0-1.svg", actualInput: "a" },
@@ -23,8 +25,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "月", actualInput: "b" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.philosophical.value) {
+    letters.push({ letter: "月", actualInput: "b" });
+  }
+  if (letterSettings.enableRows.philosophical.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "月", svgPath: "/zh/b/Cjem-b1-1.svg", actualInput: "b" },
@@ -60,8 +64,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "金", actualInput: "c" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.philosophical.value) {
+    letters.push({ letter: "金", actualInput: "c" });
+  }
+  if (letterSettings.enableRows.philosophical.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "金", svgPath: "/zh/c/Cjem-c0-1.svg", actualInput: "c" },
@@ -87,8 +93,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "木", actualInput: "d" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.philosophical.value) {
+    letters.push({ letter: "木", actualInput: "d" });
+  }
+  if (letterSettings.enableRows.philosophical.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "木", svgPath: "/zh/d/Cjem-d0-1.svg", actualInput: "d" },
@@ -109,8 +117,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "水", actualInput: "e" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.philosophical.value) {
+    letters.push({ letter: "水", actualInput: "e" });
+  }
+  if (letterSettings.enableRows.philosophical.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "水", svgPath: "/zh/e/Cjem-e0-1.svg", actualInput: "e" },
@@ -135,7 +145,7 @@ export function getLetters() {
       { letter: "水", svgPath: "/zh/e/Cjem-e8-1.svg", actualInput: "e" },
     );
   }
-  if (letterSettings.enableAuxiliaryShapes.value && letterSettings.enableV5.value) {
+  if (letterSettings.enableRows.philosophical.value && letterSettings.enableSubsets.auxiliaryShapes.value && letterSettings.enableSubsets.v5.value) {
     letters.push(
       //
       { letter: "水", svgPath: "/zh/e/Cjem-5e-1.svg", actualInput: "e" },
@@ -146,8 +156,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "火", actualInput: "f" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.philosophical.value) {
+    letters.push({ letter: "火", actualInput: "f" });
+  }
+  if (letterSettings.enableRows.philosophical.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "火", svgPath: "/zh/f/Cjem-f0-1.svg", actualInput: "f" },
@@ -178,8 +190,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "土", actualInput: "g" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.philosophical.value) {
+    letters.push({ letter: "土", actualInput: "g" });
+  }
+  if (letterSettings.enableRows.philosophical.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "土", svgPath: "/zh/g/Cjem-g0-1.svg", actualInput: "g" },
@@ -195,8 +209,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "竹", actualInput: "h" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.stroke.value) {
+    letters.push({ letter: "竹", actualInput: "h" });
+  }
+  if (letterSettings.enableRows.stroke.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "竹", svgPath: "/zh/h/Cjem-h0-1.svg", actualInput: "h" },
@@ -217,8 +233,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "戈", actualInput: "i" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.stroke.value) {
+    letters.push({ letter: "戈", actualInput: "i" });
+  }
+  if (letterSettings.enableRows.stroke.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "戈", svgPath: "/zh/i/Cjem-i0-1.svg", actualInput: "i" },
@@ -244,8 +262,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "十", actualInput: "j" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.stroke.value) {
+    letters.push({ letter: "十", actualInput: "j" });
+  }
+  if (letterSettings.enableRows.stroke.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "十", svgPath: "/zh/j/Cjem-j0-1.svg", actualInput: "j" },
@@ -261,8 +281,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "大", actualInput: "k" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.stroke.value) {
+    letters.push({ letter: "大", actualInput: "k" });
+  }
+  if (letterSettings.enableRows.stroke.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "大", svgPath: "/zh/k/Cjem-k0-1.svg", actualInput: "k" },
@@ -288,8 +310,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "中", actualInput: "l" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.stroke.value) {
+    letters.push({ letter: "中", actualInput: "l" });
+  }
+  if (letterSettings.enableRows.stroke.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "中", svgPath: "/zh/l/Cjem-l0-1.svg", actualInput: "l" },
@@ -315,8 +339,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "一", actualInput: "m" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.stroke.value) {
+    letters.push({ letter: "一", actualInput: "m" });
+  }
+  if (letterSettings.enableRows.stroke.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "一", svgPath: "/zh/m/Cjem-m0-1.svg", actualInput: "m" },
@@ -347,8 +373,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "弓", actualInput: "n" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.stroke.value) {
+    letters.push({ letter: "弓", actualInput: "n" });
+  }
+  if (letterSettings.enableRows.stroke.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "弓", svgPath: "/zh/n/Cjem-n0-1.svg", actualInput: "n" },
@@ -379,8 +407,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "人", actualInput: "o" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.bodyParts.value) {
+    letters.push({ letter: "人", actualInput: "o" });
+  }
+  if (letterSettings.enableRows.bodyParts.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "人", svgPath: "/zh/o/Cjem-o1-1.svg", actualInput: "o" },
@@ -411,8 +441,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "心", actualInput: "p" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.bodyParts.value) {
+    letters.push({ letter: "心", actualInput: "p" });
+  }
+  if (letterSettings.enableRows.bodyParts.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "心", svgPath: "/zh/p/Cjem-p0-1.svg", actualInput: "p" },
@@ -453,8 +485,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "手", actualInput: "q" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.bodyParts.value) {
+    letters.push({ letter: "手", actualInput: "q" });
+  }
+  if (letterSettings.enableRows.bodyParts.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "手", svgPath: "/zh/q/Cjem-q0-1.svg", actualInput: "q" },
@@ -485,8 +519,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "口", actualInput: "r" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.bodyParts.value) {
+    letters.push({ letter: "口", actualInput: "r" });
+  }
+  if (letterSettings.enableRows.bodyParts.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "口", svgPath: "/zh/r/Cjem-r0-1.svg", actualInput: "r" },
@@ -497,8 +533,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "尸", actualInput: "s" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.characterShapes.value) {
+    letters.push({ letter: "尸", actualInput: "s" });
+  }
+  if (letterSettings.enableRows.characterShapes.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "尸", svgPath: "/zh/s/Cjem-s0-1.svg", actualInput: "s" },
@@ -528,7 +566,7 @@ export function getLetters() {
       { letter: "尸", svgPath: "/zh/s/Cjem-s10-3.svg", actualInput: "s" },
     );
   }
-  if (letterSettings.enableAuxiliaryShapes.value && letterSettings.enableV5.value) {
+  if (letterSettings.enableRows.characterShapes.value && letterSettings.enableSubsets.auxiliaryShapes.value && letterSettings.enableSubsets.v5.value) {
     letters.push(
       //
       { letter: "尸", svgPath: "/zh/s/Cjem-5s-1.svg", actualInput: "s" },
@@ -539,8 +577,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "廿", actualInput: "t" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.characterShapes.value) {
+    letters.push({ letter: "廿", actualInput: "t" });
+  }
+  if (letterSettings.enableRows.characterShapes.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "廿", svgPath: "/zh/t/Cjem-t0-1.svg", actualInput: "t" },
@@ -576,8 +616,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "山", actualInput: "u" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.characterShapes.value) {
+    letters.push({ letter: "山", actualInput: "u" });
+  }
+  if (letterSettings.enableRows.characterShapes.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "山", svgPath: "/zh/u/Cjem-u0-1.svg", actualInput: "u" },
@@ -603,8 +645,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "女", actualInput: "v" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.characterShapes.value) {
+    letters.push({ letter: "女", actualInput: "v" });
+  }
+  if (letterSettings.enableRows.characterShapes.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "女", svgPath: "/zh/v/Cjem-v0-1.svg", actualInput: "v" },
@@ -640,8 +684,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "田", actualInput: "w" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.characterShapes.value) {
+    letters.push({ letter: "田", actualInput: "w" });
+  }
+  if (letterSettings.enableRows.characterShapes.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "田", svgPath: "/zh/w/Cjem-w0-1.svg", actualInput: "w" },
@@ -662,8 +708,10 @@ export function getLetters() {
     );
   }
 
-  letters.push({ letter: "卜", actualInput: "y" });
-  if (letterSettings.enableAuxiliaryShapes.value) {
+  if (letterSettings.enableRows.characterShapes.value) {
+    letters.push({ letter: "卜", actualInput: "y" });
+  }
+  if (letterSettings.enableRows.characterShapes.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
       //
       { letter: "卜", svgPath: "/zh/y/Cjem-y0-1.svg", actualInput: "y" },

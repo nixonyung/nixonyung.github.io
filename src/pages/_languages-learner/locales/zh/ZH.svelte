@@ -1,8 +1,16 @@
 <script lang="ts" module>
   export const letterSettings = $state(
     initSettings({
-      enableAuxiliaryShapes: { paramKey: "auxiliaryShapes", defaultValue: true },
-      enableV5: { paramKey: "v5", defaultValue: true },
+      enableRows: {
+        philosophical: { paramKey: "groupPhilosophical", defaultValue: true },
+        stroke: { paramKey: "gruopStroke", defaultValue: true },
+        bodyParts: { paramKey: "gruopBodyParts", defaultValue: true },
+        characterShapes: { paramKey: "groupCharacterShapes", defaultValue: true },
+      },
+      enableSubsets: {
+        auxiliaryShapes: { paramKey: "auxiliaryShapes", defaultValue: true },
+        v5: { paramKey: "v5", defaultValue: true },
+      },
     }),
   );
 </script>
@@ -30,31 +38,56 @@
 
   <div class="mt-3 mb-1.5 flex flex-col gap-1.5">
     <div class="flex gap-4.5">
-      <CheckboxInput
-        bind:checked={letterSettings.enableAuxiliaryShapes.value}
-        label="enable Auxiliary Shapes 輔助字形"
-      />
-      <CheckboxInput
-        bind:checked={letterSettings.enableV5.value}
-        label="enable Version 5 五代倉頡"
-        disabled={!letterSettings.enableAuxiliaryShapes.value}
-      >
-        {#snippet customTooltip()}
-          enable
-          <img
-            src="/zh/e/Cjr5m-e1.svg"
-            alt="Cjr5m-e1"
-            class="inline-block size-6 dark:invert-100"
+      <div>Select rows:</div>
+
+      <div class="flex flex-col gap-1.5">
+        <div class="flex gap-4.5">
+          <CheckboxInput
+            bind:checked={letterSettings.enableRows.philosophical.value}
+            label="哲理類 (日月金木水火土)"
           />
-          (水) and
-          <img
-            src="/zh/s/Cjr5m-s1.svg"
-            alt="Cjr5m-s1"
-            class="inline-block size-6 dark:invert-100"
+          <CheckboxInput
+            bind:checked={letterSettings.enableRows.stroke.value}
+            label="筆畫類 (竹戈十大中一弓)"
           />
-          (尸)
-        {/snippet}
-      </CheckboxInput>
+          <CheckboxInput
+            bind:checked={letterSettings.enableRows.bodyParts.value}
+            label="人體類 (人心手口)"
+          />
+          <CheckboxInput
+            bind:checked={letterSettings.enableRows.characterShapes.value}
+            label="字形類 (尸廿山女田卜)"
+          />
+        </div>
+
+        <div class="flex gap-4.5">
+          <CheckboxInput
+            bind:checked={letterSettings.enableSubsets.auxiliaryShapes.value}
+            label="enable Auxiliary Shapes 輔助字形"
+          />
+          <CheckboxInput
+            bind:checked={letterSettings.enableSubsets.v5.value}
+            label="enable Version 5 五代倉頡"
+            disabled={!letterSettings.enableSubsets.auxiliaryShapes.value}
+          >
+            {#snippet customTooltip()}
+              enable
+              <img
+                src="/zh/e/Cjr5m-e1.svg"
+                alt="Cjr5m-e1"
+                class="inline-block size-6 dark:invert-100"
+              />
+              (水) and
+              <img
+                src="/zh/s/Cjr5m-s1.svg"
+                alt="Cjr5m-s1"
+                class="inline-block size-6 dark:invert-100"
+              />
+              (尸)
+            {/snippet}
+          </CheckboxInput>
+        </div>
+      </div>
     </div>
   </div>
 

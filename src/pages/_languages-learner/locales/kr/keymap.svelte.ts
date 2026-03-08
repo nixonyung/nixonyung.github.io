@@ -1,6 +1,5 @@
 import type { Keymap } from "../../types";
 
-// (ref.) [Dubeolsik](https://www.wikiwand.com/en/articles/Keyboard_layout#Dubeolsik)
 export const keymap: Keymap = {
   // row 1
   q: "ㅂ",

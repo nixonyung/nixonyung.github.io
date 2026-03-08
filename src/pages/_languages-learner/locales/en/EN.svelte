@@ -1,13 +1,16 @@
 <script lang="ts" module>
   export const letterSettings = $state(
     initSettings({
-      useRowQWER: { paramKey: "rowQWER", defaultValue: true },
-      useRowASDF: { paramKey: "rowASDF", defaultValue: true },
-      useRowZXCV: { paramKey: "rowZXCV", defaultValue: true },
-      useRow1234: { paramKey: "row1234", defaultValue: false },
-
-      onlyLowercase: { paramKey: "onlyLowercase", defaultValue: true },
-      onlyUppercase: { paramKey: "onlyUppercase", defaultValue: true },
+      enableRows: {
+        rowQWER: { paramKey: "rowQWER", defaultValue: true },
+        rowASDF: { paramKey: "rowASDF", defaultValue: true },
+        rowZXCV: { paramKey: "rowZXCV", defaultValue: true },
+        row1234: { paramKey: "row1234", defaultValue: false },
+      },
+      enableSubsets: {
+        lowercase: { paramKey: "lowercase", defaultValue: true },
+        uppercase: { paramKey: "uppercase", defaultValue: true },
+      },
     }),
   );
 </script>
@@ -15,71 +18,117 @@
 <script lang="ts">
   import CheckboxInput from "@/components/CheckboxInput.svelte";
   import { initSettings, useSyncSettings } from "@/lib/settings.svelte";
-  import { untrack } from "svelte";
   import TypingQuestions from "../../components/TypingQuestions.svelte";
-  import type { Letter } from "../../types";
+  import type { Keymap, Letter } from "../../types";
 
   useSyncSettings(letterSettings);
-  $effect.pre(() => {
-    if (letterSettings.onlyLowercase.value)
-      untrack(() => (letterSettings.onlyUppercase.value = false));
-  });
-  $effect.pre(() => {
-    if (letterSettings.onlyUppercase.value)
-      untrack(() => (letterSettings.onlyLowercase.value = false));
-  });
 
-  const letters: Letter[] = $derived.by(() => {
-    const chars: string[] = [];
+  const [
+    letters,
+    keymap,
+  ]: [
+    Letter[],
+    Keymap,
+  ] = $derived.by(() => {
+    const letters: Letter[] = [];
+    let keymap: Keymap = {};
 
-    if (letterSettings.useRowQWER.value && !letterSettings.onlyUppercase.value) {
-      chars.push(...["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"]);
+    if (letterSettings.enableRows.rowQWER.value && letterSettings.enableSubsets.lowercase.value) {
+      for (const ch of ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"]) {
+        letters.push({ letter: ch });
+        keymap[ch] = ch;
+      }
     }
-    if (letterSettings.useRowQWER.value && !letterSettings.onlyLowercase.value) {
-      chars.push(...["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"]);
-    }
-
-    if (letterSettings.useRowASDF.value && !letterSettings.onlyUppercase.value) {
-      chars.push(...["a", "s", "d", "f", "g", "h", "j", "k", "l"]);
-    }
-    if (letterSettings.useRowASDF.value && !letterSettings.onlyLowercase.value) {
-      chars.push(...["A", "S", "D", "F", "G", "H", "J", "K", "L"]);
+    if (letterSettings.enableRows.rowQWER.value && letterSettings.enableSubsets.uppercase.value) {
+      for (const ch of ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"]) {
+        letters.push({ letter: ch });
+        keymap[ch] = ch;
+      }
     }
 
-    if (letterSettings.useRowZXCV.value && !letterSettings.onlyUppercase.value) {
-      chars.push(...["z", "x", "c", "v", "b", "n", "m"]);
+    if (letterSettings.enableRows.rowASDF.value && letterSettings.enableSubsets.lowercase.value) {
+      for (const ch of ["a", "s", "d", "f", "g", "h", "j", "k", "l"]) {
+        letters.push({ letter: ch });
+        keymap[ch] = ch;
+      }
     }
-    if (letterSettings.useRowZXCV.value && !letterSettings.onlyLowercase.value) {
-      chars.push(...["Z", "X", "C", "V", "B", "N", "M"]);
+    if (letterSettings.enableRows.rowASDF.value && letterSettings.enableSubsets.uppercase.value) {
+      for (const ch of ["A", "S", "D", "F", "G", "H", "J", "K", "L"]) {
+        letters.push({ letter: ch });
+        keymap[ch] = ch;
+      }
     }
 
-    if (letterSettings.useRow1234.value) {
-      chars.push(...["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]);
+    if (letterSettings.enableRows.rowZXCV.value && letterSettings.enableSubsets.lowercase.value) {
+      for (const ch of ["z", "x", "c", "v", "b", "n", "m"]) {
+        letters.push({ letter: ch });
+        keymap[ch] = ch;
+      }
+    }
+    if (letterSettings.enableRows.rowZXCV.value && letterSettings.enableSubsets.uppercase.value) {
+      for (const ch of ["Z", "X", "C", "V", "B", "N", "M"]) {
+        letters.push({ letter: ch });
+        keymap[ch] = ch;
+      }
     }
 
-    return chars.map((char) => ({ letter: char }));
+    if (letterSettings.enableRows.row1234.value) {
+      for (const ch of ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]) {
+        letters.push({ letter: ch });
+        keymap[ch] = ch;
+      }
+    }
+
+    return [letters, keymap];
   });
 
   function casedLabel(label: string) {
-    if (letterSettings.onlyLowercase.value) return label.toLowerCase();
-    if (letterSettings.onlyUppercase.value) return label.toUpperCase();
-    return label;
+    return letterSettings.enableSubsets.lowercase.value &&
+      letterSettings.enableSubsets.uppercase.value
+      ? label
+      : letterSettings.enableSubsets.lowercase.value
+        ? label.toLowerCase()
+        : letterSettings.enableSubsets.uppercase.value
+          ? label.toUpperCase()
+          : label;
   }
 </script>
 
 <div>
   <div class="mt-3 mb-1.5 flex flex-col gap-1.5">
     <div class="flex gap-4.5">
-      <CheckboxInput bind:checked={letterSettings.useRowQWER.value} label={casedLabel("Qwer...")} />
-      <CheckboxInput bind:checked={letterSettings.useRowASDF.value} label={casedLabel("Asdf...")} />
-      <CheckboxInput bind:checked={letterSettings.useRowZXCV.value} label={casedLabel("Zxcv...")} />
-      <CheckboxInput bind:checked={letterSettings.useRow1234.value} label="1234..." />
-    </div>
-    <div class="flex gap-4.5">
-      <CheckboxInput bind:checked={letterSettings.onlyLowercase.value} label="only lowercase" />
-      <CheckboxInput bind:checked={letterSettings.onlyUppercase.value} label="ONLY UPPERCASE" />
+      <div>Select rows:</div>
+
+      <div class="flex flex-col gap-1.5">
+        <div class="flex gap-4.5">
+          <CheckboxInput
+            bind:checked={letterSettings.enableRows.rowQWER.value}
+            label={casedLabel("Qwer...")}
+          />
+          <CheckboxInput
+            bind:checked={letterSettings.enableRows.rowASDF.value}
+            label={casedLabel("Asdf...")}
+          />
+          <CheckboxInput
+            bind:checked={letterSettings.enableRows.rowZXCV.value}
+            label={casedLabel("Zxcv...")}
+          />
+          <CheckboxInput bind:checked={letterSettings.enableRows.row1234.value} label="1234..." />
+        </div>
+
+        <div class="flex gap-4.5">
+          <CheckboxInput
+            bind:checked={letterSettings.enableSubsets.lowercase.value}
+            label="enable lowercase"
+          />
+          <CheckboxInput
+            bind:checked={letterSettings.enableSubsets.uppercase.value}
+            label="enable UPPERCASE"
+          />
+        </div>
+      </div>
     </div>
   </div>
 
-  <TypingQuestions {letters} includeNumbers={letterSettings.useRow1234.value} />
+  <TypingQuestions {letters} {keymap} includeNumbers={letterSettings.enableRows.row1234.value} />
 </div>
