@@ -1,6 +1,8 @@
 <script lang="ts">
-  import NumericInput from "@/components/NumericInput.svelte";
-  import SelectInput from "@/components/SelectInput.svelte";
+  import Divider from "@/components/svelte/Divider.svelte";
+  import NumericInput from "@/components/svelte/NumericInput.svelte";
+  import SelectInput from "@/components/svelte/SelectInput.svelte";
+  import SettingsRow from "@/components/svelte/SettingsRow.svelte";
   import { speech } from "@/lib/speech.svelte";
   import "@/styles.css";
   import { initSettings, useSyncSettings } from "../../lib/settings.svelte";
@@ -26,11 +28,11 @@
 </script>
 
 <div
-  class="flex min-h-dvh w-fit min-w-full touch-manipulation flex-col gap-3 bg-primary px-4 pt-2 pb-6 font-content tracking-tight text-primary-content"
+  class="min-h-dvh w-fit min-w-full touch-manipulation flex-col bg-primary p-4 font-content tracking-tight text-primary-content"
 >
   <h1>
     <button
-      class="mt-3 mb-6 cursor-pointer text-xl underline underline-offset-4"
+      class="cursor-pointer text-xl underline underline-offset-4"
       onclick={() => {
         window.location.replace(window.location.pathname);
       }}
@@ -40,12 +42,13 @@
   </h1>
 
   <!-- settings -->
-  <div class="flex items-center-safe gap-9">
+  <SettingsRow wider class="mt-8">
     <SelectInput
       bind:value={settings.lang.value}
       label="Lang"
       options={["en-US", "zh-HK", "ja-JP", "ko-KR"]}
     />
+
     <NumericInput
       bind:value={settings.speechRate.value}
       label="Speech Rate"
@@ -55,9 +58,11 @@
       disabled={!speech.voice}
     />
     {#if !speech.voice}
-      <span class="-ml-6 text-red-700">SpeechSynthesis is not available.</span>
+      <span class="-ml-2 text-red-700">SpeechSynthesis is not available.</span>
     {/if}
-  </div>
+  </SettingsRow>
+
+  <Divider />
 
   {#if settings.lang.value === "en-US"}
     <EN />

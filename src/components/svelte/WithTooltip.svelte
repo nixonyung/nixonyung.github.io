@@ -33,13 +33,15 @@
 
   {#if !disabled && (customTooltip || tooltip)}
     <div
-      class="invisible absolute -bottom-1.5 left-0 z-10 w-fit translate-y-full rounded bg-primary px-1.5 py-0.5 whitespace-nowrap ring brightness-120 group-hover/tooltip:visible dark:brightness-150"
+      class="invisible absolute bottom-0 left-0 z-10 w-max translate-y-full pt-2 whitespace-nowrap group-hover/tooltip:visible"
     >
-      {#if customTooltip}
-        {@render customTooltip()}
-      {:else if tooltip}
-        {tooltip}
-      {/if}
+      <div class="rounded bg-primary px-2 py-1 ring brightness-120 dark:brightness-150">
+        {#if customTooltip}
+          {@render customTooltip()}
+        {:else if tooltip}
+          {tooltip}
+        {/if}
+      </div>
     </div>
   {/if}
 </div>

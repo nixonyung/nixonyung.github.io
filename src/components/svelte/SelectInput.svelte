@@ -17,9 +17,9 @@
 </script>
 
 <label class={classList}>
-  <span class="mr-3">{label}:</span>
+  <span>{label}:</span>
 
-  <select bind:value class="rounded bg-primary p-1 ring" {disabled}>
+  <select bind:value class="ml-1 rounded bg-primary p-1 ring" {disabled}>
     {#each options as option (option)}
       <option value={option}>{option}</option>
     {/each}

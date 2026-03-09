@@ -191,45 +191,20 @@
 </script>
 
 <script lang="ts">
-  import CheckboxInput from "@/components/CheckboxInput.svelte";
-  import Highlighted from "@/components/Highlighted.svelte";
-  import ReferencesList from "@/components/ReferencesList.svelte";
-  import SettingsContainer from "@/components/SettingsContainer.svelte";
-  import SettingsRow from "@/components/SettingsRow.svelte";
-  import SettingsRows from "@/components/SettingsRows.svelte";
-  import SettingsRowsBordered from "@/components/SettingsRowsBordered.svelte";
-  import SettingsSection from "@/components/SettingsSection.svelte";
-  import { initSettings, useSyncSettings } from "../../../../lib/settings.svelte";
+  import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
+  import Highlighted from "@/components/svelte/Highlighted.svelte";
+  import ReferencesList from "@/components/svelte/ReferencesList.svelte";
+  import SettingsContainer from "@/components/svelte/SettingsContainer.svelte";
+  import SettingsRow from "@/components/svelte/SettingsRow.svelte";
+  import SettingsRows from "@/components/svelte/SettingsRows.svelte";
+  import SettingsRowsBordered from "@/components/svelte/SettingsRowsBordered.svelte";
+  import SettingsSection from "@/components/svelte/SettingsSection.svelte";
+  import { flattenSettings, initSettings, toggleSettings, useSyncSettings } from "../../../../lib/settings.svelte";
 
   useSyncSettings(flashcardSettings);
 
-  interface BooleanSetting {
-    value: boolean;
-  }
-  interface BooleanSettings {
-    [K: string]: BooleanSetting | BooleanSettings;
-  }
-  function isSetting(setting: BooleanSetting | BooleanSettings): setting is BooleanSetting {
-    return setting.value !== undefined;
-  }
-  function settingsSome(settings: BooleanSetting | BooleanSettings, target: boolean): boolean {
-    return isSetting(settings) ? settings.value === target : Object.values(settings).some((setting) => settingsSome(setting, target));
-  }
-  function setAllSettings(settings: BooleanSetting | BooleanSettings, val: boolean) {
-    if (isSetting(settings)) {
-      settings.value = val;
-    } else {
-      for (const setting of Object.values(settings)) {
-        setAllSettings(setting, val);
-      }
-    }
-  }
-  function onclick(settings: BooleanSetting | BooleanSettings) {
-    return () => setAllSettings(settings, settingsSome(settings, false));
-  }
-
-  const allVerbsDisabled = $derived(!settingsSome(flashcardSettings.words.verbs, true));
-  const allAdjsDisabled = $derived(!settingsSome(flashcardSettings.words.adjectives, true));
+  const allVerbsDisabled = $derived(flattenSettings(flashcardSettings.words.verbs).every(({ value }) => !value));
+  const allAdjsDisabled = $derived(flattenSettings(flashcardSettings.words.adjectives).every(({ value }) => !value));
 </script>
 
 <!-- TODO: JLPT Sensei -->
@@ -252,11 +227,11 @@
 />
 
 <SettingsContainer>
-  <Highlighted onclick={onclick(flashcardSettings)}>(toggle all)</Highlighted>
+  <Highlighted onclick={() => toggleSettings(flashcardSettings)}>(toggle all)</Highlighted>
 
   <SettingsSection>
     <SettingsRow>
-      <Highlighted onclick={onclick(flashcardSettings.words.pronouns)}>Pronouns:</Highlighted>
+      <Highlighted onclick={() => toggleSettings(flashcardSettings.words.pronouns)}>Pronouns:</Highlighted>
     </SettingsRow>
 
     <SettingsRows>
@@ -286,12 +261,14 @@
 
   <SettingsSection>
     <SettingsRow>
-      <Highlighted onclick={onclick(flashcardSettings.words.nouns)}>Nouns:</Highlighted>
+      <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns)}>Nouns:</Highlighted>
     </SettingsRow>
 
     <SettingsRows>
       <SettingsRow>
-        <Highlighted onclick={onclick(flashcardSettings.words.nouns.people.byCharacteristics)}>People (by Characteristics):</Highlighted>
+        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.people.byCharacteristics)}
+          >People (by Characteristics):</Highlighted
+        >
 
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.generic.value} label="(generic)" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.gender.value} label="Gender" />
@@ -302,12 +279,14 @@
       </SettingsRow>
       <SettingsSection>
         <SettingsRow>
-          <Highlighted onclick={onclick(flashcardSettings.words.nouns.people.byRelationships)}>People (by Relationships):</Highlighted>
+          <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.people.byRelationships)}
+            >People (by Relationships):</Highlighted
+          >
         </SettingsRow>
 
         <SettingsRows>
           <SettingsRow>
-            <Highlighted onclick={onclick(flashcardSettings.words.nouns.people.byRelationships.immediateFamily)}
+            <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.people.byRelationships.immediateFamily)}
               >Immediate Family:</Highlighted
             >
             <CheckboxInput
@@ -346,13 +325,13 @@
       </SettingsSection>
 
       <SettingsRow>
-        <Highlighted onclick={onclick(flashcardSettings.words.nouns.animals)}>Animals:</Highlighted>
+        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.animals)}>Animals:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.animals.value} label="(all)" />
       </SettingsRow>
 
       <SettingsRow>
-        <Highlighted onclick={onclick(flashcardSettings.words.nouns.objects)}>Objects:</Highlighted>
+        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.objects)}>Objects:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.generic.value} label="(generic)" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.biological.value} label="Biological Parts" />
@@ -366,7 +345,7 @@
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.arts.value} label="Arts" />
       </SettingsRow>
       <SettingsRow>
-        <Highlighted onclick={onclick(flashcardSettings.words.nouns.moments)}>Moments:</Highlighted>
+        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.moments)}>Moments:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.timesOfDay.value} label="Times Of Day" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.daysOfWeek.value} label="Days Of Week" />
@@ -376,7 +355,7 @@
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.misc.value} label="(misc.)" />
       </SettingsRow>
       <SettingsRow>
-        <Highlighted onclick={onclick(flashcardSettings.words.nouns.venues)}>Venues:</Highlighted>
+        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.venues)}>Venues:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.generic.value} label="(generic)" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.facilities.value} label="Facilities" />
@@ -385,7 +364,7 @@
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.imaginary.value} label="Imaginary" />
       </SettingsRow>
       <SettingsRow>
-        <Highlighted onclick={onclick(flashcardSettings.words.nouns.ideas)}>Ideas:</Highlighted>
+        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.ideas)}>Ideas:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.life.value} label="Life" />
         <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.socialConstructs.value} label="Social Constructs" />
@@ -401,7 +380,7 @@
 
   <SettingsSection>
     <SettingsRow>
-      <Highlighted class="whitespace-nowrap" onclick={onclick(flashcardSettings.words.verbs)}>Verbs:</Highlighted>
+      <Highlighted class="whitespace-nowrap" onclick={() => toggleSettings(flashcardSettings.words.verbs)}>Verbs:</Highlighted>
     </SettingsRow>
 
     <SettingsRows>
@@ -444,7 +423,7 @@
       </SettingsRowsBordered>
 
       <SettingsRow>
-        <Highlighted onclick={onclick(flashcardSettings.words.verbs.actions)}>Actions:</Highlighted>
+        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.verbs.actions)}>Actions:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.bodily.value} label="Bodily" />
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.intellectual.value} label="Intellectual" />
@@ -455,7 +434,7 @@
       </SettingsRow>
 
       <SettingsRow>
-        <Highlighted onclick={onclick(flashcardSettings.words.verbs.descriptive)}>Descriptive:</Highlighted>
+        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.verbs.descriptive)}>Descriptive:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.descriptive.being.value} label="Being" />
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.descriptive.existence.value} label="Existence" />
@@ -463,14 +442,14 @@
       </SettingsRow>
 
       <SettingsRow>
-        <Highlighted onclick={onclick(flashcardSettings.words.verbs.changes)}>Changes:</Highlighted>
+        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.verbs.changes)}>Changes:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.changes.environmenal.value} label="Environmenal" />
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.changes.resultative.value} label="Resultative" />
       </SettingsRow>
 
       <SettingsRow>
-        <Highlighted onclick={onclick(flashcardSettings.words.verbs.auxiliary)}>Auxiliary:</Highlighted>
+        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.verbs.auxiliary)}>Auxiliary:</Highlighted>
 
         <CheckboxInput bind:checked={flashcardSettings.words.verbs.auxiliary.value} label="(all)" />
       </SettingsRow>
@@ -479,7 +458,7 @@
 
   <SettingsSection>
     <SettingsRow>
-      <Highlighted class="whitespace-nowrap" onclick={onclick(flashcardSettings.words.adjectives)}>Adjectives:</Highlighted>
+      <Highlighted class="whitespace-nowrap" onclick={() => toggleSettings(flashcardSettings.words.adjectives)}>Adjectives:</Highlighted>
     </SettingsRow>
 
     <SettingsRows>
@@ -507,7 +486,7 @@
   </SettingsSection>
 
   <SettingsRow>
-    <Highlighted onclick={onclick(flashcardSettings.words.functional)}>Functional Words:</Highlighted>
+    <Highlighted onclick={() => toggleSettings(flashcardSettings.words.functional)}>Functional Words:</Highlighted>
 
     <CheckboxInput bind:checked={flashcardSettings.words.functional.adpositions.value} label="Adpositions" />
     <CheckboxInput bind:checked={flashcardSettings.words.functional.chronological.value} label="Chronological" />
@@ -519,7 +498,7 @@
   </SettingsRow>
 
   <SettingsRow>
-    <Highlighted onclick={onclick(flashcardSettings.words.expressions)}>Expressions:</Highlighted>
+    <Highlighted onclick={() => toggleSettings(flashcardSettings.words.expressions)}>Expressions:</Highlighted>
 
     <CheckboxInput bind:checked={flashcardSettings.words.expressions.appellations.value} label="Appellations" />
     <CheckboxInput bind:checked={flashcardSettings.words.expressions.greetingsAndClosings.value} label="Greetings and Closings" />
@@ -535,13 +514,13 @@
 
   <SettingsSection>
     <SettingsRow>
-      <Highlighted onclick={onclick(flashcardSettings.words.grammarRules)}>Grammar Rules:</Highlighted>
+      <Highlighted onclick={() => toggleSettings(flashcardSettings.words.grammarRules)}>Grammar Rules:</Highlighted>
     </SettingsRow>
 
     <SettingsRows>
       <SettingsSection>
         <SettingsRow>
-          <Highlighted onclick={onclick(flashcardSettings.words.grammarRules.conjugations)}>Verb Conjugations:</Highlighted>
+          <Highlighted onclick={() => toggleSettings(flashcardSettings.words.grammarRules.conjugations)}>Verb Conjugations:</Highlighted>
         </SettingsRow>
 
         <SettingsRows>

@@ -26,8 +26,8 @@
 </script>
 
 <script lang="ts">
-  import CheckboxInput from "@/components/CheckboxInput.svelte";
-  import ReferencesList from "@/components/ReferencesList.svelte";
+  import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
+  import ReferencesList from "@/components/svelte/ReferencesList.svelte";
   import { initSettings, useSyncSettings } from "@/lib/settings.svelte";
   import GojuonRow from "./GojuonRow.svelte";
 

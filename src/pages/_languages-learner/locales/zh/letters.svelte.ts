@@ -1,13 +1,14 @@
-import type { Letter } from "../../types";
+import type { Keymap, Letter } from "../../types";
 
 import { letterSettings } from "./ZH.svelte";
 
-// (ref.) [倉頡輸入法/輔助字形](https://zh.wikibooks.org/zh-hk/%E5%80%89%E9%A0%A1%E8%BC%B8%E5%85%A5%E6%B3%95/%E8%BC%94%E5%8A%A9%E5%AD%97%E5%BD%A2)
-export function getLetters() {
+export function getLettersAndKeymap() {
   const letters: Letter[] = [];
+  const keymap: Keymap = {};
 
   if (letterSettings.enableRows.philosophical.value) {
     letters.push({ letter: "日", actualInput: "a" });
+    keymap["a"] = "日";
   }
   if (letterSettings.enableRows.philosophical.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -27,6 +28,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.philosophical.value) {
     letters.push({ letter: "月", actualInput: "b" });
+    keymap["b"] = "月";
   }
   if (letterSettings.enableRows.philosophical.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -66,6 +68,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.philosophical.value) {
     letters.push({ letter: "金", actualInput: "c" });
+    keymap["c"] = "金";
   }
   if (letterSettings.enableRows.philosophical.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -95,6 +98,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.philosophical.value) {
     letters.push({ letter: "木", actualInput: "d" });
+    keymap["d"] = "木";
   }
   if (letterSettings.enableRows.philosophical.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -119,6 +123,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.philosophical.value) {
     letters.push({ letter: "水", actualInput: "e" });
+    keymap["e"] = "水";
   }
   if (letterSettings.enableRows.philosophical.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -158,6 +163,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.philosophical.value) {
     letters.push({ letter: "火", actualInput: "f" });
+    keymap["f"] = "火";
   }
   if (letterSettings.enableRows.philosophical.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -192,6 +198,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.philosophical.value) {
     letters.push({ letter: "土", actualInput: "g" });
+    keymap["g"] = "土";
   }
   if (letterSettings.enableRows.philosophical.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -211,6 +218,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.stroke.value) {
     letters.push({ letter: "竹", actualInput: "h" });
+    keymap["h"] = "竹";
   }
   if (letterSettings.enableRows.stroke.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -235,6 +243,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.stroke.value) {
     letters.push({ letter: "戈", actualInput: "i" });
+    keymap["i"] = "戈";
   }
   if (letterSettings.enableRows.stroke.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -264,6 +273,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.stroke.value) {
     letters.push({ letter: "十", actualInput: "j" });
+    keymap["j"] = "十";
   }
   if (letterSettings.enableRows.stroke.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -283,6 +293,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.stroke.value) {
     letters.push({ letter: "大", actualInput: "k" });
+    keymap["k"] = "大";
   }
   if (letterSettings.enableRows.stroke.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -312,6 +323,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.stroke.value) {
     letters.push({ letter: "中", actualInput: "l" });
+    keymap["l"] = "中";
   }
   if (letterSettings.enableRows.stroke.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -341,6 +353,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.stroke.value) {
     letters.push({ letter: "一", actualInput: "m" });
+    keymap["m"] = "一";
   }
   if (letterSettings.enableRows.stroke.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -375,6 +388,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.stroke.value) {
     letters.push({ letter: "弓", actualInput: "n" });
+    keymap["n"] = "弓";
   }
   if (letterSettings.enableRows.stroke.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -409,6 +423,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.bodyParts.value) {
     letters.push({ letter: "人", actualInput: "o" });
+    keymap["o"] = "人";
   }
   if (letterSettings.enableRows.bodyParts.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -443,6 +458,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.bodyParts.value) {
     letters.push({ letter: "心", actualInput: "p" });
+    keymap["p"] = "心";
   }
   if (letterSettings.enableRows.bodyParts.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -487,6 +503,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.bodyParts.value) {
     letters.push({ letter: "手", actualInput: "q" });
+    keymap["q"] = "手";
   }
   if (letterSettings.enableRows.bodyParts.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -521,6 +538,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.bodyParts.value) {
     letters.push({ letter: "口", actualInput: "r" });
+    keymap["r"] = "口";
   }
   if (letterSettings.enableRows.bodyParts.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -535,6 +553,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.characterShapes.value) {
     letters.push({ letter: "尸", actualInput: "s" });
+    keymap["s"] = "尸";
   }
   if (letterSettings.enableRows.characterShapes.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -579,6 +598,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.characterShapes.value) {
     letters.push({ letter: "廿", actualInput: "t" });
+    keymap["t"] = "廿";
   }
   if (letterSettings.enableRows.characterShapes.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -618,6 +638,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.characterShapes.value) {
     letters.push({ letter: "山", actualInput: "u" });
+    keymap["u"] = "山";
   }
   if (letterSettings.enableRows.characterShapes.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -647,6 +668,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.characterShapes.value) {
     letters.push({ letter: "女", actualInput: "v" });
+    keymap["v"] = "女";
   }
   if (letterSettings.enableRows.characterShapes.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -686,6 +708,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.characterShapes.value) {
     letters.push({ letter: "田", actualInput: "w" });
+    keymap["w"] = "田";
   }
   if (letterSettings.enableRows.characterShapes.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -710,6 +733,7 @@ export function getLetters() {
 
   if (letterSettings.enableRows.characterShapes.value) {
     letters.push({ letter: "卜", actualInput: "y" });
+    keymap["y"] = "卜";
   }
   if (letterSettings.enableRows.characterShapes.value && letterSettings.enableSubsets.auxiliaryShapes.value) {
     letters.push(
@@ -737,5 +761,5 @@ export function getLetters() {
     );
   }
 
-  return letters;
+  return { letters, keymap };
 }

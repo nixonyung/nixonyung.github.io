@@ -124,15 +124,24 @@ export function initSettings<Sc extends SettingsSchema>(schema: Sc): TSettings<S
   ) as TSettings<Sc>;
 }
 
-type Setting = TSetting<SettingsSchemaField>;
+export type Setting = TSetting<SettingsSchemaField>;
 
-interface Settings {
+export interface Settings {
   [K: string]: Settings | Setting;
 }
 
 function isSetting(setting: Settings | Setting): setting is Setting {
   return setting.paramKey !== undefined;
 }
+
+export function flattenSettings(settings: Settings | Setting): Setting[] {
+  if (isSetting(settings)) {
+    return [settings];
+  }
+
+  return Object.values(settings).flatMap((setting: Settings | Setting) => flattenSettings(setting));
+}
+
 function settingsForEach(
   settings: Settings | Setting,
   callbackFn: ((setting: Setting) => Setting["value"]) | ((setting: Setting) => void),
@@ -149,13 +158,13 @@ function settingsForEach(
 }
 
 export function useSyncSettings(settings: Settings) {
-  // read settings from URL
   onMount(() => {
+    // load settings from URL
     settingsForEach(settings, (setting) => readSetting(setting));
   });
 
-  // sync settings with URL when component is in use
   $effect.pre(() => {
+    // sync settings with URL
     settingsForEach(settings, ({ paramKey, defaultValue, value }) => {
       const encoded = encodeSetting(value);
 
@@ -168,11 +177,17 @@ export function useSyncSettings(settings: Settings) {
     updateURL();
   });
 
-  // remove settings from URL when component is not in use
   onDestroy(() => {
-    settingsForEach(settings, ({ paramKey }) => {
+    // reset settings and URL
+    settingsForEach(settings, ({ paramKey, defaultValue }) => {
       searchParams.delete(paramKey);
+      return cloneDeep(defaultValue);
     });
     updateURL();
   });
+}
+
+export function toggleSettings(settings: Settings | Setting) {
+  const newValue = flattenSettings(settings).some(({ value }) => !value);
+  settingsForEach(settings, () => newValue);
 }

@@ -3,7 +3,10 @@
 </script>
 
 <script lang="ts">
-  import CheckboxInput from "@/components/CheckboxInput.svelte";
+  import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
+  import SettingsContainer from "@/components/svelte/SettingsContainer.svelte";
+  import SettingsRow from "@/components/svelte/SettingsRow.svelte";
+  import SettingsRows from "@/components/svelte/SettingsRows.svelte";
   import { CircularQueue } from "@/lib/circular-queue";
   import { onkeydown } from "@/lib/keyboard";
   import { QuestionsQueue } from "@/lib/questions-queue.svelte.ts";
@@ -16,17 +19,21 @@
   const {
     letters,
     keymap,
-    includeNumbers = false,
+    showNumberRow = false,
+    showTilde = false,
+    showSymbols = false,
   }: {
     letters: Letter[];
     keymap: Keymap;
-    includeNumbers?: boolean;
+    showNumberRow?: boolean;
+    showTilde?: boolean;
+    showSymbols?: boolean;
   } = $props();
 
   const settings = $state(
     initSettings({
-      hideLayout: { paramKey: "hideLayout", defaultValue: false },
-      showCorrectKey: { paramKey: "showCorrectKey", defaultValue: false },
+      hideKeys: { paramKey: "hideKeys", defaultValue: false },
+      highlightCorrectKey: { paramKey: "showCorrectKey", defaultValue: false },
       ignoreTypos: { paramKey: "ignoreTypos", defaultValue: false },
       speakOnCorrect: { paramKey: "speakOnCorrect", defaultValue: false },
     }),
@@ -67,7 +74,7 @@
 
 <svelte:window
   onkeydown={onkeydown(({ key, ctrlKey, metaKey }) => {
-    if (key.match(/^[0-9a-zA-Z]$/)) {
+    if (key.match(/^[a-zA-Z]$/) || key in keymap) {
       if (settings.ignoreTypos.value && key !== questions.top?.input[input.length]) return;
 
       input += key;
@@ -93,14 +100,32 @@
 
 <div>
   <!-- settings -->
-  <div class="flex items-center-safe gap-4.5">
-    <CheckboxInput bind:checked={settings.hideLayout.value} label="hide keyboard layout" />
-    <CheckboxInput bind:checked={settings.showCorrectKey.value} label="show correct key" />
-    <CheckboxInput bind:checked={settings.ignoreTypos.value} label="ignore typos" />
-    <CheckboxInput bind:checked={settings.speakOnCorrect.value} label="auto speak on correct" />
-  </div>
-
-  <hr class="mt-6 opacity-50" />
+  <SettingsContainer>
+    <SettingsRows>
+      <SettingsRow>
+        <CheckboxInput
+          bind:checked={settings.hideKeys.value}
+          icon="icon-[heroicons--eye-slash-solid]"
+          label="hide keys"
+        />
+        <CheckboxInput
+          bind:checked={settings.highlightCorrectKey.value}
+          icon="icon-[ix--highlight-filled]"
+          label="highlight the correct key"
+        />
+        <CheckboxInput
+          bind:checked={settings.ignoreTypos.value}
+          icon="icon-[heroicons--shield-check-solid]"
+          label="ignore typos"
+        />
+        <CheckboxInput
+          bind:checked={settings.speakOnCorrect.value}
+          icon="icon-[icon-park-solid--people-speak]"
+          label="auto speak on correct"
+        />
+      </SettingsRow>
+    </SettingsRows>
+  </SettingsContainer>
 
   <div class="mt-6 flex items-center-safe gap-3">
     <span class="underline underline-offset-2">Questions:</span>
@@ -172,9 +197,11 @@
   <div class="h-9"></div>
   <TypingKeyboard
     {keymap}
-    {includeNumbers}
-    hideLayout={settings.hideLayout.value}
-    showCorrectKey={settings.showCorrectKey.value}
-    correctKey={questions.top?.input[input.length]}
+    correctCh={questions.top?.input[input.length]}
+    {showNumberRow}
+    {showTilde}
+    {showSymbols}
+    hideDisplayKey={settings.hideKeys.value}
+    showCorrectKey={settings.highlightCorrectKey.value}
   />
 </div>

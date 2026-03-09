@@ -1,5 +1,5 @@
 <script lang="ts">
-  import TabsInput from "@/components/TabsInput.svelte";
+  import TabsInput from "@/components/svelte/TabsInput.svelte";
   import { initSettings, useSyncSettings } from "../../../../lib/settings.svelte";
   import FlashcardQuestions from "../../components/FlashcardQuestions.svelte";
   import TypingQuestions from "../../components/TypingQuestions.svelte";
@@ -38,8 +38,8 @@
   );
   useSyncSettings(settings);
 
-  const keymap = $derived(getKeymap());
-  const letters = $derived(getLetters());
+  const keymap = $derived.by(getKeymap);
+  const letters = $derived.by(getLetters);
   const words = $derived.by(() => {
     const words: JapaneseWord[] = [];
 

@@ -5,6 +5,7 @@
 
   let {
     checked = $bindable(),
+    icon,
     label,
     tooltip,
     customTooltip,
@@ -12,6 +13,7 @@
     disabled,
   }: WithTooltipProps & {
     checked: boolean;
+    icon?: string;
     label: string;
     class?: ClassValue;
     disabled?: boolean;
@@ -21,7 +23,7 @@
 <WithTooltip {tooltip} {customTooltip} {disabled}>
   <button
     class={[
-      "flex items-center-safe gap-1",
+      "flex items-center-safe",
       classList,
       !disabled
         ? "cursor-pointer underline-offset-4 not-dark:hover:underline dark:hover:brightness-150 dark:hover:grayscale-50"
@@ -34,6 +36,7 @@
       icon={checked ? "icon-[icon-park-solid--check-one]" : "icon-[icon-park-outline--round]"}
       class={["text-sm", !checked && "opacity-50"]}
     />
-    <span>{label}</span>
+    <Icon {icon} class="ml-2" />
+    <span class="ml-1">{label}</span>
   </button>
 </WithTooltip>

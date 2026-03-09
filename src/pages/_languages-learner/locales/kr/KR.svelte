@@ -18,14 +18,16 @@
 </script>
 
 <script lang="ts">
-  import CheckboxInput from "@/components/CheckboxInput.svelte";
-  import ReferencesList from "@/components/ReferencesList.svelte";
-  import { initSettings } from "@/lib/settings.svelte.ts";
+  import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
+  import ReferencesList from "@/components/svelte/ReferencesList.svelte";
+  import { initSettings, useSyncSettings } from "@/lib/settings.svelte.ts";
   import TypingQuestions from "../../components/TypingQuestions.svelte";
   import { keymap } from "./keymap.svelte.ts";
   import { getLetters } from "./letters.svelte.ts";
 
-  const letters = $derived(getLetters());
+  useSyncSettings(letterSettings);
+
+  const letters = $derived.by(getLetters);
 </script>
 
 <div>

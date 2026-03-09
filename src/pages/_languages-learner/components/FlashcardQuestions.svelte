@@ -1,12 +1,12 @@
 <script lang="ts">
-  import CheckboxInput from "@/components/CheckboxInput.svelte";
-  import FlashcardsList from "@/components/FlashcardsList.svelte";
-  import Highlighted from "@/components/Highlighted.svelte";
-  import Icon from "@/components/Icon.svelte";
-  import KBD from "@/components/KBD.svelte";
-  import NumericInput from "@/components/NumericInput.svelte";
-  import SearchBar from "@/components/SearchBar.svelte";
-  import SettingsRowsBordered from "@/components/SettingsRowsBordered.svelte";
+  import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
+  import FlashcardsList from "@/components/svelte/FlashcardsList.svelte";
+  import Highlighted from "@/components/svelte/Highlighted.svelte";
+  import Icon from "@/components/svelte/Icon.svelte";
+  import KBD from "@/components/svelte/KBD.svelte";
+  import NumericInput from "@/components/svelte/NumericInput.svelte";
+  import SearchBar from "@/components/svelte/SearchBar.svelte";
+  import SettingsRowsBordered from "@/components/svelte/SettingsRowsBordered.svelte";
   import { onkeydown } from "@/lib/keyboard";
   import { QuestionsQueue } from "@/lib/questions-queue.svelte.ts";
   import { speech } from "@/lib/speech.svelte";
