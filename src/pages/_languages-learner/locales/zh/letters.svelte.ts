@@ -417,7 +417,6 @@ export function getLettersAndKeymap() {
       { letter: "弓", svgPath: "/zh/n/Cjem-n11-1.svg", actualInput: "n" },
       { letter: "弓", svgPath: "/zh/n/Cjem-n11-2.svg", actualInput: "n" },
       { letter: "弓", svgPath: "/zh/n/Cjem-n12-1.svg", actualInput: "n" },
-      { letter: "弓", svgPath: "/zh/n/Cjrm-n12.svg", actualInput: "n" },
     );
   }
 

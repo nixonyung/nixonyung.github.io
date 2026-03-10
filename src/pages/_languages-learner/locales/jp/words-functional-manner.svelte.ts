@@ -35,6 +35,7 @@ export function appendFunctionalManner(words: JapaneseWord[]) {
       { hiragana: "ぼちぼち", romanization: "bochibochi", meaning: "(water dripping sound) leisurely / gradually", derivedMeanings: ["so-so"] },
       { hiragana: "すやすや", romanization: "suyasuya", meaning: "(sleeping sound, quietly)" },
       { hiragana: "ぷるぷる", katakana: "プルプル", romanization: "purupuru", meaning: "(trembling sound)" },
+      { hiragana: "いちゃいちゃ", katakana: "イチャイチャ", preferredForm: "katakana", romanization: "ichaicha", meaning: "making out" },
     );
   }
 }

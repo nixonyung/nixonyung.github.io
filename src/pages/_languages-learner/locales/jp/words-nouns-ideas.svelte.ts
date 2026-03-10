@@ -21,6 +21,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["気分"], hiragana: "きぶん", romanization: "kibun", meaning: "mood" },
       { kanjis: ["元気"], hiragana: "げんき", romanization: "genki", meaning: "living energy" },
       { kanjis: ["調子"], hiragana: "ちょうし", romanization: "choushi", meaning: "pitch / tone", derivedMeanings: ["mood", "condition"] },
+      { kanjis: ["本命"], hiragana: "ほんめい", romanization: "honmei", meaning: "favourite" },
 
       { kanjis: ["生まれ"], hiragana: "うまれ", romanization: "umare", meaning: "birth / birthplace" },
       { kanjis: ["生活"], hiragana: "せいかつ", romanization: "seikatsu", meaning: "living" },
@@ -41,7 +42,10 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["頭痛"], hiragana: "ずつう", romanization: "zutsuu", meaning: "headache" },
       { kanjis: ["車酔い"], hiragana: "くるまよい", romanization: "kurumayoi", meaning: "car sickness" },
 
+      { kanjis: ["恋愛"], hiragana: "れんあい", romanization: "renai", meaning: "love / relationship" },
+
       { kanjis: ["表現"], hiragana: "ひょうげん", romanization: "hyougen", meaning: "expression / representation" },
+      { kanjis: ["素っぴん"], hiragana: "すっぴん", romanization: "suppin", meaning: "without makeup" },
 
       { kanjis: ["泣き"], hiragana: "なき", romanization: "naki", meaning: "crying" },
       { kanjis: ["眼差し", "目差し", "目差", "眼指"], hiragana: "まなざし", romanization: "manazashi", meaning: "a gaze", exampleUsages: ["優しい眼差し"] },
@@ -173,6 +177,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { katakana: "メンバー", romanization: "menbaa", meaning: "member" },
 
       { kanjis: ["役割"], hiragana: "やくわり", romanization: "yakuwari", meaning: "role / duty" },
+      { kanjis: ["義理"], hiragana: "ぎり", romanization: "giri", meaning: "duty" },
       { kanjis: ["機能"], hiragana: "きのう", romanization: "kinou", meaning: "function" },
 
       { kanjis: ["事業"], hiragana: "じぎょう", romanization: "jigyou", meaning: "career" },

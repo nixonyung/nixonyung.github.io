@@ -51,8 +51,13 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
 
       // ordering
       { hiragana: "あとは", romanization: "atowa", meaning: "next up" },
-      { kanjis: ["次いで"], hiragana: "ついで", romanization: "tsuide", meaning: "secondly" },
       { hiragana: "また", preferredForm: "hiragana", kanjis: ["又"], rareKanjis: ["亦", "復"], romanization: "mata", meaning: "moreover / once again" },
+
+      { kanjis: ["次いで"], hiragana: "ついで", romanization: "tsuide", meaning: "second" },
+
+      { kanjis: ["一つ目"], hiragana: "ひとつめ", romanization: "hitotsume", meaning: "first" },
+      { kanjis: ["二つ目"], hiragana: "ふたつめ", romanization: "futatsume", meaning: "second" },
+      { kanjis: ["三つ目"], hiragana: "みっつめ", romanization: "mittsume", meaning: "third" },
     );
   }
 }

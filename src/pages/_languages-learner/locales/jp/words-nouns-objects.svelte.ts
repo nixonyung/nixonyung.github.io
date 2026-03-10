@@ -140,6 +140,8 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["菓子"], hiragana: "かし", romanization: "kashi", meaning: "sweets" },
       { kanjis: ["綿菓子"], hiragana: "わたがし", romanization: "watagashi", meaning: "cotton candy" },
       { kanjis: ["飴"], hiragana: "あめ", romanization: "ame", meaning: "(hard) candy" },
+      { katakana: "チョコレート", romanization: "chokoreeto", meaning: "chocolate" },
+      { katakana: "チョコ", romanization: "choko", meaning: "chocolate" },
       { katakana: "ケーキ", romanization: "keeki", meaning: "cake" },
       { katakana: "プリン", romanization: "purin", meaning: "pudding" },
 

@@ -161,6 +161,9 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { kanjis: ["自然"], hiragana: "しぜん", romanization: "shizen", adjGroup: "Na", meaning: "natural" },
       { katakana: "ナチュラル", romanization: "nachuraru", adjGroup: "Na", meaning: "natural" },
       { katakana: "リアル", romanization: "riaru", adjGroup: "Na", meaning: "real" },
+      { katakana: "ストレート", romanization: "sutoreeto", adjGroup: "Na", meaning: "straight", derivedMeanings: ["direct"] },
+
+      { katakana: "マイ", romanization: "mai", adjGroup: "Na", meaning: "my" },
 
       { kanjis: ["同じ"], hiragana: "おなじ", romanization: "onaji", adjGroup: "Na", meaning: "identical", exampleUsages: ["[Noun] は [Noun] におなじ [Verb]"] },
 
