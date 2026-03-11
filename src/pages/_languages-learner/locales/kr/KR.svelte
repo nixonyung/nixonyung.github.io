@@ -19,57 +19,87 @@
 
 <script lang="ts">
   import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
+  import Divider from "@/components/svelte/Divider.svelte";
+  import Highlighted from "@/components/svelte/Highlighted.svelte";
   import ReferencesList from "@/components/svelte/ReferencesList.svelte";
-  import { initSettings, useSyncSettings } from "@/lib/settings.svelte.ts";
+  import SettingsRow from "@/components/svelte/SettingsRow.svelte";
+  import SettingsRows from "@/components/svelte/SettingsRows.svelte";
+  import SettingsVSplit from "@/components/svelte/SettingsVSplit.svelte";
+  import WithTooltip from "@/components/svelte/WithTooltip.svelte";
+  import { initSettings, toggleSettings, useSyncSettings } from "@/lib/settings.svelte.ts";
   import TypingQuestions from "../../components/TypingQuestions.svelte";
-  import { keymap } from "./keymap.svelte.ts";
-  import { getLetters } from "./letters.svelte.ts";
+  import { getLettersAndKeymap } from "./letters.svelte.ts";
 
   useSyncSettings(letterSettings);
 
-  const letters = $derived.by(getLetters);
+  const { letters, keymap } = $derived.by(getLettersAndKeymap);
 </script>
 
-<div>
-  <ReferencesList
-    references={{
-      "Hangul - Letters": "https://en.wikipedia.org/wiki/Hangul#Letters",
-      Dubeolsik: "https://en.wikipedia.org/wiki/Keyboard_layout#Dubeolsik",
-    }}
-  />
+<SettingsVSplit>
+  <SettingsRow>
+    <WithTooltip>
+      <div>Select subsets:</div>
 
-  <div class="mt-3 mb-1.5 flex flex-col gap-1.5">
-    <div class="flex gap-4.5">
-      <div>Select consonants:</div>
+      {#snippet customTooltip()}
+        <ReferencesList
+          references={{
+            "Hangul - Letters": "https://en.wikipedia.org/wiki/Hangul#Letters",
+            Dubeolsik: "https://en.wikipedia.org/wiki/Keyboard_layout#Dubeolsik",
+          }}
+        />
+      {/snippet}
+    </WithTooltip>
+  </SettingsRow>
 
-      <CheckboxInput
-        bind:checked={letterSettings.enableRows.consonants.plain.value}
-        label="plain"
-      />
-      <CheckboxInput
-        bind:checked={letterSettings.enableRows.consonants.tense.value}
-        label="tense"
-      />
-      <CheckboxInput
-        bind:checked={letterSettings.enableRows.consonants.aspirated.value}
-        label="aspirated"
-      />
-      <CheckboxInput
-        bind:checked={letterSettings.enableRows.consonants.miscellaneous.value}
-        label="miscellaneous"
-      />
-    </div>
+  <SettingsRows>
+    <SettingsVSplit>
+      <SettingsRow>
+        <Highlighted onclick={() => toggleSettings(letterSettings.enableRows.consonants)}>
+          consonants:
+        </Highlighted>
+      </SettingsRow>
 
-    <div class="flex gap-4.5">
-      <span>Select vowels:</span>
+      <SettingsRow>
+        <CheckboxInput
+          bind:checked={letterSettings.enableRows.consonants.plain.value}
+          label="plain (ㄱ ㄷ ㅂ ㅅ ㅈ)"
+        />
+        <CheckboxInput
+          bind:checked={letterSettings.enableRows.consonants.tense.value}
+          label="tense (ㄲ ㄸ ㅃ ㅆ ㅉ)"
+        />
+        <CheckboxInput
+          bind:checked={letterSettings.enableRows.consonants.aspirated.value}
+          label="aspirated (ㅋ ㅌ ㅍ ㅊ ㅎ)"
+        />
+        <CheckboxInput
+          bind:checked={letterSettings.enableRows.consonants.miscellaneous.value}
+          label="miscellaneous (ㄴ ㅁ ㄹ ㅇ)"
+        />
+      </SettingsRow>
+    </SettingsVSplit>
 
-      <CheckboxInput bind:checked={letterSettings.enableRows.vowels.basic.value} label="basic" />
-      <CheckboxInput
-        bind:checked={letterSettings.enableRows.vowels.complex.value}
-        label="complex"
-      />
-    </div>
-  </div>
+    <SettingsVSplit>
+      <SettingsRow>
+        <Highlighted onclick={() => toggleSettings(letterSettings.enableRows.vowels)}>
+          vowels:
+        </Highlighted>
+      </SettingsRow>
 
-  <TypingQuestions {letters} {keymap} />
-</div>
+      <SettingsRow>
+        <CheckboxInput
+          bind:checked={letterSettings.enableRows.vowels.basic.value}
+          label="basic (ㅏ ㅑ ㅓ ㅕ ㅗ ㅛ ㅜ ㅠ ㅡ ㅣ)"
+        />
+        <CheckboxInput
+          bind:checked={letterSettings.enableRows.vowels.complex.value}
+          label="complex (ㅐ ㅒ ㅔ ㅖ ㅘ ㅙ ㅚ ㅝ ㅞ ㅟ ㅢ)"
+        />
+      </SettingsRow>
+    </SettingsVSplit>
+  </SettingsRows>
+</SettingsVSplit>
+
+<Divider />
+
+<TypingQuestions {letters} {keymap} />

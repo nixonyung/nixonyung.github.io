@@ -81,7 +81,7 @@
           "relative grid size-12 place-items-center-safe rounded ring ring-primary-content",
           showCorrectKey &&
             correctCh &&
-            ((chDisplay === correctCh && "bg-green-400/25") ||
+            ((chEmit === correctCh && "bg-green-400/25") ||
               (ch === unshiftCh(correctCh) && "bg-yellow-400/25")),
         ]}
         onclick={() => {

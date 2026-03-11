@@ -9,6 +9,7 @@ export const speech = new (class {
       this.availableVoices.find(
         (voice) => voice.lang === lang && voice.name.startsWith("Google"),
       ) ?? null;
+    if (import.meta.env.DEV) console.log("setLang", this.voice?.lang);
   }
 
   speak(letter: string | undefined) {
@@ -18,6 +19,7 @@ export const speech = new (class {
     utter.voice = speech.voice;
     utter.rate = this.rate;
 
+    if (import.meta.env.DEV) console.log("speak", this.voice?.name, letter);
     speechSynthesis.cancel();
     speechSynthesis.speak(utter);
   }

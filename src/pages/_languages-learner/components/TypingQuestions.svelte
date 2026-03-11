@@ -7,6 +7,7 @@
   import SettingsContainer from "@/components/svelte/SettingsContainer.svelte";
   import SettingsRow from "@/components/svelte/SettingsRow.svelte";
   import SettingsRows from "@/components/svelte/SettingsRows.svelte";
+  import WithTooltip from "@/components/svelte/WithTooltip.svelte";
   import { CircularQueue } from "@/lib/circular-queue";
   import { onkeydown } from "@/lib/keyboard";
   import { QuestionsQueue } from "@/lib/questions-queue.svelte.ts";
@@ -46,7 +47,8 @@
         letter,
         svgPath: svg,
         pronunciation: actualPronunciation ?? letter,
-        romanization: romanization,
+        romanization,
+        exampleWord: actualPronunciation,
         input: actualInput ?? romanization ?? letter,
       })),
     ),
@@ -140,43 +142,49 @@
       isPrev?: boolean;
     })}
       {#if question}
-        <button
-          class={[
-            "relative flex w-fit min-w-16 flex-col items-center-safe rounded px-1 ring",
-            isPrev ? "scale-75 opacity-50 ring-green-400" : isCurr && !!input && "ring-red-400",
-            question.pronunciation && speech.voice && "cursor-pointer",
-          ]}
-          onclick={() => speech.speak(question.pronunciation)}
-        >
-          <!-- letter -->
-          <div class="grid h-12 place-items-center-safe">
-            {#if question.svgPath}
-              <img
-                src={question.svgPath}
-                alt={question.letter}
-                class="h-10 brightness-125 contrast-200 dark:hue-rotate-180 dark:invert-100"
-              />
-            {:else}
-              <span class="text-3xl">{question.letter}</span>
-            {/if}
-          </div>
-          <!-- romanization -->
-          <div class="h-6">
-            {#if isPrev && question.romanization && question.romanization !== question.input}
-              ({question.romanization})
-            {/if}
-          </div>
-          <!-- input -->
-          <div class="h-6 w-full border-t border-primary-lighter">
-            {isCurr ? input : isPrev ? question.input : ""}
-          </div>
+        <WithTooltip disabled={!question.exampleWord}>
+          {#snippet customTooltip()}
+            <div>example word: {question.exampleWord}</div>
+          {/snippet}
 
-          <!-- pronunciation indicator -->
-          {#if question.pronunciation && speech.voice}
-            <span class="absolute top-0.5 right-0.5 icon-[heroicons--speaker-wave-solid] text-xs"
-            ></span>
-          {/if}
-        </button>
+          <button
+            class={[
+              "relative flex w-fit min-w-16 flex-col items-center-safe rounded px-1 ring",
+              isPrev ? "scale-75 opacity-50 ring-green-400" : isCurr && !!input && "ring-red-400",
+              question.pronunciation && speech.voice && "cursor-pointer",
+            ]}
+            onclick={() => speech.speak(question.pronunciation)}
+          >
+            <!-- letter -->
+            <div class="grid h-12 place-items-center-safe">
+              {#if question.svgPath}
+                <img
+                  src={question.svgPath}
+                  alt={question.letter}
+                  class="h-10 brightness-125 contrast-200 dark:hue-rotate-180 dark:invert-100"
+                />
+              {:else}
+                <span class="text-3xl">{question.letter}</span>
+              {/if}
+            </div>
+            <!-- romanization -->
+            <div class="h-6">
+              {#if isPrev && question.romanization && question.romanization !== question.input}
+                ({question.romanization})
+              {/if}
+            </div>
+            <!-- input -->
+            <div class="h-6 w-full border-t border-primary-lighter">
+              {isCurr ? input : isPrev ? question.input : ""}
+            </div>
+
+            <!-- pronunciation indicator -->
+            {#if question.pronunciation && speech.voice}
+              <span class="absolute top-0.5 right-0.5 icon-[heroicons--speaker-wave-solid] text-xs"
+              ></span>
+            {/if}
+          </button>
+        </WithTooltip>
       {/if}
     {/snippet}
 
