@@ -1,6 +1,7 @@
 <script lang="ts">
   import { tick } from "svelte";
   import { gojuonSettings } from "./GojuonTable.svelte";
+  import type { Gojuon } from "./letters.svelte";
 
   let {
     enabled = $bindable(),
@@ -13,12 +14,7 @@
     isMousedown: boolean;
     isSelected: boolean;
     label: string;
-    gojuons: ({
-      hiragana: string;
-      hiraganaOrigin: string;
-      katakana: string;
-      katakanaOrigin: string;
-    } | null)[];
+    gojuons: (Gojuon | null)[];
   } = $props();
 
   let headerRef: HTMLButtonElement | undefined = $state();

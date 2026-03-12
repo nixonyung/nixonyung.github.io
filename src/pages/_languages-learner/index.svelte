@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Divider from "@/components/svelte/Divider.svelte";
   import NumericInput from "@/components/svelte/NumericInput.svelte";
   import SelectInput from "@/components/svelte/SelectInput.svelte";
   import SettingsRow from "@/components/svelte/SettingsRow.svelte";
@@ -61,8 +60,6 @@
       <span class="-ml-2 text-red-700">SpeechSynthesis is not available.</span>
     {/if}
   </SettingsRow>
-
-  <Divider />
 
   {#if settings.lang.value === "en-US"}
     <EN />

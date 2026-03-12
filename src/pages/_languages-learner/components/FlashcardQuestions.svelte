@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Bordered from "@/components/svelte/Bordered.svelte";
   import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
   import FlashcardsList from "@/components/svelte/FlashcardsList.svelte";
   import Highlighted from "@/components/svelte/Highlighted.svelte";
@@ -6,7 +7,8 @@
   import KBD from "@/components/svelte/KBD.svelte";
   import NumericInput from "@/components/svelte/NumericInput.svelte";
   import SearchBar from "@/components/svelte/SearchBar.svelte";
-  import SettingsRowsBordered from "@/components/svelte/SettingsRowsBordered.svelte";
+  import SettingsRow from "@/components/svelte/SettingsRow.svelte";
+  import SettingsRows from "@/components/svelte/SettingsRows.svelte";
   import { onkeydown } from "@/lib/keyboard";
   import { QuestionsQueue } from "@/lib/questions-queue.svelte.ts";
   import { speech } from "@/lib/speech.svelte";
@@ -28,7 +30,8 @@
 
   const settings = $state(
     initSettings({
-      onlySpeech: { paramKey: "onlySpeech", defaultValue: false },
+      autoSpeak: { paramKey: "autoSpeak", defaultValue: false },
+      hideQuestion: { paramKey: "hideQuestion", defaultValue: false },
       pinWhenWrong: { paramKey: "pinWhenWrong", defaultValue: true },
       onlyPinned: { paramKey: "onlyPinned", defaultValue: false },
       onlyUnpinned: { paramKey: "onlyUnpinned", defaultValue: false },
@@ -37,7 +40,7 @@
   );
   useSyncSettings(settings);
   $effect.pre(() => {
-    if (!speech.voice) untrack(() => (settings.onlySpeech.value = false));
+    if (!speech.voice) untrack(() => (settings.autoSpeak.value = false));
   });
   $effect.pre(() => {
     if (settings.onlyPinned.value) untrack(() => (settings.onlyUnpinned.value = false));
@@ -237,9 +240,7 @@
       showPronunciation = false;
       optionSelectedIdx = undefined;
       areWrongOption = Array.from({ length: options.length }, () => false);
-      if (settings.onlySpeech.value) {
-        tick().then(() => speechBtnRef?.click());
-      }
+      if (settings.autoSpeak.value) tick().then(() => speechBtnRef?.click());
     });
   });
   $effect.pre(() => {
@@ -308,7 +309,7 @@
 
       // hide question
       case key === "H":
-        settings.onlySpeech.value = !settings.onlySpeech.value;
+        settings.hideQuestion.value = !settings.hideQuestion.value;
 
         break;
       // speak
@@ -325,216 +326,227 @@
   })}
 />
 
-<div>
-  <hr class="mt-3 opacity-50" />
+<Bordered class="mt-6 flex flex-col gap-1.5 py-1.5">
+  <span class="underline underline-offset-2">Keybindings:</span>
 
-  <!-- settings -->
-  <SettingsRowsBordered class="mt-6 gap-1.5 py-1.5">
-    <span class="underline underline-offset-2">Keybindings:</span>
+  <span class="mt-3">Selecting an option:</span>
+  <span class="ml-3">
+    <KBD icon="icon-[icon-park-outline--arrow-up]" />
+    <span>,</span>
+    <KBD icon="icon-[icon-park-outline--arrow-down]" />
+    <span class="mx-1">/</span>
+    <KBD text="Shift" />
+    <span>+</span>
+    <KBD text="j" />
+    <span>,</span>
+    <KBD text="Shift" />
+    <span>+</span>
+    <KBD text="k" />
+    to select an option, ...
+  </span>
+  <span class="ml-3">
+    or type anything to start searching (
+    <KBD text="Esc" />
+    <span class="mx-1">/</span>
+    <KBD text="Ctrl" />
+    <span>+</span>
+    <KBD text="Backspace" />
+    to exit)
+  </span>
+  <span>
+    <KBD text="Enter" />
+    <span class="mx-1">/</span>
+    <KBD text="Space" />
+    (only when not searching) to submit.
+  </span>
 
-    <span class="mt-3">Selecting an option:</span>
-    <span class="ml-3">
-      <KBD icon="icon-[icon-park-outline--arrow-up]" />
-      <span>,</span>
-      <KBD icon="icon-[icon-park-outline--arrow-down]" />
-      <span class="mx-1">/</span>
-      <KBD text="Shift" />
-      <span>+</span>
-      <KBD text="j" />
-      <span>,</span>
-      <KBD text="Shift" />
-      <span>+</span>
-      <KBD text="k" />
-      to select an option, ...
-    </span>
-    <span class="ml-3">
-      or type anything to start searching (
-      <KBD text="Esc" />
-      <span class="mx-1">/</span>
-      <KBD text="Ctrl" />
-      <span>+</span>
-      <KBD text="Backspace" />
-      to exit)
-    </span>
-    <span>
-      <KBD text="Enter" />
-      <span class="mx-1">/</span>
-      <KBD text="Space" />
-      (only when not searching) to submit.
-    </span>
+  <span class="mt-3">
+    <KBD text="Shift" />
+    <span>+</span>
+    <KBD text="h" />
+    to toggle show/hide question.
+  </span>
+  <span>
+    <KBD text="Shift" />
+    <span>+</span>
+    <KBD text="r" />
+    to read the question.
+  </span>
+  <span>
+    <KBD text="Shift" />
+    <span>+</span>
+    <KBD text="p" />
+    to pin/unpin the question.
+  </span>
+</Bordered>
 
-    <span class="mt-3">
-      <KBD text="Shift" />
-      <span>+</span>
-      <KBD text="h" />
-      to toggle show/hide question.
-    </span>
-    <span>
-      <KBD text="Shift" />
-      <span>+</span>
-      <KBD text="r" />
-      to read the question.
-    </span>
-    <span>
-      <KBD text="Shift" />
-      <span>+</span>
-      <KBD text="p" />
-      to pin/unpin the question.
-    </span>
-  </SettingsRowsBordered>
+<!-- settings -->
+<SettingsRows class="mt-8">
+  <SettingsRow>
+    <CheckboxInput
+      bind:checked={settings.autoSpeak.value}
+      label="auto read question"
+      icon="icon-[icon-park-solid--people-speak]"
+      disabled={!speech.voice}
+    />
+    <CheckboxInput
+      bind:checked={settings.hideQuestion.value}
+      label="hide question"
+      icon="icon-[heroicons--eye-slash]"
+    />
+    <CheckboxInput
+      bind:checked={settings.pinWhenWrong.value}
+      label="auto pin when wrong"
+      icon="icon-[ix--tag-plus-filled]"
+    />
+  </SettingsRow>
 
-  <div class="mt-6 flex flex-col gap-1.5">
+  <SettingsRow>
+    <CheckboxInput
+      bind:checked={settings.onlyPinned.value}
+      label="only use pinned (if any)"
+      icon="icon-[icon-park-solid--pin]"
+    />
+    <CheckboxInput
+      bind:checked={settings.onlyUnpinned.value}
+      label="only use unpinned (if any)"
+      icon="icon-[icon-park-outline--pin]"
+    />
+  </SettingsRow>
+  <NumericInput bind:value={settings.numOptions.value} label="number of options" min={2} />
+</SettingsRows>
+
+<!-- question -->
+<div class="mt-8 flex items-center-safe">
+  <span class="underline underline-offset-2">Question:</span>
+
+  {#if question}
+    {#if !settings.hideQuestion.value}
+      <Highlighted class="ml-6">
+        {question.question}
+      </Highlighted>
+    {/if}
+
+    <!-- speech button -->
     {#if speech.voice}
-      <CheckboxInput
-        bind:checked={settings.onlySpeech.value}
-        label="only use speech and hide question"
-      />
+      <button
+        bind:this={speechBtnRef}
+        class="ml-4 grid size-8 cursor-pointer place-items-center-safe rounded-full text-primary-content hover:bg-primary-lighter"
+        onclick={() => {
+          showPronunciation = true;
+          speech.speak(question!.utterance);
+        }}
+      >
+        <Icon icon="icon-[heroicons--speaker-wave-solid]" />
+      </button>
     {/if}
-    <CheckboxInput bind:checked={settings.pinWhenWrong.value} label="auto pin when wrong" />
-    <div class="flex gap-9">
-      <CheckboxInput bind:checked={settings.onlyPinned.value} label="only use pinned (if any)" />
-      <CheckboxInput
-        bind:checked={settings.onlyUnpinned.value}
-        label="only use unpinned (if any)"
-      />
-    </div>
-    <NumericInput bind:value={settings.numOptions.value} label="number of options" min={2} />
-  </div>
-
-  <hr class="mt-6 opacity-50" />
-
-  <!-- question -->
-  <div class="mt-6 flex items-center-safe">
-    <span class="underline underline-offset-2">Question:</span>
-
-    {#if question}
-      {#if !settings.onlySpeech.value}
-        <Highlighted class="ml-6">
-          {question.question}
-        </Highlighted>
-      {/if}
-
-      <!-- speech button -->
-      {#if speech.voice}
-        <button
-          bind:this={speechBtnRef}
-          class="ml-6 grid size-8 cursor-pointer place-items-center-safe rounded-full text-primary-content hover:bg-primary-lighter"
-          onclick={() => {
-            showPronunciation = true;
-            speech.speak(question!.utterance);
-          }}
-        >
-          <Icon icon="icon-[heroicons--speaker-wave-solid]" />
-        </button>
-      {/if}
-      {#if !settings.onlySpeech.value && showPronunciation}
-        <span class="ml-1 text-sm">{question.pronunciation}</span>
-      {/if}
-
-      <!-- pin button -->
-      <div class="group/list relative ml-3 p-3">
-        <button
-          bind:this={pinBtnRef}
-          class="grid size-10 cursor-pointer place-items-center-safe rounded-full text-primary-content hover:bg-primary-lighter"
-          onclick={() => togglePin(question!.idx)}
-        >
-          {#if questionsQueue.isPinned(question!.idx)}
-            <Icon icon="icon-[icon-park-solid--pin]" />
-          {:else}
-            <Icon icon="icon-[icon-park-outline--pin]" class="opacity-75" />
-          {/if}
-        </button>
-
-        <FlashcardsList
-          length={questionsQueueItems.length}
-          focusedIdx={question!.queueIdx}
-          class="invisible absolute top-0 right-0 z-10 translate-x-full translate-y-2 rounded bg-primary whitespace-nowrap opacity-0 ring transition-all duration-300 ease-out group-hover/list:visible group-hover/list:opacity-100"
-        >
-          {#snippet row(i)}
-            {@const { question, pronunciation, idx } = questionsQueueItems[i]}
-
-            <button
-              class="group/item flex w-full cursor-pointer items-center-safe gap-1.5 px-2 py-1.5"
-              onclick={() => togglePin(idx)}
-            >
-              <span>{i + 1}.</span>
-
-              <div class="ml-1.5 flex items-center-safe">
-                <span>{question}</span>
-                <span class="ml-3 text-sm">---</span>
-                <span class="ml-3 text-sm">{pronunciation}</span>
-              </div>
-
-              <div class="min-w-6 grow"></div>
-
-              {#if questionsQueue.isPinned(idx)}
-                <Icon icon="icon-[icon-park-solid--pin]" class="mr-1.5" />
-              {:else}
-                <Icon
-                  icon="icon-[icon-park-outline--pin]"
-                  class="mr-1.5 opacity-25 group-hover/item:opacity-75"
-                />
-              {/if}
-            </button>
-          {/snippet}
-        </FlashcardsList>
-      </div>
+    {#if showPronunciation}
+      <span class="ml-1 text-sm">{question.pronunciation}</span>
     {/if}
-  </div>
 
-  <div class="mt-9">Select the most appropriate one:</div>
-
-  <!-- options -->
-  <div class="mt-6 flex flex-col items-start gap-3">
-    {#each options as option, i (option.answer)}
-      <div class="flex items-center-safe">
-        <Highlighted
-          bind:this={optionRefs[i]}
-          vertical
-          variant={areWrongOption[i] ? "error" : "primary-lighter"}
-          class={[
-            "scroll-m-60",
-            (searchInput ? areOptionMatchingCommand[i] : i === optionSelectedIdx) &&
-              "outline-2 outline-primary-content/75",
-          ]}
-          onclick={() => {
-            if (!question) return;
-
-            if (isEqual(option.answer, question.answer)) {
-              nextQuestion();
-            } else if (areWrongOption[i]) {
-              speech.speak(option.utterance);
-            } else {
-              areWrongOption[i] = true;
-              if (settings.pinWhenWrong.value) togglePin(question.idx, true);
-            }
-          }}
-        >
-          <span>{option.answer}</span>
-        </Highlighted>
-
-        {#if areWrongOption[i]}
-          <div class="ml-3 flex items-center-safe text-sm">
-            <span>{option.question}</span>
-            <span class="ml-3">---</span>
-
-            {#if speech.voice}
-              <button
-                class="ml-3 grid size-8 cursor-pointer place-items-center-safe rounded-full text-primary-content hover:bg-primary-lighter"
-                onclick={() => speech.speak(option.utterance)}
-              >
-                <Icon icon="icon-[heroicons--speaker-wave-solid]" />
-              </button>
-            {/if}
-            <span class="ml-1">{option.pronunciation}</span>
-          </div>
+    <!-- pin button -->
+    <div class="group/list relative ml-4 p-4">
+      <button
+        bind:this={pinBtnRef}
+        class="grid size-10 cursor-pointer place-items-center-safe rounded-full text-primary-content hover:bg-primary-lighter"
+        onclick={() => togglePin(question!.idx)}
+      >
+        {#if questionsQueue.isPinned(question!.idx)}
+          <Icon icon="icon-[icon-park-solid--pin]" />
+        {:else}
+          <Icon icon="icon-[icon-park-outline--pin]" class="opacity-75" />
         {/if}
-      </div>
-    {/each}
-  </div>
+      </button>
 
-  <!-- padding -->
-  <div class="h-[75dvh]"></div>
+      <FlashcardsList
+        length={questionsQueueItems.length}
+        focusedIdx={question!.queueIdx}
+        class="invisible absolute top-0 right-0 z-10 translate-x-full translate-y-2 rounded bg-primary whitespace-nowrap opacity-0 ring transition-all duration-300 ease-out group-hover/list:visible group-hover/list:opacity-100"
+      >
+        {#snippet row(i)}
+          {@const { question, pronunciation, idx } = questionsQueueItems[i]}
+
+          <button
+            class="group/item flex w-full cursor-pointer items-center-safe gap-2 px-2 py-1"
+            onclick={() => togglePin(idx)}
+          >
+            <span>{i + 1}.</span>
+
+            <div class="ml-2 flex items-center-safe gap-2">
+              <span>{question}</span>
+              <span class="text-sm">---</span>
+              <span class="text-sm">{pronunciation}</span>
+            </div>
+
+            <div class="min-w-4 grow"></div>
+
+            {#if questionsQueue.isPinned(idx)}
+              <Icon icon="icon-[icon-park-solid--pin]" class="mr-1" />
+            {:else}
+              <Icon
+                icon="icon-[icon-park-outline--pin]"
+                class="mr-1 opacity-25 group-hover/item:opacity-75"
+              />
+            {/if}
+          </button>
+        {/snippet}
+      </FlashcardsList>
+    </div>
+  {/if}
 </div>
+
+<div class="mt-8">Select the most appropriate one:</div>
+
+<!-- options -->
+<div class="mt-4 flex flex-col items-start gap-3">
+  {#each options as option, i (option.answer)}
+    <div class="flex items-center-safe">
+      <Highlighted
+        bind:this={optionRefs[i]}
+        vertical
+        variant={areWrongOption[i] ? "error" : "primary-lighter"}
+        class={[
+          "scroll-m-60",
+          (searchInput ? areOptionMatchingCommand[i] : i === optionSelectedIdx) &&
+            "outline-2 outline-primary-content/75",
+        ]}
+        onclick={() => {
+          if (!question) return;
+
+          if (isEqual(option.answer, question.answer)) {
+            nextQuestion();
+          } else if (areWrongOption[i]) {
+            speech.speak(option.utterance);
+          } else {
+            areWrongOption[i] = true;
+            if (settings.pinWhenWrong.value) togglePin(question.idx, true);
+          }
+        }}
+      >
+        <span>{option.answer}</span>
+      </Highlighted>
+
+      {#if areWrongOption[i]}
+        <div class="ml-4 flex items-center-safe">
+          <span class="text-sm">{option.question}</span>
+          <span class="ml-4 text-xs">---</span>
+
+          {#if speech.voice}
+            <button
+              class="ml-2 grid size-8 cursor-pointer place-items-center-safe rounded-full text-primary-content hover:bg-primary-lighter"
+              onclick={() => speech.speak(option.utterance)}
+            >
+              <Icon icon="icon-[heroicons--speaker-wave-solid]" />
+            </button>
+          {/if}
+          <span class="ml-1 text-xs">{option.pronunciation}</span>
+        </div>
+      {/if}
+    </div>
+  {/each}
+</div>
+
+<!-- padding -->
+<div class="h-[75dvh]"></div>
 
 <SearchBar bind:searchInput isInvalid={onlyMatchingOptionIdx === undefined} />

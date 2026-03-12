@@ -35,69 +35,82 @@
   const { letters, keymap } = $derived.by(getLettersAndKeymap);
 </script>
 
+<Divider />
 <SettingsVSplit>
-  <SettingsRow>
-    <WithTooltip>
-      <div>Select subsets:</div>
+  {#snippet lhs()}
+    <SettingsRow matchHighlightedHeight>
+      <WithTooltip>
+        <div>Select subsets:</div>
 
-      {#snippet customTooltip()}
-        <ReferencesList
-          references={{
-            "Hangul - Letters": "https://en.wikipedia.org/wiki/Hangul#Letters",
-            Dubeolsik: "https://en.wikipedia.org/wiki/Keyboard_layout#Dubeolsik",
-          }}
-        />
-      {/snippet}
-    </WithTooltip>
-  </SettingsRow>
+        {#snippet customTooltip()}
+          <ReferencesList
+            references={{
+              "Hangul - Letters": "https://en.wikipedia.org/wiki/Hangul#Letters",
+              Dubeolsik: "https://en.wikipedia.org/wiki/Keyboard_layout#Dubeolsik",
+            }}
+          />
+        {/snippet}
+      </WithTooltip>
+    </SettingsRow>
+  {/snippet}
 
-  <SettingsRows>
-    <SettingsVSplit>
-      <SettingsRow>
-        <Highlighted onclick={() => toggleSettings(letterSettings.enableRows.consonants)}>
-          consonants:
-        </Highlighted>
-      </SettingsRow>
+  {#snippet rhs()}
+    <SettingsRows>
+      <SettingsVSplit>
+        {#snippet lhs()}
+          <SettingsRow>
+            <Highlighted onclick={() => toggleSettings(letterSettings.enableRows.consonants)}>
+              consonants:
+            </Highlighted>
+          </SettingsRow>
+        {/snippet}
 
-      <SettingsRow>
-        <CheckboxInput
-          bind:checked={letterSettings.enableRows.consonants.plain.value}
-          label="plain (ㄱ ㄷ ㅂ ㅅ ㅈ)"
-        />
-        <CheckboxInput
-          bind:checked={letterSettings.enableRows.consonants.tense.value}
-          label="tense (ㄲ ㄸ ㅃ ㅆ ㅉ)"
-        />
-        <CheckboxInput
-          bind:checked={letterSettings.enableRows.consonants.aspirated.value}
-          label="aspirated (ㅋ ㅌ ㅍ ㅊ ㅎ)"
-        />
-        <CheckboxInput
-          bind:checked={letterSettings.enableRows.consonants.miscellaneous.value}
-          label="miscellaneous (ㄴ ㅁ ㄹ ㅇ)"
-        />
-      </SettingsRow>
-    </SettingsVSplit>
+        {#snippet rhs()}
+          <SettingsRow matchHighlightedHeight>
+            <CheckboxInput
+              bind:checked={letterSettings.enableRows.consonants.plain.value}
+              label="plain (ㄱ ㄷ ㅂ ㅅ ㅈ)"
+            />
+            <CheckboxInput
+              bind:checked={letterSettings.enableRows.consonants.tense.value}
+              label="tense (ㄲ ㄸ ㅃ ㅆ ㅉ)"
+            />
+            <CheckboxInput
+              bind:checked={letterSettings.enableRows.consonants.aspirated.value}
+              label="aspirated (ㅋ ㅌ ㅍ ㅊ ㅎ)"
+            />
+            <CheckboxInput
+              bind:checked={letterSettings.enableRows.consonants.miscellaneous.value}
+              label="miscellaneous (ㄴ ㅁ ㄹ ㅇ)"
+            />
+          </SettingsRow>
+        {/snippet}
+      </SettingsVSplit>
 
-    <SettingsVSplit>
-      <SettingsRow>
-        <Highlighted onclick={() => toggleSettings(letterSettings.enableRows.vowels)}>
-          vowels:
-        </Highlighted>
-      </SettingsRow>
+      <SettingsVSplit>
+        {#snippet lhs()}
+          <SettingsRow>
+            <Highlighted onclick={() => toggleSettings(letterSettings.enableRows.vowels)}>
+              vowels:
+            </Highlighted>
+          </SettingsRow>
+        {/snippet}
 
-      <SettingsRow>
-        <CheckboxInput
-          bind:checked={letterSettings.enableRows.vowels.basic.value}
-          label="basic (ㅏ ㅑ ㅓ ㅕ ㅗ ㅛ ㅜ ㅠ ㅡ ㅣ)"
-        />
-        <CheckboxInput
-          bind:checked={letterSettings.enableRows.vowels.complex.value}
-          label="complex (ㅐ ㅒ ㅔ ㅖ ㅘ ㅙ ㅚ ㅝ ㅞ ㅟ ㅢ)"
-        />
-      </SettingsRow>
-    </SettingsVSplit>
-  </SettingsRows>
+        {#snippet rhs()}
+          <SettingsRow matchHighlightedHeight>
+            <CheckboxInput
+              bind:checked={letterSettings.enableRows.vowels.basic.value}
+              label="basic (ㅏ ㅑ ㅓ ㅕ ㅗ ㅛ ㅜ ㅠ ㅡ ㅣ)"
+            />
+            <CheckboxInput
+              bind:checked={letterSettings.enableRows.vowels.complex.value}
+              label="complex (ㅐ ㅒ ㅔ ㅖ ㅘ ㅙ ㅚ ㅝ ㅞ ㅟ ㅢ)"
+            />
+          </SettingsRow>
+        {/snippet}
+      </SettingsVSplit>
+    </SettingsRows>
+  {/snippet}
 </SettingsVSplit>
 
 <Divider />

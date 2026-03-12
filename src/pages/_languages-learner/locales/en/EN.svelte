@@ -39,87 +39,101 @@
   const { letters, keymap } = $derived.by(getLettersAndKeymap);
 </script>
 
+<Divider />
 <SettingsVSplit>
-  <SettingsRow>Select subsets:</SettingsRow>
+  {#snippet lhs()}
+    <SettingsRow matchHighlightedHeight>Select subsets:</SettingsRow>
+  {/snippet}
 
-  <SettingsRows>
-    <SettingsVSplit>
-      <SettingsRow>
-        <Highlighted onclick={() => toggleSettings(letterSettings.enableSubsets.lowercase)}>
-          lowercase:
-        </Highlighted>
-      </SettingsRow>
+  {#snippet rhs()}
+    <SettingsRows>
+      <SettingsVSplit>
+        {#snippet lhs()}
+          <Highlighted onclick={() => toggleSettings(letterSettings.enableSubsets.lowercase)}>
+            lowercase:
+          </Highlighted>
+        {/snippet}
 
-      <SettingsRow>
-        <CheckboxInput
-          bind:checked={letterSettings.enableSubsets.lowercase.qwer.value}
-          label="qwer..."
-        />
-        <CheckboxInput
-          bind:checked={letterSettings.enableSubsets.lowercase.asdf.value}
-          label="asdf..."
-        />
-        <CheckboxInput
-          bind:checked={letterSettings.enableSubsets.lowercase.zxcv.value}
-          label="zxcv..."
-        />
-      </SettingsRow>
-    </SettingsVSplit>
+        {#snippet rhs()}
+          <SettingsRow matchHighlightedHeight>
+            <CheckboxInput
+              bind:checked={letterSettings.enableSubsets.lowercase.qwer.value}
+              label="qwer..."
+            />
+            <CheckboxInput
+              bind:checked={letterSettings.enableSubsets.lowercase.asdf.value}
+              label="asdf..."
+            />
+            <CheckboxInput
+              bind:checked={letterSettings.enableSubsets.lowercase.zxcv.value}
+              label="zxcv..."
+            />
+          </SettingsRow>
+        {/snippet}
+      </SettingsVSplit>
 
-    <SettingsVSplit>
-      <SettingsRow>
-        <Highlighted onclick={() => toggleSettings(letterSettings.enableSubsets.uppercase)}>
-          uppercase:
-        </Highlighted>
-      </SettingsRow>
+      <SettingsVSplit>
+        {#snippet lhs()}
+          <SettingsRow matchHighlightedHeight>
+            <Highlighted onclick={() => toggleSettings(letterSettings.enableSubsets.uppercase)}>
+              uppercase:
+            </Highlighted>
+          </SettingsRow>
+        {/snippet}
 
-      <SettingsRow>
-        <CheckboxInput
-          bind:checked={letterSettings.enableSubsets.uppercase.QWER.value}
-          label="QWER..."
-        />
-        <CheckboxInput
-          bind:checked={letterSettings.enableSubsets.uppercase.ASDF.value}
-          label="ASDF..."
-        />
-        <CheckboxInput
-          bind:checked={letterSettings.enableSubsets.uppercase.ZXCV.value}
-          label="ZXCV..."
-        />
-      </SettingsRow>
-    </SettingsVSplit>
+        {#snippet rhs()}
+          <SettingsRow matchHighlightedHeight>
+            <CheckboxInput
+              bind:checked={letterSettings.enableSubsets.uppercase.QWER.value}
+              label="QWER..."
+            />
+            <CheckboxInput
+              bind:checked={letterSettings.enableSubsets.uppercase.ASDF.value}
+              label="ASDF..."
+            />
+            <CheckboxInput
+              bind:checked={letterSettings.enableSubsets.uppercase.ZXCV.value}
+              label="ZXCV..."
+            />
+          </SettingsRow>
+        {/snippet}
+      </SettingsVSplit>
 
-    <SettingsVSplit>
-      <SettingsRow>
-        <Highlighted onclick={() => toggleSettings(letterSettings.enableSubsets.symbols)}>
-          symbols:
-        </Highlighted>
-      </SettingsRow>
+      <SettingsVSplit>
+        {#snippet lhs()}
+          <SettingsRow matchHighlightedHeight>
+            <Highlighted onclick={() => toggleSettings(letterSettings.enableSubsets.symbols)}>
+              symbols:
+            </Highlighted>
+          </SettingsRow>
+        {/snippet}
 
-      <SettingsRow>
-        <CheckboxInput
-          bind:checked={letterSettings.enableSubsets.symbols["1234"].value}
-          label="1234..."
-        />
-        <CheckboxInput
-          bind:checked={letterSettings.enableSubsets.symbols.shift1234.value}
-          label="!@#$..."
-        />
-        <CheckboxInput
-          bind:checked={letterSettings.enableSubsets.symbols.miscSymbols.value}
-          label="misc. symbols"
-        />
-        <CheckboxInput
-          bind:checked={letterSettings.enableSubsets.symbols.shiftMiscSymbols.value}
-          label="(+shift) misc. symbols"
-        />
-      </SettingsRow>
-    </SettingsVSplit>
-  </SettingsRows>
+        {#snippet rhs()}
+          <SettingsRow matchHighlightedHeight>
+            <CheckboxInput
+              bind:checked={letterSettings.enableSubsets.symbols["1234"].value}
+              label="1234..."
+            />
+            <CheckboxInput
+              bind:checked={letterSettings.enableSubsets.symbols.shift1234.value}
+              label="!@#$..."
+            />
+            <CheckboxInput
+              bind:checked={letterSettings.enableSubsets.symbols.miscSymbols.value}
+              label="misc. symbols"
+            />
+            <CheckboxInput
+              bind:checked={letterSettings.enableSubsets.symbols.shiftMiscSymbols.value}
+              label="(+shift) misc. symbols"
+            />
+          </SettingsRow>
+        {/snippet}
+      </SettingsVSplit>
+    </SettingsRows>
+  {/snippet}
 </SettingsVSplit>
 
 <Divider />
-
 <TypingQuestions
   {letters}
   {keymap}

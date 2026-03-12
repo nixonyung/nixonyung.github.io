@@ -17,7 +17,7 @@
 </script>
 
 <div class={["flex items-center-safe", classList]}>
-  <span class="mr-3">{label}:</span>
+  <span class="mr-2">{label}:</span>
 
   {#each Object.entries(valueToLabel) as entry (entry[0])}
     {@const v = entry[0] as Value}

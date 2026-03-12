@@ -42,9 +42,9 @@
       variant === "primary-lighter"
         ? "bg-primary-lighter/75"
         : variant === "error"
-          ? "bg-red-400 dark:bg-red-900"
+          ? "bg-red-400 dark:bg-red-950"
           : "",
-      onclick && !disabled && "cursor-pointer hover:bg-primary-lighter hover:brightness-150",
+      onclick && !disabled && "cursor-pointer hover:brightness-150",
     ]}
     {onclick}
     {disabled}

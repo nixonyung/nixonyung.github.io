@@ -10,6 +10,7 @@
 
 <script lang="ts">
   import type { ClassValue } from "svelte/elements";
+  import Bordered from "./Bordered.svelte";
 
   let {
     tooltip,
@@ -35,13 +36,13 @@
     <div
       class="invisible absolute bottom-0 left-0 z-10 w-max translate-y-full pt-2 whitespace-nowrap group-hover/tooltip:visible"
     >
-      <div class="rounded bg-primary px-2 py-1 ring brightness-120 dark:brightness-150">
+      <Bordered class="bg-primary brightness-120 dark:brightness-150">
         {#if customTooltip}
           {@render customTooltip()}
         {:else if tooltip}
           {tooltip}
         {/if}
-      </div>
+      </Bordered>
     </div>
   {/if}
 </div>

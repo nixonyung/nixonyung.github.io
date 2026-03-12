@@ -20,7 +20,7 @@
 
 {#snippet list(nodes: References, listTitle?: string)}
   {listTitle ?? "References:"}
-  <ul class={["list-inside list-disc", listTitle && "pl-6"]}>
+  <ul class={["list-inside list-disc", listTitle && "pl-4"]}>
     {#each Object.entries(nodes) as [title, node] (title)}
       <li>
         {#if node === undefined || typeof node === "string"}

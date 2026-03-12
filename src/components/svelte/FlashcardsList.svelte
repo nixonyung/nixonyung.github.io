@@ -46,7 +46,7 @@
   <div class="relative">
     {#if focusedIdx !== undefined}
       <button
-        class="group/list-top absolute top-0 flex w-full -translate-y-full cursor-pointer items-center-safe rounded px-3 py-1.5 text-end hover:bg-primary-lighter/50"
+        class="group/list-top absolute top-0 flex w-full -translate-y-full cursor-pointer items-center-safe rounded px-3 py-1 text-end hover:bg-primary-lighter/50"
         onclick={() => setIdx(focusedIdx - 1)}
       >
         <span class="text-sm opacity-50 group-hover/list-top:opacity-100">(return)</span>

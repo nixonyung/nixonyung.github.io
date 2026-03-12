@@ -4,9 +4,7 @@
 
 <script lang="ts">
   import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
-  import SettingsContainer from "@/components/svelte/SettingsContainer.svelte";
   import SettingsRow from "@/components/svelte/SettingsRow.svelte";
-  import SettingsRows from "@/components/svelte/SettingsRows.svelte";
   import WithTooltip from "@/components/svelte/WithTooltip.svelte";
   import { CircularQueue } from "@/lib/circular-queue";
   import { onkeydown } from "@/lib/keyboard";
@@ -101,33 +99,28 @@
 />
 
 <div>
-  <!-- settings -->
-  <SettingsContainer>
-    <SettingsRows>
-      <SettingsRow>
-        <CheckboxInput
-          bind:checked={settings.hideKeys.value}
-          icon="icon-[heroicons--eye-slash-solid]"
-          label="hide keys"
-        />
-        <CheckboxInput
-          bind:checked={settings.highlightCorrectKey.value}
-          icon="icon-[ix--highlight-filled]"
-          label="highlight the correct key"
-        />
-        <CheckboxInput
-          bind:checked={settings.ignoreTypos.value}
-          icon="icon-[heroicons--shield-check-solid]"
-          label="ignore typos"
-        />
-        <CheckboxInput
-          bind:checked={settings.speakOnCorrect.value}
-          icon="icon-[icon-park-solid--people-speak]"
-          label="auto speak on correct"
-        />
-      </SettingsRow>
-    </SettingsRows>
-  </SettingsContainer>
+  <SettingsRow>
+    <CheckboxInput
+      bind:checked={settings.hideKeys.value}
+      icon="icon-[heroicons--eye-slash-solid]"
+      label="hide keys"
+    />
+    <CheckboxInput
+      bind:checked={settings.highlightCorrectKey.value}
+      icon="icon-[ix--highlight-filled]"
+      label="highlight the correct key"
+    />
+    <CheckboxInput
+      bind:checked={settings.ignoreTypos.value}
+      icon="icon-[heroicons--shield-check-solid]"
+      label="ignore typos"
+    />
+    <CheckboxInput
+      bind:checked={settings.speakOnCorrect.value}
+      icon="icon-[icon-park-solid--people-speak]"
+      label="auto speak on correct"
+    />
+  </SettingsRow>
 
   <div class="mt-6 flex items-center-safe gap-3">
     <span class="underline underline-offset-2">Questions:</span>

@@ -11,6 +11,6 @@
   } = $props();
 </script>
 
-<div class={["flex max-w-dvw flex-col gap-3", classList]}>
+<div class={["w-max rounded px-2 py-1 whitespace-nowrap ring ring-primary-content/50", classList]}>
   {@render children()}
 </div>

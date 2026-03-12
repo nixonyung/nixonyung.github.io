@@ -4,13 +4,16 @@
 
   let {
     class: classList,
-    children,
+    lhs,
+    rhs,
   }: {
     class?: ClassValue;
-    children: Snippet;
+    lhs: Snippet;
+    rhs: Snippet;
   } = $props();
 </script>
 
-<div class={["flex items-start gap-4.5", classList]}>
-  {@render children()}
+<div class={["flex items-start gap-4", classList]}>
+  {@render lhs()}
+  {@render rhs()}
 </div>

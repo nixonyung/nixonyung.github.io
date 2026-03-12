@@ -16,7 +16,7 @@
 {#if searchInput}
   <div
     class={[
-      "fixed right-0 bottom-0 left-0 flex items-center-safe gap-1.5 bg-primary-lighter px-1.5",
+      "fixed right-0 bottom-0 left-0 flex items-center-safe gap-2 bg-primary-lighter px-2",
       classList,
       isInvalid && "bg-red-300 dark:bg-red-950",
     ]}
@@ -25,7 +25,7 @@
     <span class="grow">{searchInput}</span>
     <button
       title="Close"
-      class="cursor-pointer px-2 py-1.5"
+      class="cursor-pointer p-2"
       onclick={() => {
         searchInput = "";
       }}

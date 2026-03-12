@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Divider from "@/components/svelte/Divider.svelte";
   import TabsInput from "@/components/svelte/TabsInput.svelte";
   import { initSettings, useSyncSettings } from "../../../../lib/settings.svelte";
   import FlashcardQuestions from "../../components/FlashcardQuestions.svelte";
@@ -72,60 +73,63 @@
   });
 </script>
 
-<div class="flex flex-col gap-9">
-  <TabsInput
-    bind:value={settings.mode.value}
-    label="Mode"
-    valueToLabel={{
-      typing: "Typing",
-      flashcards: "Flashcards",
-    }}
+<TabsInput
+  bind:value={settings.mode.value}
+  label="Mode"
+  valueToLabel={{
+    typing: "Typing",
+    flashcards: "Flashcards",
+  }}
+  class="mt-4"
+/>
+
+{#if settings.mode.value === "typing"}
+  <Divider />
+  <GojuonTable />
+  <Divider />
+  <TypingQuestions {letters} {keymap} />
+{:else if settings.mode.value === "flashcards"}
+  <Divider />
+  <FlashcardSettingsJP />
+  <Divider />
+  <FlashcardQuestions
+    flashcards={words.map(
+      ({
+        preferredForm,
+        kanjis,
+        rareKanjis,
+        hiragana,
+        katakana,
+        romanization,
+        meaning,
+        derivedMeanings,
+        exampleUsages,
+      }) => {
+        let question = "";
+        let pronunciation = "";
+        switch (true) {
+          case preferredForm === "kanji" || (preferredForm === undefined && !!kanjis?.length):
+            question = [...kanjis!, ...(rareKanjis ?? [])].join(" / ");
+            pronunciation = [`${hiragana ?? katakana}`, `(${romanization})`].join(" ");
+            break;
+          case preferredForm === "hiragana" || (preferredForm === undefined && !kanjis?.length):
+            question = [hiragana!, ...(kanjis ?? []), ...(rareKanjis ?? [])].join(" / ");
+            pronunciation = `(${romanization})`;
+            break;
+          case preferredForm === "katakana" || (preferredForm === undefined && !kanjis?.length):
+            question = [katakana!, ...(kanjis ?? []), ...(rareKanjis ?? [])].join(" / ");
+            pronunciation = `(${romanization})`;
+            break;
+        }
+
+        return {
+          question,
+          answer: [meaning, ...(derivedMeanings ?? [])].join(" / "),
+          notes: exampleUsages ?? [],
+          utterance: hiragana ?? katakana ?? kanjis?.[0] ?? rareKanjis?.[0] ?? romanization,
+          pronunciation,
+        };
+      },
+    )}
   />
-
-  {#if settings.mode.value === "typing"}
-    <GojuonTable />
-    <TypingQuestions {letters} {keymap} />
-  {:else if settings.mode.value === "flashcards"}
-    <FlashcardSettingsJP />
-    <FlashcardQuestions
-      flashcards={words.map(
-        ({
-          preferredForm,
-          kanjis,
-          rareKanjis,
-          hiragana,
-          katakana,
-          romanization,
-          meaning,
-          derivedMeanings,
-          exampleUsages,
-        }) => {
-          let question = "";
-          let pronunciation = "";
-          switch (true) {
-            case preferredForm === "kanji" || (preferredForm === undefined && !!kanjis?.length):
-              question = [...kanjis!, ...(rareKanjis ?? [])].join(" / ");
-              pronunciation = [`${hiragana ?? katakana}`, `(${romanization})`].join(" ");
-              break;
-            case preferredForm === "hiragana" || (preferredForm === undefined && !kanjis?.length):
-              question = [hiragana!, ...(kanjis ?? []), ...(rareKanjis ?? [])].join(" / ");
-              pronunciation = `(${romanization})`;
-              break;
-            case preferredForm === "katakana" || (preferredForm === undefined && !kanjis?.length):
-              question = [katakana!, ...(kanjis ?? []), ...(rareKanjis ?? [])].join(" / ");
-              pronunciation = `(${romanization})`;
-              break;
-          }
-
-          return {
-            question,
-            answer: [meaning, ...(derivedMeanings ?? [])].join(" / "),
-            notes: exampleUsages ?? [],
-            utterance: hiragana ?? katakana ?? kanjis?.[0] ?? rareKanjis?.[0] ?? romanization,
-            pronunciation,
-          };
-        },
-      )}
-    />
-  {/if}
-</div>
+{/if}

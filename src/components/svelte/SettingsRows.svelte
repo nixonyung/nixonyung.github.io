@@ -11,6 +11,6 @@
   } = $props();
 </script>
 
-<div class={["flex flex-col gap-y-1.5", classList]}>
+<div class={["flex flex-col gap-y-3", classList]}>
   {@render children()}
 </div>

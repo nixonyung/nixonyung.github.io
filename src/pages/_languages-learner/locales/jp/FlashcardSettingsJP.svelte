@@ -191,14 +191,14 @@
 </script>
 
 <script lang="ts">
+  import Bordered from "@/components/svelte/Bordered.svelte";
   import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
   import Highlighted from "@/components/svelte/Highlighted.svelte";
   import ReferencesList from "@/components/svelte/ReferencesList.svelte";
-  import SettingsContainer from "@/components/svelte/SettingsContainer.svelte";
   import SettingsRow from "@/components/svelte/SettingsRow.svelte";
   import SettingsRows from "@/components/svelte/SettingsRows.svelte";
-  import SettingsRowsBordered from "@/components/svelte/SettingsRowsBordered.svelte";
-  import SettingsSection from "@/components/svelte/SettingsSection.svelte";
+  import SettingsVSplit from "@/components/svelte/SettingsVSplit.svelte";
+  import WithTooltip from "@/components/svelte/WithTooltip.svelte";
   import { flattenSettings, initSettings, toggleSettings, useSyncSettings } from "../../../../lib/settings.svelte";
 
   useSyncSettings(flashcardSettings);
@@ -207,349 +207,473 @@
   const allAdjsDisabled = $derived(flattenSettings(flashcardSettings.words.adjectives).every(({ value }) => !value));
 </script>
 
-<!-- TODO: JLPT Sensei -->
-<!-- TODO: books -->
-<!-- TODO: GPT-OSS -->
-<ReferencesList
-  references={{
-    Dictionaries: {
-      "TAKOBOTO (English dictionary)": "https://takoboto.jp/",
-      "Weblio (native dictionary)": "https://www.weblio.jp/",
-    },
-    Guides: {
-      "Verb Conjugations": {
-        "Verb Conjugation - Tofugu": "https://www.tofugu.com/japanese-grammar/verb-conjugation-groups/",
-        "Japanese conjugation revision sheet - Wikipedia": "https://en.wikipedia.org/wiki/File:AMB_Japanese_Verbs.pdf",
-      },
-    },
-    "Google Search with AI Overview": undefined,
-  }}
-/>
+<SettingsRows>
+  <SettingsRow>
+    <WithTooltip>
+      <div>Select subsets:</div>
 
-<SettingsContainer>
-  <Highlighted onclick={() => toggleSettings(flashcardSettings)}>(toggle all)</Highlighted>
+      {#snippet customTooltip()}
+        <ReferencesList
+          references={{
+            Dictionaries: {
+              "TAKOBOTO (English dictionary)": "https://takoboto.jp/",
+              "Weblio (native dictionary)": "https://www.weblio.jp/",
+            },
+            Guides: {
+              "Verb Conjugations": {
+                "Verb Conjugation - Tofugu": "https://www.tofugu.com/japanese-grammar/verb-conjugation-groups/",
+                "Japanese conjugation revision sheet - Wikipedia": "https://en.wikipedia.org/wiki/File:AMB_Japanese_Verbs.pdf",
+              },
+            },
+            "gpt-oss / Google Search with AI Overview": undefined,
+          }}
+        />
+      {/snippet}
+    </WithTooltip>
+    <Highlighted onclick={() => toggleSettings(flashcardSettings)}>(toggle all)</Highlighted>
+  </SettingsRow>
 
-  <SettingsSection>
-    <SettingsRow>
+  <SettingsVSplit>
+    {#snippet lhs()}
       <Highlighted onclick={() => toggleSettings(flashcardSettings.words.pronouns)}>Pronouns:</Highlighted>
-    </SettingsRow>
+    {/snippet}
 
-    <SettingsRows>
-      <SettingsRow>
-        <CheckboxInput bind:checked={flashcardSettings.words.pronouns.me.value} label="I" />
-        <CheckboxInput bind:checked={flashcardSettings.words.pronouns.you.value} label="You" />
-        <CheckboxInput bind:checked={flashcardSettings.words.pronouns.us.value} label="We" />
-      </SettingsRow>
-      <SettingsRow>
-        <CheckboxInput bind:checked={flashcardSettings.words.pronouns.thatPerson.value} label="That Person" />
-        <CheckboxInput bind:checked={flashcardSettings.words.pronouns.thosePeople.value} label="Those People" />
-      </SettingsRow>
-      <SettingsRow>
-        <CheckboxInput bind:checked={flashcardSettings.words.pronouns.thatThing.value} label="That Thing" />
-        <CheckboxInput bind:checked={flashcardSettings.words.pronouns.thoseThings.value} label="Those Things" />
-      </SettingsRow>
-      <SettingsRow>
-        <CheckboxInput bind:checked={flashcardSettings.words.pronouns.reflective.value} label="Reflective" />
-        <CheckboxInput bind:checked={flashcardSettings.words.pronouns.indefinite.value} label="Indefinite" />
-      </SettingsRow>
-      <SettingsRow>
-        <CheckboxInput bind:checked={flashcardSettings.words.pronouns.interrogativeWho.value} label="Who?" />
-        <CheckboxInput bind:checked={flashcardSettings.words.pronouns.interrogativeWhat.value} label="What?" />
-      </SettingsRow>
-    </SettingsRows>
-  </SettingsSection>
+    {#snippet rhs()}
+      <SettingsRows>
+        <SettingsRow>
+          <CheckboxInput bind:checked={flashcardSettings.words.pronouns.me.value} label="I" />
+          <CheckboxInput bind:checked={flashcardSettings.words.pronouns.you.value} label="You" />
+          <CheckboxInput bind:checked={flashcardSettings.words.pronouns.us.value} label="We" />
+        </SettingsRow>
 
-  <SettingsSection>
-    <SettingsRow>
+        <SettingsRow>
+          <CheckboxInput bind:checked={flashcardSettings.words.pronouns.thatPerson.value} label="That Person" />
+          <CheckboxInput bind:checked={flashcardSettings.words.pronouns.thosePeople.value} label="Those People" />
+        </SettingsRow>
+
+        <SettingsRow>
+          <CheckboxInput bind:checked={flashcardSettings.words.pronouns.thatThing.value} label="That Thing" />
+          <CheckboxInput bind:checked={flashcardSettings.words.pronouns.thoseThings.value} label="Those Things" />
+        </SettingsRow>
+
+        <SettingsRow>
+          <CheckboxInput bind:checked={flashcardSettings.words.pronouns.reflective.value} label="Reflective" />
+          <CheckboxInput bind:checked={flashcardSettings.words.pronouns.indefinite.value} label="Indefinite" />
+        </SettingsRow>
+
+        <SettingsRow>
+          <CheckboxInput bind:checked={flashcardSettings.words.pronouns.interrogativeWho.value} label="Who?" />
+          <CheckboxInput bind:checked={flashcardSettings.words.pronouns.interrogativeWhat.value} label="What?" />
+        </SettingsRow>
+      </SettingsRows>
+    {/snippet}
+  </SettingsVSplit>
+
+  <SettingsVSplit>
+    {#snippet lhs()}
       <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns)}>Nouns:</Highlighted>
-    </SettingsRow>
+    {/snippet}
 
-    <SettingsRows>
-      <SettingsRow>
-        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.people.byCharacteristics)}
-          >People (by Characteristics):</Highlighted
-        >
+    {#snippet rhs()}
+      <SettingsRows>
+        <SettingsVSplit>
+          {#snippet lhs()}
+            <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.people.byCharacteristics)}>
+              People (by Characteristics):
+            </Highlighted>
+          {/snippet}
 
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.generic.value} label="(generic)" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.gender.value} label="Gender" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.age.value} label="Age" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.professions.value} label="Professions" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.socialStatus.value} label="Social Status" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.nationalities.value} label="Nationalities" />
-      </SettingsRow>
-      <SettingsSection>
-        <SettingsRow>
-          <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.people.byRelationships)}
-            >People (by Relationships):</Highlighted
-          >
-        </SettingsRow>
+          {#snippet rhs()}
+            <SettingsRow matchHighlightedHeight>
+              <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.generic.value} label="(generic)" />
+              <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.gender.value} label="Gender" />
+              <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.age.value} label="Age" />
+              <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.professions.value} label="Professions" />
+              <CheckboxInput
+                bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.socialStatus.value}
+                label="Social Status"
+              />
+              <CheckboxInput
+                bind:checked={flashcardSettings.words.nouns.people.byCharacteristics.nationalities.value}
+                label="Nationalities"
+              />
+            </SettingsRow>
+          {/snippet}
+        </SettingsVSplit>
 
-        <SettingsRows>
-          <SettingsRow>
-            <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.people.byRelationships.immediateFamily)}
-              >Immediate Family:</Highlighted
-            >
-            <CheckboxInput
-              bind:checked={flashcardSettings.words.nouns.people.byRelationships.immediateFamily.parents.value}
-              label="Parents"
-            />
-            <CheckboxInput
-              bind:checked={flashcardSettings.words.nouns.people.byRelationships.immediateFamily.siblings.value}
-              label="Siblings"
-            />
-            <CheckboxInput
-              bind:checked={flashcardSettings.words.nouns.people.byRelationships.immediateFamily.spouses.value}
-              label="Spouses"
-            />
-            <CheckboxInput
-              bind:checked={flashcardSettings.words.nouns.people.byRelationships.immediateFamily.offsprings.value}
-              label="Offsprings"
-            />
-            <CheckboxInput
-              bind:checked={flashcardSettings.words.nouns.people.byRelationships.immediateFamily.grandparents.value}
-              label="Grandparents"
-            />
-          </SettingsRow>
-          <SettingsRow>
-            <CheckboxInput
-              bind:checked={flashcardSettings.words.nouns.people.byRelationships.extendedFamily.value}
-              label="Extended Family"
-            />
-          </SettingsRow>
-          <SettingsRow>
-            <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byRelationships.chosenFamily.value} label="Chosen Family" />
-            <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byRelationships.friends.value} label="Friends" />
-            <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byRelationships.fellows.value} label="Fellows" />
-          </SettingsRow>
-        </SettingsRows>
-      </SettingsSection>
+        <SettingsVSplit>
+          {#snippet lhs()}
+            <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.people.byRelationships)}>
+              People (by Relationships):
+            </Highlighted>
+          {/snippet}
 
-      <SettingsRow>
-        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.animals)}>Animals:</Highlighted>
+          {#snippet rhs()}
+            <SettingsRows>
+              <SettingsVSplit>
+                {#snippet lhs()}
+                  <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.people.byRelationships.immediateFamily)}>
+                    Immediate Family:
+                  </Highlighted>
+                {/snippet}
 
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.animals.value} label="(all)" />
-      </SettingsRow>
+                {#snippet rhs()}
+                  <SettingsRow matchHighlightedHeight>
+                    <CheckboxInput
+                      bind:checked={flashcardSettings.words.nouns.people.byRelationships.immediateFamily.parents.value}
+                      label="Parents"
+                    />
+                    <CheckboxInput
+                      bind:checked={flashcardSettings.words.nouns.people.byRelationships.immediateFamily.siblings.value}
+                      label="Siblings"
+                    />
+                    <CheckboxInput
+                      bind:checked={flashcardSettings.words.nouns.people.byRelationships.immediateFamily.spouses.value}
+                      label="Spouses"
+                    />
+                    <CheckboxInput
+                      bind:checked={flashcardSettings.words.nouns.people.byRelationships.immediateFamily.offsprings.value}
+                      label="Offsprings"
+                    />
+                    <CheckboxInput
+                      bind:checked={flashcardSettings.words.nouns.people.byRelationships.immediateFamily.grandparents.value}
+                      label="Grandparents"
+                    />
+                  </SettingsRow>
+                {/snippet}
+              </SettingsVSplit>
 
-      <SettingsRow>
-        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.objects)}>Objects:</Highlighted>
+              <SettingsRow>
+                <CheckboxInput
+                  bind:checked={flashcardSettings.words.nouns.people.byRelationships.extendedFamily.value}
+                  label="Extended Family"
+                />
+              </SettingsRow>
 
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.generic.value} label="(generic)" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.biological.value} label="Biological Parts" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.nature.value} label="Nature" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.foodCuisine.value} label="Cuisine" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.foodDishes.value} label="Dishes" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.foodDrinks.value} label="Drinks" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.outfits.value} label="Outfits" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.equipments.value} label="Equipments" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.transportation.value} label="Transportation" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.arts.value} label="Arts" />
-      </SettingsRow>
-      <SettingsRow>
-        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.moments)}>Moments:</Highlighted>
+              <SettingsRow>
+                <CheckboxInput
+                  bind:checked={flashcardSettings.words.nouns.people.byRelationships.chosenFamily.value}
+                  label="Chosen Family"
+                />
+                <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byRelationships.friends.value} label="Friends" />
+                <CheckboxInput bind:checked={flashcardSettings.words.nouns.people.byRelationships.fellows.value} label="Fellows" />
+              </SettingsRow>
+            </SettingsRows>
+          {/snippet}
+        </SettingsVSplit>
 
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.timesOfDay.value} label="Times Of Day" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.daysOfWeek.value} label="Days Of Week" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.months.value} label="Months" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.seasons.value} label="Seasons" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.festivals.value} label="Festivals" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.misc.value} label="(misc.)" />
-      </SettingsRow>
-      <SettingsRow>
-        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.venues)}>Venues:</Highlighted>
+        <SettingsVSplit>
+          {#snippet lhs()}
+            <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.animals)}>Animals:</Highlighted>
+          {/snippet}
 
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.generic.value} label="(generic)" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.facilities.value} label="Facilities" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.shops.value} label="Shops" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.regions.value} label="Regions" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.imaginary.value} label="Imaginary" />
-      </SettingsRow>
-      <SettingsRow>
-        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.ideas)}>Ideas:</Highlighted>
+          {#snippet rhs()}
+            <SettingsRow matchHighlightedHeight>
+              <CheckboxInput bind:checked={flashcardSettings.words.nouns.animals.value} label="(all)" />
+            </SettingsRow>
+          {/snippet}
+        </SettingsVSplit>
 
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.life.value} label="Life" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.socialConstructs.value} label="Social Constructs" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.decisionMaking.value} label="Decision-making" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.narration.value} label="Narration" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.math.value} label="Math" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.science.value} label="Science" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.activities.value} label="Activities" />
-        <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.videoGames.value} label="Video Games" />
-      </SettingsRow>
-    </SettingsRows>
-  </SettingsSection>
+        <SettingsVSplit>
+          {#snippet lhs()}
+            <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.objects)}>Objects:</Highlighted>
+          {/snippet}
 
-  <SettingsSection>
-    <SettingsRow>
+          {#snippet rhs()}
+            <SettingsRows>
+              <SettingsRow matchHighlightedHeight>
+                <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.generic.value} label="(generic)" />
+                <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.biological.value} label="Biological Parts" />
+                <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.nature.value} label="Nature" />
+                <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.foodCuisine.value} label="Cuisine" />
+                <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.foodDishes.value} label="Dishes" />
+                <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.foodDrinks.value} label="Drinks" />
+                <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.outfits.value} label="Outfits" />
+                <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.equipments.value} label="Equipments" />
+                <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.transportation.value} label="Transportation" />
+                <CheckboxInput bind:checked={flashcardSettings.words.nouns.objects.arts.value} label="Arts" />
+              </SettingsRow>
+
+              <SettingsVSplit>
+                {#snippet lhs()}
+                  <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.moments)}>Moments:</Highlighted>
+                {/snippet}
+
+                {#snippet rhs()}
+                  <SettingsRow matchHighlightedHeight>
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.timesOfDay.value} label="Times Of Day" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.daysOfWeek.value} label="Days Of Week" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.months.value} label="Months" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.seasons.value} label="Seasons" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.festivals.value} label="Festivals" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.moments.misc.value} label="(misc.)" />
+                  </SettingsRow>
+                {/snippet}
+              </SettingsVSplit>
+
+              <SettingsVSplit>
+                {#snippet lhs()}
+                  <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.venues)}>Venues:</Highlighted>
+                {/snippet}
+
+                {#snippet rhs()}
+                  <SettingsRow matchHighlightedHeight>
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.generic.value} label="(generic)" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.facilities.value} label="Facilities" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.shops.value} label="Shops" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.regions.value} label="Regions" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.venues.imaginary.value} label="Imaginary" />
+                  </SettingsRow>
+                {/snippet}
+              </SettingsVSplit>
+
+              <SettingsVSplit>
+                {#snippet lhs()}
+                  <Highlighted onclick={() => toggleSettings(flashcardSettings.words.nouns.ideas)}>Ideas:</Highlighted>
+                {/snippet}
+
+                {#snippet rhs()}
+                  <SettingsRow matchHighlightedHeight>
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.life.value} label="Life" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.socialConstructs.value} label="Social Constructs" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.decisionMaking.value} label="Decision-making" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.narration.value} label="Narration" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.math.value} label="Math" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.science.value} label="Science" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.activities.value} label="Activities" />
+                    <CheckboxInput bind:checked={flashcardSettings.words.nouns.ideas.videoGames.value} label="Video Games" />
+                  </SettingsRow>
+                {/snippet}
+              </SettingsVSplit>
+            </SettingsRows>
+          {/snippet}
+        </SettingsVSplit>
+      </SettingsRows>
+    {/snippet}
+  </SettingsVSplit>
+
+  <SettingsVSplit>
+    {#snippet lhs()}
       <Highlighted class="whitespace-nowrap" onclick={() => toggleSettings(flashcardSettings.words.verbs)}>Verbs:</Highlighted>
-    </SettingsRow>
+    {/snippet}
 
-    <SettingsRows>
-      <SettingsRowsBordered>
-        <SettingsRow>
-          <CheckboxInput
-            bind:checked={flashcardSettings.enableTransitiveVerbs.value}
-            label="Transitive 他動詞"
-            tooltip="usually use を"
-            disabled={allVerbsDisabled}
-          />
-          <CheckboxInput
-            bind:checked={flashcardSettings.enableIntransitiveVerbs.value}
-            label="Intransitive 自動詞"
-            tooltip="usually use が/は/に/で"
-            disabled={allVerbsDisabled}
-          />
-        </SettingsRow>
+    {#snippet rhs()}
+      <SettingsRows>
+        <Bordered>
+          <SettingsRows>
+            <SettingsRow>
+              <CheckboxInput
+                bind:checked={flashcardSettings.enableTransitiveVerbs.value}
+                label="Transitive 他動詞"
+                tooltip="usually use を"
+                disabled={allVerbsDisabled}
+              />
+              <CheckboxInput
+                bind:checked={flashcardSettings.enableIntransitiveVerbs.value}
+                label="Intransitive 自動詞"
+                tooltip="usually use が/は/に/で"
+                disabled={allVerbsDisabled}
+              />
+            </SettingsRow>
 
-        <SettingsRow>
-          <CheckboxInput
-            bind:checked={flashcardSettings.enableGodanVerbs.value}
-            label="Godan 五段動詞"
-            tooltip="conjugates by changing the vowel of the ending う/く/ぐ/す/つ/ぬ/ぶ/む/る"
-            disabled={allVerbsDisabled}
-          />
-          <CheckboxInput
-            bind:checked={flashcardSettings.enableIchidanVerbs.value}
-            label="Ichidan 一段動詞"
-            tooltip="conjugates by changing the ending る"
-            disabled={allVerbsDisabled}
-          />
-          <CheckboxInput
-            bind:checked={flashcardSettings.enableIrregularVerbs.value}
-            label="Irregular 変格動詞"
-            tooltip="ends with する / くる"
-            disabled={allVerbsDisabled}
-          />
-        </SettingsRow>
-      </SettingsRowsBordered>
+            <SettingsRow>
+              <CheckboxInput
+                bind:checked={flashcardSettings.enableGodanVerbs.value}
+                label="Godan 五段動詞"
+                tooltip="conjugates by changing the vowel of the ending う/く/ぐ/す/つ/ぬ/ぶ/む/る"
+                disabled={allVerbsDisabled}
+              />
+              <CheckboxInput
+                bind:checked={flashcardSettings.enableIchidanVerbs.value}
+                label="Ichidan 一段動詞"
+                tooltip="conjugates by changing the ending る"
+                disabled={allVerbsDisabled}
+              />
+              <CheckboxInput
+                bind:checked={flashcardSettings.enableIrregularVerbs.value}
+                label="Irregular 変格動詞"
+                tooltip="ends with する / くる"
+                disabled={allVerbsDisabled}
+              />
+            </SettingsRow>
+          </SettingsRows>
+        </Bordered>
 
-      <SettingsRow>
-        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.verbs.actions)}>Actions:</Highlighted>
+        <SettingsVSplit>
+          {#snippet lhs()}
+            <Highlighted onclick={() => toggleSettings(flashcardSettings.words.verbs.actions)}>Actions:</Highlighted>
+          {/snippet}
 
-        <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.bodily.value} label="Bodily" />
-        <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.intellectual.value} label="Intellectual" />
-        <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.ownership.value} label="Ownership" />
-        <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.transpositional.value} label="Transpositional" />
-        <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.maneuvers.value} label="Maneuvers" />
-        <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.activities.value} label="Activities" />
-      </SettingsRow>
+          {#snippet rhs()}
+            <SettingsRow matchHighlightedHeight>
+              <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.bodily.value} label="Bodily" />
+              <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.intellectual.value} label="Intellectual" />
+              <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.ownership.value} label="Ownership" />
+              <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.transpositional.value} label="Transpositional" />
+              <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.maneuvers.value} label="Maneuvers" />
+              <CheckboxInput bind:checked={flashcardSettings.words.verbs.actions.activities.value} label="Activities" />
+            </SettingsRow>
+          {/snippet}
+        </SettingsVSplit>
 
-      <SettingsRow>
-        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.verbs.descriptive)}>Descriptive:</Highlighted>
+        <SettingsVSplit>
+          {#snippet lhs()}
+            <Highlighted onclick={() => toggleSettings(flashcardSettings.words.verbs.descriptive)}>Descriptive:</Highlighted>
+          {/snippet}
 
-        <CheckboxInput bind:checked={flashcardSettings.words.verbs.descriptive.being.value} label="Being" />
-        <CheckboxInput bind:checked={flashcardSettings.words.verbs.descriptive.existence.value} label="Existence" />
-        <CheckboxInput bind:checked={flashcardSettings.words.verbs.descriptive.processes.value} label="Processes" />
-      </SettingsRow>
+          {#snippet rhs()}
+            <SettingsRow matchHighlightedHeight>
+              <CheckboxInput bind:checked={flashcardSettings.words.verbs.descriptive.being.value} label="Being" />
+              <CheckboxInput bind:checked={flashcardSettings.words.verbs.descriptive.existence.value} label="Existence" />
+              <CheckboxInput bind:checked={flashcardSettings.words.verbs.descriptive.processes.value} label="Processes" />
+            </SettingsRow>
+          {/snippet}
+        </SettingsVSplit>
 
-      <SettingsRow>
-        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.verbs.changes)}>Changes:</Highlighted>
+        <SettingsVSplit>
+          {#snippet lhs()}
+            <Highlighted onclick={() => toggleSettings(flashcardSettings.words.verbs.changes)}>Changes:</Highlighted>
+          {/snippet}
 
-        <CheckboxInput bind:checked={flashcardSettings.words.verbs.changes.environmenal.value} label="Environmenal" />
-        <CheckboxInput bind:checked={flashcardSettings.words.verbs.changes.resultative.value} label="Resultative" />
-      </SettingsRow>
+          {#snippet rhs()}
+            <SettingsRow matchHighlightedHeight>
+              <CheckboxInput bind:checked={flashcardSettings.words.verbs.changes.environmenal.value} label="Environmenal" />
+              <CheckboxInput bind:checked={flashcardSettings.words.verbs.changes.resultative.value} label="Resultative" />
+            </SettingsRow>
+          {/snippet}
+        </SettingsVSplit>
 
-      <SettingsRow>
-        <Highlighted onclick={() => toggleSettings(flashcardSettings.words.verbs.auxiliary)}>Auxiliary:</Highlighted>
+        <SettingsVSplit>
+          {#snippet lhs()}
+            <Highlighted onclick={() => toggleSettings(flashcardSettings.words.verbs.auxiliary)}>Auxiliary:</Highlighted>
+          {/snippet}
 
-        <CheckboxInput bind:checked={flashcardSettings.words.verbs.auxiliary.value} label="(all)" />
-      </SettingsRow>
-    </SettingsRows>
-  </SettingsSection>
+          {#snippet rhs()}
+            <SettingsRow matchHighlightedHeight>
+              <CheckboxInput bind:checked={flashcardSettings.words.verbs.auxiliary.value} label="(all)" />
+            </SettingsRow>
+          {/snippet}
+        </SettingsVSplit>
+      </SettingsRows>
+    {/snippet}
+  </SettingsVSplit>
 
-  <SettingsSection>
-    <SettingsRow>
+  <SettingsVSplit>
+    {#snippet lhs()}
       <Highlighted class="whitespace-nowrap" onclick={() => toggleSettings(flashcardSettings.words.adjectives)}>Adjectives:</Highlighted>
-    </SettingsRow>
+    {/snippet}
 
-    <SettingsRows>
-      <SettingsRowsBordered>
+    {#snippet rhs()}
+      <SettingsRows>
+        <Bordered>
+          <SettingsRow>
+            <CheckboxInput bind:checked={flashcardSettings.enableIAdjectives.value} label="い-adj." disabled={allAdjsDisabled} />
+            <CheckboxInput bind:checked={flashcardSettings.enableNaAdjectives.value} label="な-adj." disabled={allAdjsDisabled} />
+          </SettingsRow>
+        </Bordered>
+
         <SettingsRow>
-          <CheckboxInput bind:checked={flashcardSettings.enableIAdjectives.value} label="い-adj." disabled={allAdjsDisabled} />
-          <CheckboxInput bind:checked={flashcardSettings.enableNaAdjectives.value} label="な-adj." disabled={allAdjsDisabled} />
+          <CheckboxInput bind:checked={flashcardSettings.words.adjectives.judgements.value} label="Judgements" />
+          <CheckboxInput bind:checked={flashcardSettings.words.adjectives.affections.value} label="Affections" />
+          <CheckboxInput bind:checked={flashcardSettings.words.adjectives.sensations.value} label="Sensations" />
+          <CheckboxInput bind:checked={flashcardSettings.words.adjectives.appearances.value} label="Appearances" />
+          <CheckboxInput bind:checked={flashcardSettings.words.adjectives.skillfulness.value} label="Skillfulness" />
+          <CheckboxInput bind:checked={flashcardSettings.words.adjectives.personalities.value} label="Personalities" />
+          <CheckboxInput bind:checked={flashcardSettings.words.adjectives.descriptive.value} label="Descriptive" />
+          <CheckboxInput bind:checked={flashcardSettings.words.adjectives.chronological.value} label="Chronological" />
+          <CheckboxInput bind:checked={flashcardSettings.words.adjectives.locational.value} label="Locational" />
+          <CheckboxInput bind:checked={flashcardSettings.words.adjectives.measurements.value} label="Measurements" />
+          <CheckboxInput bind:checked={flashcardSettings.words.adjectives.miscellaneous.value} label="(misc.)" />
         </SettingsRow>
-      </SettingsRowsBordered>
+      </SettingsRows>
+    {/snippet}
+  </SettingsVSplit>
 
-      <SettingsRow>
-        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.judgements.value} label="Judgements" />
-        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.affections.value} label="Affections" />
-        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.sensations.value} label="Sensations" />
-        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.appearances.value} label="Appearances" />
-        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.skillfulness.value} label="Skillfulness" />
-        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.personalities.value} label="Personalities" />
-        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.descriptive.value} label="Descriptive" />
-        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.chronological.value} label="Chronological" />
-        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.locational.value} label="Locational" />
-        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.measurements.value} label="Measurements" />
-        <CheckboxInput bind:checked={flashcardSettings.words.adjectives.miscellaneous.value} label="(misc.)" />
+  <SettingsVSplit>
+    {#snippet lhs()}
+      <Highlighted onclick={() => toggleSettings(flashcardSettings.words.functional)}>Functional Words:</Highlighted>
+    {/snippet}
+
+    {#snippet rhs()}
+      <SettingsRow matchHighlightedHeight>
+        <CheckboxInput bind:checked={flashcardSettings.words.functional.adpositions.value} label="Adpositions" />
+        <CheckboxInput bind:checked={flashcardSettings.words.functional.chronological.value} label="Chronological" />
+        <CheckboxInput bind:checked={flashcardSettings.words.functional.locational.value} label="Locational" />
+        <CheckboxInput bind:checked={flashcardSettings.words.functional.logical.value} label="Logical" />
+        <CheckboxInput bind:checked={flashcardSettings.words.functional.enumerative.value} label="Enumerative" />
+        <CheckboxInput bind:checked={flashcardSettings.words.functional.degree.value} label="Comparative" />
+        <CheckboxInput bind:checked={flashcardSettings.words.functional.manner.value} label="Manner" />
       </SettingsRow>
-    </SettingsRows>
-  </SettingsSection>
+    {/snippet}
+  </SettingsVSplit>
 
-  <SettingsRow>
-    <Highlighted onclick={() => toggleSettings(flashcardSettings.words.functional)}>Functional Words:</Highlighted>
+  <SettingsVSplit>
+    {#snippet lhs()}
+      <Highlighted onclick={() => toggleSettings(flashcardSettings.words.expressions)}>Expressions:</Highlighted>
+    {/snippet}
 
-    <CheckboxInput bind:checked={flashcardSettings.words.functional.adpositions.value} label="Adpositions" />
-    <CheckboxInput bind:checked={flashcardSettings.words.functional.chronological.value} label="Chronological" />
-    <CheckboxInput bind:checked={flashcardSettings.words.functional.locational.value} label="Locational" />
-    <CheckboxInput bind:checked={flashcardSettings.words.functional.logical.value} label="Logical" />
-    <CheckboxInput bind:checked={flashcardSettings.words.functional.enumerative.value} label="Enumerative" />
-    <CheckboxInput bind:checked={flashcardSettings.words.functional.degree.value} label="Comparative" />
-    <CheckboxInput bind:checked={flashcardSettings.words.functional.manner.value} label="Manner" />
-  </SettingsRow>
+    {#snippet rhs()}
+      <SettingsRow matchHighlightedHeight>
+        <CheckboxInput bind:checked={flashcardSettings.words.expressions.appellations.value} label="Appellations" />
+        <CheckboxInput bind:checked={flashcardSettings.words.expressions.greetingsAndClosings.value} label="Greetings and Closings" />
+        <CheckboxInput bind:checked={flashcardSettings.words.expressions.softening.value} label="Softening" />
+        <CheckboxInput bind:checked={flashcardSettings.words.expressions.thanksAndApologies.value} label="Thanks and Apologies" />
+        <CheckboxInput bind:checked={flashcardSettings.words.expressions.emphasis.value} label="Emphasis" />
+        <CheckboxInput bind:checked={flashcardSettings.words.expressions.agreeing.value} label="Agreeing" />
+        <CheckboxInput bind:checked={flashcardSettings.words.expressions.requests.value} label="Requests" />
+        <CheckboxInput bind:checked={flashcardSettings.words.expressions.offerings.value} label="Offerings" />
+        <CheckboxInput bind:checked={flashcardSettings.words.expressions.surprised.value} label="Surprised" />
+        <CheckboxInput bind:checked={flashcardSettings.words.expressions.misc.value} label="(misc.)" />
+      </SettingsRow>
+    {/snippet}
+  </SettingsVSplit>
 
-  <SettingsRow>
-    <Highlighted onclick={() => toggleSettings(flashcardSettings.words.expressions)}>Expressions:</Highlighted>
-
-    <CheckboxInput bind:checked={flashcardSettings.words.expressions.appellations.value} label="Appellations" />
-    <CheckboxInput bind:checked={flashcardSettings.words.expressions.greetingsAndClosings.value} label="Greetings and Closings" />
-    <CheckboxInput bind:checked={flashcardSettings.words.expressions.softening.value} label="Softening" />
-    <CheckboxInput bind:checked={flashcardSettings.words.expressions.thanksAndApologies.value} label="Thanks and Apologies" />
-    <CheckboxInput bind:checked={flashcardSettings.words.expressions.emphasis.value} label="Emphasis" />
-    <CheckboxInput bind:checked={flashcardSettings.words.expressions.agreeing.value} label="Agreeing" />
-    <CheckboxInput bind:checked={flashcardSettings.words.expressions.requests.value} label="Requests" />
-    <CheckboxInput bind:checked={flashcardSettings.words.expressions.offerings.value} label="Offerings" />
-    <CheckboxInput bind:checked={flashcardSettings.words.expressions.surprised.value} label="Surprised" />
-    <CheckboxInput bind:checked={flashcardSettings.words.expressions.misc.value} label="(misc.)" />
-  </SettingsRow>
-
-  <SettingsSection>
-    <SettingsRow>
+  <SettingsVSplit>
+    {#snippet lhs()}
       <Highlighted onclick={() => toggleSettings(flashcardSettings.words.grammarRules)}>Grammar Rules:</Highlighted>
-    </SettingsRow>
+    {/snippet}
 
-    <SettingsRows>
-      <SettingsSection>
+    {#snippet rhs()}
+      <SettingsRows>
+        <SettingsVSplit>
+          {#snippet lhs()}
+            <Highlighted onclick={() => toggleSettings(flashcardSettings.words.grammarRules.conjugations)}>Verb Conjugations:</Highlighted>
+          {/snippet}
+
+          {#snippet rhs()}
+            <SettingsRows>
+              <SettingsRow>
+                <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.stemForm.value} label="Stem" />
+              </SettingsRow>
+
+              <SettingsRow>
+                <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.naiForm.value} label="ない" />
+                <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.passiveForm.value} label="Passive" />
+                <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.causativeForm.value} label="Causative" />
+              </SettingsRow>
+
+              <SettingsRow>
+                <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.imperativeForm.value} label="Imperative" />
+                <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.conditionalForm.value} label="Conditional" />
+                <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.potentialForm.value} label="Potential" />
+              </SettingsRow>
+
+              <SettingsRow>
+                <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.taForm.value} label="た" />
+                <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.teForm.value} label="て" />
+              </SettingsRow>
+
+              <SettingsRow>
+                <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.volitionalForm.value} label="Volitional" />
+              </SettingsRow>
+            </SettingsRows>
+          {/snippet}
+        </SettingsVSplit>
+
         <SettingsRow>
-          <Highlighted onclick={() => toggleSettings(flashcardSettings.words.grammarRules.conjugations)}>Verb Conjugations:</Highlighted>
+          <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.misc.value} label="(misc.)" />
         </SettingsRow>
-
-        <SettingsRows>
-          <SettingsRow>
-            <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.stemForm.value} label="Stem" />
-          </SettingsRow>
-          <SettingsRow>
-            <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.naiForm.value} label="ない" />
-            <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.passiveForm.value} label="Passive" />
-            <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.causativeForm.value} label="Causative" />
-          </SettingsRow>
-          <SettingsRow>
-            <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.imperativeForm.value} label="Imperative" />
-            <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.conditionalForm.value} label="Conditional" />
-            <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.potentialForm.value} label="Potential" />
-          </SettingsRow>
-          <SettingsRow>
-            <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.taForm.value} label="た" />
-            <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.teForm.value} label="て" />
-          </SettingsRow>
-          <SettingsRow>
-            <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.volitionalForm.value} label="Volitional" />
-          </SettingsRow>
-        </SettingsRows>
-      </SettingsSection>
-
-      <SettingsRow>
-        <CheckboxInput bind:checked={flashcardSettings.words.grammarRules.conjugations.misc.value} label="(misc.)" />
-      </SettingsRow>
-    </SettingsRows>
-  </SettingsSection>
-</SettingsContainer>
+      </SettingsRows>
+    {/snippet}
+  </SettingsVSplit>
+</SettingsRows>

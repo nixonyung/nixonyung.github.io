@@ -28,8 +28,12 @@
 <script lang="ts">
   import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
   import ReferencesList from "@/components/svelte/ReferencesList.svelte";
+  import SettingsRow from "@/components/svelte/SettingsRow.svelte";
+  import SettingsRows from "@/components/svelte/SettingsRows.svelte";
+  import WithTooltip from "@/components/svelte/WithTooltip.svelte";
   import { initSettings, useSyncSettings } from "@/lib/settings.svelte";
   import GojuonRow from "./GojuonRow.svelte";
+  import { gojuons } from "./letters.svelte";
 
   useSyncSettings(gojuonSettings);
 
@@ -45,6 +49,7 @@
   let isSelectingRowRa = $state(gojuonSettings.enableRows.rowRa.value);
   let isSelectingRowWa = $state(gojuonSettings.enableRows.rowWa.value);
   let isSelectingRowN = $state(gojuonSettings.enableRows.rowN.value);
+
   $effect.pre(() => {
     if (isMousedown) {
       isSelectingRowA = false;
@@ -76,198 +81,135 @@
 
 <svelte:window onmouseup={() => (isMousedown = false)} />
 
-<ReferencesList
-  references={{
-    "平文式羅馬字 - Wikipedia":
-      "https://zh.wikipedia.org/zh-hk/%E5%B9%B3%E6%96%87%E5%BC%8F%E7%BD%97%E9%A9%AC%E5%AD%97#%E7%BD%97%E9%A9%AC%E5%AD%97%E8%A1%A8",
-    "平假名 - 由來 - Wikipedia":
-      "https://zh.wikipedia.org/zh-hk/%E5%B9%B3%E5%81%87%E5%90%8D#%E5%B9%B3%E5%81%87%E5%90%8D%E4%B8%80%E8%A7%88",
-    "片假名 - 由來 - Wikipedia":
-      "https://zh.wikipedia.org/zh-hk/%E7%89%87%E5%81%87%E5%90%8D#%E7%89%87%E5%81%87%E5%90%8D%E4%B8%80%E8%A7%88",
-  }}
-/>
+<WithTooltip>
+  <div>Select rows:</div>
 
-<!-- gojuonSettings -->
-<div class="flex flex-col gap-6">
-  <div class="flex flex-col gap-1.5">
-    <div class="flex items-center-safe gap-3">
-      <CheckboxInput
-        bind:checked={gojuonSettings.enableSubsets.hiragana.value}
-        label="Enable Hiragana 平假名"
-      />
-      <CheckboxInput
-        bind:checked={gojuonSettings.enableSubsets.katakana.value}
-        label="Enable Katakana 片假名"
-      />
-    </div>
-    <div class="flex items-center-safe gap-3">
-      <CheckboxInput
-        bind:checked={gojuonSettings.enableSubsets.diacritics.value}
-        label="Enable Dakuten 濁音 and Handakuten 半濁音"
-      />
-      <CheckboxInput
-        bind:checked={gojuonSettings.enableSubsets.yoons.value}
-        label="Enable Yoon 拗音"
-      />
-    </div>
-    <div class="flex items-center-safe gap-3">
-      <CheckboxInput
-        bind:checked={gojuonSettings.showOrigins.value}
-        label="Show Gojuon 五十音 Origins"
-      />
-    </div>
-  </div>
+  {#snippet customTooltip()}
+    <ReferencesList
+      references={{
+        "平文式羅馬字 - Wikipedia":
+          "https://zh.wikipedia.org/zh-hk/%E5%B9%B3%E6%96%87%E5%BC%8F%E7%BD%97%E9%A9%AC%E5%AD%97#%E7%BD%97%E9%A9%AC%E5%AD%97%E8%A1%A8",
+        "平假名 - 由來 - Wikipedia":
+          "https://zh.wikipedia.org/zh-hk/%E5%B9%B3%E5%81%87%E5%90%8D#%E5%B9%B3%E5%81%87%E5%90%8D%E4%B8%80%E8%A7%88",
+        "片假名 - 由來 - Wikipedia":
+          "https://zh.wikipedia.org/zh-hk/%E7%89%87%E5%81%87%E5%90%8D#%E7%89%87%E5%81%87%E5%90%8D%E4%B8%80%E8%A7%88",
+      }}
+    />
+  {/snippet}
+</WithTooltip>
 
-  <div class="flex">
-    <GojuonRow
-      bind:enabled={gojuonSettings.enableRows.rowN.value}
-      bind:isMousedown
-      bind:isSelected={isSelectingRowN}
-      label="n"
-      gojuons={[
-        { hiragana: "ん", hiraganaOrigin: "无", katakana: "ン", katakanaOrigin: "尓" },
-        null,
-        null,
-        null,
-        null,
-      ]}
-    />
-    <GojuonRow
-      bind:enabled={gojuonSettings.enableRows.rowWa.value}
-      bind:isMousedown
-      bind:isSelected={isSelectingRowWa}
-      label="w"
-      gojuons={[
-        { hiragana: "わ", hiraganaOrigin: "和", katakana: "ワ", katakanaOrigin: "和" },
-        null,
-        null,
-        null,
-        { hiragana: "を", hiraganaOrigin: "遠", katakana: "ヲ", katakanaOrigin: "乎" },
-      ]}
-    />
-    <GojuonRow
-      bind:enabled={gojuonSettings.enableRows.rowRa.value}
-      bind:isMousedown
-      bind:isSelected={isSelectingRowRa}
-      label="r"
-      gojuons={[
-        { hiragana: "ら", hiraganaOrigin: "良", katakana: "ラ", katakanaOrigin: "良" },
-        { hiragana: "り", hiraganaOrigin: "利", katakana: "リ", katakanaOrigin: "利" },
-        { hiragana: "る", hiraganaOrigin: "留", katakana: "ル", katakanaOrigin: "流" },
-        { hiragana: "れ", hiraganaOrigin: "礼", katakana: "レ", katakanaOrigin: "礼" },
-        { hiragana: "ろ", hiraganaOrigin: "呂", katakana: "ロ", katakanaOrigin: "呂" },
-      ]}
-    />
-    <GojuonRow
-      bind:enabled={gojuonSettings.enableRows.rowYa.value}
-      bind:isMousedown
-      bind:isSelected={isSelectingRowYa}
-      label="y"
-      gojuons={[
-        { hiragana: "や", hiraganaOrigin: "也", katakana: "ヤ", katakanaOrigin: "也" },
-        null,
-        { hiragana: "ゆ", hiraganaOrigin: "由", katakana: "ユ", katakanaOrigin: "由" },
-        null,
-        { hiragana: "よ", hiraganaOrigin: "与", katakana: "ヨ", katakanaOrigin: "与" },
-      ]}
-    />
-    <GojuonRow
-      bind:enabled={gojuonSettings.enableRows.rowMa.value}
-      bind:isMousedown
-      bind:isSelected={isSelectingRowMa}
-      label="m"
-      gojuons={[
-        { hiragana: "ま", hiraganaOrigin: "末", katakana: "マ", katakanaOrigin: "末" },
-        { hiragana: "み", hiraganaOrigin: "美", katakana: "ミ", katakanaOrigin: "三" },
-        { hiragana: "む", hiraganaOrigin: "武", katakana: "ム", katakanaOrigin: "牟" },
-        { hiragana: "め", hiraganaOrigin: "女", katakana: "メ", katakanaOrigin: "女" },
-        { hiragana: "も", hiraganaOrigin: "毛", katakana: "モ", katakanaOrigin: "毛" },
-      ]}
-    />
-    <GojuonRow
-      bind:enabled={gojuonSettings.enableRows.rowHa.value}
-      bind:isMousedown
-      bind:isSelected={isSelectingRowHa}
-      label={gojuonSettings.enableSubsets.diacritics ? "h/b/p" : "h"}
-      gojuons={[
-        { hiragana: "は", hiraganaOrigin: "波", katakana: "ハ", katakanaOrigin: "八" },
-        { hiragana: "ひ", hiraganaOrigin: "比", katakana: "ヒ", katakanaOrigin: "比" },
-        { hiragana: "ふ", hiraganaOrigin: "不", katakana: "フ", katakanaOrigin: "不" },
-        { hiragana: "へ", hiraganaOrigin: "部", katakana: "ヘ", katakanaOrigin: "部" },
-        { hiragana: "ほ", hiraganaOrigin: "保", katakana: "ホ", katakanaOrigin: "保" },
-      ]}
-    />
-    <GojuonRow
-      bind:enabled={gojuonSettings.enableRows.rowNa.value}
-      bind:isMousedown
-      bind:isSelected={isSelectingRowNa}
-      label="n"
-      gojuons={[
-        { hiragana: "な", hiraganaOrigin: "奈", katakana: "ナ", katakanaOrigin: "奈" },
-        { hiragana: "に", hiraganaOrigin: "仁", katakana: "ニ", katakanaOrigin: "仁" },
-        { hiragana: "ぬ", hiraganaOrigin: "奴", katakana: "ヌ", katakanaOrigin: "奴" },
-        { hiragana: "ね", hiraganaOrigin: "祢", katakana: "ネ", katakanaOrigin: "祢" },
-        { hiragana: "の", hiraganaOrigin: "乃", katakana: "ノ", katakanaOrigin: "乃" },
-      ]}
-    />
-    <GojuonRow
-      bind:enabled={gojuonSettings.enableRows.rowTa.value}
-      bind:isMousedown
-      bind:isSelected={isSelectingRowTa}
-      label={gojuonSettings.enableSubsets.diacritics ? "t/d" : "t"}
-      gojuons={[
-        { hiragana: "た", hiraganaOrigin: "太", katakana: "タ", katakanaOrigin: "多" },
-        { hiragana: "ち", hiraganaOrigin: "知", katakana: "チ", katakanaOrigin: "千" },
-        { hiragana: "つ", hiraganaOrigin: "川", katakana: "ツ", katakanaOrigin: "川" },
-        { hiragana: "て", hiraganaOrigin: "天", katakana: "テ", katakanaOrigin: "天" },
-        { hiragana: "と", hiraganaOrigin: "止", katakana: "ト", katakanaOrigin: "止" },
-      ]}
-    />
-    <GojuonRow
-      bind:enabled={gojuonSettings.enableRows.rowSa.value}
-      bind:isMousedown
-      bind:isSelected={isSelectingRowSa}
-      label={gojuonSettings.enableSubsets.diacritics ? "s/z" : "s"}
-      gojuons={[
-        { hiragana: "さ", hiraganaOrigin: "左", katakana: "サ", katakanaOrigin: "散" },
-        { hiragana: "し", hiraganaOrigin: "之", katakana: "シ", katakanaOrigin: "之" },
-        { hiragana: "す", hiraganaOrigin: "寸", katakana: "ス", katakanaOrigin: "須" },
-        { hiragana: "せ", hiraganaOrigin: "世", katakana: "セ", katakanaOrigin: "世" },
-        { hiragana: "そ", hiraganaOrigin: "曽", katakana: "ソ", katakanaOrigin: "曽" },
-      ]}
-    />
-    <GojuonRow
-      bind:enabled={gojuonSettings.enableRows.rowKa.value}
-      bind:isMousedown
-      bind:isSelected={isSelectingRowKa}
-      label={gojuonSettings.enableSubsets.diacritics ? "k/g" : "k"}
-      gojuons={[
-        { hiragana: "か", hiraganaOrigin: "加", katakana: "カ", katakanaOrigin: "加" },
-        { hiragana: "き", hiraganaOrigin: "幾", katakana: "キ", katakanaOrigin: "幾" },
-        { hiragana: "く", hiraganaOrigin: "久", katakana: "ク", katakanaOrigin: "久" },
-        { hiragana: "け", hiraganaOrigin: "計", katakana: "ケ", katakanaOrigin: "介" },
-        { hiragana: "こ", hiraganaOrigin: "己", katakana: "コ", katakanaOrigin: "己" },
-      ]}
-    />
-    <GojuonRow
-      bind:enabled={gojuonSettings.enableRows.rowA.value}
-      bind:isMousedown
-      bind:isSelected={isSelectingRowA}
-      label=""
-      gojuons={[
-        { hiragana: "あ", hiraganaOrigin: "安", katakana: "ア", katakanaOrigin: "阿" },
-        { hiragana: "い", hiraganaOrigin: "以", katakana: "イ", katakanaOrigin: "伊" },
-        { hiragana: "う", hiraganaOrigin: "宇", katakana: "ウ", katakanaOrigin: "宇" },
-        { hiragana: "え", hiraganaOrigin: "衣", katakana: "エ", katakanaOrigin: "江" },
-        { hiragana: "お", hiraganaOrigin: "於", katakana: "オ", katakanaOrigin: "於" },
-      ]}
-    />
+<div class="mt-4 flex">
+  <GojuonRow
+    bind:enabled={gojuonSettings.enableRows.rowN.value}
+    bind:isMousedown
+    bind:isSelected={isSelectingRowN}
+    label="n"
+    gojuons={gojuons.rowN}
+  />
+  <GojuonRow
+    bind:enabled={gojuonSettings.enableRows.rowWa.value}
+    bind:isMousedown
+    bind:isSelected={isSelectingRowWa}
+    label="w"
+    gojuons={gojuons.rowWa}
+  />
+  <GojuonRow
+    bind:enabled={gojuonSettings.enableRows.rowRa.value}
+    bind:isMousedown
+    bind:isSelected={isSelectingRowRa}
+    label="r"
+    gojuons={gojuons.rowRa}
+  />
+  <GojuonRow
+    bind:enabled={gojuonSettings.enableRows.rowYa.value}
+    bind:isMousedown
+    bind:isSelected={isSelectingRowYa}
+    label="y"
+    gojuons={gojuons.rowYa}
+  />
+  <GojuonRow
+    bind:enabled={gojuonSettings.enableRows.rowMa.value}
+    bind:isMousedown
+    bind:isSelected={isSelectingRowMa}
+    label="m"
+    gojuons={gojuons.rowMa}
+  />
+  <GojuonRow
+    bind:enabled={gojuonSettings.enableRows.rowHa.value}
+    bind:isMousedown
+    bind:isSelected={isSelectingRowHa}
+    label={gojuonSettings.enableSubsets.diacritics ? "h/b/p" : "h"}
+    gojuons={gojuons.rowHa}
+  />
+  <GojuonRow
+    bind:enabled={gojuonSettings.enableRows.rowNa.value}
+    bind:isMousedown
+    bind:isSelected={isSelectingRowNa}
+    label="n"
+    gojuons={gojuons.rowNa}
+  />
+  <GojuonRow
+    bind:enabled={gojuonSettings.enableRows.rowTa.value}
+    bind:isMousedown
+    bind:isSelected={isSelectingRowTa}
+    label={gojuonSettings.enableSubsets.diacritics ? "t/d" : "t"}
+    gojuons={gojuons.rowTa}
+  />
+  <GojuonRow
+    bind:enabled={gojuonSettings.enableRows.rowSa.value}
+    bind:isMousedown
+    bind:isSelected={isSelectingRowSa}
+    label={gojuonSettings.enableSubsets.diacritics ? "s/z" : "s"}
+    gojuons={gojuons.rowSa}
+  />
+  <GojuonRow
+    bind:enabled={gojuonSettings.enableRows.rowKa.value}
+    bind:isMousedown
+    bind:isSelected={isSelectingRowKa}
+    label={gojuonSettings.enableSubsets.diacritics ? "k/g" : "k"}
+    gojuons={gojuons.rowKa}
+  />
+  <GojuonRow
+    bind:enabled={gojuonSettings.enableRows.rowA.value}
+    bind:isMousedown
+    bind:isSelected={isSelectingRowA}
+    label=""
+    gojuons={gojuons.rowA}
+  />
 
-    <div class="flex flex-col pl-1">
-      <div class="h-6"></div>
-      {#each ["a", "i", "u", "e", "o"] as colLabel (colLabel)}
-        <span class="h-12 pl-2">{colLabel}</span>
-      {/each}
-    </div>
+  <div class="flex flex-col pl-1">
+    <div class="h-6"></div>
+    {#each ["a", "i", "u", "e", "o"] as colLabel (colLabel)}
+      <span class="h-12 pl-2">{colLabel}</span>
+    {/each}
   </div>
 </div>
+
+<SettingsRows class="mt-8">
+  <SettingsRow>
+    <CheckboxInput
+      bind:checked={gojuonSettings.enableSubsets.hiragana.value}
+      label="enable Hiragana 平假名"
+    />
+    <CheckboxInput
+      bind:checked={gojuonSettings.enableSubsets.katakana.value}
+      label="enable Katakana 片假名"
+    />
+  </SettingsRow>
+  <SettingsRow>
+    <CheckboxInput
+      bind:checked={gojuonSettings.enableSubsets.diacritics.value}
+      label="enable Dakuten 濁音 and Handakuten 半濁音"
+    />
+    <CheckboxInput
+      bind:checked={gojuonSettings.enableSubsets.yoons.value}
+      label="enable Yoon 拗音"
+    />
+  </SettingsRow>
+  <SettingsRow>
+    <CheckboxInput
+      bind:checked={gojuonSettings.showOrigins.value}
+      label="show Gojuon 五十音 origins"
+    />
+  </SettingsRow>
+</SettingsRows>

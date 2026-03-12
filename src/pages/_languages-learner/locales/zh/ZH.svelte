@@ -32,8 +32,9 @@
   const { letters, keymap } = $derived.by(getLettersAndKeymap);
 </script>
 
+<Divider />
 <SettingsVSplit>
-  <SettingsRow>
+  {#snippet lhs()}
     <WithTooltip>
       <div>Select subsets:</div>
 
@@ -48,60 +49,61 @@
         />
       {/snippet}
     </WithTooltip>
-  </SettingsRow>
+  {/snippet}
 
-  <SettingsRows>
-    <SettingsRow>
-      <CheckboxInput
-        bind:checked={letterSettings.enableRows.philosophical.value}
-        label="哲理類 (日月金木水火土)"
-      />
-      <CheckboxInput
-        bind:checked={letterSettings.enableRows.stroke.value}
-        label="筆畫類 (竹戈十大中一弓)"
-      />
-      <CheckboxInput
-        bind:checked={letterSettings.enableRows.bodyParts.value}
-        label="人體類 (人心手口)"
-      />
-      <CheckboxInput
-        bind:checked={letterSettings.enableRows.characterShapes.value}
-        label="字形類 (尸廿山女田卜)"
-      />
-    </SettingsRow>
+  {#snippet rhs()}
+    <SettingsRows>
+      <SettingsRow>
+        <CheckboxInput
+          bind:checked={letterSettings.enableRows.philosophical.value}
+          label="哲理類 (日月金木水火土)"
+        />
+        <CheckboxInput
+          bind:checked={letterSettings.enableRows.stroke.value}
+          label="筆畫類 (竹戈十大中一弓)"
+        />
+        <CheckboxInput
+          bind:checked={letterSettings.enableRows.bodyParts.value}
+          label="人體類 (人心手口)"
+        />
+        <CheckboxInput
+          bind:checked={letterSettings.enableRows.characterShapes.value}
+          label="字形類 (尸廿山女田卜)"
+        />
+      </SettingsRow>
 
-    <SettingsRow>
-      <CheckboxInput
-        bind:checked={letterSettings.enableSubsets.auxiliaryShapes.value}
-        label="enable Auxiliary Shapes 輔助字形"
-      />
-      <CheckboxInput
-        bind:checked={letterSettings.enableSubsets.v5.value}
-        label="enable Version 5 五代倉頡"
-        disabled={!letterSettings.enableSubsets.auxiliaryShapes.value}
-      >
-        {#snippet customTooltip()}
-          <div>
-            enable
-            <img
-              src="/zh/e/Cjr5m-e1.svg"
-              alt="Cjr5m-e1"
-              class="inline-block size-6 dark:invert-100"
-            />
-            (水) and
-            <img
-              src="/zh/s/Cjr5m-s1.svg"
-              alt="Cjr5m-s1"
-              class="inline-block size-6 dark:invert-100"
-            />
-            (尸)
-          </div>
-        {/snippet}
-      </CheckboxInput>
-    </SettingsRow>
-  </SettingsRows>
+      <SettingsRow>
+        <CheckboxInput
+          bind:checked={letterSettings.enableSubsets.auxiliaryShapes.value}
+          label="enable Auxiliary Shapes 輔助字形"
+        />
+        <CheckboxInput
+          bind:checked={letterSettings.enableSubsets.v5.value}
+          label="enable Version 5 五代倉頡"
+          disabled={!letterSettings.enableSubsets.auxiliaryShapes.value}
+        >
+          {#snippet customTooltip()}
+            <div>
+              enable
+              <img
+                src="/zh/e/Cjr5m-e1.svg"
+                alt="Cjr5m-e1"
+                class="inline-block size-6 dark:invert-100"
+              />
+              (水) and
+              <img
+                src="/zh/s/Cjr5m-s1.svg"
+                alt="Cjr5m-s1"
+                class="inline-block size-6 dark:invert-100"
+              />
+              (尸)
+            </div>
+          {/snippet}
+        </CheckboxInput>
+      </SettingsRow>
+    </SettingsRows>
+  {/snippet}
 </SettingsVSplit>
 
 <Divider />
-
 <TypingQuestions {letters} {keymap} />
