@@ -105,7 +105,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["親類"], hiragana: "しんるい", romanization: "shinrui", meaning: "relatives (formal)" },
       { kanjis: ["肉親"], hiragana: "にくしん", romanization: "nikushin", meaning: "blood relatives" },
       { kanjis: ["親族"], hiragana: "しんぞく", romanization: "shinzoku", meaning: "kin (formal)" },
-      { kanjis: ["夫婦"], rareKanjis: ["妻夫", "女夫"], hiragana: "ふうふ", romanization: "fuufu", meaning: "spouse" },
+      { kanjis: ["夫婦"], rareKanjis: ["妻夫", "女夫"], hiragana: "ふうふ", romanization: "fuufu", meaning: "married couple" },
       { kanjis: ["結婚"], hiragana: "けっこん", romanization: "kekkon", meaning: "marriage" },
       { kanjis: ["離婚"], hiragana: "りこん", romanization: "rikon", meaning: "divorce" },
       { kanjis: ["親子"], hiragana: "おやこ", romanization: "oyako", meaning: "parent and child" },

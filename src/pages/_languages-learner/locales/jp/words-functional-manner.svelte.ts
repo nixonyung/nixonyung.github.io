@@ -36,6 +36,7 @@ export function appendFunctionalManner(words: JapaneseWord[]) {
       { hiragana: "すやすや", romanization: "suyasuya", meaning: "(sleeping sound, quietly)" },
       { hiragana: "ぷるぷる", katakana: "プルプル", romanization: "purupuru", meaning: "(trembling sound)" },
       { hiragana: "いちゃいちゃ", katakana: "イチャイチャ", preferredForm: "katakana", romanization: "ichaicha", meaning: "making out" },
+      { hiragana: "ちょこちょこ", katakana: "チョコチョコ", romanization: "chokochoko", meaning: "in quick steps" },
     );
   }
 }
