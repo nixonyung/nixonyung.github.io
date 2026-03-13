@@ -10,6 +10,7 @@ export function appendVerbsDescriptive(words: JapaneseWord[]) {
       { kanjis: ["成る"], rareKanjis: ["為る"], hiragana: "なる", romanization: "naru", verbGroup: "Godan", verbIsTransitive: false, meaning: "become (reaching a certain time/state)", exampleUsages: ["春になる", "暇になる"] },
       { kanjis: ["似る"], hiragana: "にる", romanization: "niru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "be alike" },
       { kanjis: ["一致する"], hiragana: "いっちする", romanization: "icchisuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "match", exampleUsages: ["[Noun] は [Noun] と一致する。", "[Noun (with counters)] は一致する。"] },
+      { kanjis: ["似合う"], hiragana: "にあう", romanization: "niau", verbGroup: "Godan", verbIsTransitive: false, meaning: "suit / fit" },
       { kanjis: ["違う"], hiragana: "ちがう", romanization: "chigau", verbGroup: "Godan", verbIsTransitive: false, meaning: "wrong / be mistaken", derivedMeanings: ["differ"], exampleUsages: ["[Noun] は [Noun] と違う"] },
       { kanjis: ["反する"], hiragana: "はんする", romanization: "hansuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "oppose", exampleUsages: ["意に反する (against one's will)", "予測に反する"] },
 
