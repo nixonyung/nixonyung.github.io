@@ -23,7 +23,7 @@
 <WithTooltip {tooltip} {customTooltip} {disabled}>
   <button
     class={[
-      "flex items-center-safe",
+      "group/checkbox flex items-center-safe",
       classList,
       !disabled
         ? "cursor-pointer underline-offset-4 not-dark:hover:underline dark:hover:brightness-150 dark:hover:grayscale-50"
@@ -33,8 +33,10 @@
     {disabled}
   >
     <Icon
-      icon={checked ? "icon-[icon-park-solid--check-one]" : "icon-[icon-park-outline--round]"}
-      class={["text-sm", !checked && "opacity-50"]}
+      icon={checked
+        ? "icon-[icon-park-solid--check-one]"
+        : "icon-[icon-park-outline--round] group-hover/checkbox:icon-[icon-park-outline--check-one]"}
+      class={["text-sm", "group-hover/checkbox:opacity-50", !checked && "opacity-50"]}
     />
     <Icon {icon} class="ml-2" />
     <span class="ml-1">{label}</span>

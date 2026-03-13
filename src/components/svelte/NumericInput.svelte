@@ -5,6 +5,7 @@
 
   let {
     value = $bindable(),
+    icon,
     label,
     min = -Infinity,
     max = Infinity,
@@ -13,6 +14,7 @@
     disabled: disabledProp,
   }: {
     value: number;
+    icon?: string;
     label: string;
     min?: number;
     max?: number;
@@ -56,6 +58,7 @@
       initScreenX = screenX;
     }}
   >
+    <Icon {icon} />
     <span>{label}:</span>
     <span class="ml-1 min-w-8 text-start">{value}</span>
   </button>

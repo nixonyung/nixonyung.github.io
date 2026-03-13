@@ -6,9 +6,9 @@ export class CircularQueue<Item> {
   #i: number;
 
   constructor(size: number) {
-    this.#size = size;
-    this.#items = [];
-    this.#i = 0;
+    this.#size = $state(size);
+    this.#items = $state([]);
+    this.#i = $state(0);
   }
 
   push(item: Item) {

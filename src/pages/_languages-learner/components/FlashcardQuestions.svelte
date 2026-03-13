@@ -240,8 +240,11 @@
       showPronunciation = false;
       optionSelectedIdx = undefined;
       areWrongOption = Array.from({ length: options.length }, () => false);
-      if (settings.autoSpeak.value) tick().then(() => speechBtnRef?.click());
     });
+  });
+  $effect.pre(() => {
+    question;
+    if (settings.autoSpeak.value) tick().then(() => speechBtnRef?.click());
   });
   $effect.pre(() => {
     settings.numOptions.value;
@@ -385,35 +388,43 @@
   <SettingsRow>
     <CheckboxInput
       bind:checked={settings.autoSpeak.value}
-      label="auto read question"
       icon="icon-[icon-park-solid--people-speak]"
+      label="auto read question"
       disabled={!speech.voice}
     />
     <CheckboxInput
       bind:checked={settings.hideQuestion.value}
+      icon="icon-[heroicons--eye-slash-solid]"
       label="hide question"
-      icon="icon-[heroicons--eye-slash]"
-    />
-    <CheckboxInput
-      bind:checked={settings.pinWhenWrong.value}
-      label="auto pin when wrong"
-      icon="icon-[ix--tag-plus-filled]"
     />
   </SettingsRow>
 
   <SettingsRow>
     <CheckboxInput
+      bind:checked={settings.pinWhenWrong.value}
+      icon="icon-[ix--tag-plus-filled]"
+      label="auto pin when wrong"
+    />
+    <CheckboxInput
       bind:checked={settings.onlyPinned.value}
-      label="only use pinned (if any)"
       icon="icon-[icon-park-solid--pin]"
+      label="only use pinned (if any)"
     />
     <CheckboxInput
       bind:checked={settings.onlyUnpinned.value}
-      label="only use unpinned (if any)"
       icon="icon-[icon-park-outline--pin]"
+      label="only use unpinned (if any)"
     />
   </SettingsRow>
-  <NumericInput bind:value={settings.numOptions.value} label="number of options" min={2} />
+
+  <SettingsRow>
+    <NumericInput
+      bind:value={settings.numOptions.value}
+      icon="icon-[heroicons--square-3-stack-3d-solid]"
+      label="number of options"
+      min={2}
+    />
+  </SettingsRow>
 </SettingsRows>
 
 <!-- question -->
