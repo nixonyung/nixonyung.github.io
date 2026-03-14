@@ -42,9 +42,9 @@
 
   const questionsQueue = $derived(
     new QuestionsQueue(
-      letters.map(({ letter, svgPath: svg, utterance, romanization, actualInput }) => ({
+      letters.map(({ letter, svgPath, utterance, romanization, actualInput }) => ({
         letter,
-        svgPath: svg,
+        svgPath,
         utterance: utterance ?? letter,
         romanization,
         exampleWord: utterance,
@@ -75,6 +75,8 @@
 
   $effect.pre(() => {
     questions.top;
+    showRomanization = false;
+
     if (settings.autoSpeak.value)
       untrack(() => {
         speech.speak(questions.top?.utterance);
