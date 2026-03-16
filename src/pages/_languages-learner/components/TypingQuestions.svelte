@@ -32,13 +32,20 @@
 
   const settings = $state(
     initSettings({
-      autoSpeak: { paramKey: "autoSpeak", defaultValue: false },
+      autoReadQuestion: { paramKey: "autoReadQ", defaultValue: false },
+      autoReadAnswer: { paramKey: "autoReadA", defaultValue: false },
       hideKeys: { paramKey: "hideKeys", defaultValue: false },
       highlightCorrectKey: { paramKey: "showCorrectKey", defaultValue: false },
       ignoreTypos: { paramKey: "ignoreTypos", defaultValue: false },
     }),
   );
   useSyncSettings(settings);
+  $effect.pre(() => {
+    if (settings.autoReadQuestion.value) settings.autoReadAnswer.value = false;
+  });
+  $effect.pre(() => {
+    if (settings.autoReadAnswer.value) settings.autoReadQuestion.value = false;
+  });
 
   const questionsQueue = $derived(
     new QuestionsQueue(
@@ -62,6 +69,12 @@
     prevQuestion = questions.top;
     questions.push(questionsQueue.nextQuestion());
     input = "";
+    showRomanization = false;
+
+    if (settings.autoReadQuestion.value) {
+      speech.speak(questions.top?.utterance);
+      showRomanization = true;
+    }
   }
   $effect.pre(() => {
     questionsQueue;
@@ -72,16 +85,8 @@
       prevQuestion = undefined;
     });
   });
-
   $effect.pre(() => {
-    questions.top;
-    showRomanization = false;
-
-    if (settings.autoSpeak.value)
-      untrack(() => {
-        speech.speak(questions.top?.utterance);
-        showRomanization = true;
-      });
+    if (settings.autoReadQuestion.value) showRomanization = true;
   });
 </script>
 
@@ -92,6 +97,7 @@
 
       input += key;
       if (input === questions.top?.input) {
+        if (settings.autoReadAnswer.value) speech.speak(questions.top?.utterance);
         nextQuestion();
       }
     } else {
@@ -111,18 +117,24 @@
 <SettingsRows>
   <SettingsRow>
     <CheckboxInput
-      bind:checked={settings.autoSpeak.value}
+      bind:checked={settings.autoReadQuestion.value}
       icon="icon-[icon-park-solid--people-speak]"
       label="auto read question"
     />
+    <span>-- OR --</span>
+    <CheckboxInput
+      bind:checked={settings.autoReadAnswer.value}
+      icon="icon-[icon-park-solid--people-speak]"
+      label="auto read answer"
+    />
+  </SettingsRow>
+
+  <SettingsRow>
     <CheckboxInput
       bind:checked={settings.hideKeys.value}
       icon="icon-[heroicons--eye-slash-solid]"
       label="hide keys"
     />
-  </SettingsRow>
-
-  <SettingsRow>
     <CheckboxInput
       bind:checked={settings.highlightCorrectKey.value}
       icon="icon-[ix--highlight-filled]"
