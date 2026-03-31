@@ -107,19 +107,15 @@
       }) => {
         let question = "";
         let pronunciation = "";
-        switch (true) {
-          case preferredForm === "kanji" || (preferredForm === undefined && !!kanjis?.length):
-            question = [...kanjis!, ...(rareKanjis ?? [])].join(" / ");
-            pronunciation = [`${hiragana ?? katakana}`, `(${romanization})`].join(" ");
-            break;
-          case preferredForm === "hiragana" || (preferredForm === undefined && !kanjis?.length):
-            question = [hiragana!, ...(kanjis ?? []), ...(rareKanjis ?? [])].join(" / ");
-            pronunciation = `(${romanization})`;
-            break;
-          case preferredForm === "katakana" || (preferredForm === undefined && !kanjis?.length):
-            question = [katakana!, ...(kanjis ?? []), ...(rareKanjis ?? [])].join(" / ");
-            pronunciation = `(${romanization})`;
-            break;
+        if ((preferredForm === "kanji" || preferredForm === undefined) && !!kanjis?.length) {
+          question = [...kanjis, ...(rareKanjis ?? [])].join(" / ");
+          pronunciation = [`${hiragana ?? katakana}`, `(${romanization})`].join(" ");
+        } else if ((preferredForm === "hiragana" || preferredForm === undefined) && !!hiragana) {
+          question = [hiragana, ...(kanjis ?? []), ...(rareKanjis ?? [])].join(" / ");
+          pronunciation = `(${romanization})`;
+        } else if ((preferredForm === "katakana" || preferredForm === undefined) && !!katakana) {
+          question = [katakana!, ...(kanjis ?? []), ...(rareKanjis ?? [])].join(" / ");
+          pronunciation = `(${romanization})`;
         }
 
         return {

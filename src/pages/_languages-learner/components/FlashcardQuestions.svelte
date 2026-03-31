@@ -261,70 +261,51 @@
 
     const { key, ctrlKey, altKey, metaKey } = ev;
 
-    switch (true) {
-      // search input
-      case !!key.match(/^[a-z0-9/()[\]]$/) && !ctrlKey && !altKey && !metaKey:
-        searchInput += key;
+    // search input
+    if (!!key.match(/^[a-z0-9/()[\]]$/) && !ctrlKey && !altKey && !metaKey) {
+      searchInput += key;
+    } else if (key === " " && searchInput.length !== 0) {
+      if (searchInput.at(-1) !== " ") searchInput += " ";
+    } else if (key === "Backspace" && !ctrlKey) {
+      searchInput = searchInput.slice(0, -1);
+    } else if ((key === "Backspace" && ctrlKey) || key === "Escape") {
+      searchInput = "";
+    }
+    // manually select option
+    else if (key === "ArrowDown" || key === "J") {
+      ev.preventDefault();
+      ev.stopPropagation();
 
-        break;
-      case key === " " && searchInput.length !== 0:
-        if (searchInput.at(-1) !== " ") searchInput += " ";
+      moveOptionSelectedIdx("down");
+    } else if (key === "ArrowUp" || key === "K") {
+      ev.preventDefault();
+      ev.stopPropagation();
 
-        break;
-      case key === "Backspace" && !ctrlKey:
-        searchInput = searchInput.slice(0, -1);
+      moveOptionSelectedIdx("up");
+    }
+    // submit
+    else if (key === "Enter" || (key === " " && searchInput.length === 0)) {
+      ev.preventDefault();
+      ev.stopPropagation();
 
-        break;
-      case (key === "Backspace" && ctrlKey) || key === "Escape":
+      if (!!searchInput && onlyMatchingOptionIdx !== undefined) {
+        optionRefs[onlyMatchingOptionIdx].click();
         searchInput = "";
-
-        break;
-
-      // manually select option
-      case key === "ArrowDown" || key === "J":
-        ev.preventDefault();
-        ev.stopPropagation();
-
-        moveOptionSelectedIdx("down");
-
-        break;
-      case key === "ArrowUp" || key === "K":
-        ev.preventDefault();
-        ev.stopPropagation();
-
-        moveOptionSelectedIdx("up");
-
-        break;
-
-      // submit
-      case key === "Enter" || (key === " " && searchInput.length === 0):
-        ev.preventDefault();
-        ev.stopPropagation();
-
-        if (!!searchInput && onlyMatchingOptionIdx !== undefined) {
-          optionRefs[onlyMatchingOptionIdx].click();
-          searchInput = "";
-        } else if (optionSelectedIdx !== undefined) {
-          optionRefs[optionSelectedIdx]?.click();
-        }
-
-        break;
-
-      // hide question
-      case key === "H":
-        settings.hideQuestion.value = !settings.hideQuestion.value;
-
-        break;
-      // speak
-      case key === "R":
-        speechBtnRef?.click();
-
-        break;
-      // pin
-      case key === "P":
-        pinBtnRef?.click();
-
-        break;
+      } else if (optionSelectedIdx !== undefined) {
+        optionRefs[optionSelectedIdx]?.click();
+      }
+    }
+    // hide question
+    else if (key === "H") {
+      settings.hideQuestion.value = !settings.hideQuestion.value;
+    }
+    // speak
+    else if (key === "R") {
+      speechBtnRef?.click();
+    }
+    // pin
+    else if (key === "P") {
+      pinBtnRef?.click();
     }
   })}
 />

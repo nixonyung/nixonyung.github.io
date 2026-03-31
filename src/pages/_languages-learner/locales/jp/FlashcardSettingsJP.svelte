@@ -230,7 +230,7 @@
         />
       {/snippet}
     </WithTooltip>
-    <Highlighted onclick={() => toggleSettings(flashcardSettings)}>(toggle all)</Highlighted>
+    <Highlighted onclick={() => toggleSettings(flashcardSettings.words)}>(toggle all)</Highlighted>
   </SettingsRow>
 
   <SettingsVSplit>
