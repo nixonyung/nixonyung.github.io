@@ -20,6 +20,9 @@ export function appendFunctionalLogical(words: JapaneseWord[]) {
       { hiragana: "ために", preferredForm: "hiragana", kanjis: ["為に"], romanization: "tameni", meaning: "for the sake of (purpose)", exampleUsages: ["(action)[Verb-dictionary] ために (goal)[Clause]", "テストに合格するために ...", "家族のために ...", "この日のために ..."] },
       { hiragana: "ように", preferredForm: "hiragana", kanjis: ["様に"], romanization: "youni", meaning: "for the sake of (hope)", exampleUsages: ["(action)[Verb-potential] ように (hope)[Clause]", "日本語て漫画が読めるように ..."] },
 
+      // therefore
+      { hiragana: "だから", romanization: "dakara", meaning: "therefore", derivedMeanings: ["just as I told you!"] },
+
       // conditional
       { hiragana: "なら", preferredForm: "hiragana", romanization: "nara", meaning: "in that case (explicitly echoing what is just spoken)", derivedMeanings: ["if that's true (making assumption by observation)"], exampleUsages: ["[Clause] なら / のなら / んなら [Clause]"] },
       { hiragana: "ならば", preferredForm: "hiragana", romanization: "naraba", meaning: "in that case (formal)" },

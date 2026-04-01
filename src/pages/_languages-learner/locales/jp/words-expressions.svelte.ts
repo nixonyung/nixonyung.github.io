@@ -109,8 +109,6 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "でしょう", romanization: "deshou", meaning: "right? (stating facts, polite)", exampleUsages: ["[Clause] でしょう？"] },
       // TODO: leading questions
 
-      { hiragana: "だから", romanization: "dakara", meaning: "Told you already!" },
-
       { hiragana: "どうも", romanization: "doumo", meaning: "very", derivedMeanings: ["thanks"], exampleUsages: ["どうもありがとうございます (thank you very much)"] },
       { hiragana: "もちろん", preferredForm: "hiragana", kanjis: ["勿論"], romanization: "mochiron", meaning: "of course", exampleUsages: ["もちろん！", "A はもちろん B も ... (B ..., not to mention A)"] },
       { kanjis: ["本当に"], hiragana: "ほんとうに", romanization: "hontouni", meaning: "really" },

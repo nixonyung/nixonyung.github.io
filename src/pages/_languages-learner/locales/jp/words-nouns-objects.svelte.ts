@@ -256,6 +256,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["入れ物", "容れ物"], hiragana: "いれもの", romanization: "iremono", meaning: "container / case" },
       { kanjis: ["箱"], rareKanjis: ["函", "匣", "筥", "筐", "凾"], hiragana: "はこ", katakana: "ハコ", romanization: "hako", meaning: "box" },
       { kanjis: ["袋"], rareKanjis: ["嚢"], hiragana: "ふくろ", romanization: "fukuro", meaning: "bag" },
+      { kanjis: ["レジ袋"], hiragana: "レジぶくろ", romanization: "reji bukuro", meaning: "(disposable) shopping bag" },
       { kanjis: ["碗"], rareKanjis: ["盌"], hiragana: "わん", romanization: "wan", meaning: "bowl" },
       { kanjis: ["茶碗", "茶わん"], hiragana: "ちゃわん", romanization: "chawan", meaning: "tea cup" },
       { kanjis: ["瓶"], rareKanjis: ["壜", "罎"], hiragana: "びん", romanization: "bin", meaning: "bottle" },
