@@ -30,6 +30,12 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { kanjis: ["一番", "１番"], hiragana: "いちばん", romanization: "ichiban", meaning: "xxx is the most xxx", exampleUsages: ["[Noun] は(が) 一番 [Verb / Adj.] です。"] },
       { kanjis: ["何より"], hiragana: "なにより", romanization: "naniyori", meaning: "above anything else" },
 
+      // probability
+      { kanjis: ["必ず"], hiragana: "かならず", romanization: "kanarazu", meaning: "certainly" },
+
+      { hiragana: "かもしれません", preferredForm: "hiragana", kanjis: ["かも知れません"], romanization: "kamoshiremasen", meaning: "I don't know / maybe", exampleUsages: ["... のは難しいかもしれません"] },
+      { hiragana: "かも", romanization: "kamo", meaning: "I don't know / maybe (casual, spoken)" },
+
       // indefinite quantities (proportions)
       /*
       Small or Few Quantities:
@@ -71,9 +77,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { kanjis: ["何も"], hiragana: "なにも", romanization: "nanimo", meaning: "not at all" },
       { kanjis: ["何も"], hiragana: "なんも", romanization: "nanmo", meaning: "not at all (spoken)" },
       { hiragana: "あまり", romanization: "amari", meaning: "not much" },
-      { kanjis: ["丁度"], hiragana: "ちょうど", romanization: "choudo", meaning: "exactly" },
-      { hiragana: "くらい", romanization: "kurai", meaning: "around", exampleUsages: ["5年前くらいから"] },
-      { hiragana: "だけ", preferredForm: "hiragana", kanjis: ["丈"], romanization: "dake", meaning: "only (in its entirety)" },
+      { hiragana: "だけでなく", romanization: "dakedenaku", meaning: "not only", exampleUsages: ["[Noun] だけでなく [Noun] ..."] },
       { hiragana: "いっぱい", romanization: "ippai", meaning: "fully / as much as possible", exampleUsages: ["いっぱいにする (make into full)"] },
       { kanjis: ["全部"], hiragana: "ぜんぶ", romanization: "zenbu", meaning: "all (concrete items)" },
       { hiragana: "すべて", kanjis: ["全て"], rareKanjis: ["総て", "凡て", "惣て", "渾て"], romanization: "subete", meaning: "all (formal, for abstract concepts)" },
@@ -81,7 +85,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { kanjis: ["半分"], hiragana: "はんぶん", romanization: "hanbun", meaning: "half" },
       { hiragana: "ほとんど", preferredForm: "hiragana", kanjis: ["殆ど"], romanization: "hotondo", meaning: "most of" },
       { hiragana: "だんだん", preferredForm: "hiragana", kanjis: ["段々", "段段"], romanization: "dandan", meaning: "gradually" },
-      { kanjis: ["少し"], rareKanjis: ["寡し", "些し"], hiragana: "すこし", romanization: "sukoshi", meaning: "a little (amount)" },
+      { kanjis: ["少し"], rareKanjis: ["寡し", "些し"], hiragana: "すこし", romanization: "sukoshi", meaning: "a little (amount)", exampleUsages: ["少しだけ (just a little more)"] },
       { hiragana: "もっと", romanization: "motto", meaning: "even more" },
       { kanjis: ["多く"], hiragana: "おおく", romanization: "ooku", meaning: "many / much" },
       { kanjis: ["大分"], hiragana: "だいぶ", romanization: "daibu", meaning: "a lot" },
@@ -94,6 +98,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { hiragana: "うんと", romanization: "unto", meaning: "much (spoken, used by women)" },
       { hiragana: "ほとんど", preferredForm: "hiragana", kanjis: ["殆ど"], rareKanjis: ["幾ど"], romanization: "hotondo", meaning: "nearly all" },
       { hiragana: "まるで", preferredForm: "hiragana", kanjis: ["丸で"], romanization: "marude", meaning: "completely" },
+      { hiragana: "だけ", preferredForm: "hiragana", kanjis: ["丈"], romanization: "dake", meaning: "only (in its entirety)", exampleUsages: ["[Noun] だけ"] },
       // TODO: each
 
       // definite quantities - numbers
@@ -128,7 +133,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
 
       // definite quantities - counters
       // TODO: https://www.tofugu.com/japanese/japanese-counters-list/
-      { hiragana: "-つ", rareKanjis: ["-箇", "個"], romanization: "tsu", meaning: "(general purpose counter)", exampleUsages: ['二つ("futatsu") の [Noun]'] },
+      { hiragana: "-つ", rareKanjis: ["-箇", "個"], romanization: "tsu", meaning: "(general purpose counter)", exampleUsages: ['二つ("futatsu") の [Noun]', "日本文化の1つです (a part of Japanese culture)"] },
       { kanjis: ["-個"], rareKanjis: ["-箇"], hiragana: "こ", romanization: "ko", meaning: "(counter for objects)" },
       { kanjis: ["-件"], hiragana: "けん", romanization: "ken", meaning: "(counter for item/matter/case/mails)" },
       { kanjis: ["-番"], hiragana: "ばん", romanization: "ban", meaning: "(enumeration in a series)" },
@@ -160,6 +165,13 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
       { katakana: "キロメートル", rareKanjis: ["粁"], romanization: "kiromeetoru", meaning: "kilometer (km)" },
       { katakana: "グラム", rareKanjis: ["瓦"], romanization: "guramu", meaning: "gram (g)" },
       { katakana: "キログラム", rareKanjis: ["瓩"], romanization: "kiroguramu", meaning: "kilogram (kg)" },
+
+      // definite quantities - approximations
+      { hiragana: "くらい", romanization: "kurai", meaning: "around", exampleUsages: ["5年前くらいから"] },
+      { hiragana: "ほど", romanization: "hodo", meaning: "about / around", exampleUsages: ["二週間ほど ..."] },
+      { kanjis: ["目安に"], hiragana: "めやすに", romanization: "meyasuni", meaning: "about / around", exampleUsages: ["二週間目安に ..."] },
+
+      { kanjis: ["丁度"], hiragana: "ちょうど", romanization: "choudo", meaning: "exactly" },
 
       // interrogative
       { kanjis: ["何人"], hiragana: "なんにん", romanization: "nannin", meaning: "how many people" },

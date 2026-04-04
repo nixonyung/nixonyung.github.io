@@ -27,7 +27,7 @@ export function appendVerbsDescriptive(words: JapaneseWord[]) {
     verbs.push(
       { hiragana: "いる", rareKanjis: ["居る"], romanization: "iru", verbGroup: "Godan", verbIsTransitive: false, meaning: "exist (for living things)", exampleUsages: ["xxx に入っていました (was starting to perform xxx)"] },
       { hiragana: "いる", preferredForm: "hiragana", kanjis: ["要る"], romanization: "iru", verbGroup: "Godan", verbIsTransitive: false, meaning: "is needed / is necessary" },
-      { hiragana: "ある", preferredForm: "hiragana", kanjis: ["有る", "在る"], romanization: "aru", verbGroup: "Godan", verbIsTransitive: false, meaning: "exist (for non-living things)", exampleUsages: ["質問かあれば"] },
+      { hiragana: "ある", preferredForm: "hiragana", kanjis: ["有る", "在る"], romanization: "aru", verbGroup: "Godan", verbIsTransitive: false, meaning: "exist (for non-living things)", exampleUsages: ["質問かあれば", "[Verb-た] ことがある (have related experience)"] },
 
       { kanjis: ["来る"], hiragana: "くる", romanization: "kuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "come (spatially / temporally)" },
       { kanjis: ["設立する"], hiragana: "せつりつ", romanization: "setsuritsu", verbGroup: "Irregular", verbIsTransitive: true, meaning: "to found" },
@@ -44,18 +44,24 @@ export function appendVerbsDescriptive(words: JapaneseWord[]) {
 
   if (flashcardSettings.words.verbs.descriptive.processes.value) {
     verbs.push(
-      { hiragana: "する", rareKanjis: ["為る"], romanization: "suru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "do / carry out", derivedMeanings: ["choose", "pickpocket"], exampleUsages: ["せールをする (on sale)", "ゲームをする (play a game)", "これにします (choose this)", "[Noun] にする (make into xxx)", "日本語学習をもっと楽しいものにしたい"] },
+      // starting
+      { hiragana: "する", rareKanjis: ["為る"], romanization: "suru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "do / carry out", derivedMeanings: ["choose", "pickpocket"], exampleUsages: ["せールをする (on sale)", "ゲームをする (play a game)", "これにします (choose this)", "[Noun] にする (make into xxx)", "日本語学習をもっと楽しいものにしたい (produce xxx)", "自己紹介をさせてください (please allow me to introduce myself)"] },
+      { hiragana: "いたす", preferredForm: "hiragana", kanjis: ["致す"], romanization: "itasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "do / carry out (formal)", exampleUsages: ["xxx ことをお勧めいたします"] },
       { hiragana: "やる", rareKanjis: ["遣る"], romanization: "yaru", verbGroup: "Godan", verbIsTransitive: true, meaning: "undertake / initiate (casual)", exampleUsages: ["YouTubeをやったい"] },
       { kanjis: ["取り掛かる", "取りかかる"], hiragana: "とりかかる", romanization: "torikakaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "start" },
       { kanjis: ["起こす", "起す"], hiragana: "おこす", romanization: "okosu", verbGroup: "Godan", verbIsTransitive: true, meaning: "cause / start", derivedMeanings: ["wake someone up", "raise", "set up", "vitalize"] },
       { kanjis: ["起こる", "起る"], hiragana: "おこる", romanization: "okoru", verbGroup: "Godan", verbIsTransitive: false, meaning: "occur" },
       { kanjis: ["始まる"], hiragana: "はじまる", romanization: "hajimaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "begin", exampleUsages: ["で始まる", "を始める時 (when xxx start)"] },
+      { kanjis: ["調べる"], hiragana: "しらべる", romanization: "shiraberu", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "look up / examine / investigate", exampleUsages: ["xxx と調べる"] },
       { kanjis: ["出発する"], hiragana: "しゅっぱつする", romanization: "shuppatsusuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "depart / set off" },
 
+      // continuing
       { kanjis: ["待つ"], rareKanjis: ["俟つ"], hiragana: "まつ", romanization: "matsu", verbGroup: "Godan", verbIsTransitive: false, meaning: "wait" },
-      { kanjis: ["頑張る"], hiragana: "がんばる", romanization: "ganbaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "persist / keep up" },
+      { kanjis: ["続ける"], hiragana: "つづける", romanization: "tsudzukeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "continue / keep up", exampleUsages: ["頑張り続ける"] },
+      { kanjis: ["頑張る"], hiragana: "がんばる", romanization: "ganbaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "persevere / insist" },
       { kanjis: ["急ぐ"], hiragana: "いそぐ", romanization: "isogu", verbGroup: "Godan", verbIsTransitive: false, meaning: "hurry" },
 
+      // finishing
       { kanjis: ["終わる", "終る"], rareKanjis: ["了る", "卒る", "畢る", "竟る"], hiragana: "おわる", romanization: "owaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "finish", exampleUsages: ["で終わる", "宿題終わった"] },
       { hiragana: "しまう", rareKanjis: ["仕舞う", "終う", "了う", "蔵う"], romanization: "shimau", verbGroup: "Godan", verbIsTransitive: true, meaning: "finish", derivedMeanings: ["shut down", "put away"] },
       { kanjis: ["着く"], hiragana: "つく", romanization: "tsuku", verbGroup: "Godan", verbIsTransitive: false, meaning: "arrive / reach" },

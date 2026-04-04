@@ -266,8 +266,14 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["棚"], hiragana: "たな", romanization: "tana", meaning: "shelf / rack" },
       { katakana: "ポスト", romanization: "posuto", meaning: "postbox" },
 
+      // liquids
+      // TODO: oil, diesel
+      { katakana: "インク", romanization: "inku", meaning: "ink" },
+
       // paper-based
       { kanjis: ["紙"], hiragana: "かみ", romanization: "kami", meaning: "paper" },
+      { kanjis: ["和紙"], hiragana: "わし", romanization: "washi", meaning: "Japanese (fiber) paper" },
+      { kanjis: ["洋紙"], hiragana: "ようし", romanization: "youshi", meaning: "Western paper" },
       { kanjis: ["切符"], hiragana: "きっぷ", romanization: "kippu", meaning: "ticket" },
       { katakana: "チケット", romanization: "chiketto", meaning: "ticket" },
       { kanjis: ["手紙"], hiragana: "てがみ", romanization: "tegami", meaning: "letter", derivedMeanings: ["note"] },
@@ -295,8 +301,10 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["雑誌"], hiragana: "ざっし", romanization: "zasshi", meaning: "magazine" },
 
       // pens
-      { kanjis: ["万年筆"], hiragana: "まんねんひつ", romanization: "mannenhitsu", meaning: "fountain pen" },
+      { kanjis: ["筆"], hiragana: "ふで", romanization: "fude", meaning: "pen", derivedMeanings: ["writing brush"] },
       { katakana: "ペン", romanization: "pen", meaning: "pen" },
+      { kanjis: ["鉛筆"], hiragana: "えんぴつ", romanization: "enpitsu", meaning: "pencil" },
+      { kanjis: ["万年筆"], hiragana: "まんねんひつ", romanization: "mannenhitsu", meaning: "fountain pen" },
       { katakana: "ボールペン", romanization: "boorupen", meaning: "ballpoint pen" },
 
       // electronics

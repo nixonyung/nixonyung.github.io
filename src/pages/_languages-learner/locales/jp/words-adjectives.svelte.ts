@@ -241,6 +241,8 @@ export function appendAdjectives(words: JapaneseWord[]) {
       // TODO: used like -suru?
 
       { hiragana: "いろいろ", preferredForm: "hiragana", kanjis: ["色々", "色色"], romanization: "iroiro", adjGroup: "Na", meaning: "various" },
+
+      { kanjis: ["劇的"], hiragana: "げきてき", romanization: "gekiteki", adjGroup: "Na", meaning: "dramatic" },
     );
   }
 

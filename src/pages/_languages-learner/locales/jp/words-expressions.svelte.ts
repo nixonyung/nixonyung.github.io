@@ -161,11 +161,14 @@ export function appendExpressions(words: JapaneseWord[]) {
       //
       { hiragana: "さあ", romanization: "saa", meaning: "come on (casual)" },
 
+      { hiragana: "させてください", romanization: "sasete kudasai", meaning: "allow me to xxx", exampleUsages: ["自己紹介をさせてください"] },
+
       { hiragana: "どれにする？", romanization: "dore ni suru", meaning: "Which one are you going for?" },
       { hiragana: "何ができますか？", romanization: "naniga dekimasuka", meaning: "What can I do?" },
 
       { kanjis: ["と思う"], hiragana: "とおもう", romanization: "to omou", meaning: "I think (casual)", exampleUsages: ["[Clause] と思う (xxx, I think)", "[Clause] と思います (xxx, I am thinking about that right now)", "[Clause] お話したいと思います (I would like to talk about)", "[Clause] と思っています (I am going/planning to)"] },
       { kanjis: ["と思わない？"], hiragana: "とおもわない", romanization: "to omowanai", meaning: "don't you think? (casual)", exampleUsages: ["[Verb] と思わない？", "[Noun] だと思わない？", "[i-Adj.] と思わない？", "[na-Adj.] だと思わない？"] },
+      { kanjis: ["と存じます"], hiragana: "とぞんじじます", romanization: "to zonjimasu", meaning: "I think / I believe (formal)" },
     );
   }
 

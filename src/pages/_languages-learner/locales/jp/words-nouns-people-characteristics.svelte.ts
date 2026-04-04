@@ -6,6 +6,7 @@ export function appendNounsPeopleByCharacteristics(words: JapaneseWord[]) {
     words.push(
       //
       { kanjis: ["人"], hiragana: "ひと", katakana: "ヒト", romanization: "hito", meaning: "person" },
+      { kanjis: ["方"], hiragana: "かた", romanization: "kata", meaning: "person (polite)" },
       { kanjis: ["人々", "人びと"], hiragana: "ひとびと", romanization: "hitobito", meaning: "people" },
       { kanjis: ["他人"], hiragana: "たにん", romanization: "tanin", meaning: "others" },
       { kanjis: ["人物"], hiragana: "じんぶつ", romanization: "jinbutsu", meaning: "character / a notable person" },

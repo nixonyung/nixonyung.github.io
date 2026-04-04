@@ -17,7 +17,6 @@ export function appendFunctionalManner(words: JapaneseWord[]) {
       { kanjis: ["直ぐ"], hiragana: "すぐ", romanization: "sugu", meaning: "direct / straightforward", exampleUsages: ["直ぐに"] },
       { kanjis: ["直接"], hiragana: "ちょくせつ", romanization: "chokusetsu", meaning: "direct / straightforward (formal)" },
       { kanjis: ["直ちに"], hiragana: "ただちに", romanization: "tadachini", meaning: "at once" },
-      // TODO: 早速なんですが
       { kanjis: ["早速"], hiragana: "さっそく", romanization: "sassoku", meaning: "immediately" },
       { kanjis: ["早々", "早早"], hiragana: "はやばや", romanization: "hayabaya", meaning: "promptly" },
       { kanjis: ["即"], hiragana: "そく", romanization: "soku", meaning: "at once / immediately" },

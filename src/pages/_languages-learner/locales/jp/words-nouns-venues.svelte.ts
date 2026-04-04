@@ -13,7 +13,7 @@ export function appendNounsVenues(words: JapaneseWord[]) {
 
       // shapes
       { kanjis: ["穴", "孔"], hiragana: "あな", romanization: "ana", meaning: "hole / pit" },
-      { kanjis: ["壁"], hiragana: "かべ", romanization: "kabe", meaning: "wall" },
+      { kanjis: ["壁"], hiragana: "かべ", romanization: "kabe", meaning: "wall", derivedMeanings: ["barrier"] },
       { kanjis: ["角"], hiragana: "かど", romanization: "kado", meaning: "corner" },
       { kanjis: ["廊下"], hiragana: "ろうか", romanization: "rouka", meaning: "corridor" },
     );
@@ -61,7 +61,7 @@ export function appendNounsVenues(words: JapaneseWord[]) {
 
       { kanjis: ["学校"], hiragana: "がっこう", romanization: "gakkou", meaning: "school" },
       { kanjis: ["大学"], hiragana: "だいがく", romanization: "daigaku", meaning: "university" },
-      { kanjis: ["教室"], hiragana: "きょうしつ", romanization: "kyoushitsu", meaning: "classroom" },
+      { kanjis: ["教室"], hiragana: "きょうしつ", romanization: "kyoushitsu", meaning: "classroom", derivedMeanings: ["lessons"] },
       { kanjis: ["遊び場"], hiragana: "あそびば", romanization: "asobiba", meaning: "playground" },
       { kanjis: ["図書館"], hiragana: "としょかん", romanization: "toshokan", meaning: "library" },
 
@@ -108,6 +108,7 @@ export function appendNounsVenues(words: JapaneseWord[]) {
 
       { kanjis: ["地元"], hiragana: "じもと", romanization: "jimoto", meaning: "home area", exampleUsages: ["地元の"] },
       { kanjis: ["周辺"], hiragana: "しゅうへん", romanization: "shuuhen", meaning: "neighboring area" },
+      { kanjis: ["海外"], hiragana: "かいがい", romanization: "kaigai", meaning: "overseas" },
       { kanjis: ["外国"], hiragana: "がいこく", romanization: "gaikoku", meaning: "foreign country" },
     );
   }
@@ -115,8 +116,14 @@ export function appendNounsVenues(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.venues.regions.value) {
     words.push(
       //
-      { kanjis: ["東京"], hiragana: "とうきょう", romanization: "toukyou", meaning: "tokyo" },
-      { hiragana: "アメリカ", romanization: "amerika", meaning: "america" },
+      { kanjis: ["台湾"], hiragana: "たいわん", romanization: "taiwan", meaning: "Taiwan" },
+      { kanjis: ["東京"], hiragana: "とうきょう", romanization: "toukyou", meaning: "Tokyo" },
+      { hiragana: "アメリカ", romanization: "amerika", meaning: "America" },
+      { hiragana: "インド", romanization: "indo", meaning: "India" },
+      { hiragana: "ベトナム", romanization: "betonamu", meaning: "Vietnam" },
+      { hiragana: "オーストラリア", romanization: "oosutoraria", meaning: "Australia" },
+      { hiragana: "メキシコ", rareKanjis: ["墨西哥"], romanization: "mekishiko", meaning: "Mexico" },
+      { hiragana: "ポーランド", romanization: "poorando", meaning: "Poland" },
     );
   }
 

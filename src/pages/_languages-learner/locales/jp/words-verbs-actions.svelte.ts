@@ -55,15 +55,16 @@ export function appendVerbsActions(words: JapaneseWord[]) {
 
       // (misc.)
       { kanjis: ["生む", "産む"], hiragana: "うむ", romanization: "umu", verbGroup: "Godan", verbIsTransitive: true, meaning: "give birth / lay (eggs)" },
-      { kanjis: ["生まれる", "産まれる"], hiragana: "うまれる", romanization: "umareru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "be born" },
+      { kanjis: ["生まれる", "産まれる"], hiragana: "うまれる", romanization: "umareru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "be born", exampleUsages: ["日本生まれ (born in Japan)"] },
+      { kanjis: ["育つ"], hiragana: "そだつ", romanization: "sodatsu", verbGroup: "Godan", verbIsTransitive: false, meaning: "be raised", exampleUsages: ["日本育ち (grew up in Japan)"] },
     );
   }
 
   if (flashcardSettings.words.verbs.actions.intellectual.value) {
     verbs.push(
       // knowing
-      { hiragana: "わかる", preferredForm: "hiragana", kanjis: ["分かる", "解る", "判る", "分る"], romanization: "wakaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "understand", derivedMeanings: ["be able to"], exampleUsages: ["わかるよ (I understand!) (casual)", "わかりました (I understood) (polite)"] },
-      { kanjis: ["知る", "識る"], hiragana: "しる", romanization: "shiru", verbGroup: "Godan", verbIsTransitive: true, meaning: "know / acquire", exampleUsages: ["知っている (I know)"] },
+      { hiragana: "わかる", preferredForm: "hiragana", kanjis: ["分かる", "解る", "判る", "分る"], romanization: "wakaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "understand", derivedMeanings: ["be able to", "realize / find out"], exampleUsages: ["わかるよ (I understand!) (casual)", "わかりました (I understood) (polite)"] },
+      { kanjis: ["知る", "識る"], hiragana: "しる", romanization: "shiru", verbGroup: "Godan", verbIsTransitive: true, meaning: "know / acquire", exampleUsages: ["知っている (I already know)", "知っていますか？ (do you (already) know about xxx?)"] },
       { kanjis: ["出来る"], hiragana: "できる", romanization: "dekiru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "can do", derivedMeanings: ["ready"], exampleUsages: ["インプットもアウトプットも同時にできる"] },
       { kanjis: ["忘れる"], hiragana: "わすれる", romanization: "wasureru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "forget" },
 
@@ -79,7 +80,6 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["思い出す"], hiragana: "おもいだす", romanization: "omoidasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "recall" },
       { kanjis: ["考える", "勘える", "稽える"], hiragana: "かんがえる", romanization: "kangaeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "consider (logically) / contemplate" },
       { kanjis: ["考え込む", "考えこむ"], hiragana: "かんがえこむ", romanization: "kangaekomu", verbGroup: "Godan", verbIsTransitive: false, meaning: "ponder / think deeply" },
-      { kanjis: ["調べる"], hiragana: "しらべる", romanization: "shiraberu", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "look up / examine / investigate" },
       { kanjis: ["決める", "極める"], hiragana: "きめる", katakana: "キメる", romanization: "kimeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "determine" },
 
       // communicative
@@ -223,7 +223,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
 
       { kanjis: ["開ける", "空ける", "明ける"], hiragana: "あける", romanization: "akeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "open / make space", exampleUsages: ["ドアを開ける (slide the door)", "かべに穴を開ける (I made a hole in the wall)"] },
       { kanjis: ["開く", "空く", "明く"], hiragana: "あく", romanization: "aku", verbGroup: "Godan", verbIsTransitive: false, meaning: "open / make space" },
-      { kanjis: ["開く"], hiragana: "ひらく", romanization: "hiraku", verbGroup: "Godan", verbIsTransitive: true, meaning: "open / unfold", exampleUsages: ["ドアを開く (turn the door)"] },
+      { kanjis: ["開く"], hiragana: "ひらく", romanization: "hiraku", verbGroup: "Godan", verbIsTransitive: true, meaning: "open / unfold", exampleUsages: ["ドアを開く (turn the door)", "書道教室を開く (launch caligraphy lessons)"] },
       { kanjis: ["開ける"], hiragana: "ひらける", romanization: "hirakeru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "open / unfold", derivedMeanings: ["open for business"] },
       { kanjis: ["広げる", "拡げる"], hiragana: "ひろげる", romanization: "hirogeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "spread / extend", exampleUsages: ["教科書を広げて勉強する (open the textbook and study)"] },
       { kanjis: ["閉じる"], hiragana: "とじる", romanization: "tojiru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "close / shut" },
@@ -249,7 +249,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["勤める", "務める"], hiragana: "つとめる", romanization: "tsutomeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "work for / be employed at" },
       { kanjis: ["扱う"], hiragana: "あつかう", romanization: "atsukau", verbGroup: "Godan", verbIsTransitive: true, meaning: "deal / handle" },
       { kanjis: ["用いる"], hiragana: "もちいる", romanization: "mochiiru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "use / utilize" },
-      { kanjis: ["使う", "遣う"], hiragana: "つかう", romanization: "tsukau", verbGroup: "Godan", verbIsTransitive: true, meaning: "employ / use (as a tool)" },
+      { kanjis: ["使う", "遣う"], hiragana: "つかう", romanization: "tsukau", verbGroup: "Godan", verbIsTransitive: true, meaning: "employ / use (tools)" },
       { kanjis: ["参加する"], hiragana: "さんかする", romanization: "sankasuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "participate" },
       { kanjis: ["完了する"], hiragana: "かんりょうする", romanization: "kanryousuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "to complete / finish", exampleUsages: ["練習を完了する"] },
       { kanjis: ["過ごす", "過す"], hiragana: "すごす", romanization: "sugosu", verbGroup: "Godan", verbIsTransitive: true, meaning: "spend / spend time" },
@@ -301,7 +301,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["浴びる"], hiragana: "あびる", romanization: "abiru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "bathe" },
 
       { kanjis: ["読む"], hiragana: "よむ", romanization: "yomu", verbGroup: "Godan", verbIsTransitive: true, meaning: "read" },
-      { kanjis: ["書く"], hiragana: "かく", romanization: "kaku", verbGroup: "Godan", verbIsTransitive: true, meaning: "write" },
+      { kanjis: ["書く"], hiragana: "かく", romanization: "kaku", verbGroup: "Godan", verbIsTransitive: true, meaning: "write", exampleUsages: ["黒いインクで文字を書く (write characters with blank ink)"] },
       { kanjis: ["写す"], hiragana: "うつす", romanization: "utsusu", verbGroup: "Godan", verbIsTransitive: true, meaning: "copy / reproduce / describe" },
       { kanjis: ["描く", "画く"], hiragana: "えがく", romanization: "egaku", verbGroup: "Godan", verbIsTransitive: true, meaning: "draw / paint" },
       { hiragana: "かく", preferredForm: "hiragana", kanjis: ["掻く"], romanization: "kaku", verbGroup: "Godan", verbIsTransitive: true, meaning: "scratch" },

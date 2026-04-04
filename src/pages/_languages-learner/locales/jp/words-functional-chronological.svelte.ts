@@ -7,13 +7,15 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
     words.push(
       // TODO: https://www.sigure.tw/learn-japanese/mix/difference/sorekara-korekara
 
-      { kanjis: ["時", "刻", "秋"], hiragana: "とき", romanization: "toki", meaning: "at that time", exampleUsages: ["[Verb] 時、", "[Noun] の時、", "[na-Adj.] 時、", "[i-Adj.] 時、"] },
+      { kanjis: ["時", "刻", "秋"], hiragana: "とき", romanization: "toki", meaning: "at that time", exampleUsages: ["[Verb / Adj.] 時、", "[Noun] の時、", "後で時間がある時に (later on when time allows)"] },
 
       // definite point in time
       // TODO: today, tomorrow, yesterday, tonight, now, then, last week, on September 11, in 2008, immediately
       // TODO: specific year / date
 
+      { kanjis: ["過去"], hiragana: "かこ", romanization: "kako", meaning: "the past" },
       { kanjis: ["今"], hiragana: "いま", romanization: "ima", meaning: "now" },
+      { kanjis: ["将来"], hiragana: "しょうらい", romanization: "shourai", meaning: "the future" },
 
       { kanjis: ["暁"], hiragana: "あけがた", romanization: "akegata", meaning: "dawn" },
       { kanjis: ["昨暁"], hiragana: "さくぎょう", romanization: "sakugyou", meaning: "yesterday dawn" },
@@ -62,7 +64,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { kanjis: ["今期"], hiragana: "こんき", romanization: "konki", meaning: "this session / this term" },
       { kanjis: ["今度"], hiragana: "こんど", romanization: "kondo", meaning: "this time" },
       { kanjis: ["また今度"], hiragana: "またこんど", romanization: "matakondo", meaning: "next time" },
-      { kanjis: ["次"], hiragana: "つぎ", romanization: "tsugi", meaning: "next", exampleUsages: ["次のステップ"] },
+      { kanjis: ["次"], hiragana: "つぎ", romanization: "tsugi", meaning: "next", exampleUsages: ["次ですね (next up)", "次のステップ (the next xxx)"] },
       { kanjis: ["次回"], hiragana: "じかい", romanization: "jikai", meaning: "next time" },
       { kanjis: ["初めて", "始めて", "甫めて"], hiragana: "はじめて", romanization: "hajimete", meaning: "for the first time" },
 
@@ -101,7 +103,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       // TODO: for a while, since Monday, since 1990, briefly, temporarily, permanently, all day
 
       { hiragana: "から", romanization: "kara", meaning: "(introducing precedent:) since", exampleUsages: ["[Noun (time/place)] から [Verb]"] },
-      { hiragana: "まで", romanization: "made", meaning: "(introducing termination:) until", exampleUsages: ["[Noun (time/place)] まで [Verb]", "最後まで"] },
+      { hiragana: "まで", romanization: "made", meaning: "(introducing termination:) until", exampleUsages: ["[Noun (time/place)] まで [Verb]", "最後まで (at last)", "今まで (so far)"] },
       { hiragana: "〇〇から〇〇まで", romanization: "kara, made", meaning: "from (time) to (time)", exampleUsages: ["[Noun (time/place)] から [Noun (time/place)] まで [Verb]"] },
 
       { hiragana: "まだ", preferredForm: "hiragana", kanjis: ["未だ"], romanization: "mada", meaning: "still", exampleUsages: ["まだ [Noun]"] },

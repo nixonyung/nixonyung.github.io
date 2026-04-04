@@ -11,7 +11,8 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
       // TODO: move words that can replace は to adpositions?
 
       { hiragana: "と", romanization: "to", meaning: "and (exhausive)", derivedMeanings: ["together with", "if/when (facts/habits/general truths)"], exampleUsages: ["[Noun] と [Noun] [Verb] ... (and)", "[Noun] と [Verb] ... (doing xxx with xxx)", "[Clause] と、[Clause] (and then / when)"] },
-      { hiragana: "とか", romanization: "toka", meaning: "and (non-exhausive, spoken)" },
+      { hiragana: "とか", romanization: "toka", meaning: "and (non-exhausive, spoken)", derivedMeanings: ["or something like"] },
+      { hiragana: "で", romanization: "de", meaning: "and also (sharing subject)", exampleUsages: ["私は日本人で、東京に住んでいる"] },
 
       { hiragana: "か", romanization: "ka", meaning: "or (listing options)", exampleUsages: ["[Noun] か [Noun] か ...", "[Noun] か [Noun] ..."] },
 
@@ -36,6 +37,8 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
       { hiragana: "けども", romanization: "kedomo", meaning: "but (spoken, slightly polite)", exampleUsages: ["[Clause] けど、 [Clause]。", "[Noun] は [Adj.] けど [Adj.]。", "...。 けど、 [Clause]。"] },
       { hiragana: "けれど", romanization: "keredo", meaning: "but (spoken, polite)", exampleUsages: ["[Clause] けれど、 [Clause]。", "[Noun] は [Adj.] けれど [Adj.]。", "...。 けれど、 [Clause]。"] },
       { hiragana: "けれども", romanization: "keredomo", meaning: "but (written, very formal)", exampleUsages: ["[Clause] けれども、 [Clause]。", "[Noun] は [Adj.] けれども [Adj.]。", "...。 けれども、 [Clause]。"] },
+
+      { hiragana: "ですが", romanization: "desu ga", meaning: "is xxx, but", exampleUsages: ["最初の壁は高いですが、..."] },
 
       { hiragana: "でも", romanization: "demo", meaning: "however (casual)", exampleUsages: ["...。 でも、[Clause]"] },
       { hiragana: "しかし", rareKanjis: ["然し", "併し"], romanization: "shikashi", meaning: "however (polite)", exampleUsages: ["...。 しかし、[Clause]"] },

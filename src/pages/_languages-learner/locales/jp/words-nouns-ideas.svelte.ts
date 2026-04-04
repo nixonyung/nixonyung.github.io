@@ -81,8 +81,12 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
 
       { kanjis: ["我慢"], hiragana: "がまん", katakana: "ガマン", romanization: "gaman", meaning: "endurance" },
       { kanjis: ["上達"], hiragana: "じょうたつ", romanization: "joutatsu", meaning: "improvement" },
+      { kanjis: ["向上"], hiragana: "こうじょう", romanization: "koujou", meaning: "rise" },
+
+      { kanjis: ["語学力"], hiragana: "ごがくりょく", romanization: "gogakuryoku", meaning: "language skills" },
 
       { kanjis: ["実際"], hiragana: "じっさい", romanization: "jissai", meaning: "actuality", exampleUsages: ["実際に [Verb Clause]..."] },
+      { kanjis: ["実感"], hiragana: "じっかん", romanization: "jikkan", meaning: "actual feeling" },
       { kanjis: ["絶対"], hiragana: "ぜったい", romanization: "zettai", meaning: "absoluteness", exampleUsages: ["絶対に [Verb Clause]..."] },
       { kanjis: ["真相"], hiragana: "しんそう", romanization: "マジメ", meaning: "truth" },
       { kanjis: ["真面目"], hiragana: "まじめ", katakana: "マジメ", romanization: "majime", meaning: "one's true self" },
@@ -382,6 +386,8 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
 
       { kanjis: ["買い物", "買物"], hiragana: "かいもの", romanization: "kaimono", meaning: "shopping" },
       { katakana: "パーティー", romanization: "paatii", meaning: "party" },
+
+      { kanjis: ["書道"], hiragana: "しょどう", romanization: "shodou", meaning: "(Kanji) calligraphy" },
 
       { kanjis: ["撮影"], hiragana: "さつえい", romanization: "satsuei", meaning: "photography", derivedMeanings: ["filming"] },
       { kanjis: ["配信"], hiragana: "はいしん", romanization: "haishin", meaning: "broadcast / streaming", derivedMeanings: ["filming"] },

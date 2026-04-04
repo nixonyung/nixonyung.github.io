@@ -7,6 +7,8 @@ export function appendVerbsChanges(words: JapaneseWord[]) {
   if (flashcardSettings.words.verbs.changes.environmenal.value) {
     verbs.push(
       //
+      { kanjis: ["経つ"], hiragana: "たつ", romanization: "tatsu", verbGroup: "Godan", verbIsTransitive: false, meaning: "(time) pass", exampleUsages: ["1週間経った"] },
+
       { kanjis: ["晴れる", "霽れる"], hiragana: "はれる", romanization: "hareru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "become sunny" },
       { kanjis: ["曇る"], hiragana: "はれる", romanization: "kumoru", verbGroup: "Godan", verbIsTransitive: false, meaning: "become cloudy" },
       { kanjis: ["暮れる", "眩れる", "暗れる", "昏れる"], hiragana: "くれる", romanization: "kureru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "grow dark" },

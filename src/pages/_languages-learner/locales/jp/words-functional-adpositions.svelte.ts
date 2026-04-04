@@ -5,9 +5,11 @@ export function appendFunctionalAdpositions(words: JapaneseWord[]) {
   if (flashcardSettings.words.functional.adpositions.value) {
     words.push(
       { hiragana: "は", romanization: "wa", meaning: "(known subject marker)", exampleUsages: ["[Noun] は ...", "(place) には"] },
+      { hiragana: "って", romanization: "tte", meaning: "(known subject marker, casual)", exampleUsages: ["[Noun] って ..."] },
       { hiragana: "が", romanization: "ga", meaning: "(new subject marker)", derivedMeanings: ["(signaling contrasting info, written)"], exampleUsages: ["[Noun] が ...", "[Clause] が、 [Clause]"] },
       { hiragana: "を", romanization: "o", meaning: "(object marker)", exampleUsages: ["[Noun (object)] を [Verb (transitive)] ..."] },
-      { hiragana: "の", romanization: "no", meaning: "(nominalization)", derivedMeanings: ["(forming noun clause)", "(possession marker)"], exampleUsages: ["[Verb/Adj.] のが ...", "[Noun] の [Noun] ...", "だれの [Noun] ですか？ (which of xxx do you want?)", "絵コンテ作業の最終調整"] },
+      { hiragana: "の", romanization: "no", meaning: "(nominalize to a noun clause)", derivedMeanings: ["(possession marker)"], exampleUsages: ["[Verb/Adj.] のが ...", "[Noun] の [Noun] ...", "だれの [Noun] ですか？ (which of xxx do you want?)", "絵コンテ作業の最終調整"] },
+      { hiragana: "こと", romanization: "koto", meaning: "(nominalize to an object)", exampleUsages: ["[Verb-dictionary] こと ..."] },
 
       { hiragana: "に", romanization: "ni", meaning: "(time/location marker)", exampleUsages: ["[Noun (time/location)] に [Verb] ...", "[Noun (time)] に [Noun (location)] に [Verb] ..."] },
       { hiragana: "へ", romanization: "e", meaning: "(direction marker)", exampleUsages: ["[Noun (time/location)] に [Verb] ..."] },
