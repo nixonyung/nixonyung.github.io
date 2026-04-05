@@ -102,8 +102,8 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       // indefinite duration
       // TODO: for a while, since Monday, since 1990, briefly, temporarily, permanently, all day
 
-      { hiragana: "から", romanization: "kara", meaning: "(introducing precedent:) since", exampleUsages: ["[Noun (time/place)] から [Verb]"] },
-      { hiragana: "まで", romanization: "made", meaning: "(introducing termination:) until", exampleUsages: ["[Noun (time/place)] まで [Verb]", "最後まで (at last)", "今まで (so far)"] },
+      { hiragana: "から", romanization: "kara", meaning: "since (time)", exampleUsages: ["[Noun (time/place)] から [Verb]"] },
+      { hiragana: "まで", romanization: "made", meaning: "until (time)", exampleUsages: ["[Noun (time/place)] まで [Verb]", "最後まで (at last)", "今まで (so far)"] },
       { hiragana: "〇〇から〇〇まで", romanization: "kara, made", meaning: "from (time) to (time)", exampleUsages: ["[Noun (time/place)] から [Noun (time/place)] まで [Verb]"] },
 
       { hiragana: "まだ", preferredForm: "hiragana", kanjis: ["未だ"], romanization: "mada", meaning: "still", exampleUsages: ["まだ [Noun]"] },

@@ -80,7 +80,10 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["思い出す"], hiragana: "おもいだす", romanization: "omoidasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "recall" },
       { kanjis: ["考える", "勘える", "稽える"], hiragana: "かんがえる", romanization: "kangaeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "consider (logically) / contemplate" },
       { kanjis: ["考え込む", "考えこむ"], hiragana: "かんがえこむ", romanization: "kangaekomu", verbGroup: "Godan", verbIsTransitive: false, meaning: "ponder / think deeply" },
+
+      // deciding
       { kanjis: ["決める", "極める"], hiragana: "きめる", katakana: "キメる", romanization: "kimeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "determine" },
+      { kanjis: ["予定する"], hiragana: "よていする", romanization: "yotei", verbGroup: "Irregular", verbIsTransitive: true, meaning: "plan / schedule" },
 
       // communicative
       { kanjis: ["言う", "云う", "謂う"], hiragana: "いう", romanization: "iu", verbGroup: "Godan", verbIsTransitive: true, meaning: "say / utter" },
@@ -97,7 +100,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["通じる"], hiragana: "つうじる", romanization: "tsuujiru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "be known", derivedMeanings: ["be get through (for liquid/current/traffic)", "be understood / well-informed", "be honored"] },
       { kanjis: ["伺う"], hiragana: "うかがう", romanization: "ukagau", verbGroup: "Godan", verbIsTransitive: true, meaning: "inquire" },
       { kanjis: ["習う"], hiragana: "ならう", romanization: "narau", verbGroup: "Godan", verbIsTransitive: true, meaning: "take lesson / learn from a teacher" },
-      { kanjis: ["教える"], hiragana: "おしえる", romanization: "oshieru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "teach", derivedMeanings: ["inform"], exampleUsages: ["便利なフレーズを三つ教えます", "教えて (please let me know)"] },
+      { kanjis: ["教える"], hiragana: "おしえる", romanization: "oshieru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "teach", derivedMeanings: ["inform"], exampleUsages: ["便利なフレーズを三つ教えます (I am teaching you 3 convenient phrases)", "教えてください / 教えて (please let me know)"] },
       { kanjis: ["教わる"], hiragana: "おそわる", romanization: "osowaru", verbGroup: "Godan", verbIsTransitive: true, meaning: "be taught / receive instructions" },
     );
   }
@@ -132,7 +135,8 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["行く", "往く"], hiragana: "いく", romanization: "iku", verbGroup: "Godan", verbIsTransitive: false, meaning: "go", exampleUsages: ["東京に行く"] },
       { kanjis: ["渡す"], hiragana: "わたす", romanization: "watasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "go across (a river)", derivedMeanings: ["hand over"] },
       { kanjis: ["渡る"], hiragana: "わたる", romanization: "wataru", verbGroup: "Godan", verbIsTransitive: false, meaning: "go across (a river)" },
-      { kanjis: ["会う", "逢う", "遭う"], rareKanjis: ["遇う"], hiragana: "あう", romanization: "au", verbGroup: "Godan", verbIsTransitive: false, meaning: "meet" },
+      { kanjis: ["会う", "逢う", "遭う"], rareKanjis: ["遇う"], hiragana: "あう", romanization: "au", verbGroup: "Godan", verbIsTransitive: false, meaning: "meet / see" },
+      { kanjis: ["合う"], hiragana: "あう", romanization: "au", verbGroup: "Godan", verbIsTransitive: false, meaning: "meet / unite", exampleUsages: ["xxx とも合えたら (if I can meet xxx)"] },
       { kanjis: ["訪問する"], hiragana: "ほうもんする", romanization: "houmonsuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "visit" },
       { kanjis: ["入る"], hiragana: "はいる", romanization: "hairu", verbGroup: "Godan", verbIsTransitive: false, meaning: "enter" },
       { kanjis: ["通る"], rareKanjis: ["透る", "徹る"], hiragana: "とおる", romanization: "tooru", verbGroup: "Godan", verbIsTransitive: false, meaning: "pass through / go along" },
@@ -162,7 +166,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
     verbs.push(
       // holding
       { kanjis: ["取る"], hiragana: "とる", romanization: "toru", verbGroup: "Godan", verbIsTransitive: true, meaning: "take / grab" },
-      { kanjis: ["取り上げる"], hiragana: "とりあげる", romanization: "toriageru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "pick up", derivedMeanings: ["come up with (an idea) / cover"] },
+      { kanjis: ["取り上げる"], hiragana: "とりあげる", romanization: "toriageru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "pick up", derivedMeanings: ["come up with (an idea) / cover (a topic)"] },
       { kanjis: ["持つ"], hiragana: "もつ", romanization: "motsu", verbGroup: "Godan", verbIsTransitive: true, meaning: "hold / carry", derivedMeanings: ["possess / maintain"] },
       { kanjis: ["載る"], hiragana: "のる", romanization: "noru", verbGroup: "Godan", verbIsTransitive: false, meaning: "carry", derivedMeanings: ["imprint", "record / store"] },
       { kanjis: ["強いる"], hiragana: "しいる", romanization: "shiiru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "force / press" },
@@ -252,7 +256,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["使う", "遣う"], hiragana: "つかう", romanization: "tsukau", verbGroup: "Godan", verbIsTransitive: true, meaning: "employ / use (tools)" },
       { kanjis: ["参加する"], hiragana: "さんかする", romanization: "sankasuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "participate" },
       { kanjis: ["完了する"], hiragana: "かんりょうする", romanization: "kanryousuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "to complete / finish", exampleUsages: ["練習を完了する"] },
-      { kanjis: ["過ごす", "過す"], hiragana: "すごす", romanization: "sugosu", verbGroup: "Godan", verbIsTransitive: true, meaning: "spend / spend time" },
+      { kanjis: ["過ごす", "過す"], hiragana: "すごす", romanization: "sugosu", verbGroup: "Godan", verbIsTransitive: true, meaning: "spend (time)" },
       { kanjis: ["準備する"], hiragana: "じゅんびする", romanization: "junbisuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "prepare" },
       { kanjis: ["暇する"], hiragana: "ひまする", romanization: "himasuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "be free / be unoccupied" },
       { kanjis: ["機能する"], hiragana: "きのうする", romanization: "kinousuru", verbGroup: "Irregular", verbIsTransitive: false, meaning: "function" },

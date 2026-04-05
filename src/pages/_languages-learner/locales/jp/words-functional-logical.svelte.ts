@@ -11,7 +11,8 @@ export function appendFunctionalLogical(words: JapaneseWord[]) {
       // because
       { hiragana: "ので", romanization: "node", meaning: "because", exampleUsages: ["(reason) ので/なので [Clause]"] },
       { hiragana: "だって", romanization: "datte", meaning: "because (spoken, casual)" },
-      { hiragana: "から", romanization: "kara", meaning: "since / so (casual)", derivedMeanings: ["because I think/feel ...", "thanks to someone"] },
+      { hiragana: "から", romanization: "kara", meaning: "since (casual)", derivedMeanings: ["because I think/feel ...", "thanks to someone"], exampleUsages: ["皆さんからの質問 (questions from everyone)"] },
+      { hiragana: "て", romanization: "te", meaning: "since (casual)" },
       { hiragana: "ため", preferredForm: "hiragana", kanjis: ["為"], romanization: "tame", meaning: "because", exampleUsages: ["(reason) ため [Clause]", "[Noun] のための [Noun]"] },
       { hiragana: "のせいで", rareKanjis: ["の所為で"], romanization: "noseide", meaning: "due to", exampleUsages: ["[Noun] のせいで [Clause]"] },
       { hiragana: "なぜなら", preferredForm: "hiragana", kanjis: ["何故なら"], romanization: "nazenara", meaning: "because (formal)" },
@@ -21,7 +22,7 @@ export function appendFunctionalLogical(words: JapaneseWord[]) {
       { hiragana: "ように", preferredForm: "hiragana", kanjis: ["様に"], romanization: "youni", meaning: "for the sake of (hope)", exampleUsages: ["(action)[Verb-potential] ように (hope)[Clause]", "日本語て漫画が読めるように ..."] },
 
       // therefore
-      { hiragana: "だから", romanization: "dakara", meaning: "therefore", derivedMeanings: ["just as I told you!"] },
+      { hiragana: "だから", romanization: "dakara", meaning: "therefore", derivedMeanings: ["just as I told you! (casual)"] },
 
       // conditional
       { hiragana: "なら", preferredForm: "hiragana", romanization: "nara", meaning: "in that case (explicitly echoing what is just spoken)", derivedMeanings: ["if that's true (making assumption by observation)"], exampleUsages: ["[Clause] なら / のなら / んなら [Clause]"] },

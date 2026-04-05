@@ -29,6 +29,8 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "という", preferredForm: "hiragana", kanjis: ["と言う"], romanization: "to iu", meaning: "called", exampleUsages: ["[Name] という [Thing] (the [Thing] named [Name])", "... という思い"] },
       { hiragana: "っていう", romanization: "tte iu", meaning: "called (spoken)", exampleUsages: ["この [Name] っていうのは ..."] },
 
+      { hiragana: "こういう-", preferredForm: "hiragana", kanjis: ["こう言う"], romanization: "kouiu", meaning: "this kind of" },
+      { hiragana: "こんな-", romanization: "konna", meaning: "this kind of" },
       { hiragana: "について", rareKanjis: ["に就いて"], romanization: "nitsuite", meaning: "about / regarding", exampleUsages: ["[Noun] について", "[Noun] について [Noun]", "文化や生活について知れる"] },
     );
   }
@@ -51,10 +53,14 @@ export function appendExpressions(words: JapaneseWord[]) {
       { kanjis: ["お元気ですか？"], hiragana: "おげんきですか？", romanization: "ogenkidesuka", meaning: "how are you doing?" },
 
       { hiragana: "じゃあね", romanization: "jaane", meaning: "bye (casual)" },
+      { katakana: "バイバイ", romanization: "baibai", meaning: "bye-bye" },
       { hiragana: "またね", preferredForm: "hiragana", kanjis: ["又ね"], romanization: "matane", meaning: "see you later (casual)" },
       { kanjis: ["また次回お会いしましょう"], hiragana: "またじかいおあいしましょう", romanization: "matajikai oaishimashou", meaning: "see you next time (polite)" },
       { hiragana: "さよなら", romanization: "sayonara", meaning: "farewell" },
       { hiragana: "おやすみ", preferredForm: "hiragana", kanjis: ["お休み"], romanization: "oyasumi", meaning: "good night (going to sleep)", exampleUsages: ["お休みなさい"] },
+      { kanjis: ["今日も良い一日を過ごしください"], romanization: "kyou mo ii ichinichi o sugoshi kudasai", meaning: "have a nice day" },
+
+      { kanjis: ["今日はこの辺で終わりにします"], romanization: "kyou wa konohende owari ni shimasu", meaning: "let's wrap it up for today" },
     );
   }
 
@@ -116,6 +122,7 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "〇〇んです", romanization: "-n desu", meaning: "it is because (spoken, polite)", exampleUsages: ["[Clause] んです。"] },
       { hiragana: "〇〇のです", romanization: "-no desu", meaning: "it is because (written, polite)", exampleUsages: ["[Clause] のです。"] },
 
+      // TODO: connectives?
       { hiragana: "それでは", romanization: "soredewa", meaning: "well then (spoken, formal)" },
       { hiragana: "じゃあ", romanization: "zyaa", meaning: "well then (spoken, casual)" },
       { kanjis: ["と言うことは", "と言う事は"], hiragana: "ということは", romanization: "toiukotowa", meaning: "if that's true" },
@@ -147,7 +154,7 @@ export function appendExpressions(words: JapaneseWord[]) {
     words.push(
       //
       { hiragana: "ください", preferredForm: "hiragana", kanjis: ["下さい"], romanization: "kudasai", meaning: "please give me (polite)", exampleUsages: ["お [Noun] をください。", "[Noun] を {(counter)} ください。"] },
-      { kanjis: ["お願いします"], hiragana: "おねがいします", romanization: "onegaishimasu", meaning: "please! (very polite)" },
+      { kanjis: ["お願いします"], hiragana: "おねがいします", romanization: "onegaishimasu", meaning: "please! (very polite)", exampleUsages: ["[Noun] お願いします"] },
       { hiragana: "どうぞ", romanization: "douzo", meaning: "please", exampleUsages: ["どうぞ (please go ahead)"] },
       { kanjis: ["是非"], hiragana: "ぜひ", romanization: "zehi", meaning: "by all means (polite)", exampleUsages: ["ぜひ、(request) たら嬉しいです"] },
 
@@ -201,8 +208,6 @@ export function appendExpressions(words: JapaneseWord[]) {
       { hiragana: "どう", romanization: "dou", meaning: "how is xxx? (casual)", exampleUsages: ["[Noun] はどうですか？"] },
       { hiragana: "いかが", preferredForm: "hiragana", kanjis: ["如何"], romanization: "ikaga", meaning: "how is xxx? (formal)" },
 
-      { hiragana: "こんな-", romanization: "konna-", meaning: "like this" },
-
       { hiragana: "ことがある", preferredForm: "hiragana", kanjis: ["事がある"], romanization: "kotogaaru", meaning: "have occurred", exampleUsages: ["[Verb-ta] ことがある", "アメリカに留学したことがあるんです"] },
 
       { hiragana: "〇〇のが〇〇", romanization: "no ga", meaning: "xxx is doing it xxx-ly", exampleUsages: ["... [Verb] のが [Adj.] です。", "... [Verb] のが上手/下手 です。", "... [Verb] のが好き/嫌い です。", "... [Verb] のが速い/遅い です。", "... [Verb] のが難しい/易しい です。"] },
@@ -213,7 +218,7 @@ export function appendExpressions(words: JapaneseWord[]) {
 
       { kanjis: ["仕方がない"], hiragana: "しかたがない", romanization: "shikataganai", meaning: "It can't be helped" },
 
-      { kanjis: ["日本へようこそ！"], hiragana: "にほんへようこそ！", romanization: "nihon e youkoso", meaning: "Welcome to Japan!" },
+      { kanjis: ["日本へようこそ！"], romanization: "nihon e youkoso", meaning: "Welcome to Japan!" },
 
       // quoting
       { kanjis: ["と書いてある"], hiragana: "とかいてある", romanization: "tokaitearu", meaning: "written like that (in dictionary/...)" },

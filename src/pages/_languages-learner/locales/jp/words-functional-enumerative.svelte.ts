@@ -18,10 +18,9 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
 
       { kanjis: ["例えば"], hiragana: "たとえば", romanization: "tatoeba", meaning: "for example" },
 
-      { hiragana: "も", romanization: "mo", meaning: "and (non-exhausive)", exampleUsages: ["A も ... (A and me ...)", "A も B も C も ..."] },
+      { hiragana: "も", romanization: "mo", meaning: "and (non-exhausive)", exampleUsages: ["[Noun (person)] も ... (xxx and me ...)", "[Noun] も [Noun] も [Noun] も ...", "[Noun ]、[Noun] にも(place)/でも(means) ..."] },
       { hiragana: "や", romanization: "ya", meaning: "and (non-exhausive, written)", exampleUsages: ["[Noun] や [Noun] ..."] },
 
-      { hiragana: "にも", romanization: "nimo", meaning: "also", exampleUsages: ["[Noun] 、[Noun] にも ..."] },
       { hiragana: "し", romanization: "shi", meaning: "not only, and also", exampleUsages: ["[Clause] し、 [Clause]"] },
 
       // ellipsis

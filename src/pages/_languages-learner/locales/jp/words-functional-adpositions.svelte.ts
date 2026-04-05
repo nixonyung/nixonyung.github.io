@@ -8,14 +8,14 @@ export function appendFunctionalAdpositions(words: JapaneseWord[]) {
       { hiragana: "って", romanization: "tte", meaning: "(known subject marker, casual)", exampleUsages: ["[Noun] って ..."] },
       { hiragana: "が", romanization: "ga", meaning: "(new subject marker)", derivedMeanings: ["(signaling contrasting info, written)"], exampleUsages: ["[Noun] が ...", "[Clause] が、 [Clause]"] },
       { hiragana: "を", romanization: "o", meaning: "(object marker)", exampleUsages: ["[Noun (object)] を [Verb (transitive)] ..."] },
-      { hiragana: "の", romanization: "no", meaning: "(nominalize to a noun clause)", derivedMeanings: ["(possession marker)"], exampleUsages: ["[Verb/Adj.] のが ...", "[Noun] の [Noun] ...", "だれの [Noun] ですか？ (which of xxx do you want?)", "絵コンテ作業の最終調整"] },
+      { hiragana: "の", romanization: "no", meaning: "(nominalize to a noun clause)", derivedMeanings: ["(possession marker)"], exampleUsages: ["[Verb/Adj.] のが ...", "[Noun] の [Noun] ...", "だれの [Noun] ですか？ (which of xxx do you want?)", "絵コンテ作業の最終調整", "リスナーの皆さん (all of you listeners)"] },
       { hiragana: "こと", romanization: "koto", meaning: "(nominalize to an object)", exampleUsages: ["[Verb-dictionary] こと ..."] },
 
       { hiragana: "に", romanization: "ni", meaning: "(time/location marker)", exampleUsages: ["[Noun (time/location)] に [Verb] ...", "[Noun (time)] に [Noun (location)] に [Verb] ..."] },
       { hiragana: "へ", romanization: "e", meaning: "(direction marker)", exampleUsages: ["[Noun (time/location)] に [Verb] ..."] },
-      { hiragana: "で", romanization: "de", meaning: "location/method/tool/material/language/scope/cause of an action", exampleUsages: ["[Noun] で [Verb] ...", "二週間で [Clause]"] },
+      { hiragana: "で", romanization: "de", meaning: "location/method/tool/material/language/scope/cause of an action", exampleUsages: ["[Noun] で [Verb] ... (do xxx with xxx)", "二週間で [Clause] (in 2 weeks)", "こんな感じで、... (with this kind of feelings)", "日本での生活 (life in Japan) vs 日本で生活します (live in Japan)"] },
       { hiragana: "のに", romanization: "noni", meaning: "(purpose marker)", exampleUsages: ["[Verb] のに [Verb] ..."] },
-      { hiragana: "として", romanization: "toshite", meaning: "as", exampleUsages: ["[Noun] として [Verb]"] },
+      { hiragana: "-として", romanization: "toshite", meaning: "as", exampleUsages: ["[Noun] は [Noun] として [Verb]"] },
 
       { hiragana: "か", romanization: "ka", meaning: "(question marker)", exampleUsages: ["[Clause] か？"] },
       { hiragana: "の", romanization: "no", meaning: "how? / really? (spoken)", exampleUsages: ["学生なの？"] },
