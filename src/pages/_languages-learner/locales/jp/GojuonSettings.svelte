@@ -1,4 +1,12 @@
 <script lang="ts" module>
+  export interface Gojuon {
+    hiragana: string;
+    hiraganaOrigin: string;
+    katakana: string;
+    katakanaOrigin: string;
+    romanization: string;
+  }
+
   export const gojuonSettings = $state(
     initSettings({
       enableRows: {

@@ -1,5 +1,4 @@
-import type { JapaneseVerb, JapaneseWord } from "../../types";
-import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
+import { flashcardSettings, type JapaneseVerb, type JapaneseWord } from "./FlashcardSettings.svelte";
 
 export function appendVerbsDescriptive(words: JapaneseWord[]) {
   const verbs: JapaneseVerb[] = [];

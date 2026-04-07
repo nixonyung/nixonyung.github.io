@@ -1,5 +1,4 @@
-import type { JapaneseWord } from "../../types";
-import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
+import { flashcardSettings, type JapaneseWord } from "./FlashcardSettings.svelte";
 
 // TODO: rename to verb phrases
 export function appendAuxiliaryVerbs(words: JapaneseWord[]) {

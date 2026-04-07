@@ -1,4 +1,4 @@
-import type { Keymap } from "../../types";
+import type { Keymap } from "../../components/TypingKeyboard.svelte";
 
 export function getKeymap(): Keymap {
   return {

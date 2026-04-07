@@ -1,5 +1,4 @@
-import type { JapaneseWord } from "../../types";
-import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
+import { flashcardSettings, type JapaneseWord } from "./FlashcardSettings.svelte";
 
 // TODO: reverse Q&A
 

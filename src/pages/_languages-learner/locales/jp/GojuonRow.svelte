@@ -1,7 +1,7 @@
 <script lang="ts">
   import { tick } from "svelte";
-  import { gojuonSettings } from "./GojuonTable.svelte";
-  import type { Gojuon } from "./letters.svelte";
+  import type { Gojuon } from "./GojuonSettings.svelte";
+  import { gojuonSettings } from "./GojuonSettings.svelte";
 
   let {
     enabled = $bindable(),

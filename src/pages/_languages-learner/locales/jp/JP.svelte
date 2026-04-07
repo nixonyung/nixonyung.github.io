@@ -4,9 +4,9 @@
   import { initSettings, useSyncSettings } from "../../../../lib/settings.svelte";
   import FlashcardQuestions from "../../components/FlashcardQuestions.svelte";
   import TypingQuestions from "../../components/TypingQuestions.svelte";
-  import type { JapaneseWord } from "../../types";
-  import FlashcardSettingsJP from "./FlashcardSettingsJP.svelte";
-  import GojuonTable from "./GojuonTable.svelte";
+  import type { JapaneseWord } from "./FlashcardSettings.svelte";
+  import FlashcardSettings from "./FlashcardSettings.svelte";
+  import GojuonSettings from "./GojuonSettings.svelte";
   import { getKeymap } from "./keymap.svelte";
   import { getLetters } from "./letters.svelte";
   import { appendAdjectives } from "./words-adjectives.svelte";
@@ -82,15 +82,22 @@
   }}
   class="mt-4"
 />
+<Divider />
 
 {#if settings.mode.value === "typing"}
+  <GojuonSettings />
   <Divider />
-  <GojuonTable />
-  <Divider />
-  <TypingQuestions {letters} {keymap} />
+  <TypingQuestions
+    questions={letters.map(({ letter, romanization }) => ({
+      letter,
+      input: romanization,
+      romanization,
+      utterance: letter,
+    }))}
+    {keymap}
+  />
 {:else if settings.mode.value === "flashcards"}
-  <Divider />
-  <FlashcardSettingsJP />
+  <FlashcardSettings />
   <Divider />
   <FlashcardQuestions
     flashcards={words.map(

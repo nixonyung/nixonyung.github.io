@@ -1,108 +1,113 @@
-import type { Keymap, Letter } from "../../types";
-import { letterSettings } from "./KR.svelte";
+import type { Keymap } from "../../components/TypingKeyboard.svelte";
+import { letterSettings } from "./LettersSettings.svelte";
 
 export function getLettersAndKeymap() {
-  const letters: Letter[] = [];
+  const letters: {
+    letter: string;
+    input: string;
+    romanization?: string;
+    utterance?: string;
+  }[] = [];
   const keymap: Keymap = {};
 
   if (letterSettings.enableRows.consonants.plain.value) {
     for (const letter of [
-      { letter: "ㄱ", utterance: "개", romanization: "g", actualInput: "r" },
-      { letter: "ㄷ", utterance: "돈", romanization: "d", actualInput: "e" },
-      { letter: "ㅂ", utterance: "불", romanization: "b", actualInput: "q" },
-      { letter: "ㅅ", utterance: "사", romanization: "s", actualInput: "t" },
-      { letter: "ㅈ", utterance: "집", romanization: "j", actualInput: "w" },
+      { letter: "ㄱ", input: "r", utterance: "개", romanization: "g" },
+      { letter: "ㄷ", input: "e", utterance: "돈", romanization: "d" },
+      { letter: "ㅂ", input: "q", utterance: "불", romanization: "b" },
+      { letter: "ㅅ", input: "t", utterance: "사", romanization: "s" },
+      { letter: "ㅈ", input: "w", utterance: "집", romanization: "j" },
     ]) {
       letters.push(letter);
-      keymap[letter.actualInput] = letter.letter;
+      keymap[letter.input] = letter.letter;
     }
   }
 
   if (letterSettings.enableRows.consonants.tense.value) {
     for (const letter of [
-      { letter: "ㄲ", utterance: "꽃", romanization: "kk", actualInput: "R" },
-      { letter: "ㄸ", utterance: "땅", romanization: "tt", actualInput: "E" },
-      { letter: "ㅃ", utterance: "뼈", romanization: "pp", actualInput: "Q" },
-      { letter: "ㅆ", utterance: "씨", romanization: "ss", actualInput: "T" },
-      { letter: "ㅉ", utterance: "쪽", romanization: "jj", actualInput: "W" },
+      { letter: "ㄲ", input: "R", utterance: "꽃", romanization: "kk" },
+      { letter: "ㄸ", input: "E", utterance: "땅", romanization: "tt" },
+      { letter: "ㅃ", input: "Q", utterance: "뼈", romanization: "pp" },
+      { letter: "ㅆ", input: "T", utterance: "씨", romanization: "ss" },
+      { letter: "ㅉ", input: "W", utterance: "쪽", romanization: "jj" },
     ]) {
       letters.push(letter);
-      keymap[letter.actualInput] = letter.letter;
+      keymap[letter.input] = letter.letter;
     }
   }
 
   if (letterSettings.enableRows.consonants.aspirated.value) {
     for (const letter of [
-      { letter: "ㅋ", utterance: "키", romanization: "k", actualInput: "z" },
-      { letter: "ㅌ", utterance: "토", romanization: "t", actualInput: "x" },
-      { letter: "ㅍ", utterance: "파", romanization: "p", actualInput: "v" },
-      { letter: "ㅊ", utterance: "참", romanization: "ch", actualInput: "c" },
-      { letter: "ㅎ", utterance: "한", romanization: "h", actualInput: "g" },
+      { letter: "ㅋ", input: "z", utterance: "키", romanization: "k" },
+      { letter: "ㅌ", input: "x", utterance: "토", romanization: "t" },
+      { letter: "ㅍ", input: "v", utterance: "파", romanization: "p" },
+      { letter: "ㅊ", input: "c", utterance: "참", romanization: "ch" },
+      { letter: "ㅎ", input: "g", utterance: "한", romanization: "h" },
     ]) {
       letters.push(letter);
-      keymap[letter.actualInput] = letter.letter;
+      keymap[letter.input] = letter.letter;
     }
   }
 
   if (letterSettings.enableRows.consonants.miscellaneous.value) {
     for (const letter of [
-      { letter: "ㄴ", utterance: "눈", romanization: "n", actualInput: "s" },
-      { letter: "ㅁ", utterance: "못", romanization: "m", actualInput: "a" },
-      { letter: "ㄹ", utterance: "름", romanization: "r", actualInput: "f" },
-      { letter: "ㅇ", utterance: "", romanization: undefined, actualInput: "d" },
+      { letter: "ㄴ", input: "s", utterance: "눈", romanization: "n" },
+      { letter: "ㅁ", input: "a", utterance: "못", romanization: "m" },
+      { letter: "ㄹ", input: "f", utterance: "름", romanization: "r" },
+      { letter: "ㅇ", input: "d" },
     ]) {
       letters.push(letter);
-      keymap[letter.actualInput] = letter.letter;
+      keymap[letter.input] = letter.letter;
     }
   }
 
   for (const letter of [
-    { letter: "ㅏ", romanization: "a", actualInput: "k" },
-    { letter: "ㅓ", romanization: "eo", actualInput: "j" },
-    { letter: "ㅗ", romanization: "o", actualInput: "h" },
-    { letter: "ㅜ", romanization: "u", actualInput: "n" },
-    { letter: "ㅡ", romanization: "eu", actualInput: "m" },
-    { letter: "ㅣ", romanization: "i", actualInput: "l" },
+    { letter: "ㅏ", input: "k", romanization: "a" },
+    { letter: "ㅓ", input: "j", romanization: "eo" },
+    { letter: "ㅗ", input: "h", romanization: "o" },
+    { letter: "ㅜ", input: "n", romanization: "u" },
+    { letter: "ㅡ", input: "m", romanization: "eu" },
+    { letter: "ㅣ", input: "l", romanization: "i" },
   ]) {
     if (letterSettings.enableRows.vowels.basic.value) {
       letters.push(letter);
     }
     if (letterSettings.enableRows.vowels.basic.value || letterSettings.enableRows.vowels.complex.value) {
-      keymap[letter.actualInput] = letter.letter;
+      keymap[letter.input] = letter.letter;
     }
   }
 
   if (letterSettings.enableRows.vowels.basic.value) {
     for (const letter of [
-      { letter: "ㅑ", romanization: "ya", actualInput: "i" },
-      { letter: "ㅕ", romanization: "yeo", actualInput: "u" },
-      { letter: "ㅛ", romanization: "yo", actualInput: "y" },
-      { letter: "ㅠ", romanization: "yu", actualInput: "b" },
+      { letter: "ㅑ", input: "i", romanization: "ya" },
+      { letter: "ㅕ", input: "u", romanization: "yeo" },
+      { letter: "ㅛ", input: "y", romanization: "yo" },
+      { letter: "ㅠ", input: "b", romanization: "yu" },
     ]) {
       letters.push(letter);
-      keymap[letter.actualInput] = letter.letter;
+      keymap[letter.input] = letter.letter;
     }
   }
 
   if (letterSettings.enableRows.vowels.complex.value) {
     for (const letter of [
-      { letter: "ㅐ", romanization: "ae", actualInput: "o" },
-      { letter: "ㅒ", romanization: "yae", actualInput: "O" },
-      { letter: "ㅔ", romanization: "e", actualInput: "p" },
-      { letter: "ㅖ", romanization: "ye", actualInput: "P" },
+      { letter: "ㅐ", input: "o", romanization: "ae" },
+      { letter: "ㅒ", input: "O", romanization: "yae" },
+      { letter: "ㅔ", input: "p", romanization: "e" },
+      { letter: "ㅖ", input: "P", romanization: "ye" },
     ]) {
       letters.push(letter);
-      keymap[letter.actualInput] = letter.letter;
+      keymap[letter.input] = letter.letter;
     }
 
     for (const letter of [
-      { letter: "ㅘ", romanization: "wa", actualInput: "hk" },
-      { letter: "ㅙ", romanization: "wae", actualInput: "ho" },
-      { letter: "ㅚ", romanization: "oe", actualInput: "hl" },
-      { letter: "ㅝ", romanization: "wo", actualInput: "nj" },
-      { letter: "ㅞ", romanization: "we", actualInput: "np" },
-      { letter: "ㅟ", romanization: "wi", actualInput: "nl" },
-      { letter: "ㅢ", romanization: "ui", actualInput: "ml" },
+      { letter: "ㅘ", input: "hk", romanization: "wa" },
+      { letter: "ㅙ", input: "ho", romanization: "wae" },
+      { letter: "ㅚ", input: "hl", romanization: "oe" },
+      { letter: "ㅝ", input: "nj", romanization: "wo" },
+      { letter: "ㅞ", input: "np", romanization: "we" },
+      { letter: "ㅟ", input: "nl", romanization: "wi" },
+      { letter: "ㅢ", input: "ml", romanization: "ui" },
     ]) {
       letters.push(letter);
     }

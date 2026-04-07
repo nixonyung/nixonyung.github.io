@@ -1,5 +1,4 @@
-import type { JapaneseAdjective, JapaneseWord } from "../../types";
-import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
+import { flashcardSettings, type JapaneseAdjective, type JapaneseWord } from "./FlashcardSettings.svelte";
 
 // TODO: https://jlptsensei.com/learn-japanese-grammar/japanese-%e3%81%84-adjectives-%e3%81%84%e5%bd%a2%e5%ae%b9%e8%a9%9e-meaning/
 

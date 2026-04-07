@@ -1,45 +1,63 @@
 <script lang="ts">
   import CheckboxInput from "@/components/svelte/CheckboxInput.svelte";
+  import NumericInput from "@/components/svelte/NumericInput.svelte";
   import SettingsRow from "@/components/svelte/SettingsRow.svelte";
   import SettingsRows from "@/components/svelte/SettingsRows.svelte";
-  import { QuestionsQueue } from "@/lib/questions-queue.svelte.ts";
   import { initSettings, useSyncSettings } from "@/lib/settings.svelte";
   import { tick, untrack } from "svelte";
   import type { Keymap } from "./TypingKeyboard.svelte";
   import TypingKeyboard from "./TypingKeyboard.svelte";
-  import TypingQuestionViews, { type Question } from "./TypingQuestionViews.svelte";
+  import type { Question } from "./TypingQuestionViews.svelte";
+  import TypingQuestionViews from "./TypingQuestionViews.svelte";
+
+  type ParagraphQuestion = Question & {
+    paragraphIdx: number;
+    chIdx: number;
+  };
 
   const {
-    questions,
+    paragraph,
     keymap,
   }: {
-    questions: Question[];
+    paragraph: ParagraphQuestion[][];
     keymap: Keymap;
   } = $props();
 
   const settings = $state(
     initSettings({
       autoReadQuestion: { paramKey: "autoReadQ", defaultValue: false },
-      autoReadAnswer: { paramKey: "autoReadA", defaultValue: false },
       hideKeys: { paramKey: "hideKeys", defaultValue: false },
       highlightCorrectKey: { paramKey: "showCorrectKey", defaultValue: false },
       ignoreTypos: { paramKey: "ignoreTypos", defaultValue: false },
+      startParagraphIdx: { paramKey: "startIdx", defaultValue: 0 },
     }),
   );
   useSyncSettings(settings);
-  $effect.pre(() => {
-    if (settings.autoReadQuestion.value) settings.autoReadAnswer.value = false;
-  });
-  $effect.pre(() => {
-    if (settings.autoReadAnswer.value) settings.autoReadQuestion.value = false;
-  });
 
-  const questionsQueue = $derived(new QuestionsQueue(questions));
-  let questionViewsRef: TypingQuestionViews<(typeof questions)[number]> | undefined = $state();
+  let paragraphIdx = $state(0);
+  let chIdx = $state(0);
+
+  let questionViewsRef: TypingQuestionViews<ParagraphQuestion> | undefined = $state();
+  const question = $derived(questionViewsRef?.getQuestion());
+  function getNextQuestion() {
+    if (chIdx >= paragraph[paragraphIdx]?.length) {
+      paragraphIdx++;
+      chIdx = 0;
+    }
+    if (paragraphIdx >= paragraph.length) {
+      paragraphIdx = 0;
+    }
+    const ch = paragraph[paragraphIdx]?.[chIdx];
+    chIdx++;
+    return ch;
+  }
   $effect.pre(() => {
-    questionsQueue;
+    settings.startParagraphIdx.value;
 
     untrack(async () => {
+      paragraphIdx = settings.startParagraphIdx.value;
+      chIdx = 0;
+
       await tick();
       questionViewsRef?.reset();
     });
@@ -52,12 +70,6 @@
       bind:checked={settings.autoReadQuestion.value}
       icon="icon-[icon-park-solid--people-speak]"
       label="auto read question"
-    />
-    <span>-- OR --</span>
-    <CheckboxInput
-      bind:checked={settings.autoReadAnswer.value}
-      icon="icon-[icon-park-solid--people-speak]"
-      label="auto read answer"
     />
   </SettingsRow>
 
@@ -78,17 +90,33 @@
       label="ignore typos"
     />
   </SettingsRow>
+
+  <SettingsRow>
+    <NumericInput
+      bind:value={settings.startParagraphIdx.value}
+      label="start idx"
+      min={0}
+      max={paragraph.length - 1}
+    />
+  </SettingsRow>
 </SettingsRows>
 
 <TypingQuestionViews
   bind:this={questionViewsRef}
-  getNextQuestion={() => questionsQueue.nextQuestion()}
+  {getNextQuestion}
   {keymap}
   autoReadQuestion={settings.autoReadQuestion.value}
-  autoReadAnswer={settings.autoReadAnswer.value}
   ignoreTypos={settings.ignoreTypos.value}
+  showMappedInput
   class="mt-8"
 />
+
+{#if question}
+  <div class="mt-4 flex gap-4">
+    (row {question.paragraphIdx}, col: {question.chIdx})
+  </div>
+{/if}
+
 <TypingKeyboard
   {keymap}
   hideKeys={settings.hideKeys.value}

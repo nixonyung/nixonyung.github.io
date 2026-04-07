@@ -1,5 +1,4 @@
-import type { JapaneseWord } from "../../types";
-import { flashcardSettings } from "./FlashcardSettingsJP.svelte";
+import { flashcardSettings, type JapaneseWord } from "./FlashcardSettings.svelte";
 
 export function appendNounsPeopleByRelationships(words: JapaneseWord[]) {
   if (flashcardSettings.words.nouns.people.byRelationships.immediateFamily.parents.value) {

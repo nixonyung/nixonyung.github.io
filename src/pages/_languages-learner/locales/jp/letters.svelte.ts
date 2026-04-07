@@ -1,13 +1,4 @@
-import type { Letter } from "../../types";
-import { gojuonSettings } from "./GojuonTable.svelte";
-
-export interface Gojuon {
-  hiragana: string;
-  hiraganaOrigin: string;
-  katakana: string;
-  katakanaOrigin: string;
-  romanization: string;
-}
+import { gojuonSettings, type Gojuon } from "./GojuonSettings.svelte";
 
 export const gojuons: Record<string, (Gojuon | null)[]> = {
   rowA: [
@@ -90,7 +81,7 @@ export const gojuons: Record<string, (Gojuon | null)[]> = {
 };
 
 export function getLetters() {
-  const letters: Letter[] = [];
+  const letters: { letter: string; romanization: string }[] = [];
 
   const gojuonss: (Gojuon | null)[][] = [];
   if (gojuonSettings.enableRows.rowA.value) gojuonss.push(gojuons.rowA);

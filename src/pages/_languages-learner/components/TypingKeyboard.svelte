@@ -1,5 +1,33 @@
 <script lang="ts" module>
-  const shiftSymbolsMap: Record<string, string> = {
+  export type Keymap = Record<string, string>;
+
+  const KEY_TO_SHIFTED: Record<string, string> = {
+    a: "A",
+    b: "B",
+    c: "C",
+    d: "D",
+    e: "E",
+    f: "F",
+    g: "G",
+    h: "H",
+    i: "I",
+    j: "J",
+    k: "K",
+    l: "L",
+    m: "M",
+    n: "N",
+    o: "O",
+    p: "P",
+    q: "Q",
+    r: "R",
+    s: "S",
+    t: "T",
+    u: "U",
+    v: "V",
+    w: "W",
+    x: "X",
+    y: "Y",
+    z: "Z",
     "`": "~",
     "1": "!",
     "2": "@",
@@ -22,43 +50,37 @@
     ".": ">",
     "/": "?",
   };
-  const unshiftSymbolsMap = Object.fromEntries(
-    Object.entries(shiftSymbolsMap).map(([k, v]) => [v, k]),
+  const KEY_TO_UNSHIFTED = Object.fromEntries(
+    Object.entries(KEY_TO_SHIFTED).map(([k, v]) => [v, k]),
   );
 </script>
 
 <script lang="ts">
   import { emitKeydown } from "@/lib/keyboard";
-  import type { Keymap } from "../types";
+  import type { ClassValue } from "svelte/elements";
 
   const {
     keymap,
-    correctCh,
-    showNumberRow,
-    showTilde,
-    showSymbols,
-    hideDisplayKey,
-    showCorrectKey,
+    hideKeys = false,
+    showCorrectKey = false,
+    correctKey,
+    class: classList,
   }: {
     keymap: Keymap;
-    correctCh: string | undefined;
 
-    showNumberRow: boolean;
-    showTilde: boolean;
-    showSymbols: boolean;
+    hideKeys?: boolean;
 
-    hideDisplayKey: boolean;
-    showCorrectKey: boolean;
+    showCorrectKey?: boolean;
+    correctKey?: string;
+
+    class?: ClassValue;
   } = $props();
 
-  let isShiftDown = $state(false);
+  const showNumberRow = $derived([..."1234567890!@#$%^&*()"].some((ch) => ch in keymap));
+  const showTilde = $derived([..."`~"].some((ch) => ch in keymap));
+  const showSymbols = $derived([..."-_=+[{]}\\|;:'\",<.>/?"].some((ch) => ch in keymap));
 
-  function getChEmit(ch: string) {
-    return !isShiftDown ? ch : ch.match(/[a-z]/) ? ch.toUpperCase() : shiftSymbolsMap[ch];
-  }
-  function unshiftCh(ch: string | undefined) {
-    return ch && (unshiftSymbolsMap[ch] ?? ch.toLowerCase());
-  }
+  let isShiftDown = $state(false);
 </script>
 
 <svelte:window
@@ -70,19 +92,19 @@
   }}
 />
 
-<div class="w-fit px-6 py-3 ring ring-primary-lighter">
+<div class={["w-fit px-6 py-3 ring ring-primary-lighter", classList]}>
   <div class="flex flex-col gap-2">
-    {#snippet key(ch: string)}
-      {@const chEmit = getChEmit(ch)}
+    {#snippet keyView(keyLowercase: string)}
+      {@const chEmit = isShiftDown ? KEY_TO_SHIFTED[keyLowercase] : keyLowercase}
       {@const chDisplay = keymap[chEmit]}
 
       <button
         class={[
           "relative grid size-12 place-items-center-safe rounded ring ring-primary-content",
           showCorrectKey &&
-            correctCh &&
-            ((chEmit === correctCh && "bg-green-400/25") ||
-              (ch === unshiftCh(correctCh) && "bg-yellow-400/25")),
+            correctKey &&
+            ((correctKey === chEmit && "bg-green-400/25") ||
+              (KEY_TO_UNSHIFTED[correctKey] === keyLowercase && "bg-yellow-400/25")),
         ]}
         onclick={() => {
           if (chDisplay) emitKeydown({ key: chEmit });
@@ -90,7 +112,7 @@
         }}
       >
         <span class="text-xl">
-          {hideDisplayKey && chDisplay ? "·" : chDisplay}
+          {hideKeys && chDisplay ? "·" : chDisplay}
         </span>
 
         <!-- key hint -->
@@ -101,7 +123,7 @@
         {/if}
 
         <!-- bump -->
-        {#if ch === "f" || ch === "j"}
+        {#if keyLowercase === "f" || keyLowercase === "j"}
           <div class="absolute bottom-1.5 w-2.5 border-b"></div>
         {/if}
       </button>
@@ -111,16 +133,16 @@
     {#if showNumberRow || showSymbols}
       <div class="flex gap-1">
         {#if showTilde}
-          {@render key("`")}
+          {@render keyView("`")}
         {/if}
 
         {#each ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"] as ch (ch)}
-          {@render key(showNumberRow ? ch : "")}
+          {@render keyView(showNumberRow ? ch : "")}
         {/each}
 
         {#if showSymbols}
           {#each ["-", "="] as ch (ch)}
-            {@render key(ch)}
+            {@render keyView(ch)}
           {/each}
         {/if}
 
@@ -141,12 +163,12 @@
       <div class={showTilde ? "w-18" : "w-6"}></div>
 
       {#each ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"] as ch (ch)}
-        {@render key(ch)}
+        {@render keyView(ch)}
       {/each}
 
       {#if showSymbols}
         {#each ["[", "]", "\\"] as ch (ch)}
-          {@render key(ch)}
+          {@render keyView(ch)}
         {/each}
       {/if}
 
@@ -166,12 +188,12 @@
       <div class={showTilde ? "w-24" : "w-12"}></div>
 
       {#each ["a", "s", "d", "f", "g", "h", "j", "k", "l"] as ch (ch)}
-        {@render key(ch)}
+        {@render keyView(ch)}
       {/each}
 
       {#if showSymbols}
         {#each [";", "'"] as ch (ch)}
-          {@render key(ch)}
+          {@render keyView(ch)}
         {/each}
       {/if}
     </div>
@@ -191,12 +213,12 @@
       </button>
 
       {#each ["z", "x", "c", "v", "b", "n", "m"] as ch (ch)}
-        {@render key(ch)}
+        {@render keyView(ch)}
       {/each}
 
       {#if showSymbols}
         {#each [",", ".", "/"] as ch (ch)}
-          {@render key(ch)}
+          {@render keyView(ch)}
         {/each}
       {/if}
     </div>
