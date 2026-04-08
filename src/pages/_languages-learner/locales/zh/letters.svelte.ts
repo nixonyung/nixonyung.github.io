@@ -1,10 +1,7 @@
-import { letterSettings } from "./LettersSettings.svelte";
+import { letterSettings, type Letter } from "./LettersSettings.svelte";
 
 export function getLetters() {
-  const letters: {
-    letter: string;
-    svgPath?: string;
-  }[] = [];
+  const letters: Letter[] = [];
   const usedKeys: string[] = [];
 
   if (letterSettings.enableRows.philosophical.value) {
@@ -146,7 +143,7 @@ export function getLetters() {
         { letter: "火", svgPath: "/zh/f/Cjem-f8-2.svg" },
         { letter: "火", svgPath: "/zh/f/Cjem-f8-3.svg" },
         { letter: "火", svgPath: "/zh/f/Cjem-f8-4.svg" },
-        { letter: "火", svgPath: "/zh/f/Cjem-f9-1.svg " },
+        { letter: "火", svgPath: "/zh/f/Cjem-f9-1.svg" },
 
         { letter: "土", svgPath: "/zh/g/Cjem-g0-1.svg" },
         { letter: "土", svgPath: "/zh/g/Cjem-g0-2.svg" },

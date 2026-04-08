@@ -1,4 +1,9 @@
 <script lang="ts" module>
+  export interface Letter {
+    letter: string;
+    svgPath?: string;
+  }
+
   export const letterSettings = $state(
     initSettings({
       enableRows: {

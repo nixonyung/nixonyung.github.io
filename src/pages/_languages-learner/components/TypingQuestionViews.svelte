@@ -1,6 +1,4 @@
 <script lang="ts" module>
-  const NUM_QUESTIONS = 7;
-
   export interface Question {
     letter: string;
     input: string;
@@ -25,6 +23,7 @@
   const {
     getNextQuestion,
     keymap,
+    numQuestions = 7,
     showMappedInput = false,
     autoReadQuestion = false,
     autoReadAnswer = false,
@@ -35,6 +34,8 @@
 
     keymap: Keymap;
 
+    numQuestions?: number;
+
     showMappedInput?: boolean;
     autoReadQuestion?: boolean;
     autoReadAnswer?: boolean;
@@ -43,7 +44,7 @@
     class?: ClassValue;
   } = $props();
 
-  let currQuestions = $state(new CircularQueue<TQuestion | undefined>(NUM_QUESTIONS));
+  let currQuestions = $state(new CircularQueue<TQuestion | undefined>(numQuestions));
   let prevQuestion: TQuestion | undefined = $state();
 
   let input = $state("");
@@ -68,8 +69,7 @@
     return currQuestions.top?.input[input.length];
   }
   export function reset() {
-    currQuestions = new CircularQueue(NUM_QUESTIONS);
-    for (let i = 0; i < NUM_QUESTIONS; i++) currQuestions.push(getNextQuestion());
+    for (let i = 0; i < numQuestions; i++) currQuestions.push(getNextQuestion());
     prevQuestion = undefined;
   }
   function nextQuestion() {
@@ -179,7 +179,7 @@
   })}
   {#each currQuestions
     .items()
-    .slice(0, prevQuestion !== undefined ? NUM_QUESTIONS - 1 : NUM_QUESTIONS) as question, i (i)}
+    .slice(0, prevQuestion !== undefined ? numQuestions - 1 : numQuestions) as question, i (i)}
     {@render questionView({
       question,
       isCurr: i === 0,

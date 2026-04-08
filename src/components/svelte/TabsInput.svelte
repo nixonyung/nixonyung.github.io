@@ -1,13 +1,16 @@
 <script lang="ts" generics="Value extends string">
   import type { ClassValue } from "svelte/elements";
+  import WithTooltip, { type WithTooltipProps } from "./WithTooltip.svelte";
 
   let {
     value = $bindable(),
     label,
     valueToLabel,
+    tooltip,
+    customTooltip,
     class: classList,
     disabled,
-  }: {
+  }: WithTooltipProps & {
     value: Value;
     label: string;
     valueToLabel: Record<Value, string>;
@@ -17,7 +20,9 @@
 </script>
 
 <div class={["flex items-center-safe", classList]}>
-  <span class="mr-2">{label}:</span>
+  <WithTooltip {tooltip} {customTooltip} {disabled}>
+    <span class="mr-2">{label}:</span>
+  </WithTooltip>
 
   {#each Object.entries(valueToLabel) as entry (entry[0])}
     {@const v = entry[0] as Value}

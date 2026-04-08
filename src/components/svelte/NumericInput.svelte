@@ -10,6 +10,8 @@
     min = -Infinity,
     max = Infinity,
     step = 1,
+    showLimits = false,
+    onchange,
     class: classList,
     disabled: disabledProp,
   }: {
@@ -19,6 +21,8 @@
     min?: number;
     max?: number;
     step?: number;
+    showLimits?: boolean;
+    onchange?: (val: number, prevVal: number) => Awaited<void>;
     class?: ClassValue;
     disabled?: boolean;
   } = $props();
@@ -28,7 +32,9 @@
   const canDecrement = $derived(!disabled && value - step >= min);
   const canIncrement = $derived(!disabled && value + step <= max);
   function setValue(newValue: number) {
+    const prevValue = value;
     value = clamp(round(newValue, numDecimalPlaces), min, max);
+    onchange?.(value, prevValue);
   }
   $effect.pre(() => {
     if (!disabled) {
@@ -59,7 +65,11 @@
     }}
   >
     <Icon {icon} />
-    <span>{label}:</span>
+    <span>{label}</span>
+    {#if showLimits}
+      ({min}-{max})
+    {/if}
+    <span>:</span>
     <span class="ml-1 min-w-8 text-start">{value}</span>
   </button>
 

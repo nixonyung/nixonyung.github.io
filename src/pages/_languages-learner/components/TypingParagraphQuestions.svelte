@@ -18,9 +18,11 @@
   const {
     paragraph,
     keymap,
+    numQuestions,
   }: {
     paragraph: ParagraphQuestion[][];
     keymap: Keymap;
+    numQuestions?: number;
   } = $props();
 
   const settings = $state(
@@ -29,7 +31,7 @@
       hideKeys: { paramKey: "hideKeys", defaultValue: false },
       highlightCorrectKey: { paramKey: "showCorrectKey", defaultValue: false },
       ignoreTypos: { paramKey: "ignoreTypos", defaultValue: false },
-      startParagraphIdx: { paramKey: "startIdx", defaultValue: 0 },
+      startParagraphId: { paramKey: "startIdx", defaultValue: 1 },
     }),
   );
   useSyncSettings(settings);
@@ -38,7 +40,6 @@
   let chIdx = $state(0);
 
   let questionViewsRef: TypingQuestionViews<ParagraphQuestion> | undefined = $state();
-  const question = $derived(questionViewsRef?.getQuestion());
   function getNextQuestion() {
     if (chIdx >= paragraph[paragraphIdx]?.length) {
       paragraphIdx++;
@@ -51,15 +52,25 @@
     chIdx++;
     return ch;
   }
+  async function resetQuestions() {
+    paragraphIdx = settings.startParagraphId.value - 1;
+    chIdx = 0;
+
+    await tick();
+    questionViewsRef?.reset();
+  }
   $effect.pre(() => {
-    settings.startParagraphIdx.value;
+    paragraph;
 
-    untrack(async () => {
-      paragraphIdx = settings.startParagraphIdx.value;
-      chIdx = 0;
+    untrack(() => resetQuestions());
+  });
 
-      await tick();
-      questionViewsRef?.reset();
+  const question = $derived(questionViewsRef?.getQuestion());
+  $effect.pre(() => {
+    question;
+
+    untrack(() => {
+      if (question) settings.startParagraphId.value = question.paragraphIdx + 1;
     });
   });
 </script>
@@ -93,10 +104,12 @@
 
   <SettingsRow>
     <NumericInput
-      bind:value={settings.startParagraphIdx.value}
-      label="start idx"
-      min={0}
-      max={paragraph.length - 1}
+      bind:value={settings.startParagraphId.value}
+      label="start from row"
+      min={paragraph.length ? 1 : 0}
+      max={paragraph.length}
+      showLimits
+      onchange={() => resetQuestions()}
     />
   </SettingsRow>
 </SettingsRows>
@@ -105,6 +118,7 @@
   bind:this={questionViewsRef}
   {getNextQuestion}
   {keymap}
+  {numQuestions}
   autoReadQuestion={settings.autoReadQuestion.value}
   ignoreTypos={settings.ignoreTypos.value}
   showMappedInput
@@ -113,7 +127,7 @@
 
 {#if question}
   <div class="mt-4 flex gap-4">
-    (row {question.paragraphIdx}, col: {question.chIdx})
+    (row {question.paragraphIdx + 1}, col: {question.chIdx + 1})
   </div>
 {/if}
 

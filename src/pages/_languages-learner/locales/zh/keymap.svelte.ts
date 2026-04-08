@@ -25,6 +25,7 @@ export const KEYMAP: Keymap = {
   u: "山",
   v: "女",
   w: "田",
+  x: "難",
   y: "卜",
 };
 

@@ -8,6 +8,7 @@
   import { getLetters } from "./letters.svelte.ts";
   import LettersSettings from "./LettersSettings.svelte";
   import { getParagraph } from "./paragraph.svelte.ts";
+  import ParagraphSettings, { paragraphSettings } from "./ParagraphSettings.svelte";
 
   const settings = $state(
     initSettings({
@@ -30,10 +31,10 @@
   class="mt-4"
 />
 
-<Divider />
 {#if settings.mode.value === "typingShapes"}
   {@const { letters, usedKeys } = getLetters()}
 
+  <Divider />
   <LettersSettings />
 
   <Divider />
@@ -47,18 +48,25 @@
     keymap={Object.fromEntries(usedKeys.map((key) => [key, KEYMAP[key]]))}
   />
 {:else if settings.mode.value === "typingParagraph"}
-  {@const paragraph = getParagraph()}
+  {@const { paragraph, rowLength } = getParagraph()}
 
+  <Divider />
+  <ParagraphSettings />
+
+  <Divider />
   <TypingParagraphQuestions
     paragraph={paragraph.map((letters, paragraphIdx) =>
-      letters.map(({ letter, cangjieCodes }, chIdx) => ({
+      letters.map(({ letter, cangjieCodes, cangjieCodesV5 }, chIdx) => ({
         letter,
-        input: [...cangjieCodes].map((code) => KEYMAP_INVERTED[code]).join(""),
+        input: [...((paragraphSettings.enableV5.value && cangjieCodesV5) || cangjieCodes)]
+          .map((code) => KEYMAP_INVERTED[code])
+          .join(""),
         utterance: letter,
         paragraphIdx,
         chIdx,
       })),
     )}
     keymap={KEYMAP}
+    numQuestions={rowLength}
   />
 {/if}
