@@ -46,6 +46,19 @@
 
   let currQuestions = $state(new CircularQueue<TQuestion | undefined>(numQuestions));
   let prevQuestion: TQuestion | undefined = $state();
+  $effect.pre(() => {
+    numQuestions;
+
+    untrack(() => {
+      currQuestions = new CircularQueue(numQuestions);
+    });
+  });
+  export function getQuestion() {
+    return currQuestions.top;
+  }
+  export function getCorrectKey() {
+    return currQuestions.top?.input[input.length];
+  }
 
   let input = $state("");
   let showRomanization = $state(false);
@@ -62,19 +75,24 @@
     });
   });
 
-  export function getQuestion() {
-    return currQuestions.top;
-  }
-  export function getCorrectKey() {
-    return currQuestions.top?.input[input.length];
-  }
-  export function reset() {
-    for (let i = 0; i < numQuestions; i++) currQuestions.push(getNextQuestion());
-    prevQuestion = undefined;
-  }
   function nextQuestion() {
     prevQuestion = currQuestions.top;
     currQuestions.push(getNextQuestion());
+    input = "";
+    showRomanization = false;
+
+    if (autoReadQuestion) {
+      speech.speak(currQuestions.top?.utterance);
+      showRomanization = true;
+    }
+  }
+  export function reset() {
+    for (let i = 0; i < numQuestions; i++) {
+      const question = getNextQuestion();
+      console.log(question);
+      currQuestions.push(question);
+    }
+    prevQuestion = undefined;
     input = "";
     showRomanization = false;
 

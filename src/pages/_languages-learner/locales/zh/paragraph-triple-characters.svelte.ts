@@ -254,7 +254,7 @@ export function getParagraphTripleCharacters(): Paragraph {
       { letter: "此", cangjieCodes: "卜一心" },
       { letter: "四", cangjieCodes: "田金" },
       { letter: "方", cangjieCodes: "卜竹尸" },
-      { letter: "應", cangjieCodes: "戈土心" },
+      { letter: "應", cangjieCodes: "戈土心", cangjieCodesV5: "戈人土心" },
       { letter: "乎", cangjieCodes: "竹火木" },
       { letter: "中", cangjieCodes: "中" },
     ],

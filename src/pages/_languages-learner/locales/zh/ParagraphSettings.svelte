@@ -48,12 +48,17 @@
       {#snippet customTooltip()}
         <ReferencesList
           references={{
-            人生必讀一百句: "http://www.hkpe.net/cj/exercises/hundred.pdf",
-            千字文: "http://hkpe.net/cj/cjinput2.pdf",
-            三字經: "http://hkpe.net/cj/cjinput3.pdf",
-            "朱子治家格言 (練習)": "http://hkpe.net/cj/cjinput4.pdf",
-            "朱子治家格言 (原文)": "https://ctext.org/wiki.pl?if=gb&chapter=329194",
-            倉頡字典: "https://www.hkcards.com/",
+            文本: {
+              人生必讀一百句: "http://www.hkpe.net/cj/exercises/hundred.pdf",
+              千字文: "http://hkpe.net/cj/cjinput2.pdf",
+              三字經: "http://hkpe.net/cj/cjinput3.pdf",
+              "朱子治家格言 (練習)": "http://hkpe.net/cj/cjinput4.pdf",
+              "朱子治家格言 (原文)": "https://ctext.org/wiki.pl?if=gb&chapter=329194",
+            },
+            取碼: {
+              倉頡字典: "https://www.hkcards.com/",
+              包含省略原則: "https://www.hkcards.com/b1/cj-omission-in-enclosed-form",
+            },
           }}
         />
       {/snippet}

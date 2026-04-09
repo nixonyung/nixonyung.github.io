@@ -62,7 +62,10 @@
   $effect.pre(() => {
     paragraph;
 
-    untrack(() => resetQuestions());
+    untrack(() => {
+      settings.startParagraphId.value = paragraph.length ? 1 : 0;
+      resetQuestions();
+    });
   });
 
   const question = $derived(questionViewsRef?.getQuestion());
