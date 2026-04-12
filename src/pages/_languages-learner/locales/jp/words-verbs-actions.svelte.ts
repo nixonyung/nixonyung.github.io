@@ -79,6 +79,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["思い出す"], hiragana: "おもいだす", romanization: "omoidasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "recall" },
       { kanjis: ["考える", "勘える", "稽える"], hiragana: "かんがえる", romanization: "kangaeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "consider (logically) / contemplate" },
       { kanjis: ["考え込む", "考えこむ"], hiragana: "かんがえこむ", romanization: "kangaekomu", verbGroup: "Godan", verbIsTransitive: false, meaning: "ponder / think deeply" },
+      { katakana: "イメージする", romanization: "imeejisuru", verbGroup: "Irregular", verbIsTransitive: true, meaning: "imagine" },
 
       // deciding
       { kanjis: ["決める", "極める"], hiragana: "きめる", katakana: "キメる", romanization: "kimeru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "determine" },

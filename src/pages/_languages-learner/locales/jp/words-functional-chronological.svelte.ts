@@ -37,6 +37,7 @@ export function appendFunctionalChronological(words: JapaneseWord[]) {
       { kanjis: ["一昨日"], hiragana: "おととい", romanization: "ototoi", meaning: "the day before yesterday" },
       { kanjis: ["昨日"], hiragana: "きのう", romanization: "kinou", meaning: "yesterday" },
       { kanjis: ["今日"], hiragana: "きょう", romanization: "kyou", meaning: "today" },
+      { kanjis: ["今日"], hiragana: "こんじつ", romanization: "konjitsu", meaning: "today (polite)" },
       { kanjis: ["明日"], hiragana: "あした", romanization: "ashita", meaning: "tomorrow" },
       { kanjis: ["明後日"], hiragana: "あさって", romanization: "asatte", meaning: "the day after tomorrow" },
       { kanjis: ["この間"], hiragana: "このあいだ", romanization: "konoaida", meaning: "some other day" },

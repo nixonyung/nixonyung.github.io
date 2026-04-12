@@ -30,6 +30,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["お腹"], rareKanjis: ["お中"], hiragana: "おなか", romanization: "onaka", meaning: "belly / stomach" },
       { kanjis: ["腹"], rareKanjis: ["肚"], hiragana: "はら", romanization: "hara", meaning: "belly / stomach (masculine)" },
       { kanjis: ["背"], rareKanjis: ["脊"], hiragana: "せ", romanization: "se", meaning: "back of body" },
+      { kanjis: ["汗"], hiragana: "あせ", romanization: "ase", meaning: "sweat" },
       { katakana: "ティアー", romanization: "tiaa", meaning: "tear" },
     );
   }
@@ -322,6 +323,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { katakana: "テープレコーダー", romanization: "teepurekoodaa", meaning: "tape recorder" },
       { katakana: "カセット", romanization: "kasetto", meaning: "cassette" },
       { katakana: "テレビ", romanization: "terebi", meaning: "television" },
+      { katakana: "ヒーター", romanization: "heetaa", meaning: "heater" },
       { katakana: "ストーブ", romanization: "sutoobu", meaning: "stove" },
       { kanjis: ["冷蔵庫"], hiragana: "れいぞうこ", romanization: "reizouko", meaning: "refrigerator" },
       { kanjis: ["洗濯機"], hiragana: "せんたくき", romanization: "sentakuki", meaning: "washing machine" },

@@ -48,6 +48,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["恋愛"], hiragana: "れんあい", romanization: "renai", meaning: "love / relationship" },
 
       { kanjis: ["表現"], hiragana: "ひょうげん", romanization: "hyougen", meaning: "expression / representation" },
+      { katakana: "イメージ", romanization: "imeeji", meaning: "image" },
       { kanjis: ["素っぴん"], hiragana: "すっぴん", romanization: "suppin", meaning: "without makeup" },
 
       { kanjis: ["泣き"], hiragana: "なき", romanization: "naki", meaning: "crying" },
@@ -275,7 +276,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["例文"], hiragana: "れいぶん", romanization: "reibun", meaning: "example sentence" },
 
       // piece of writing(?) / copywriting
-      { kanjis: ["話"], hiragana: "はなし", romanization: "hanashi", meaning: "speech" },
+      { kanjis: ["話"], hiragana: "はなし", romanization: "hanashi", meaning: "speech", exampleUsages: ["日本の冬についてお話しします"] },
       { kanjis: ["語り"], hiragana: "かたり", romanization: "katari", meaning: "detailed speech (literary)" },
       { kanjis: ["題"], katakana: "だい", romanization: "dai", meaning: "title / theme" },
       { kanjis: ["名称"], katakana: "めいしょう", romanization: "meishou", meaning: "name / title" },

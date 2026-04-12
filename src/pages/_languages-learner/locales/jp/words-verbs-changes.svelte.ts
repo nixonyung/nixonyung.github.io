@@ -13,6 +13,8 @@ export function appendVerbsChanges(words: JapaneseWord[]) {
       { kanjis: ["暮れる", "眩れる", "暗れる", "昏れる"], hiragana: "くれる", romanization: "kureru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "grow dark" },
       { kanjis: ["降り出す"], hiragana: "ふりだす", romanization: "furidasu", verbGroup: "Godan", verbIsTransitive: false, meaning: "start raining" },
 
+      { kanjis: ["温める", "暖める"], hiragana: "あたためる", romanization: "atatameru", verbGroup: "Ichidan", verbIsTransitive: true, meaning: "warm up" },
+
       { kanjis: ["咲く"], hiragana: "さく", romanization: "saku", verbGroup: "Godan", verbIsTransitive: false, meaning: "bloom", exampleUsages: ["花が咲く"] },
       { kanjis: ["荒ぶ", "進ぶ"], hiragana: "すさぶ", romanization: "susabu", verbGroup: "Godan", verbIsTransitive: false, meaning: "grow wild" },
       { kanjis: ["乾く"], hiragana: "かわく", romanization: "kawaku", verbGroup: "Godan", verbIsTransitive: false, meaning: "get dry" },
