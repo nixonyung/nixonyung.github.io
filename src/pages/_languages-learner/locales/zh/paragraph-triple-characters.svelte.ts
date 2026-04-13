@@ -540,7 +540,7 @@ export function getParagraphTripleCharacters(): Paragraph {
     ],
     [
       { letter: "詩", cangjieCodes: "卜口土木戈" },
-      { letter: "書", cangjieCodes: "中土" },
+      { letter: "書", cangjieCodes: "中土日" },
       { letter: "易", cangjieCodes: "日心竹竹" },
       { letter: "禮", cangjieCodes: "戈火廿田廿" },
       { letter: "春", cangjieCodes: "手大日" },
@@ -891,7 +891,7 @@ export function getParagraphTripleCharacters(): Paragraph {
       { letter: "獻", cangjieCodes: "卜月戈大" },
     ],
     [
-      { letter: "魏", cangjieCodes: "竹女竹戈" },
+      { letter: "魏", cangjieCodes: "竹女竹戈", cangjieCodesV5: "竹女竹山戈" },
       { letter: "蜀", cangjieCodes: "田中心中戈" },
       { letter: "吳", cangjieCodes: "口女弓大" },
       { letter: "爭", cangjieCodes: "月尸木" },
@@ -925,7 +925,7 @@ export function getParagraphTripleCharacters(): Paragraph {
     [
       { letter: "北", cangjieCodes: "中一心" },
       { letter: "元", cangjieCodes: "一一山" },
-      { letter: "魏", cangjieCodes: "竹女竹戈" },
+      { letter: "魏", cangjieCodes: "竹女竹戈", cangjieCodesV5: "竹女竹山戈" },
       { letter: "分", cangjieCodes: "金尸竹" },
       { letter: "東", cangjieCodes: "木田" },
       { letter: "西", cangjieCodes: "一金田" },

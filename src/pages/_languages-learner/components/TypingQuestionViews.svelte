@@ -89,7 +89,6 @@
   export function reset() {
     for (let i = 0; i < numQuestions; i++) {
       const question = getNextQuestion();
-      console.log(question);
       currQuestions.push(question);
     }
     prevQuestion = undefined;
@@ -105,7 +104,7 @@
 
 <svelte:window
   onkeydown={onkeydown(({ key, ctrlKey, metaKey }) => {
-    if (key.match(/^[a-zA-Z]$/) || keymap[key]) {
+    if (keymap[key]) {
       if (ignoreTypos && key !== currQuestions.top?.input[input.length]) return;
 
       input += key;

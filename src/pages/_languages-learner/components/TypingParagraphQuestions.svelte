@@ -40,6 +40,7 @@
   let chIdx = $state(0);
 
   let questionViewsRef: TypingQuestionViews<ParagraphQuestion> | undefined = $state();
+  let isFirstEffectRun = true;
   function getNextQuestion() {
     if (chIdx >= paragraph[paragraphIdx]?.length) {
       paragraphIdx++;
@@ -63,7 +64,8 @@
     paragraph;
 
     untrack(() => {
-      settings.startParagraphId.value = paragraph.length ? 1 : 0;
+      if (!isFirstEffectRun) settings.startParagraphId.value = paragraph.length ? 1 : 0;
+      isFirstEffectRun = false;
       resetQuestions();
     });
   });
