@@ -232,6 +232,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["箸"], hiragana: "はし", romanization: "hashi", meaning: "chopsticks" },
       { katakana: "スプーン", romanization: "supuun", meaning: "spoon" },
       { katakana: "フォーク", romanization: "fooku", meaning: "fork" },
+      { kanjis: ["包丁", "庖丁"], hiragana: "ほうちょう", romanization: "houchou", meaning: "kitchen knife" },
       { katakana: "ナイフ", romanization: "naifu", meaning: "knife" },
       { katakana: "カップ", romanization: "kappu", meaning: "cup" },
       { katakana: "コップ", rareKanjis: ["洋杯"], romanization: "koppu", meaning: "wine glass" },
