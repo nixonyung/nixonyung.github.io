@@ -843,7 +843,7 @@ export function getParagraphTripleCharacters(): Paragraph {
       { letter: "出", cangjieCodes: "山山" },
     ],
     [
-      { letter: "嬴", cangjieCodes: "卜口月女弓" },
+      { letter: "嬴", cangjieCodes: "卜口月女弓", cangjieCodesV5: "卜弓女" },
       { letter: "秦", cangjieCodes: "手大竹木" },
       { letter: "氏", cangjieCodes: "竹女心" },
       { letter: "始", cangjieCodes: "女戈口" },
@@ -1480,7 +1480,7 @@ export function getParagraphTripleCharacters(): Paragraph {
       { letter: "子", cangjieCodes: "弓木" },
       { letter: "金", cangjieCodes: "金" },
       { letter: "滿", cangjieCodes: "水廿中月" },
-      { letter: "籯", cangjieCodes: "竹卜口弓" },
+      { letter: "籯", cangjieCodes: "竹卜口弓", cangjieCodesV5: "竹卜弓金" },
     ],
     [
       { letter: "我", cangjieCodes: "竹手戈" },
