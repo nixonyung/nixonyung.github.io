@@ -90,6 +90,9 @@
   onkeyup={({ key }) => {
     if (key === "Shift") isShiftDown = false;
   }}
+  onblur={() => {
+    isShiftDown = false;
+  }}
 />
 
 <div class={["w-fit px-6 py-3 ring ring-primary-lighter", classList]}>

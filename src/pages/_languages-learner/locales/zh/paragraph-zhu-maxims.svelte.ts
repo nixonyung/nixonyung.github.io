@@ -48,7 +48,7 @@ export function getParagraphZhuMaxims(): Paragraph {
       { letter: "半", cangjieCodes: "火手" },
       { letter: "絲", cangjieCodes: "女火女戈火" },
       { letter: "半", cangjieCodes: "火手" },
-      { letter: "縷", cangjieCodes: "女火中田女" },
+      { letter: "縷", cangjieCodes: "女火中田女", cangjieCodesV5: "女火中中女" },
       { letter: "恆", cangjieCodes: "心一月一" },
       { letter: "念", cangjieCodes: "人戈弓心" },
       { letter: "物", cangjieCodes: "竹手心竹竹" },
