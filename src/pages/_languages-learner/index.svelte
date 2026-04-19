@@ -8,12 +8,16 @@
   import EN from "./locales/en/EN.svelte";
   import JP from "./locales/jp/JP.svelte";
   import KR from "./locales/kr/KR.svelte";
+  import ZH_TW from "./locales/zh-tw/ZH_TW.svelte";
   import ZH from "./locales/zh/ZH.svelte";
 
   const settings = $state(
     initSettings({
       // values of lang should match codes from SpeechSynthesis
-      lang: { paramKey: "lang", defaultValue: "en-US" as "en-US" | "zh-HK" | "ja-JP" | "ko-KR" },
+      lang: {
+        paramKey: "lang",
+        defaultValue: "en-US" as "en-US" | "zh-HK" | "zh-TW" | "ja-JP" | "ko-KR",
+      },
       speechRate: { paramKey: "speechRate", defaultValue: speech.rate },
     }),
   );
@@ -45,7 +49,7 @@
     <SelectInput
       bind:value={settings.lang.value}
       label="Lang"
-      options={["en-US", "zh-HK", "ja-JP", "ko-KR"]}
+      options={["en-US", "zh-HK", "zh-TW", "ja-JP", "ko-KR"]}
     />
 
     <NumericInput
@@ -65,6 +69,8 @@
     <EN />
   {:else if settings.lang.value === "zh-HK"}
     <ZH />
+  {:else if settings.lang.value === "zh-TW"}
+    <ZH_TW />
   {:else if settings.lang.value === "ja-JP"}
     <JP />
   {:else if settings.lang.value === "ko-KR"}
