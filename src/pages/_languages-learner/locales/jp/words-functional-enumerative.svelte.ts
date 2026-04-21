@@ -31,10 +31,10 @@ export function appendFunctionalEnumerative(words: JapaneseWord[]) {
       { hiragana: "とにかく", romanization: "tonikaku", meaning: "anyway (omitting)" },
 
       // with contrast
-      { hiragana: "けど", romanization: "kedo", meaning: "but (spoken, casual)", derivedMeanings: ["(soften a strong assertion)"], exampleUsages: ["[Clause] けど、 [Clause]。", "[Noun] は [Adj.] けど [Adj.]。", "...。 けど、 [Clause]。"] },
-      { hiragana: "けども", romanization: "kedomo", meaning: "but (spoken, slightly polite)", exampleUsages: ["[Clause] けど、 [Clause]。", "[Noun] は [Adj.] けど [Adj.]。", "...。 けど、 [Clause]。"] },
-      { hiragana: "けれど", romanization: "keredo", meaning: "but (spoken, polite)", exampleUsages: ["[Clause] けれど、 [Clause]。", "[Noun] は [Adj.] けれど [Adj.]。", "...。 けれど、 [Clause]。"] },
-      { hiragana: "けれども", romanization: "keredomo", meaning: "but (written, very formal)", exampleUsages: ["[Clause] けれども、 [Clause]。", "[Noun] は [Adj.] けれども [Adj.]。", "...。 けれども、 [Clause]。"] },
+      { hiragana: "けど", romanization: "kedo", meaning: "but (spoken, casual)", derivedMeanings: ["(soften a strong assertion)"], exampleUsages: ["[Clause] けど、 [Clause]。", "[Noun] は [Adj.] けど [Adj.]。"] },
+      { hiragana: "けども", romanization: "kedomo", meaning: "but (spoken, slightly polite)", exampleUsages: ["[Clause] けど、 [Clause]。", "[Noun] は [Adj.] けど [Adj.]。"] },
+      { hiragana: "けれど", romanization: "keredo", meaning: "but (spoken, polite)", exampleUsages: ["[Clause] けれど、 [Clause]。", "[Noun] は [Adj.] けれど [Adj.]。"] },
+      { hiragana: "けれども", romanization: "keredomo", meaning: "but (written, very formal)", exampleUsages: ["[Clause] けれども、 [Clause]。", "[Noun] は [Adj.] けれども [Adj.]。"] },
 
       { hiragana: "ですが", romanization: "desu ga", meaning: "is xxx, but", exampleUsages: ["最初の壁は高いですが、..."] },
 

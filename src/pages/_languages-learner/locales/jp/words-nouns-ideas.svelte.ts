@@ -26,6 +26,9 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["本命"], hiragana: "ほんめい", romanization: "honmei", meaning: "favourite" },
       { kanjis: ["興味"], hiragana: "きょうみ", romanization: "kyoumi", meaning: "interest", exampleUsages: ["[Noun] 興味がある人 (interested people)"] },
 
+      { kanjis: ["安心感"], hiragana: "あんしんかん", romanization: "anshinkan", meaning: "sense of security" },
+      { kanjis: ["ため息", "溜息", "溜め息"], hiragana: "ためいき", romanization: "tameiki", meaning: "sigh" },
+
       { kanjis: ["生まれ"], hiragana: "うまれ", romanization: "umare", meaning: "birth / birthplace" },
       { kanjis: ["生活"], hiragana: "せいかつ", romanization: "seikatsu", meaning: "living" },
       { kanjis: ["暮らし", "暮し"], hiragana: "くらし", romanization: "kurashi", meaning: "the way of living", exampleUsages: ["一人暮らし"] },
@@ -61,6 +64,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["死去"], hiragana: "しきょ", romanization: "shikyo", meaning: "passing away (formal)" },
 
       { kanjis: ["思い出", "想い出"], hiragana: "おもいで", romanization: "omoide", meaning: "memory" },
+      { kanjis: ["記憶"], hiragana: "きおく", romanization: "kioku", meaning: "memory" },
 
       // gender
       { kanjis: ["性"], hiragana: "せい", romanization: "sei", meaning: "sex / nature of a person", derivedMeanings: ["gender"] },
@@ -177,6 +181,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["余り"], hiragana: "あまり", romanization: "amari", meaning: "remains" },
       { kanjis: ["借金"], hiragana: "しゃっきん", romanization: "shakkin", meaning: "debt" },
       { katakana: "せール", romanization: "seeru", meaning: "sale" },
+      { kanjis: ["馳走"], hiragana: "ちそう", romanization: "chisou", meaning: "food offer (polite)" },
       { katakana: "プレゼント", romanization: "purezento", meaning: "present" },
 
       { kanjis: ["団体"], hiragana: "だんたい", romanization: "dantai", meaning: "group / team / organization" },
@@ -246,6 +251,7 @@ export function appendNounsIdeas(words: JapaneseWord[]) {
       { kanjis: ["直通"], hiragana: "ちょくつう", romanization: "chokutsuu", meaning: "the quality of going to destination directly" },
       { kanjis: ["約束"], hiragana: "やくそく", romanization: "yakusoku", meaning: "promise" },
       { kanjis: ["検査"], hiragana: "けんさ", romanization: "kensa", meaning: "inspection" },
+      { katakana: "チェック", romanization: "chekku", meaning: "check / inspection" },
       { katakana: "コンビニエンス", romanization: "konbiniensu", meaning: "convenience" },
     );
   }

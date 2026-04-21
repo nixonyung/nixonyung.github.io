@@ -36,7 +36,7 @@ export function appendVerbsDescriptive(words: JapaneseWord[]) {
       { kanjis: ["死ぬ"], hiragana: "しぬ", romanization: "shinu", verbGroup: "Godan", verbIsTransitive: false, meaning: "die" },
       // TODO: survive
       { kanjis: ["顔を出す", "顔をだす"], hiragana: "かおをだす", romanization: "kaowodasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "show up" },
-      // TODO: remain
+      { kanjis: ["残る", "遺る"], hiragana: "のこる", romanization: "nokoru", verbGroup: "Godan", verbIsTransitive: false, meaning: "remain" },
       { kanjis: ["欠ける", "缺ける", "闕ける"], hiragana: "かける", romanization: "kakeru", verbGroup: "Ichidan", verbIsTransitive: false, meaning: "chip / break / be missing" },
       { kanjis: ["替わる", "代わる", "換わる", "替る", "代る", "換る"], hiragana: "かわる", romanization: "kawaru", verbGroup: "Godan", verbIsTransitive: false, meaning: "replace", derivedMeanings: ["succeed"] },
     );

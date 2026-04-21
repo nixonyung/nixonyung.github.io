@@ -13,6 +13,7 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { kanjis: ["立派"], hiragana: "りっぱ", romanization: "rippa", adjGroup: "Na", meaning: "splendid / elegant" },
       { kanjis: ["結構"], hiragana: "けっこう", romanization: "kekkou", adjGroup: "Na", meaning: "excellent (formal)", derivedMeanings: ["politely decline (fine with myself)"] },
       { kanjis: ["素晴らしい"], hiragana: "すばらしい", romanization: "subarashii", adjGroup: "I", meaning: "magnificent" },
+      { kanjis: ["最高"], hiragana: "さいこう", romanization: "saikou", adjGroup: "Na", meaning: "best / supreme" },
 
       { kanjis: ["大丈夫"], hiragana: "だいじょうぶ", romanization: "daijoubu", adjGroup: "Na", meaning: "fine / alright", derivedMeanings: ["safe"] },
       { kanjis: ["大切"], hiragana: "たいせつ", romanization: "taisetsu", adjGroup: "Na", meaning: "important / significant" },
@@ -161,6 +162,7 @@ export function appendAdjectives(words: JapaneseWord[]) {
       { katakana: "ナチュラル", romanization: "nachuraru", adjGroup: "Na", meaning: "natural" },
       { katakana: "リアル", romanization: "riaru", adjGroup: "Na", meaning: "real" },
       { katakana: "ストレート", romanization: "sutoreeto", adjGroup: "Na", meaning: "straight", derivedMeanings: ["direct"] },
+      { kanjis: ["厳しい"], rareKanjis: ["酷しい"], hiragana: "きびしい", romanization: "kibishii  ", adjGroup: "I", meaning: "strict" },
 
       { katakana: "マイ", romanization: "mai", adjGroup: "Na", meaning: "my" },
 

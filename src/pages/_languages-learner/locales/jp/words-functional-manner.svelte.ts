@@ -8,6 +8,7 @@ export function appendFunctionalManner(words: JapaneseWord[]) {
 
       { kanjis: ["良く", "善く", "能く", "好く", "克く"], hiragana: "よく", romanization: "yoku", meaning: "nicely / skillfully", derivedMeanings: ["properly"] },
       { hiragana: "なかなか", preferredForm: "hiragana", kanjis: ["中々", "中中"], rareKanjis: ["仲々", "仲仲", "却々", "却却"], romanization: "nakanaka", meaning: "hardly", exampleUsages: ["なかなか勇気が出ない"] },
+      { kanjis: ["心から"], hiragana: "こころから", romanization: "kokorokara", meaning: "sincerely" },
 
       { kanjis: ["一緒に"], hiragana: "いっしょに", romanization: "isshoni", meaning: "together {with xxx}", exampleUsages: ["一緒に [Verb]", "[Noun] と 一緒に [Verb]。"] },
       { kanjis: ["同時に"], hiragana: "どうじに", romanization: "doujini", meaning: "at the same time", exampleUsages: ["[Noun] も [Noun] も 同時に [Verb]"] },
@@ -20,7 +21,11 @@ export function appendFunctionalManner(words: JapaneseWord[]) {
       { kanjis: ["早々", "早早"], hiragana: "はやばや", romanization: "hayabaya", meaning: "promptly" },
       { kanjis: ["即"], hiragana: "そく", romanization: "soku", meaning: "at once / immediately" },
 
+      { kanjis: ["思わず"], hiragana: "おもわず", romanization: "omowazu", meaning: "unconsciously" },
+
       { hiragana: "ゆっくり", romanization: "yukkuri", meaning: "slowly / leisurely" },
+
+      { kanjis: ["希少", "稀少"], hiragana: "きしょう", romanization: "kishou", meaning: "rare / scarce" },
 
       { kanjis: ["真っ直ぐ"], hiragana: "まっすぐ", romanization: "massugu", meaning: "straightly" },
 

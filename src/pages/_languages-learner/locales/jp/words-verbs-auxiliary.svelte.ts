@@ -75,10 +75,10 @@ export function appendAuxiliaryVerbs(words: JapaneseWord[]) {
       { hiragana: "[Verb-て (omitted)] ちゃった", romanization: "chatta", meaning: "completely done", exampleUsages: ["[Verb]-te/ta (dropped) + ちゃ(じゃ)だめ"] },
 
       { hiragana: "[Verb-て] くる", romanization: "te kuru", meaning: "(a moment) is coming" },
+      { hiragana: "[Verb-て] おく", romanization: "te oku", meaning: "is doing something in advance for future convenience" },
+      { hiragana: "[Verb-て] しまう", romanization: "te shimau", meaning: "is done (regrettably)" },
 
       { hiragana: "[Verb-て] いきたい", romanization: "te ikitai", meaning: "I want to" },
-
-      { hiragana: "[Verb-て] おく", romanization: "te oku", meaning: "is doing something in advance for future convenience" },
 
       { hiragana: "[Verb-て] も", romanization: "-te mo", meaning: "even if / even though" },
 

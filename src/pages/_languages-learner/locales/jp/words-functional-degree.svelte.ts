@@ -23,6 +23,7 @@ export function appendFunctionalDegree(words: JapaneseWord[]) {
 
       { hiragana: "しか", romanization: "shika", meaning: "only (unsatisfied)" },
       { hiragana: "ばかり", rareKanjis: ["許り", "許"], romanization: "bakari", meaning: "only (nothing else)", derivedMeanings: ["just / freshly (emphasizing the feeling)"], exampleUsages: ["2025年に設立されたばかり"] },
+      { hiragana: "こそ", romanization: "koso", meaning: "in particular / precisely", exampleUsages: ["俺は努力したからこそ、試験に合格できたんだ (it is my hardwork that made me passed the test)"] },
 
       // superlative
       { kanjis: ["最も", "尤も"], hiragana: "もっとも", romanization: "mottomo", meaning: "the most" },

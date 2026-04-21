@@ -114,6 +114,7 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["鶏肉"], hiragana: "とりにく", romanization: "toriniku", meaning: "chicken meat" },
       { kanjis: ["豚肉"], hiragana: "ぶたにく", romanization: "butaniku", meaning: "pork" },
       { kanjis: ["牛肉"], hiragana: "ぎゅうにく", romanization: "gyuuniku", meaning: "beef" },
+      { kanjis: ["羊肉"], hiragana: "ようにく", romanization: "youniku", meaning: "lamb meat / mutton meat" },
 
       { kanjis: ["卵", "玉子"], hiragana: "たまご", romanization: "tamago", meaning: "egg", derivedMeanings: ["chicken egg"] },
 
@@ -157,7 +158,9 @@ export function appendNounsObjects(words: JapaneseWord[]) {
       { kanjis: ["茶"], hiragana: "ちゃ", romanization: "cha", meaning: "tea" },
       { kanjis: ["紅茶"], hiragana: "こうちゃ", romanization: "koucha", meaning: "black tea" },
 
-      { kanjis: ["酒"], hiragana: "さけ", romanization: "sake", meaning: "alcohol" },
+      { kanjis: ["酒"], hiragana: "さけ", romanization: "sake", meaning: "Japanese rice wine" },
+      { kanjis: ["日本酒"], hiragana: "にほんしゅ", romanization: "nihonshu", meaning: "Japanese rice wine" },
+      { katakana: "ワイン", romanization: "wain", meaning: "wine" },
 
       { katakana: "コーヒー", romanization: "koohii", meaning: "coffee" },
       { katakana: "コーラ", romanization: "coola", meaning: "cola / coke" },

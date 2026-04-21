@@ -46,6 +46,7 @@ export function appendVerbsActions(words: JapaneseWord[]) {
       { kanjis: ["感じ取る", "感じとる"], hiragana: "かんじとる", romanization: "kanjitoru", verbGroup: "Godan", verbIsTransitive: true, meaning: "perceive / feel" },
 
       { kanjis: ["お腹が空く", "お腹がすく"], hiragana: "おなかがすく", romanization: "onakagasuku", verbGroup: "Godan", verbIsTransitive: false, meaning: "be hungry" },
+      { kanjis: ["満たす"], rareKanjis: ["充たす"], hiragana: "みたす", romanization: "mitasu", verbGroup: "Godan", verbIsTransitive: true, meaning: "satisfy (desires/hunger/requirements)" },
 
       { kanjis: ["驚く"], hiragana: "おどろく", romanization: "odoroku", verbGroup: "Godan", verbIsTransitive: false, meaning: "be surprised" },
       { kanjis: ["落ち着く", "落ちつく", "落着く"], rareKanjis: ["落ち付く"], hiragana: "おちつく", romanization: "ochitsuku", verbGroup: "Godan", verbIsTransitive: false, meaning: "calm down" },
