@@ -1,6 +1,7 @@
 ---
 import favicon from "@/assets/favicon.svg";
 import { getLocalizedMessage } from "@/i18n";
+import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
 
 interface Props {
@@ -18,4 +19,9 @@ const { title } = Astro.props;
 <title>
   {(title ? `${title} — ` : "") + getLocalizedMessage("siteTitle", Astro.currentLocale)}
 </title>
+
+<Font cssVariable="--font-recursive" />
+<Font cssVariable="--font-noto-sans-hk" />
+<Font cssVariable="--font-lxgw-wenkai-tc" />
+
 <ClientRouter />

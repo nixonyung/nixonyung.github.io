@@ -5,9 +5,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-  workflow_dispatch:
   schedule:
     - cron: "0 16 * * *" # 00:00 HKT everyday
+  workflow_dispatch:
 
 # permissions required for deploying to GitHub Pages
 permissions:
@@ -33,4 +33,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

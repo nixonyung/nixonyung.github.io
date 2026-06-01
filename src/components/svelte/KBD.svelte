@@ -14,8 +14,8 @@
 </script>
 
 {#if text}
-  <kbd class={["rounded font-mono ring", text && "px-1", classList]}>{text}</kbd>
+  <kbd class={["rounded font-code ring", text && "px-1", classList]}>{text}</kbd>
 {/if}
 {#if icon}
-  <kbd class={["rounded font-mono ring", classList]}><Icon {icon} /></kbd>
+  <kbd class={["rounded font-code ring", classList]}><Icon {icon} /></kbd>
 {/if}

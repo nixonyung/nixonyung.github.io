@@ -5,10 +5,13 @@
   "exclude": ["dist"],
 
   "compilerOptions": {
+    // (ref.) [Astro - Typescript - Import Aliases](https://docs.astro.build/en/guides/typescript/#import-aliases)
     "paths": {
       "@/*": ["./src/*"]
     },
+
     // (ref.) [Svelte - TypeScript - tsconfig.json settings](https://svelte.dev/docs/svelte/typescript#tsconfig.json-settings)
+    "verbatimModuleSyntax": true,
     "isolatedModules": true,
   }
 }

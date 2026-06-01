@@ -47,7 +47,7 @@ const { links } = Astro.props;
             {lastmod && (
               <div
                 class:list={[
-                  "ml-3 font-mono text-sm whitespace-nowrap sm:tracking-wider",
+                  "ml-3 font-code text-sm whitespace-nowrap sm:tracking-wider",
                   lastmod.add(1, "day").isSameOrAfter(new Date(), "day")
                     ? "font-semibold text-primary-content"
                     : "font-light text-primary-content/40",

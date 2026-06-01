@@ -6,7 +6,7 @@ export const defaultLocale: Locale = "zh";
 export const messages = {
   siteTitle: {
     zh: "見・文",
-    en: "I came. I saw. I wrote.",
+    en: "By My Observations",
   },
   home: {
     zh: "首頁",

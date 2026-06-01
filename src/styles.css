@@ -1,17 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@300;400;700&family=Noto+Sans+HK:wght@100..900&family=Recursive:wght,CASL@300..1000,0..1&display=swap");
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @plugin "@iconify/tailwind4";
 
-/* (ref.) [Default theme variable reference](https://tailwindcss.com/docs/theme#default-theme-variable-reference) */
-@theme {
-  --font-heading: "Recursive", "LXGW WenKai TC", sans-serif;
-  --font-heading--font-variation-settings: "CASL" 1;
-  --font-content: "Recursive", "Noto Sans HK", sans-serif;
-  --font-mono: "Recursive", sans-serif;
-  --font-mono--font-variation-settings: "MONO" 0.7;
-
-  --container-content: 56rem; /* 4xl */
+:root:lang(zh) {
+  --font-heading: var(--font-lxgw-wenkai-tc);
+  --font-content: var(--font-noto-sans-hk);
+}
+:root:lang(en) {
+  --font-heading: var(--font-recursive);
+  --font-content: var(--font-recursive);
 }
 
 /*
@@ -20,29 +17,42 @@ TODOs:
   - refactor "primary-lighter" vs "primary/xx" -> "highlighted"?
   - rename "secondary-content" to "highlight"
 */
+
+/* [Color wheel](https://www.canva.com/colors/color-wheel/) */
 /* [OKLCH Color Picker & Converter](https://oklch.com/) */
 :root {
-  --_color-primary: oklch(95% 0.0175 265);
-  --_color-primary-lighter: oklch(85% 0.05 265);
-  --_color-primary-content: oklch(40% 0.175 265);
-  --_color-secondary-content: oklch(87% 0.4 160);
-  --_color-white-content: oklch(15% 0.15 265);
+  --color-primary: oklch(15% 0.0125 265);
+  --_color-primary-lighter: oklch(35% 0.05 265);
+  --_color-primary-content: oklch(80% 0.175 265);
+  --_color-secondary-content: oklch(80% 0.4 160);
+  --_color-white-content: oklch(93% 0 265);
 }
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --_color-primary: oklch(15% 0.0125 265);
-    --_color-primary-lighter: oklch(35% 0.05 265);
-    --_color-primary-content: oklch(80% 0.175 265);
-    --_color-secondary-content: oklch(80% 0.4 160);
-    --_color-white-content: oklch(93% 0 265);
+    --color-primary: oklch(95% 0.0175 265);
+    --_color-primary-lighter: oklch(85% 0.05 265);
+    --_color-primary-content: oklch(40% 0.175 265);
+    --_color-secondary-content: oklch(87% 0.4 160);
+    --_color-white-content: oklch(15% 0.15 265);
   }
 }
+
+/* (ref.) [Default theme variable reference](https://tailwindcss.com/docs/theme#default-theme-variable-reference) */
 @theme inline {
-  --color-primary: var(--_color-primary);
+  --font-heading: var(--font-heading);
+  --font-heading--font-variation-settings: "CASL" 1, "CRSV" 1;
+  --font-content: var(--font-content);
+  --font-content--font-variation-settings: "CASL" 0.5, "CRSV" 1;
+  --font-code: var(--font-code);
+  --font-code--font-variation-settings: "CASL" 0.5, "CRSV" 1, "MONO" 0.5;
+
+  --color-primary: var(--color-primary);
   --color-primary-lighter: var(--_color-primary-lighter);
   --color-primary-content: var(--_color-primary-content);
   --color-secondary-content: var(--_color-secondary-content);
   --color-white-content: var(--_color-white-content);
+
+  --container-content: 56rem; /* 4xl */
 }
 
 /* (ref.) [appearance-none utility does not hide input number arrows](https://github.com/tailwindlabs/tailwindcss/discussions/2173) */

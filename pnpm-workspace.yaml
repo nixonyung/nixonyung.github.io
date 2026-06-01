@@ -1,0 +1,6 @@
+allowBuilds:
+  esbuild: true
+  sharp: true
+minimumReleaseAgeExclude:
+- prettier-plugin-svelte@4.1.0
+- svelte-check@4.5.0
