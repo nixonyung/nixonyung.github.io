@@ -32,6 +32,7 @@ export default defineConfig({
       name: "Recursive",
       cssVariable: "--font-recursive",
       weights: ["300 1000"],
+      fallbacks: [],
       options: {
         experimental: {
           variableAxis: {
@@ -47,12 +48,14 @@ export default defineConfig({
       name: "Noto Sans HK",
       cssVariable: "--font-noto-sans-hk",
       weights: ["100 900"],
+      fallbacks: [],
     },
     {
       provider: fontProviders.google(),
       name: "LXGW WenKai TC",
       cssVariable: "--font-lxgw-wenkai-tc",
       weights: ["300", "400", "700"],
+      fallbacks: [],
     },
   ],
 });

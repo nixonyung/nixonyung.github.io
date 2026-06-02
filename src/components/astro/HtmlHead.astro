@@ -11,11 +11,12 @@ const { title } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Nixon Yung's Blog" />
 <meta name="google-site-verification" content="aMe-4fFPNYVsoK3TKSMGpH1Wb2BrBCVWpYbrN7rJoMA" />
 <link rel="icon" type="image/svg+xml" href={favicon.src} />
 <link rel="sitemap" href="/sitemap-index.xml" />
-{Astro.url.pathname === "/zh/" && <link rel="canonical" href={Astro.url.origin} />}
 <title>
   {(title ? `${title} — ` : "") + getLocalizedMessage("siteTitle", Astro.currentLocale)}
 </title>

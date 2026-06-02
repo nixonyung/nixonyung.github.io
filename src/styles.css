@@ -2,63 +2,28 @@
 @plugin "@tailwindcss/typography";
 @plugin "@iconify/tailwind4";
 
-:root:lang(zh) {
-  --font-heading: var(--font-lxgw-wenkai-tc);
-  --font-content: var(--font-noto-sans-hk);
-}
-:root:lang(en) {
-  --font-heading: var(--font-recursive);
-  --font-content: var(--font-recursive);
-}
-
-/*
-TODOs:
-  - refactor "white-content" vs "primary-content" -> "content"?
-  - refactor "primary-lighter" vs "primary/xx" -> "highlighted"?
-  - rename "secondary-content" to "highlight"
-*/
-
-/* [Color wheel](https://www.canva.com/colors/color-wheel/) */
-/* [OKLCH Color Picker & Converter](https://oklch.com/) */
-:root {
-  --color-primary: oklch(15% 0.0125 265);
-  --_color-primary-lighter: oklch(35% 0.05 265);
-  --_color-primary-content: oklch(80% 0.175 265);
-  --_color-secondary-content: oklch(80% 0.4 160);
-  --_color-white-content: oklch(93% 0 265);
-}
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-primary: oklch(95% 0.0175 265);
-    --_color-primary-lighter: oklch(85% 0.05 265);
-    --_color-primary-content: oklch(40% 0.175 265);
-    --_color-secondary-content: oklch(87% 0.4 160);
-    --_color-white-content: oklch(15% 0.15 265);
-  }
-}
-
 /* (ref.) [Default theme variable reference](https://tailwindcss.com/docs/theme#default-theme-variable-reference) */
 @theme inline {
-  --font-heading: var(--font-heading);
+  --font-heading: var(--font-recursive), var(--font-lxgw-wenkai-tc), sans-serif;
   --font-heading--font-variation-settings: "CASL" 1, "CRSV" 1;
-  --font-content: var(--font-content);
+  --font-content: var(--font-recursive), var(--font-noto-sans-hk), sans-serif;
   --font-content--font-variation-settings: "CASL" 0.5, "CRSV" 1;
-  --font-code: var(--font-code);
+  --font-code: var(--font-recursive), monospace;
   --font-code--font-variation-settings: "CASL" 0.5, "CRSV" 1, "MONO" 0.5;
 
-  --color-primary: var(--color-primary);
-  --color-primary-lighter: var(--_color-primary-lighter);
-  --color-primary-content: var(--_color-primary-content);
-  --color-secondary-content: var(--_color-secondary-content);
-  --color-white-content: var(--_color-white-content);
+  /* [Color wheel](https://www.canva.com/colors/color-wheel/) */
+  /* [OKLCH Color Picker & Converter](https://oklch.com/) */
+  /*
+  TODOs:
+    - refactor "white-content" vs "primary-content" -> "content"?
+    - refactor "primary-lighter" vs "primary/xx" -> "highlighted"?
+    - rename "secondary-content" to "highlight"
+  */
+  --color-primary: light-dark(oklch(95% 0.0175 265), oklch(15% 0.0125 265));
+  --color-primary-lighter: light-dark(oklch(85% 0.05 265), oklch(35% 0.05 265));
+  --color-primary-content: light-dark(oklch(40% 0.175 265), oklch(80% 0.175 265));
+  --color-secondary-content: light-dark(oklch(25% 0.3 160), oklch(80% 0.4 160));
+  --color-white-content: light-dark(oklch(15% 0.15 265), oklch(93% 0 265));
 
   --container-content: 56rem; /* 4xl */
-}
-
-/* (ref.) [appearance-none utility does not hide input number arrows](https://github.com/tailwindlabs/tailwindcss/discussions/2173) */
-@layer utilities {
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    @apply appearance-none;
-  }
 }

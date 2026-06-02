@@ -7,32 +7,33 @@ import Layout from "@/layouts/Layout.astro";
 import { getEntry, render } from "astro:content";
 import dayjs from "dayjs";
 
-export const getStaticPaths = async () =>
-  (
-    await Promise.all(
-      locales.flatMap((locale) =>
-        slugsOrdered.map(async (slug, i) => ({
-          params: { locale, slug },
-          props: {
-            slug,
-            prevSlug: i !== 0 ? slugsOrdered![i - 1] : undefined,
-            nextSlug: i !== slugsOrdered!.length - 1 ? slugsOrdered![i + 1] : undefined,
-          },
-        })),
-      ),
-    )
-  ).flat();
+export async function getStaticPaths() {
+  return await Promise.all(
+    locales.flatMap((locale) =>
+      slugsOrdered.flatMap(async (slug, idx) => ({
+        params: { locale, slug },
+        props: {
+          page: await getEntry("posts", locale + "/" + slug)!,
+          idx,
+        },
+      })),
+    ),
+  );
+}
 
-const { slug, prevSlug, nextSlug } = Astro.props; // get the collection entry directly from the prop
-const post = await getEntry("posts", Astro.currentLocale + "/" + slug)!;
-const { Content } = await render(post);
-const publishDate = post.data.publishDate && dayjs(post.data.publishDate);
-const lastmod = post.data.lastmod && dayjs(post.data.lastmod);
+const { page, idx } = Astro.props;
+
+const publishDate = page.data.publishDate && dayjs(page.data.publishDate);
+const lastmod = page.data.lastmod && dayjs(page.data.lastmod);
+const prevSlug = slugsOrdered[idx - 1];
+const nextSlug = slugsOrdered[idx + 1];
+
+const { Content } = await render(page);
 ---
 
-<Layout title={post.data.title}>
+<Layout title={page.data.title}>
   <WithProse>
-    <h1>{post.data.title ?? getLocalizedMessage("siteTitle", Astro.currentLocale)}</h1>
+    <h1>{page.data.title ?? getLocalizedMessage("siteTitle", Astro.currentLocale)}</h1>
     {
       publishDate && lastmod && (
         <div class="mt-6 mb-12 text-primary-content/20 select-none">

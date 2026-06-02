@@ -1,7 +1,6 @@
 export const locales = ["zh", "en"] as const;
-export type Locale = (typeof locales)[number];
-
 export const defaultLocale: Locale = "zh";
+export type Locale = (typeof locales)[number];
 
 export const messages = {
   siteTitle: {
@@ -89,7 +88,7 @@ export const messages = {
     en: "Last updated on",
   },
   publishDate: {
-    zh: "最初上載於",
+    zh: "發佈於",
     en: "First published on",
   },
   prevPost: {
@@ -100,7 +99,8 @@ export const messages = {
     zh: "下一篇",
     en: "Next",
   },
-} as const;
+};
 
-export const getLocalizedMessage = (key: keyof typeof messages, locale?: string) =>
-  messages[key][(locale ?? defaultLocale) as Locale];
+export function getLocalizedMessage(key: keyof typeof messages, locale?: string) {
+  return (locale && messages[key][locale as Locale]) ?? messages[key][defaultLocale]!;
+}
